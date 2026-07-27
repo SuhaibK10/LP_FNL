@@ -43,7 +43,7 @@ const withBgRemoval = (transforms: string, id: string) =>
 
 // Hero slide — desktop, 16:9 landscape
 export const heroUrl = (id: string) =>
-  cld(id, 'f_auto,q_90,w_1600,ar_16:9,c_fill,g_center')
+  cld(id, 'f_auto,q_auto:good,w_1600,ar_16:9,c_fill,g_center')
 
 // Hero slide — mobile, full natural portrait (no forced crop — CSS handles fit)
 export const heroUrlMobile = (id: string) =>
@@ -51,24 +51,24 @@ export const heroUrlMobile = (id: string) =>
 
 // Product card thumbnail — 3:4 portrait
 export const cardUrl = (id: string) =>
-  cld(id, withBgRemoval('f_auto,q_80,w_600,h_800,c_pad,b_rgb:F5F3ED', id))
+  cld(id, withBgRemoval('f_auto,q_auto:eco,w_600,h_800,c_pad,b_rgb:F5F3ED', id))
 
 // Product detail hero — large, high quality
 export const pdpUrl = (id: string) =>
-  cld(id, withBgRemoval('f_auto,q_90,w_900,h_1200,c_pad,b_rgb:F5F3ED', id))
+  cld(id, withBgRemoval('f_auto,q_auto:good,w_900,h_1200,c_pad,b_rgb:F5F3ED', id))
 
 // Cart / order thumbnail — square
 export const thumbUrl = (id: string) =>
-  cld(id, withBgRemoval('f_auto,q_75,w_200,h_200,c_pad,b_rgb:F5F3ED', id))
+  cld(id, withBgRemoval('f_auto,q_auto:eco,w_200,h_200,c_pad,b_rgb:F5F3ED', id))
 
 // Mobile optimised card
 export const mobileCardUrl = (id: string) =>
-  cld(id, 'f_auto,q_75,w_400,h_533,c_fill,g_auto')
+  cld(id, 'f_auto,q_auto:eco,w_400,h_533,c_fill,g_auto')
 
 // Category/mood tile — full lifestyle photo, fills the frame.
 // No background removal: unlike product cutouts, these keep their real backdrop.
 export const categoryUrl = (id: string) =>
-  cld(id, 'f_auto,q_80,w_800,h_800,c_fill,g_auto')
+  cld(id, 'f_auto,q_auto,w_800,h_800,c_fill,g_auto')
 
 // Exhibition / trade show gallery — content-aware crop, wide enough for retina desktop
 export const expoUrl = (id: string) =>

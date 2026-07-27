@@ -86,6 +86,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${lora.variable} ${jakarta.variable}`}>
+      <head>
+        {/* Opens the connection to the image CDN before the first photo is
+            requested, so DNS + TLS handshake isn't on the critical path. */}
+        <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+      </head>
       <body className="bg-[var(--color-lp-porcelain)] text-[var(--color-lp-ink)] font-body antialiased">
         <DesktopGate>
           <SmoothScrollProvider>

@@ -18,16 +18,27 @@ interface Props {
 }
 
 export function ImageGallery({ images, productName, activeColorIndex }: Props) {
-  const [active, setActive]           = useState(activeColorIndex ?? 0)
-  const [imageLoaded, setImageLoaded] = useState(false)
+  const [active, setActive]     = useState(activeColorIndex ?? 0)
+  // What's actually on screen. Kept a step behind `active` so the current
+  // photo never disappears behind a blank frame while the next one is
+  // still downloading — see the preload effect below.
+  const [displayed, setDisplayed] = useState(active)
 
   useEffect(() => {
     if (activeColorIndex !== undefined) setActive(activeColorIndex)
   }, [activeColorIndex])
 
   useEffect(() => {
-    setImageLoaded(false)
-  }, [active])
+    if (active === displayed) return
+    let cancelled = false
+    const preload = new window.Image()
+    const swap = () => { if (!cancelled) setDisplayed(active) }
+    preload.onload  = swap
+    preload.onerror = swap
+    preload.src = pdpUrl(images[active]) || PLACEHOLDER_URL
+    if (preload.complete) swap()
+    return () => { cancelled = true }
+  }, [active, displayed, images])
 
   function handleDragEnd(_: unknown, info: PanInfo) {
     const { offset, velocity } = info
@@ -50,20 +61,19 @@ export function ImageGallery({ images, productName, activeColorIndex }: Props) {
       >
         <AnimatePresence mode="wait">
           <motion.div
-            key={active}
+            key={displayed}
             initial={{ opacity: 0, x: 16 }}
-            animate={imageLoaded ? { opacity: 1, x: 0 } : { opacity: 0, x: 16 }}
+            animate={{ opacity: 1, x: 0 }}
             exit={{    opacity: 0, x: -8 }}
             transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
             className="absolute inset-0"
           >
             <Image
-              src={pdpUrl(images[active]) || PLACEHOLDER_URL}
-              alt={`${productName}, view ${active + 1}`}
+              src={pdpUrl(images[displayed]) || PLACEHOLDER_URL}
+              alt={`${productName}, view ${displayed + 1}`}
               fill
               priority
               draggable={false}
-              onLoad={() => setImageLoaded(true)}
               className="object-cover object-center"
               sizes="(max-width:768px) 100vw, 50vw"
             />
