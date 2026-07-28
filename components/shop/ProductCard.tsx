@@ -123,7 +123,7 @@ export function ProductCard({ product }: ProductCardProps) {
         {/* Myntra Exclusive badge */}
         {myntra && (
           <span className="absolute top-2.5 left-2.5 md:top-3 md:left-3 z-10 flex items-center justify-center backdrop-blur-sm rounded-full p-1.5 border border-[#5B6670]/60">
-            <Image src="/myntra-m.png" alt="Myntra" width={13} height={11} />
+            <Image src="/myntra-m.png" alt="Myntra" width={13} height={11} unoptimized />
           </span>
         )}
 

@@ -9,10 +9,10 @@
 import { useRef, useState, useEffect } from 'react'
 import Image                           from 'next/image'
 import { motion }                      from 'framer-motion'
-import { ArrowLeft }                   from 'lucide-react'
 import { FACTORY_PHOTOS }              from '@/config/factory'
 import { cld, PLACEHOLDER_URL }        from '@/lib/cloudinary'
 import { staggerChildren, fadeUp, VIEWPORT } from '@/lib/animations'
+import { SwipeHint }                   from '@/components/ui/SwipeHint'
 
 export function FactoryGallery() {
   const trackRef     = useRef<HTMLDivElement>(null)
@@ -102,26 +102,7 @@ export function FactoryGallery() {
       </div>
 
       {/* Swipe hint */}
-      {FACTORY_PHOTOS.length > 1 && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="container-lp flex items-center justify-center gap-2"
-          style={{ marginTop: '0.75rem' }}
-        >
-          <motion.div
-            animate={{ x: [0, -6, 0] }}
-            transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}
-          >
-            <ArrowLeft size={13} strokeWidth={1.5} className="text-lp-faint" />
-          </motion.div>
-          <span className="font-body text-[0.6rem] tracking-[0.16em] uppercase text-lp-faint">
-            Swipe to explore
-          </span>
-        </motion.div>
-      )}
+      {FACTORY_PHOTOS.length > 1 && <SwipeHint tone="faint" marginTop="0.75rem" />}
     </section>
   )
 }

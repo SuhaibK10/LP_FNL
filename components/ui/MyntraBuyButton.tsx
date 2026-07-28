@@ -31,7 +31,7 @@ export function MyntraBuyButton({ url, slug, size, placement, className }: Props
       }}
       className={className ?? 'btn-primary flex-1 justify-center'}
     >
-      <Image src="/myntra-m.png" alt="" width={15} height={12} />
+      <Image src="/myntra-m.png" alt="" width={15} height={12} unoptimized />
       Buy on Myntra
       <ExternalLink size={14} strokeWidth={1.5} />
     </a>

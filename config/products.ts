@@ -43,7 +43,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     image:       'hero123_qezgc2.jpg',
     headline:    'Bold in Every Color',
     desktopImage: 'deskt_hpz4fe.jpg',
-    textStyle:   'teal',
+    textStyle:   'shadow',
     textOffset:  1,
   },
   {

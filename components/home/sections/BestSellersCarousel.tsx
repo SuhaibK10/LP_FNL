@@ -114,7 +114,7 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
         {/* Myntra Exclusive badge */}
         {myntra && (
           <span className="absolute top-3 left-3 z-10 flex items-center justify-center backdrop-blur-sm rounded-full p-1.5 border border-[#5B6670]/60">
-            <Image src="/myntra-m.png" alt="Myntra" width={13} height={11} />
+            <Image src="/myntra-m.png" alt="Myntra" width={13} height={11} unoptimized />
           </span>
         )}
         {/* Tag */}
@@ -397,7 +397,7 @@ export function BestSellersCarousel() {
               : 'flex items-center gap-1.5 font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-transparent pb-1.5 transition-colors duration-200'
           }
         >
-          <Image src="/myntra-m.png" alt="" width={13} height={11} />
+          <Image src="/myntra-m.png" alt="" width={13} height={11} unoptimized />
           Myntra Exclusives
         </button>
       </div>

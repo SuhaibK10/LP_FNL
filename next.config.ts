@@ -1,12 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  allowedDevOrigins: ['192.168.1.5','192.168.1.15','192.168.1.4','192.168.1.2','192.168.18.191'],
+  allowedDevOrigins: ['192.168.1.5','192.168.1.15','192.168.1.4','192.168.1.17','192.168.18.191'],
   images: {
-    // Cloudinary URLs (lib/cloudinary.ts) already carry their own resize/format/
-    // quality transforms — Vercel re-optimizing them on top via /_next/image is
-    // redundant and burns its (metered) Image Optimization quota. That quota
-    // being exhausted is what was causing the site-wide 402s / broken photos.
-    unoptimized: true,
+    // Custom loader rewrites each Cloudinary URL's own w_/h_ transform to the
+    // width Next requests (see lib/cloudinaryLoader.ts), restoring real
+    // srcset generation without proxying through Vercel's metered Image
+    // Optimization API — that API's quota being exhausted is what caused the
+    // site-wide 402s / broken photos this session (images.unoptimized was
+    // the stopgap; this is the proper fix).
+    loader:     'custom',
+    loaderFile: './lib/cloudinaryLoader.ts',
     remotePatterns: [
       {
         protocol: 'https',

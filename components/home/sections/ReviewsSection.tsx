@@ -336,9 +336,11 @@ export function ReviewsSection() {
                 {/* Stars + product */}
                 <div className="flex items-start justify-between gap-3">
                   <StarRating rating={review.rating} />
-                  <span className="font-body text-[0.6rem] tracking-widest uppercase text-lp-porcelain/50 shrink-0">
-                    {review.product}
-                  </span>
+                  {review.product && (
+                    <span className="font-body text-[0.6rem] tracking-widest uppercase text-lp-porcelain/50 shrink-0">
+                      {review.product}
+                    </span>
+                  )}
                 </div>
 
                 {/* Quote */}

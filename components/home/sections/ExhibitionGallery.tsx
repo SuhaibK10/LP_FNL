@@ -10,11 +10,12 @@
 import { useRef, useState, useEffect } from 'react'
 import Image                           from 'next/image'
 import { motion }                      from 'framer-motion'
-import { MapPin, ArrowLeft }            from 'lucide-react'
+import { MapPin }                      from 'lucide-react'
 import { EXHIBITIONS }                 from '@/config/exhibitions'
 import { expoUrl, cld, PLACEHOLDER_URL } from '@/lib/cloudinary'
 import { cn }                          from '@/lib/utils'
 import { staggerChildren, fadeUp, VIEWPORT } from '@/lib/animations'
+import { SwipeHint }                   from '@/components/ui/SwipeHint'
 
 export function ExhibitionGallery() {
   const [activeId, setActiveId] = useState(EXHIBITIONS[0]?.id)
@@ -126,24 +127,7 @@ export function ExhibitionGallery() {
       </div>
 
       {/* Swipe hint */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className="container-lp flex items-center justify-center gap-2"
-        style={{ marginTop: '0.5rem' }}
-      >
-        <motion.div
-          animate={{ x: [0, -6, 0] }}
-          transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}
-        >
-          <ArrowLeft size={13} strokeWidth={1.5} className="text-[var(--color-lp-porcelain)]/40" />
-        </motion.div>
-        <span className="font-body text-[0.6rem] tracking-[0.16em] uppercase text-[var(--color-lp-porcelain)]/40">
-          Swipe to explore
-        </span>
-      </motion.div>
+      <SwipeHint tone="porcelain" marginTop="0.5rem" />
 
     </section>
   )

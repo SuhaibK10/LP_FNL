@@ -135,8 +135,8 @@ export default async function AccountPage() {
                   day: 'numeric', month: 'short', year: 'numeric',
                 })
                 const statusColor =
-                  order.status === 'paid'   ? 'text-emerald-600' :
-                  order.status === 'failed' ? 'text-red-500'     :
+                  order.status === 'paid'   ? 'text-lp-success' :
+                  order.status === 'failed' ? 'text-lp-error'   :
                   'text-lp-muted'
 
                 return (

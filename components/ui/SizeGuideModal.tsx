@@ -171,7 +171,7 @@ export function SizeGuideModal({ open, onClose }: Props) {
                           <td className="font-body text-[0.8rem] text-[var(--color-lp-ink)] px-4 py-2.5">{a.name}</td>
                           <td className="text-center px-4 py-2.5">
                             {a.ok
-                              ? <CheckCircle2 size={15} strokeWidth={1.5} className="text-emerald-600 mx-auto" />
+                              ? <CheckCircle2 size={15} strokeWidth={1.5} className="text-lp-success mx-auto" />
                               : <XCircle      size={15} strokeWidth={1.5} className="text-red-400 mx-auto" />
                             }
                           </td>

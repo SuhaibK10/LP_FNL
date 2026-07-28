@@ -6,10 +6,13 @@
 // Swipe-friendly on mobile (drag between images).
 // ─────────────────────────────────────────────────────────────────────────────
 
-import { useState, useEffect }       from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image                        from 'next/image'
 import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
 import { pdpUrl, thumbUrl, PLACEHOLDER_URL } from '@/lib/cloudinary'
+
+const LONG_PRESS_MS      = 350  // hold duration before zoom kicks in
+const LONG_PRESS_SLOP_PX = 8    // movement past this before the timer fires reads as a swipe, not a hold
 
 interface Props {
   images: string[]
@@ -49,15 +52,59 @@ export function ImageGallery({ images, productName, activeColorIndex }: Props) {
     }
   }
 
+  // ── Long-press to zoom ──────────────────────────────────────────────────
+  const [zoomed, setZoomed]         = useState(false)
+  const [zoomOrigin, setZoomOrigin] = useState({ x: 50, y: 50 })
+  const pressStart   = useRef<{ x: number; y: number } | null>(null)
+  const longPressTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  function clearLongPress() {
+    if (longPressTimer.current) clearTimeout(longPressTimer.current)
+    longPressTimer.current = null
+    pressStart.current = null
+  }
+
+  function handlePointerDown(e: React.PointerEvent<HTMLDivElement>) {
+    const rect = e.currentTarget.getBoundingClientRect()
+    const originX = ((e.clientX - rect.left) / rect.width) * 100
+    const originY = ((e.clientY - rect.top) / rect.height) * 100
+    pressStart.current = { x: e.clientX, y: e.clientY }
+    longPressTimer.current = setTimeout(() => {
+      setZoomOrigin({ x: originX, y: originY })
+      setZoomed(true)
+    }, LONG_PRESS_MS)
+  }
+
+  function handlePointerMove(e: React.PointerEvent<HTMLDivElement>) {
+    if (!pressStart.current || zoomed) return
+    const dx = e.clientX - pressStart.current.x
+    const dy = e.clientY - pressStart.current.y
+    // Moved too far before the hold completed — this is a swipe, not a
+    // zoom request, so back off and let the drag gesture handle it.
+    if (Math.hypot(dx, dy) > LONG_PRESS_SLOP_PX) clearLongPress()
+  }
+
+  function handlePointerUp() {
+    clearLongPress()
+    setZoomed(false)
+  }
+
   return (
     <div className="flex flex-col gap-3">
-      {/* Main image — drag left/right to slide between images */}
+      {/* Main image — drag left/right to slide between images, press and hold to zoom */}
       <motion.div
         className="relative aspect-3/4 bg-lp-cream overflow-hidden touch-pan-y select-none"
-        drag={images.length > 1 ? 'x' : false}
+        style={{ WebkitTouchCallout: 'none', cursor: zoomed ? 'zoom-out' : undefined }}
+        drag={images.length > 1 && !zoomed ? 'x' : false}
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.6}
         onDragEnd={handleDragEnd}
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerLeave={handlePointerUp}
+        onPointerCancel={handlePointerUp}
+        onContextMenu={(e) => e.preventDefault()}
       >
         <AnimatePresence mode="wait">
           <motion.div
@@ -75,6 +122,11 @@ export function ImageGallery({ images, productName, activeColorIndex }: Props) {
               priority
               draggable={false}
               className="object-cover object-center"
+              style={{
+                transform:       zoomed ? 'scale(2)' : 'scale(1)',
+                transformOrigin: `${zoomOrigin.x}% ${zoomOrigin.y}%`,
+                transition:      zoomed ? 'transform 0.2s ease-out' : 'transform 0.25s ease-in',
+              }}
               sizes="(max-width:768px) 100vw, 50vw"
             />
           </motion.div>

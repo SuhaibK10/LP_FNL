@@ -127,7 +127,7 @@ export interface HeroSlide {
   subline?: string
   isVideo?: boolean
   showCta?: boolean
-  textStyle?:    'light' | 'dark' | 'shadow' | 'pill' | 'gold' | 'teal'
+  textStyle?:    'light' | 'dark' | 'shadow' | 'pill'
   textSize?:     'xl' | 'lg' | 'md'
   textPosition?: 'top' | 'center' | 'bottom'
   textOffset?:   number

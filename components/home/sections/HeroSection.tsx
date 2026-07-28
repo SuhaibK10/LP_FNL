@@ -50,10 +50,25 @@ function FlapText({ text }: { text: string }) {
 export function HeroSection() {
   const [current, setCurrent] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
+  const [isVisible, setIsVisible] = useState(true)
+  const sectionRef = useRef<HTMLElement>(null)
   const touchStartX = useRef<number>(0)
   const touchEndX = useRef<number>(0)
   const next = useCallback(() => {
     setCurrent((c) => (c + 1) % HERO_SLIDES.length)
+  }, [])
+
+  // Pause auto-advance once the hero scrolls out of view, so it isn't
+  // re-animating (FlapText + crossfade) somewhere the user can't see.
+  useEffect(() => {
+    const el = sectionRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
   }, [])
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -74,16 +89,17 @@ export function HeroSection() {
 
   // Auto-advance
   useEffect(() => {
-    if (!isPlaying) return
+    if (!isPlaying || !isVisible) return
     const id = setInterval(next, SLIDE_DURATION)
     return () => clearInterval(id)
-  }, [isPlaying, next])
+  }, [isPlaying, isVisible, next])
 
   const slide = HERO_SLIDES[current]
 
   return (
     <section
       id="hero-section"
+      ref={sectionRef}
       className="relative h-[calc(82svh-1.75rem)] md:h-[calc(90vh-1.75rem)] md:min-h-150 md:max-h-240 overflow-hidden"
       onClick={() => setIsPlaying(p => !p)}
       onTouchStart={handleTouchStart}
@@ -121,12 +137,15 @@ export function HeroSection() {
                 style={{ objectPosition: slide.mobileObjectPosition ?? 'center' }}
                 sizes="(max-width: 1023px) 100vw, 1px"
               />
-              {/* Desktop: separate 16:9 image if provided, else same image with landscape crop */}
+              {/* Desktop: separate 16:9 image if provided, else same image with landscape crop.
+                  No `priority` here — it forces an unconditional preload that ignores the
+                  `hidden lg:block` CSS, so both breakpoint variants used to download on every
+                  load regardless of viewport. Left as native lazy-load, which correctly skips
+                  fetching a display:none image. */}
               <Image
                 src={heroUrl(slide.desktopImage ?? slide.image) || PLACEHOLDER_URL}
                 alt={slide.headline ?? 'Louis Polo luggage'}
                 fill
-                priority={current === 0}
                 className="object-cover hidden lg:block"
                 style={{ objectPosition: slide.desktopObjectPosition ?? 'center' }}
                 sizes="(max-width: 1023px) 1px, 100vw"
@@ -158,15 +177,6 @@ export function HeroSection() {
                 ? { color: 'var(--color-lp-ink)' }
                 : slide.textStyle === 'shadow'
                 ? { color: 'var(--color-lp-porcelain)', textShadow: '0 2px 16px rgba(0,0,0,0.65)' }
-                : slide.textStyle === 'gold'
-                ? { color: 'var(--color-lp-gold)' }
-                : slide.textStyle === 'teal'
-                ? {
-                    background: 'linear-gradient(135deg, #237A6E 0%, #2C9E8F 40%, #38A99A 50%, #2C9E8F 60%, #237A6E 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                  }
                 : { color: 'var(--color-lp-porcelain)' }),
             }}
           >

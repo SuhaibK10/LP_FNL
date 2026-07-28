@@ -159,6 +159,7 @@ export function Footer() {
               alt="Louis Polo"
               width={78}
               height={52}
+              unoptimized
               className="mb-4 brightness-0 invert mx-auto"
             />
             <p className="font-body text-[0.8rem] text-white/55 leading-relaxed mb-4">
@@ -179,18 +180,18 @@ export function Footer() {
               ))}
             </div>
 
-            {/* Social — official brand colors */}
+            {/* Social — monochrome, matching the description text above (white/55) */}
             <div className="flex gap-4 justify-center">
-              <a href={BRAND.instagram} target="_blank" rel="noopener noreferrer" className="transition-opacity duration-200 hover:opacity-70" style={{ color: '#E4405F' }} aria-label="Instagram">
+              <a href={BRAND.instagram} target="_blank" rel="noopener noreferrer" className="text-white/55 transition-opacity duration-200 hover:opacity-70" aria-label="Instagram">
                 <Instagram size={17} strokeWidth={1.5} />
               </a>
-              <a href={BRAND.linkedin} target="_blank" rel="noopener noreferrer" className="transition-opacity duration-200 hover:opacity-70" style={{ color: '#0A66C2' }} aria-label="LinkedIn">
+              <a href={BRAND.linkedin} target="_blank" rel="noopener noreferrer" className="text-white/55 transition-opacity duration-200 hover:opacity-70" aria-label="LinkedIn">
                 <Linkedin size={17} strokeWidth={1.5} />
               </a>
-              <a href={BRAND.whatsapp} target="_blank" rel="noopener noreferrer" className="transition-opacity duration-200 hover:opacity-70" style={{ color: '#25D366' }} aria-label="WhatsApp">
+              <a href={BRAND.whatsapp} target="_blank" rel="noopener noreferrer" className="text-white/55 transition-opacity duration-200 hover:opacity-70" aria-label="WhatsApp">
                 <WhatsAppIcon />
               </a>
-              <a href={`mailto:${BRAND.email}`} className="transition-opacity duration-200 hover:opacity-70" style={{ color: '#EA4335' }} aria-label="Email support">
+              <a href={`mailto:${BRAND.email}`} className="text-white/55 transition-opacity duration-200 hover:opacity-70" aria-label="Email support">
                 <Mail size={17} strokeWidth={1.5} />
               </a>
             </div>

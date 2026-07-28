@@ -61,10 +61,6 @@ export const pdpUrl = (id: string) =>
 export const thumbUrl = (id: string) =>
   cld(id, withBgRemoval('f_auto,q_auto:eco,w_200,h_200,c_pad,b_rgb:F5F3ED', id))
 
-// Mobile optimised card
-export const mobileCardUrl = (id: string) =>
-  cld(id, 'f_auto,q_auto:eco,w_400,h_533,c_fill,g_auto')
-
 // Category/mood tile — full lifestyle photo, fills the frame.
 // No background removal: unlike product cutouts, these keep their real backdrop.
 export const categoryUrl = (id: string) =>
