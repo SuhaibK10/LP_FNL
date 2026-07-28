@@ -10,12 +10,13 @@ import { useState, useRef, useEffect }       from 'react'
 import Image                                 from 'next/image'
 import Link                                  from 'next/link'
 import { motion }                            from 'framer-motion'
-import { ArrowUpRight, LayoutGrid, BadgePercent } from 'lucide-react'
+import { ArrowUpRight, LayoutGrid }          from 'lucide-react'
 import { ROUTES }                            from '@/lib/constants'
 import { SALE_PRODUCTS }                     from '@/config/products'
 import { categoryUrl, PLACEHOLDER_URL }      from '@/lib/cloudinary'
 import { staggerChildren, scaleUp, VIEWPORT } from '@/lib/animations'
 import { ProductCard }                       from '@/components/shop/ProductCard'
+import { SaleCountdown }                     from '@/components/ui/SaleCountdown'
 
 
 
@@ -157,8 +158,10 @@ export function CategoryGrid() {
                 : 'flex items-center gap-1.5 font-body text-[0.75rem] tracking-widest uppercase text-lp-muted border-b-2 border-transparent pb-1.5 transition-colors duration-200 hover:text-lp-ink'
             }
           >
-            <BadgePercent size={13} strokeWidth={1.5} />
             Sale
+            <span className="inline-flex items-center rounded-sm bg-[#9A4949] px-1.5 py-0.5">
+              <SaleCountdown className="text-[0.65rem] text-[var(--color-lp-porcelain)] normal-case tracking-normal" />
+            </span>
           </button>
         </motion.div>
 
