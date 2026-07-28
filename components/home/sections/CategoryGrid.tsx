@@ -159,9 +159,13 @@ export function CategoryGrid() {
             }
           >
             Sale
-            <span className="inline-flex items-center rounded-sm bg-[#9A4949] px-1.5 py-0.5">
+            <motion.span
+              animate={{ scale: [1, 1.04, 1], opacity: [1, 0.92, 1] }}
+              transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+              className="inline-flex items-center rounded-sm bg-[#9A4949] px-1.5 py-0.5"
+            >
               <SaleCountdown className="text-[0.65rem] text-[var(--color-lp-porcelain)] normal-case tracking-normal" />
-            </span>
+            </motion.span>
           </button>
         </motion.div>
 
