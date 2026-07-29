@@ -8,6 +8,10 @@
 // Upload to folder: louispolo/exhibitions/{exhibition-id}/
 // ─────────────────────────────────────────────────────────────────────────────
 
+// Homepage-only switch — flip to false to pull "Where we show up" off the
+// homepage. The About page keeps showing it regardless.
+export const EXHIBITION_GALLERY_HOME_ENABLED = true
+
 export interface ExhibitionPhoto {
   publicId: string
   alt: string

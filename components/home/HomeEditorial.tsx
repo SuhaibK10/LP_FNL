@@ -10,7 +10,8 @@ import { PromoBanner }         from './sections/PromoBanner'
 import { CategoryGrid }        from './sections/CategoryGrid'
 import { ProductSpotlight }    from './sections/ProductSpotlight'
 import { ReviewsSection }      from './sections/ReviewsSection'
-// import { ExhibitionGallery }   from './sections/ExhibitionGallery'
+import { ExhibitionGallery }   from './sections/ExhibitionGallery'
+import { EXHIBITION_GALLERY_HOME_ENABLED } from '@/config/exhibitions'
 
 export function HomeEditorial() {
   return (
@@ -20,7 +21,7 @@ export function HomeEditorial() {
       <PromoBanner />
       <BestSellersCarousel />
       <ProductSpotlight />
-      {/* <ExhibitionGallery /> */}
+      {EXHIBITION_GALLERY_HOME_ENABLED && <ExhibitionGallery />}
       <ReviewsSection />
     </main>
   )
