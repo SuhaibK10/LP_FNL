@@ -22,7 +22,7 @@ import { useWishlistStore }                  from '@/store/wishlistStore'
 import { staggerChildren, fadeUp, VIEWPORT } from '@/lib/animations'
 import { SizeGuideModal }                    from '@/components/ui/SizeGuideModal'
 import { MyntraBuyButton }                   from '@/components/ui/MyntraBuyButton'
-import { getMyntraListing, getMyntraForSize } from '@/config/myntra'
+import { getMyntraListing, getMyntraForSize, MYNTRA_EXCLUSIVES_ENABLED } from '@/config/myntra'
 
 // ─── Single product card ──────────────────────────────────────────────────────
 function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
@@ -375,32 +375,34 @@ export function BestSellersCarousel() {
     <section className="pt-0.5 md:pt-4 pb-20 md:pb-28 xl:pb-36 overflow-hidden">
 
       {/* Tabs */}
-      <div className="container-lp flex items-center justify-center gap-5" style={{ marginBottom: '1.5rem' }}>
-        <button
-          type="button"
-          onClick={() => setTab('bestsellers')}
-          className={
-            tab === 'bestsellers'
-              ? 'font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-lp-ink pb-1.5 transition-colors duration-200'
-              : 'font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-transparent pb-1.5 transition-colors duration-200'
-          }
-        >
-          Best Sellers
-        </button>
-        <span className="text-lp-border">|</span>
-        <button
-          type="button"
-          onClick={() => setTab('myntra')}
-          className={
-            tab === 'myntra'
-              ? 'flex items-center gap-1.5 font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-lp-ink pb-1.5 transition-colors duration-200'
-              : 'flex items-center gap-1.5 font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-transparent pb-1.5 transition-colors duration-200'
-          }
-        >
-          <Image src="/myntra-m.png" alt="" width={13} height={11} unoptimized />
-          Myntra Exclusives
-        </button>
-      </div>
+      {MYNTRA_EXCLUSIVES_ENABLED && (
+        <div className="container-lp flex items-center justify-center gap-5" style={{ marginBottom: '1.5rem' }}>
+          <button
+            type="button"
+            onClick={() => setTab('bestsellers')}
+            className={
+              tab === 'bestsellers'
+                ? 'font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-lp-ink pb-1.5 transition-colors duration-200'
+                : 'font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-transparent pb-1.5 transition-colors duration-200'
+            }
+          >
+            Best Sellers
+          </button>
+          <span className="text-lp-border">|</span>
+          <button
+            type="button"
+            onClick={() => setTab('myntra')}
+            className={
+              tab === 'myntra'
+                ? 'flex items-center gap-1.5 font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-lp-ink pb-1.5 transition-colors duration-200'
+                : 'flex items-center gap-1.5 font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-transparent pb-1.5 transition-colors duration-200'
+            }
+          >
+            <Image src="/myntra-m.png" alt="" width={13} height={11} unoptimized />
+            Myntra Exclusives
+          </button>
+        </div>
+      )}
 
       <div className="container-lp flex items-end justify-between" style={{ marginBottom: '2.5rem' }}>
 

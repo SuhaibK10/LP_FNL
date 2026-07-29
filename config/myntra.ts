@@ -30,6 +30,11 @@ export interface MyntraListing {
   sizes?: Partial<Record<ProductSize, MyntraSizeListing>>
 }
 
+// Master switch — flip to false to pull Myntra Exclusives off the site
+// entirely (badges, tab, sort option, PDP pricing/CTA). Products fall back
+// to normal Louis Polo pricing and add-to-cart everywhere automatically.
+export const MYNTRA_EXCLUSIVES_ENABLED = false
+
 const M = 'https://www.myntra.com'
 
 export const MYNTRA_LISTINGS: Record<string, MyntraListing> = {
@@ -121,11 +126,13 @@ export const MYNTRA_LISTINGS: Record<string, MyntraListing> = {
 }
 
 export function getMyntraListing(slug: string): MyntraListing | undefined {
+  if (!MYNTRA_EXCLUSIVES_ENABLED) return undefined
   return MYNTRA_LISTINGS[slug]
 }
 
 /** Listing + price for a specific size, falling back to the product default. */
 export function getMyntraForSize(slug: string, size: ProductSize | null): { url: string; price: number } | undefined {
+  if (!MYNTRA_EXCLUSIVES_ENABLED) return undefined
   const listing = MYNTRA_LISTINGS[slug]
   if (!listing) return undefined
   if (size && listing.sizes?.[size]) {

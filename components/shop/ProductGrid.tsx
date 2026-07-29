@@ -13,7 +13,7 @@ import { useSearchParams }         from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { SlidersHorizontal, LayoutGrid, Rows3 } from 'lucide-react'
 import { PRODUCTS, CATEGORIES }    from '@/config/products'
-import { getMyntraListing }        from '@/config/myntra'
+import { getMyntraListing, MYNTRA_EXCLUSIVES_ENABLED } from '@/config/myntra'
 import { SIZE_ORDER }              from '@/lib/constants'
 import { useShopFilterStore }      from '@/store/shopFilterStore'
 import { ProductCard }             from './ProductCard'
@@ -30,7 +30,7 @@ const SORT_OPTIONS: { label: string; value: SortKey }[] = [
   { label: 'Price: High to Low', value: 'price-desc'         },
   { label: 'Best Sellers',       value: 'best-sellers'       },
   { label: 'New Arrivals',       value: 'new-arrivals'       },
-  { label: 'Myntra Exclusives',  value: 'myntra-exclusives'  },
+  ...(MYNTRA_EXCLUSIVES_ENABLED ? [{ label: 'Myntra Exclusives', value: 'myntra-exclusives' as const }] : []),
 ]
 
 const PRICE_RANGES: PriceRange[] = [
