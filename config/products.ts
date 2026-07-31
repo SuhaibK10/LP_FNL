@@ -146,7 +146,7 @@ export const PRODUCTS: Product[] = [
           'louis-polo-aerosmart-grey-03-1782298692939-1782298692939_Background_Removed_lzdcwx.png',
         ],
         sizes: [
-          { size: 'Cabin', price: 5990, stock: 25, sku: '8906206840001-Y-20' },
+          { size: 'Cabin', price: 4490, stock: 25, sku: '8906206840001-Y-20' },
         ],
       },
       {
@@ -161,7 +161,7 @@ export const PRODUCTS: Product[] = [
           'louis-polo-aerosmart-metallic-black-03-1782296235017-1782296235017_Background_Removed_gqhd4h.png',
         ],
         sizes: [
-          { size: 'Cabin', price: 5990, stock: 40, sku: '8906206840001-R-20' },
+          { size: 'Cabin', price: 4490, stock: 40, sku: '8906206840001-R-20' },
         ],
       },
       {
@@ -177,7 +177,7 @@ export const PRODUCTS: Product[] = [
           'louis-polo-aerosmart-silver-grey-08-1782298609272-1782298609272-2_Background_Removed_tyjqzw.png',
         ],
         sizes: [
-          { size: 'Cabin', price: 5990, stock: 35, sku: '8906206840001-T-20' },
+          { size: 'Cabin', price: 4490, stock: 35, sku: '8906206840001-T-20' },
         ],
       },
 
@@ -194,6 +194,7 @@ export const PRODUCTS: Product[] = [
     slug: 'skytrail',
     category: 'trolley',
     isFeatured: true,
+    mrp: 9099,
     description:
       'Built for the frequent flyer. SkyTrail combines a sleek hard shell ABS body with 360° spinner wheels and combination lock. Smooth, secure, and ready for boarding.',
     story: [
@@ -255,27 +256,27 @@ export const PRODUCTS: Product[] = [
         color: 'Charcoal',
         colorHex: '#3D3D3D',
         sizes: [
-          { size: 'Cabin', price: 9099, stock: 50, sku: '8906206840292' },
-          { size: 'Medium', price: 10649, stock: 40, sku: '8906206840308' },
-          { size: 'Large', price: 12550, stock: 30, sku: '8906206840315' },
+          { size: 'Cabin', price: 3185, stock: 50, sku: '8906206840292' },
+          { size: 'Medium', price: 3727, stock: 40, sku: '8906206840308' },
+          { size: 'Large', price: 4393, stock: 30, sku: '8906206840315' },
         ],
       },
       {
         color: 'Grey',
         colorHex: '#9E9E9E',
         sizes: [
-          { size: 'Cabin', price: 9099, stock: 50, sku: '8906206840346' },
-          { size: 'Medium', price: 10649, stock: 40, sku: '8906206840339' },
-          { size: 'Large', price: 12550, stock: 30, sku: '8906206840322' },
+          { size: 'Cabin', price: 3185, stock: 50, sku: '8906206840346' },
+          { size: 'Medium', price: 3727, stock: 40, sku: '8906206840339' },
+          { size: 'Large', price: 4393, stock: 30, sku: '8906206840322' },
         ],
       },
       {
         color: 'Midnight Blue',
         colorHex: '#586483',
         sizes: [
-          { size: 'Cabin', price: 9099, stock: 50 },
-          { size: 'Medium', price: 10649, stock: 40 },
-          { size: 'Large', price: 12550, stock: 30 },
+          { size: 'Cabin', price: 3185, stock: 50 },
+          { size: 'Medium', price: 3727, stock: 40 },
+          { size: 'Large', price: 4393, stock: 30 },
         ],
       },
     ],
@@ -291,6 +292,7 @@ export const PRODUCTS: Product[] = [
     slug: 'veezoom',
     category: 'trolley',
     isFeatured: true,
+    mrp: 9099,
     description:
       'Bold V-pattern design that stands out on every conveyor belt. Hard shell ABS with ultra-smooth spinner wheels, because your luggage should be as ambitious as you are.',
     story: [
@@ -348,18 +350,18 @@ export const PRODUCTS: Product[] = [
         colorHex: '#FDD835',
         lowStock: true,
         sizes: [
-          { size: 'Cabin', price: 9099, stock: 50, sku: '8906206840230' },
-          { size: 'Medium', price: 10649, stock: 40, sku: '8906206840247' },
-          { size: 'Large', price: 12550, stock: 30, sku: '8906206840254' },
+          { size: 'Cabin', price: 3185, stock: 50, sku: '8906206840230' },
+          { size: 'Medium', price: 3727, stock: 40, sku: '8906206840247' },
+          { size: 'Large', price: 4393, stock: 30, sku: '8906206840254' },
         ],
       },
       {
         color: 'Black',
         colorHex: '#212121',
         sizes: [
-          { size: 'Cabin', price: 9099, stock: 50, sku: '8906206840285' },
-          { size: 'Medium', price: 10649, stock: 40, sku: '8906206840278' },
-          { size: 'Large', price: 12550, stock: 30, sku: '8906206840261' },
+          { size: 'Cabin', price: 3185, stock: 50, sku: '8906206840285' },
+          { size: 'Medium', price: 3727, stock: 40, sku: '8906206840278' },
+          { size: 'Large', price: 4393, stock: 30, sku: '8906206840261' },
         ],
       },
     ],
@@ -375,6 +377,7 @@ export const PRODUCTS: Product[] = [
     slug: 'softsquare',
     category: 'trolley',
     isFeatured: true,
+    mrp: 9490,
     description:
       'Clean geometric lines meet premium ABS protection. SoftSquare is the one for people who travel often and want luggage that looks good on day 50 as it did on day 1.',
     story: [
@@ -436,27 +439,27 @@ export const PRODUCTS: Product[] = [
         color: 'Rosegold',
         colorHex: '#B76E79',
         sizes: [
-          { size: 'Cabin', price: 9490, stock: 40, sku: '8906206840353' },
-          { size: 'Medium', price: 10990, stock: 30, sku: '8906206840360' },
-          { size: 'Large', price: 12490, stock: 25, sku: '8906206840377' },
+          { size: 'Cabin', price: 3322, stock: 40, sku: '8906206840353' },
+          { size: 'Medium', price: 3847, stock: 30, sku: '8906206840360' },
+          { size: 'Large', price: 4372, stock: 25, sku: '8906206840377' },
         ],
       },
       {
         color: 'Blue',
         colorHex: '#1E88E5',
         sizes: [
-          { size: 'Cabin', price: 9490, stock: 40, sku: '8906206840407' },
-          { size: 'Medium', price: 10990, stock: 30, sku: '8906206840384' },
-          { size: 'Large', price: 12490, stock: 25, sku: '8906206840391' },
+          { size: 'Cabin', price: 3322, stock: 40, sku: '8906206840407' },
+          { size: 'Medium', price: 3847, stock: 30, sku: '8906206840384' },
+          { size: 'Large', price: 4372, stock: 25, sku: '8906206840391' },
         ],
       },
       {
         color: 'Black',
         colorHex: '#212121',
         sizes: [
-          { size: 'Cabin', price: 9490, stock: 40, sku: '8906206840414' },
-          { size: 'Medium', price: 10990, stock: 30, sku: '8906206840438' },
-          { size: 'Large', price: 12490, stock: 25, sku: '8906206840421' },
+          { size: 'Cabin', price: 3322, stock: 40, sku: '8906206840414' },
+          { size: 'Medium', price: 3847, stock: 30, sku: '8906206840438' },
+          { size: 'Large', price: 4372, stock: 25, sku: '8906206840421' },
         ],
       },
     ],
@@ -649,14 +652,14 @@ export const PRODUCTS: Product[] = [
         color: 'Turquoise',
         colorHex: '#40E0D0',
         sizes: [
-          { size: 'Cabin', price: 7999, stock: 1000, sku: 'PLACEHOLDER_SKU' },
+          { size: 'Cabin', price: 2200, stock: 1000, sku: 'PLACEHOLDER_SKU' },
         ],
       },
       {
         color: 'Black',
         colorHex: '#1A1714',
         sizes: [
-          { size: 'Cabin', price: 7999, stock: 1000, sku: 'PLACEHOLDER_SKU' },
+          { size: 'Cabin', price: 2200, stock: 1000, sku: 'PLACEHOLDER_SKU' },
         ],
       },
     ],
@@ -710,14 +713,14 @@ export const PRODUCTS: Product[] = [
         color: 'Turquoise',
         colorHex: '#40E0D0',
         sizes: [
-          { size: 'Cabin', price: 7999, stock: 10000, sku: 'PLACEHOLDER_SKU' },
+          { size: 'Cabin', price: 2200, stock: 10000, sku: 'PLACEHOLDER_SKU' },
         ],
       },
       {
         color: 'Grey',
         colorHex: '#808080',
         sizes: [
-          { size: 'Cabin', price: 7999, stock: 10000, sku: 'PLACEHOLDER_SKU' },
+          { size: 'Cabin', price: 2200, stock: 10000, sku: 'PLACEHOLDER_SKU' },
         ],
       },
     ],
@@ -1035,6 +1038,7 @@ export const PRODUCTS: Product[] = [
     slug: 'skytrail-set',
     category: 'set',
     isFeatured: true,
+    mrp: 31699,
     description:
       '20", 24", and 28" SkyTrail bags in a nesting set, one fits inside another for compact storage at home. The complete setup for every kind of trip.',
     story: [
@@ -1092,14 +1096,14 @@ export const PRODUCTS: Product[] = [
         color: 'Blue',
         colorHex: '#1E88E5',
         sizes: [
-          { size: 'Set of 3', price: 31699, stock: 15, sku: '8906206840087' },
+          { size: 'Set of 3', price: 11095, stock: 15, sku: '8906206840087' },
         ],
       },
       {
         color: 'Grey',
         colorHex: '#9E9E9E',
         sizes: [
-          { size: 'Set of 3', price: 31699, stock: 15, sku: '8906206840100' },
+          { size: 'Set of 3', price: 11095, stock: 15, sku: '8906206840100' },
         ],
       },
     ],

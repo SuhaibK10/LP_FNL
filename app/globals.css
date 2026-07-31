@@ -64,7 +64,11 @@
     color: var(--color-lp-ink);
     font-family: var(--font-body);
     line-height: 1.65;
-    overflow-x: hidden;
+    /* clip, not hidden — overflow-x:hidden turns body into a scroll
+       container (overflow-y computes to auto), which silently breaks
+       position:sticky for every descendant on the site. clip prevents
+       horizontal overflow without creating a scroll container. */
+    overflow-x: clip;
   }
 
   h1, h2, h3, h4 {

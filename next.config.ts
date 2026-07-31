@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  allowedDevOrigins: ['192.168.1.5','192.168.1.15','192.168.1.4','192.168.1.17','192.168.18.191'],
+  allowedDevOrigins: ['192.168.1.5','192.168.1.15','192.168.1.4','192.168.1.17','192.168.0.8'],
   images: {
     // Custom loader rewrites each Cloudinary URL's own w_/h_ transform to the
     // width Next requests (see lib/cloudinaryLoader.ts), restoring real

@@ -12,11 +12,20 @@ import { ProductSpotlight }    from './sections/ProductSpotlight'
 import { ReviewsSection }      from './sections/ReviewsSection'
 import { ExhibitionGallery }   from './sections/ExhibitionGallery'
 import { EXHIBITION_GALLERY_HOME_ENABLED } from '@/config/exhibitions'
+import { ScrollShowcase }      from './sections/ScrollShowcase'
+import { VERTEX_SHOWCASE_HOME_ENABLED, VERTEX_SHOWCASE_HEADER, VERTEX_SHOWCASE_STOPS } from '@/config/vertexShowcase'
 
 export function HomeEditorial() {
   return (
     <main>
       <HeroSection />
+      {VERTEX_SHOWCASE_HOME_ENABLED && (
+        <ScrollShowcase
+          eyebrow={VERTEX_SHOWCASE_HEADER.eyebrow}
+          heading={VERTEX_SHOWCASE_HEADER.heading}
+          stops={VERTEX_SHOWCASE_STOPS}
+        />
+      )}
       <CategoryGrid />
       <PromoBanner />
       <BestSellersCarousel />
