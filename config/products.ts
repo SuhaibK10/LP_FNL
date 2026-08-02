@@ -76,6 +76,7 @@ export const PRODUCTS: Product[] = [
     slug: 'shirtvault',
     category: 'organizer',
     isFeatured: true,
+    saleExclusive: true,
     hideSizeSelector: true,
     hideSizeGuide: true,
     mrp: 1699,
@@ -253,6 +254,18 @@ export const PRODUCTS: Product[] = [
         ],
         sizes: [
           { size: 'Cabin', price: 4490, stock: 35, sku: '8906206840001-T-20' },
+        ],
+      },
+      {
+        color: 'White',
+        colorHex: '#6F4E37', // brown zippers/accent
+        bodyHex: '#F7F5F0',  // white shell
+        // TODO: no product photos yet for this variant — falls back to the
+        // product's default images (product.images[0]) until real White/
+        // brown-zipper shots are uploaded. Add an `images: [...]` array here
+        // once they're ready, matching the other colors' pattern above.
+        sizes: [
+          { size: 'Cabin', price: 4490, stock: 30 },
         ],
       },
 

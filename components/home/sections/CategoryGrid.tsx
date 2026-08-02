@@ -99,7 +99,7 @@ export function CategoryGrid() {
   return (
     <section
       className={tab === 'sale' ? 'section-pad bg-[var(--color-lp-porcelain)]' : 'section-pad bg-[var(--color-lp-cream)]'}
-      style={{ paddingTop: '0.25rem' }}
+      style={{ paddingTop: '2.5rem' }}
     >
       <div className="container-lp">
 
