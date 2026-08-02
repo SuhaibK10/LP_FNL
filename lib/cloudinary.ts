@@ -11,6 +11,12 @@ const VIDEO_BASE = `https://res.cloudinary.com/${CLOUD}/video/upload`
 // Build a Cloudinary URL from a public_id + transform string.
 // Also handles full Cloudinary URLs by injecting transforms after /upload/.
 export function cld(publicId: string, transforms = 'f_auto,q_auto'): string {
+  // Local static asset (public/) — served as-is, no Cloudinary transform.
+  // The custom Next image loader (lib/cloudinaryLoader.ts) also passes these
+  // straight through, since they won't match its /upload/ URL pattern.
+  if (publicId.startsWith('/')) {
+    return publicId
+  }
   if (!publicId.startsWith('http')) {
     return `${BASE}/${transforms}/${publicId}`
   }

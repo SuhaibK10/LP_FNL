@@ -27,7 +27,8 @@ export function HomeEditorial() {
         />
       )}
       <CategoryGrid />
-      <PromoBanner />
+      {/* Temporarily disabled — "First-Time Buyers" promo turned off. */}
+      {false && <PromoBanner />}
       <BestSellersCarousel />
       <ProductSpotlight />
       {EXHIBITION_GALLERY_HOME_ENABLED && <ExhibitionGallery />}

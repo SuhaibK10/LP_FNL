@@ -139,8 +139,9 @@ export function Navbar() {
     <>
       {/* ── Sale ticker — home only. In normal document flow, scrolls away
           with the page. The fixed navbar below stays pinned at a constant
-          offset regardless, so it doesn't move once the ticker scrolls out. ── */}
-      {isHome && (
+          offset regardless, so it doesn't move once the ticker scrolls out.
+          Temporarily disabled (false &&) — Monsoon Sale ticker turned off. ── */}
+      {false && isHome && (
         <div className="h-9 bg-lp-ink overflow-hidden flex items-center">
           <div className="animate-marquee">
             {[0, 1].map((rep) => (

@@ -256,27 +256,27 @@ export const PRODUCTS: Product[] = [
         color: 'Charcoal',
         colorHex: '#3D3D3D',
         sizes: [
-          { size: 'Cabin', price: 3185, stock: 50, sku: '8906206840292' },
-          { size: 'Medium', price: 3727, stock: 40, sku: '8906206840308' },
-          { size: 'Large', price: 4393, stock: 30, sku: '8906206840315' },
+          { size: 'Cabin', price: 2749, stock: 50, sku: '8906206840292' },
+          { size: 'Medium', price: 3099, stock: 40, sku: '8906206840308' },
+          { size: 'Large', price: 3449, stock: 30, sku: '8906206840315' },
         ],
       },
       {
         color: 'Grey',
         colorHex: '#9E9E9E',
         sizes: [
-          { size: 'Cabin', price: 3185, stock: 50, sku: '8906206840346' },
-          { size: 'Medium', price: 3727, stock: 40, sku: '8906206840339' },
-          { size: 'Large', price: 4393, stock: 30, sku: '8906206840322' },
+          { size: 'Cabin', price: 2749, stock: 50, sku: '8906206840346' },
+          { size: 'Medium', price: 3099, stock: 40, sku: '8906206840339' },
+          { size: 'Large', price: 3449, stock: 30, sku: '8906206840322' },
         ],
       },
       {
         color: 'Midnight Blue',
         colorHex: '#586483',
         sizes: [
-          { size: 'Cabin', price: 3185, stock: 50 },
-          { size: 'Medium', price: 3727, stock: 40 },
-          { size: 'Large', price: 4393, stock: 30 },
+          { size: 'Cabin', price: 2749, stock: 50 },
+          { size: 'Medium', price: 3099, stock: 40 },
+          { size: 'Large', price: 3449, stock: 30 },
         ],
       },
     ],
@@ -350,18 +350,18 @@ export const PRODUCTS: Product[] = [
         colorHex: '#FDD835',
         lowStock: true,
         sizes: [
-          { size: 'Cabin', price: 3185, stock: 50, sku: '8906206840230' },
-          { size: 'Medium', price: 3727, stock: 40, sku: '8906206840247' },
-          { size: 'Large', price: 4393, stock: 30, sku: '8906206840254' },
+          { size: 'Cabin', price: 2799, stock: 50, sku: '8906206840230' },
+          { size: 'Medium', price: 3149, stock: 40, sku: '8906206840247' },
+          { size: 'Large', price: 7099, stock: 30, sku: '8906206840254' },
         ],
       },
       {
         color: 'Black',
         colorHex: '#212121',
         sizes: [
-          { size: 'Cabin', price: 3185, stock: 50, sku: '8906206840285' },
-          { size: 'Medium', price: 3727, stock: 40, sku: '8906206840278' },
-          { size: 'Large', price: 4393, stock: 30, sku: '8906206840261' },
+          { size: 'Cabin', price: 2799, stock: 50, sku: '8906206840285' },
+          { size: 'Medium', price: 3149, stock: 40, sku: '8906206840278' },
+          { size: 'Large', price: 7099, stock: 30, sku: '8906206840261' },
         ],
       },
     ],
@@ -439,27 +439,27 @@ export const PRODUCTS: Product[] = [
         color: 'Rosegold',
         colorHex: '#B76E79',
         sizes: [
-          { size: 'Cabin', price: 3322, stock: 40, sku: '8906206840353' },
-          { size: 'Medium', price: 3847, stock: 30, sku: '8906206840360' },
-          { size: 'Large', price: 4372, stock: 25, sku: '8906206840377' },
+          { size: 'Cabin', price: 2799, stock: 40, sku: '8906206840353' },
+          { size: 'Medium', price: 3149, stock: 30, sku: '8906206840360' },
+          { size: 'Large', price: 3449, stock: 25, sku: '8906206840377' },
         ],
       },
       {
         color: 'Blue',
         colorHex: '#1E88E5',
         sizes: [
-          { size: 'Cabin', price: 3322, stock: 40, sku: '8906206840407' },
-          { size: 'Medium', price: 3847, stock: 30, sku: '8906206840384' },
-          { size: 'Large', price: 4372, stock: 25, sku: '8906206840391' },
+          { size: 'Cabin', price: 2799, stock: 40, sku: '8906206840407' },
+          { size: 'Medium', price: 3149, stock: 30, sku: '8906206840384' },
+          { size: 'Large', price: 3449, stock: 25, sku: '8906206840391' },
         ],
       },
       {
         color: 'Black',
         colorHex: '#212121',
         sizes: [
-          { size: 'Cabin', price: 3322, stock: 40, sku: '8906206840414' },
-          { size: 'Medium', price: 3847, stock: 30, sku: '8906206840438' },
-          { size: 'Large', price: 4372, stock: 25, sku: '8906206840421' },
+          { size: 'Cabin', price: 2799, stock: 40, sku: '8906206840414' },
+          { size: 'Medium', price: 3149, stock: 30, sku: '8906206840438' },
+          { size: 'Large', price: 3449, stock: 25, sku: '8906206840421' },
         ],
       },
     ],
@@ -528,7 +528,7 @@ export const PRODUCTS: Product[] = [
         color: 'Black',
         colorHex: '#212121',
         sizes: [
-          { size: 'Cabin', price: 13259, stock: 20, sku: '8906206840117' },
+          { size: 'Cabin', price: 3749, stock: 20, sku: '8906206840117' },
         ],
       },
     ],
@@ -588,17 +588,17 @@ export const PRODUCTS: Product[] = [
       {
         color: 'Grey',
         colorHex: '#9E9E9E',
-        sizes: [{ size: 'Cabin', price: 8899, stock: 30, sku: '8906206840186' }],
+        sizes: [{ size: 'Cabin', price: 2749, stock: 30, sku: '8906206840186' }],
       },
       {
         color: 'Green',
         colorHex: '#43A047',
-        sizes: [{ size: 'Cabin', price: 8899, stock: 30, sku: '8906206840162' }],
+        sizes: [{ size: 'Cabin', price: 2749, stock: 30, sku: '8906206840162' }],
       },
       {
         color: 'Blue',
         colorHex: '#1E88E5',
-        sizes: [{ size: 'Cabin', price: 8899, stock: 30, sku: '8906206840179' }],
+        sizes: [{ size: 'Cabin', price: 2749, stock: 30, sku: '8906206840179' }],
       },
     ],
   },
@@ -944,14 +944,14 @@ export const PRODUCTS: Product[] = [
         color: 'Silver Brush',
         colorHex: '#C0C0C0',
         sizes: [
-          { size: 'One Size', price: 8499, stock: 30, sku: '8906206840193' },
+          { size: 'One Size', price: 3009, stock: 30, sku: '8906206840193' },
         ],
       },
       {
         color: 'Carbon Fiber',
         colorHex: '#2C2C2C',
         sizes: [
-          { size: 'One Size', price: 8499, stock: 30, sku: '8906206840209' },
+          { size: 'One Size', price: 3009, stock: 30, sku: '8906206840209' },
         ],
       },
       
@@ -1015,14 +1015,14 @@ export const PRODUCTS: Product[] = [
         color: 'Carbon Fiber',
         colorHex: '#2C2C2C',
         sizes: [
-          { size: 'One Size', price: 6099, stock: 30, sku: '8906206840216' },
+          { size: 'One Size', price: 2324, stock: 30, sku: '8906206840216' },
         ],
       },
       {
         color: 'Silver Brush',
         colorHex: '#C0C0C0',
         sizes: [
-          { size: 'One Size', price: 6099, stock: 30, sku: '8906206840223' },
+          { size: 'One Size', price: 2324, stock: 30, sku: '8906206840223' },
         ],
       },
     ],
@@ -1096,14 +1096,14 @@ export const PRODUCTS: Product[] = [
         color: 'Blue',
         colorHex: '#1E88E5',
         sizes: [
-          { size: 'Set of 3', price: 11095, stock: 15, sku: '8906206840087' },
+          { size: 'Set of 3', price: 7749, stock: 15, sku: '8906206840087' },
         ],
       },
       {
         color: 'Grey',
         colorHex: '#9E9E9E',
         sizes: [
-          { size: 'Set of 3', price: 11095, stock: 15, sku: '8906206840100' },
+          { size: 'Set of 3', price: 7749, stock: 15, sku: '8906206840100' },
         ],
       },
     ],
@@ -1238,14 +1238,14 @@ export const PRODUCTS: Product[] = [
         color: 'Yellow',
         colorHex: '#FDD835',
         sizes: [
-          { size: 'Set of 3', price: 31699, stock: 15, sku: '8906206840094' },
+          { size: 'Set of 3', price: 7749, stock: 15, sku: '8906206840094' },
         ],
       },
       {
         color: 'Black',
         colorHex: '#212121',
         sizes: [
-          { size: 'Set of 3', price: 31699, stock: 15, sku: '8906206840070' },
+          { size: 'Set of 3', price: 7749, stock: 15, sku: '8906206840070' },
         ],
       },
     ],
@@ -1925,7 +1925,7 @@ export const PRODUCTS: Product[] = [
           'WhatsApp_Image_2026-07-18_at_13.18.34_1_mkbvjv.jpg',
         ],
         sizes: [
-          { size: 'One Size', price: 2999, stock: 30 },
+          { size: 'One Size', price: 3599, stock: 30 },
         ],
       },
       {
@@ -1938,7 +1938,82 @@ export const PRODUCTS: Product[] = [
           'WhatsApp_Image_2026-07-18_at_13.18.30_5_duagv7.jpg',
         ],
         sizes: [
-          { size: 'One Size', price: 2999, stock: 30 },
+          { size: 'One Size', price: 3599, stock: 30 },
+        ],
+      },
+    ],
+  },
+
+  // ── ShirtVault ──────────────────────────────────────────────────────────
+  {
+    id: 'shirtvault',
+    metaTitle: 'Louis Polo ShirtVault Hard Shell Shirt Organizer',
+    metaDescription: 'Hard-shell shirt organizer that carries 4 to 5 formal shirts wrinkle-free. Slim polycarbonate case for business trips, weddings, and wardrobe storage.',
+    keywords: ['shirt organizer for travel', 'wrinkle free shirt case', 'formal shirt travel organizer', 'hard shell shirt holder', 'shirt storage case india'],
+    name: 'ShirtVault',
+    slug: 'shirtvault',
+    category: 'organizer',
+    isFeatured: true,
+    hideSizeSelector: true,
+    hideSizeGuide: true,
+    mrp: 1699,
+    description:
+      'Pack shirts, not wrinkles. ShirtVault carries 4 to 5 formal shirts in a slim hard shell that keeps collars sharp and folds crisp, in a suitcase or on a wardrobe shelf.',
+    story: [
+      'Every frequent traveler knows the ritual: shirts folded with care at home, pulled out crushed at the hotel. ShirtVault ends it. The structured polycarbonate shell takes the pressure your luggage deals out, so the shirts inside never do. Collars hold their shape, folds stay where you set them, and the iron stays in the cupboard.',
+      'It earns its place between trips too. On a wardrobe shelf, ShirtVault keeps 4 to 5 shirts stacked, dust-free, and ready to lift out for the next early flight or big occasion.',
+    ],
+    highlights: [
+      {
+        heading: 'Shirts arrive as they left',
+        body: 'The rigid shell absorbs the crush of packed luggage, so collars, cuffs, and folds come out exactly as you packed them. No hotel ironing board required.',
+      },
+      {
+        heading: 'Slim enough for any suitcase',
+        body: 'ShirtVault slips flat into most cabin and check-in luggage, holding 4 to 5 formal shirts in the space careless folding would waste.',
+      },
+      {
+        heading: 'A wardrobe upgrade at home',
+        body: 'Between trips it works as shirt storage: organized, protected from dust, and stacked neatly instead of slumping on a shelf.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',    value: 'Polycarbonate (PC)' },
+      { label: 'Capacity', value: '4 to 5 formal shirts' },
+      { label: 'Finish',   value: 'Metallic silver gloss' },
+      { label: 'Closure',  value: 'Full-perimeter zip' },
+      { label: 'Use',      value: 'Travel packing and wardrobe storage' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    faqs: [
+      {
+        q: 'How many shirts does it hold?',
+        a: 'Four comfortably, five with a slimmer fold. Enough for a working week away, or a wedding weekend with backups.',
+      },
+      {
+        q: 'Will it fit inside a cabin suitcase?',
+        a: 'Yes. The case is deliberately slim so it lies flat inside most cabin and check-in luggage, with room around it for everything else.',
+      },
+    ],
+    images: [
+      '/products/shirtvault-silver.png',
+    ],
+    features: [
+      { label: 'Holds 4 to 5 formal shirts' },
+      { label: 'Prevents wrinkles and creases' },
+      { label: 'Protects collars and structure' },
+      { label: 'Slim, suitcase-friendly profile' },
+      { label: 'Hard shell construction' },
+      { label: 'Dust-free wardrobe storage' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Metallic Silver',
+        colorHex: '#C9CBD1',
+        sizes: [
+          { size: 'One Size', price: 1299, stock: 50 },
         ],
       },
     ],
@@ -1980,4 +2055,5 @@ export const CATEGORIES = [
   { label: 'Duffle Bags', value: 'duffle',       count: PRODUCTS.filter(p => p.category === 'duffle').length },
   { label: 'Vanity Cases',value: 'vanity',       count: PRODUCTS.filter(p => p.category === 'vanity').length },
   { label: 'OverNighters', value: 'overnighter', count: PRODUCTS.filter(p => p.category === 'overnighter').length },
+  { label: 'Organizers',  value: 'organizer',    count: PRODUCTS.filter(p => p.category === 'organizer').length },
 ] as const

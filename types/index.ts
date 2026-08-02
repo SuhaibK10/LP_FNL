@@ -12,6 +12,7 @@ export type ProductCategory =
   | 'kids'
   | 'duffle'
   | 'overnighter'
+  | 'organizer'
 
 export type ProductSize = 'Cabin' | 'Medium' | 'Large' | 'Set of 3' | 'One Size' | '9 Inch' | '12 Inch' | '17 Inch' | '20 Inch'
 
