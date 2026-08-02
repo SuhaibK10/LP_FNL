@@ -136,7 +136,7 @@ export const PRODUCTS: Product[] = [
         color: 'Metallic Silver',
         colorHex: '#C9CBD1',
         sizes: [
-          { size: 'One Size', price: 1099, stock: 50 },
+          { size: 'One Size', price: 1299, stock: 50 },
         ],
       },
     ],
