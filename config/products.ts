@@ -65,6 +65,81 @@ export const HERO_SLIDES: HeroSlide[] = [
 
 // ─── Products ─────────────────────────────────────────────────────────────────
 export const PRODUCTS: Product[] = [
+
+  // ── ShirtVault ──────────────────────────────────────────────────────────
+  {
+    id: 'shirtvault',
+    metaTitle: 'Louis Polo ShirtVault Hard Shell Shirt Organizer',
+    metaDescription: 'Hard-shell shirt organizer that carries 4 to 5 formal shirts wrinkle-free. Slim polycarbonate case for business trips, weddings, and wardrobe storage.',
+    keywords: ['shirt organizer for travel', 'wrinkle free shirt case', 'formal shirt travel organizer', 'hard shell shirt holder', 'shirt storage case india'],
+    name: 'ShirtVault',
+    slug: 'shirtvault',
+    category: 'organizer',
+    isFeatured: true,
+    hideSizeSelector: true,
+    hideSizeGuide: true,
+    mrp: 1699,
+    description:
+      'Pack shirts, not wrinkles. ShirtVault carries 4 to 5 formal shirts in a slim hard shell that keeps collars sharp and folds crisp, in a suitcase or on a wardrobe shelf.',
+    story: [
+      'Every frequent traveler knows the ritual: shirts folded with care at home, pulled out crushed at the hotel. ShirtVault ends it. The structured polycarbonate shell takes the pressure your luggage deals out, so the shirts inside never do. Collars hold their shape, folds stay where you set them, and the iron stays in the cupboard.',
+      'It earns its place between trips too. On a wardrobe shelf, ShirtVault keeps 4 to 5 shirts stacked, dust-free, and ready to lift out for the next early flight or big occasion.',
+    ],
+    highlights: [
+      {
+        heading: 'Shirts arrive as they left',
+        body: 'The rigid shell absorbs the crush of packed luggage, so collars, cuffs, and folds come out exactly as you packed them. No hotel ironing board required.',
+      },
+      {
+        heading: 'Slim enough for any suitcase',
+        body: 'ShirtVault slips flat into most cabin and check-in luggage, holding 4 to 5 formal shirts in the space careless folding would waste.',
+      },
+      {
+        heading: 'A wardrobe upgrade at home',
+        body: 'Between trips it works as shirt storage: organized, protected from dust, and stacked neatly instead of slumping on a shelf.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',    value: 'Polycarbonate (PC)' },
+      { label: 'Capacity', value: '4 to 5 formal shirts' },
+      { label: 'Finish',   value: 'Metallic silver gloss' },
+      { label: 'Closure',  value: 'Full-perimeter zip' },
+      { label: 'Use',      value: 'Travel packing and wardrobe storage' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    faqs: [
+      {
+        q: 'How many shirts does it hold?',
+        a: 'Four comfortably, five with a slimmer fold. Enough for a working week away, or a wedding weekend with backups.',
+      },
+      {
+        q: 'Will it fit inside a cabin suitcase?',
+        a: 'Yes. The case is deliberately slim so it lies flat inside most cabin and check-in luggage, with room around it for everything else.',
+      },
+    ],
+    images: [
+      '/products/shirtvault-silver.png',
+    ],
+    features: [
+      { label: 'Holds 4 to 5 formal shirts' },
+      { label: 'Prevents wrinkles and creases' },
+      { label: 'Protects collars and structure' },
+      { label: 'Slim, suitcase-friendly profile' },
+      { label: 'Hard shell construction' },
+      { label: 'Dust-free wardrobe storage' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Metallic Silver',
+        colorHex: '#C9CBD1',
+        sizes: [
+          { size: 'One Size', price: 1299, stock: 50 },
+        ],
+      },
+    ],
+  },
   // ── AeroSmart 3-in-1 ────────────────────────────────────────────────────
   {
     id: 'aerosmart-3in1',
@@ -1944,80 +2019,6 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
-  // ── ShirtVault ──────────────────────────────────────────────────────────
-  {
-    id: 'shirtvault',
-    metaTitle: 'Louis Polo ShirtVault Hard Shell Shirt Organizer',
-    metaDescription: 'Hard-shell shirt organizer that carries 4 to 5 formal shirts wrinkle-free. Slim polycarbonate case for business trips, weddings, and wardrobe storage.',
-    keywords: ['shirt organizer for travel', 'wrinkle free shirt case', 'formal shirt travel organizer', 'hard shell shirt holder', 'shirt storage case india'],
-    name: 'ShirtVault',
-    slug: 'shirtvault',
-    category: 'organizer',
-    isFeatured: true,
-    hideSizeSelector: true,
-    hideSizeGuide: true,
-    mrp: 1699,
-    description:
-      'Pack shirts, not wrinkles. ShirtVault carries 4 to 5 formal shirts in a slim hard shell that keeps collars sharp and folds crisp, in a suitcase or on a wardrobe shelf.',
-    story: [
-      'Every frequent traveler knows the ritual: shirts folded with care at home, pulled out crushed at the hotel. ShirtVault ends it. The structured polycarbonate shell takes the pressure your luggage deals out, so the shirts inside never do. Collars hold their shape, folds stay where you set them, and the iron stays in the cupboard.',
-      'It earns its place between trips too. On a wardrobe shelf, ShirtVault keeps 4 to 5 shirts stacked, dust-free, and ready to lift out for the next early flight or big occasion.',
-    ],
-    highlights: [
-      {
-        heading: 'Shirts arrive as they left',
-        body: 'The rigid shell absorbs the crush of packed luggage, so collars, cuffs, and folds come out exactly as you packed them. No hotel ironing board required.',
-      },
-      {
-        heading: 'Slim enough for any suitcase',
-        body: 'ShirtVault slips flat into most cabin and check-in luggage, holding 4 to 5 formal shirts in the space careless folding would waste.',
-      },
-      {
-        heading: 'A wardrobe upgrade at home',
-        body: 'Between trips it works as shirt storage: organized, protected from dust, and stacked neatly instead of slumping on a shelf.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',    value: 'Polycarbonate (PC)' },
-      { label: 'Capacity', value: '4 to 5 formal shirts' },
-      { label: 'Finish',   value: 'Metallic silver gloss' },
-      { label: 'Closure',  value: 'Full-perimeter zip' },
-      { label: 'Use',      value: 'Travel packing and wardrobe storage' },
-    ],
-    warranty:
-      '1-year warranty covering manufacturing defects in the shell and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    faqs: [
-      {
-        q: 'How many shirts does it hold?',
-        a: 'Four comfortably, five with a slimmer fold. Enough for a working week away, or a wedding weekend with backups.',
-      },
-      {
-        q: 'Will it fit inside a cabin suitcase?',
-        a: 'Yes. The case is deliberately slim so it lies flat inside most cabin and check-in luggage, with room around it for everything else.',
-      },
-    ],
-    images: [
-      '/products/shirtvault-silver.png',
-    ],
-    features: [
-      { label: 'Holds 4 to 5 formal shirts' },
-      { label: 'Prevents wrinkles and creases' },
-      { label: 'Protects collars and structure' },
-      { label: 'Slim, suitcase-friendly profile' },
-      { label: 'Hard shell construction' },
-      { label: 'Dust-free wardrobe storage' },
-      { label: 'Lightweight build' },
-    ],
-    variants: [
-      {
-        color: 'Metallic Silver',
-        colorHex: '#C9CBD1',
-        sizes: [
-          { size: 'One Size', price: 1299, stock: 50 },
-        ],
-      },
-    ],
-  },
 
 ]
 
