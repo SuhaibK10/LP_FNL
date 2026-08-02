@@ -21,6 +21,12 @@ import { cn }                          from '@/lib/utils'
 import { SearchOverlay }               from '@/components/search/SearchOverlay'
 import { useShopFilterStore }          from '@/store/shopFilterStore'
 
+// Temporarily disabled — Monsoon Sale ticker turned off. Drives both the
+// ticker's own render and the header's top-offset animation below, so they
+// can't drift out of sync (a disabled ticker with a reserved gap above it,
+// or vice versa).
+const SALE_TICKER_ENABLED = false
+
 // ─── Hook: wishlist count ─────────────────────────────────────────────────────
 function useWishlistCount() {
   const [count, setCount] = useState(0)
@@ -88,7 +94,12 @@ export function Navbar() {
   // ticker is tall, so it "catches up" to sit flush against the viewport
   // top once the ticker's gone, same as a normal sticky nav would.
   const { scrollY } = useScroll()
-  const headerTop = useTransform(scrollY, [0, 36], ['2.25rem', '0rem'], { clamp: true })
+  const headerTop = useTransform(
+    scrollY,
+    SALE_TICKER_ENABLED ? [0, 36] : [0, 0],
+    SALE_TICKER_ENABLED ? ['2.25rem', '0rem'] : ['0rem', '0rem'],
+    { clamp: true }
+  )
 
   // Fix Android Chrome dynamic toolbar
   useEffect(() => {
@@ -140,8 +151,8 @@ export function Navbar() {
       {/* ── Sale ticker — home only. In normal document flow, scrolls away
           with the page. The fixed navbar below stays pinned at a constant
           offset regardless, so it doesn't move once the ticker scrolls out.
-          Temporarily disabled (false &&) — Monsoon Sale ticker turned off. ── */}
-      {false && isHome && (
+          Currently disabled via SALE_TICKER_ENABLED above. ── */}
+      {SALE_TICKER_ENABLED && isHome && (
         <div className="h-9 bg-lp-ink overflow-hidden flex items-center">
           <div className="animate-marquee">
             {[0, 1].map((rep) => (
