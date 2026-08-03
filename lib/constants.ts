@@ -60,7 +60,7 @@ export const SALE_CONFIG = {
   enabled:         false,
   discountPercent: 0.15,
   label:           'Monsoon Sale',
-  endDate:         '2026-08-02T23:59:59+05:30', // IST, end of day
+  endDate:         '2026-08-06T23:59:59+05:30', // IST, end of day — 3 days out
 } as const
 
 // SEO defaults
