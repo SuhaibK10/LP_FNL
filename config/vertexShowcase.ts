@@ -12,7 +12,7 @@
 import type { ShowcaseStop } from '@/components/home/sections/ScrollShowcase'
 
 // Homepage switch — flip to false to pull this showcase off the homepage.
-export const VERTEX_SHOWCASE_HOME_ENABLED = true
+export const VERTEX_SHOWCASE_HOME_ENABLED = false
 
 export const VERTEX_SHOWCASE_HEADER = {
   eyebrow: 'The Collection',
