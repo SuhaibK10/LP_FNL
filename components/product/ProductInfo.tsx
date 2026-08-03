@@ -13,7 +13,7 @@ import Link                      from 'next/link'
 import { ShoppingBag, Heart, Ruler, Minus, Plus, ArrowRight, Star } from 'lucide-react'
 import { featureIconFor }        from '@/lib/featureIcons'
 import type { Product, ProductSize } from '@/types'
-import { formatPrice }           from '@/lib/utils'
+import { formatPrice, swatchRingColor } from '@/lib/utils'
 import { ROUTES }                from '@/lib/constants'
 import { useCartStore }          from '@/store/cartStore'
 import { thumbUrl }              from '@/lib/cloudinary'
@@ -182,8 +182,8 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
                   ? `linear-gradient(135deg, ${v.bodyHex} 60%, ${v.colorHex} 60%)`
                   : v.colorHex,
                 boxShadow: i === colorIndex
-                  ? `0 0 0 2px var(--color-lp-porcelain), 0 0 0 3.5px ${v.colorHex}`
-                  : '0 0 0 1px var(--color-lp-border)',
+                  ? `0 0 0 2px var(--color-lp-porcelain), 0 0 0 3.5px ${swatchRingColor(v.colorHex)}`
+                  : '0 0 0 1px var(--color-lp-border-strong)',
               }}
               aria-label={v.color}
               aria-pressed={i === colorIndex}

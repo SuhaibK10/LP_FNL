@@ -13,7 +13,7 @@ import { motion, AnimatePresence }  from 'framer-motion'
 import { ArrowRight, ShoppingBag, Check, Heart, Ruler, Star, ChevronDown } from 'lucide-react'
 import type { Product, ProductSize } from '@/types'
 import { cardUrl, PLACEHOLDER_URL } from '@/lib/cloudinary'
-import { formatPrice }              from '@/lib/utils'
+import { formatPrice, swatchRingColor } from '@/lib/utils'
 import { ROUTES }                   from '@/lib/constants'
 import { useCartStore }             from '@/store/cartStore'
 import { useWishlistStore }         from '@/store/wishlistStore'
@@ -252,8 +252,8 @@ export function ProductCard({ product }: ProductCardProps) {
                         ? `linear-gradient(135deg, ${v.bodyHex} 60%, ${v.colorHex} 60%)`
                         : v.colorHex,
                       boxShadow: i === activeVariant
-                        ? `0 0 0 1.5px var(--color-lp-porcelain), 0 0 0 3px ${v.colorHex}`
-                        : '0 0 0 1px var(--color-lp-border)',
+                        ? `0 0 0 1.5px var(--color-lp-porcelain), 0 0 0 3px ${swatchRingColor(v.colorHex)}`
+                        : '0 0 0 1px var(--color-lp-border-strong)',
                     }}
                     aria-label={v.color}
                     aria-pressed={i === activeVariant}

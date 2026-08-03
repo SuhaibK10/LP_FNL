@@ -15,7 +15,7 @@ import { ArrowRight, ShoppingBag, Ruler, Heart, Star } from 'lucide-react'
 import type { ProductSize }                  from '@/types'
 import { FEATURED_PRODUCTS }                 from '@/config/products'
 import { cardUrl, PLACEHOLDER_URL }          from '@/lib/cloudinary'
-import { formatPrice }                       from '@/lib/utils'
+import { formatPrice, swatchRingColor }      from '@/lib/utils'
 import { ROUTES }                            from '@/lib/constants'
 import { useCartStore }                      from '@/store/cartStore'
 import { useWishlistStore }                  from '@/store/wishlistStore'
@@ -190,8 +190,8 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
                     ? `linear-gradient(135deg, ${v.bodyHex} 60%, ${v.colorHex} 60%)`
                     : v.colorHex,
                   boxShadow: i === activeVariant
-                    ? `0 0 0 1.5px var(--color-lp-porcelain), 0 0 0 3px ${v.colorHex}`
-                    : '0 0 0 1px var(--color-lp-border)',
+                    ? `0 0 0 1.5px var(--color-lp-porcelain), 0 0 0 3px ${swatchRingColor(v.colorHex)}`
+                    : '0 0 0 1px var(--color-lp-border-strong)',
                 }}
                 aria-label={v.color}
                 aria-pressed={i === activeVariant}

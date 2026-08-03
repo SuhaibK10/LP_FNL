@@ -689,7 +689,118 @@ export const PRODUCTS: Product[] = [
         color: 'Silver',
         colorHex: '#B0B4B8',
         sizes: [
-          { size: '20 Inch', price: 4490, stock: 25 },
+          { size: 'Cabin', price: 4490, stock: 25 },
+        ],
+      },
+    ],
+  },
+
+  // ── DiamondLux ───────────────────────────────────────────────────────────
+  {
+    id: 'diamondlux',
+    metaTitle: 'DiamondLux Quilted Hard Shell Spinner Suitcase',
+    metaDescription: 'DiamondLux pairs a quilted diamond-pattern hard shell with metallic accents, 360° spinner wheels, and a combination lock. Cabin, Medium, and Large, sold individually or as a set.',
+    keywords: ['quilted hard shell suitcase', 'diamond pattern luggage', 'premium spinner suitcase', 'luggage set of 3', 'combination lock trolley bag'],
+    name: 'DiamondLux',
+    slug: 'diamondlux',
+    category: 'trolley',
+    isFeatured: true,
+    description:
+      'Luxury-inspired styling with dependable travel performance. DiamondLux pairs a quilted diamond shell and metallic accents with 360° spinner wheels and a combination lock, for business travellers and modern explorers who want sophistication and durability in one case.',
+    story: [
+      'DiamondLux starts with the shell: a diamond-quilted surface finished with metallic accents, a silhouette built for travellers who notice detail. Cabin, Medium, and Large are each sold on their own, or together as a matched set, so a business trip, a weekend away, and a fortnight abroad all draw from the same wardrobe of luggage.',
+      'Underneath the finish, it works like every case in the range: four dual-spinner wheels, a precision telescopic handle, reinforced corners, an integrated combination lock, and an anti-theft zipper, so the polish never comes at the cost of protection.',
+    ],
+    highlights: [
+      {
+        heading: 'Luxury-inspired design',
+        body: 'A diamond-quilted shell, premium metallic accents, and refined proportions give DiamondLux a finish that reads considered rather than loud.',
+      },
+      {
+        heading: 'Effortless, every journey',
+        body: 'Four dual-spinner wheels and a precision telescopic handle keep the case gliding through terminals no matter which size is doing the travelling.',
+      },
+      {
+        heading: 'Travel, protected',
+        body: 'A durable hard shell, reinforced corners, and an integrated combination lock take the knocks of the belt and the boot, so the quilting stays sharp trip after trip.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',    value: 'Polycarbonate + ABS, quilted diamond finish' },
+      { label: 'Sizes',    value: 'Cabin (20″) · Medium (24″) · Large (28″), sold individually or as a set' },
+      { label: 'Lock',     value: 'Combination lock' },
+      { label: 'Wheels',   value: '4 dual-spinner 360° wheels' },
+      { label: 'Handle',   value: 'Telescopic handle' },
+      { label: 'Interior', value: 'Fabric lining' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+    // account's credit limit is exhausted. No photos yet: left as [''] and
+    // not [] — an empty array resolves to `undefined` in ProductCard's image
+    // lookup, which throws at render; '' resolves safely to a broken-image
+    // placeholder instead of crashing the card.
+    images: [''],
+    features: [
+      { label: 'Smooth rolling spinner wheels' },
+      { label: 'Strong bearing capacity' },
+      { label: 'Combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Comfortable fabric lining' },
+      { label: 'Lightweight build' },
+      { label: 'Impact resistant' },
+      { label: 'Anti-theft zipper' },
+    ],
+    variants: [
+      {
+        color: 'Bold White',
+        colorHex: '#F5F3EC',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785785785/louis-polo-diamondlux-luggage-20-28-main-1785229823622-1785229823622_Background_Removed_ku4tay.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785786121/louis-polo-diamondlux-luggage-20-main-02-1785229833484-1785229833484_Background_Removed_wolwuk.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785785785/louis-polo-diamondlux-luggage-20-main-01-1785229832613-1785229832613_Background_Removed_trrtxr.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785785785/louis-polo-diamondlux-luggage-20-28-main-1785229830501-1785229830501_Background_Removed_oiopcp.png',
+        ],
+        sizes: [
+          { size: 'Cabin',    price: 2990,  stock: 25 },
+          { size: 'Medium',   price: 3499,  stock: 20 },
+          { size: 'Large',    price: 4299,  stock: 20 },
+          { size: 'Set of 3', price: 11499, stock: 15 },
+        ],
+      },
+      {
+        color: 'Zen Gray',
+        colorHex: '#8A8D91',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785786123/louis-polo-diamondlux-luggage-20-main-06-1785229837184-1785229837184-2_Background_Removed_l4r2i6.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785786123/louis-polo-diamondlux-luggage-20-main-05-1785229836315-1785229836315-2_Background_Removed_xxxv4u.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785785785/louis-polo-diamondlux-luggage-20-28-main-1785229831425-1785229831425_Background_Removed_lwxv5v.png',
+        ],
+        sizes: [
+          { size: 'Cabin',    price: 2990,  stock: 25 },
+          { size: 'Medium',   price: 3499,  stock: 20 },
+          { size: 'Large',    price: 4299,  stock: 20 },
+          { size: 'Set of 3', price: 11499, stock: 15 },
+        ],
+      },
+      {
+        color: 'Olive',
+        colorHex: '#6B6E4A',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785785784/DiamondLux_qxfzs5.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785785785/DiomondLux_bksggh.png',
+        ],
+        sizes: [
+          { size: 'Cabin',    price: 2990,  stock: 25 },
+          { size: 'Medium',   price: 3499,  stock: 20 },
+          { size: 'Large',    price: 4299,  stock: 20 },
+          { size: 'Set of 3', price: 11499, stock: 15 },
         ],
       },
     ],
