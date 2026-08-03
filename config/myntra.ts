@@ -80,15 +80,6 @@ export const MYNTRA_LISTINGS: Record<string, MyntraListing> = {
       'Cabin': { url: `${M}/trolley-bag/louis+polo/louis-polo-prostripe-front-opening-hard-sided-20-inch-trolley-suitcase--56-l/40280794/buy`, price: 2949, rating: 4.2, ratingCount: 15 },
     },
   },
-  motostripe: {
-    url: `${M}/trolley-bag/louis+polo/louis-polo-motostripe-cabin-trolley-suitcase---volume-49-l/40280796/buy`,
-    fromPrice: 1949,
-    rating: 4.8,
-    ratingCount: 10,
-    sizes: {
-      'Cabin': { url: `${M}/trolley-bag/louis+polo/louis-polo-motostripe-cabin-trolley-suitcase---volume-49-l/40280796/buy`, price: 1949, rating: 4.8, ratingCount: 10 },
-    },
-  },
   hexcore: {
     url: `${M}/laptop-bag/louis+polo/louis-polo-unisex-hexcore-textured-laptop-bag/40280795/buy`,
     fromPrice: 1524,
