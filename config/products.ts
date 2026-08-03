@@ -260,10 +260,17 @@ export const PRODUCTS: Product[] = [
         color: 'White',
         colorHex: '#6F4E37', // brown zippers/accent
         bodyHex: '#F7F5F0',  // white shell
-        // TODO: no product photos yet for this variant — falls back to the
-        // product's default images (product.images[0]) until real White/
-        // brown-zipper shots are uploaded. Add an `images: [...]` array here
-        // once they're ready, matching the other colors' pattern above.
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785773619/WhatsApp_Image_2026-07-31_at_21.52_Background_Removed.06_pnabuc.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785773619/WhatsApp_Image_2026-07-31_at_21.52.04_2_Background_Removed_s1cq71.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785773619/WhatsApp_Image_2026-07-31_at_21.52.05_1_Background_Removed_uwxy8f.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785773619/WhatsApp_Image_2026-07-31_at_21.52.06_1_Background_Removed_ko1ou6.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785773618/WhatsApp_Image_2026-07-31_at_21.52_Background_Removed.05_eh2fc9.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785773618/WhatsApp_Image_2026-07-31_at_21.52_Background_Removed.04_fddkl9.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785773619/WhatsApp_Image_2026-07-31_at_21.52.04_1_Background_Removed_qbni1l.png',
+        ],
         sizes: [
           { size: 'Cabin', price: 4490, stock: 30 },
         ],
@@ -617,6 +624,72 @@ export const PRODUCTS: Product[] = [
         colorHex: '#212121',
         sizes: [
           { size: 'Cabin', price: 3749, stock: 20, sku: '8906206840117' },
+        ],
+      },
+    ],
+  },
+
+  // ── ProStripe Cyber ──────────────────────────────────────────────────────
+  {
+    id: 'prostripe-cyber',
+    metaTitle: 'ProStripe Cyber 20″ Geometric Hard Shell Trolley',
+    metaDescription: 'A 20″ hard-shell trolley with a geometric front panel and striped lower detailing, 360° spinner wheels, combination lock, and a front utility compartment.',
+    keywords: ['geometric hard shell suitcase', '20 inch trolley bag', 'front utility pocket trolley', 'combination lock cabin luggage', 'futuristic design suitcase'],
+    name: 'ProStripe Cyber',
+    slug: 'prostripe-cyber',
+    category: 'trolley',
+    isFeatured: true,
+    description:
+      'A geometric front panel and striped lower detailing give ProStripe Cyber a clean, futuristic edge, built on the same hard-shell protection and 360° spinner wheels as the rest of the range.',
+    story: [
+      'ProStripe Cyber starts from the shell outward: a geometric panel across the front face and a striped lower band, a silhouette that reads modern from across a terminal without shouting for attention. It carries the same fundamentals as every case in the line underneath the finish.',
+      'A front utility compartment keeps small essentials within reach without opening the main case, while a combination lock and 360° spinner wheels handle the rest of the trip.',
+    ],
+    highlights: [
+      {
+        heading: 'A shell with a silhouette',
+        body: 'The geometric front panel and striped lower band are moulded into the shell itself, a finish that stays sharp through years of overhead bins, not a print that wears off.',
+      },
+      {
+        heading: 'One more pocket, up front',
+        body: 'The front utility compartment holds the small things, a boarding pass, a phone, a passport, without needing to open the main case at security or the gate.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',   value: 'Polycarbonate + ABS' },
+      { label: 'Size',    value: '20″ · front utility compartment' },
+      { label: 'Lock',    value: '3-digit combination lock' },
+      { label: 'Wheels',  value: '360° spinner wheels' },
+      { label: 'Handle',  value: 'Telescopic' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+    // account's credit limit is exhausted. Full URLs work here exactly like
+    // bare public_ids elsewhere; cld() in lib/cloudinary.ts already handles
+    // any cloud name via its full-URL transform-injection path.
+    images: [
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785773538/louis-polo-prostripe-cyber-hard-shell-tr-1785368341730-1785368341730_Background_Removed_hihz8r.png',
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785773538/louis-polo-prostripe-cyber-hard-shell-tr-1785368342460-1785368342460_Background_Removed_edavfa.png',
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785773538/louis-polo-prostripe-cyber-hard-shell-tr-1785368340931-1785368340931_Background_Removed_tuqmkk.png',
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785773538/louis-polo-prostripe-cyber-hard-shell-tr-1785368340109-1785368340109_Background_Removed_vjjeih.png',
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785773537/louis-polo-prostripe-cyber-hard-shell-tr-1785368339482-1785368339482_Background_Removed_a2jwhb.png',
+    ],
+    features: [
+      { label: '360° spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Front utility compartment' },
+      { label: 'Geometric hard shell design' },
+      { label: 'Wear resistant' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Silver',
+        colorHex: '#B0B4B8',
+        sizes: [
+          { size: '20 Inch', price: 4490, stock: 25 },
         ],
       },
     ],
@@ -1116,6 +1189,79 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
+  // ── ArmorRite ────────────────────────────────────────────────────────────
+  {
+    id: 'armorrite',
+    metaTitle: 'ArmorRite Hard Shell Luggage | TSA Lock | 360° Spinner Travel Suitcase',
+    metaDescription: 'Shop the ArmorRite Hard Shell Luggage featuring an armor-inspired design, TSA lock, 360° spinner wheels, lightweight construction, and premium durability for every journey.',
+    keywords: ['ArmorRite luggage', 'hard shell suitcase', 'orange trolley bag', 'TSA luggage', 'premium travel luggage', '360 spinner suitcase', 'durable luggage', 'lightweight trolley', 'travel suitcase', 'hard case luggage'],
+    name: 'ArmorRite',
+    slug: 'armorrite',
+    category: 'trolley',
+    isFeatured: true,
+    description:
+      'Built like armor, designed for every journey. ArmorRite is a rugged hard-shell trolley engineered for travellers who want durability without giving up style, in a bold geometric shell with 360° spinner wheels, TSA-approved security, and an ergonomic telescopic handle.',
+    story: [
+      'ArmorRite takes its cue from tactical armor: a reinforced geometric shell built to take the demands of modern travel while keeping a sleek, premium look. Cabin, Medium, and Large are each sold on their own, or together as a matched set, so every trip from a weekend away to a fortnight abroad is already covered.',
+      'Underneath the finish sit the fundamentals done properly: ultra-smooth 360° spinner wheels, a precision telescopic aluminium handle, an integrated TSA combination lock, and premium zip closure, for effortless mobility and reliable security wherever the destination.',
+    ],
+    highlights: [
+      {
+        heading: 'Armor-inspired, travel-ready',
+        body: 'A reinforced geometric hard shell in a scratch-resistant matte finish takes the knocks of modern travel while still looking sharp off the carousel.',
+      },
+      {
+        heading: 'TSA lock, on every case',
+        body: 'An integrated TSA combination lock secures all three sizes, so airport security and hotel storage never feel like a gamble.',
+      },
+      {
+        heading: 'Built to move, not just look tough',
+        body: 'Silent 360° spinner wheels and a smooth telescopic aluminium handle keep the set effortless through terminals, not just durable in the hold.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',    value: 'ABS hard shell, matte textured finish' },
+      { label: 'Sizes',    value: 'Cabin (20″) · Medium (24″) · Large (28″), sold individually or as a set' },
+      { label: 'Lock',     value: 'TSA-approved combination lock' },
+      { label: 'Wheels',   value: '4 double 360° spinner wheels' },
+      { label: 'Handle',   value: 'Telescopic aluminium handle' },
+      { label: 'Closure',  value: 'Heavy-duty zip closure' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+    // account's credit limit is exhausted.
+    images: [
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776263/1_Large_Background_Removed_usrmty.png',
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776263/3_Large_Background_Removed_o2xtoz.png',
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776264/4_Large_Background_Removed_ugrxhn.png',
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776264/9_Large_Background_Removed_zwhmvt.png',
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776265/7_Large_Background_Removed_x05rdu.png',
+    ],
+    features: [
+      { label: 'Rugged armor-inspired hard shell' },
+      { label: 'Integrated TSA combination lock' },
+      { label: '360° silent spinner wheels' },
+      { label: 'Scratch-resistant exterior' },
+      { label: 'Lightweight yet durable construction' },
+      { label: 'Ergonomic carry handles' },
+      { label: 'Spacious, organised interior' },
+      { label: 'Smooth telescopic aluminium handle' },
+      { label: 'Water-resistant hard shell' },
+    ],
+    variants: [
+      {
+        color: 'Blaze Orange',
+        colorHex: '#FF7900',
+        sizes: [
+          { size: 'Cabin',   price: 2999,  stock: 25 },
+          { size: 'Medium',  price: 3599,  stock: 20 },
+          { size: 'Large',   price: 4299,  stock: 20 },
+          { size: 'Set of 3', price: 11000, stock: 15 },
+        ],
+      },
+    ],
+  },
 
   // ── Gemtote Duffle Bag ──────────────────────────────────────────────────
   {
