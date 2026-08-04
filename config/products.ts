@@ -22,7 +22,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     // Hosted on a separate Cloudinary account (deh394y0h) — the primary
     // account's credit limit is exhausted.
-    image:        'https://res.cloudinary.com/deh394y0h/image/upload/v1785875001/ChatGPT_Image_Aug_5_2026_at_01_44_27_AM_cbxw09.png',
+    image:        'https://res.cloudinary.com/deh394y0h/image/upload/v1785876730/ChatGPT_Image_Aug_5_2026_at_02_21_13_AM_uy8dkj.png',
     desktopImage: 'https://res.cloudinary.com/deh394y0h/image/upload/v1785875011/ChatGPT_Image_Aug_5_2026_at_01_52_56_AM_cqlsmb.png',
     headline:  '',
     textStyle: 'shadow',
@@ -130,7 +130,7 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      '/products/shirtvault-silver.png',
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785876268/d_Background_Removed_e6r3q6.png',
     ],
     features: [
       { label: 'Holds 4 to 5 formal shirts' },
