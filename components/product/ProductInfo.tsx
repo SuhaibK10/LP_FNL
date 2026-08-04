@@ -10,7 +10,7 @@ import { useState, useEffect }   from 'react'
 import { useRouter }             from 'next/navigation'
 import { motion }                from 'framer-motion'
 import Link                      from 'next/link'
-import { ShoppingBag, Heart, Ruler, Minus, Plus, ArrowRight, Star } from 'lucide-react'
+import { ShoppingBag, Heart, Ruler, Minus, Plus, ArrowRight, Star, Flame } from 'lucide-react'
 import { featureIconFor }        from '@/lib/featureIcons'
 import type { Product, ProductSize } from '@/types'
 import { formatPrice, swatchRingColor } from '@/lib/utils'
@@ -106,6 +106,16 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
         <h1 className="lp-heading-md">{product.name}</h1>
       </div>
 
+      {/* ── Recent purchases — quiet social proof, not a bargain-urgency banner ── */}
+      {product.recentPurchases && (
+        <div className="inline-flex items-center gap-1.5 rounded-full bg-lp-gold/10 px-2.5 py-1 w-fit">
+          <Flame size={12} strokeWidth={1.75} className="text-lp-gold shrink-0" />
+          <span className="font-body text-[0.7rem] text-lp-ink">
+            <span className="font-semibold">{product.recentPurchases}</span> bought in the last 24 hours
+          </span>
+        </div>
+      )}
+
       {/* ── Price ──────────────────────────────────────────────────────── */}
       {myntra && myntraTarget ? (
         <div className="space-y-2">
@@ -136,28 +146,6 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
         {selectedSize ? formatPrice(price) : `From ${formatPrice(price)}`}
       </p>
       )}
-
-      {/* ── Description ────────────────────────────────────────────────── */}
-      <p className="font-body text-[0.9rem] text-[var(--color-lp-muted)] leading-relaxed">
-        {product.description}
-      </p>
-
-      {/* ── Features ───────────────────────────────────────────────────── */}
-      <div className="grid grid-cols-2 gap-x-2 gap-y-3">
-        {product.features.map(({ label }) => {
-          const Icon = featureIconFor(label)
-          return (
-            <div key={label} className="flex items-center gap-2.5">
-              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--color-lp-cream)] shrink-0">
-                <Icon size={15} strokeWidth={1.5} className="text-[var(--color-lp-gold)]" />
-              </span>
-              <span className="font-body text-[0.78rem] leading-snug text-[var(--color-lp-ink)]">{label}</span>
-            </div>
-          )
-        })}
-      </div>
-
-      <div className="lp-hr" />
 
       {/* ── Colour selector ────────────────────────────────────────────── */}
       <div>
@@ -368,6 +356,28 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
           Only {sizeObj.stock} left in stock
         </p>
       )}
+
+      <div className="lp-hr" />
+
+      {/* ── Description ────────────────────────────────────────────────── */}
+      <p className="font-body text-[0.9rem] text-[var(--color-lp-muted)] leading-relaxed">
+        {product.description}
+      </p>
+
+      {/* ── Features ───────────────────────────────────────────────────── */}
+      <div className="grid grid-cols-2 gap-x-2 gap-y-3">
+        {product.features.map(({ label }) => {
+          const Icon = featureIconFor(label)
+          return (
+            <div key={label} className="flex items-center gap-2.5">
+              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--color-lp-cream)] shrink-0">
+                <Icon size={15} strokeWidth={1.5} className="text-[var(--color-lp-gold)]" />
+              </span>
+              <span className="font-body text-[0.78rem] leading-snug text-[var(--color-lp-ink)]">{label}</span>
+            </div>
+          )
+        })}
+      </div>
 
       {/* ── Specifications / Warranty / Shipping / FAQ accordions ─────────── */}
       <div className="pt-2">

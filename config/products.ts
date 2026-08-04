@@ -80,6 +80,7 @@ export const PRODUCTS: Product[] = [
     hideSizeSelector: true,
     hideSizeGuide: true,
     mrp: 1699,
+    recentPurchases: 131,
     description:
       'Pack shirts, not wrinkles. ShirtVault carries 4 to 5 formal shirts in a slim hard shell that keeps collars sharp and folds crisp, in a suitcase or on a wardrobe shelf.',
     story: [
