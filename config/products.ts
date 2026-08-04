@@ -20,6 +20,15 @@ import type { Product, HeroSlide } from '@/types'
 // Replace public_ids with your Cloudinary uploads.
 export const HERO_SLIDES: HeroSlide[] = [
   {
+    // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+    // account's credit limit is exhausted.
+    image:        'https://res.cloudinary.com/deh394y0h/image/upload/v1785875001/ChatGPT_Image_Aug_5_2026_at_01_44_27_AM_cbxw09.png',
+    desktopImage: 'https://res.cloudinary.com/deh394y0h/image/upload/v1785875011/ChatGPT_Image_Aug_5_2026_at_01_52_56_AM_cqlsmb.png',
+    headline:  '',
+    textStyle: 'shadow',
+    textSize:  'lg',
+  },
+  {
     image:     'fnl_zlkyo5.png',
     headline:  '',
     desktopImage: 'desktopfnl_nxmol9.png',
@@ -2067,6 +2076,109 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
+  // ── AeroVault ────────────────────────────────────────────────────────────
+  {
+    id: 'aerovault',
+    metaTitle: 'AeroVault USB Laptop Travel Backpack',
+    metaDescription: 'AeroVault pairs a padded laptop compartment with an external USB charging port, breathable back panel, and luggage mounting sleeve. Built for work, commuting, and travel.',
+    keywords: ['usb laptop backpack', 'travel backpack with charging port', 'padded laptop compartment backpack', 'commuter backpack india', 'business travel backpack'],
+    name: 'AeroVault',
+    slug: 'aerovault',
+    category: 'backpack',
+    isFeatured: true,
+    hideSizeSelector: true,
+    description:
+      'Structured design with practical storage for work, commuting, and travel. AeroVault carries a padded laptop section, a spacious main compartment, quick-access pockets, and an external USB charging port, on breathable straps built for the whole day.',
+    story: [
+      'AeroVault is built around the two things a working day actually needs: a laptop that arrives safe, and a charge that lasts. A dedicated padded rear compartment keeps the laptop separate from everything else in the bag, while an external USB port lets a power bank top up the backpack contents without ever opening it.',
+      'The rest is comfort engineering: padded shoulder straps, a breathable mesh back panel, and a sternum strap keep the load stable on a commute or a terminal walk, and a luggage mounting sleeve lets it ride a trolley handle on the days it is not the only bag.',
+    ],
+    highlights: [
+      {
+        heading: 'Separate protection for your technology',
+        body: 'A dedicated padded rear compartment keeps the laptop away from the knocks and clutter of the main compartment, opening flat for security trays without disturbing the rest of the pack.',
+      },
+      {
+        heading: 'Stay connected while travelling',
+        body: 'An external USB port wired to the interior lets a power bank charge a phone on the move, no digging through the main compartment for a cable.',
+      },
+      {
+        heading: 'Stable and comfortable carrying',
+        body: 'Padded straps, mesh back cushioning, and a sternum strap keep the weight settled and even, from a morning commute to a full day at the airport.',
+      },
+    ],
+    specs: [
+      { label: 'Material',  value: 'Premium water-resistant polyester' },
+      { label: 'Laptop bay', value: 'Padded, dedicated compartment' },
+      { label: 'Charging',  value: 'External USB port' },
+      { label: 'Back panel', value: 'Breathable mesh cushioning' },
+      { label: 'Straps',    value: 'Padded, adjustable, with sternum strap' },
+      { label: 'Extras',    value: 'Luggage mounting sleeve' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    // TODO: no product photos yet — Suhaib will upload to Cloudinary later.
+    // Add the public_id(s) or full URL(s) here once ready. Left as [''] and
+    // not [] — an empty array resolves to `undefined` in ProductCard's image
+    // lookup, which throws at render; '' resolves safely to a broken-image
+    // placeholder instead of crashing the card.
+    images: [''],
+    features: [
+      { label: 'Lightweight build' },
+      { label: 'Smooth zippers' },
+      { label: 'Luggage mounting sleeve' },
+      { label: 'Impact resistant' },
+      { label: 'External USB charging port' },
+      { label: 'Spacious compartments' },
+    ],
+    variants: [
+      {
+        color: 'Black',
+        colorHex: '#212121',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875221/FR2A5611_Large_Background_Removed_r3gorn.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875221/FR2A5612_Large_Background_Removed_tb7xrq.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875224/FR2A5613_Large_Background_Removed_hr3487.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875222/FR2A5615_Large_Background_Removed_l2fzfd.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875227/FR2A5633_Large_Background_Removed_ualnav.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 2999, stock: 30 },
+        ],
+      },
+      {
+        color: 'Blue',
+        colorHex: '#1E4B8C',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875220/FR2A5602_Large_Background_Removed_hwkqns.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875220/FR2A5603_Large_Background_Removed_te4qv9.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875220/FR2A5604_Large_Background_Removed_ng99a1.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 2999, stock: 30 },
+        ],
+      },
+      {
+        color: 'Grey',
+        colorHex: '#6B6B6B',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted. Intentionally the same shots
+        // as the Black variant.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875220/FR2A5606_Large_Background_Removed_i20p9y.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875221/FR2A5607_Large_Background_Removed_r5blae.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875221/FR2A5608_Large_Background_Removed_jtxbqm.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 2999, stock: 30 },
+        ],
+      },
+    ],
+  },
 
 ]
 

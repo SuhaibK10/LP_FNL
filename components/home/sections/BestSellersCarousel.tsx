@@ -372,7 +372,7 @@ export function BestSellersCarousel() {
   }, [tab])
 
   return (
-    <section className="pt-0.5 md:pt-4 pb-20 md:pb-28 xl:pb-36 overflow-hidden">
+    <section className="pt-10 md:pt-14 pb-20 md:pb-28 xl:pb-36 overflow-hidden">
 
       {/* Tabs */}
       {MYNTRA_EXCLUSIVES_ENABLED && (

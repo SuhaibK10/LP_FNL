@@ -43,7 +43,7 @@ export default async function ProductPage({ params, searchParams }: Props) {
 
   return (
     <div className="pt-16 md:pt-20">
-      <div className="container-lp section-pad pt-6! md:pt-8!">
+      <div className="container-lp section-pad pt-2! md:pt-3!">
 
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 mb-8 md:mb-10">
