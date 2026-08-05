@@ -42,11 +42,11 @@ export default async function ProductPage({ params, searchParams }: Props) {
   if (!product) notFound()
 
   return (
-    <div className="pt-16 md:pt-20">
-      <div className="container-lp section-pad pt-2! md:pt-3!">
+    <div className="pt-12.5 md:pt-20">
+      <div className="container-lp section-pad pt-2! md:pt-2!">
 
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 mb-8 md:mb-10">
+        <div className="flex items-center gap-2 mb-3 md:mb-4">
           <Link
             href={ROUTES.shop}
             className="flex items-center gap-1 font-body text-[0.7rem] tracking-[0.1em] uppercase text-[var(--color-lp-muted)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"

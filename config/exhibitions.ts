@@ -10,7 +10,7 @@
 
 // Homepage-only switch — flip to false to pull "Where we show up" off the
 // homepage. The About page keeps showing it regardless.
-export const EXHIBITION_GALLERY_HOME_ENABLED = true
+export const EXHIBITION_GALLERY_HOME_ENABLED = false
 
 export interface ExhibitionPhoto {
   publicId: string

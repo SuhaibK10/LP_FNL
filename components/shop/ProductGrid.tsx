@@ -67,12 +67,20 @@ export function ProductGrid() {
   const categoryParam = searchParams.get('category') ?? 'all'
   const validCategory = CATEGORIES.some(c => c.value === categoryParam) ? categoryParam : 'all'
 
+  // ?color= deep links (home "Shop by Color" tiles) — comma-separated, since
+  // a color family (e.g. "Grey & Silver") maps to several literal variant
+  // color names at once, not just one.
+  const colorParam  = searchParams.get('color') ?? ''
+  const validColors = colorParam
+    ? colorParam.split(',').map(c => c.trim()).filter(Boolean)
+    : []
+
   const [selectedCategories, setSelectedCategories] = useState<string[]>(
     validCategory === 'all' ? [] : [validCategory]
   )
   const [selectedPriceRange, setSelectedPriceRange] = useState<string | null>(null)
   const [selectedSizes, setSelectedSizes]           = useState<string[]>([])
-  const [selectedColors, setSelectedColors]         = useState<string[]>([])
+  const [selectedColors, setSelectedColors]         = useState<string[]>(validColors)
   const [sortKey, setSortKey]     = useState<SortKey>('default')
   const [viewMode, setViewMode]   = useState<ViewMode>('grid')
 
@@ -88,6 +96,11 @@ export function ProductGrid() {
   useEffect(() => {
     setSelectedCategories(validCategory === 'all' ? [] : [validCategory])
   }, [validCategory])
+
+  useEffect(() => {
+    setSelectedColors(validColors)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [colorParam])
 
   // Track whether the in-page Filters button is visible below the sticky
   // navbar. rootMargin's negative top roughly matches the navbar's own

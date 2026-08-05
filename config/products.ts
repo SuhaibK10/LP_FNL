@@ -19,15 +19,16 @@ import type { Product, HeroSlide } from '@/types'
 // 3-4 images that auto-slide in the hero section.
 // Replace public_ids with your Cloudinary uploads.
 export const HERO_SLIDES: HeroSlide[] = [
-  {
-    // Hosted on a separate Cloudinary account (deh394y0h) — the primary
-    // account's credit limit is exhausted.
-    image:        'https://res.cloudinary.com/deh394y0h/image/upload/v1785876730/ChatGPT_Image_Aug_5_2026_at_02_21_13_AM_uy8dkj.png',
-    desktopImage: 'https://res.cloudinary.com/deh394y0h/image/upload/v1785875011/ChatGPT_Image_Aug_5_2026_at_01_52_56_AM_cqlsmb.png',
-    headline:  '',
-    textStyle: 'shadow',
-    textSize:  'lg',
-  },
+  // Temporarily disabled — first hero slide (mobile + desktop) turned off.
+  // {
+  //   // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+  //   // account's credit limit is exhausted.
+  //   image:        'https://res.cloudinary.com/deh394y0h/image/upload/v1785876730/ChatGPT_Image_Aug_5_2026_at_02_21_13_AM_uy8dkj.png',
+  //   desktopImage: 'https://res.cloudinary.com/deh394y0h/image/upload/v1785875011/ChatGPT_Image_Aug_5_2026_at_01_52_56_AM_cqlsmb.png',
+  //   headline:  '',
+  //   textStyle: 'shadow',
+  //   textSize:  'lg',
+  // },
   {
     image:     'fnl_zlkyo5.png',
     headline:  '',
@@ -382,6 +383,78 @@ export const PRODUCTS: Product[] = [
           { size: 'Cabin', price: 2749, stock: 50 },
           { size: 'Medium', price: 3099, stock: 40 },
           { size: 'Large', price: 3449, stock: 30 },
+        ],
+      },
+    ],
+  },
+
+  // ── AeroX ────────────────────────────────────────────────────────────────
+  {
+    id: 'aerox',
+    metaTitle: 'AeroX 20" Cabin Trolley with TSA Lock & Cup Holder',
+    metaDescription: 'AeroX pairs a lightweight hard-shell 20" cabin trolley with a TSA-approved combination lock, 360° silent spinner wheels, and a built-in cup holder.',
+    keywords: ['cabin trolley bag', 'tsa lock suitcase', 'carry on luggage with cup holder', '20 inch trolley bag', 'hard shell cabin bag india'],
+    name: 'AeroX',
+    slug: 'aerox',
+    category: 'trolley',
+    hideSizeSelector: true,
+    description:
+      'Built for the walk from check-in to gate. AeroX is a lightweight hard-shell cabin trolley with a TSA-approved combination lock, silent 360° spinner wheels, and a built-in cup holder for the coffee you didn’t have time to finish.',
+    story: [
+      'AeroX is sized for the overhead bin and built for the sprint to get there. A lightweight hard shell keeps it light enough to lift without a second thought, while reinforced corners take the knocks a cabin trolley collects between check-in and the jet bridge.',
+      'The small details are the point: a TSA-approved combination lock that clears security without a second look, a telescopic handle tuned for one-handed steering, and a cup holder built into the frame, so there’s one less thing to juggle at the gate.',
+    ],
+    highlights: [
+      {
+        heading: 'One hand, no hassle',
+        body: 'A telescopic handle and 360° silent spinner wheels mean AeroX steers itself through crowded terminals, no wrestling required.',
+      },
+      {
+        heading: 'A cup holder that actually works',
+        body: 'Built into the frame, it keeps a coffee or water bottle upright and within reach, so it doesn’t have to ride in your hand through the airport.',
+      },
+      {
+        heading: 'Security-ready, always',
+        body: 'A TSA-approved combination lock and anti-theft zippers keep the cabin secure without slowing down a security check.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',    value: 'Lightweight hard shell' },
+      { label: 'Cabin (20″)', value: 'Carry-on approved' },
+      { label: 'Lock',     value: 'TSA-approved 3-digit combination lock' },
+      { label: 'Wheels',   value: '360° silent spinner wheels' },
+      { label: 'Extras',   value: 'Integrated cup holder, cross packing straps' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [''],
+    features: [
+      { label: '360° silent spinner wheels' },
+      { label: 'TSA combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Integrated cup holder' },
+      { label: 'Anti-theft zipper' },
+      { label: 'Cross packing straps' },
+      { label: 'Carry-on approved' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Silver',
+        colorHex: '#BDBDBD',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946089/1_Large_Background_Removed_sy58d8.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946089/3_Large_Background_Removed_ocznxp.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946089/2_Large_Background_Removed_aysf8s.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946089/4_Large_Background_Removed_fvsul3.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946091/5_Large_Background_Removed_hsbqkc.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946090/8_Large_Background_Removed_s6pqdo.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946091/6_Large_Background_Removed_f0whfj.png',
+        ],
+        sizes: [
+          { size: 'Cabin', price: 2990, stock: 30 },
         ],
       },
     ],
@@ -939,6 +1012,80 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
+  // ── ArmorRite ────────────────────────────────────────────────────────────
+  {
+    id: 'armorrite',
+    metaTitle: 'ArmorRite Hard Shell Luggage | TSA Lock | 360° Spinner Travel Suitcase',
+    metaDescription: 'Shop the ArmorRite Hard Shell Luggage featuring an armor-inspired design, TSA lock, 360° spinner wheels, lightweight construction, and premium durability for every journey.',
+    keywords: ['ArmorRite luggage', 'hard shell suitcase', 'orange trolley bag', 'TSA luggage', 'premium travel luggage', '360 spinner suitcase', 'durable luggage', 'lightweight trolley', 'travel suitcase', 'hard case luggage'],
+    name: 'ArmorRite',
+    slug: 'armorrite',
+    category: 'trolley',
+    isFeatured: true,
+    description:
+      'Built like armor, designed for every journey. ArmorRite is a rugged hard-shell trolley engineered for travellers who want durability without giving up style, in a bold geometric shell with 360° spinner wheels, TSA-approved security, and an ergonomic telescopic handle.',
+    story: [
+      'ArmorRite takes its cue from tactical armor: a reinforced geometric shell built to take the demands of modern travel while keeping a sleek, premium look. Cabin, Medium, and Large are each sold on their own, or together as a matched set, so every trip from a weekend away to a fortnight abroad is already covered.',
+      'Underneath the finish sit the fundamentals done properly: ultra-smooth 360° spinner wheels, a precision telescopic aluminium handle, an integrated TSA combination lock, and premium zip closure, for effortless mobility and reliable security wherever the destination.',
+    ],
+    highlights: [
+      {
+        heading: 'Armor-inspired, travel-ready',
+        body: 'A reinforced geometric hard shell in a scratch-resistant matte finish takes the knocks of modern travel while still looking sharp off the carousel.',
+      },
+      {
+        heading: 'TSA lock, on every case',
+        body: 'An integrated TSA combination lock secures all three sizes, so airport security and hotel storage never feel like a gamble.',
+      },
+      {
+        heading: 'Built to move, not just look tough',
+        body: 'Silent 360° spinner wheels and a smooth telescopic aluminium handle keep the set effortless through terminals, not just durable in the hold.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',    value: 'ABS hard shell, matte textured finish' },
+      { label: 'Sizes',    value: 'Cabin (20″) · Medium (24″) · Large (28″), sold individually or as a set' },
+      { label: 'Lock',     value: 'TSA-approved combination lock' },
+      { label: 'Wheels',   value: '4 double 360° spinner wheels' },
+      { label: 'Handle',   value: 'Telescopic aluminium handle' },
+      { label: 'Closure',  value: 'Heavy-duty zip closure' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+    // account's credit limit is exhausted.
+    images: [
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776263/1_Large_Background_Removed_usrmty.png',
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776263/3_Large_Background_Removed_o2xtoz.png',
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776264/4_Large_Background_Removed_ugrxhn.png',
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776264/9_Large_Background_Removed_zwhmvt.png',
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776265/7_Large_Background_Removed_x05rdu.png',
+    ],
+    features: [
+      { label: 'Rugged armor-inspired hard shell' },
+      { label: 'Integrated TSA combination lock' },
+      { label: '360° silent spinner wheels' },
+      { label: 'Scratch-resistant exterior' },
+      { label: 'Lightweight yet durable construction' },
+      { label: 'Ergonomic carry handles' },
+      { label: 'Spacious, organised interior' },
+      { label: 'Smooth telescopic aluminium handle' },
+      { label: 'Water-resistant hard shell' },
+    ],
+    variants: [
+      {
+        color: 'Blaze Orange',
+        colorHex: '#FF7900',
+        sizes: [
+          { size: 'Cabin',   price: 2999,  stock: 25 },
+          { size: 'Medium',  price: 3599,  stock: 20 },
+          { size: 'Large',   price: 4299,  stock: 20 },
+          { size: 'Set of 3', price: 11000, stock: 15 },
+        ],
+      },
+    ],
+  },
+
   // ── ArmorPack (Backpack) ─────────────────────────────────────────────────
   {
     id: 'armorpack',
@@ -1305,80 +1452,6 @@ export const PRODUCTS: Product[] = [
         colorHex: '#212121',
         sizes: [
           { size: 'Set of 3', price: 7749, stock: 15, sku: '8906206840070' },
-        ],
-      },
-    ],
-  },
-
-  // ── ArmorRite ────────────────────────────────────────────────────────────
-  {
-    id: 'armorrite',
-    metaTitle: 'ArmorRite Hard Shell Luggage | TSA Lock | 360° Spinner Travel Suitcase',
-    metaDescription: 'Shop the ArmorRite Hard Shell Luggage featuring an armor-inspired design, TSA lock, 360° spinner wheels, lightweight construction, and premium durability for every journey.',
-    keywords: ['ArmorRite luggage', 'hard shell suitcase', 'orange trolley bag', 'TSA luggage', 'premium travel luggage', '360 spinner suitcase', 'durable luggage', 'lightweight trolley', 'travel suitcase', 'hard case luggage'],
-    name: 'ArmorRite',
-    slug: 'armorrite',
-    category: 'trolley',
-    isFeatured: true,
-    description:
-      'Built like armor, designed for every journey. ArmorRite is a rugged hard-shell trolley engineered for travellers who want durability without giving up style, in a bold geometric shell with 360° spinner wheels, TSA-approved security, and an ergonomic telescopic handle.',
-    story: [
-      'ArmorRite takes its cue from tactical armor: a reinforced geometric shell built to take the demands of modern travel while keeping a sleek, premium look. Cabin, Medium, and Large are each sold on their own, or together as a matched set, so every trip from a weekend away to a fortnight abroad is already covered.',
-      'Underneath the finish sit the fundamentals done properly: ultra-smooth 360° spinner wheels, a precision telescopic aluminium handle, an integrated TSA combination lock, and premium zip closure, for effortless mobility and reliable security wherever the destination.',
-    ],
-    highlights: [
-      {
-        heading: 'Armor-inspired, travel-ready',
-        body: 'A reinforced geometric hard shell in a scratch-resistant matte finish takes the knocks of modern travel while still looking sharp off the carousel.',
-      },
-      {
-        heading: 'TSA lock, on every case',
-        body: 'An integrated TSA combination lock secures all three sizes, so airport security and hotel storage never feel like a gamble.',
-      },
-      {
-        heading: 'Built to move, not just look tough',
-        body: 'Silent 360° spinner wheels and a smooth telescopic aluminium handle keep the set effortless through terminals, not just durable in the hold.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',    value: 'ABS hard shell, matte textured finish' },
-      { label: 'Sizes',    value: 'Cabin (20″) · Medium (24″) · Large (28″), sold individually or as a set' },
-      { label: 'Lock',     value: 'TSA-approved combination lock' },
-      { label: 'Wheels',   value: '4 double 360° spinner wheels' },
-      { label: 'Handle',   value: 'Telescopic aluminium handle' },
-      { label: 'Closure',  value: 'Heavy-duty zip closure' },
-    ],
-    warranty:
-      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    // Hosted on a separate Cloudinary account (deh394y0h) — the primary
-    // account's credit limit is exhausted.
-    images: [
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776263/1_Large_Background_Removed_usrmty.png',
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776263/3_Large_Background_Removed_o2xtoz.png',
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776264/4_Large_Background_Removed_ugrxhn.png',
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776264/9_Large_Background_Removed_zwhmvt.png',
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776265/7_Large_Background_Removed_x05rdu.png',
-    ],
-    features: [
-      { label: 'Rugged armor-inspired hard shell' },
-      { label: 'Integrated TSA combination lock' },
-      { label: '360° silent spinner wheels' },
-      { label: 'Scratch-resistant exterior' },
-      { label: 'Lightweight yet durable construction' },
-      { label: 'Ergonomic carry handles' },
-      { label: 'Spacious, organised interior' },
-      { label: 'Smooth telescopic aluminium handle' },
-      { label: 'Water-resistant hard shell' },
-    ],
-    variants: [
-      {
-        color: 'Blaze Orange',
-        colorHex: '#FF7900',
-        sizes: [
-          { size: 'Cabin',   price: 2999,  stock: 25 },
-          { size: 'Medium',  price: 3599,  stock: 20 },
-          { size: 'Large',   price: 4299,  stock: 20 },
-          { size: 'Set of 3', price: 11000, stock: 15 },
         ],
       },
     ],
@@ -2180,6 +2253,79 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
+  // Temporarily disabled per request.
+  /*
+  // ── TitaniumEdge ─────────────────────────────────────────────────────────
+  {
+    id: 'titaniumedge',
+    metaTitle: 'TitaniumEdge 14" Hard Shell Executive Briefcase',
+    metaDescription: 'TitaniumEdge is a lightweight hard-shell executive briefcase with a diagonal ribbed shell, premium metallic finish, and detachable shoulder strap.',
+    keywords: ['hard shell briefcase', 'executive briefcase india', '14 inch laptop briefcase', 'business travel bag', 'professional briefcase for men'],
+    name: 'TitaniumEdge',
+    slug: 'titaniumedge',
+    category: 'office-bag',
+    hideSizeSelector: true,
+    description:
+      'A lightweight hard-shell exterior with the aesthetics of a boardroom. TitaniumEdge protects laptops, documents, and business essentials behind a diagonal ribbed shell and premium metallic finish, with a detachable shoulder strap for the commute.',
+    story: [
+      'TitaniumEdge trades soft-sided fabric for a rigid hard shell, so documents arrive flat and a laptop arrives intact, whatever the cab boot or overhead rack throws at it on the way there. The diagonal ribbed shell and metallic finish are built to read as considered, not corporate.',
+      'Inside, a comfortable fabric lining and a concealed pocket keep essentials organised and out of sight, while smooth zippers close over all of it. Two handles carry it through the corridor; a detachable shoulder strap takes over for the commute.',
+    ],
+    highlights: [
+      {
+        heading: 'Hard shell, boardroom finish',
+        body: 'A durable hard-shell exterior with a diagonal ribbed design and premium metallic finish, built to protect and still look the part in a meeting.',
+      },
+      {
+        heading: 'Everything has its place',
+        body: 'A concealed pocket and comfortable fabric lining keep documents, a laptop, and the small essentials organised and easy to find.',
+      },
+      {
+        heading: 'Carried your way',
+        body: 'A detachable shoulder strap turns a hand-carried briefcase into a cross-body one for the walk between meetings.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',    value: 'Hard shell, diagonal ribbed design' },
+      { label: 'Size',     value: '14″' },
+      { label: 'Interior', value: 'Fabric lining, concealed pocket' },
+      { label: 'Carry',    value: 'Top handle + detachable shoulder strap' },
+      { label: 'Zippers',  value: 'Smooth, impact-resistant closure' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [''],
+    features: [
+      { label: 'Hard shell protection' },
+      { label: 'Premium metallic finish' },
+      { label: 'Concealed pocket' },
+      { label: 'Detachable shoulder strap' },
+      { label: 'Smooth zippers' },
+      { label: 'Impact resistant' },
+      { label: 'Lightweight build' },
+      { label: 'Strong bearing capacity' },
+    ],
+    variants: [
+      {
+        color: 'Silver',
+        colorHex: '#BDBDBD',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946668/Screenshot_2026-08-05_at_9.39_Background_Removed.38_PM_ukfnoj.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946669/Screenshot_2026-08-05_at_9.39_Background_Removed.53_PM_qewyda.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946669/Screenshot_2026-08-05_at_9.39_Background_Removed.46_PM_ywogga.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946669/Screenshot_2026-08-05_at_9.40_Background_Removed.00_PM_f0xnir.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 9999, stock: 10 },
+        ],
+      },
+    ],
+  },
+
+  */
+
 ]
 
 // ─── Helper: get all featured products ───────────────────────────────────────
@@ -2187,6 +2333,11 @@ export const FEATURED_PRODUCTS = PRODUCTS.filter((p) => p.isFeatured)
 
 // ─── Helper: get all sale-exclusive products ─────────────────────────────────
 export const SALE_PRODUCTS = PRODUCTS.filter((p) => p.saleExclusive)
+
+// ─── Helper: any product with at least one size under ₹2,999 ─────────────────
+export const UNDER_2999_PRODUCTS = PRODUCTS.filter((p) =>
+  p.variants.some((v) => v.sizes.some((s) => s.price < 2999))
+)
 
 // ─── Helper: get product by slug ─────────────────────────────────────────────
 export const getProductBySlug = (slug: string): Product | undefined =>

@@ -21,6 +21,11 @@ const nextConfig = {
         hostname: 'cdn.zyrosite.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'assets.louispoloworld.com',
+        pathname: '/**',
+      },
     ],
     formats: ['image/avif', 'image/webp'],
   },
