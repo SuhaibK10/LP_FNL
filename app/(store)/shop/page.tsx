@@ -20,14 +20,14 @@ export default function ShopPage() {
       {/* Page header */}
       <div className="section-pad" style={{ paddingTop: '0.5rem', paddingBottom: 0 }}>
         <div className="container-lp">
-          <span className="lp-eyebrow">Our collection</span>
+          <span className="lp-eyebrow mb-2!">Our collection</span>
           <div className="flex items-end justify-between gap-4">
-            <h1 className="lp-heading-lg mb-2">All Products</h1>
+            <h1 className="lp-heading-lg text-[1.75rem]! md:text-[2.5rem]! mb-3">All Products</h1>
             <div className="mb-3 shrink-0">
               <ShopSizeGuideButton />
             </div>
           </div>
-          <p className="font-body text-[var(--color-lp-muted)] text-base mb-8">
+          <p className="font-body text-[var(--color-lp-muted)] text-base mb-4">
             Built for every kind of traveller.
           </p>
         </div>

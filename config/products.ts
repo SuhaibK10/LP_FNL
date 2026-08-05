@@ -1182,71 +1182,166 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
-  // ── ArmorRite Set of 3 ──────────────────────────────────────────────────
+  // ── The Attaché Overnighter ──────────────────────────────────────────────
   {
-    id: 'armorrite-set',
-    metaTitle: 'ArmorRite Luggage Set of 3 (20″, 24″ & 28″)',
-    metaDescription: 'The full ArmorRite line in one matched set: cabin, 24″, and 28″ armor-inspired hard-shell spinners with TSA locks.',
-    keywords: ['luggage set of 3 india', 'hard shell spinner suitcase set', 'tsa lock luggage set', 'matched luggage set', 'family travel luggage set'],
-    name: 'ArmorRite Set of 3',
-    slug: 'armorrite-set',
-    category: 'set',
-    isFeatured: true,
-    mrp: 11000,
-    description:
-      '20", 24", and 28" ArmorRite bags in a matched set, the reinforced geometric shell and TSA lock carried across all three sizes. The complete setup for every kind of trip.',
+    id:          'attache-overnighter',
+    metaTitle: 'The Attaché 17″ Overnighter Cabin Trolley',
+    metaDescription: 'A 17″ hard-shell overnighter with laptop storage, combination lock, and 360° spinner wheels, sized exactly for one-night business trips.',
+    keywords: ['17 inch overnighter trolley', 'business travel carry-on', 'overnighter with laptop storage', 'compact cabin trolley', 'hard shell overnighter'],
+    name:        'Attache',
+    slug:        'attache-overnighter',
+    category:    'overnighter',
+    cardZoom:    1.3,
+    isFeatured:  true,
+    description: 'Built for professionals on the move. Cabin-friendly dimensions with smart organisation: dedicated laptop storage, hard-shell protection, and 360° spinner wheels for effortless overnight business travel.',
     story: [
-      'One decision instead of three. The ArmorRite set puts the cabin, 24″, and 28″ in the same armor-inspired finish, so the weekend bag, the week bag, and the long-haul bag all speak the same language.',
-      'Each case in the set carries the same reinforced geometric hard shell, TSA-approved combination lock, and 360° spinner wheels as the individual ArmorRite, so the only decision left is which one to grab on the way out.',
+      'The Attaché is sized for the trip that is really a meeting with a flight around it. Seventeen inches of hard shell holds a laptop, a change of clothes, chargers, and documents, and nothing that would tempt you to pack more than one night needs.',
+      'Cross straps keep the shirt pressed, dedicated pockets keep the tech sorted, and a combination lock keeps it all closed. On 360° spinner wheels, it follows you from the taxi to the boardroom without asking to be carried.',
     ],
     highlights: [
       {
-        heading: 'Every trip, pre-decided',
-        body: 'Two nights takes the cabin, a week takes the 24″, and the long haul takes the 28″. No more forcing a fortnight into the wrong bag.',
+        heading: 'The one-night format',
+        body: 'Bigger than a briefcase, smaller than a cabin trolley, the Attaché is exactly the size of an overnight business trip, so packing takes five minutes because there is no room to overthink it.',
       },
       {
-        heading: 'Matched to the millimetre',
-        body: 'Same shell, same finish, same hardware across all three sizes. On a trolley at arrivals, the set reads as one deliberate choice.',
-      },
-      {
-        heading: 'TSA lock, on every case',
-        body: 'An integrated TSA combination lock secures all three sizes, so airport security and hotel storage never feel like a gamble.',
+        heading: 'Office half, wardrobe half',
+        body: 'Laptop, documents, and chargers keep their own storage away from the clothing side, so pulling out your notes at the gate never means airing your packing.',
       },
     ],
     specs: [
-      { label: 'Shell',    value: 'ABS hard shell, matte textured finish' },
-      { label: 'Sizes',    value: 'Cabin (20″) · Medium (24″) · Large (28″)' },
-      { label: 'Lock',     value: 'TSA-approved combination lock on each case' },
-      { label: 'Wheels',   value: '4 double 360° spinner wheels' },
-      { label: 'Handle',   value: 'Telescopic aluminium handle' },
+      { label: 'Shell',      value: 'Hard shell polypropylene' },
+      { label: 'Size (17″)', value: '41 × 41 × 24 cm · approx. 2.4 kg' },
+      { label: 'Lock',       value: '3-digit combination lock' },
+      { label: 'Wheels',     value: '360° silent spinner wheels' },
+      { label: 'Handle',     value: 'Telescopic' },
     ],
     warranty:
-      '3-year warranty on all three cases, covering manufacturing defects in the shell, wheels, telescopic handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    faqs: [
-      {
-        q: 'Can I buy the sizes separately?',
-        a: 'Yes. Each ArmorRite size is available on its own. The set simply prices the three together and guarantees a matched batch and finish.',
-      },
-    ],
-    images: [
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785948235/04_Large_Background_Removed_pk6vbu.png',
+      '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images:      [
+      'louis-polo-attache-red-08-1781606815844-1781606815844_Background_Removed_vug5zj',
+      'louis-polo-attache-black-hero-10-1781606578945-1781606578945_Background_Removed_v0prue'
     ],
     features: [
-      { label: '20", 24" & 28" included' },
-      { label: 'Rugged armor-inspired hard shell' },
-      { label: 'Integrated TSA combination lock' },
       { label: '360° silent spinner wheels' },
-      { label: 'Scratch-resistant exterior' },
-      { label: 'Smooth telescopic aluminium handle' },
+      { label: 'Dedicated laptop compartment' },
+      { label: 'Combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Hard shell ABS' },
+      { label: 'Carry-on approved' },
+    ],
+    variants: [
+       {
+        color:    'Red',
+        colorHex: '#C62828',
+        sizes: [{ size: '17 Inch', price: 6999, stock: 30 }],
+      },
+      {
+        color:    'Black',
+        colorHex: '#212121',
+        sizes: [{ size: '17 Inch', price: 6999, stock: 30 }],
+      },
+     
+    ],
+  },
+
+  // ── Gemtote Duffle Bag ──────────────────────────────────────────────────
+  {
+    id: 'gemtote-duffle-bag',
+    metaTitle: 'GemTote 15.5″ Hard Shell Duffle & Vanity Bag',
+    metaDescription: 'A structured hard-shell duffle with dual compartments and mesh pockets: overnighter, vanity case, and organised second bag in one.',
+    keywords: ['hard shell duffle bag', 'multipurpose vanity organizer', 'weekend travel bag', 'structured duffle india', 'travel organizer bag'],
+    name: 'Gemtote Duffle Bag',
+    slug: 'gemtote-duffle-bag',
+    category: 'duffle',
+    isFeatured: true,
+    saleExclusive: true,
+    mrp: 8000,
+    hideSizeSelector: true,
+    description:
+      'A hard-shell duffle built for short trips and quick getaways, structured enough to hold its shape, light enough to grab and go. Available in five colors.',
+    story: [
+      'GemTote is a duffle that behaves like a case. The rigid shell holds its faceted shape whether it is full or empty. Nothing crushed at the bottom of a soft bag, nothing slumping in the back seat. At just over a kilogram, it is the bag you grab without thinking for one night away.',
+      'Inside, a dual-compartment layout with zipped mesh pockets sorts cosmetics, chargers, grooming kit, and a change of clothes, and the wide opening shows you everything at once. It works as an overnighter, a vanity case, or the organised half of a bigger trip.',
+    ],
+    highlights: [
+      {
+        heading: 'Structure in a soft-bag shape',
+        body: 'The gem-cut hard shell protects what duffles usually crush, like glasses, bottles, and electronics, while keeping the one-hand, one-bag convenience.',
+      },
+      {
+        heading: 'Opens like a countertop',
+        body: 'The wide mouth and dual compartments lay everything out in view. No rummaging past three days of clothes for a charger.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',       value: 'Polycarbonate + ABS rigid shell' },
+      { label: 'Size (15.5″)', value: '40 × 20 × 26.5 cm · approx. 1.1 kg' },
+      { label: 'Interior',    value: 'Dual compartment · zipped mesh pockets' },
+      { label: 'Carry',       value: 'Twin handles + adjustable shoulder strap' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      'Generated_Image_June_18_2026_-_1_53AM_Background_Removed_cblbni.png',
+      
+      '1C6A9677_Large_Background_Removed_w6duba.png',
+      '1C6A9697_Background_Removed_Large_Background_Removed_fc0j9n.png',
+      '1C6A9716_Background_Removed_r9rkn4.png',
+    ],
+    features: [
+      { label: 'Hard shell protection' },
+      { label: 'Adjustable shoulder strap' },
+      { label: 'Spacious main compartment' },
+      { label: 'Lightweight build' },
+      { label: 'Concealed pocket' },
+      { label: 'Comfortable fabric lining' },
     ],
     variants: [
       {
-        color: 'Red',
-        colorHex: '#C62828',
+        color: 'White',
+        colorHex: '#FAFAFA',
+        // First pic is the current shared image; append real per-color shots after it
+        images: [
+          'Generated_Image_June_18_2026_-_1_53AM_Background_Removed_cblbni.png',
+        ],
         sizes: [
-          { size: 'Set of 3', price: 11000, stock: 15 },
+          { size: 'One Size', price: 4000, stock: 30 },
         ],
       },
+      {
+        color: 'Grey',
+        colorHex: '#9E9E9E',
+        // First pic is the current shared image; append real per-color shots after it
+        images: [
+          '1C6A9677_Large_Background_Removed_w6duba.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 4000, stock: 30 },
+        ],
+      },
+      {
+        color: 'Pink',
+        colorHex: '#EC407A',
+        // First pic is the current shared image; append real per-color shots after it
+        images: [
+          '1C6A9697_Background_Removed_Large_Background_Removed_fc0j9n.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 4000, stock: 30 },
+        ],
+      },
+      {
+        color: 'Green',
+        colorHex: '#43A047',
+        // First pic is the current shared image; append real per-color shots after it
+        images: [
+          '1C6A9716_Background_Removed_r9rkn4.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 4000, stock: 30 },
+        ],
+      },
+
     ],
   },
 
@@ -1543,104 +1638,71 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
-  // ── Gemtote Duffle Bag ──────────────────────────────────────────────────
+  // ── ArmorRite Set of 3 ──────────────────────────────────────────────────
   {
-    id: 'gemtote-duffle-bag',
-    metaTitle: 'GemTote 15.5″ Hard Shell Duffle & Vanity Bag',
-    metaDescription: 'A structured hard-shell duffle with dual compartments and mesh pockets: overnighter, vanity case, and organised second bag in one.',
-    keywords: ['hard shell duffle bag', 'multipurpose vanity organizer', 'weekend travel bag', 'structured duffle india', 'travel organizer bag'],
-    name: 'Gemtote Duffle Bag',
-    slug: 'gemtote-duffle-bag',
-    category: 'duffle',
+    id: 'armorrite-set',
+    metaTitle: 'ArmorRite Luggage Set of 3 (20″, 24″ & 28″)',
+    metaDescription: 'The full ArmorRite line in one matched set: cabin, 24″, and 28″ armor-inspired hard-shell spinners with TSA locks.',
+    keywords: ['luggage set of 3 india', 'hard shell spinner suitcase set', 'tsa lock luggage set', 'matched luggage set', 'family travel luggage set'],
+    name: 'ArmorRite Set of 3',
+    slug: 'armorrite-set',
+    category: 'set',
     isFeatured: true,
-    saleExclusive: true,
-    mrp: 8000,
-    hideSizeSelector: true,
+    mrp: 11000,
     description:
-      'A hard-shell duffle built for short trips and quick getaways, structured enough to hold its shape, light enough to grab and go. Available in five colors.',
+      '20", 24", and 28" ArmorRite bags in a matched set, the reinforced geometric shell and TSA lock carried across all three sizes. The complete setup for every kind of trip.',
     story: [
-      'GemTote is a duffle that behaves like a case. The rigid shell holds its faceted shape whether it is full or empty. Nothing crushed at the bottom of a soft bag, nothing slumping in the back seat. At just over a kilogram, it is the bag you grab without thinking for one night away.',
-      'Inside, a dual-compartment layout with zipped mesh pockets sorts cosmetics, chargers, grooming kit, and a change of clothes, and the wide opening shows you everything at once. It works as an overnighter, a vanity case, or the organised half of a bigger trip.',
+      'One decision instead of three. The ArmorRite set puts the cabin, 24″, and 28″ in the same armor-inspired finish, so the weekend bag, the week bag, and the long-haul bag all speak the same language.',
+      'Each case in the set carries the same reinforced geometric hard shell, TSA-approved combination lock, and 360° spinner wheels as the individual ArmorRite, so the only decision left is which one to grab on the way out.',
     ],
     highlights: [
       {
-        heading: 'Structure in a soft-bag shape',
-        body: 'The gem-cut hard shell protects what duffles usually crush, like glasses, bottles, and electronics, while keeping the one-hand, one-bag convenience.',
+        heading: 'Every trip, pre-decided',
+        body: 'Two nights takes the cabin, a week takes the 24″, and the long haul takes the 28″. No more forcing a fortnight into the wrong bag.',
       },
       {
-        heading: 'Opens like a countertop',
-        body: 'The wide mouth and dual compartments lay everything out in view. No rummaging past three days of clothes for a charger.',
+        heading: 'Matched to the millimetre',
+        body: 'Same shell, same finish, same hardware across all three sizes. On a trolley at arrivals, the set reads as one deliberate choice.',
+      },
+      {
+        heading: 'TSA lock, on every case',
+        body: 'An integrated TSA combination lock secures all three sizes, so airport security and hotel storage never feel like a gamble.',
       },
     ],
     specs: [
-      { label: 'Shell',       value: 'Polycarbonate + ABS rigid shell' },
-      { label: 'Size (15.5″)', value: '40 × 20 × 26.5 cm · approx. 1.1 kg' },
-      { label: 'Interior',    value: 'Dual compartment · zipped mesh pockets' },
-      { label: 'Carry',       value: 'Twin handles + adjustable shoulder strap' },
+      { label: 'Shell',    value: 'ABS hard shell, matte textured finish' },
+      { label: 'Sizes',    value: 'Cabin (20″) · Medium (24″) · Large (28″)' },
+      { label: 'Lock',     value: 'TSA-approved combination lock on each case' },
+      { label: 'Wheels',   value: '4 double 360° spinner wheels' },
+      { label: 'Handle',   value: 'Telescopic aluminium handle' },
     ],
     warranty:
-      '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+      '3-year warranty on all three cases, covering manufacturing defects in the shell, wheels, telescopic handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    faqs: [
+      {
+        q: 'Can I buy the sizes separately?',
+        a: 'Yes. Each ArmorRite size is available on its own. The set simply prices the three together and guarantees a matched batch and finish.',
+      },
+    ],
     images: [
-      'Generated_Image_June_18_2026_-_1_53AM_Background_Removed_cblbni.png',
-      
-      '1C6A9677_Large_Background_Removed_w6duba.png',
-      '1C6A9697_Background_Removed_Large_Background_Removed_fc0j9n.png',
-      '1C6A9716_Background_Removed_r9rkn4.png',
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785948235/04_Large_Background_Removed_pk6vbu.png',
     ],
     features: [
-      { label: 'Hard shell protection' },
-      { label: 'Adjustable shoulder strap' },
-      { label: 'Spacious main compartment' },
-      { label: 'Lightweight build' },
-      { label: 'Concealed pocket' },
-      { label: 'Comfortable fabric lining' },
+      { label: '20", 24" & 28" included' },
+      { label: 'Rugged armor-inspired hard shell' },
+      { label: 'Integrated TSA combination lock' },
+      { label: '360° silent spinner wheels' },
+      { label: 'Scratch-resistant exterior' },
+      { label: 'Smooth telescopic aluminium handle' },
     ],
     variants: [
       {
-        color: 'White',
-        colorHex: '#FAFAFA',
-        // First pic is the current shared image; append real per-color shots after it
-        images: [
-          'Generated_Image_June_18_2026_-_1_53AM_Background_Removed_cblbni.png',
-        ],
+        color: 'Red',
+        colorHex: '#C62828',
         sizes: [
-          { size: 'One Size', price: 4000, stock: 30 },
+          { size: 'Set of 3', price: 11000, stock: 15 },
         ],
       },
-      {
-        color: 'Grey',
-        colorHex: '#9E9E9E',
-        // First pic is the current shared image; append real per-color shots after it
-        images: [
-          '1C6A9677_Large_Background_Removed_w6duba.png',
-        ],
-        sizes: [
-          { size: 'One Size', price: 4000, stock: 30 },
-        ],
-      },
-      {
-        color: 'Pink',
-        colorHex: '#EC407A',
-        // First pic is the current shared image; append real per-color shots after it
-        images: [
-          '1C6A9697_Background_Removed_Large_Background_Removed_fc0j9n.png',
-        ],
-        sizes: [
-          { size: 'One Size', price: 4000, stock: 30 },
-        ],
-      },
-      {
-        color: 'Green',
-        colorHex: '#43A047',
-        // First pic is the current shared image; append real per-color shots after it
-        images: [
-          '1C6A9716_Background_Removed_r9rkn4.png',
-        ],
-        sizes: [
-          { size: 'One Size', price: 4000, stock: 30 },
-        ],
-      },
-
     ],
   },
 
@@ -1801,68 +1863,6 @@ export const PRODUCTS: Product[] = [
   },
 
   
-
-  // ── The Attaché Overnighter ──────────────────────────────────────────────
-  {
-    id:          'attache-overnighter',
-    metaTitle: 'The Attaché 17″ Overnighter Cabin Trolley',
-    metaDescription: 'A 17″ hard-shell overnighter with laptop storage, combination lock, and 360° spinner wheels, sized exactly for one-night business trips.',
-    keywords: ['17 inch overnighter trolley', 'business travel carry-on', 'overnighter with laptop storage', 'compact cabin trolley', 'hard shell overnighter'],
-    name:        'Attache',
-    slug:        'attache-overnighter',
-    category:    'overnighter',
-    cardZoom:    1.3,
-    isFeatured:  true,
-    description: 'Built for professionals on the move. Cabin-friendly dimensions with smart organisation: dedicated laptop storage, hard-shell protection, and 360° spinner wheels for effortless overnight business travel.',
-    story: [
-      'The Attaché is sized for the trip that is really a meeting with a flight around it. Seventeen inches of hard shell holds a laptop, a change of clothes, chargers, and documents, and nothing that would tempt you to pack more than one night needs.',
-      'Cross straps keep the shirt pressed, dedicated pockets keep the tech sorted, and a combination lock keeps it all closed. On 360° spinner wheels, it follows you from the taxi to the boardroom without asking to be carried.',
-    ],
-    highlights: [
-      {
-        heading: 'The one-night format',
-        body: 'Bigger than a briefcase, smaller than a cabin trolley, the Attaché is exactly the size of an overnight business trip, so packing takes five minutes because there is no room to overthink it.',
-      },
-      {
-        heading: 'Office half, wardrobe half',
-        body: 'Laptop, documents, and chargers keep their own storage away from the clothing side, so pulling out your notes at the gate never means airing your packing.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',      value: 'Hard shell polypropylene' },
-      { label: 'Size (17″)', value: '41 × 41 × 24 cm · approx. 2.4 kg' },
-      { label: 'Lock',       value: '3-digit combination lock' },
-      { label: 'Wheels',     value: '360° silent spinner wheels' },
-      { label: 'Handle',     value: 'Telescopic' },
-    ],
-    warranty:
-      '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images:      [
-      'louis-polo-attache-red-08-1781606815844-1781606815844_Background_Removed_vug5zj',
-      'louis-polo-attache-black-hero-10-1781606578945-1781606578945_Background_Removed_v0prue'
-    ],
-    features: [
-      { label: '360° silent spinner wheels' },
-      { label: 'Dedicated laptop compartment' },
-      { label: 'Combination lock' },
-      { label: 'Telescopic handle' },
-      { label: 'Hard shell ABS' },
-      { label: 'Carry-on approved' },
-    ],
-    variants: [
-       {
-        color:    'Red',
-        colorHex: '#C62828',
-        sizes: [{ size: '17 Inch', price: 6999, stock: 30 }],
-      },
-      {
-        color:    'Black',
-        colorHex: '#212121',
-        sizes: [{ size: '17 Inch', price: 6999, stock: 30 }],
-      },
-     
-    ],
-  },
 
   // ── SwiftGate 17" Overnighter Trolley ────────────────────────────────────
   {
