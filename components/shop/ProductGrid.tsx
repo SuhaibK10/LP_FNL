@@ -104,12 +104,14 @@ export function ProductGrid() {
   }, [colorParam])
 
   // Returning from a PDP (breadcrumb or browser back) lands on the same card
-  // that was clicked, instead of resetting to the top of the grid. Only
-  // fires once per mount, and only when a position was actually saved on the
-  // way out — a fresh visit to /shop still opens at the top.
+  // that was clicked, instead of resetting to the top of the grid. The
+  // breadcrumb Link uses scroll={false} so Next's own scroll-to-top doesn't
+  // race this and win — which means the no-saved-position branch has to
+  // scroll to top itself, or a fresh /shop visit could inherit whatever
+  // scroll position the PDP was left at.
   useEffect(() => {
     const y = consumeShopScroll()
-    if (y !== null) restoreScroll(y)
+    restoreScroll(y ?? 0)
   }, [])
 
   // Track whether the in-page Filters button is visible below the sticky

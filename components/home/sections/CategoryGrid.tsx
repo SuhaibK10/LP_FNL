@@ -43,7 +43,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Backpacks',
     value:    'backpack',
-    image:    'Generated_Image_June_18_2026_-_2_00AM_jssdry.jpg',
+    image:    'https://res.cloudinary.com/deh394y0h/image/upload/v1785960669/WhatsApp_Image_2026-07-29_at_19.24.47_hbdyx7.jpg',
     span:     '',
     textPos:  'bottom',
     imgClass: '',
@@ -195,17 +195,15 @@ export function CategoryGrid() {
                   <div className="absolute inset-0 bg-gradient-to-t from-lp-ink/90 via-lp-ink/30 to-transparent transition-opacity duration-300 group-hover:opacity-100" />
 
                   {/* Text */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5">
-                    <div className="flex items-end justify-between">
-                      <h3 className="font-display text-[1.25rem] md:text-[1.5rem] text-[var(--color-lp-porcelain)] leading-none">
-                        {label}
-                      </h3>
-                      <ArrowUpRight
-                        size={18}
-                        strokeWidth={1.5}
-                        className="text-[var(--color-lp-porcelain)]/50 group-hover:text-[var(--color-lp-gold)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 flex-shrink-0"
-                      />
-                    </div>
+                  <div className="absolute bottom-0 left-0 right-0 px-4 md:px-5 pt-4 md:pt-5 pb-2 md:pb-2.5">
+                    <h3 className="w-full text-center font-display text-[1.1rem] md:text-[1.3rem] text-[var(--color-lp-porcelain)]/80 leading-none">
+                      {label}
+                    </h3>
+                    <ArrowUpRight
+                      size={18}
+                      strokeWidth={1.5}
+                      className="absolute right-4 md:right-5 bottom-2 md:bottom-2.5 text-[var(--color-lp-porcelain)]/50 group-hover:text-[var(--color-lp-gold)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 flex-shrink-0"
+                    />
                   </div>
                 </Link>
               </motion.div>

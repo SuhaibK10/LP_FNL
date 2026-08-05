@@ -49,6 +49,7 @@ export default async function ProductPage({ params, searchParams }: Props) {
         <div className="flex items-center gap-2 mb-3 md:mb-4">
           <Link
             href={ROUTES.shop}
+            scroll={false}
             className="flex items-center gap-1 font-body text-[0.7rem] tracking-[0.1em] uppercase text-[var(--color-lp-muted)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
           >
             <ChevronLeft size={13} strokeWidth={1.5} />
