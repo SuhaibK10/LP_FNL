@@ -1055,6 +1055,7 @@ export const PRODUCTS: Product[] = [
     // Hosted on a separate Cloudinary account (deh394y0h) — the primary
     // account's credit limit is exhausted.
     images: [
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785948579/13_Large_Background_Removed_uzujdf.png',
       'https://res.cloudinary.com/deh394y0h/image/upload/v1785776263/1_Large_Background_Removed_usrmty.png',
       'https://res.cloudinary.com/deh394y0h/image/upload/v1785776263/3_Large_Background_Removed_o2xtoz.png',
       'https://res.cloudinary.com/deh394y0h/image/upload/v1785776264/4_Large_Background_Removed_ugrxhn.png',
@@ -1080,6 +1081,91 @@ export const PRODUCTS: Product[] = [
           { size: 'Cabin',   price: 2999,  stock: 25 },
           { size: 'Medium',  price: 3599,  stock: 20 },
           { size: 'Large',   price: 4299,  stock: 20 },
+        ],
+      },
+      {
+        color: 'Red',
+        colorHex: '#C62828',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785948234/07_Large_Background_Removed_euyjwa.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785948234/05_Large_Background_Removed_mfw23v.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785948234/01_Large_Background_Removed_fv4rw8.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785948235/06_Large_Background_Removed_fcxeyk.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785948235/02_Large_Background_Removed_ldtepg.png',
+        ],
+        sizes: [
+          { size: 'Cabin',   price: 2999,  stock: 25 },
+          { size: 'Medium',  price: 3599,  stock: 20 },
+          { size: 'Large',   price: 4299,  stock: 20 },
+        ],
+      },
+    ],
+  },
+
+  // ── ArmorRite Set of 3 ──────────────────────────────────────────────────
+  {
+    id: 'armorrite-set',
+    metaTitle: 'ArmorRite Luggage Set of 3 (20″, 24″ & 28″)',
+    metaDescription: 'The full ArmorRite line in one matched set: cabin, 24″, and 28″ armor-inspired hard-shell spinners with TSA locks.',
+    keywords: ['luggage set of 3 india', 'hard shell spinner suitcase set', 'tsa lock luggage set', 'matched luggage set', 'family travel luggage set'],
+    name: 'ArmorRite Set of 3',
+    slug: 'armorrite-set',
+    category: 'set',
+    isFeatured: true,
+    mrp: 11000,
+    description:
+      '20", 24", and 28" ArmorRite bags in a matched set, the reinforced geometric shell and TSA lock carried across all three sizes. The complete setup for every kind of trip.',
+    story: [
+      'One decision instead of three. The ArmorRite set puts the cabin, 24″, and 28″ in the same armor-inspired finish, so the weekend bag, the week bag, and the long-haul bag all speak the same language.',
+      'Each case in the set carries the same reinforced geometric hard shell, TSA-approved combination lock, and 360° spinner wheels as the individual ArmorRite, so the only decision left is which one to grab on the way out.',
+    ],
+    highlights: [
+      {
+        heading: 'Every trip, pre-decided',
+        body: 'Two nights takes the cabin, a week takes the 24″, and the long haul takes the 28″. No more forcing a fortnight into the wrong bag.',
+      },
+      {
+        heading: 'Matched to the millimetre',
+        body: 'Same shell, same finish, same hardware across all three sizes. On a trolley at arrivals, the set reads as one deliberate choice.',
+      },
+      {
+        heading: 'TSA lock, on every case',
+        body: 'An integrated TSA combination lock secures all three sizes, so airport security and hotel storage never feel like a gamble.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',    value: 'ABS hard shell, matte textured finish' },
+      { label: 'Sizes',    value: 'Cabin (20″) · Medium (24″) · Large (28″)' },
+      { label: 'Lock',     value: 'TSA-approved combination lock on each case' },
+      { label: 'Wheels',   value: '4 double 360° spinner wheels' },
+      { label: 'Handle',   value: 'Telescopic aluminium handle' },
+    ],
+    warranty:
+      '3-year warranty on all three cases, covering manufacturing defects in the shell, wheels, telescopic handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    faqs: [
+      {
+        q: 'Can I buy the sizes separately?',
+        a: 'Yes. Each ArmorRite size is available on its own. The set simply prices the three together and guarantees a matched batch and finish.',
+      },
+    ],
+    images: [
+      'https://res.cloudinary.com/deh394y0h/image/upload/v1785948235/04_Large_Background_Removed_pk6vbu.png',
+    ],
+    features: [
+      { label: '20", 24" & 28" included' },
+      { label: 'Rugged armor-inspired hard shell' },
+      { label: 'Integrated TSA combination lock' },
+      { label: '360° silent spinner wheels' },
+      { label: 'Scratch-resistant exterior' },
+      { label: 'Smooth telescopic aluminium handle' },
+    ],
+    variants: [
+      {
+        color: 'Red',
+        colorHex: '#C62828',
+        sizes: [
           { size: 'Set of 3', price: 11000, stock: 15 },
         ],
       },
