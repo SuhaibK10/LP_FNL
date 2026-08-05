@@ -2241,7 +2241,7 @@ export const PRODUCTS: Product[] = [
     metaTitle: 'AeroVault USB Laptop Travel Backpack',
     metaDescription: 'AeroVault pairs a padded laptop compartment with an external USB charging port, breathable back panel, and luggage mounting sleeve. Built for work, commuting, and travel.',
     keywords: ['usb laptop backpack', 'travel backpack with charging port', 'padded laptop compartment backpack', 'commuter backpack india', 'business travel backpack'],
-    name: 'AeroVault',
+    name: 'AeroVault Ergonomic Backpack',
     slug: 'aerovault',
     category: 'backpack',
     isFeatured: true,
@@ -2289,6 +2289,7 @@ export const PRODUCTS: Product[] = [
       { label: 'Impact resistant' },
       { label: 'External USB charging port' },
       { label: 'Spacious compartments' },
+      { label: 'Ergonomic shoulder straps' },
     ],
     variants: [
       {
@@ -2334,6 +2335,99 @@ export const PRODUCTS: Product[] = [
         ],
         sizes: [
           { size: 'One Size', price: 2999, stock: 30 },
+        ],
+      },
+    ],
+  },
+
+  // ── Apex ─────────────────────────────────────────────────────────────────
+  {
+    id: 'apex',
+    metaTitle: 'Apex Executive Backpack with USB Charging Port',
+    metaDescription: 'Apex pairs a padded laptop compartment with an external USB charging port, a rear luggage trolley sleeve, and premium water-resistant fabric. Built for office, travel, and daily commute.',
+    keywords: ['executive backpack', 'usb laptop backpack', 'water resistant backpack', 'business travel backpack', 'college backpack india'],
+    name: 'Apex Ergonomic BackPack',
+    slug: 'apex',
+    category: 'backpack',
+    hideSizeSelector: true,
+    description:
+      'Designed for professionals who move with purpose. Apex blends modern aesthetics with everyday functionality, a spacious multi-compartment build in premium water-resistant fabric, with a padded laptop sleeve, intelligent organisation pockets, and ergonomic shoulder straps for all-day comfort.',
+    story: [
+      'Apex is built for the version of a day that moves between an office, an airport, and everywhere in between. A dedicated padded laptop compartment keeps a 15.6″ machine safe, while a built-in USB charging port lets a power bank top up a phone without ever opening the main bag.',
+      'A rear luggage trolley sleeve lets Apex ride a suitcase handle on travel days, and ergonomic padded straps with a breathable back panel carry the load in comfort on every other day. Minimalist on the outside, deliberately organised on the inside.',
+    ],
+    highlights: [
+      {
+        heading: 'Laptop, protected',
+        body: 'A dedicated padded compartment fits most laptops up to 15.6″, kept separate from the rest of the load.',
+      },
+      {
+        heading: 'Stay connected while travelling',
+        body: 'A built-in external USB port lets a power bank charge a phone on the move, no digging through the main compartment for a cable.',
+      },
+      {
+        heading: 'Travel-ready',
+        body: 'A rear luggage trolley sleeve slides onto a suitcase handle, and dual side pockets hold a bottle or umbrella within reach.',
+      },
+    ],
+    specs: [
+      { label: 'Dimensions', value: '43 × 30 × 13 cm' },
+      { label: 'Material',   value: 'Premium water-resistant fabric' },
+      { label: 'Laptop',     value: 'Fits most laptops up to 15.6″' },
+      { label: 'Charging',   value: 'External USB port (power bank not included)' },
+      { label: 'Carry',      value: 'Padded shoulder straps, breathable back panel, reinforced handle' },
+      { label: 'Ideal for',  value: 'Office, business, college, travel & daily commute' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    // TODO: no product photos yet — Suhaib will upload to Cloudinary later.
+    // Add the public_id(s) or full URL(s) here once ready. Left as [''] and
+    // not [] — an empty array resolves to `undefined` in ProductCard's image
+    // lookup, which throws at render; '' resolves safely to a broken-image
+    // placeholder instead of crashing the card.
+    images: [''],
+    features: [
+      { label: 'Water-resistant exterior' },
+      { label: 'Padded laptop compartment' },
+      { label: 'External USB charging port' },
+      { label: 'Quick-access organiser pockets' },
+      { label: 'Rear luggage trolley sleeve' },
+      { label: 'Dual side pockets' },
+      { label: 'Smooth-glide zippers' },
+      { label: 'Breathable back panel' },
+      { label: 'Ergonomic shoulder straps' },
+    ],
+    variants: [
+      {
+        color: 'Black',
+        colorHex: '#212121',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950211/FR2A5528_Large_Background_Removed_xjpttn.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950212/FR2A5530_Large_Background_Removed_oazd9o.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950213/FR2A5531_Large_Background_Removed_x2uopi.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950212/FR2A5529_Large_Background_Removed_fkh93s.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950224/FR2A5551_Large_Background_Removed_bucrst.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950248/FR2A5552_Large_Background_Removed_tr8jsz.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950252/FR2A5558_Large_Background_Removed_fmmj4x.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 3599, stock: 30 },
+        ],
+      },
+      {
+        color: 'Gray',
+        colorHex: '#9E9E9E',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950128/FR2A5521_Large_Background_Removed_elmyaq.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950129/FR2A5524_Large_Background_Removed_fq7zhm.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950129/FR2A5525_Large_Background_Removed_gsk8x0.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 3599, stock: 30 },
         ],
       },
     ],

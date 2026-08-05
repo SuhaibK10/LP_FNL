@@ -33,7 +33,7 @@ export interface MyntraListing {
 // Master switch — flip to false to pull Myntra Exclusives off the site
 // entirely (badges, tab, sort option, PDP pricing/CTA). Products fall back
 // to normal Louis Polo pricing and add-to-cart everywhere automatically.
-export const MYNTRA_EXCLUSIVES_ENABLED = false
+export const MYNTRA_EXCLUSIVES_ENABLED = true
 
 const M = 'https://www.myntra.com'
 
