@@ -142,9 +142,9 @@ export default function CartPage() {
   }
 
   return (
-    <div className="pt-16 md:pt-20">
-      <div className="container-lp section-pad pt-8! md:pt-10! pb-24! md:pb-32!">
-        <h1 className="lp-heading-lg mb-8 md:mb-10">Your Cart</h1>
+    <div className="pt-12.5 md:pt-20">
+      <div className="container-lp section-pad pt-3! md:pt-4! pb-24! md:pb-32!">
+        <h1 className="lp-heading-lg text-[1.75rem]! md:text-[2.5rem]! mb-8 md:mb-10">Your Cart</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-8 md:gap-12">
           {/* Items */}

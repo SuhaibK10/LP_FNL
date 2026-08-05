@@ -351,22 +351,13 @@ export function ProductCard({ product }: ProductCardProps) {
               className="btn-ghost w-full justify-center"
             />
           ) : addedToCart ? (
-            <div className="flex gap-1.5">
-              <Link
-                href={ROUTES.cart}
-                className="btn-ghost flex-1 justify-center"
-                style={{ height: '36px' }}
-              >
-                Go to Cart
-              </Link>
-              <Link
-                href="/checkout"
-                className="btn-gold flex-1 justify-center"
-                style={{ height: '36px' }}
-              >
-                Checkout
-              </Link>
-            </div>
+            <Link
+              href="/checkout"
+              className="btn-gold w-full justify-center"
+              style={{ height: '36px' }}
+            >
+              Checkout
+            </Link>
           ) : (
           <motion.button
             type="button"

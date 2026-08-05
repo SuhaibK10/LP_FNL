@@ -277,8 +277,8 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="pt-16 md:pt-20">
-      <div className="container-lp section-pad pt-6! md:pt-8! max-w-[42rem]">
+    <div className="pt-12.5 md:pt-20">
+      <div className="container-lp section-pad pt-3! md:pt-4! max-w-[42rem]">
         <Link
           href={ROUTES.cart}
           className="flex items-center gap-1 font-body text-[0.7rem] tracking-[0.1em] uppercase text-[var(--color-lp-muted)] hover:text-[var(--color-lp-gold)] transition-colors duration-200 mb-6"
@@ -287,7 +287,7 @@ export default function CheckoutPage() {
           Back to cart
         </Link>
 
-        <h1 className="lp-heading-lg mb-2">Checkout</h1>
+        <h1 className="lp-heading-lg text-[1.75rem]! md:text-[2.5rem]! mb-5 md:mb-6">Checkout</h1>
         <StepIndicator current={step} />
 
         <AnimatePresence mode="wait" custom={direction}>
