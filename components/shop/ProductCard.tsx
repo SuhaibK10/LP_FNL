@@ -15,6 +15,7 @@ import type { Product, ProductSize } from '@/types'
 import { cardUrl, PLACEHOLDER_URL } from '@/lib/cloudinary'
 import { formatPrice, swatchRingColor } from '@/lib/utils'
 import { ROUTES }                   from '@/lib/constants'
+import { saveShopScroll }           from '@/lib/scrollRestore'
 import { useCartStore }             from '@/store/cartStore'
 import { useWishlistStore }         from '@/store/wishlistStore'
 import { SizeGuideModal }           from '@/components/ui/SizeGuideModal'
@@ -105,6 +106,7 @@ export function ProductCard({ product }: ProductCardProps) {
       {/* Image container */}
       <Link
         href={`${ROUTES.shop}/${product.slug}?color=${encodeURIComponent(variant.color)}`}
+        onClick={saveShopScroll}
         className="relative block aspect-[3/4] overflow-hidden bg-[var(--color-lp-cream)] mb-3"
       >
         <div
@@ -183,7 +185,7 @@ export function ProductCard({ product }: ProductCardProps) {
         </p>
         {/* Name left · Myntra rating right, on the same line */}
         <div className="flex items-center justify-between gap-2">
-          <Link href={`${ROUTES.shop}/${product.slug}`}>
+          <Link href={`${ROUTES.shop}/${product.slug}`} onClick={saveShopScroll}>
             <p className="font-display text-[1rem] md:text-[1.1rem] text-[var(--color-lp-ink)] leading-tight hover:text-[var(--color-lp-gold)] transition-colors duration-200">
               {product.name}
             </p>

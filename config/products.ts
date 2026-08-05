@@ -712,6 +712,68 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
+  // ── Champ ────────────────────────────────────────────────────────────────
+  {
+    id: 'champ',
+    metaTitle: 'Champ 20″ Lightweight Cabin Trolley',
+    metaDescription: 'A light polypropylene 20″ cabin trolley with 360° spinner wheels and organised packing. The dependable everyday carry-on.',
+    keywords: ['lightweight cabin trolley', 'polypropylene suitcase', 'airline approved cabin size trolley', 'everyday carry-on luggage', 'hard shell cabin bag'],
+    name: 'Champ',
+    slug: 'champ',
+    category: 'trolley',
+    isFeatured: true,
+    description:
+      'A no-nonsense cabin trolley: hard polypropylene shell, smooth spinner wheels, honest weight. Champ covers the short trips that make up most of real travel, reliably and without fuss.',
+    story: [
+      'Not every trip needs a statement. Champ is the cabin bag for the Friday-evening flight, the overnight train, the two-day work trip: a tough polypropylene shell at an honest weight, with nothing on it that can break off or wear out.',
+      'Inside there are zipped dividers and compression straps; underneath, four 360° spinner wheels. It does the job, keeps doing it, and asks nothing in return.',
+    ],
+    highlights: [
+      {
+        heading: 'The workhorse weight',
+        body: 'At roughly 2.6 kg empty, Champ leaves nearly all of a 7 kg cabin allowance for what you actually pack.',
+      },
+      {
+        heading: 'Polypropylene, deliberately',
+        body: 'PP shells flex on impact and spring back rather than crack, the right material for a bag that will be thrown into more boots and racks than bins.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',       value: 'Polypropylene' },
+      { label: 'Cabin (20″)', value: '57.5 × 37 × 22 cm · approx. 2.6 kg' },
+      { label: 'Lock',        value: '3-digit combination lock' },
+      { label: 'Wheels',      value: '360° spinner wheels' },
+      { label: 'Handle',      value: 'Telescopic, multi-stage' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: ['https://res.cloudinary.com/dpepctqdj/image/upload/c_fill,w_600,h_600,g_auto/louis-polo-champ-08-1781602537072-1781602537072_Background_Removed_ywa111.png','https://res.cloudinary.com/dpepctqdj/image/upload/c_fill,w_600,h_600,g_auto/louis-polo-champ-black-08-1781603000214-1781603000214_Background_Removed_dg0xa2'],
+    features: [
+      { label: 'Hard shell construction' },
+      { label: '360° spinner wheels' },
+      { label: 'Telescopic handle' },
+      { label: 'Lightweight polypropylene' },
+      { label: 'Combination lock' },
+      { label: 'Carry-on approved' },
+    ],
+    variants: [
+      {
+        color: 'Turquoise',
+        colorHex: '#40E0D0',
+        sizes: [
+          { size: 'Cabin', price: 2200, stock: 1000, sku: 'PLACEHOLDER_SKU' },
+        ],
+      },
+      {
+        color: 'Black',
+        colorHex: '#1A1714',
+        sizes: [
+          { size: 'Cabin', price: 2200, stock: 1000, sku: 'PLACEHOLDER_SKU' },
+        ],
+      },
+    ],
+  },
+
   // ── ProStripe Cyber ──────────────────────────────────────────────────────
   {
     id: 'prostripe-cyber',
@@ -889,68 +951,6 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
-  // ── Champ ────────────────────────────────────────────────────────────────
-  {
-    id: 'champ',
-    metaTitle: 'Champ 20″ Lightweight Cabin Trolley',
-    metaDescription: 'A light polypropylene 20″ cabin trolley with 360° spinner wheels and organised packing. The dependable everyday carry-on.',
-    keywords: ['lightweight cabin trolley', 'polypropylene suitcase', 'airline approved cabin size trolley', 'everyday carry-on luggage', 'hard shell cabin bag'],
-    name: 'Champ',
-    slug: 'champ',
-    category: 'trolley',
-    isFeatured: true,
-    description:
-      'A no-nonsense cabin trolley: hard polypropylene shell, smooth spinner wheels, honest weight. Champ covers the short trips that make up most of real travel, reliably and without fuss.',
-    story: [
-      'Not every trip needs a statement. Champ is the cabin bag for the Friday-evening flight, the overnight train, the two-day work trip: a tough polypropylene shell at an honest weight, with nothing on it that can break off or wear out.',
-      'Inside there are zipped dividers and compression straps; underneath, four 360° spinner wheels. It does the job, keeps doing it, and asks nothing in return.',
-    ],
-    highlights: [
-      {
-        heading: 'The workhorse weight',
-        body: 'At roughly 2.6 kg empty, Champ leaves nearly all of a 7 kg cabin allowance for what you actually pack.',
-      },
-      {
-        heading: 'Polypropylene, deliberately',
-        body: 'PP shells flex on impact and spring back rather than crack, the right material for a bag that will be thrown into more boots and racks than bins.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',       value: 'Polypropylene' },
-      { label: 'Cabin (20″)', value: '57.5 × 37 × 22 cm · approx. 2.6 kg' },
-      { label: 'Lock',        value: '3-digit combination lock' },
-      { label: 'Wheels',      value: '360° spinner wheels' },
-      { label: 'Handle',      value: 'Telescopic, multi-stage' },
-    ],
-    warranty:
-      '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['https://res.cloudinary.com/dpepctqdj/image/upload/c_fill,w_600,h_600,g_auto/louis-polo-champ-08-1781602537072-1781602537072_Background_Removed_ywa111.png','https://res.cloudinary.com/dpepctqdj/image/upload/c_fill,w_600,h_600,g_auto/louis-polo-champ-black-08-1781603000214-1781603000214_Background_Removed_dg0xa2'],
-    features: [
-      { label: 'Hard shell construction' },
-      { label: '360° spinner wheels' },
-      { label: 'Telescopic handle' },
-      { label: 'Lightweight polypropylene' },
-      { label: 'Combination lock' },
-      { label: 'Carry-on approved' },
-    ],
-    variants: [
-      {
-        color: 'Turquoise',
-        colorHex: '#40E0D0',
-        sizes: [
-          { size: 'Cabin', price: 2200, stock: 1000, sku: 'PLACEHOLDER_SKU' },
-        ],
-      },
-      {
-        color: 'Black',
-        colorHex: '#1A1714',
-        sizes: [
-          { size: 'Cabin', price: 2200, stock: 1000, sku: 'PLACEHOLDER_SKU' },
-        ],
-      },
-    ],
-  },
-
   // ── Magma ────────────────────────────────────────────────────────────────
   {
     id: 'magma',
@@ -1009,6 +1009,84 @@ export const PRODUCTS: Product[] = [
           { size: 'Cabin', price: 2200, stock: 10000, sku: 'PLACEHOLDER_SKU' },
         ],
       },
+    ],
+  },
+
+  // ── ArmorPack (Backpack) ─────────────────────────────────────────────────
+  {
+    id: 'armorpack',
+    metaTitle: 'ArmorPack Hard Shell Laptop Backpack',
+    metaDescription: 'A rigid polycarbonate-shell backpack with a dedicated laptop bay, organised compartments, and padded straps. Protection a fabric pack can’t match.',
+    keywords: ['hard shell laptop backpack', 'business travel backpack', 'impact resistant backpack', 'professional work backpack', 'laptop backpack with organizer'],
+    name: 'ArmorPack',
+    slug: 'armorpack',
+    category: 'backpack',
+    isFeatured: true,
+    hideSizeSelector: true,
+    description:
+      'Hard shell protection in a backpack form. ArmorPack keeps your laptop, camera, and essentials safe without adding bulk. Adjustable straps, rigid outer shell, secure zip.',
+    story: [
+      'Backpacks are soft because that is how backpacks have always been made, not because soft is what a laptop wants. ArmorPack applies suitcase logic to the commute: a rigid polycarbonate-and-ABS shell that keeps its shape in a crowded metro, under an airline seat, or at the bottom of a pile of bags.',
+      'Inside, the structure works for you: a dedicated laptop bay, ordered compartments for chargers, notebooks, and cables, and retention straps that stop everything sliding to the bottom. Padded shoulder straps and a supportive back panel carry the load for a full day.',
+    ],
+    highlights: [
+      {
+        heading: 'A shell, not a sack',
+        body: 'The moulded exterior resists impacts and pressure that would transfer straight through a fabric pack. That is the difference between a bag that carries a laptop and one that protects it.',
+      },
+      {
+        heading: 'Ordered like a workspace',
+        body: 'Laptop, tablet, chargers, documents: each gets its own place, so the pack opens like a drawer instead of a lucky dip.',
+      },
+      {
+        heading: 'Comfortable at commuter distance',
+        body: 'Padded, adjustable shoulder straps and a breathable back panel keep 2 kg of armour comfortable from front door to desk.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',      value: 'Polycarbonate + ABS' },
+      { label: 'Dimensions', value: '48.3 × 32.4 × 20.3 cm · approx. 2 kg' },
+      { label: 'Laptop bay', value: 'Dedicated padded compartment' },
+      { label: 'Straps',     value: 'Padded, adjustable · breathable back panel' },
+      { label: 'Closure',    value: 'Secure zip' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    faqs: [
+      {
+        q: 'Does it fit under an airline seat?',
+        a: 'Yes. At 48 × 32 × 20 cm it works as a personal item on most carriers, and the rigid shell means it comes out the same shape it went in.',
+      },
+    ],
+    images: [
+      '1-2_Large_Background_Removed_xialtl',
+      '1-2_Large_2_Background_Removed_dnpjfv.png',
+    ],
+    features: [
+      { label: 'Hard shell protection' },
+      { label: 'Adjustable shoulder straps' },
+      { label: 'Laptop compartment' },
+      { label: 'Secure zip closure' },
+      { label: 'Comfortable fabric lining' },
+      { label: 'Concealed pocket' },
+      { label: 'Fits under airline seats' },
+    ],
+    variants: [
+      {
+        color: 'Silver Brush',
+        colorHex: '#C0C0C0',
+        sizes: [
+          { size: 'One Size', price: 3009, stock: 30, sku: '8906206840193' },
+        ],
+      },
+      {
+        color: 'Carbon Fiber',
+        colorHex: '#2C2C2C',
+        sizes: [
+          { size: 'One Size', price: 3009, stock: 30, sku: '8906206840209' },
+        ],
+      },
+      
     ],
   },
 
@@ -1169,84 +1247,6 @@ export const PRODUCTS: Product[] = [
           { size: 'Set of 3', price: 11000, stock: 15 },
         ],
       },
-    ],
-  },
-
-  // ── ArmorPack (Backpack) ─────────────────────────────────────────────────
-  {
-    id: 'armorpack',
-    metaTitle: 'ArmorPack Hard Shell Laptop Backpack',
-    metaDescription: 'A rigid polycarbonate-shell backpack with a dedicated laptop bay, organised compartments, and padded straps. Protection a fabric pack can’t match.',
-    keywords: ['hard shell laptop backpack', 'business travel backpack', 'impact resistant backpack', 'professional work backpack', 'laptop backpack with organizer'],
-    name: 'ArmorPack',
-    slug: 'armorpack',
-    category: 'backpack',
-    isFeatured: true,
-    hideSizeSelector: true,
-    description:
-      'Hard shell protection in a backpack form. ArmorPack keeps your laptop, camera, and essentials safe without adding bulk. Adjustable straps, rigid outer shell, secure zip.',
-    story: [
-      'Backpacks are soft because that is how backpacks have always been made, not because soft is what a laptop wants. ArmorPack applies suitcase logic to the commute: a rigid polycarbonate-and-ABS shell that keeps its shape in a crowded metro, under an airline seat, or at the bottom of a pile of bags.',
-      'Inside, the structure works for you: a dedicated laptop bay, ordered compartments for chargers, notebooks, and cables, and retention straps that stop everything sliding to the bottom. Padded shoulder straps and a supportive back panel carry the load for a full day.',
-    ],
-    highlights: [
-      {
-        heading: 'A shell, not a sack',
-        body: 'The moulded exterior resists impacts and pressure that would transfer straight through a fabric pack. That is the difference between a bag that carries a laptop and one that protects it.',
-      },
-      {
-        heading: 'Ordered like a workspace',
-        body: 'Laptop, tablet, chargers, documents: each gets its own place, so the pack opens like a drawer instead of a lucky dip.',
-      },
-      {
-        heading: 'Comfortable at commuter distance',
-        body: 'Padded, adjustable shoulder straps and a breathable back panel keep 2 kg of armour comfortable from front door to desk.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',      value: 'Polycarbonate + ABS' },
-      { label: 'Dimensions', value: '48.3 × 32.4 × 20.3 cm · approx. 2 kg' },
-      { label: 'Laptop bay', value: 'Dedicated padded compartment' },
-      { label: 'Straps',     value: 'Padded, adjustable · breathable back panel' },
-      { label: 'Closure',    value: 'Secure zip' },
-    ],
-    warranty:
-      '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    faqs: [
-      {
-        q: 'Does it fit under an airline seat?',
-        a: 'Yes. At 48 × 32 × 20 cm it works as a personal item on most carriers, and the rigid shell means it comes out the same shape it went in.',
-      },
-    ],
-    images: [
-      '1-2_Large_Background_Removed_xialtl',
-      '1-2_Large_2_Background_Removed_dnpjfv.png',
-    ],
-    features: [
-      { label: 'Hard shell protection' },
-      { label: 'Adjustable shoulder straps' },
-      { label: 'Laptop compartment' },
-      { label: 'Secure zip closure' },
-      { label: 'Comfortable fabric lining' },
-      { label: 'Concealed pocket' },
-      { label: 'Fits under airline seats' },
-    ],
-    variants: [
-      {
-        color: 'Silver Brush',
-        colorHex: '#C0C0C0',
-        sizes: [
-          { size: 'One Size', price: 3009, stock: 30, sku: '8906206840193' },
-        ],
-      },
-      {
-        color: 'Carbon Fiber',
-        colorHex: '#2C2C2C',
-        sizes: [
-          { size: 'One Size', price: 3009, stock: 30, sku: '8906206840209' },
-        ],
-      },
-      
     ],
   },
 

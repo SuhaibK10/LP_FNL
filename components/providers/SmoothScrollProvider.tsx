@@ -4,6 +4,14 @@ import { useEffect } from 'react'
 import { MotionConfig } from 'framer-motion'
 import Lenis         from 'lenis'
 
+// Exposed so other client components (see lib/scrollRestore.ts) can drive
+// scroll through Lenis instead of fighting its rAF loop with window.scrollTo.
+declare global {
+  interface Window {
+    __lenis?: Lenis
+  }
+}
+
 export function SmoothScrollProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const isTouch =
@@ -22,6 +30,8 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
       smoothWheel: true,
     })
 
+    window.__lenis = lenis
+
     let rafId: number
     const raf = (time: number) => {
       lenis.raf(time)
@@ -32,6 +42,7 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
     return () => {
       cancelAnimationFrame(rafId)
       lenis.destroy()
+      window.__lenis = undefined
     }
   }, [])
 

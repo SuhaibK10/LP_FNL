@@ -16,6 +16,7 @@ import { PRODUCTS, CATEGORIES }    from '@/config/products'
 import { getMyntraListing, MYNTRA_EXCLUSIVES_ENABLED } from '@/config/myntra'
 import { SIZE_ORDER }              from '@/lib/constants'
 import { useShopFilterStore }      from '@/store/shopFilterStore'
+import { consumeShopScroll, restoreScroll } from '@/lib/scrollRestore'
 import { ProductCard }             from './ProductCard'
 import { SortDropdown }            from './SortDropdown'
 import { FilterDrawer, type PriceRange } from './FilterDrawer'
@@ -101,6 +102,15 @@ export function ProductGrid() {
     setSelectedColors(validColors)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [colorParam])
+
+  // Returning from a PDP (breadcrumb or browser back) lands on the same card
+  // that was clicked, instead of resetting to the top of the grid. Only
+  // fires once per mount, and only when a position was actually saved on the
+  // way out — a fresh visit to /shop still opens at the top.
+  useEffect(() => {
+    const y = consumeShopScroll()
+    if (y !== null) restoreScroll(y)
+  }, [])
 
   // Track whether the in-page Filters button is visible below the sticky
   // navbar. rootMargin's negative top roughly matches the navbar's own
