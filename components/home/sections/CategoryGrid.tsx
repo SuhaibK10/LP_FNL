@@ -14,13 +14,16 @@ import { ArrowUpRight, LayoutGrid }          from 'lucide-react'
 import { ROUTES }                            from '@/lib/constants'
 import { SALE_PRODUCTS }                     from '@/config/products'
 import { categoryUrl, PLACEHOLDER_URL }      from '@/lib/cloudinary'
-import { staggerChildren, scaleUp, VIEWPORT } from '@/lib/animations'
+import { staggerChildren, scaleUp } from '@/lib/animations'
 import { ProductCard }                       from '@/components/shop/ProductCard'
 import { SaleCountdown }                     from '@/components/ui/SaleCountdown'
 
-
-
-
+// The shared VIEWPORT config (lib/animations.ts) shrinks the trigger zone by
+// 80px, which is right for sections deep in the page but wrong here: this
+// section sits directly under a ~90vh hero, so almost none of it is visible
+// on load, and the -80px margin meant it stayed invisible until scrolled
+// further, reading as a blank gap. Fires as soon as any part is visible instead.
+const EAGER_VIEWPORT = { once: true, amount: 0 } as const
 // Category card data — images are Cloudinary public_ids
 // Replace with real product images once uploaded
 const CATEGORY_CARDS = [
@@ -107,7 +110,7 @@ export function CategoryGrid() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={VIEWPORT}
+          viewport={EAGER_VIEWPORT}
           transition={{ duration: 0.6 }}
           className="flex items-center justify-center gap-5 mb-6 md:mb-8"
         >
@@ -149,7 +152,7 @@ export function CategoryGrid() {
           key={`header-${tab}`}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={VIEWPORT}
+          viewport={EAGER_VIEWPORT}
           transition={{ duration: 0.6 }}
           className="mb-8 md:mb-10"
         >
@@ -164,7 +167,7 @@ export function CategoryGrid() {
             variants={staggerChildren}
             initial="hidden"
             whileInView="visible"
-            viewport={VIEWPORT}
+            viewport={EAGER_VIEWPORT}
             className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4"
           >
             {CATEGORY_CARDS.map(({ label, value, image, span, imgClass }) => (

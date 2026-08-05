@@ -54,7 +54,7 @@ const SHOWCASE_PRODUCTS = SHOWCASE_SLUGS
 
 export default function CorporateGiftingPage() {
   return (
-    <div className="pt-16 md:pt-20">
+    <div className="pt-16 md:pt-18">
 
       {/* ── Hero ── */}
       <div className="container-lp section-pad" style={{ paddingTop: '1.5rem', paddingBottom: '2.5rem' }}>

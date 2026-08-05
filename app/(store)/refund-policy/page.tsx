@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function RefundPolicyPage() {
   return (
-    <div className="pt-16 md:pt-20">
+    <div className="pt-16 md:pt-18">
       <div className="container-lp section-pad max-w-[52rem]">
 
         <span className="lp-eyebrow">Legal</span>

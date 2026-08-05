@@ -258,7 +258,7 @@ export default function CheckoutPage() {
 
   if (items.length === 0) {
     return (
-      <div className="pt-16 md:pt-20 min-h-[70vh] flex items-center justify-center">
+      <div className="pt-16 md:pt-18 min-h-[70vh] flex items-center justify-center">
         <div className="text-center space-y-4">
           <h1 className="font-display text-2xl text-[var(--color-lp-ink)]">Your cart is empty</h1>
           <Link href={ROUTES.shop} className="btn-primary inline-flex mt-2">
@@ -277,7 +277,7 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="pt-12.5 md:pt-20">
+    <div className="pt-12.5 md:pt-18">
       <div className="container-lp section-pad pt-3! md:pt-4! max-w-[42rem]">
         <Link
           href={ROUTES.cart}
