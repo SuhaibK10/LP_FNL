@@ -534,7 +534,7 @@ export const PRODUCTS: Product[] = [
           'WhatsApp_Image_2026-07-18_at_13.18.34_1_mkbvjv.jpg',
         ],
         sizes: [
-          { size: 'One Size', price: 3599, stock: 30 },
+          { size: 'One Size', price: 4599, stock: 30 },
         ],
       },
       {
@@ -547,7 +547,7 @@ export const PRODUCTS: Product[] = [
           'WhatsApp_Image_2026-07-18_at_13.18.30_5_duagv7.jpg',
         ],
         sizes: [
-          { size: 'One Size', price: 3599, stock: 30 },
+          { size: 'One Size', price: 4599, stock: 30 },
         ],
       },
     ],
@@ -621,7 +621,7 @@ export const PRODUCTS: Product[] = [
           'https://res.cloudinary.com/deh394y0h/image/upload/v1785875220/FR2A5604_Large_Background_Removed_ng99a1.png',
         ],
         sizes: [
-          { size: 'One Size', price: 2999, stock: 30 },
+          { size: 'One Size', price: 3999, stock: 30 },
         ],
       },
       {
@@ -637,7 +637,7 @@ export const PRODUCTS: Product[] = [
           'https://res.cloudinary.com/deh394y0h/image/upload/v1785875227/FR2A5633_Large_Background_Removed_ualnav.png',
         ],
         sizes: [
-          { size: 'One Size', price: 2999, stock: 30 },
+          { size: 'One Size', price: 3999, stock: 30 },
         ],
       },
       {
@@ -652,7 +652,7 @@ export const PRODUCTS: Product[] = [
           'https://res.cloudinary.com/deh394y0h/image/upload/v1785875221/FR2A5608_Large_Background_Removed_jtxbqm.png',
         ],
         sizes: [
-          { size: 'One Size', price: 2999, stock: 30 },
+          { size: 'One Size', price: 3999, stock: 30 },
         ],
       },
     ],
@@ -727,7 +727,7 @@ export const PRODUCTS: Product[] = [
           'https://res.cloudinary.com/deh394y0h/image/upload/v1785950129/FR2A5525_Large_Background_Removed_gsk8x0.png',
         ],
         sizes: [
-          { size: 'One Size', price: 3599, stock: 30 },
+          { size: 'One Size', price: 4599, stock: 30 },
         ],
       },
       {
@@ -745,7 +745,7 @@ export const PRODUCTS: Product[] = [
           'https://res.cloudinary.com/deh394y0h/image/upload/v1785950252/FR2A5558_Large_Background_Removed_fmmj4x.png',
         ],
         sizes: [
-          { size: 'One Size', price: 3599, stock: 30 },
+          { size: 'One Size', price: 4599, stock: 30 },
         ],
       },
     ],
@@ -816,7 +816,7 @@ export const PRODUCTS: Product[] = [
           'https://res.cloudinary.com/deh394y0h/image/upload/v1786032267/FR2A5435_Large_Background_Removed_tl6e9u.png',
         ],
         sizes: [
-          { size: 'One Size', price: 9490, stock: 30 },
+          { size: 'One Size', price: 4599, stock: 30 },
         ],
       },
       {
@@ -833,7 +833,7 @@ export const PRODUCTS: Product[] = [
           'https://res.cloudinary.com/deh394y0h/image/upload/v1786032271/FR2A5455_Large_Background_Removed_rpuxpb.png',
         ],
         sizes: [
-          { size: 'One Size', price: 9490, stock: 30 },
+          { size: 'One Size', price: 4599, stock: 30 },
         ],
       },
       {
@@ -847,7 +847,7 @@ export const PRODUCTS: Product[] = [
           'https://res.cloudinary.com/deh394y0h/image/upload/v1786032268/FR2A5443_Large_Background_Removed_lud0em.png',
         ],
         sizes: [
-          { size: 'One Size', price: 9490, stock: 30 },
+          { size: 'One Size', price: 4599, stock: 30 },
         ],
       },
     ],
@@ -1468,14 +1468,14 @@ export const PRODUCTS: Product[] = [
         color: 'Silver Brush',
         colorHex: '#C0C0C0',
         sizes: [
-          { size: 'One Size', price: 3009, stock: 30, sku: '8906206840193' },
+          { size: 'One Size', price: 4009, stock: 30, sku: '8906206840193' },
         ],
       },
       {
         color: 'Carbon Fiber',
         colorHex: '#2C2C2C',
         sizes: [
-          { size: 'One Size', price: 3009, stock: 30, sku: '8906206840209' },
+          { size: 'One Size', price: 4009, stock: 30, sku: '8906206840209' },
         ],
       },
       
