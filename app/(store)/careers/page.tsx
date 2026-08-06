@@ -92,12 +92,12 @@ export default function CareersPage() {
                 </span>
               </div>
               <h3 className="font-display text-[1.4rem] text-lp-ink mt-6 mb-3">
-                Creative Intern (Gen AI)
+                Growth Creative Intern (Gen AI)
               </h3>
               <p className="font-body text-[0.92rem] text-lp-ink leading-relaxed mb-4">
-                Own the visual output for Louis Polo: hero shots, ad creatives and lifestyle
-                imagery, built with Gen AI tools and finished to a studio-grade
-                standard. <br/> We are a small, fast-moving team and we ship at a fast pace.
+                Own creative that doesn&apos;t just look beautiful, it sells. Hero visuals, Meta ad
+                creatives, product videos, competitor research and campaign ideas for a growing
+                premium travel brand. <br/> Small, fast-moving team, we experiment aggressively and ship even faster.
               </p>
 
               <a
@@ -114,10 +114,12 @@ export default function CareersPage() {
               </p>
               <ul className="space-y-2 mb-8">
                 {[
-                  'Design hero images, ad creatives and campaign visuals for the brand',
-                  'Generate photorealistic product and lifestyle images with AI tools',
-                  'Edit and finish every piece to a premium, studio-quality standard',
-                  'Track new AI creative tools and bring the useful ones into our workflow',
+                  'Design premium hero images, ad creatives and campaign visuals',
+                  'Generate photorealistic lifestyle and product imagery using AI',
+                  'Create scroll-stopping social posts and edit short-form performance videos',
+                  'Assist in planning Meta, Instagram and other digital ad campaigns',
+                  'Research competitors and reverse engineer what makes their creatives work',
+                  'Build systems that make our creative workflow faster and better',
                 ].map(item => (
                   <li key={item} className="font-body text-[0.9rem] text-lp-ink leading-relaxed pl-4 relative before:content-['·'] before:absolute before:left-0 before:text-lp-gold">
                     {item}
@@ -128,18 +130,24 @@ export default function CareersPage() {
               <p className="font-body text-[0.72rem] tracking-widest uppercase text-lp-muted font-medium mb-3">
                 What we&apos;re looking for
               </p>
-              <ul className="space-y-2 mb-2">
+              <ul className="space-y-2 mb-8">
                 {[
-                  'Strong visual instinct and a sharp eye for premium, realistic imagery',
-                  'Extremely good at prompt writing, you can get exact, consistent results out of any AI tool',
-                  'Hands-on with AI image tools: Midjourney, Nano Banana Pro, Krea AI or FLUX',
-                  'Bonus: AI video (Runway, Veo, Kling) or Photoshop, Premiere Pro, After Effects, Figma',
+                  'Strong visual taste and understanding of color, typography and composition',
+                  'Understands customer psychology, what makes someone stop scrolling and buy',
+                  'Exceptional prompt writing, comfortable with Midjourney, Nano Banana Pro, FLUX, Krea, GPT or Claude',
+                  'Basic understanding of Meta Ads and branding vs. conversion creative',
+                  'Comfortable editing short-form video: CapCut, Premiere Pro, DaVinci Resolve or After Effects',
+                  'Bonus: Meta Ads or UGC experience, Shopify/eCommerce, Figma, AI video tools, a personal portfolio or Instagram page',
                 ].map(item => (
                   <li key={item} className="font-body text-[0.9rem] text-lp-ink leading-relaxed pl-4 relative before:content-['·'] before:absolute before:left-0 before:text-lp-gold">
                     {item}
                   </li>
                 ))}
               </ul>
+
+              <p className="font-body text-[0.9rem] text-lp-ink leading-relaxed italic mb-4">
+                Skills can be taught. Curiosity and self-learning can&apos;t.
+              </p>
 
               <p className="font-body text-[0.85rem] text-lp-muted leading-relaxed">
                 Expect a reply within 3-4 days, we are moving fast.
@@ -149,7 +157,7 @@ export default function CareersPage() {
             {/* RIGHT — application form, top-aligned with the left column
                 so it starts level with "Open position" itself */}
             <div className="md:w-1/2">
-              <CareerApplicationForm role="Creative Intern (Gen AI)" />
+              <CareerApplicationForm role="Growth Creative Intern (Gen AI)" />
               <p className="font-body text-[0.8rem] text-lp-muted leading-relaxed mt-4 text-center">
                 Have a question? Write to us at{' '}
                 <a
