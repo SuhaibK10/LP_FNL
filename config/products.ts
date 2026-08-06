@@ -751,6 +751,107 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
+  // ── MetroGrid ────────────────────────────────────────────────────────────
+  {
+    id: 'metrogrid',
+    metaTitle: 'MetroGrid Executive Laptop Backpack',
+    metaDescription: 'MetroGrid pairs professional styling with practical organisation: dedicated laptop and tablet compartments, quick-access storage, and a rear trolley sleeve for business travel.',
+    keywords: ['executive laptop backpack', 'business travel backpack', 'organizer backpack for laptop', 'professional backpack india', 'commuter backpack with trolley sleeve'],
+    name: 'MetroGrid',
+    slug: 'metrogrid',
+    category: 'backpack',
+    hideSizeSelector: true,
+    description:
+      'Professional styling with practical everyday organisation. MetroGrid carries dedicated compartments for a laptop, tablet, documents, and accessories, with quick-access storage, breathable back cushioning, and a rear trolley sleeve for business travel.',
+    story: [
+      'MetroGrid is built around the two things a working day actually needs: everything in its place, and a laptop that arrives safe. Separate compartments keep a laptop, tablet, notebooks, chargers, and documents from ending up in one tangled pile, while a front organiser and vertical zip pocket hold whatever needs to come out fastest.',
+      'Padded shoulder straps, breathable mesh back cushioning, a soft top handle, and a rear trolley sleeve carry it through the rest of the day, from the commute to the boarding gate.',
+    ],
+    highlights: [
+      {
+        heading: 'Separate storage for work essentials',
+        body: 'Multiple compartments keep a laptop, tablet, documents, notebooks, chargers, and accessories organised and easy to find.',
+      },
+      {
+        heading: 'Quick access, on the move',
+        body: 'A front organiser, vertical zip pocket, and side storage hold the things reached for most, without opening the main compartment.',
+      },
+      {
+        heading: 'Built for the commute and the gate',
+        body: 'Padded straps, breathable mesh cushioning, a soft top handle, and a rear trolley sleeve make MetroGrid as comfortable on a platform as it is at a boarding gate.',
+      },
+    ],
+    specs: [
+      { label: 'Size',     value: '19″' },
+      { label: 'Interior', value: 'Dedicated laptop and tablet compartments, document sleeves' },
+      { label: 'Storage',  value: 'Front organiser, vertical zip pocket, side storage' },
+      { label: 'Carry',    value: 'Padded shoulder straps, soft top handle, rear trolley sleeve' },
+      { label: 'Back panel', value: 'Breathable mesh cushioning' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    // TODO: no product photos yet — Suhaib will share Cloudinary links later.
+    // Add the public_id(s) or full URL(s) here once ready. Left as [''] and
+    // not [] — an empty array resolves to `undefined` in ProductCard's image
+    // lookup, which throws at render; '' resolves safely to a broken-image
+    // placeholder instead of crashing the card.
+    images: [''],
+    features: [
+      { label: 'Concealed pocket' },
+      { label: 'Comfortable fabric lining' },
+      { label: 'Lightweight build' },
+      { label: 'Smooth zipper' },
+      { label: 'Luggage mounting sleeve' },
+      { label: 'Spacious compartments' },
+    ],
+    variants: [
+      {
+        color: 'Olive Green',
+        colorHex: '#464B38',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032270/FR2A5433_Large_Background_Removed_rjrgi0.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032268/FR2A5437_Large_Background_Removed_xnuekm.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032267/FR2A5435_Large_Background_Removed_tl6e9u.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 9490, stock: 30 },
+        ],
+      },
+      {
+        color: 'Black',
+        colorHex: '#212121',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032269/FR2A5446_Large_Background_Removed_kyvy3e.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032269/FR2A5445_Large_Background_Removed_pyi47z.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032269/FR2A5448_Large_Background_Removed_ajea8y.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032270/FR2A5450_Large_Background_Removed_tjhqy4.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032272/FR2A5449_Large_Background_Removed_xhenxr.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032271/FR2A5455_Large_Background_Removed_rpuxpb.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 9490, stock: 30 },
+        ],
+      },
+      {
+        color: 'Grey',
+        colorHex: '#9E9E9E',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032268/FR2A5440_Large_Background_Removed_p2mpyy.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032265/FR2A5442_Large_Background_Removed_fhedbs.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032268/FR2A5443_Large_Background_Removed_lud0em.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 9490, stock: 30 },
+        ],
+      },
+    ],
+  },
   // ── VeeZoom ─────────────────────────────────────────────────────────────
   {
     id: 'veezoom',
@@ -2432,6 +2533,7 @@ export const PRODUCTS: Product[] = [
       },
     ],
   },
+
 ]
 
 // ─── Helper: get all featured products ───────────────────────────────────────

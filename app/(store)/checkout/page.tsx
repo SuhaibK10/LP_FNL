@@ -13,12 +13,13 @@ import { useRouter }                from 'next/navigation'
 import Image                        from 'next/image'
 import Link                         from 'next/link'
 import { motion, AnimatePresence }  from 'framer-motion'
-import { ChevronLeft, ArrowRight, Loader2, ShieldCheck, User, Mail, Phone } from 'lucide-react'
+import { ChevronLeft, ArrowRight, Loader2, ShieldCheck, User, Mail, Phone, Tag, Check, X } from 'lucide-react'
 import { useCartStore }             from '@/store/cartStore'
 import { createClient }             from '@/lib/supabase/client'
 import { thumbUrl, PLACEHOLDER_URL } from '@/lib/cloudinary'
 import { formatPrice }              from '@/lib/utils'
 import { ROUTES, SALE_CONFIG }      from '@/lib/constants'
+import { getCoupon, type Coupon }   from '@/config/coupons'
 import { AddressForm, EMPTY_ADDRESS, type ShippingAddress } from '@/components/checkout/AddressForm'
 import type { User as SupabaseUser } from '@supabase/supabase-js'
 
@@ -96,6 +97,10 @@ export default function CheckoutPage() {
   const [address, setAddress] = useState<ShippingAddress>(EMPTY_ADDRESS)
   const [addressValid, setAddressValid] = useState(false)
 
+  const [couponInput, setCouponInput]     = useState('')
+  const [appliedCoupon, setAppliedCoupon] = useState<Coupon | null>(null)
+  const [couponError, setCouponError]     = useState<string | null>(null)
+
   const [isProcessing, setIsProcessing] = useState(false)
   const [paymentError, setPaymentError] = useState<string | null>(null)
   const [razorpayLoaded, setRazorpayLoaded] = useState(false)
@@ -131,7 +136,39 @@ export default function CheckoutPage() {
   // Matches app/api/checkout/route.ts exactly — that route is the actual
   // source of truth for what gets charged, this just mirrors it for display.
   const discount = SALE_CONFIG.enabled ? Math.round(subtotal * SALE_CONFIG.discountPercent) : 0
-  const total = subtotal - discount // shipping is free — see CART_CONFIG
+  // Only discounts cart lines matching the coupon's product + size — same
+  // scoping the server applies, so this preview matches what gets charged.
+  const couponDiscount = appliedCoupon
+    ? Math.round(
+        items
+          .filter(i => i.productSlug === appliedCoupon.productSlug && i.size === appliedCoupon.size)
+          .reduce((s, i) => s + i.price * i.quantity, 0) * appliedCoupon.discountPercent
+      )
+    : 0
+  const total = subtotal - discount - couponDiscount // shipping is free — see CART_CONFIG
+
+  function applyCoupon() {
+    const match = getCoupon(couponInput)
+    if (!match) {
+      setCouponError("That code isn't valid.")
+      setAppliedCoupon(null)
+      return
+    }
+    const qualifies = items.some(i => i.productSlug === match.productSlug && i.size === match.size)
+    if (!qualifies) {
+      setCouponError(`This code only applies to ${match.label.replace(/^\d+% off /i, '')}.`)
+      setAppliedCoupon(null)
+      return
+    }
+    setAppliedCoupon(match)
+    setCouponError(null)
+  }
+
+  function removeCoupon() {
+    setAppliedCoupon(null)
+    setCouponInput('')
+    setCouponError(null)
+  }
 
   const goToStep = useCallback((next: Step) => {
     const currentIdx = STEP_ORDER.indexOf(step)
@@ -158,6 +195,7 @@ export default function CheckoutPage() {
           size:        item.size,
           quantity:    item.quantity,
         })),
+        ...(appliedCoupon && { couponCode: appliedCoupon.code }),
         shipping: {
           fullName:     address.fullName,
           phone:        address.phone,
@@ -305,7 +343,7 @@ export default function CheckoutPage() {
               <div className="space-y-3 mb-8">
                 {items.map(item => (
                   <div key={item.variantKey} className="flex gap-4 items-center py-3 border-b border-[var(--color-lp-border)] last:border-0">
-                    <div className="relative w-14 h-[72px] bg-[var(--color-lp-cream)] flex-shrink-0">
+                    <div className="relative w-14 h-[72px] bg-[var(--color-lp-porcelain)] flex-shrink-0">
                       <Image
                         src={thumbUrl(item.image) || PLACEHOLDER_URL}
                         alt={item.productName}
@@ -402,6 +440,51 @@ export default function CheckoutPage() {
                 </div>
               )}
 
+              {/* ── Coupon code ──────────────────────────────────────────── */}
+              <div className="mb-6">
+                {appliedCoupon ? (
+                  <div className="flex items-center justify-between gap-2 p-3 bg-[var(--color-lp-cream)]">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <Check size={14} strokeWidth={2} className="text-[var(--color-lp-success)] shrink-0" />
+                      <p className="font-body text-[0.8rem] text-[var(--color-lp-ink)] truncate">
+                        <span className="font-medium">{appliedCoupon.code}</span> applied — {appliedCoupon.label}
+                      </p>
+                    </div>
+                    <button
+                      onClick={removeCoupon}
+                      className="text-[var(--color-lp-faint)] hover:text-[var(--color-lp-error)] transition-colors duration-200 shrink-0"
+                      aria-label="Remove coupon"
+                    >
+                      <X size={15} strokeWidth={1.5} />
+                    </button>
+                  </div>
+                ) : (
+                  <div className="flex gap-2">
+                    <div className="relative flex-1">
+                      <Tag size={14} strokeWidth={1.5} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[var(--color-lp-faint)]" />
+                      <input
+                        type="text"
+                        placeholder="Have a code?"
+                        value={couponInput}
+                        onChange={e => { setCouponInput(e.target.value); setCouponError(null) }}
+                        onKeyDown={e => e.key === 'Enter' && applyCoupon()}
+                        className="w-full h-10 pl-9 pr-3 bg-[var(--color-lp-porcelain)] border border-[var(--color-lp-border)] font-body text-[0.8rem] uppercase focus:outline-none focus:border-[var(--color-lp-gold)] transition-colors duration-200"
+                      />
+                    </div>
+                    <button
+                      onClick={applyCoupon}
+                      disabled={!couponInput.trim()}
+                      className="btn-outline px-5 disabled:opacity-40 disabled:cursor-not-allowed"
+                    >
+                      Apply
+                    </button>
+                  </div>
+                )}
+                {couponError && (
+                  <p className="font-body text-[0.75rem] text-[var(--color-lp-error)] mt-1.5">{couponError}</p>
+                )}
+              </div>
+
               <div className="pt-4 border-t border-lp-border mb-6">
                 <div className="flex justify-between items-center mb-1.5">
                   <span className="font-body text-[0.85rem] text-lp-muted">Subtotal</span>
@@ -411,6 +494,12 @@ export default function CheckoutPage() {
                   <div className="flex justify-between items-center mb-1.5">
                     <span className="font-body text-[0.85rem] text-lp-gold">Monsoon Sale ({Math.round(SALE_CONFIG.discountPercent * 100)}% off)</span>
                     <span className="font-body text-[0.85rem] text-lp-gold">-{formatPrice(discount)}</span>
+                  </div>
+                )}
+                {couponDiscount > 0 && (
+                  <div className="flex justify-between items-center mb-1.5">
+                    <span className="font-body text-[0.85rem] text-lp-gold">Coupon ({appliedCoupon?.code})</span>
+                    <span className="font-body text-[0.85rem] text-lp-gold">-{formatPrice(couponDiscount)}</span>
                   </div>
                 )}
                 <div className="flex justify-between items-center pt-1.5">
@@ -496,6 +585,12 @@ export default function CheckoutPage() {
                   <div className="flex justify-between items-center mb-1.5">
                     <span className="font-body text-[0.85rem] text-lp-gold">Monsoon Sale ({Math.round(SALE_CONFIG.discountPercent * 100)}% off)</span>
                     <span className="font-body text-[0.85rem] text-lp-gold">-{formatPrice(discount)}</span>
+                  </div>
+                )}
+                {couponDiscount > 0 && (
+                  <div className="flex justify-between items-center mb-1.5">
+                    <span className="font-body text-[0.85rem] text-lp-gold">Coupon ({appliedCoupon?.code})</span>
+                    <span className="font-body text-[0.85rem] text-lp-gold">-{formatPrice(couponDiscount)}</span>
                   </div>
                 )}
                 <div className="flex justify-between items-center pt-1.5">

@@ -57,15 +57,15 @@ export const heroUrlMobile = (id: string) =>
 
 // Product card thumbnail — 3:4 portrait
 export const cardUrl = (id: string) =>
-  cld(id, withBgRemoval('f_auto,q_auto:eco,w_600,h_800,c_pad,b_rgb:F5F3ED', id))
+  cld(id, withBgRemoval('f_auto,q_auto:eco,w_600,h_800,c_pad,b_rgb:FFFFFF', id))
 
 // Product detail hero — large, high quality
 export const pdpUrl = (id: string) =>
-  cld(id, withBgRemoval('f_auto,q_auto:good,w_900,h_1200,c_pad,b_rgb:F5F3ED', id))
+  cld(id, withBgRemoval('f_auto,q_auto:good,w_900,h_1200,c_pad,b_rgb:FFFFFF', id))
 
 // Cart / order thumbnail — square
 export const thumbUrl = (id: string) =>
-  cld(id, withBgRemoval('f_auto,q_auto:eco,w_200,h_200,c_pad,b_rgb:F5F3ED', id))
+  cld(id, withBgRemoval('f_auto,q_auto:eco,w_200,h_200,c_pad,b_rgb:FFFFFF', id))
 
 // Category/mood tile — full lifestyle photo, fills the frame.
 // No background removal: unlike product cutouts, these keep their real backdrop.

@@ -100,7 +100,7 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
       {/* Image */}
       <Link
         href={`${ROUTES.shop}/${product.slug}`}
-        className="relative block aspect-[3/4] bg-[var(--color-lp-cream)] overflow-hidden mb-3"
+        className="relative block aspect-[3/4] bg-[var(--color-lp-porcelain)] overflow-hidden mb-3"
         draggable="false"
       >
         <Image

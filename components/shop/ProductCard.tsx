@@ -107,7 +107,7 @@ export function ProductCard({ product }: ProductCardProps) {
       <Link
         href={`${ROUTES.shop}/${product.slug}?color=${encodeURIComponent(variant.color)}`}
         onClick={saveShopScroll}
-        className="relative block aspect-[3/4] overflow-hidden bg-[var(--color-lp-cream)] mb-3"
+        className="relative block aspect-[3/4] overflow-hidden bg-[var(--color-lp-porcelain)] mb-3"
       >
         <div
           className="absolute inset-0"

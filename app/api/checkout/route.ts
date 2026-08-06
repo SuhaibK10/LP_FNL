@@ -19,6 +19,7 @@ import Razorpay from 'razorpay'
 import { createClient, createServiceRoleClient } from '@/lib/supabase/server'
 import { getProductBySlug } from '@/config/products'
 import { SALE_CONFIG }      from '@/lib/constants'
+import { getCoupon }        from '@/config/coupons'
 import type { ProductSize } from '@/types'
 
 const razorpay = new Razorpay({
@@ -35,6 +36,7 @@ interface CheckoutLineInput {
 
 interface CheckoutRequestBody {
   items: CheckoutLineInput[]
+  couponCode?: string
   shipping: {
     fullName:     string
     phone:        string
@@ -63,7 +65,7 @@ const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
 
   const body: CheckoutRequestBody = await request.json()
-  const { items, shipping, guestContact } = body
+  const { items, shipping, guestContact, couponCode } = body
 
   if (!items || items.length === 0) {
     return NextResponse.json({ error: 'Cart is empty.' }, { status: 400 })
@@ -180,7 +182,21 @@ const supabase = await createClient()
   const discount = SALE_CONFIG.enabled
     ? Math.round(subtotal * SALE_CONFIG.discountPercent)
     : 0
-  const total = subtotal - discount + shippingCost
+
+  // Coupon discount — like SALE_CONFIG, never trusted from the client: the
+  // code is re-looked-up here, and only the order's own matching line items
+  // (product + size) are discounted, not the whole cart. An unknown or
+  // disabled code is silently worth nothing rather than failing checkout.
+  const coupon = couponCode ? getCoupon(couponCode) : undefined
+  const couponDiscount = coupon
+    ? Math.round(
+        orderItems
+          .filter(item => item.product_slug === coupon.productSlug && item.size === coupon.size)
+          .reduce((sum, item) => sum + item.price * item.quantity, 0) * coupon.discountPercent
+      )
+    : 0
+
+  const total = subtotal - discount - couponDiscount + shippingCost
 
   // ── Create the order row ─────────────────────────────────────────────────
   // Branches on whether a session exists. The DB check constraint

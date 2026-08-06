@@ -73,7 +73,7 @@ export default function WishlistPage() {
                 className="group"
               >
                 {/* Image */}
-                <div className="relative aspect-[3/4] overflow-hidden bg-[var(--color-lp-cream)] mb-3">
+                <div className="relative aspect-[3/4] overflow-hidden bg-[var(--color-lp-porcelain)] mb-3">
                   <Link href={`${ROUTES.shop}/${product.slug}`}>
                     <Image
                       src={cardUrl(product.images[0]) || PLACEHOLDER_URL}

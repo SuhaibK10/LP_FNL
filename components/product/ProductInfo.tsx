@@ -14,7 +14,8 @@ import { ShoppingBag, Heart, Ruler, Minus, Plus, ArrowRight, Star, Flame } from 
 import { featureIconFor }        from '@/lib/featureIcons'
 import type { Product, ProductSize } from '@/types'
 import { formatPrice, swatchRingColor } from '@/lib/utils'
-import { ROUTES }                from '@/lib/constants'
+import { ROUTES, SEO }           from '@/lib/constants'
+import { ShareButton }           from '@/components/ui/ShareButton'
 import { useCartStore }          from '@/store/cartStore'
 import { thumbUrl }              from '@/lib/cloudinary'
 import { useWishlistStore }      from '@/store/wishlistStore'
@@ -100,10 +101,19 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
       )}
 
       <div>
-        <p className="font-body text-[0.65rem] tracking-[0.14em] uppercase text-[var(--color-lp-muted)] mb-1">
-          {product.category === 'trolley' ? 'Trolley Bag' : product.category}
-        </p>
-        <h1 className="lp-heading-md">{product.name}</h1>
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <p className="font-body text-[0.65rem] tracking-[0.14em] uppercase text-[var(--color-lp-muted)] mb-1">
+              {product.category === 'trolley' ? 'Trolley Bag' : product.category}
+            </p>
+            <h1 className="lp-heading-md">{product.name}</h1>
+          </div>
+          <ShareButton
+            title={product.name}
+            url={`${SEO.url}/shop/${product.slug}`}
+            className="mt-1 text-[var(--color-lp-muted)] hover:text-[var(--color-lp-gold)] transition-colors duration-200 shrink-0"
+          />
+        </div>
       </div>
 
       {/* ── Recent purchases — quiet social proof, not a bargain-urgency banner ── */}
