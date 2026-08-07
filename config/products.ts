@@ -1290,21 +1290,6 @@ export const PRODUCTS: Product[] = [
     ],
     variants: [
       {
-        color: 'Olive',
-        colorHex: '#6B6E4A',
-        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
-        // account's credit limit is exhausted.
-        images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785785784/DiamondLux_qxfzs5.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785785785/DiomondLux_bksggh.png',
-        ],
-        sizes: [
-          { size: 'Cabin',    price: 2990,  stock: 25 },
-          { size: 'Medium',   price: 3499,  stock: 20 },
-          { size: 'Large',    price: 4299,  stock: 20 },
-        ],
-      },
-      {
         color: 'Bold White',
         colorHex: '#F5F3EC',
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
@@ -1396,18 +1381,6 @@ export const PRODUCTS: Product[] = [
       { label: 'Anti-theft zipper' },
     ],
     variants: [
-      {
-        color: 'Olive',
-        colorHex: '#6B6E4A',
-        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
-        // account's credit limit is exhausted.
-        images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786105681/DiomondLux_Set_of_thrre_Olive_icf6gn.png',
-        ],
-        sizes: [
-          { size: 'Set of 3', price: 11499, stock: 15 },
-        ],
-      },
       {
         color: 'Bold White',
         colorHex: '#F5F3EC',
