@@ -28,7 +28,7 @@ export const COUPONS: Coupon[] = [
     code:            'DIAMOND40',
     label:           '40% off DiamondLux Set of 3',
     discountPercent: 0.4,
-    productSlug:     'diamondlux',
+    productSlug:     'diamondlux-set',
     size:            'Set of 3',
     enabled:         true,
   },
@@ -36,6 +36,17 @@ export const COUPONS: Coupon[] = [
     code:            'VISHVA30',
     label:           '30% off your order',
     discountPercent: 0.3,
+    enabled:         true,
+  },
+  {
+    code:            'EXCEPTION',
+    label:           'DiamondLux Set of 3 at ₹8,990',
+    // (11499 - 8990) / 11499 — computed precisely so the discount rounds to
+    // exactly ₹2,509 off, landing on ₹8,990 at the current price. If the
+    // set's price ever changes, recompute this so it still lands on 8990.
+    discountPercent: 0.21819288633794243,
+    productSlug:     'diamondlux-set',
+    size:            'Set of 3',
     enabled:         true,
   },
 ]

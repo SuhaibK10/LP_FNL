@@ -1290,6 +1290,21 @@ export const PRODUCTS: Product[] = [
     ],
     variants: [
       {
+        color: 'Olive',
+        colorHex: '#6B6E4A',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785785784/DiamondLux_qxfzs5.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1785785785/DiomondLux_bksggh.png',
+        ],
+        sizes: [
+          { size: 'Cabin',    price: 2990,  stock: 25 },
+          { size: 'Medium',   price: 3499,  stock: 20 },
+          { size: 'Large',    price: 4299,  stock: 20 },
+        ],
+      },
+      {
         color: 'Bold White',
         colorHex: '#F5F3EC',
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
@@ -1304,7 +1319,6 @@ export const PRODUCTS: Product[] = [
           { size: 'Cabin',    price: 2990,  stock: 25 },
           { size: 'Medium',   price: 3499,  stock: 20 },
           { size: 'Large',    price: 4299,  stock: 20 },
-          { size: 'Set of 3', price: 11499, stock: 15 },
         ],
       },
       {
@@ -1321,22 +1335,100 @@ export const PRODUCTS: Product[] = [
           { size: 'Cabin',    price: 2990,  stock: 25 },
           { size: 'Medium',   price: 3499,  stock: 20 },
           { size: 'Large',    price: 4299,  stock: 20 },
-          { size: 'Set of 3', price: 11499, stock: 15 },
         ],
       },
+    ],
+  },
+
+  // ── DiamondLux Set of 3 ──────────────────────────────────────────────────
+  {
+    id: 'diamondlux-set',
+    metaTitle: 'DiamondLux Luggage Set of 3 (20″, 24″ & 28″)',
+    metaDescription: 'The full DiamondLux line in one matched set: cabin, 24″, and 28″ quilted hard-shell spinners with combination locks and metallic accents.',
+    keywords: ['luggage set of 3 india', 'quilted hard shell suitcase set', 'combination lock luggage set', 'matched luggage set', 'family travel luggage set'],
+    name: 'DiamondLux Set of 3',
+    slug: 'diamondlux-set',
+    category: 'set',
+    isFeatured: true,
+    description:
+      '20", 24", and 28" DiamondLux bags in a matched set, the quilted diamond shell and metallic accents carried across all three sizes. The complete setup for every kind of trip.',
+    story: [
+      'One decision instead of three. The DiamondLux set puts the cabin, 24″, and 28″ in the same quilted finish, so the weekend bag, the week bag, and the long-haul bag all draw from the same wardrobe of luggage.',
+      'Each case in the set carries the same diamond-quilted shell, metallic accents, and combination lock as the individual DiamondLux, so the only decision left is which one to grab on the way out.',
+    ],
+    highlights: [
+      {
+        heading: 'Every trip, pre-decided',
+        body: 'Two nights takes the cabin, a week takes the 24″, and the long haul takes the 28″. No more forcing a fortnight into the wrong bag.',
+      },
+      {
+        heading: 'Matched to the millimetre',
+        body: 'Same shell, same finish, same hardware across all three sizes. On a trolley at arrivals, the set reads as one deliberate choice.',
+      },
+      {
+        heading: 'Luxury-inspired, every size',
+        body: 'A diamond-quilted shell and premium metallic accents give the whole set a finish that reads considered rather than loud.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',    value: 'Polycarbonate + ABS, quilted diamond finish' },
+      { label: 'Sizes',    value: 'Cabin (20″) · Medium (24″) · Large (28″)' },
+      { label: 'Lock',     value: 'Combination lock on each case' },
+      { label: 'Wheels',   value: '4 dual-spinner 360° wheels' },
+      { label: 'Handle',   value: 'Telescopic handle' },
+    ],
+    warranty:
+      '3-year warranty on all three cases, covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    faqs: [
+      {
+        q: 'Can I buy the sizes separately?',
+        a: 'Yes. Each DiamondLux size is available on its own. The set simply prices the three together and guarantees a matched batch and finish.',
+      },
+    ],
+    images: [''],
+    features: [
+      { label: 'Smooth rolling spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Comfortable fabric lining' },
+      { label: 'Lightweight build' },
+      { label: 'Impact resistant' },
+      { label: 'Anti-theft zipper' },
+    ],
+    variants: [
       {
         color: 'Olive',
         colorHex: '#6B6E4A',
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785785784/DiamondLux_qxfzs5.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785785785/DiomondLux_bksggh.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786105681/DiomondLux_Set_of_thrre_Olive_icf6gn.png',
         ],
         sizes: [
-          { size: 'Cabin',    price: 2990,  stock: 25 },
-          { size: 'Medium',   price: 3499,  stock: 20 },
-          { size: 'Large',    price: 4299,  stock: 20 },
+          { size: 'Set of 3', price: 11499, stock: 15 },
+        ],
+      },
+      {
+        color: 'Bold White',
+        colorHex: '#F5F3EC',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786105681/louis-polo-diamondlux-luggage-20-28-main-1785229830501-1785229830501-2_Background_Removed_guwvid.png',
+        ],
+        sizes: [
+          { size: 'Set of 3', price: 11499, stock: 15 },
+        ],
+      },
+      {
+        color: 'Zen Gray',
+        colorHex: '#8A8D91',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786105681/louis-polo-diamondlux-luggage-20-28-main-1785229831425-1785229831425-2_Background_Removed_h6bhxw.png',
+        ],
+        sizes: [
           { size: 'Set of 3', price: 11499, stock: 15 },
         ],
       },
