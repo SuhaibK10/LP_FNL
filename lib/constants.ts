@@ -57,10 +57,10 @@ export const CART_CONFIG = {
 // — those sell through Myntra's own checkout, not ours.
 // Advertised in the Navbar ticker ("Monsoon Sale: Flat 15% Off at Checkout").
 export const SALE_CONFIG = {
-  enabled:         false,
+  enabled:         true,
   discountPercent: 0.15,
   label:           'Monsoon Sale',
-  endDate:         '2026-08-06T23:59:59+05:30', // IST, end of day — 3 days out
+  endDate:         '2026-08-17T23:59:59+05:30', // IST, end of day — 10 days out
 } as const
 
 // SEO defaults

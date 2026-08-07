@@ -140,9 +140,12 @@ export function CategoryGrid() {
             <motion.span
               animate={{ scale: [1, 1.04, 1], opacity: [1, 0.92, 1] }}
               transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-              className="inline-flex items-center rounded-sm bg-[#9A4949] px-1.5 py-0.5"
+              className="inline-flex rounded-md p-[3px] shadow-sm"
+              style={{ background: 'linear-gradient(90deg, #FF9933 0 33%, #FFFFFF 33% 66%, #138808 66% 100%)' }}
             >
-              <SaleCountdown className="text-[0.65rem] text-[var(--color-lp-porcelain)] normal-case tracking-normal" />
+              <span className="inline-flex items-center rounded-[5px] bg-lp-ink px-1.25 py-[3px]">
+                <SaleCountdown className="text-[0.62rem] text-[var(--color-lp-porcelain)] normal-case tracking-normal" />
+              </span>
             </motion.span>
           </button>
         </motion.div>

@@ -175,24 +175,31 @@ const supabase = await createClient()
   // Shipping is free on all orders right now — see CART_CONFIG.
   const shippingCost = 0
 
+  // Coupon discount — like SALE_CONFIG, never trusted from the client: the
+  // code is re-looked-up here. A coupon with no productSlug applies to the
+  // whole subtotal; otherwise only the order's matching line items (product
+  // + size) are discounted, not the whole cart. An unknown or disabled code
+  // is silently worth nothing rather than failing checkout.
+  const coupon = couponCode ? getCoupon(couponCode) : undefined
+
   // Site-wide checkout discount (see SALE_CONFIG) — applied here, and only
   // here, since this route is the sole source of truth for what Razorpay
   // actually charges. subtotal stays the pre-discount sum so order records
-  // reflect real MRP; the discount only shows up in `total`.
-  const discount = SALE_CONFIG.enabled
+  // reflect real MRP; the discount only shows up in `total`. Only one
+  // discount applies at a time — a coupon always overrides the automatic
+  // site-wide sale rather than stacking with it.
+  const discount = SALE_CONFIG.enabled && !coupon
     ? Math.round(subtotal * SALE_CONFIG.discountPercent)
     : 0
 
-  // Coupon discount — like SALE_CONFIG, never trusted from the client: the
-  // code is re-looked-up here, and only the order's own matching line items
-  // (product + size) are discounted, not the whole cart. An unknown or
-  // disabled code is silently worth nothing rather than failing checkout.
-  const coupon = couponCode ? getCoupon(couponCode) : undefined
   const couponDiscount = coupon
     ? Math.round(
-        orderItems
-          .filter(item => item.product_slug === coupon.productSlug && item.size === coupon.size)
-          .reduce((sum, item) => sum + item.price * item.quantity, 0) * coupon.discountPercent
+        (coupon.productSlug
+          ? orderItems
+              .filter(item => item.product_slug === coupon.productSlug && item.size === coupon.size)
+              .reduce((sum, item) => sum + item.price * item.quantity, 0)
+          : subtotal
+        ) * coupon.discountPercent
       )
     : 0
 

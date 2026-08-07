@@ -10,7 +10,7 @@
   --font-body:    var(--font-body-sans), system-ui, sans-serif;
 
   /* Palette — Louis Polo SEAT 1A */
-  --color-lp-porcelain:    #FFFFFF;   /* page background — pure white         */
+  --color-lp-porcelain:    #F2F2F2;   /* page background — natural light grey */
   --color-lp-cream:        #EDE9E1;   /* surface — cards, inputs              */
   --color-lp-gold:         #C9A96E;   /* brand accent                         */
   --color-lp-gold-light:   #D4B87E;   /* gold on hover                        */

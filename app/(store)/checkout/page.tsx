@@ -135,14 +135,20 @@ export default function CheckoutPage() {
   const subtotal = items.reduce((s, i) => s + i.price * i.quantity, 0)
   // Matches app/api/checkout/route.ts exactly — that route is the actual
   // source of truth for what gets charged, this just mirrors it for display.
-  const discount = SALE_CONFIG.enabled ? Math.round(subtotal * SALE_CONFIG.discountPercent) : 0
-  // Only discounts cart lines matching the coupon's product + size — same
-  // scoping the server applies, so this preview matches what gets charged.
+  // Only one discount applies at a time — a coupon always overrides the
+  // automatic site-wide sale rather than stacking with it.
+  const discount = SALE_CONFIG.enabled && !appliedCoupon ? Math.round(subtotal * SALE_CONFIG.discountPercent) : 0
+  // A coupon with no productSlug applies to the whole subtotal; otherwise
+  // only cart lines matching its product + size qualify — same scoping the
+  // server applies, so this preview matches what gets charged.
   const couponDiscount = appliedCoupon
     ? Math.round(
-        items
-          .filter(i => i.productSlug === appliedCoupon.productSlug && i.size === appliedCoupon.size)
-          .reduce((s, i) => s + i.price * i.quantity, 0) * appliedCoupon.discountPercent
+        (appliedCoupon.productSlug
+          ? items
+              .filter(i => i.productSlug === appliedCoupon.productSlug && i.size === appliedCoupon.size)
+              .reduce((s, i) => s + i.price * i.quantity, 0)
+          : subtotal
+        ) * appliedCoupon.discountPercent
       )
     : 0
   const total = subtotal - discount - couponDiscount // shipping is free — see CART_CONFIG
@@ -154,7 +160,7 @@ export default function CheckoutPage() {
       setAppliedCoupon(null)
       return
     }
-    const qualifies = items.some(i => i.productSlug === match.productSlug && i.size === match.size)
+    const qualifies = !match.productSlug || items.some(i => i.productSlug === match.productSlug && i.size === match.size)
     if (!qualifies) {
       setCouponError(`This code only applies to ${match.label.replace(/^\d+% off /i, '')}.`)
       setAppliedCoupon(null)

@@ -1,8 +1,10 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // config/coupons.ts
-// One-off promo codes, scoped to a single product + size. Unlike SALE_CONFIG
-// (a flat, site-wide percentage), a coupon only discounts matching line
-// items — everything else in the cart still charges full price.
+// One-off promo codes. Most are scoped to a single product + size (only those
+// line items get discounted, everything else in the cart stays full price);
+// a coupon with no productSlug/size applies to the whole cart subtotal
+// instead — the only difference from SALE_CONFIG is that this one needs a
+// code typed in rather than being automatic.
 //
 // Not persisted anywhere — a code stays live until you flip `enabled` to
 // false or delete its entry. There's no redemption cap; it's a "special
@@ -16,8 +18,8 @@ export interface Coupon {
   code:            string        // entered by the customer, case-insensitive
   label:           string        // shown next to the discount line at checkout
   discountPercent: number        // 0.4 = 40% off
-  productSlug:     string        // only this product qualifies
-  size:            ProductSize   // only this size qualifies
+  productSlug?:    string        // omit for a site-wide coupon (whole cart)
+  size?:           ProductSize   // only used when productSlug is set
   enabled:         boolean
 }
 
@@ -28,6 +30,12 @@ export const COUPONS: Coupon[] = [
     discountPercent: 0.4,
     productSlug:     'diamondlux',
     size:            'Set of 3',
+    enabled:         true,
+  },
+  {
+    code:            'VISHVA30',
+    label:           '30% off your order',
+    discountPercent: 0.3,
     enabled:         true,
   },
 ]
