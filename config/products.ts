@@ -23,7 +23,7 @@ export const HERO_SLIDES: HeroSlide[] = [
     // Hosted on a separate Cloudinary account (deh394y0h) — the primary
     // account's credit limit is exhausted.
     image:        'https://res.cloudinary.com/deh394y0h/image/upload/v1786211609/WhatsApp_Image_2026-08-08_at_18.52.57_clxg7q.jpg',
-    desktopImage: 'https://res.cloudinary.com/deh394y0h/image/upload/v1786211609/WhatsApp_Image_2026-08-08_at_18.52.56_pvjjaf.jpg',
+    desktopImage: 'https://res.cloudinary.com/deh394y0h/image/upload/v1786212170/d_a2smtk.png',
     headline:  '',
     textStyle: 'shadow',
     textSize:  'lg',
