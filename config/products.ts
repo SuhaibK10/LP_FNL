@@ -1408,6 +1408,200 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
+  // ── StrataLux ────────────────────────────────────────────────────────────
+  {
+    id: 'stratalux',
+    metaTitle: 'StrataLux Hard Shell Spinner Luggage',
+    metaDescription: 'StrataLux pairs a vertically ribbed hard shell with leather-look accents and metallic corner details, on 360° silent spinner wheels. Cabin, Medium, and Large, sold individually or as a set.',
+    keywords: ['hard shell spinner luggage', 'ribbed shell suitcase', 'premium luggage india', 'luggage set of 3', 'combination lock trolley bag'],
+    name: 'StrataLux',
+    slug: 'stratalux',
+    category: 'trolley',
+    isFeatured: true,
+    description:
+      'Refined structure, built for the whole trip. StrataLux pairs a vertically ribbed hard shell with leather-look accent bands and metallic corner details, on 360° silent spinner wheels and a combination lock, for travellers who want their luggage to look as considered as the trip itself.',
+    story: [
+      'StrataLux starts with the shell: clean vertical ribbing finished with leather-look accent bands and metallic corner details, a silhouette built for travellers who notice the details. Cabin, Medium, and Large are each sold on their own, or together as a matched set, so a business trip, a weekend away, and a fortnight abroad all draw from the same wardrobe of luggage.',
+      'Underneath the finish, it works like every case in the range: four dual-spinner wheels, a precision telescopic handle, reinforced corners, an integrated combination lock, and an anti-theft zipper, so the polish never comes at the cost of protection.',
+    ],
+    highlights: [
+      {
+        heading: 'Structured, considered design',
+        body: 'Vertical ribbing, leather-look accent bands, and metallic corner details give StrataLux a finish that reads deliberate rather than loud.',
+      },
+      {
+        heading: 'Effortless, every journey',
+        body: 'Four dual-spinner wheels and a precision telescopic handle keep the case gliding through terminals no matter which size is doing the travelling.',
+      },
+      {
+        heading: 'Travel, protected',
+        body: 'A durable hard shell, reinforced corners, and an integrated combination lock take the knocks of the belt and the boot, so the finish stays sharp trip after trip.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',    value: 'Hard shell, vertical ribbing with leather-look accents' },
+      { label: 'Sizes',    value: 'Cabin (20″) · Medium (24″) · Large (28″), sold individually or as a set' },
+      { label: 'Lock',     value: 'Combination lock' },
+      { label: 'Wheels',   value: '4 dual-spinner 360° silent wheels' },
+      { label: 'Handle',   value: 'Telescopic handle' },
+      { label: 'Interior', value: 'Comfortable fabric lining' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [''],
+    features: [
+      { label: '360° silent spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Comfortable fabric lining' },
+      { label: 'Lightweight build' },
+      { label: 'Impact resistant' },
+      { label: 'Anti-theft zipper' },
+      { label: 'Metallic corner accents' },
+    ],
+    variants: [
+      {
+        color: 'Royal Teal',
+        colorHex: '#0E6B6B',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786182048/louis-polo-stratalux-main-04-1785218030812-1785218030812_Background_Removed_w1dtd1.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786182047/WhatsApp_Image_2026-08-08_at_10.33.38_3_Background_Removed_ghsjcq.png',
+        ],
+        sizes: [
+          { size: 'Cabin',    price: 3500, stock: 25 },
+          { size: 'Medium',   price: 4500, stock: 20 },
+          { size: 'Large',    price: 7500, stock: 20 },
+        ],
+      },
+      {
+        color: 'Ivory',
+        colorHex: '#F0EAD6',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786182046/louis-polo-stratalux-main-06-1785218032692-1785218032692_Background_Removed_j2xk9t.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786182046/WhatsApp_Image_2026-08-08_at_10.33.38_1_Background_Removed_ua7lqh.png',
+        ],
+        sizes: [
+          { size: 'Cabin',    price: 3500, stock: 25 },
+          { size: 'Medium',   price: 4500, stock: 20 },
+          { size: 'Large',    price: 7500, stock: 20 },
+        ],
+      },
+      {
+        color: 'Rose Gold',
+        colorHex: '#B76E79',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786182046/louis-polo-stratalux-main-03-1785218029903-1785218029903_Background_Removed_ju2tbj.png',
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786182046/WhatsApp_Image_2026-08-08_at_10.33_Background_Removed.37_x4lnqg.png',
+        ],
+        sizes: [
+          { size: 'Cabin',    price: 3500, stock: 25 },
+          { size: 'Medium',   price: 4500, stock: 20 },
+          { size: 'Large',    price: 7500, stock: 20 },
+        ],
+      },
+    ],
+  },
+
+  // ── StrataLux Set of 3 ───────────────────────────────────────────────────
+  {
+    id: 'stratalux-set',
+    metaTitle: 'StrataLux Luggage Set of 3 (20″, 24″ & 28″)',
+    metaDescription: 'The full StrataLux line in one matched set: cabin, 24″, and 28″ ribbed hard-shell spinners with combination locks and metallic corner accents.',
+    keywords: ['luggage set of 3 india', 'ribbed hard shell suitcase set', 'combination lock luggage set', 'matched luggage set', 'family travel luggage set'],
+    name: 'StrataLux Set of 3',
+    slug: 'stratalux-set',
+    category: 'set',
+    isFeatured: true,
+    description:
+      '20", 24", and 28" StrataLux bags in a matched set, the ribbed shell and leather-look accents carried across all three sizes. The complete setup for every kind of trip.',
+    story: [
+      'One decision instead of three. The StrataLux set puts the cabin, 24″, and 28″ in the same considered finish, so the weekend bag, the week bag, and the long-haul bag all draw from the same wardrobe of luggage.',
+      'Each case in the set carries the same ribbed hard shell, leather-look accent bands, and combination lock as the individual StrataLux, so the only decision left is which one to grab on the way out.',
+    ],
+    highlights: [
+      {
+        heading: 'Every trip, pre-decided',
+        body: 'Two nights takes the cabin, a week takes the 24″, and the long haul takes the 28″. No more forcing a fortnight into the wrong bag.',
+      },
+      {
+        heading: 'Matched to the millimetre',
+        body: 'Same shell, same finish, same hardware across all three sizes. On a trolley at arrivals, the set reads as one deliberate choice.',
+      },
+      {
+        heading: 'Structured, considered design',
+        body: 'Vertical ribbing, leather-look accent bands, and metallic corner details give the whole set a finish that reads deliberate rather than loud.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',    value: 'Hard shell, vertical ribbing with leather-look accents' },
+      { label: 'Sizes',    value: 'Cabin (20″) · Medium (24″) · Large (28″)' },
+      { label: 'Lock',     value: 'Combination lock on each case' },
+      { label: 'Wheels',   value: '4 dual-spinner 360° silent wheels' },
+      { label: 'Handle',   value: 'Telescopic handle' },
+    ],
+    warranty:
+      '3-year warranty on all three cases, covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    faqs: [
+      {
+        q: 'Can I buy the sizes separately?',
+        a: 'Yes. Each StrataLux size is available on its own. The set simply prices the three together and guarantees a matched batch and finish.',
+      },
+    ],
+    images: [''],
+    features: [
+      { label: '20", 24" & 28" included' },
+      { label: '360° silent spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Impact resistant' },
+      { label: 'Metallic corner accents' },
+    ],
+    variants: [
+      {
+        color: 'Ivory',
+        colorHex: '#F0EAD6',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786183111/louis-polo-stratalux-main-10-1785218035860-1785218035860_Background_Removed_k1kly5.png',
+        ],
+        sizes: [
+          { size: 'Set of 3', price: 11500, stock: 15 },
+        ],
+      },
+      {
+        color: 'Royal Teal',
+        colorHex: '#0E6B6B',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786182046/louis-polo-stratalux-main-09-1785218035084-1785218035084_Background_Removed_g436bw.png',
+        ],
+        sizes: [
+          { size: 'Set of 3', price: 11500, stock: 15 },
+        ],
+      },
+      {
+        color: 'Rose Gold',
+        colorHex: '#B76E79',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          'https://res.cloudinary.com/deh394y0h/image/upload/v1786182046/louis-polo-stratalux-main-08-1785218034286-1785218034286_Background_Removed_cyougc.png',
+        ],
+        sizes: [
+          { size: 'Set of 3', price: 11500, stock: 15 },
+        ],
+      },
+    ],
+  },
+
   // ── Magma ────────────────────────────────────────────────────────────────
   {
     id: 'magma',
