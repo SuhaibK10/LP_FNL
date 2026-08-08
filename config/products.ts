@@ -19,6 +19,15 @@ import type { Product, HeroSlide } from '@/types'
 // 3-4 images that auto-slide in the hero section.
 // Replace public_ids with your Cloudinary uploads.
 export const HERO_SLIDES: HeroSlide[] = [
+  {
+    // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+    // account's credit limit is exhausted.
+    image:        'https://res.cloudinary.com/deh394y0h/image/upload/v1786211609/WhatsApp_Image_2026-08-08_at_18.52.57_clxg7q.jpg',
+    desktopImage: 'https://res.cloudinary.com/deh394y0h/image/upload/v1786211609/WhatsApp_Image_2026-08-08_at_18.52.56_pvjjaf.jpg',
+    headline:  '',
+    textStyle: 'shadow',
+    textSize:  'lg',
+  },
   // Temporarily disabled — first hero slide (mobile + desktop) turned off.
   // {
   //   // Hosted on a separate Cloudinary account (deh394y0h) — the primary
