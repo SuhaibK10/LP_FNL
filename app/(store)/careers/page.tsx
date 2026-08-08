@@ -137,17 +137,12 @@ export default function CareersPage() {
                   'Exceptional prompt writing, comfortable with Midjourney, Nano Banana Pro, FLUX, Krea, GPT or Claude',
                   'Basic understanding of Meta Ads and branding vs. conversion creative',
                   'Comfortable editing short-form video: CapCut, Premiere Pro, DaVinci Resolve or After Effects',
-                  'Bonus: Meta Ads or UGC experience, Shopify/eCommerce, Figma, AI video tools, a personal portfolio or Instagram page',
                 ].map(item => (
                   <li key={item} className="font-body text-[0.9rem] text-lp-ink leading-relaxed pl-4 relative before:content-['·'] before:absolute before:left-0 before:text-lp-gold">
                     {item}
                   </li>
                 ))}
               </ul>
-
-              <p className="font-body text-[0.9rem] text-lp-ink leading-relaxed italic mb-4">
-                Skills can be taught. Curiosity and self-learning can&apos;t.
-              </p>
 
               <p className="font-body text-[0.85rem] text-lp-muted leading-relaxed">
                 Expect a reply within 3-4 days, we are moving fast.
