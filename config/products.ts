@@ -147,7 +147,7 @@ export const PRODUCTS: Product[] = [
         color: 'Metallic Silver',
         colorHex: '#C9CBD1',
         sizes: [
-          { size: 'One Size', price: 1299, stock: 50 },
+          { size: 'One Size', price: 1499, stock: 50 },
         ],
       },
     ],
@@ -621,7 +621,7 @@ export const PRODUCTS: Product[] = [
           'https://res.cloudinary.com/deh394y0h/image/upload/v1785875220/FR2A5604_Large_Background_Removed_ng99a1.png',
         ],
         sizes: [
-          { size: 'One Size', price: 3999, stock: 30 },
+          { size: 'One Size', price: 4500, stock: 30 },
         ],
       },
       {
@@ -637,7 +637,7 @@ export const PRODUCTS: Product[] = [
           'https://res.cloudinary.com/deh394y0h/image/upload/v1785875227/FR2A5633_Large_Background_Removed_ualnav.png',
         ],
         sizes: [
-          { size: 'One Size', price: 3999, stock: 30 },
+          { size: 'One Size', price: 4500, stock: 30 },
         ],
       },
       {
@@ -652,7 +652,7 @@ export const PRODUCTS: Product[] = [
           'https://res.cloudinary.com/deh394y0h/image/upload/v1785875221/FR2A5608_Large_Background_Removed_jtxbqm.png',
         ],
         sizes: [
-          { size: 'One Size', price: 3999, stock: 30 },
+          { size: 'One Size', price: 4500, stock: 30 },
         ],
       },
     ],
