@@ -88,7 +88,7 @@ export default function CareersPage() {
               <div className="flex items-center gap-2 mb-3">
                 <Briefcase size={20} strokeWidth={1.5} className="text-lp-ink shrink-0" />
                 <span className="font-body text-[0.72rem] tracking-widest uppercase text-lp-ink font-medium">
-                  Internship · Remote · 2 Months · ₹10,000-20,000/month · API cost on us
+                  Internship · Remote · 2 Months · ₹15,000-20,000/month · API cost on us
                 </span>
               </div>
               <h3 className="font-display text-[1.4rem] text-lp-ink mt-6 mb-3">
