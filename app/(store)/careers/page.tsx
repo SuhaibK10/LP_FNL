@@ -44,6 +44,65 @@ const DEPARTMENTS = [
   'Marketing & Growth',
 ]
 
+interface OpenPosition {
+  role:                string
+  tags:                string   // the uppercase meta line: type · location · duration · pay
+  description:         string
+  jdHref?:             string   // downloadable JD PDF, if one exists
+  whatYoullDo:         string[]
+  whatWereLookingFor:  string[]
+  showTask:            boolean  // the AI-creative task only makes sense for creative roles
+}
+
+const POSITIONS: OpenPosition[] = [
+  {
+    role: 'Growth Creative Intern (Gen AI)',
+    tags: 'Internship · Remote · 2 Months · ₹15,000-20,000/month · API cost on us',
+    description:
+      "Own creative that doesn't just look beautiful, it sells. Hero visuals, Meta ad creatives, product videos, competitor research and campaign ideas for a growing premium travel brand. Small, fast-moving team, we experiment aggressively and ship even faster.",
+    jdHref: '/documents/louis-polo-creative-intern-jd.pdf',
+    whatYoullDo: [
+      'Design premium hero images, ad creatives and campaign visuals',
+      'Generate photorealistic lifestyle and product imagery using AI',
+      'Create scroll-stopping social posts and edit short-form performance videos',
+      'Assist in planning Meta, Instagram and other digital ad campaigns',
+      'Research competitors and reverse engineer what makes their creatives work',
+      'Build systems that make our creative workflow faster and better',
+    ],
+    whatWereLookingFor: [
+      'Strong visual taste and understanding of color, typography and composition',
+      'Understands customer psychology, what makes someone stop scrolling and buy',
+      'Exceptional prompt writing, comfortable with Midjourney, Nano Banana Pro, FLUX, Krea, GPT or Claude',
+      'Basic understanding of Meta Ads and branding vs. conversion creative',
+      'Comfortable editing short-form video: CapCut, Premiere Pro, DaVinci Resolve or After Effects',
+    ],
+    showTask: true,
+  },
+  {
+    role: 'E-commerce & Marketplace Manager',
+    tags: 'Full-Time · Remote · Compensation as per market standards',
+    description:
+      'Own our presence across every marketplace we sell on, Myntra, Amazon, Flipkart and beyond, plus the Meta Ads driving traffic to them. This is a hands-on, own-the-numbers role: listings, campaigns, ACoS, and the day-to-day of keeping every storefront healthy.',
+    whatYoullDo: [
+      'Manage and grow our presence across Myntra, Amazon, Flipkart and other marketplaces as we expand',
+      'Own listing optimization across every platform: titles, keywords, images, descriptions',
+      'Plan and run marketplace ad campaigns (PPC) and Meta Ads, from setup to audience targeting',
+      'Track ROAS and ACoS, and adjust pricing, promotions and keyword strategy to improve them',
+      'Manage seller account health, catalog setup and compliance across every platform',
+      'Coordinate inventory and order fulfilment with the warehouse and operations team',
+      'Analyse multi-platform sales data to find and act on growth opportunities',
+    ],
+    whatWereLookingFor: [
+      'Real experience managing marketplace operations (Myntra, Amazon, Flipkart or similar)',
+      'Working knowledge of Meta Ads: campaign setup and audience targeting',
+      'Comfortable with PPC advertising and ROAS/ACoS optimization',
+      'A sharp eye for listing and catalog quality across platforms',
+      'Organised and detail-oriented, comfortable owning day-to-day marketplace operations independently',
+    ],
+    showTask: false,
+  },
+]
+
 export default function CareersPage() {
   return (
     <div className="pt-16 md:pt-18">
@@ -78,93 +137,82 @@ export default function CareersPage() {
         </div>
 
         {/* ── Open Positions ── */}
-        <div className="mt-16 pt-12 border-t border-lp-border">
-          <div className="flex flex-col md:flex-row gap-x-10 md:gap-x-12 gap-y-8 items-start">
-            {/* LEFT — heading + role details, stacked so the form on the
-                right can align its top edge with "Open position" itself */}
-            <div className="md:w-1/2">
-              <h2 className="lp-heading-md mb-6">Open position</h2>
+        {POSITIONS.map((position) => (
+          <div key={position.role} className="mt-16 pt-12 border-t border-lp-border">
+            <div className="flex flex-col md:flex-row gap-x-10 md:gap-x-12 gap-y-8 items-start">
+              {/* LEFT — heading + role details, stacked so the form on the
+                  right can align its top edge with "Open position" itself */}
+              <div className="md:w-1/2">
+                <h2 className="lp-heading-md mb-6">Open position</h2>
 
-              <div className="flex items-center gap-2 mb-3">
-                <Briefcase size={20} strokeWidth={1.5} className="text-lp-ink shrink-0" />
-                <span className="font-body text-[0.72rem] tracking-widest uppercase text-lp-ink font-medium">
-                  Internship · Remote · 2 Months · ₹15,000-20,000/month · API cost on us
-                </span>
+                <div className="flex items-center gap-2 mb-3">
+                  <Briefcase size={20} strokeWidth={1.5} className="text-lp-ink shrink-0" />
+                  <span className="font-body text-[0.72rem] tracking-widest uppercase text-lp-ink font-medium">
+                    {position.tags}
+                  </span>
+                </div>
+                <h3 className="font-display text-[1.4rem] text-lp-ink mt-6 mb-3">
+                  {position.role}
+                </h3>
+                <p className="font-body text-[0.92rem] text-lp-ink leading-relaxed mb-4">
+                  {position.description}
+                </p>
+
+                {position.jdHref && (
+                  <a
+                    href={position.jdHref}
+                    download
+                    className="flex w-fit items-center gap-1.5 font-body text-[0.78rem] text-lp-ink underline underline-offset-2 hover:text-lp-gold transition-colors mb-8"
+                  >
+                    <Download size={14} strokeWidth={1.5} />
+                    Job Description
+                  </a>
+                )}
+
+                <p className="font-body text-[0.72rem] tracking-widest uppercase text-lp-muted font-medium mb-3">
+                  What you&apos;ll do
+                </p>
+                <ul className="space-y-2 mb-8">
+                  {position.whatYoullDo.map(item => (
+                    <li key={item} className="font-body text-[0.9rem] text-lp-ink leading-relaxed pl-4 relative before:content-['·'] before:absolute before:left-0 before:text-lp-gold">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="font-body text-[0.72rem] tracking-widest uppercase text-lp-muted font-medium mb-3">
+                  What we&apos;re looking for
+                </p>
+                <ul className="space-y-2 mb-8">
+                  {position.whatWereLookingFor.map(item => (
+                    <li key={item} className="font-body text-[0.9rem] text-lp-ink leading-relaxed pl-4 relative before:content-['·'] before:absolute before:left-0 before:text-lp-gold">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="font-body text-[0.85rem] text-lp-muted leading-relaxed">
+                  Expect a reply within 3-4 days, we are moving fast.
+                </p>
               </div>
-              <h3 className="font-display text-[1.4rem] text-lp-ink mt-6 mb-3">
-                Growth Creative Intern (Gen AI)
-              </h3>
-              <p className="font-body text-[0.92rem] text-lp-ink leading-relaxed mb-4">
-                Own creative that doesn&apos;t just look beautiful, it sells. Hero visuals, Meta ad
-                creatives, product videos, competitor research and campaign ideas for a growing
-                premium travel brand. <br/> Small, fast-moving team, we experiment aggressively and ship even faster.
-              </p>
 
-              <a
-                href="/documents/louis-polo-creative-intern-jd.pdf"
-                download
-                className="flex w-fit items-center gap-1.5 font-body text-[0.78rem] text-lp-ink underline underline-offset-2 hover:text-lp-gold transition-colors mb-8"
-              >
-                <Download size={14} strokeWidth={1.5} />
-                Job Description
-              </a>
-
-              <p className="font-body text-[0.72rem] tracking-widest uppercase text-lp-muted font-medium mb-3">
-                What you&apos;ll do
-              </p>
-              <ul className="space-y-2 mb-8">
-                {[
-                  'Design premium hero images, ad creatives and campaign visuals',
-                  'Generate photorealistic lifestyle and product imagery using AI',
-                  'Create scroll-stopping social posts and edit short-form performance videos',
-                  'Assist in planning Meta, Instagram and other digital ad campaigns',
-                  'Research competitors and reverse engineer what makes their creatives work',
-                  'Build systems that make our creative workflow faster and better',
-                ].map(item => (
-                  <li key={item} className="font-body text-[0.9rem] text-lp-ink leading-relaxed pl-4 relative before:content-['·'] before:absolute before:left-0 before:text-lp-gold">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <p className="font-body text-[0.72rem] tracking-widest uppercase text-lp-muted font-medium mb-3">
-                What we&apos;re looking for
-              </p>
-              <ul className="space-y-2 mb-8">
-                {[
-                  'Strong visual taste and understanding of color, typography and composition',
-                  'Understands customer psychology, what makes someone stop scrolling and buy',
-                  'Exceptional prompt writing, comfortable with Midjourney, Nano Banana Pro, FLUX, Krea, GPT or Claude',
-                  'Basic understanding of Meta Ads and branding vs. conversion creative',
-                  'Comfortable editing short-form video: CapCut, Premiere Pro, DaVinci Resolve or After Effects',
-                ].map(item => (
-                  <li key={item} className="font-body text-[0.9rem] text-lp-ink leading-relaxed pl-4 relative before:content-['·'] before:absolute before:left-0 before:text-lp-gold">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <p className="font-body text-[0.85rem] text-lp-muted leading-relaxed">
-                Expect a reply within 3-4 days, we are moving fast.
-              </p>
-            </div>
-
-            {/* RIGHT — application form, top-aligned with the left column
-                so it starts level with "Open position" itself */}
-            <div className="md:w-1/2">
-              <CareerApplicationForm role="Growth Creative Intern (Gen AI)" />
-              <p className="font-body text-[0.8rem] text-lp-muted leading-relaxed mt-4 text-center">
-                Have a question? Write to us at{' '}
-                <a
-                  href="mailto:careers@louispolo.in"
-                  className="text-lp-ink underline underline-offset-2 hover:text-lp-gold transition-colors"
-                >
-                  careers@louispolo.in
-                </a>
-              </p>
+              {/* RIGHT — application form, top-aligned with the left column
+                  so it starts level with "Open position" itself */}
+              <div className="md:w-1/2">
+                <CareerApplicationForm role={position.role} showTask={position.showTask} />
+                <p className="font-body text-[0.8rem] text-lp-muted leading-relaxed mt-4 text-center">
+                  Have a question? Write to us at{' '}
+                  <a
+                    href="mailto:careers@louispolo.in"
+                    className="text-lp-ink underline underline-offset-2 hover:text-lp-gold transition-colors"
+                  >
+                    careers@louispolo.in
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        ))}
 
         {/* ── Departments ── */}
         <div className="mt-16 pt-12 border-t border-lp-border">

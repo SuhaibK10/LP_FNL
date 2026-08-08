@@ -17,6 +17,10 @@ import type { Product }              from '@/types'
 
 interface Props {
   role: string
+  // The AI-creative task below only makes sense for creative roles — other
+  // roles skip straight to the plain form fields, with Resume required
+  // instead of the Task Submission link.
+  showTask?: boolean
 }
 
 interface TaskImage {
@@ -47,7 +51,7 @@ const TASK_IMAGES: TaskImage[] = [
 
 const MAX_NOTES_WORDS = 100
 
-export function CareerApplicationForm({ role }: Props) {
+export function CareerApplicationForm({ role, showTask = true }: Props) {
   const [isPending, startTransition] = useTransition()
   const [success, setSuccess]        = useState(false)
   const [error, setError]            = useState('')
@@ -113,44 +117,46 @@ export function CareerApplicationForm({ role }: Props) {
     <div className="bg-lp-cream rounded-2xl p-6 md:p-8">
 
       {/* ── The Task ── */}
-      <div className="mb-7 pb-7 border-b border-lp-border">
-        <p className="font-display text-[1.3rem] text-lp-ink text-center mb-3">
-          The Task
-        </p>
-        <ol className="space-y-2.5 mb-4">
-          {[
-            'Choose the product images from below and download them',
-            'Generate hero, lifestyle or ad images of the products using any AI tool',
-            'Share one link with all your results in the Task Submission Field',
-          ].map((step, i) => (
-            <li key={step} className="flex gap-3">
-              <span className="font-display text-[0.9rem] text-lp-ink shrink-0 w-4">{i + 1}.</span>
-              <span className="font-body text-[0.88rem] text-lp-ink leading-relaxed">{step}</span>
-            </li>
-          ))}
-        </ol>
-        <div className="grid grid-cols-3 gap-3">
-          {TASK_IMAGES.map((image) => (
-            <a
-              key={image.key}
-              href={image.downloadHref}
-              download
-              className="group relative block aspect-3/4 bg-white rounded-md overflow-hidden border border-lp-border"
-            >
-              <Image
-                src={image.src}
-                alt={image.name}
-                fill
-                className="object-cover"
-                sizes="120px"
-              />
-              <span className="absolute inset-0 flex items-center justify-center bg-lp-ink/0 group-hover:bg-lp-ink/50 transition-colors duration-200">
-                <Download size={18} strokeWidth={1.5} className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-              </span>
-            </a>
-          ))}
+      {showTask && (
+        <div className="mb-7 pb-7 border-b border-lp-border">
+          <p className="font-display text-[1.3rem] text-lp-ink text-center mb-3">
+            The Task
+          </p>
+          <ol className="space-y-2.5 mb-4">
+            {[
+              'Choose the product images from below and download them',
+              'Generate hero, lifestyle or ad images of the products using any AI tool',
+              'Share one link with all your results in the Task Submission Field',
+            ].map((step, i) => (
+              <li key={step} className="flex gap-3">
+                <span className="font-display text-[0.9rem] text-lp-ink shrink-0 w-4">{i + 1}.</span>
+                <span className="font-body text-[0.88rem] text-lp-ink leading-relaxed">{step}</span>
+              </li>
+            ))}
+          </ol>
+          <div className="grid grid-cols-3 gap-3">
+            {TASK_IMAGES.map((image) => (
+              <a
+                key={image.key}
+                href={image.downloadHref}
+                download
+                className="group relative block aspect-3/4 bg-white rounded-md overflow-hidden border border-lp-border"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.name}
+                  fill
+                  className="object-cover"
+                  sizes="120px"
+                />
+                <span className="absolute inset-0 flex items-center justify-center bg-lp-ink/0 group-hover:bg-lp-ink/50 transition-colors duration-200">
+                  <Download size={18} strokeWidth={1.5} className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                </span>
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -160,10 +166,10 @@ export function CareerApplicationForm({ role }: Props) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Field
-            label="Portfolio Link"
+            label="Portfolio / LinkedIn Link"
             name="portfolioUrl"
             type="url"
-            placeholder="Behance, Instagram, Drive"
+            placeholder="LinkedIn, Behance, Drive"
             inputClass={inputClass}
             optional
           />
@@ -173,28 +179,33 @@ export function CareerApplicationForm({ role }: Props) {
             type="url"
             placeholder="Drive, Dropbox, anywhere it's public"
             inputClass={inputClass}
-            optional
+            required={!showTask}
+            optional={showTask}
           />
         </div>
 
-        <Field
-          label="Task Submission Link"
-          name="taskUrl"
-          type="url"
-          placeholder="Folder or album link with all your images for the task above"
-          required
-          inputClass={inputClass}
-          hint="Make sure the link is set to public."
-        />
+        {showTask && (
+          <Field
+            label="Task Submission Link"
+            name="taskUrl"
+            type="url"
+            placeholder="Folder or album link with all your images for the task above"
+            required
+            inputClass={inputClass}
+            hint="Make sure the link is set to public."
+          />
+        )}
 
-        <Field
-          label="Tools you're comfortable with"
-          name="tools"
-          type="text"
-          placeholder="e.g. Midjourney, Nano Banana Pro, Photoshop"
-          inputClass={inputClass}
-          optional
-        />
+        {showTask && (
+          <Field
+            label="Tools you're comfortable with"
+            name="tools"
+            type="text"
+            placeholder="e.g. Midjourney, Nano Banana Pro, Photoshop"
+            inputClass={inputClass}
+            optional
+          />
+        )}
 
         <div>
           <label className="block font-body text-[0.72rem] tracking-widest uppercase text-lp-ink font-medium mb-1.5">
@@ -205,7 +216,7 @@ export function CareerApplicationForm({ role }: Props) {
             rows={3}
             value={notes}
             onChange={handleNotesChange}
-            placeholder="A quick note on the work you'd bring, or a link to your best piece"
+            placeholder={showTask ? "A quick note on the work you'd bring, or a link to your best piece" : 'A quick note on what you would bring to the role'}
             className={`${inputClass} h-auto py-3 resize-none`}
           />
           <p className={`font-body text-[0.7rem] text-right mt-1 ${notesWordCount >= MAX_NOTES_WORDS ? 'text-lp-error font-medium' : 'text-lp-faint'}`}>
