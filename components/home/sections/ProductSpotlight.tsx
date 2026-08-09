@@ -52,10 +52,16 @@ function SpotlightTV({ item }: { item: SpotlightItem }) {
   useEffect(() => {
     const vid = videoRef.current
     if (!vid) return
+    // Trigger play once on first entering view, then let the native `loop`
+    // attribute keep it going — repeatedly calling play()/pause() on every
+    // scroll in/out was causing the video to re-fetch its bytes on mobile
+    // browsers that evict paused video buffers, ballooning bandwidth.
     const io = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) vid.play().catch(() => {})
-        else vid.pause()
+        if (entry.isIntersecting) {
+          vid.play().catch(() => {})
+          io.disconnect()
+        }
       },
       { threshold: 0.6 }
     )

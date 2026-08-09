@@ -13,6 +13,7 @@ import { motion, AnimatePresence }           from 'framer-motion'
 import { ArrowRight }                        from 'lucide-react'
 import { HERO_SLIDES }                       from '@/config/products'
 import { heroUrl, heroUrlMobile, PLACEHOLDER_URL } from '@/lib/cloudinary'
+import { shimmerPlaceholder }                from '@/lib/imagePlaceholder'
 import { ROUTES }                            from '@/lib/constants'
 
 const SLIDE_DURATION = 3500  // ms between auto-advances
@@ -133,6 +134,8 @@ export function HeroSection() {
                 fill
                 priority={current === 0}
                 loading={current === 0 ? 'eager' : 'lazy'}
+                placeholder="blur"
+                blurDataURL={shimmerPlaceholder(900, 1600)}
                 className="object-cover block lg:hidden"
                 style={{ objectPosition: slide.mobileObjectPosition ?? 'center' }}
                 sizes="(max-width: 1023px) 100vw, 1px"
@@ -146,6 +149,8 @@ export function HeroSection() {
                 src={heroUrl(slide.desktopImage ?? slide.image) || PLACEHOLDER_URL}
                 alt={slide.headline ?? 'Louis Polo luggage'}
                 fill
+                placeholder="blur"
+                blurDataURL={shimmerPlaceholder(1600, 900)}
                 className="object-cover hidden lg:block"
                 style={{ objectPosition: slide.desktopObjectPosition ?? 'center' }}
                 sizes="(max-width: 1023px) 1px, 100vw"

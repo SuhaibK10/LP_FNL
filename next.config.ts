@@ -10,6 +10,13 @@ const nextConfig = {
     // the stopgap; this is the proper fix).
     loader:     'custom',
     loaderFile: './lib/cloudinaryLoader.ts',
+    // Next's default 16-entry width table (8 deviceSizes + 8 imageSizes) was
+    // fanning every product photo out into far more Cloudinary-derived
+    // variants than any layout on the site actually uses — each one billed
+    // as a separate transformation. Trimmed to the widths that match real
+    // breakpoints/crop presets in use (see lib/cloudinary.ts).
+    deviceSizes: [640, 828, 1080, 1280, 1920],
+    imageSizes:  [96, 128, 256, 384],
     remotePatterns: [
       {
         protocol: 'https',

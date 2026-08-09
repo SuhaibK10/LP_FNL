@@ -13,6 +13,7 @@ import { motion, AnimatePresence }  from 'framer-motion'
 import { ArrowRight, ShoppingBag, Check, Heart, Ruler, Star, ChevronDown } from 'lucide-react'
 import type { Product, ProductSize } from '@/types'
 import { cardUrl, PLACEHOLDER_URL } from '@/lib/cloudinary'
+import { shimmerPlaceholder }        from '@/lib/imagePlaceholder'
 import { formatPrice, swatchRingColor } from '@/lib/utils'
 import { ROUTES }                   from '@/lib/constants'
 import { saveShopScroll }           from '@/lib/scrollRestore'
@@ -117,6 +118,8 @@ export function ProductCard({ product }: ProductCardProps) {
             src={cardUrl(displayImage) || PLACEHOLDER_URL}
             alt={`${product.name} in ${variant.color}`}
             fill
+            placeholder="blur"
+            blurDataURL={shimmerPlaceholder(600, 800)}
             className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
             sizes="(max-width:640px) 50vw, (max-width:1024px) 33vw, 25vw"
           />

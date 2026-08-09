@@ -20,7 +20,7 @@ const CARE_COPY =
   'Wipe the shell with a soft, damp cloth, without solvents or abrasives. Clean wheels and the telescopic handle track occasionally to keep them running smoothly, and store your luggage dry, away from direct sunlight.'
 
 const SHIPPING_COPY =
-  'Shipping is free on every order, anywhere in India. Unused items in original packaging can be returned within 7 days of delivery. If anything arrives damaged, write to us within 48 hours with photos and we will replace it or refund you in full, return shipping included.'
+  'Shipping is free on every order, anywhere in India. Items are non-returnable. If anything arrives damaged, write to us within 48 hours with photos and we will replace it at no cost.'
 
 // ─── Accordion primitives ─────────────────────────────────────────────────────
 
