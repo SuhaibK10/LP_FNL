@@ -10,7 +10,6 @@ import { useState, useEffect, useRef } from 'react'
 import Image                        from 'next/image'
 import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
 import { pdpUrl, thumbUrl, PLACEHOLDER_URL } from '@/lib/cloudinary'
-import { shimmerPlaceholder }        from '@/lib/imagePlaceholder'
 
 const LONG_PRESS_MS      = 350  // hold duration before zoom kicks in
 const LONG_PRESS_SLOP_PX = 8    // movement past this before the timer fires reads as a swipe, not a hold
@@ -126,8 +125,6 @@ export function ImageGallery({ images, productName, activeColorIndex }: Props) {
               alt={`${productName}, view ${displayed + 1}`}
               fill
               priority={isFirstLoad.current}
-              placeholder="blur"
-              blurDataURL={shimmerPlaceholder(900, 1200)}
               draggable={false}
               className="object-cover object-center"
               style={{
