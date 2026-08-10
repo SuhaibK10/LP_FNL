@@ -2502,22 +2502,22 @@ export const PRODUCTS: Product[] = [
       {
         color:    'Silver',
         colorHex: '#BDBDBD',
-        sizes: [{ size: '9 Inch', price: 999, stock: 50 }],
+        sizes: [{ size: '9 Inch', price: 1199, stock: 50 }],
       },
       {
         color:    'Green',
         colorHex: '#2E7D32',
-        sizes: [{ size: '9 Inch', price: 999, stock: 50 }],
+        sizes: [{ size: '9 Inch', price: 1199, stock: 50 }],
       },
       {
         color:    'Blue',
         colorHex: '#1565C0',
-        sizes: [{ size: '9 Inch', price: 999, stock: 50 }],
+        sizes: [{ size: '9 Inch', price: 1199, stock: 50 }],
       },
       {
         color:    'Red',
         colorHex: '#C62828',
-        sizes: [{ size: '9 Inch', price: 999, stock: 50 }],
+        sizes: [{ size: '9 Inch', price: 1199, stock: 50 }],
       },
     ],
   },
