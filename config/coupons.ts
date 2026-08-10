@@ -38,6 +38,12 @@ export const COUPONS: Coupon[] = [
     discountPercent: 0.3,
     enabled:         true,
   },
+  {
+    code:            'NITIN15',
+    label:           '15% off your order',
+    discountPercent: 0.15,
+    enabled:         true,
+  },
 ]
 
 export function getCoupon(code: string): Coupon | undefined {
