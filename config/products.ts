@@ -2577,12 +2577,12 @@ export const PRODUCTS: Product[] = [
       {
         color:    'Blue',
         colorHex: '#1565C0',
-        sizes: [{ size: '17 Inch', price: 9899, stock: 30 }],
+        sizes: [{ size: '17 Inch', price: 3490, stock: 30 }],
       },
       {
         color:    'Red',
         colorHex: '#C62828',
-        sizes: [{ size: '17 Inch', price: 9899, stock: 30 }],
+        sizes: [{ size: '17 Inch', price: 3490, stock: 30 }],
       },
     ],
   },
