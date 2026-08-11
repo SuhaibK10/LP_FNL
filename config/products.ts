@@ -1965,7 +1965,7 @@ export const PRODUCTS: Product[] = [
           'Generated_Image_June_18_2026_-_1_53AM_Background_Removed_cblbni.png',
         ],
         sizes: [
-          { size: 'One Size', price: 4000, stock: 30 },
+          { size: 'One Size', price: 1999, stock: 30 },
         ],
       },
       {
@@ -1976,7 +1976,7 @@ export const PRODUCTS: Product[] = [
           '1C6A9677_Large_Background_Removed_w6duba.png',
         ],
         sizes: [
-          { size: 'One Size', price: 4000, stock: 30 },
+          { size: 'One Size', price: 1999, stock: 30 },
         ],
       },
       {
@@ -1987,7 +1987,7 @@ export const PRODUCTS: Product[] = [
           '1C6A9697_Background_Removed_Large_Background_Removed_fc0j9n.png',
         ],
         sizes: [
-          { size: 'One Size', price: 4000, stock: 30 },
+          { size: 'One Size', price: 1999, stock: 30 },
         ],
       },
       {
@@ -1998,7 +1998,7 @@ export const PRODUCTS: Product[] = [
           '1C6A9716_Background_Removed_r9rkn4.png',
         ],
         sizes: [
-          { size: 'One Size', price: 4000, stock: 30 },
+          { size: 'One Size', price: 1999, stock: 30 },
         ],
       },
 
