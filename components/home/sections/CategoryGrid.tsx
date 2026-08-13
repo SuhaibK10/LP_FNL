@@ -30,7 +30,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Trolley Bags',
     value:    'trolley',
-    image:    'Generated_Image_June_21_2026_-_2_58AM_xtfwjz.jpg',
+    image:    'https://res.cloudinary.com/dpepctqdj/image/upload/v1786653687/WhatsApp_Image_2026-08-09_at_23.20.47_1_yok8au.jpg',
     span:     '',
     textPos:  'bottom',
     imgClass: 'scale-125',
@@ -46,7 +46,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Backpacks',
     value:    'backpack',
-    image:    'https://res.cloudinary.com/deh394y0h/image/upload/v1785960669/WhatsApp_Image_2026-07-29_at_19.24.47_hbdyx7.jpg',
+    image:    'https://res.cloudinary.com/dpepctqdj/image/upload/v1786653687/WhatsApp_Image_2026-08-09_at_23.20.47_2_v5eiuw.jpg',
     span:     '',
     textPos:  'bottom',
     imgClass: '',
@@ -62,7 +62,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Duffle Bags',
     value:    'duffle',
-    image:    'Generated_Image_June_18_2026_-_1_53AM_jpxswo.jpg',
+    image:    'https://res.cloudinary.com/dpepctqdj/image/upload/v1786653687/WhatsApp_Image_2026-08-09_at_23.20.48_3_xg3v8j.jpg',
     span:     '',
     textPos:  'bottom',
     imgClass: '',
@@ -157,7 +157,7 @@ export function CategoryGrid() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={EAGER_VIEWPORT}
           transition={{ duration: 0.6 }}
-          className="mb-8 md:mb-10"
+          className="mb-8 md:mb-10 text-center"
         >
           <span className="lp-eyebrow">{tab === 'sale' ? 'Limited time only' : 'Find your bag'}</span>
           <h2 className="lp-heading-lg whitespace-nowrap text-[1.6rem] md:text-[2.25rem]">{tab === 'sale' ? 'Lowest Price Ever' : 'Something for Everyone'}</h2>
@@ -181,7 +181,7 @@ export function CategoryGrid() {
               >
                 <Link
                   href={`${ROUTES.shop}?category=${value}`}
-                  className="group relative block aspect-[4/5] md:aspect-square overflow-hidden bg-lp-border rounded-xl transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-lp-ink/15 active:scale-[0.985]"
+                  className="group relative block aspect-[4/5] md:aspect-square overflow-hidden bg-lp-border rounded-xl border-[3px] border-lp-border-strong transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-lp-ink/15 active:scale-[0.985]"
                 >
                   {/* Hover frame — ink border draws in */}
                   <span

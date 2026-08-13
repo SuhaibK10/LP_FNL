@@ -861,6 +861,213 @@ export const PRODUCTS: Product[] = [
       },
     ],
   },
+  // ── WorkGrid ─────────────────────────────────────────────────────────────
+  {
+    id: 'workgrid',
+    metaTitle: 'WorkGrid Executive Laptop Backpack',
+    metaDescription: 'WorkGrid is a structured laptop backpack for the commute and business travel: dedicated laptop and tablet compartments, quick-access storage, and a rear trolley sleeve.',
+    keywords: ['laptop backpack for men', 'business travel backpack', 'office commute backpack', 'executive laptop bag', 'backpack with trolley sleeve'],
+    name: 'WorkGrid',
+    slug: 'workgrid',
+    category: 'backpack',
+    hideSizeSelector: true,
+    description:
+      'A structured laptop backpack built for the commute, client meetings, and everything between. Dedicated compartments keep a laptop, tablet, and documents organised, with quick-access pockets and padded comfort for the long days.',
+    story: [
+      'WorkGrid is built around a working day that rarely stays in one place — the desk, the train, the client meeting, and back again. Structured compartments hold a laptop and tablet apart from documents and chargers, so nothing shifts or scratches on the move.',
+      'A front pocket and side storage keep transit cards, a phone, and a water bottle within reach, while padded adjustable straps, a breathable back panel, and a rear trolley sleeve carry it comfortably from the office to the airport gate.',
+    ],
+    highlights: [
+      {
+        heading: 'Structured for the workday',
+        body: 'Separate compartments keep a laptop, tablet, documents, and chargers organised and protected from each other.',
+      },
+      {
+        heading: 'Quick access on the move',
+        body: 'A front pocket and side storage hold what gets reached for most, without digging through the main compartment.',
+      },
+      {
+        heading: 'Comfortable, mile after mile',
+        body: 'Padded adjustable straps, a breathable back panel, and a rear trolley sleeve make WorkGrid as easy to wear on a platform as at a boarding gate.',
+      },
+    ],
+    specs: [
+      { label: 'Size',       value: '19″' },
+      { label: 'Interior',   value: 'Dedicated laptop and tablet compartments, document sleeves' },
+      { label: 'Storage',    value: 'Front pocket, side storage' },
+      { label: 'Carry',      value: 'Padded adjustable straps, soft top handle, rear trolley sleeve' },
+      { label: 'Back panel', value: 'Breathable cushioning' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    // TODO: no product photos yet — Suhaib will share Cloudinary links later.
+    // Add the public_id(s) or full URL(s) here once ready. Left as [''] and
+    // not [] — an empty array resolves to `undefined` in ProductCard's image
+    // lookup, which throws at render; '' resolves safely to a broken-image
+    // placeholder instead of crashing the card.
+    images: [''],
+    features: [
+      { label: 'Concealed pocket' },
+      { label: 'Comfortable fabric lining' },
+      { label: 'Wear resistant' },
+      { label: 'Lightweight build' },
+      { label: 'Smooth zipper' },
+      { label: 'Luggage mounting sleeve' },
+      { label: 'Impact resistant' },
+    ],
+    variants: [
+      {
+        color: 'Blue',
+        colorHex: '#1565C0',
+        images: [
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656422/FR2A5565_Large_Background_Removed_eixlxw.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656422/FR2A5566_Large_Background_Removed_qroh9f.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656422/FR2A5567_Large_Background_Removed_sq8tkp.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 9490, stock: 30 },
+        ],
+      },
+      {
+        color: 'Black',
+        colorHex: '#212121',
+        images: [
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656425/FR2A5574_Large_Background_Removed_pluqsm.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656424/FR2A5576_Large_Background_Removed_vkb81c.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656424/FR2A5575_Large_Background_Removed_mwpxkq.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656424/FR2A5573_Large_Background_Removed_oezfgf.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656426/FR2A5577_Large_Background_Removed_hrgoaw.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656428/FR2A5583_Large_Background_Removed_qbrcuh.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656427/FR2A5584_Large_Background_Removed_gasn6h.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656439/FR2A5597_Large_Background_Removed_a0fpmu.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656429/FR2A5586_Large_Background_Removed_nyhqyt.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656429/FR2A5585_Large_Background_Removed_vj4pnb.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 9490, stock: 30 },
+        ],
+      },
+      {
+        color: 'Grey',
+        colorHex: '#9E9E9E',
+        images: [
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656422/FR2A5569_Large_Background_Removed_hetz2r.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656423/FR2A5570_Large_Background_Removed_vizq8j.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656423/FR2A5571_Large_Background_Removed_fypwjm.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 9490, stock: 30 },
+        ],
+      },
+    ],
+  },
+  // ── Urban Pro Backpack ───────────────────────────────────────────────────
+  {
+    id: 'urban-pro-backpack',
+    metaTitle: 'Urban Pro Backpack — Minimal Design, Maximum Utility',
+    metaDescription: 'A sleek, structured backpack for modern workdays, travel, and everyday carry — dedicated laptop storage, front quick-access pocket, side pockets, and padded ergonomic straps.',
+    keywords: ['minimalist backpack for men', 'laptop backpack for daily use', 'travel backpack for work', 'unisex urban backpack', 'backpack for college and office'],
+    name: 'Urban Pro Backpack',
+    slug: 'urban-pro-backpack',
+    category: 'backpack',
+    hideSizeSelector: true,
+    description:
+      'A sleek, structured backpack designed for modern workdays, travel, and everyday carry. The Urban Pro Backpack combines a clean minimalist profile with practical organization, featuring a spacious main compartment, dedicated laptop storage, front quick-access pocket, side pockets, and padded ergonomic shoulder straps.',
+    story: [
+      'Built for the way you move. The Louis Polo Urban Pro Backpack brings together understated style and everyday functionality. Its streamlined silhouette keeps things refined, while the thoughtfully organized interior gives you room for your laptop, essentials, accessories, and daily carry.',
+      'The spacious main compartment opens wide for easy packing, while the dedicated laptop section keeps your device securely separated. A front zip pocket provides quick access to smaller essentials, and the side pockets are ideal for a bottle or items you need within reach.',
+      'Finished with padded shoulder straps, breathable back cushioning, a structured top handle, and durable zippers, the Urban Pro is designed for commutes, campus, business travel, and everyday city life.',
+    ],
+    highlights: [
+      {
+        heading: 'A laptop section that stays separate',
+        body: 'The dedicated laptop compartment keeps your device secure and away from everything else you are carrying.',
+      },
+      {
+        heading: 'Everything within reach',
+        body: 'A front zip pocket and dual side pockets hold small essentials and a bottle without opening the main compartment.',
+      },
+      {
+        heading: 'Comfortable for the whole day',
+        body: 'Padded ergonomic shoulder straps, a breathable back panel, and a reinforced top handle carry it from the commute to campus to the boarding gate.',
+      },
+    ],
+    specs: [
+      { label: 'Interior',   value: 'Dedicated laptop compartment, spacious main compartment' },
+      { label: 'Storage',    value: 'Front quick-access zip pocket, dual side pockets' },
+      { label: 'Carry',      value: 'Padded ergonomic shoulder straps, reinforced top handle' },
+      { label: 'Back panel', value: 'Padded, breathable cushioning' },
+      { label: 'Fit',        value: 'Unisex everyday styling' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    // TODO: no product photos yet — Suhaib will share Cloudinary links later.
+    // Add the public_id(s) or full URL(s) here once ready. Left as [''] and
+    // not [] — an empty array resolves to `undefined` in ProductCard's image
+    // lookup, which throws at render; '' resolves safely to a broken-image
+    // placeholder instead of crashing the card.
+    images: [''],
+    features: [
+      { label: 'Dedicated laptop compartment' },
+      { label: 'Spacious main compartment' },
+      { label: 'Front quick-access zip pocket' },
+      { label: 'Dual side pockets' },
+      { label: 'Padded, breathable back panel' },
+      { label: 'Ergonomic padded shoulder straps' },
+      { label: 'Reinforced top carry handle' },
+      { label: 'Premium minimalist design' },
+      { label: 'Unisex everyday styling' },
+      { label: 'Suitable for work, college & travel' },
+    ],
+    variants: [
+      {
+        color: 'Sage Mist',
+        colorHex: '#B4BCAC',
+        images: [
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657051/WhatsApp_Image_2026-08-13_at_17.36.56_6_Background_Removed_xqvas9.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657049/WhatsApp_Image_2026-08-13_at_17.36.56_3_Background_Removed_e50zs4.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657055/WhatsApp_Image_2026-08-13_at_17.36.57_4_Background_Removed_it5ipz.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 2990, stock: 30 },
+        ],
+      },
+      {
+        color: 'Midnight Navy',
+        colorHex: '#363C4A',
+        images: [
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657048/WhatsApp_Image_2026-08-13_at_17.36.55_4_Background_Removed_icagcv.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 2990, stock: 30 },
+        ],
+      },
+      {
+        color: 'Ice Blue',
+        colorHex: '#B7C4D1',
+        images: [
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657048/WhatsApp_Image_2026-08-13_at_17.36.55_2_Background_Removed_kwhuao.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657048/WhatsApp_Image_2026-08-13_at_17.36_Background_Removed.56_hwqsxh.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657052/WhatsApp_Image_2026-08-13_at_17.36.56_5_Background_Removed_zgagnj.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 2990, stock: 30 },
+        ],
+      },
+      {
+        color: 'Stone Grey',
+        colorHex: '#C7C7C7',
+        images: [
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657053/WhatsApp_Image_2026-08-13_at_17.36.57_1_Background_Removed_ygbfpd.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657054/WhatsApp_Image_2026-08-13_at_17.36.57_2_Background_Removed_yge06u.png',
+          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657049/WhatsApp_Image_2026-08-13_at_17.36.55_3_Background_Removed_j0yqla.png',
+        ],
+        sizes: [
+          { size: 'One Size', price: 2990, stock: 30 },
+        ],
+      },
+    ],
+  },
   // ── VeeZoom ─────────────────────────────────────────────────────────────
   {
     id: 'veezoom',
