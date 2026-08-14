@@ -12,7 +12,7 @@
 // instead; each family's `matches` list is every literal `variant.color`
 // string on the shop page that should count as "in" this family. Add new
 // colors to the matching family's list as new products/colors are added.
-export const SHOP_BY_COLOR_PRICE_HOME_ENABLED = true
+export const SHOP_BY_COLOR_PRICE_HOME_ENABLED = false
 
 export interface ColorFamily {
   label:   string
