@@ -469,99 +469,6 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
-  // ── Vertex Ergonomic BackPack ────────────────────────────────────────────
-  {
-    id: 'vertex-ergonomic-backpack',
-    metaTitle: 'Louis Polo Vertex Ergonomic BackPack with Laptop Compartment & USB Port',
-    metaDescription: 'Stay organized wherever life takes you with the Louis Polo Vertex Ergonomic BackPack. Featuring a dedicated laptop compartment, USB charging port, trolley sleeve, ergonomic padded straps, hidden security pocket, and spacious multi-compartment storage, it\'s the perfect backpack for office, college, business travel, and everyday commuting.',
-    keywords: ['business travel backpack', 'laptop backpack with usb charging port', 'backpack with trolley sleeve', 'water resistant laptop backpack', 'office commute backpack'],
-    name: 'Vertex Ergonomic BackPack',
-    slug: 'vertex-ergonomic-backpack',
-    category: 'backpack',
-    isFeatured: true,
-    hideSizeSelector: true,
-    saleExclusive: true,
-    mrp: 4999,
-    description:
-      'Louis Polo Vertex Ergonomic BackPack is a premium business and travel backpack featuring a dedicated laptop compartment, USB charging port, trolley sleeve, multiple organizer pockets, ergonomic comfort, and spacious storage for everyday professionals and travelers.',
-    story: [
-      'Designed with intelligently organized compartments, a dedicated padded laptop sleeve, spacious storage, and quick-access pockets, Vertex Ergonomic keeps your essentials secure and within reach. Premium water-resistant fabric, ergonomic padded shoulder straps, breathable back support, USB charging port, luggage trolley sleeve, and durable branded hardware make it the perfect companion for work, travel, college, and daily commuting.',
-      'Whether you\'re heading to the office, boarding a flight, or navigating your daily routine, the Vertex Ergonomic delivers comfort, organization, and timeless Louis Polo style.',
-    ],
-    highlights: [
-      {
-        heading: 'Smart organization, premium comfort',
-        body: 'Every compartment has a purpose, from the dedicated laptop bay to the hidden security pocket, so the pack works as hard as you do.',
-      },
-      {
-        heading: 'Built for every journey',
-        body: 'A padded 15.6" laptop sleeve, USB charging port, and trolley sleeve mean it moves as easily through an airport as it does a daily commute.',
-      },
-      {
-        heading: 'All-day comfort',
-        body: 'Ergonomic padded straps, a breathable air-mesh back panel, and an adjustable chest strap keep the load comfortable from front door to desk.',
-      },
-    ],
-    specs: [
-      { label: 'Laptop Bay',     value: 'Fits up to 15.6" laptop' },
-      { label: 'Material',       value: 'Premium water-resistant polyester' },
-      { label: 'Compartments',   value: 'Multi-compartment organizer design' },
-      { label: 'USB Port',       value: 'Built-in charging port' },
-      { label: 'Back Panel',     value: 'Breathable air-mesh' },
-      { label: 'Straps',         value: 'Ergonomic padded · adjustable chest strap' },
-      { label: 'Trolley Sleeve', value: 'Yes — suitcase attachment' },
-    ],
-    warranty:
-      '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: [
-      'WhatsApp_Image_2026-07-18_at_13.18.30_6_rhjdsf.jpg',
-    ],
-    features: [
-      { label: 'Dedicated 15.6" laptop compartment' },
-      { label: 'Built-in USB charging port' },
-      { label: 'Ergonomic padded shoulder straps' },
-      { label: 'Breathable air-mesh back panel' },
-      { label: 'Adjustable chest support strap' },
-      { label: 'Hidden security pocket' },
-      { label: 'Trolley sleeve for suitcase attachment' },
-      { label: 'Premium branded zippers' },
-    ],
-    variants: [
-      {
-        color: 'Graphite Black',
-        colorHex: '#484848',
-        images: [
-          'WhatsApp_Image_2026-07-18_at_13.18.30_6_rhjdsf.jpg',
-          'WhatsApp_Image_2026-07-18_at_13.18.31_1_sfafua.jpg',
-          'WhatsApp_Image_2026-07-18_at_13.18.31_2_m6rmb4.jpg',
-          'WhatsApp_Image_2026-07-18_at_13.18.32_1_vp2spx.jpg',
-          'WhatsApp_Image_2026-07-18_at_13.18.35_1_nmpuwv.jpg',
-          'WhatsApp_Image_2026-07-18_at_13.18.36_wz5ij5.jpg',
-          'WhatsApp_Image_2026-07-18_at_13.18.36_1_bo22vq.jpg',
-          'WhatsApp_Image_2026-07-18_at_13.18.34_2_ezi0zm.jpg',
-          'WhatsApp_Image_2026-07-18_at_13.18.37_1_qwgwdb.jpg',
-          'WhatsApp_Image_2026-07-18_at_13.18.34_1_mkbvjv.jpg',
-        ],
-        sizes: [
-          { size: 'One Size', price: 4599, stock: 30 },
-        ],
-      },
-      {
-        color: 'Midnight Navy',
-        colorHex: '#2E4765',
-        images: [
-          'WhatsApp_Image_2026-07-18_at_13.18.29_4_lj8iil.jpg',
-          'WhatsApp_Image_2026-07-18_at_13.18.30_3_nzcbx4.jpg',
-          'WhatsApp_Image_2026-07-18_at_13.18.30_4_svceuk.jpg',
-          'WhatsApp_Image_2026-07-18_at_13.18.30_5_duagv7.jpg',
-        ],
-        sizes: [
-          { size: 'One Size', price: 4599, stock: 30 },
-        ],
-      },
-    ],
-  },
-
   // ── AeroVault ────────────────────────────────────────────────────────────
   {
     id: 'aerovault',
@@ -766,7 +673,7 @@ export const PRODUCTS: Product[] = [
     metaTitle: 'MetroGrid Executive Laptop Backpack',
     metaDescription: 'MetroGrid pairs professional styling with practical organisation: dedicated laptop and tablet compartments, quick-access storage, and a rear trolley sleeve for business travel.',
     keywords: ['executive laptop backpack', 'business travel backpack', 'organizer backpack for laptop', 'professional backpack india', 'commuter backpack with trolley sleeve'],
-    name: 'MetroGrid',
+    name: 'MetroGrid Ergonomic BackPack',
     slug: 'metrogrid',
     category: 'backpack',
     hideSizeSelector: true,
@@ -867,7 +774,7 @@ export const PRODUCTS: Product[] = [
     metaTitle: 'WorkGrid Executive Laptop Backpack',
     metaDescription: 'WorkGrid is a structured laptop backpack for the commute and business travel: dedicated laptop and tablet compartments, quick-access storage, and a rear trolley sleeve.',
     keywords: ['laptop backpack for men', 'business travel backpack', 'office commute backpack', 'executive laptop bag', 'backpack with trolley sleeve'],
-    name: 'WorkGrid',
+    name: 'WorkGrid Ergonomic BackPack',
     slug: 'workgrid',
     category: 'backpack',
     hideSizeSelector: true,
@@ -967,7 +874,7 @@ export const PRODUCTS: Product[] = [
     metaTitle: 'Urban Pro Backpack — Minimal Design, Maximum Utility',
     metaDescription: 'A sleek, structured backpack for modern workdays, travel, and everyday carry — dedicated laptop storage, front quick-access pocket, side pockets, and padded ergonomic straps.',
     keywords: ['minimalist backpack for men', 'laptop backpack for daily use', 'travel backpack for work', 'unisex urban backpack', 'backpack for college and office'],
-    name: 'Urban Pro Backpack',
+    name: 'Urban Pro Ergonomic BackPack',
     slug: 'urban-pro-backpack',
     category: 'backpack',
     hideSizeSelector: true,
