@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Heart, ArrowRight, ShoppingBag } from 'lucide-react'
 import { useWishlistStore }        from '@/store/wishlistStore'
 import { PRODUCTS }                from '@/config/products'
-import { cardUrl, PLACEHOLDER_URL } from '@/lib/cloudinary'
+import { cardUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 import { formatPrice }             from '@/lib/utils'
 import { ROUTES }                  from '@/lib/constants'
 

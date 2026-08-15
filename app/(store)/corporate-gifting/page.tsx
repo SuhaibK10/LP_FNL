@@ -7,7 +7,7 @@ import Image                     from 'next/image'
 import { Briefcase, Users, Gift, Palette, Check } from 'lucide-react'
 import { getProductBySlug }      from '@/config/products'
 import { OEM_BRANDS }            from '@/config/oemBrands'
-import { cardUrl }               from '@/lib/cloudinary'
+import { cardUrl }               from '@/lib/cloudflareImages'
 import { CorporateEnquiryForm }  from '@/components/corporate/CorporateEnquiryForm'
 
 export const metadata: Metadata = {

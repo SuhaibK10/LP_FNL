@@ -12,7 +12,7 @@ import Image                           from 'next/image'
 import { motion }                      from 'framer-motion'
 import { MapPin }                      from 'lucide-react'
 import { EXHIBITIONS }                 from '@/config/exhibitions'
-import { expoUrl, cld, PLACEHOLDER_URL } from '@/lib/cloudinary'
+import { expoUrl, cld, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 import { cn }                          from '@/lib/utils'
 import { staggerChildren, fadeUp, VIEWPORT } from '@/lib/animations'
 import { SwipeHint }                   from '@/components/ui/SwipeHint'
@@ -100,7 +100,7 @@ export function ExhibitionGallery() {
               <Image
                 src={
                   photo.fit === 'pad'
-                    ? cld(photo.publicId, 'f_auto,q_auto,w_1600,h_2133,c_pad,b_rgb:1A1714')
+                    ? cld(photo.publicId, 'w=1600,h=2133,fit=pad,background=%231A1714')
                     : expoUrl(photo.publicId) || PLACEHOLDER_URL
                 }
                 alt={photo.alt}

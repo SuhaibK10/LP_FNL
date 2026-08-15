@@ -6,7 +6,7 @@ import { Search, X, ArrowRight }        from 'lucide-react'
 import Image                            from 'next/image'
 import Link                             from 'next/link'
 import { PRODUCTS }                     from '@/config/products'
-import { thumbUrl, PLACEHOLDER_URL }    from '@/lib/cloudinary'
+import { thumbUrl, PLACEHOLDER_URL }    from '@/lib/cloudflareImages'
 import { formatPrice }                  from '@/lib/utils'
 import { ROUTES }                       from '@/lib/constants'
 

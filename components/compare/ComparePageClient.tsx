@@ -14,7 +14,7 @@ import Image                from 'next/image'
 import { ChevronDown }      from 'lucide-react'
 import { PRODUCTS, getProductBySlug } from '@/config/products'
 import { COMPARE_ROWS, minPrice }     from '@/lib/compare'
-import { cardUrl, PLACEHOLDER_URL }   from '@/lib/cloudinary'
+import { cardUrl, PLACEHOLDER_URL }   from '@/lib/cloudflareImages'
 import { formatPrice }      from '@/lib/utils'
 import { ROUTES }           from '@/lib/constants'
 

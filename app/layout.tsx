@@ -88,8 +88,12 @@ export default function RootLayout({
     <html lang="en" className={`${lora.variable} ${jakarta.variable}`}>
       <head>
         {/* Opens the connection to the image CDN before the first photo is
-            requested, so DNS + TLS handshake isn't on the critical path. */}
-        <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="" />
+            requested, so DNS + TLS handshake isn't on the critical path.
+            imagedelivery.net serves every image on every page; Cloudinary
+            now only serves the one homepage video, so it's a lower-priority
+            second hint rather than the primary one. */}
+        <link rel="preconnect" href="https://imagedelivery.net" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://imagedelivery.net" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
       </head>
       <body className="bg-[var(--color-lp-porcelain)] text-[var(--color-lp-ink)] font-body antialiased">

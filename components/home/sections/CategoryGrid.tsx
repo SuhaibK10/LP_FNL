@@ -13,7 +13,7 @@ import { motion }                            from 'framer-motion'
 import { ArrowUpRight, LayoutGrid }          from 'lucide-react'
 import { ROUTES }                            from '@/lib/constants'
 import { SALE_PRODUCTS }                     from '@/config/products'
-import { categoryUrl, PLACEHOLDER_URL }      from '@/lib/cloudinary'
+import { categoryUrl, PLACEHOLDER_URL }      from '@/lib/cloudflareImages'
 import { staggerChildren, scaleUp } from '@/lib/animations'
 import { ProductCard }                       from '@/components/shop/ProductCard'
 import { SaleCountdown }                     from '@/components/ui/SaleCountdown'
@@ -30,7 +30,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Trolley Bags',
     value:    'trolley',
-    image:    'https://res.cloudinary.com/dpepctqdj/image/upload/v1786653687/WhatsApp_Image_2026-08-09_at_23.20.47_1_yok8au.jpg',
+    image:    'dfe7f28d-50e2-4a8a-7faa-467641a17700',
     span:     '',
     textPos:  'bottom',
     imgClass: 'scale-125',
@@ -38,7 +38,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Sets',
     value:    'set',
-    image:    'https://res.cloudinary.com/dpepctqdj/image/upload/v1786798628/WhatsApp_Image_2026-08-14_at_16.08.52_siq1be.jpg',
+    image:    'a3258fb4-0ba7-4f7b-e27c-d20ba9f8ae00',
     span:     '',
     textPos:  'bottom',
     imgClass: 'scale-125',
@@ -46,7 +46,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Backpacks',
     value:    'backpack',
-    image:    'https://res.cloudinary.com/dpepctqdj/image/upload/v1786653687/WhatsApp_Image_2026-08-09_at_23.20.47_2_v5eiuw.jpg',
+    image:    '04fcc97f-08b5-4279-f2fc-753aed03be00',
     span:     '',
     textPos:  'bottom',
     imgClass: '',
@@ -54,7 +54,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Office Bags',
     value:    'office-bag',
-    image:    'Generated_Image_June_18_2026_-_2_56AM_fubmpz.jpg',
+    image:    '0baab19f-10cd-4c53-2c53-2041976f6c00',
     span:     '',
     textPos:  'bottom',
     imgClass: '',
@@ -62,7 +62,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Duffle Bags',
     value:    'duffle',
-    image:    'https://res.cloudinary.com/dpepctqdj/image/upload/v1786653687/WhatsApp_Image_2026-08-09_at_23.20.48_3_xg3v8j.jpg',
+    image:    'ae436b7a-1f40-440f-fa9b-233399dfa000',
     span:     '',
     textPos:  'bottom',
     imgClass: '',
@@ -70,7 +70,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Vanity Cases',
     value:    'vanity',
-    image:    'Screenshot_2026-06-18_at_3.35.17_AM_cu1ffy.png',
+    image:    '9d7374c7-5e18-4d0c-61a5-3ce33a642000',
     span:     '',
     textPos:  'bottom',
     imgClass: '',

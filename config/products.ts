@@ -22,8 +22,8 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     // Hosted on a separate Cloudinary account (deh394y0h) — the primary
     // account's credit limit is exhausted.
-    image:        'https://res.cloudinary.com/deh394y0h/image/upload/v1786211609/WhatsApp_Image_2026-08-08_at_18.52.57_clxg7q.jpg',
-    desktopImage: 'https://res.cloudinary.com/deh394y0h/image/upload/v1786212170/d_a2smtk.png',
+    image:        '92de1fa2-6ccf-413c-5391-3e14caee1a00',
+    desktopImage: '6eec31b5-83e8-4397-4f60-71c6d181a100',
     headline:  '',
     textStyle: 'shadow',
     textSize:  'lg',
@@ -39,43 +39,43 @@ export const HERO_SLIDES: HeroSlide[] = [
   //   textSize:  'lg',
   // },
   {
-    image:     'fnl_zlkyo5.png',
+    image:     '0faae779-3755-43f5-147d-cd2b52ecc600',
     headline:  '',
-    desktopImage: 'desktopfnl_nxmol9.png',
+    desktopImage: '75865faa-c138-437c-ab26-8093e8267f00',
     textStyle: 'shadow',
     textSize:  'lg',
   },
   {
-    image:     'heroLast_dkzwim.jpg',
+    image:     '71160506-0661-4fdd-b227-57c6347fa800',
     headline:  'Made for the Long Haul.',
-    desktopImage: 'desk1_Large_yhjrpo.jpg',
+    desktopImage: '12b84a26-92c8-45c1-cc9b-29737322cf00',
     textStyle: 'shadow',
     textSize:  'lg',
   },
   {
-    image:     'hero12_h3ptde.jpg',
+    image:     '9ee3e065-ec2f-4ff8-e461-36ea187a7100',
     headline:  'Every Trip, Covered',
-    desktopImage: 'desk5_w5zevy.jpg',
+    desktopImage: 'e28adb2e-8627-4f6a-8b8f-f86d869b1600',
     textStyle: 'shadow',
   },
   {
-    image:       'hero123_qezgc2.jpg',
+    image:       '01837740-df32-4baf-e893-0927ee69a600',
     headline:    'Bold in Every Color',
-    desktopImage: 'deskt_hpz4fe.jpg',
+    desktopImage: 'f6690616-23fe-4e36-47a5-a0e343b03700',
     textStyle:   'shadow',
     textOffset:  1,
   },
   {
-    image:        'duffle_kgw8qx.jpg',
+    image:        '706ce5b3-c944-4a83-db0d-74f78dac5e00',
     headline:     'Pack Light. Go Far.',
-    desktopImage: 'desk2_cu4kp5.jpg',
+    desktopImage: 'c23a9462-1d40-45d0-7e4a-0e9e6b1afd00',
     textStyle:    'shadow',
     textPosition: 'top',
   },
   {
-    image:        'Generated_Image_June_19_2026_-_2_36AM_r9titc.jpg',
+    image:        '2c72a121-2b97-41dc-eae9-c6734b695200',
     headline:     'The Showstopper: AeroSmart 3in1',
-    desktopImage: 'Generated_Image_June_22_2026_-_8_19PM_infm85.jpg',
+    desktopImage: '4ec6a2be-c5d3-4ac1-983d-00d3958fff00',
     textStyle:    'light',
     textSize:     'lg',
     textPosition: 'top',
@@ -140,7 +140,7 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785876268/d_Background_Removed_e6r3q6.png',
+      '71bcef0c-eaf5-4466-fec4-4f5fdc357900',
     ],
     features: [
       { label: 'Holds 4 to 5 formal shirts' },
@@ -215,9 +215,9 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      '1C6A9455_Large_Background_Removed_xydl9r',
-      '1C6A9495_Background_Removed_czmfug',
-      'IMG_2420_Large_Background_Removed_ed2pt3.png',
+      'cce20161-5cb9-44aa-8c29-3a1251e92d00',
+      '5dec047a-a87f-48d3-5ea4-29abd19cab00',
+      'f5e08ff5-f9ff-4315-ccf0-0957d5437500',
     ],
     features: [
       { label: '3-in-1 compartments' },
@@ -235,11 +235,11 @@ export const PRODUCTS: Product[] = [
         bodyHex: '#4A4945',
         lowStock: true,
         images: [
-          '1C6A9455_Large_Background_Removed_xydl9r',
-          'louis-polo-aerosmart-grey-01-1782298690605-1782298690605_Background_Removed_e9vnew.png',
-          'louis-polo-aerosmart-grey-02-1782298691894-1782298691894_Background_Removed_pyx3pk.png',
-          'louis-polo-aerosmart-grey-04-1782298694121-1782298694121_Background_Removed_svihmw.png',
-          'louis-polo-aerosmart-grey-03-1782298692939-1782298692939_Background_Removed_lzdcwx.png',
+          'cce20161-5cb9-44aa-8c29-3a1251e92d00',
+          'b68fe362-f1e5-4d94-8e75-c3fe3c208800',
+          'dab5cd11-d80c-498a-f842-0f58fa656d00',
+          'c3350c15-2dab-46ca-047a-1912fd6df800',
+          'ca620cb0-e1ef-48b0-1ddd-f37d55dccb00',
         ],
         sizes: [
           { size: 'Cabin', price: 5999, stock: 25, sku: '8906206840001-Y-20' },
@@ -250,11 +250,11 @@ export const PRODUCTS: Product[] = [
         colorHex: '#C0392B',
         bodyHex: '#3E3E3E',
         images: [
-          '1C6A9495_Background_Removed_czmfug',
-          'louis-polo-aerosmart-metallic-black-01-1782296233192-1782296233192_Background_Removed_czuh6q.png',
-          'louis-polo-aerosmart-metallic-black-02-1782296234066-1782296234066_Background_Removed_lgeuvl.png',
-          'louis-polo-aerosmart-metallic-black-04-1782296235914-1782296235914_Background_Removed_ikb6py.png',
-          'louis-polo-aerosmart-metallic-black-03-1782296235017-1782296235017_Background_Removed_gqhd4h.png',
+          '5dec047a-a87f-48d3-5ea4-29abd19cab00',
+          'b9dc5c11-9997-4ed1-8cbf-156fc8b8cf00',
+          'b8b0c4f9-6b7f-457f-3b62-49fd4001c200',
+          '2fb08478-b2b5-465a-9735-9105604e5f00',
+          '0283bd8e-a5b2-411d-d370-a43838629500',
         ],
         sizes: [
           { size: 'Cabin', price: 5999, stock: 40, sku: '8906206840001-R-20' },
@@ -266,11 +266,11 @@ export const PRODUCTS: Product[] = [
         bodyHex: '#BDBDB6',
         lowStock: true,
         images: [
-          'IMG_2420_Large_Background_Removed_ed2pt3.png',
-          'louis-polo-aerosmart-silver-grey-10-1782298610328-1782298610328_Background_Removed_i7catb.png',
-          'louis-polo-aerosmart-silver-grey-01-1782298602289-1782298602289-2_Background_Removed_egycpu.png',
-          'louis-polo-aerosmart-silver-grey-04-1782298607083-1782298607083_Background_Removed_hgybgk.png',
-          'louis-polo-aerosmart-silver-grey-08-1782298609272-1782298609272-2_Background_Removed_tyjqzw.png',
+          'f5e08ff5-f9ff-4315-ccf0-0957d5437500',
+          '2cdb284d-9af8-4d6c-f0ea-73bf4bf9e500',
+          '797a8d85-c2a9-49a8-15c8-4a633d2aa700',
+          '54d5dd26-87a5-4ebe-3792-95af17bf2800',
+          'a5f3728c-0a8d-472e-3141-02b571377c00',
         ],
         sizes: [
           { size: 'Cabin', price: 5999, stock: 35, sku: '8906206840001-T-20' },
@@ -283,13 +283,13 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785773619/WhatsApp_Image_2026-07-31_at_21.52_Background_Removed.06_pnabuc.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785773619/WhatsApp_Image_2026-07-31_at_21.52.04_2_Background_Removed_s1cq71.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785773619/WhatsApp_Image_2026-07-31_at_21.52.05_1_Background_Removed_uwxy8f.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785773619/WhatsApp_Image_2026-07-31_at_21.52.06_1_Background_Removed_ko1ou6.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785773618/WhatsApp_Image_2026-07-31_at_21.52_Background_Removed.05_eh2fc9.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785773618/WhatsApp_Image_2026-07-31_at_21.52_Background_Removed.04_fddkl9.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785773619/WhatsApp_Image_2026-07-31_at_21.52.04_1_Background_Removed_qbni1l.png',
+          '9bac92e3-74a8-42ef-d579-d01830e80a00',
+          '9eff1fe4-2561-496d-5734-2546f9ceb200',
+          '9aac96ca-d8a7-4f2c-6653-9a2d88ce4a00',
+          '3ad12034-30af-463a-a13f-8a9b0cf02800',
+          '7da251d0-330a-481b-5eda-f0638dc4e400',
+          'abe43a32-a61c-4970-4294-7d344888fe00',
+          'afc1d4d5-338a-42b5-890b-aff8e3c3bd00',
         ],
         sizes: [
           { size: 'Cabin', price: 5999, stock: 30 },
@@ -351,9 +351,9 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      'IMG_2853_Background_Removed_bezyzs',
-      '1C6A9363_Large_Background_Removed_ajflwe.png',
-      '1-9_Background_Removed_q3kvwv.png',
+      'f3a7cf1c-9113-4853-4d2d-5a2096b9fd00',
+      'f1babd8d-7612-4504-d53f-8fec0cdb9900',
+      '08e57a49-abcf-4615-4fdd-78b15cd72a00',
       
     ],
     features: [
@@ -454,13 +454,13 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946089/1_Large_Background_Removed_sy58d8.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946089/3_Large_Background_Removed_ocznxp.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946089/2_Large_Background_Removed_aysf8s.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946089/4_Large_Background_Removed_fvsul3.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946091/5_Large_Background_Removed_hsbqkc.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946090/8_Large_Background_Removed_s6pqdo.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785946091/6_Large_Background_Removed_f0whfj.png',
+          '8b09e66c-ff43-4536-ca92-aeabf1c48600',
+          '67ed6fe5-32cc-4d7d-bd29-b196ed533100',
+          '4f727a22-c567-48b0-24be-de395e71df00',
+          '7b1f1555-66b3-49af-1504-6803a549e800',
+          '28ab74e0-06b3-4c43-53e6-757518696f00',
+          'd1fc39cb-cc88-459c-4749-9fc091c7bc00',
+          '54fb6c01-fdd4-442b-6ba3-3d381794c700',
         ],
         sizes: [
           { size: 'Cabin', price: 2990, stock: 30 },
@@ -532,9 +532,9 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875220/FR2A5602_Large_Background_Removed_hwkqns.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875220/FR2A5603_Large_Background_Removed_te4qv9.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875220/FR2A5604_Large_Background_Removed_ng99a1.png',
+          '51fd24f1-7e9b-47ad-bb8c-4f7aa6c17000',
+          'ffb6ea27-cb53-4a4d-9d1a-df63f83e2800',
+          '17cc8ba4-8012-4f87-3fe8-5b2d218cf800',
         ],
         sizes: [
           { size: 'One Size', price: 4500, stock: 30 },
@@ -546,11 +546,11 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875221/FR2A5611_Large_Background_Removed_r3gorn.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875221/FR2A5612_Large_Background_Removed_tb7xrq.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875224/FR2A5613_Large_Background_Removed_hr3487.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875222/FR2A5615_Large_Background_Removed_l2fzfd.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875227/FR2A5633_Large_Background_Removed_ualnav.png',
+          '6ea33c4f-b82e-4894-f322-7f5b49d41700',
+          '9ec1ded8-7a3d-4a31-5189-83a00ad8d900',
+          '63d690dc-7fce-4b89-0510-73d6252b0f00',
+          '76246c0d-eb87-4c93-85de-e8e725980300',
+          '4db9fcc9-fcff-47c0-e5e2-2287ca8e6a00',
         ],
         sizes: [
           { size: 'One Size', price: 4500, stock: 30 },
@@ -563,9 +563,9 @@ export const PRODUCTS: Product[] = [
         // account's credit limit is exhausted. Intentionally the same shots
         // as the Black variant.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875220/FR2A5606_Large_Background_Removed_i20p9y.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875221/FR2A5607_Large_Background_Removed_r5blae.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785875221/FR2A5608_Large_Background_Removed_jtxbqm.png',
+          '8b7c927d-4e8d-4bf6-51c4-ed7a7e9f0100',
+          'e1484125-65e4-4dcd-b103-67cfd1c8ed00',
+          '293576b6-5990-4a58-6a18-db70626a5e00',
         ],
         sizes: [
           { size: 'One Size', price: 4500, stock: 30 },
@@ -638,9 +638,9 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950128/FR2A5521_Large_Background_Removed_elmyaq.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950129/FR2A5524_Large_Background_Removed_fq7zhm.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950129/FR2A5525_Large_Background_Removed_gsk8x0.png',
+          '8280bee0-71a1-407a-803a-6d38c780a000',
+          'd83fd9d1-372c-43ee-a94c-544215083c00',
+          '5b59d0b7-8d25-459c-666d-a3956a3f3000',
         ],
         sizes: [
           { size: 'One Size', price: 4599, stock: 30 },
@@ -652,13 +652,13 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950211/FR2A5528_Large_Background_Removed_xjpttn.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950212/FR2A5530_Large_Background_Removed_oazd9o.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950213/FR2A5531_Large_Background_Removed_x2uopi.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950212/FR2A5529_Large_Background_Removed_fkh93s.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950224/FR2A5551_Large_Background_Removed_bucrst.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950248/FR2A5552_Large_Background_Removed_tr8jsz.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785950252/FR2A5558_Large_Background_Removed_fmmj4x.png',
+          'e8c4e84b-ad13-466d-12a5-847fe9e94300',
+          'a9ec0e95-709d-4787-0d71-a11f1c1a3700',
+          '83946098-ce94-4974-21e3-45439fee7d00',
+          '91447336-fb91-4874-8724-b9a0974d6100',
+          '3891c5f8-7d21-498f-2fb8-91b77bdbf700',
+          'df74da92-c4cd-461d-808a-ae5e6dba5000',
+          'f9f91d77-07ed-4398-efa5-25da511c7a00',
         ],
         sizes: [
           { size: 'One Size', price: 4599, stock: 30 },
@@ -727,9 +727,9 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032270/FR2A5433_Large_Background_Removed_rjrgi0.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032268/FR2A5437_Large_Background_Removed_xnuekm.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032267/FR2A5435_Large_Background_Removed_tl6e9u.png',
+          '17041633-e200-49d9-1d86-2f1f6f6ba800',
+          'd9b76467-0e4e-44a3-6eef-18eb74d2cf00',
+          '8321af3d-25d7-4863-d287-f0ae6a74f300',
         ],
         sizes: [
           { size: 'One Size', price: 4599, stock: 30 },
@@ -741,12 +741,12 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032269/FR2A5446_Large_Background_Removed_kyvy3e.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032269/FR2A5445_Large_Background_Removed_pyi47z.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032269/FR2A5448_Large_Background_Removed_ajea8y.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032270/FR2A5450_Large_Background_Removed_tjhqy4.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032272/FR2A5449_Large_Background_Removed_xhenxr.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032271/FR2A5455_Large_Background_Removed_rpuxpb.png',
+          'd9bce061-5b02-46e9-7270-78a105f69100',
+          '9bf9de59-d569-47bf-c5fb-16d1a16df000',
+          '47a8c3dd-c89b-4d1c-075b-234ed9f8af00',
+          'a6ef3e72-fbef-47ba-80ec-aeca8218e200',
+          'c8eabe58-0641-4e9d-f291-b4175c215300',
+          'fb84a8df-4295-4018-f286-a97a3ae64f00',
         ],
         sizes: [
           { size: 'One Size', price: 4599, stock: 30 },
@@ -758,9 +758,9 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032268/FR2A5440_Large_Background_Removed_p2mpyy.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032265/FR2A5442_Large_Background_Removed_fhedbs.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786032268/FR2A5443_Large_Background_Removed_lud0em.png',
+          '1d9902f8-0210-4b00-890b-16833dd5fa00',
+          '5c2adad1-1fc9-4e2b-445f-9f47434bb700',
+          '238bc6ee-f531-4a9e-37ac-0355f9fdb100',
         ],
         sizes: [
           { size: 'One Size', price: 4599, stock: 30 },
@@ -827,9 +827,9 @@ export const PRODUCTS: Product[] = [
         color: 'Blue',
         colorHex: '#1565C0',
         images: [
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656422/FR2A5565_Large_Background_Removed_eixlxw.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656422/FR2A5566_Large_Background_Removed_qroh9f.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656422/FR2A5567_Large_Background_Removed_sq8tkp.png',
+          'baba58d2-0b7f-4314-4b23-b37c50e5b500',
+          'fe3c06aa-c31d-42c4-5797-64bafde42500',
+          'd8ec8e63-c3e9-423b-4e91-2b00a930ad00',
         ],
         sizes: [
           { size: 'One Size', price: 9490, stock: 30 },
@@ -839,16 +839,16 @@ export const PRODUCTS: Product[] = [
         color: 'Black',
         colorHex: '#212121',
         images: [
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656425/FR2A5574_Large_Background_Removed_pluqsm.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656424/FR2A5576_Large_Background_Removed_vkb81c.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656424/FR2A5575_Large_Background_Removed_mwpxkq.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656424/FR2A5573_Large_Background_Removed_oezfgf.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656426/FR2A5577_Large_Background_Removed_hrgoaw.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656428/FR2A5583_Large_Background_Removed_qbrcuh.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656427/FR2A5584_Large_Background_Removed_gasn6h.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656439/FR2A5597_Large_Background_Removed_a0fpmu.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656429/FR2A5586_Large_Background_Removed_nyhqyt.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656429/FR2A5585_Large_Background_Removed_vj4pnb.png',
+          'e3666668-e7ff-4b77-c710-1c860d50b300',
+          'e70fb8e8-ceb5-4412-fdf9-3b64aa064800',
+          '433ef9ac-6978-4c26-d751-3b0d03630c00',
+          '56e9929f-4eaf-4fe0-28b2-9438458c5500',
+          '3ae21e8e-ae05-477c-2880-899307c60400',
+          '9424feb2-718f-41b9-8bd3-eb795801f500',
+          '97c185cb-367b-4f78-9d3e-8ae571b87500',
+          '143e4fbf-afac-42de-bb29-dedd80e06900',
+          '0ebc520a-c013-4d92-becf-bf6ac9e1b600',
+          '90cda76f-8f92-43cb-61bb-6195c85dc400',
         ],
         sizes: [
           { size: 'One Size', price: 9490, stock: 30 },
@@ -858,9 +858,9 @@ export const PRODUCTS: Product[] = [
         color: 'Grey',
         colorHex: '#9E9E9E',
         images: [
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656422/FR2A5569_Large_Background_Removed_hetz2r.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656423/FR2A5570_Large_Background_Removed_vizq8j.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786656423/FR2A5571_Large_Background_Removed_fypwjm.png',
+          '45250acb-75bf-4652-2337-2b51e964dd00',
+          '3b2af7b1-cabc-477f-cb33-b3b93139c600',
+          'ab63abc9-1e70-4183-90d4-715e48e75500',
         ],
         sizes: [
           { size: 'One Size', price: 9490, stock: 30 },
@@ -931,9 +931,9 @@ export const PRODUCTS: Product[] = [
         color: 'Sage Mist',
         colorHex: '#B4BCAC',
         images: [
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657051/WhatsApp_Image_2026-08-13_at_17.36.56_6_Background_Removed_xqvas9.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657049/WhatsApp_Image_2026-08-13_at_17.36.56_3_Background_Removed_e50zs4.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657055/WhatsApp_Image_2026-08-13_at_17.36.57_4_Background_Removed_it5ipz.png',
+          '9e6f593b-a719-4c1a-4f1b-cb0c845ac500',
+          '0c71e008-67e4-446b-6c99-a789ec0e0d00',
+          '16a52c46-dfac-4afd-3848-626cc29c0f00',
         ],
         sizes: [
           { size: 'One Size', price: 2990, stock: 30 },
@@ -943,7 +943,7 @@ export const PRODUCTS: Product[] = [
         color: 'Midnight Navy',
         colorHex: '#363C4A',
         images: [
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657048/WhatsApp_Image_2026-08-13_at_17.36.55_4_Background_Removed_icagcv.png',
+          '930faf10-9ed3-4967-0f36-e959d5fe0900',
         ],
         sizes: [
           { size: 'One Size', price: 2990, stock: 30 },
@@ -953,9 +953,9 @@ export const PRODUCTS: Product[] = [
         color: 'Ice Blue',
         colorHex: '#B7C4D1',
         images: [
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657048/WhatsApp_Image_2026-08-13_at_17.36.55_2_Background_Removed_kwhuao.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657048/WhatsApp_Image_2026-08-13_at_17.36_Background_Removed.56_hwqsxh.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657052/WhatsApp_Image_2026-08-13_at_17.36.56_5_Background_Removed_zgagnj.png',
+          'f98a40ca-7119-4569-8f4a-fe5e63a45500',
+          'b763447d-9ff4-4463-79ab-cadb2d365500',
+          'd147656b-61bf-4af2-56ca-c8b28adc4a00',
         ],
         sizes: [
           { size: 'One Size', price: 2990, stock: 30 },
@@ -965,9 +965,9 @@ export const PRODUCTS: Product[] = [
         color: 'Stone Grey',
         colorHex: '#C7C7C7',
         images: [
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657053/WhatsApp_Image_2026-08-13_at_17.36.57_1_Background_Removed_ygbfpd.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657054/WhatsApp_Image_2026-08-13_at_17.36.57_2_Background_Removed_yge06u.png',
-          'https://res.cloudinary.com/dpepctqdj/image/upload/v1786657049/WhatsApp_Image_2026-08-13_at_17.36.55_3_Background_Removed_j0yqla.png',
+          'b202c4b8-73cb-4c30-3864-e9b6e8eb0000',
+          'd7b1c67c-0fb4-412a-06e2-b674aec4dd00',
+          '15687b51-37a0-418e-af35-42af06c73d00',
         ],
         sizes: [
           { size: 'One Size', price: 2990, stock: 30 },
@@ -1024,8 +1024,8 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      'VeeZoom__Yellow_lpokls',
-      '01-2_Background_Removed_3_guh9oa.png',
+      'acbb1811-cbd1-4496-9e85-cad771ad4d00',
+      '45538b81-1170-40a2-cbc5-8f0cee2c3200',
       
     ],
     features: [
@@ -1113,9 +1113,9 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      '1-8_Large_Background_Removed_zodwmf',
-      'IMG_3179_Background_Removed_Large_Background_Removed_wolj9y.png',
-      'IMG_3140_Background_Removed_Large_Background_Removed_juszdy.png',
+      'c9d701b2-8947-4f3b-8877-d745394d0300',
+      '56b911b3-1fb1-45f6-196c-27e3cf0dc900',
+      '3c7f26af-0a00-4469-105e-d5e590b46500',
     ],
     features: [
       { label: '360° spinner wheels' },
@@ -1204,8 +1204,8 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      '2-5_2_Background_Removed_o4wue3',
-      '9_Background_Removed_2_rlmt2x',
+      '532c64d2-a645-483a-c4c6-4c8355ee3900',
+      '5503751e-09f3-4712-6ab6-ef7981273600',
     ],
     features: [
       { label: 'Front open design' },
@@ -1262,7 +1262,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['https://res.cloudinary.com/dpepctqdj/image/upload/c_fill,w_600,h_600,g_auto/louis-polo-champ-08-1781602537072-1781602537072_Background_Removed_ywa111.png','https://res.cloudinary.com/dpepctqdj/image/upload/c_fill,w_600,h_600,g_auto/louis-polo-champ-black-08-1781603000214-1781603000214_Background_Removed_dg0xa2'],
+    images: ['f14c65cb-42c9-4a16-f53e-72b9d334d000','36351ce5-e009-4f94-0847-b4cd6ed3fd00'],
     features: [
       { label: 'Hard shell construction' },
       { label: '360° spinner wheels' },
@@ -1329,11 +1329,11 @@ export const PRODUCTS: Product[] = [
     // bare public_ids elsewhere; cld() in lib/cloudinary.ts already handles
     // any cloud name via its full-URL transform-injection path.
     images: [
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785773538/louis-polo-prostripe-cyber-hard-shell-tr-1785368341730-1785368341730_Background_Removed_hihz8r.png',
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785773538/louis-polo-prostripe-cyber-hard-shell-tr-1785368342460-1785368342460_Background_Removed_edavfa.png',
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785773538/louis-polo-prostripe-cyber-hard-shell-tr-1785368340931-1785368340931_Background_Removed_tuqmkk.png',
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785773538/louis-polo-prostripe-cyber-hard-shell-tr-1785368340109-1785368340109_Background_Removed_vjjeih.png',
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785773537/louis-polo-prostripe-cyber-hard-shell-tr-1785368339482-1785368339482_Background_Removed_a2jwhb.png',
+      'da2d28a6-1033-4ae4-5eb8-2d6d6a702500',
+      'ca2fbe2c-2dee-4a1b-5370-2fad114ff000',
+      'dbc3eca9-b03a-4e06-0377-6ee35558cb00',
+      'e46d161f-862f-4698-924c-1fcc9bd09200',
+      '17bf0573-ca70-43e6-5392-1986cb23d000',
     ],
     features: [
       { label: '360° spinner wheels' },
@@ -1418,10 +1418,10 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785785785/louis-polo-diamondlux-luggage-20-28-main-1785229823622-1785229823622_Background_Removed_ku4tay.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785786121/louis-polo-diamondlux-luggage-20-main-02-1785229833484-1785229833484_Background_Removed_wolwuk.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785785785/louis-polo-diamondlux-luggage-20-main-01-1785229832613-1785229832613_Background_Removed_trrtxr.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785785785/louis-polo-diamondlux-luggage-20-28-main-1785229830501-1785229830501_Background_Removed_oiopcp.png',
+          'c319e66f-b873-43f4-182b-e42f28195100',
+          '75d1a61d-78a9-49da-94a3-37eeb31da400',
+          '8ab788d9-c71b-41b9-fc57-8e4b95559a00',
+          'a2c0f7e8-56ff-4508-d581-7331f5110d00',
         ],
         sizes: [
           { size: 'Cabin',    price: 2990,  stock: 25 },
@@ -1435,9 +1435,9 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785786123/louis-polo-diamondlux-luggage-20-main-06-1785229837184-1785229837184-2_Background_Removed_l4r2i6.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785786123/louis-polo-diamondlux-luggage-20-main-05-1785229836315-1785229836315-2_Background_Removed_xxxv4u.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785785785/louis-polo-diamondlux-luggage-20-28-main-1785229831425-1785229831425_Background_Removed_lwxv5v.png',
+          '047466f3-0a38-45a0-a35b-bb2306684100',
+          'd67b261f-dbf9-4165-e732-644a61ae8400',
+          '9277da41-9455-40e6-4492-21fcd1a4f900',
         ],
         sizes: [
           { size: 'Cabin',    price: 2990,  stock: 25 },
@@ -1510,7 +1510,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786105681/louis-polo-diamondlux-luggage-20-28-main-1785229830501-1785229830501-2_Background_Removed_guwvid.png',
+          '0269dd46-6db0-4865-1cd2-d2a28bea9800',
         ],
         sizes: [
           { size: 'Set of 3', price: 11499, stock: 15 },
@@ -1522,7 +1522,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786105681/louis-polo-diamondlux-luggage-20-28-main-1785229831425-1785229831425-2_Background_Removed_h6bhxw.png',
+          'c55faf06-8cd6-47a8-ecf3-d1fd70240b00',
         ],
         sizes: [
           { size: 'Set of 3', price: 11499, stock: 15 },
@@ -1589,8 +1589,8 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786182048/louis-polo-stratalux-main-04-1785218030812-1785218030812_Background_Removed_w1dtd1.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786182047/WhatsApp_Image_2026-08-08_at_10.33.38_3_Background_Removed_ghsjcq.png',
+          '0cd7a434-6f5e-4109-9e4f-68c6cb868a00',
+          '11656b9a-b790-43e6-fa42-ca6d7142bf00',
         ],
         sizes: [
           { size: 'Cabin',    price: 3500, stock: 25 },
@@ -1604,8 +1604,8 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786182046/louis-polo-stratalux-main-06-1785218032692-1785218032692_Background_Removed_j2xk9t.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786182046/WhatsApp_Image_2026-08-08_at_10.33.38_1_Background_Removed_ua7lqh.png',
+          'c3d07c68-babc-421d-4e51-6e905f91c100',
+          'f3ddc941-cb1b-4073-0cf6-0e1055317900',
         ],
         sizes: [
           { size: 'Cabin',    price: 3500, stock: 25 },
@@ -1619,8 +1619,8 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786182046/louis-polo-stratalux-main-03-1785218029903-1785218029903_Background_Removed_ju2tbj.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786182046/WhatsApp_Image_2026-08-08_at_10.33_Background_Removed.37_x4lnqg.png',
+          'c0677602-1f28-464c-9227-6984065a1800',
+          'e6d1d605-3c9e-4b90-7be9-6a05bd8ba100',
         ],
         sizes: [
           { size: 'Cabin',    price: 3500, stock: 25 },
@@ -1692,7 +1692,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786183111/louis-polo-stratalux-main-10-1785218035860-1785218035860_Background_Removed_k1kly5.png',
+          '488989e4-42af-412a-df1d-7d8d69d15c00',
         ],
         sizes: [
           { size: 'Set of 3', price: 11500, stock: 15 },
@@ -1704,7 +1704,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786182046/louis-polo-stratalux-main-09-1785218035084-1785218035084_Background_Removed_g436bw.png',
+          '988403ab-413b-4e04-16c1-d55478bdfb00',
         ],
         sizes: [
           { size: 'Set of 3', price: 11500, stock: 15 },
@@ -1716,7 +1716,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1786182046/louis-polo-stratalux-main-08-1785218034286-1785218034286_Background_Removed_cyougc.png',
+          'd67e5140-53e3-4c22-9287-fd5a0849ef00',
         ],
         sizes: [
           { size: 'Set of 3', price: 11500, stock: 15 },
@@ -1759,7 +1759,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['https://res.cloudinary.com/dpepctqdj/image/upload/c_fill,w_600,h_600,g_auto/louis-polo-magma-blue-08-1781604249533-1781604249533_Background_Removed_i6ef93','https://res.cloudinary.com/dpepctqdj/image/upload/c_fill,w_600,h_600,g_auto/louis-polo-magma-black-08-1781604029524-1781604029524_Background_Removed_gn6fjh'],
+    images: ['ff1a4f4b-fbe0-4992-ac42-d9aac1218800','3051c79d-1359-4f89-66d2-e446d95a4b00'],
     features: [
       { label: 'Secure combination lock' },
       { label: 'Hard shell construction' },
@@ -1833,8 +1833,8 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      '1-2_Large_Background_Removed_xialtl',
-      '1-2_Large_2_Background_Removed_dnpjfv.png',
+      '543255a6-680c-415c-4362-50cd1864d900',
+      '5abd5975-806b-41d5-7d24-9e02251e0300',
     ],
     features: [
       { label: 'Hard shell protection' },
@@ -1907,12 +1907,12 @@ export const PRODUCTS: Product[] = [
     // Hosted on a separate Cloudinary account (deh394y0h) — the primary
     // account's credit limit is exhausted.
     images: [
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785948579/13_Large_Background_Removed_uzujdf.png',
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776263/1_Large_Background_Removed_usrmty.png',
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776263/3_Large_Background_Removed_o2xtoz.png',
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776264/4_Large_Background_Removed_ugrxhn.png',
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776264/9_Large_Background_Removed_zwhmvt.png',
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785776265/7_Large_Background_Removed_x05rdu.png',
+      '97c1e757-4391-4b32-9741-527e449e8300',
+      'bf5245a9-9816-4d9c-434c-87b7307bb300',
+      '221575ce-07d4-47d1-20cf-70c5df26d300',
+      '65e0463f-3965-484a-1414-0708842ef200',
+      'c34be8ea-8839-4f3b-b46b-59bc63261100',
+      'dbdc3369-d1a8-4983-d01f-50b301711400',
     ],
     features: [
       { label: 'Rugged armor-inspired hard shell' },
@@ -1941,11 +1941,11 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785948234/07_Large_Background_Removed_euyjwa.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785948234/05_Large_Background_Removed_mfw23v.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785948234/01_Large_Background_Removed_fv4rw8.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785948235/06_Large_Background_Removed_fcxeyk.png',
-          'https://res.cloudinary.com/deh394y0h/image/upload/v1785948235/02_Large_Background_Removed_ldtepg.png',
+          'f7d367ba-83d3-4225-7f38-d5ddadad6900',
+          '84c2db89-8851-4197-01bc-7ec9b11ef500',
+          'b44c42fe-3172-4a44-4591-71085fa4c200',
+          '98db5ced-2da8-42e4-6e1d-ea1bba9cee00',
+          'f1192e9d-39ba-4462-8152-513ae1580b00',
         ],
         sizes: [
           { size: 'Cabin',   price: 2999,  stock: 25 },
@@ -1992,8 +1992,8 @@ export const PRODUCTS: Product[] = [
     warranty:
       '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images:      [
-      'louis-polo-attache-red-08-1781606815844-1781606815844_Background_Removed_vug5zj',
-      'louis-polo-attache-black-hero-10-1781606578945-1781606578945_Background_Removed_v0prue'
+      '0c421c25-1388-4c8a-53b2-31cd936eae00',
+      '6b6b0465-9b1a-4817-baa6-a859f69f2800'
     ],
     features: [
       { label: '360° silent spinner wheels' },
@@ -2056,11 +2056,11 @@ export const PRODUCTS: Product[] = [
     warranty:
       '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images: [
-      'Generated_Image_June_18_2026_-_1_53AM_Background_Removed_cblbni.png',
+      '0958137c-54cd-499d-d45d-ab87f2b07c00',
       
-      '1C6A9677_Large_Background_Removed_w6duba.png',
-      '1C6A9697_Background_Removed_Large_Background_Removed_fc0j9n.png',
-      '1C6A9716_Background_Removed_r9rkn4.png',
+      '47e4411d-b608-4680-d934-dbd07a2dce00',
+      'ef16d565-78ca-4df9-3bb8-0698584cb400',
+      '663e305a-3796-4f98-6d96-9e602d487100',
     ],
     features: [
       { label: 'Hard shell protection' },
@@ -2076,7 +2076,7 @@ export const PRODUCTS: Product[] = [
         colorHex: '#FAFAFA',
         // First pic is the current shared image; append real per-color shots after it
         images: [
-          'Generated_Image_June_18_2026_-_1_53AM_Background_Removed_cblbni.png',
+          '0958137c-54cd-499d-d45d-ab87f2b07c00',
         ],
         sizes: [
           { size: 'One Size', price: 1999, stock: 30 },
@@ -2087,7 +2087,7 @@ export const PRODUCTS: Product[] = [
         colorHex: '#9E9E9E',
         // First pic is the current shared image; append real per-color shots after it
         images: [
-          '1C6A9677_Large_Background_Removed_w6duba.png',
+          '47e4411d-b608-4680-d934-dbd07a2dce00',
         ],
         sizes: [
           { size: 'One Size', price: 1999, stock: 30 },
@@ -2098,7 +2098,7 @@ export const PRODUCTS: Product[] = [
         colorHex: '#EC407A',
         // First pic is the current shared image; append real per-color shots after it
         images: [
-          '1C6A9697_Background_Removed_Large_Background_Removed_fc0j9n.png',
+          'ef16d565-78ca-4df9-3bb8-0698584cb400',
         ],
         sizes: [
           { size: 'One Size', price: 1999, stock: 30 },
@@ -2109,7 +2109,7 @@ export const PRODUCTS: Product[] = [
         colorHex: '#43A047',
         // First pic is the current shared image; append real per-color shots after it
         images: [
-          '1C6A9716_Background_Removed_r9rkn4.png',
+          '663e305a-3796-4f98-6d96-9e602d487100',
         ],
         sizes: [
           { size: 'One Size', price: 1999, stock: 30 },
@@ -2159,8 +2159,8 @@ export const PRODUCTS: Product[] = [
     warranty:
       '3-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images: [
-      'hexcore_vhfwcc.png',
-      'hexcore_vhfwcc.png',
+      'e3e83d93-83b2-4825-1403-b58ad741cc00',
+      'e3e83d93-83b2-4825-1403-b58ad741cc00',
     ],
     features: [
       { label: 'Hard shell protection' },
@@ -2241,8 +2241,8 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      '02-3_Background_Removed_cucfkt',
-      '01-2_Background_Removed_2_blmmcl',
+      '10980eca-8d23-488a-70d9-0fa3f1797100',
+      'dac9006e-f906-4e5f-c5a7-1a4658002a00',
     ],
     features: [
       { label: '20", 24" & 28" included' },
@@ -2316,7 +2316,7 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      '1_Background_Removed_aukpfh.png'
+      '6c725469-47bb-469c-a9d3-293921ff6400'
       
     ],
     features: [
@@ -2382,8 +2382,8 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      '01-2_Background_Removed_o0b5il.png',
-      '01-3_Background_Removed_cut3ue.png',
+      '69f2e18a-3e6f-49cc-a4d8-603445faf800',
+      'f18adae4-1c3e-46d4-dfb2-66c1c31aad00',
     ],
     features: [
       { label: '20", 24" & 28" included' },
@@ -2459,7 +2459,7 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      'https://res.cloudinary.com/deh394y0h/image/upload/v1785948235/04_Large_Background_Removed_pk6vbu.png',
+      'e41e9ccf-2de0-4ae9-0f2f-85359636c400',
     ],
     features: [
       { label: '20", 24" & 28" included' },
@@ -2520,11 +2520,11 @@ export const PRODUCTS: Product[] = [
     warranty:
       '1-year warranty covering manufacturing defects in the shell panel, fabric, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images:      [
-      '01---flexbag---black-1781383670118-1781383670118_Background_Removed_n03tnr',
-      'untitled-1-1-1781414351367-1781414351367_Background_Removed_nr2vnl',
-      'untitled-1-1-1781414384834-1781414384834_Background_Removed_zchjbk',
-      'untitled-1-1-1781414421642-1781414421642_Background_Removed_jh0xjj',
-      'untitled-1-1-1781414459774-1781414459774_Background_Removed_c8gvms'
+      '0caedf5f-e860-40a0-815d-948cb8b39200',
+      'ff0b7372-c6a8-468f-9529-6619cf26cb00',
+      'c51b7c0b-34d5-415c-e0b4-0cc22aac3d00',
+      '2ef2f8b2-ed27-4506-c42f-baf0cc755a00',
+      'ff00399d-672a-4d47-1218-415935f7ad00'
 
 
     ],
@@ -2599,10 +2599,10 @@ export const PRODUCTS: Product[] = [
     isFeatured:    false,
     hideSizeGuide: true,
     images:      [
-      'louis-polo-grid-pod-vanity-silver-08-1781757213777-1781757213777_Background_Removed_nf3usc',
-      'louis-polo-grid-pod-vanity-grey-08-1781757256978-1781757256978_Background_Removed_fcbi2f',
-      'louis-polo-grid-pod-vanity-blue-01-1781757330010-1781757330010_Background_Removed_qtb4xf.png',
-      'louis-polo-grid-pod-vanity-black-08-1781757362906-1781757362906_Background_Removed_ynroed'
+      'a5ccbbef-2417-4573-e888-c182e7d53d00',
+      'd16b5604-3187-4f10-cfb3-bd1c421de100',
+      '25ff7296-3e45-40e0-ddd3-42d389b01700',
+      'c1a221a5-6704-4f3d-6f56-03edec8fde00'
     ],
     features: [
       { label: 'Impact & compression resistant hard shell' },
@@ -2677,7 +2677,7 @@ export const PRODUCTS: Product[] = [
       '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     isFeatured:  false,
     images:      [
-      'swiftgate---blue01-1781498983947-1781498983947_Background_Removed_lanodd','swiftgate---red09-1781498866690-1781498866690_Background_Removed_zdqhyi',],
+      '55a02349-ecaa-4128-be29-4d6c23fa5300','7cc12e6c-b3a5-4f40-304b-11b86b5b4900',],
     features: [
       { label: 'Front-access laptop compartment' },
       { label: '360° silent spinner wheels' },
@@ -2737,10 +2737,10 @@ export const PRODUCTS: Product[] = [
     isFeatured:    false,
     hideSizeGuide: true,
     images:      [
-      '1-1781427971087-1781427971087_Background_Removed_f1vctd',
-      '1-1781427934381-1781427934381_Background_Removed_iw2ctm',
-      '1-1781427886031-1781427886031_Background_Removed_syzs8q',
-      '8-1781428020176-1781428020176_Background_Removed_v6a0uj'
+      '27ef456d-7db1-4739-f5e8-37d041ba2b00',
+      '59c762ab-3279-42b4-06f2-3da24c835000',
+      'af2eb3af-bcd8-4c1a-17fd-9a39ccbf9d00',
+      '0565729b-6d35-471d-d477-bad92a1a6200'
       
     ],
     features: [
@@ -2811,10 +2811,10 @@ export const PRODUCTS: Product[] = [
     isFeatured:    false,
     hideSizeGuide: true,
     images:      [
-      'louis-polo-orbit-pod-vanity-metallic-gre-1781766231871-1781766231871_Background_Removed_l5lzhb',
-      'louis-polo-orbit-pod-vanity-turquoise-bl-1781766125876-1781766125876_Background_Removed_g39dpv',
+      '35fd5fe2-b859-47e7-7fb6-8eb9514fe200',
+      '29b5c294-a115-4003-aed6-c7e218c1ed00',
       
-      'louis-polo-orbit-pod-vanity-metallic-sil-1781766417179-1781766417179_Background_Removed_db00pk',
+      '2b00a5a4-6dfc-42ae-d442-38b109f42300',
       
       
     ],
@@ -2880,9 +2880,9 @@ export const PRODUCTS: Product[] = [
     isFeatured:    false,
     hideSizeGuide: true,
     images:      [
-      'louis-polo-voyage-pod-silver-09-1781689965483-1781689965483_Background_Removed_ysfewb',
-      'louis-polo-voyage-pod-grey-09-1781690030424-1781690030424_Background_Removed_s63370','louis-polo-voyage-pod-blue-09-1781690104205-1781690104205_Background_Removed_eoz5ph',
-      'louis-polo-voyage-pod-black01-1781690181273-1781690181273_Background_Removed_k1um9u'
+      '7565b2dc-b8da-4ce3-c7ae-ad78f2676200',
+      '758aabe0-e3d2-4516-eaa7-582ba635f400','73f15220-c48d-4940-ed6c-172c8b0fbf00',
+      '7553169b-0eae-4014-9ce3-5cbb8871d700'
     ],
     features: [
       { label: 'Impact & compression resistant hard shell' },

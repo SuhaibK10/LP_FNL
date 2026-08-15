@@ -10,7 +10,7 @@ import { useRef, useState, useEffect } from 'react'
 import Image                           from 'next/image'
 import { motion }                      from 'framer-motion'
 import { FACTORY_PHOTOS }              from '@/config/factory'
-import { cld, PLACEHOLDER_URL }        from '@/lib/cloudinary'
+import { cld, PLACEHOLDER_URL }        from '@/lib/cloudflareImages'
 import { staggerChildren, fadeUp, VIEWPORT } from '@/lib/animations'
 import { SwipeHint }                   from '@/components/ui/SwipeHint'
 
@@ -80,8 +80,8 @@ export function FactoryGallery() {
                     ? cld(
                         photo.publicId,
                         photo.fit === 'pad'
-                          ? 'f_auto,q_auto,w_1200,h_900,c_pad,b_rgb:EDE9E1'
-                          : 'f_auto,q_auto,w_1200,h_900,c_fill,g_auto'
+                          ? 'w=1200,h=900,fit=pad,background=%23EDE9E1'
+                          : 'w=1200,h=900,fit=cover'
                       )
                     : PLACEHOLDER_URL
                 }

@@ -11,7 +11,7 @@ import { motion, AnimatePresence, useMotionValue, useMotionValueEvent, animate }
 import { Star, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import Image                                 from 'next/image'
 import { staggerChildren, fadeUp, VIEWPORT } from '@/lib/animations'
-import { cld }                               from '@/lib/cloudinary'
+import { cld }                               from '@/lib/cloudflareImages'
 
 const REVIEWS = [
   {
@@ -22,9 +22,9 @@ const REVIEWS = [
     rating:  5,
     text:    'Took this to Kashmir last month , Gulmarg, Pahalgam, the whole route. Check-in was smooth. The front compartment is a game changer, I had my charger, snacks, docs all within reach. Zero stress the entire trip.',
     photos:  [
-      'WhatsApp_Image_2026-06-20_at_22.54.06_ipkd7q.jpg',
-      'WhatsApp_Image_2026-06-20_at_22.54.07_ygiymy.jpg',
-      'WhatsApp_Image_2026-06-20_at_22.54.07_1_j5avd4.jpg',
+      'fc5d01fa-24c8-45d0-bf2b-d2224c042200',
+      '1c6ab9bb-273c-4e43-5d3c-9edcba3e3d00',
+      'a55ec6b4-c9ea-429c-4995-61e8453e7b00',
     ] as string[],
     videos:  [] as string[],
   },
@@ -35,7 +35,7 @@ const REVIEWS = [
     product: '',
     rating:  5,
     text:    'This Trolley looks really nice, and it is highly organizable too',
-    photos:  ['WhatsApp_Image_2026-06-21_at_02.04.32_hfq8q4.jpg','WhatsApp_Image_2026-06-21_at_02.04.32_1_i8ggxu.jpg','WhatsApp_Image_2026-06-21_at_02.04.32_2_nl3wpv.jpg'] as string[],
+    photos:  ['db350626-b2e6-41fd-1880-a859270db600','428e24d5-cf50-4c9f-a587-fc8aa9cef500','636ed414-033a-441e-884e-b1c3b80d5c00'] as string[],
     videos:  [] as string[],
   },
   {
@@ -45,7 +45,7 @@ const REVIEWS = [
     product: 'HexCore Office Bag',
     rating:  5,
     text:    'I travel every week for work to Delhi, Pune, Chennai, repeat. This laptop bag has been with me for 4 months now and looks brand new. Highly oranizable for my laptop and docs.',
-    photos:  ['WhatsApp_Image_2026-06-21_at_11.59.32_vxakr3.jpg','WhatsApp_Image_2026-06-21_at_11.59.35_1_hmuoej.jpg','WhatsApp_Image_2026-06-21_at_11.59.34_tsxhuo.jpg','WhatsApp_Image_2026-06-21_at_11.59.33_sgoybw.jpg'] as string[],
+    photos:  ['594c35f6-dcf9-4358-91e2-408a737a9500','8be23a3d-763a-44b1-d9c9-bd5b286d2500','ddcdfc2b-ef96-4c42-92a2-1dae3140f800','6ee65449-39c6-4835-80c0-cbcd3d6b5700'] as string[],
     videos:  [] as string[],
   },
   {
@@ -55,7 +55,7 @@ const REVIEWS = [
     product: '',
     rating:  5,
     text:    'Bought this customised backpack from Louis Polo, Engraived my name on it, The backpack looks solid and elegant',
-    photos:  ['WhatsApp_Image_2026-06-21_at_11.59.22_1_zcuvhk.jpg','WhatsApp_Image_2026-06-21_at_11.59.22_pzqhxk.jpg'] as string[],
+    photos:  ['831a845e-273b-496c-a52a-135df4b59300','e39992ae-79e5-4d3a-8bdc-257470177500'] as string[],
     videos:  [] as string[],
   },
   {
@@ -75,7 +75,7 @@ const REVIEWS = [
     product: '',
     rating:  5,
     text:    'Bought this on Buy 1 Get 1 Free, Looks good and best for stuffs',
-    photos:  ['WhatsApp_Image_2026-06-21_at_11.59.27_unigr1.jpg'] as string[],
+    photos:  ['f2731a75-a0db-433b-2af1-9a70ec554000'] as string[],
     videos:  [] as string[],
   },
   {
@@ -85,7 +85,7 @@ const REVIEWS = [
     product: '',
     rating:  5,
     text:    'Ordered this Gym Bag, its quite fine in this price',
-    photos:  ['WhatsApp_Image_2026-06-21_at_11.59.28_usgque.jpg'] as string[],
+    photos:  ['e15d1c2d-0d4d-4cad-60ea-2601e8d0ce00'] as string[],
     videos:  [] as string[],
   },
 ]
@@ -120,7 +120,7 @@ function Lightbox({
   onPrev: () => void
   onNext: () => void
 }) {
-  const src = cld(photos[index], 'f_auto,q_90,w_900,h_900,c_pad,b_rgb:F5F3ED')
+  const src = cld(photos[index], 'w=900,h=900,fit=pad,background=%23F5F3ED')
   const multi = photos.length > 1
 
   useEffect(() => {
@@ -358,7 +358,7 @@ export function ReviewsSection() {
                         className="relative shrink-0 w-24 h-24 overflow-hidden bg-lp-porcelain border border-lp-border cursor-zoom-in hover:opacity-90 transition-opacity"
                       >
                         <Image
-                          src={cld(pid, 'f_auto,q_80,w_200,h_200,c_pad,b_rgb:F5F3ED')}
+                          src={cld(pid, 'w=200,h=200,fit=pad,background=%23F5F3ED')}
                           alt={`${review.name} photo ${i + 1}`}
                           fill
                           className="object-contain"

@@ -18,7 +18,7 @@
 import { useRef, useEffect, useState } from 'react'
 import { motion }           from 'framer-motion'
 import { Play }             from 'lucide-react'
-import { cldVideo, videoPosterUrl, cld } from '@/lib/cloudinary'
+import { cldVideo, videoPosterUrl, cld } from '@/lib/cloudflareImages'
 import { staggerChildren, fadeUp, VIEWPORT } from '@/lib/animations'
 
 interface SpotlightItem {
@@ -72,7 +72,7 @@ function SpotlightTV({ item }: { item: SpotlightItem }) {
   const hasVideo = item.videoId !== ''
   const poster = hasVideo
     ? item.posterId
-      ? cld(item.posterId, 'f_auto,q_auto,w_1280')
+      ? cld(item.posterId, 'w=1280')
       : videoPosterUrl(item.videoId)
     : undefined
 

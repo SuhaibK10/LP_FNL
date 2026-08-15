@@ -9,7 +9,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Image                        from 'next/image'
 import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
-import { pdpUrl, thumbUrl, PLACEHOLDER_URL } from '@/lib/cloudinary'
+import { pdpUrl, thumbUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 
 const LONG_PRESS_MS      = 350  // hold duration before zoom kicks in
 const LONG_PRESS_SLOP_PX = 8    // movement past this before the timer fires reads as a swipe, not a hold

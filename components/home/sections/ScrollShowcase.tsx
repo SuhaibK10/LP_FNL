@@ -19,7 +19,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
-import { cld, PLACEHOLDER_URL } from '@/lib/cloudinary'
+import { cld, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 import { ROUTES } from '@/lib/constants'
 
 export interface ShowcaseStop {
@@ -108,7 +108,7 @@ export function ScrollShowcase({ eyebrow, heading, stops }: ScrollShowcaseProps)
           <div key={i} className="sticky top-0 h-[92vh] flex flex-col items-center justify-start pt-24 md:pt-32">
             <div className="relative w-[92vw] aspect-[3/4] max-h-[calc(92vh-6rem)] md:w-auto md:h-[calc(92vh-8rem)] md:max-h-none rounded-xl md:rounded-2xl overflow-hidden bg-[var(--color-lp-cream)] ring-1 ring-black/5 shadow-[0_24px_60px_-28px_rgba(26,23,20,0.45)]">
               <img
-                src={cld(stop.image, 'f_auto,q_auto,w_1200,h_1600,c_fill,g_auto:face') || PLACEHOLDER_URL}
+                src={cld(stop.image, 'w=1200,h=1600,fit=cover,gravity=auto') || PLACEHOLDER_URL}
                 alt=""
                 className="absolute inset-0 w-full h-full object-cover brightness-[1.07]"
               />

@@ -12,7 +12,7 @@ import Image                         from 'next/image'
 import { motion }                    from 'framer-motion'
 import { Loader2, CheckCircle2, Download } from 'lucide-react'
 import { FEATURED_PRODUCTS, getProductBySlug } from '@/config/products'
-import { cardUrl, cld }              from '@/lib/cloudinary'
+import { cardUrl, cld }              from '@/lib/cloudflareImages'
 import type { Product }              from '@/types'
 
 interface Props {
@@ -42,7 +42,7 @@ const TASK_IMAGES: TaskImage[] = [
     key:  product.id,
     name: product.name,
     src:  cardUrl(product.images[0]),
-    downloadHref: cld(product.images[0], 'f_auto,q_auto,w_1200,fl_attachment'),
+    downloadHref: cld(product.images[0], 'w=1200'),
   })),
   { key: 'navy-backpack',  name: 'Navy Backpack',  src: '/careers/navy-backpack.jpg',  downloadHref: '/careers/navy-backpack.jpg' },
   { key: 'olive-backpack', name: 'Olive Backpack', src: '/careers/olive-backpack.jpg', downloadHref: '/careers/olive-backpack.jpg' },

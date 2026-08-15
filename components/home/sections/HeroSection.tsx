@@ -12,7 +12,7 @@ import Link                                  from 'next/link'
 import { motion, AnimatePresence }           from 'framer-motion'
 import { ArrowRight }                        from 'lucide-react'
 import { HERO_SLIDES }                       from '@/config/products'
-import { heroUrl, heroUrlMobile, PLACEHOLDER_URL } from '@/lib/cloudinary'
+import { heroUrl, heroUrlMobile, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 import { ROUTES }                            from '@/lib/constants'
 
 const SLIDE_DURATION = 3500  // ms between auto-advances

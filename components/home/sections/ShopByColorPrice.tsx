@@ -15,7 +15,7 @@ import { ArrowUpRight, Palette }       from 'lucide-react'
 import { ROUTES }                      from '@/lib/constants'
 import { UNDER_2999_PRODUCTS }         from '@/config/products'
 import { COLOR_FAMILIES }              from '@/config/shopByColorPrice'
-import { categoryUrl, PLACEHOLDER_URL } from '@/lib/cloudinary'
+import { categoryUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 import { staggerChildren, scaleUp, VIEWPORT } from '@/lib/animations'
 import { ProductCard }                 from '@/components/shop/ProductCard'
 
