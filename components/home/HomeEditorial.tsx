@@ -7,6 +7,7 @@
 import { HeroSection }         from './sections/HeroSection'
 import { BestSellersCarousel } from './sections/BestSellersCarousel'
 import { PromoBanner }         from './sections/PromoBanner'
+import { IndependenceDayBanner } from './sections/IndependenceDayBanner'
 import { CategoryGrid }        from './sections/CategoryGrid'
 import { ProductSpotlight }    from './sections/ProductSpotlight'
 import { ReviewsSection }      from './sections/ReviewsSection'
@@ -16,6 +17,8 @@ import { ScrollShowcase }      from './sections/ScrollShowcase'
 import { VERTEX_SHOWCASE_HOME_ENABLED, VERTEX_SHOWCASE_HEADER, VERTEX_SHOWCASE_STOPS } from '@/config/vertexShowcase'
 import { ShopByColorPrice }    from './sections/ShopByColorPrice'
 import { SHOP_BY_COLOR_PRICE_HOME_ENABLED } from '@/config/shopByColorPrice'
+
+const INDEPENDENCE_DAY_BANNER_ENABLED = true
 
 export function HomeEditorial() {
   return (
@@ -28,6 +31,7 @@ export function HomeEditorial() {
           stops={VERTEX_SHOWCASE_STOPS}
         />
       )}
+      {INDEPENDENCE_DAY_BANNER_ENABLED && <IndependenceDayBanner />}
       <CategoryGrid />
       {/* Temporarily disabled — "First-Time Buyers" promo turned off. */}
       {false && <PromoBanner />}
