@@ -38,7 +38,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Sets',
     value:    'set',
-    image:    'Generated_Image_June_21_2026_-_3_01AM_no4abz.jpg',
+    image:    'https://res.cloudinary.com/dpepctqdj/image/upload/v1786798628/WhatsApp_Image_2026-08-14_at_16.08.52_siq1be.jpg',
     span:     '',
     textPos:  'bottom',
     imgClass: 'scale-125',

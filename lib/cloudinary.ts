@@ -36,17 +36,6 @@ export function cld(publicId: string, transforms = 'f_auto,q_auto'): string {
 
 // ─── Preset transforms ────────────────────────────────────────────────────────
 
-// Every existing cutout asset carries "Background_Removed" in its public_id
-// by convention. Raw, uncut photos (e.g. a plain phone photo against a real
-// backdrop) don't — so for those only, run Cloudinary's AI background removal
-// before padding, otherwise the photo's own backdrop shows as a visible seam
-// against the flat pad fill. Cutout assets skip this extra (metered) step.
-const needsBgRemoval = (id: string) =>
-  !id.startsWith('http') && !/background_removed/i.test(id)
-
-const withBgRemoval = (transforms: string, id: string) =>
-  needsBgRemoval(id) ? `e_background_removal/${transforms}` : transforms
-
 // Hero slide — desktop, 16:9 landscape
 export const heroUrl = (id: string) =>
   cld(id, 'f_auto,q_auto:good,w_1600,ar_16:9,c_fill,g_center')
@@ -55,17 +44,19 @@ export const heroUrl = (id: string) =>
 export const heroUrlMobile = (id: string) =>
   cld(id, 'f_auto,q_auto,w_900,c_limit')
 
-// Product card thumbnail — 3:4 portrait
+// Product card thumbnail — 3:4 portrait. Source photos already come with
+// backgrounds removed, so this only pads/resizes — no live e_background_removal
+// (that transform bills 75 credits per derived asset and was never needed).
 export const cardUrl = (id: string) =>
-  cld(id, withBgRemoval('f_auto,q_auto:eco,w_600,h_800,c_pad,b_rgb:F2F2F2', id))
+  cld(id, 'f_auto,q_auto:eco,w_600,h_800,c_pad,b_rgb:F2F2F2')
 
 // Product detail hero — large, high quality
 export const pdpUrl = (id: string) =>
-  cld(id, withBgRemoval('f_auto,q_auto:good,w_900,h_1200,c_pad,b_rgb:F2F2F2', id))
+  cld(id, 'f_auto,q_auto:good,w_900,h_1200,c_pad,b_rgb:F2F2F2')
 
 // Cart / order thumbnail — square
 export const thumbUrl = (id: string) =>
-  cld(id, withBgRemoval('f_auto,q_auto:eco,w_200,h_200,c_pad,b_rgb:F2F2F2', id))
+  cld(id, 'f_auto,q_auto:eco,w_200,h_200,c_pad,b_rgb:F2F2F2')
 
 // Category/mood tile — full lifestyle photo, fills the frame.
 // No background removal: unlike product cutouts, these keep their real backdrop.

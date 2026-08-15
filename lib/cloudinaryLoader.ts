@@ -19,10 +19,8 @@ interface LoaderParams {
 }
 
 export default function cloudinaryLoader({ src, width }: LoaderParams): string {
-  // Chained transforms (e.g. withBgRemoval() prepends "e_background_removal/"
-  // ahead of the resize/pad segment) mean there can be more than one "/"
-  // between "/upload/" and the public_id — match everything up to the last
-  // "/" as the transform chain, not just the first segment.
+  // Match everything up to the last "/" before the public_id as the
+  // transform chain, in case a URL ever carries more than one segment.
   const match = src.match(/\/upload\/(.+)\/([^/]+)$/)
   if (!match) return src
 

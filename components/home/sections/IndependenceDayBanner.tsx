@@ -32,13 +32,18 @@ function MiniFlag() {
         <circle r="1.1" fill="#0B3D91" />
         {Array.from({ length: 24 }, (_, i) => (i * 360) / 24).map((deg) => {
           const rad = (deg * Math.PI) / 180
+          // Rounded to a fixed precision — raw Math.cos/sin output can
+          // serialize with different trailing digits between server and
+          // client renders, which was causing a hydration mismatch.
+          const cos = Math.round(Math.cos(rad) * 1000) / 1000
+          const sin = Math.round(Math.sin(rad) * 1000) / 1000
           return (
             <line
               key={deg}
-              x1={1.1 * Math.cos(rad)}
-              y1={1.1 * Math.sin(rad)}
-              x2={7 * Math.cos(rad)}
-              y2={7 * Math.sin(rad)}
+              x1={1.1 * cos}
+              y1={1.1 * sin}
+              x2={7 * cos}
+              y2={7 * sin}
               stroke="#0B3D91"
               strokeWidth="0.55"
             />
