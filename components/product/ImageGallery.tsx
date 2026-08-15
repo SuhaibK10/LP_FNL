@@ -9,7 +9,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Image                        from 'next/image'
 import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
-import { pdpUrl, thumbUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
+import { pdpUrl, pdpZoomUrl, thumbUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 
 const LONG_PRESS_MS      = 350  // hold duration before zoom kicks in
 const LONG_PRESS_SLOP_PX = 8    // movement past this before the timer fires reads as a swipe, not a hold
@@ -69,7 +69,7 @@ export function ImageGallery({ images, productName, activeColorIndex }: Props) {
     }
   }
 
-  // ── Long-press to zoom ──────────────────────────────────────────────────
+  // ── Zoom — long-press on touch, hover on desktop ────────────────────────
   const [zoomed, setZoomed]         = useState(false)
   const [zoomOrigin, setZoomOrigin] = useState({ x: 50, y: 50 })
   const pressStart   = useRef<{ x: number; y: number } | null>(null)
@@ -81,11 +81,21 @@ export function ImageGallery({ images, productName, activeColorIndex }: Props) {
     pressStart.current = null
   }
 
+  // Touch/pen only — mouse uses hover instead (below), so a click-and-hold
+  // doesn't also fire this and fight with the hover state.
   function handlePointerDown(e: React.PointerEvent<HTMLDivElement>) {
+    if (e.pointerType === 'mouse') return
     const rect = e.currentTarget.getBoundingClientRect()
     const originX = ((e.clientX - rect.left) / rect.width) * 100
     const originY = ((e.clientY - rect.top) / rect.height) * 100
     pressStart.current = { x: e.clientX, y: e.clientY }
+    // Start fetching the high-res zoom image as soon as the press begins,
+    // in parallel with the hold — by the time LONG_PRESS_MS elapses and
+    // zoom actually engages, it's usually already loaded (same idea as the
+    // mouseenter prefetch for desktop hover, just started earlier here
+    // since a touch hold is shorter than typical hover-then-move timing).
+    const preload = new window.Image()
+    preload.src = pdpZoomUrl(images[displayed]) || PLACEHOLDER_URL
     longPressTimer.current = setTimeout(() => {
       setZoomOrigin({ x: originX, y: originY })
       setZoomed(true)
@@ -93,7 +103,19 @@ export function ImageGallery({ images, productName, activeColorIndex }: Props) {
   }
 
   function handlePointerMove(e: React.PointerEvent<HTMLDivElement>) {
-    if (!pressStart.current || zoomed) return
+    // Already zoomed (touch) — track the finger to pan the magnified view,
+    // same idea as the mousemove handler for desktop hover. Mouse is
+    // excluded here since onMouseMove already owns panning for that case.
+    if (zoomed) {
+      if (e.pointerType === 'mouse') return
+      const rect = e.currentTarget.getBoundingClientRect()
+      setZoomOrigin({
+        x: ((e.clientX - rect.left) / rect.width) * 100,
+        y: ((e.clientY - rect.top) / rect.height) * 100,
+      })
+      return
+    }
+    if (!pressStart.current) return
     const dx = e.clientX - pressStart.current.x
     const dy = e.clientY - pressStart.current.y
     // Moved too far before the hold completed — this is a swipe, not a
@@ -101,8 +123,30 @@ export function ImageGallery({ images, productName, activeColorIndex }: Props) {
     if (Math.hypot(dx, dy) > LONG_PRESS_SLOP_PX) clearLongPress()
   }
 
-  function handlePointerUp() {
+  function handlePointerUp(e: React.PointerEvent<HTMLDivElement>) {
+    if (e.pointerType === 'mouse') return
     clearLongPress()
+    setZoomed(false)
+  }
+
+  // Desktop hover-zoom — magnifies under the cursor, tracking movement.
+  // Kicks off the high-res zoom image fetch on entry so it's usually
+  // already cached by the time the browser actually needs to paint it.
+  function handleMouseEnter() {
+    const preload = new window.Image()
+    preload.src = pdpZoomUrl(images[displayed]) || PLACEHOLDER_URL
+    setZoomed(true)
+  }
+
+  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+    const rect = e.currentTarget.getBoundingClientRect()
+    setZoomOrigin({
+      x: ((e.clientX - rect.left) / rect.width) * 100,
+      y: ((e.clientY - rect.top) / rect.height) * 100,
+    })
+  }
+
+  function handleMouseLeave() {
     setZoomed(false)
   }
 
@@ -111,7 +155,7 @@ export function ImageGallery({ images, productName, activeColorIndex }: Props) {
       {/* Main image — drag left/right to slide between images, press and hold to zoom */}
       <motion.div
         className="relative aspect-3/4 bg-lp-porcelain overflow-hidden touch-pan-y select-none"
-        style={{ WebkitTouchCallout: 'none', cursor: zoomed ? 'zoom-out' : undefined }}
+        style={{ WebkitTouchCallout: 'none', cursor: zoomed ? 'crosshair' : 'zoom-in' }}
         drag={images.length > 1 && !zoomed ? 'x' : false}
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.6}
@@ -121,6 +165,9 @@ export function ImageGallery({ images, productName, activeColorIndex }: Props) {
         onPointerUp={handlePointerUp}
         onPointerLeave={handlePointerUp}
         onPointerCancel={handlePointerUp}
+        onMouseEnter={handleMouseEnter}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
         onContextMenu={(e) => e.preventDefault()}
       >
         <AnimatePresence mode="wait">
@@ -133,7 +180,12 @@ export function ImageGallery({ images, productName, activeColorIndex }: Props) {
             className="absolute inset-0"
           >
             <Image
-              src={pdpUrl(images[displayed]) || PLACEHOLDER_URL}
+              // Zoomed uses a distinct, higher-resolution source (and skips
+              // the responsive loader via `unoptimized`, which would
+              // otherwise downscale it back to a normal-display size) so
+              // magnifying reveals real detail instead of stretched pixels.
+              src={(zoomed ? pdpZoomUrl(images[displayed]) : pdpUrl(images[displayed])) || PLACEHOLDER_URL}
+              unoptimized={zoomed}
               alt={`${productName}, view ${displayed + 1}`}
               fill
               priority={isFirstLoad.current}

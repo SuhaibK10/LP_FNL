@@ -49,6 +49,12 @@ export const cardUrl = (id: string) =>
 export const pdpUrl = (id: string) =>
   cfImg(id, `w=900,h=1200,fit=pad,background=%23F2F2F2,${Q_GOOD}`)
 
+// Hover-zoom magnified view — double the linear resolution of pdpUrl, so
+// zooming in reveals real detail instead of just stretching the same pixels.
+// Only fetched when zoom is actually engaged (see ImageGallery.tsx).
+export const pdpZoomUrl = (id: string) =>
+  cfImg(id, 'w=1800,h=2400,fit=pad,background=%23F2F2F2,quality=90')
+
 // Cart / order thumbnail — square
 export const thumbUrl = (id: string) =>
   cfImg(id, `w=200,h=200,fit=pad,background=%23F2F2F2,${Q_ECO}`)
