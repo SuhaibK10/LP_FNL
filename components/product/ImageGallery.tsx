@@ -36,6 +36,18 @@ export function ImageGallery({ images, productName, activeColorIndex }: Props) {
     if (activeColorIndex !== undefined) setActive(activeColorIndex)
   }, [activeColorIndex])
 
+  // Warm the browser cache for every photo in this gallery as soon as the
+  // set is known — covers both a thumbnail click (same color, different
+  // angle) and a color swatch swap (a whole new `images` array arrives,
+  // firing this effect again). By the time someone actually clicks, the
+  // full-size image is usually already cached instead of a cold fetch.
+  useEffect(() => {
+    for (const img of images) {
+      const preload = new window.Image()
+      preload.src = pdpUrl(img) || PLACEHOLDER_URL
+    }
+  }, [images])
+
   useEffect(() => {
     if (active === displayed) return
     let cancelled = false
