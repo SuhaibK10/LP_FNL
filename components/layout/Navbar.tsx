@@ -222,7 +222,7 @@ export function Navbar() {
               </button>
 
               {/* Desktop nav links — left of logo (Home, Shop, About) */}
-              <nav className="hidden lg:flex items-center gap-8">
+              <nav className="hidden lg:flex items-center gap-16">
                 {NAV_ITEMS.filter(({ label }) => label !== 'Contact').map(({ label, href }) => (
                   <Link
                     key={href}

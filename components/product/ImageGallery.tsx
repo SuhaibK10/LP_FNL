@@ -8,6 +8,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Image                        from 'next/image'
+import { Flame }                    from 'lucide-react'
 import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
 import { pdpUrl, pdpZoomUrl, thumbUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 
@@ -18,9 +19,10 @@ interface Props {
   images: string[]
   productName: string
   activeColorIndex?: number
+  recentPurchases?: number
 }
 
-export function ImageGallery({ images, productName, activeColorIndex }: Props) {
+export function ImageGallery({ images, productName, activeColorIndex, recentPurchases }: Props) {
   const [active, setActive]     = useState(activeColorIndex ?? 0)
   // What's actually on screen. Kept a step behind `active` so the current
   // photo never disappears behind a blank frame while the next one is
@@ -170,6 +172,15 @@ export function ImageGallery({ images, productName, activeColorIndex }: Props) {
         onMouseLeave={handleMouseLeave}
         onContextMenu={(e) => e.preventDefault()}
       >
+        {recentPurchases && (
+          <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5 rounded-full bg-lp-porcelain/90 backdrop-blur-sm px-2.5 py-1">
+            <Flame size={12} strokeWidth={1.75} className="text-lp-gold shrink-0" />
+            <span className="font-body text-[0.7rem] text-lp-ink">
+              <span className="font-semibold">{recentPurchases}</span> bought in the last 7 days
+            </span>
+          </div>
+        )}
+
         <AnimatePresence mode="wait">
           <motion.div
             key={displayed}

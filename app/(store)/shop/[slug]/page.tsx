@@ -46,7 +46,7 @@ export default async function ProductPage({ params, searchParams }: Props) {
       <div className="container-lp section-pad pt-2! md:pt-2!">
 
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 mb-3 md:mb-4">
+        <div className="flex items-center gap-2 mb-0.5 md:mb-2">
           <Link
             href={ROUTES.shop}
             scroll={false}

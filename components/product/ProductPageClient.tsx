@@ -51,6 +51,7 @@ export function ProductPageClient({ product, defaultColor }: Props) {
           images={galleryImages}
           productName={product.name}
           activeColorIndex={galleryActiveIndex}
+          recentPurchases={product.recentPurchases}
         />
       </div>
       <div>

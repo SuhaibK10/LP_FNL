@@ -99,7 +99,7 @@ export const PRODUCTS: Product[] = [
     hideSizeSelector: true,
     hideSizeGuide: true,
     mrp: 1699,
-    recentPurchases: 131,
+    recentPurchases: 174,
     description:
       'Pack shirts, not wrinkles. ShirtVault carries 4 to 5 formal shirts in a slim hard shell that keeps collars sharp and folds crisp, in a suitcase or on a wardrobe shelf.',
     story: [
@@ -537,7 +537,7 @@ export const PRODUCTS: Product[] = [
           '17cc8ba4-8012-4f87-3fe8-5b2d218cf800',
         ],
         sizes: [
-          { size: 'One Size', price: 4500, stock: 30 },
+          { size: 'One Size', price: 3290, stock: 30 },
         ],
       },
       {
@@ -553,7 +553,7 @@ export const PRODUCTS: Product[] = [
           '4db9fcc9-fcff-47c0-e5e2-2287ca8e6a00',
         ],
         sizes: [
-          { size: 'One Size', price: 4500, stock: 30 },
+          { size: 'One Size', price: 3290, stock: 30 },
         ],
       },
       {
@@ -568,7 +568,7 @@ export const PRODUCTS: Product[] = [
           '293576b6-5990-4a58-6a18-db70626a5e00',
         ],
         sizes: [
-          { size: 'One Size', price: 4500, stock: 30 },
+          { size: 'One Size', price: 3290, stock: 30 },
         ],
       },
     ],
@@ -643,7 +643,7 @@ export const PRODUCTS: Product[] = [
           '5b59d0b7-8d25-459c-666d-a3956a3f3000',
         ],
         sizes: [
-          { size: 'One Size', price: 4599, stock: 30 },
+          { size: 'One Size', price: 2990, stock: 30 },
         ],
       },
       {
@@ -661,7 +661,7 @@ export const PRODUCTS: Product[] = [
           'f9f91d77-07ed-4398-efa5-25da511c7a00',
         ],
         sizes: [
-          { size: 'One Size', price: 4599, stock: 30 },
+          { size: 'One Size', price: 2990, stock: 30 },
         ],
       },
     ],
@@ -732,7 +732,7 @@ export const PRODUCTS: Product[] = [
           '8321af3d-25d7-4863-d287-f0ae6a74f300',
         ],
         sizes: [
-          { size: 'One Size', price: 4599, stock: 30 },
+          { size: 'One Size', price: 2990, stock: 30 },
         ],
       },
       {
@@ -749,7 +749,7 @@ export const PRODUCTS: Product[] = [
           'fb84a8df-4295-4018-f286-a97a3ae64f00',
         ],
         sizes: [
-          { size: 'One Size', price: 4599, stock: 30 },
+          { size: 'One Size', price: 2990, stock: 30 },
         ],
       },
       {
@@ -763,7 +763,7 @@ export const PRODUCTS: Product[] = [
           '238bc6ee-f531-4a9e-37ac-0355f9fdb100',
         ],
         sizes: [
-          { size: 'One Size', price: 4599, stock: 30 },
+          { size: 'One Size', price: 2990, stock: 30 },
         ],
       },
     ],
@@ -832,7 +832,7 @@ export const PRODUCTS: Product[] = [
           'd8ec8e63-c3e9-423b-4e91-2b00a930ad00',
         ],
         sizes: [
-          { size: 'One Size', price: 9490, stock: 30 },
+          { size: 'One Size', price: 2990, stock: 30 },
         ],
       },
       {
@@ -851,7 +851,7 @@ export const PRODUCTS: Product[] = [
           '90cda76f-8f92-43cb-61bb-6195c85dc400',
         ],
         sizes: [
-          { size: 'One Size', price: 9490, stock: 30 },
+          { size: 'One Size', price: 2990, stock: 30 },
         ],
       },
       {
@@ -863,7 +863,7 @@ export const PRODUCTS: Product[] = [
           'ab63abc9-1e70-4183-90d4-715e48e75500',
         ],
         sizes: [
-          { size: 'One Size', price: 9490, stock: 30 },
+          { size: 'One Size', price: 2990, stock: 30 },
         ],
       },
     ],
@@ -1850,14 +1850,14 @@ export const PRODUCTS: Product[] = [
         color: 'Silver Brush',
         colorHex: '#C0C0C0',
         sizes: [
-          { size: 'One Size', price: 4009, stock: 30, sku: '8906206840193' },
+          { size: 'One Size', price: 2990, stock: 30, sku: '8906206840193' },
         ],
       },
       {
         color: 'Carbon Fiber',
         colorHex: '#2C2C2C',
         sizes: [
-          { size: 'One Size', price: 4009, stock: 30, sku: '8906206840209' },
+          { size: 'One Size', price: 2990, stock: 30, sku: '8906206840209' },
         ],
       },
       

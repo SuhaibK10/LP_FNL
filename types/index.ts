@@ -73,7 +73,8 @@ export interface Product {
   isFeatured?: boolean
   saleExclusive?: boolean
   mrp?: number  // strike-through "original" price, shown alongside the current price when set
-  recentPurchases?: number  // e.g. 131 — shows a quiet "X bought in the last 24 hours" badge on the PDP
+  recentPurchases?: number  // e.g. 174 — shows a quiet "X bought in the last 7 days" badge on the PDP
+  demoVideoId?: string  // Cloudinary VIDEO public_id — shows a play button next to Wishlist on the PDP
   hideSizeSelector?: boolean  // skip the size-chip row entirely — auto-selects the product's only size
   description: string
   // Cloudinary public_ids — transform on the fly via URL

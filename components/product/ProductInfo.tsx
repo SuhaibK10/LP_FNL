@@ -10,7 +10,7 @@ import { useState, useEffect }   from 'react'
 import { useRouter }             from 'next/navigation'
 import { motion }                from 'framer-motion'
 import Link                      from 'next/link'
-import { ShoppingBag, Heart, Ruler, Minus, Plus, ArrowRight, Star, Flame } from 'lucide-react'
+import { ShoppingBag, Heart, Ruler, Minus, Plus, ArrowRight, Star, Play } from 'lucide-react'
 import { featureIconFor }        from '@/lib/featureIcons'
 import type { Product, ProductSize } from '@/types'
 import { formatPrice, swatchRingColor } from '@/lib/utils'
@@ -20,6 +20,7 @@ import { useCartStore }          from '@/store/cartStore'
 import { thumbUrl }              from '@/lib/cloudflareImages'
 import { useWishlistStore }      from '@/store/wishlistStore'
 import { SizeGuideModal }        from '@/components/ui/SizeGuideModal'
+import { DemoVideoModal }        from '@/components/product/DemoVideoModal'
 import { ProductAccordions }     from '@/components/product/ProductDetails'
 import { MyntraBuyButton }       from '@/components/ui/MyntraBuyButton'
 import { getMyntraListing, getMyntraForSize } from '@/config/myntra'
@@ -43,6 +44,7 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
   const [wished,        setWished]        = useState(false)
   const [burst,         setBurst]         = useState(false)
   const [sizeGuideOpen, setSizeGuideOpen] = useState(false)
+  const [videoOpen,     setVideoOpen]     = useState(false)
 
   useEffect(() => { setWished(has(product.id)) }, [has, product.id])
 
@@ -100,13 +102,16 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
         <span className="lp-tag">{product.tag}</span>
       )}
 
-      <div>
+      {/* mb-0! / md:mb-1.5! overrides the parent's space-y-6 gap (applied as
+          margin-block-end on non-last children in Tailwind v4), which was
+          designed for the other sections, not this specific pairing */}
+      <div className="mb-2! md:mb-1.5!">
         <div className="flex items-start justify-between gap-3">
           <div>
             <p className="font-body text-[0.65rem] tracking-[0.14em] uppercase text-[var(--color-lp-muted)] mb-1">
               {product.category === 'trolley' ? 'Trolley Bag' : product.category}
             </p>
-            <h1 className="lp-heading-md">{product.name}</h1>
+            <h1 className="lp-heading-md max-md:text-[1.3rem]">{product.name}</h1>
           </div>
           <ShareButton
             title={product.name}
@@ -117,19 +122,10 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
       </div>
 
       {/* ── Recent purchases — quiet social proof, not a bargain-urgency banner ── */}
-      {product.recentPurchases && (
-        <div className="inline-flex items-center gap-1.5 rounded-full bg-lp-gold/10 px-2.5 py-1 w-fit">
-          <Flame size={12} strokeWidth={1.75} className="text-lp-gold shrink-0" />
-          <span className="font-body text-[0.7rem] text-lp-ink">
-            <span className="font-semibold">{product.recentPurchases}</span> bought in the last 24 hours
-          </span>
-        </div>
-      )}
-
       {/* ── Price ──────────────────────────────────────────────────────── */}
       {myntra && myntraTarget ? (
         <div className="space-y-2">
-          <p className="font-display text-[2rem] leading-none text-[var(--color-lp-ink)]">
+          <p className="font-display text-[1.2rem] md:text-[1.5rem] leading-none text-[var(--color-lp-ink)]">
             {selectedSize ? formatPrice(myntraTarget.price) : `From ${formatPrice(myntraTarget.price)}`}
             <span className="ml-3 font-body text-[1rem] text-[var(--color-lp-faint)] line-through align-middle">
               {formatPrice(price)}
@@ -152,7 +148,7 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
           </div>
         </div>
       ) : (
-      <p className="font-display text-[2rem] leading-none text-[var(--color-lp-ink)]">
+      <p className="font-display text-[1.2rem] md:text-[1.5rem] leading-none text-[var(--color-lp-ink)]">
         {selectedSize ? formatPrice(price) : `From ${formatPrice(price)}`}
       </p>
       )}
@@ -311,6 +307,19 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
         </motion.button>
         )}
 
+        {/* Play — product demo video, only shown when the product has one */}
+        {product.demoVideoId && (
+          <motion.button
+            type="button"
+            onClick={() => setVideoOpen(true)}
+            whileTap={{ scale: 0.9 }}
+            className="w-14 flex items-center justify-center border border-[var(--color-lp-border)] hover:border-[var(--color-lp-gold)] transition-colors duration-200 shrink-0"
+            aria-label="Play product demo video"
+          >
+            <Play size={18} strokeWidth={1.5} className="text-[var(--color-lp-muted)]" />
+          </motion.button>
+        )}
+
         {/* Wishlist */}
         <motion.button
           type="button"
@@ -409,6 +418,9 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
       </div>
 
       <SizeGuideModal open={sizeGuideOpen} onClose={() => setSizeGuideOpen(false)} />
+      {product.demoVideoId && (
+        <DemoVideoModal open={videoOpen} onClose={() => setVideoOpen(false)} videoId={product.demoVideoId} />
+      )}
     </div>
   )
 }
