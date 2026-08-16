@@ -9,6 +9,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import Image                                 from 'next/image'
 import Link                                  from 'next/link'
+import { useRouter }                         from 'next/navigation'
 import { motion, AnimatePresence }           from 'framer-motion'
 import { ArrowRight }                        from 'lucide-react'
 import { HERO_SLIDES }                       from '@/config/products'
@@ -53,6 +54,7 @@ function FlapText({ text }: { text: string }) {
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export function HeroSection() {
+  const router = useRouter()
   const slides = HERO_ROTATION_ENABLED ? HERO_SLIDES : HERO_SLIDES.slice(0, 1)
   const [current, setCurrent] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
@@ -106,8 +108,8 @@ export function HeroSection() {
     <section
       id="hero-section"
       ref={sectionRef}
-      className="relative h-[calc(82svh-1.75rem)] md:h-[calc(90vh-1.75rem)] md:min-h-150 md:max-h-240 overflow-hidden"
-      onClick={() => setIsPlaying(p => !p)}
+      className="relative h-[calc(82svh-1.75rem)] md:h-[calc(90vh-1.75rem)] md:min-h-150 md:max-h-240 overflow-hidden cursor-pointer"
+      onClick={() => router.push(ROUTES.shop)}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
