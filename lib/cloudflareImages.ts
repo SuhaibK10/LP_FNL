@@ -11,7 +11,10 @@ const BASE = `https://imagedelivery.net/${HASH}`
 
 // Build a Cloudflare Images delivery URL from an image ID + flexible-variant
 // param string (e.g. "w=600,h=800,fit=pad").
-export function cfImg(imageId: string, params = ''): string {
+export function cfImg(imageId: string | undefined, params = ''): string {
+  // No image assigned yet (e.g. a variant awaiting photography) — fall back
+  // to the placeholder instead of throwing on `undefined.startsWith`.
+  if (!imageId) return PLACEHOLDER_URL
   if (imageId.startsWith('/')) {
     // Local static asset (public/) — served as-is, no transform.
     return imageId

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function ShopPage() {
   return (
-    <div className="pt-12.5 md:pt-18">
+    <div className="pt-12.5 md:pt-18" style={{ backgroundColor: '#FFFFFF' }}>
       {/* Page header */}
       <div className="section-pad" style={{ paddingTop: '0.5rem', paddingBottom: 0 }}>
         <div className="container-lp">

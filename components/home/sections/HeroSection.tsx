@@ -17,6 +17,11 @@ import { ROUTES }                            from '@/lib/constants'
 
 const SLIDE_DURATION = 3500  // ms between auto-advances
 
+// Temporary, per Suhaib's request — locks the hero to just the first slide
+// (no auto-advance, no swipe/dot navigation to the rest) until he asks to
+// turn rotation back on. Flip back to true then; nothing else needs to change.
+const HERO_ROTATION_ENABLED = false
+
 // ─── FlapText: splits each word into characters that flip like departure boards
 function FlapText({ text }: { text: string }) {
   return (
@@ -48,6 +53,7 @@ function FlapText({ text }: { text: string }) {
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export function HeroSection() {
+  const slides = HERO_ROTATION_ENABLED ? HERO_SLIDES : HERO_SLIDES.slice(0, 1)
   const [current, setCurrent] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
   const [isVisible, setIsVisible] = useState(true)
@@ -55,8 +61,8 @@ export function HeroSection() {
   const touchStartX = useRef<number>(0)
   const touchEndX = useRef<number>(0)
   const next = useCallback(() => {
-    setCurrent((c) => (c + 1) % HERO_SLIDES.length)
-  }, [])
+    setCurrent((c) => (c + 1) % slides.length)
+  }, [slides.length])
 
   // Pause auto-advance once the hero scrolls out of view, so it isn't
   // re-animating (FlapText + crossfade) somewhere the user can't see.
@@ -79,9 +85,9 @@ export function HeroSection() {
     const delta = touchStartX.current - touchEndX.current
     if (Math.abs(delta) < 40) return
     if (delta > 0) {
-      setCurrent(c => (c + 1) % HERO_SLIDES.length)
+      setCurrent(c => (c + 1) % slides.length)
     } else {
-      setCurrent(c => (c - 1 + HERO_SLIDES.length) % HERO_SLIDES.length)
+      setCurrent(c => (c - 1 + slides.length) % slides.length)
     }
     setIsPlaying(false)
     setTimeout(() => setIsPlaying(true), SLIDE_DURATION)
@@ -94,7 +100,7 @@ export function HeroSection() {
     return () => clearInterval(id)
   }, [isPlaying, isVisible, next])
 
-  const slide = HERO_SLIDES[current]
+  const slide = slides[current]
 
   return (
     <section
@@ -225,9 +231,10 @@ export function HeroSection() {
           )}
         </div>
 
-        {/* ── Slide indicators ─────────────────────────────────────────── */}
+        {/* ── Slide indicators — hidden entirely while locked to one slide ── */}
+        {slides.length > 1 && (
         <div className="absolute bottom-8 right-6 md:right-12 flex gap-2 z-20">
-          {HERO_SLIDES.map((_, i) => (
+          {slides.map((_, i) => (
             <button
               key={i}
               onClick={() => {
@@ -251,6 +258,7 @@ export function HeroSection() {
             </button>
           ))}
         </div>
+        )}
       </div>
 
       {/* ── Scroll indicator ─────────────────────────────────────────────── */}

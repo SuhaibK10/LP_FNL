@@ -260,8 +260,8 @@ export function ProductGrid() {
               </span>
               <span
                 className={cn(
-                  'font-body text-[0.6rem] md:text-[0.7rem] tracking-[0.04em] uppercase text-center leading-tight',
-                  active ? 'text-lp-ink font-medium' : 'text-lp-faint'
+                  'font-body font-medium text-[0.6rem] md:text-[0.7rem] tracking-[0.04em] uppercase text-center leading-tight',
+                  active ? 'text-lp-ink' : 'text-lp-faint'
                 )}
               >
                 {c.label}
@@ -273,7 +273,7 @@ export function ProductGrid() {
 
       {/* ── Count + view toggle row ───────────────────────────────────── */}
       <div className="flex items-center justify-between mb-8 md:mb-10 border-b border-lp-border pb-3">
-        <span className="font-body text-[0.7rem] tracking-[0.08em] uppercase text-lp-faint">
+        <span className="font-body font-medium text-[0.7rem] tracking-[0.08em] uppercase text-lp-faint">
           {sorted.length} {sorted.length === 1 ? 'Product' : 'Products'}
         </span>
         <div className="flex items-center gap-1">

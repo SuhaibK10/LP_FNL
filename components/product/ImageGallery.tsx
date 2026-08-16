@@ -8,7 +8,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Image                        from 'next/image'
-import { Flame }                    from 'lucide-react'
+import { Flame, ZoomIn }            from 'lucide-react'
 import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
 import { pdpUrl, pdpZoomUrl, thumbUrl, PLACEHOLDER_URL, type ImageFit } from '@/lib/cloudflareImages'
 
@@ -139,16 +139,28 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
     setZoomed(false)
   }
 
-  // Desktop hover-zoom — magnifies under the cursor, tracking movement.
-  // Kicks off the high-res zoom image fetch on entry so it's usually
-  // already cached by the time the browser actually needs to paint it.
+  // Desktop click-to-zoom — a click toggles the magnifier, mouse movement
+  // then pans it under the cursor. Preload the high-res source on hover so
+  // it's usually already cached by the time the click actually lands.
   function handleMouseEnter() {
     const preload = new window.Image()
     preload.src = pdpZoomUrl(images[displayed], fitFor(displayed)) || PLACEHOLDER_URL
-    setZoomed(true)
+  }
+
+  function handleMouseClick(e: React.MouseEvent<HTMLDivElement>) {
+    // Guard against the synthetic click a touch tap also fires — touch
+    // devices already zoom via long-press and shouldn't double-trigger here.
+    if (typeof window !== 'undefined' && !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
+    const rect = e.currentTarget.getBoundingClientRect()
+    setZoomOrigin({
+      x: ((e.clientX - rect.left) / rect.width) * 100,
+      y: ((e.clientY - rect.top) / rect.height) * 100,
+    })
+    setZoomed((z) => !z)
   }
 
   function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+    if (!zoomed) return
     const rect = e.currentTarget.getBoundingClientRect()
     setZoomOrigin({
       x: ((e.clientX - rect.left) / rect.width) * 100,
@@ -162,7 +174,7 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
 
   return (
     <div className="flex flex-col gap-3">
-      {/* Main image — drag left/right to slide between images, press and hold to zoom */}
+      {/* Main image — drag left/right to slide between images, click (or press and hold on touch) to zoom */}
       <motion.div
         className="relative aspect-3/4 bg-lp-porcelain overflow-hidden touch-pan-y select-none"
         style={{ WebkitTouchCallout: 'none', cursor: zoomed ? 'crosshair' : 'zoom-in' }}
@@ -178,6 +190,7 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
         onMouseEnter={handleMouseEnter}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
+        onClick={handleMouseClick}
         onContextMenu={(e) => e.preventDefault()}
       >
         {recentPurchases && (
@@ -186,6 +199,14 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
             <span className="font-body text-[0.7rem] text-lp-ink">
               <span className="font-semibold">{recentPurchases}</span> bought in the last 7 days
             </span>
+          </div>
+        )}
+
+        {/* Desktop-only hint — touch devices already discover zoom via long-press */}
+        {!zoomed && (
+          <div className="absolute bottom-3 right-3 z-10 hidden pointer-fine:flex items-center gap-1.5 rounded-full bg-lp-porcelain/90 backdrop-blur-sm px-2.5 py-1 pointer-events-none">
+            <ZoomIn size={12} strokeWidth={1.75} className="text-lp-ink shrink-0" />
+            <span className="font-body text-[0.7rem] text-lp-ink">Click to zoom</span>
           </div>
         )}
 

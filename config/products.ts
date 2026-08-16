@@ -85,78 +85,100 @@ export const HERO_SLIDES: HeroSlide[] = [
 // ─── Products ─────────────────────────────────────────────────────────────────
 export const PRODUCTS: Product[] = [
 
-  // ── ShirtVault ──────────────────────────────────────────────────────────
+  // ── SkyTrail ────────────────────────────────────────────────────────────
   {
-    id: 'shirtvault',
-    metaTitle: 'Louis Polo ShirtVault Hard Shell Shirt Organizer',
-    metaDescription: 'Hard-shell shirt organizer that carries 4 to 5 formal shirts wrinkle-free. Slim polycarbonate case for business trips, weddings, and wardrobe storage.',
-    keywords: ['shirt organizer for travel', 'wrinkle free shirt case', 'formal shirt travel organizer', 'hard shell shirt holder', 'shirt storage case india'],
-    name: 'ShirtVault',
-    slug: 'shirtvault',
-    category: 'organizer',
+    id: 'skytrail',
+    imageFit: 'cover',
+    metaTitle: 'SkyTrail Hard Shell Trolley Bag in 20″, 24″ & 28″',
+    metaDescription: 'Premium polycarbonate hard-shell luggage with combination lock, 360° spinner wheels, and organised interior. Three sizes, 3-year warranty.',
+    keywords: ['premium hard shell luggage', 'combination lock suitcase', '360 spinner wheel trolley', 'lightweight travel luggage', 'check-in luggage india'],
+    name: 'SkyTrail',
+    slug: 'skytrail',
+    category: 'trolley',
     isFeatured: true,
-    saleExclusive: true,
-    hideSizeSelector: true,
-    hideSizeGuide: true,
-    mrp: 1699,
-    recentPurchases: 174,
+    mrp: 9099,
     description:
-      'Pack shirts, not wrinkles. ShirtVault carries 4 to 5 formal shirts in a slim hard shell that keeps collars sharp and folds crisp, in a suitcase or on a wardrobe shelf.',
+      'Built for the frequent flyer. SkyTrail combines a sleek hard shell ABS body with 360° spinner wheels and combination lock. Smooth, secure, and ready for boarding.',
     story: [
-      'Every frequent traveler knows the ritual: shirts folded with care at home, pulled out crushed at the hotel. ShirtVault ends it. The structured polycarbonate shell takes the pressure your luggage deals out, so the shirts inside never do. Collars hold their shape, folds stay where you set them, and the iron stays in the cupboard.',
-      'It earns its place between trips too. On a wardrobe shelf, ShirtVault keeps 4 to 5 shirts stacked, dust-free, and ready to lift out for the next early flight or big occasion.',
+      'SkyTrail is the suitcase we build for people who fly often enough to stop counting. The brief was simple: quiet looks, hard protection, and wheels that make an airport feel shorter.',
+      'Each of the three sizes is moulded from polycarbonate and ABS with reinforced corners. Inside, compression straps and zipped dividers keep a week of packing exactly where it started, and a three-dial combination lock closes over all of it.',
     ],
     highlights: [
       {
-        heading: 'Shirts arrive as they left',
-        body: 'The rigid shell absorbs the crush of packed luggage, so collars, cuffs, and folds come out exactly as you packed them. No hotel ironing board required.',
+        heading: 'Quiet on the outside',
+        body: 'Clean lines, a low-sheen finish, and no loud branding. SkyTrail is designed to look as at home in a hotel lobby as it does on a carousel, on day one and on day five hundred.',
       },
       {
-        heading: 'Slim enough for any suitcase',
-        body: 'ShirtVault slips flat into most cabin and check-in luggage, holding 4 to 5 formal shirts in the space careless folding would waste.',
+        heading: 'Serious underneath',
+        body: 'Reinforced corners absorb the knocks that travel deals out, while the hard shell holds its shape and finish through years of overhead bins and baggage holds.',
       },
       {
-        heading: 'A wardrobe upgrade at home',
-        body: 'Between trips it works as shirt storage: organized, protected from dust, and stacked neatly instead of slumping on a shelf.',
+        heading: 'Four wheels, no drag',
+        body: '360° spinner wheels roll silently in any direction, and the telescopic handle is tuned for one-handed steering through crowded terminals.',
       },
     ],
     specs: [
-      { label: 'Shell',    value: 'Polycarbonate (PC)' },
-      { label: 'Capacity', value: '4 to 5 formal shirts' },
-      { label: 'Finish',   value: 'Metallic silver gloss' },
-      { label: 'Closure',  value: 'Full-perimeter zip' },
-      { label: 'Use',      value: 'Travel packing and wardrobe storage' },
+      { label: 'Shell',        value: 'Polycarbonate + ABS' },
+      { label: 'Cabin (20″)',  value: '55.9 × 38.1 × 22.9 cm · approx. 2.5 kg · 48.6 L' },
+      { label: 'Medium (24″)', value: '66 × 44.5 × 26.7 cm · approx. 3.6 kg · 78.2 L' },
+      { label: 'Large (28″)',  value: '76.2 × 50.8 × 30.5 cm · approx. 4.3 kg · 117.9 L' },
+      { label: 'Lock',         value: '3-digit combination lock' },
+      { label: 'Wheels',       value: '360° spinner wheels' },
     ],
     warranty:
-      '1-year warranty covering manufacturing defects in the shell and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     faqs: [
       {
-        q: 'How many shirts does it hold?',
-        a: 'Four comfortably, five with a slimmer fold. Enough for a working week away, or a wedding weekend with backups.',
+        q: 'Which size do I need?',
+        a: 'The cabin handles two to four days, the 24″ covers a week, and the 28″ is built for a fortnight, or for one person packing for two.',
       },
       {
-        q: 'Will it fit inside a cabin suitcase?',
-        a: 'Yes. The case is deliberately slim so it lies flat inside most cabin and check-in luggage, with room around it for everything else.',
+        q: 'Will the cabin size be accepted on board?',
+        a: 'It is sized for standard cabin allowances on most domestic and international carriers. If your airline enforces strict gauge checks, compare the dimensions above with its published limits before you fly.',
       },
     ],
     images: [
-      '71bcef0c-eaf5-4466-fec4-4f5fdc357900',
+      // 'af0b6d0c-556b-4de2-12ff-dafb614c5600',
+      'f3a7cf1c-9113-4853-4d2d-5a2096b9fd00',
+      'f1babd8d-7612-4504-d53f-8fec0cdb9900',
+      '08e57a49-abcf-4615-4fdd-78b15cd72a00',
     ],
     features: [
-      { label: 'Holds 4 to 5 formal shirts' },
-      { label: 'Prevents wrinkles and creases' },
-      { label: 'Protects collars and structure' },
-      { label: 'Slim, suitcase-friendly profile' },
-      { label: 'Hard shell construction' },
-      { label: 'Dust-free wardrobe storage' },
+      { label: '360° spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Hard shell ABS' },
+      { label: 'Anti-theft zipper' },
+      { label: 'Cross packing straps' },
+      { label: 'Impact resistant' },
       { label: 'Lightweight build' },
     ],
     variants: [
       {
-        color: 'Metallic Silver',
-        colorHex: '#C9CBD1',
+        color: 'Charcoal',
+        colorHex: '#3D3D3D',
         sizes: [
-          { size: 'One Size', price: 1499, stock: 50 },
+          { size: 'Cabin', price: 2749, stock: 50, sku: '8906206840292' },
+          { size: 'Medium', price: 3099, stock: 40, sku: '8906206840308' },
+          { size: 'Large', price: 3449, stock: 30, sku: '8906206840315' },
+        ],
+      },
+      {
+        color: 'Grey',
+        colorHex: '#9E9E9E',
+        sizes: [
+          { size: 'Cabin', price: 2749, stock: 50, sku: '8906206840346' },
+          { size: 'Medium', price: 3099, stock: 40, sku: '8906206840339' },
+          { size: 'Large', price: 3449, stock: 30, sku: '8906206840322' },
+        ],
+      },
+      {
+        color: 'Midnight Blue',
+        colorHex: '#586483',
+        sizes: [
+          { size: 'Cabin', price: 2749, stock: 50 },
+          { size: 'Medium', price: 3099, stock: 40 },
+          { size: 'Large', price: 3449, stock: 30 },
         ],
       },
     ],
@@ -216,7 +238,7 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      '91562a63-93b2-4c22-7aab-51d0d8fae000',
+      // '91562a63-93b2-4c22-7aab-51d0d8fae000',
       'cce20161-5cb9-44aa-8c29-3a1251e92d00',
       '5dec047a-a87f-48d3-5ea4-29abd19cab00',
       'f5e08ff5-f9ff-4315-ccf0-0957d5437500',
@@ -237,7 +259,7 @@ export const PRODUCTS: Product[] = [
         bodyHex: '#4A4945',
         lowStock: true,
         images: [
-          '91562a63-93b2-4c22-7aab-51d0d8fae000',
+          // '91562a63-93b2-4c22-7aab-51d0d8fae000',
           'cce20161-5cb9-44aa-8c29-3a1251e92d00',
           'b68fe362-f1e5-4d94-8e75-c3fe3c208800',
           'dab5cd11-d80c-498a-f842-0f58fa656d00',
@@ -253,7 +275,7 @@ export const PRODUCTS: Product[] = [
         colorHex: '#C0392B',
         bodyHex: '#3E3E3E',
         images: [
-          '70440d78-95e1-4475-c1a4-cdcbfc291000',
+          // '70440d78-95e1-4475-c1a4-cdcbfc291000',
           '5dec047a-a87f-48d3-5ea4-29abd19cab00',
           'b9dc5c11-9997-4ed1-8cbf-156fc8b8cf00',
           'b8b0c4f9-6b7f-457f-3b62-49fd4001c200',
@@ -270,7 +292,7 @@ export const PRODUCTS: Product[] = [
         bodyHex: '#BDBDB6',
         lowStock: true,
         images: [
-          'f5e08ff5-f9ff-4315-ccf0-0957d5437500',
+          // 'f5e08ff5-f9ff-4315-ccf0-0957d5437500',
           '2cdb284d-9af8-4d6c-f0ea-73bf4bf9e500',
           '797a8d85-c2a9-49a8-15c8-4a633d2aa700',
           '54d5dd26-87a5-4ebe-3792-95af17bf2800',
@@ -287,7 +309,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          '0f4b7b11-dd2d-4d8f-c502-58ea01177400',
+          // '0f4b7b11-dd2d-4d8f-c502-58ea01177400',
           '9bac92e3-74a8-42ef-d579-d01830e80a00',
           '9eff1fe4-2561-496d-5734-2546f9ceb200',
           '9aac96ca-d8a7-4f2c-6653-9a2d88ce4a00',
@@ -304,100 +326,80 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
-  // ── SkyTrail ────────────────────────────────────────────────────────────
+  // ── ShirtVault ──────────────────────────────────────────────────────────
   {
-    id: 'skytrail',
+    id: 'shirtvault',
     imageFit: 'cover',
-    metaTitle: 'SkyTrail Hard Shell Trolley Bag in 20″, 24″ & 28″',
-    metaDescription: 'Premium polycarbonate hard-shell luggage with combination lock, 360° spinner wheels, and organised interior. Three sizes, 3-year warranty.',
-    keywords: ['premium hard shell luggage', 'combination lock suitcase', '360 spinner wheel trolley', 'lightweight travel luggage', 'check-in luggage india'],
-    name: 'SkyTrail',
-    slug: 'skytrail',
-    category: 'trolley',
+    metaTitle: 'Louis Polo ShirtVault Hard Shell Shirt Organizer',
+    metaDescription: 'Hard-shell shirt organizer that carries 4 to 5 formal shirts wrinkle-free. Slim polycarbonate case for business trips, weddings, and wardrobe storage.',
+    keywords: ['shirt organizer for travel', 'wrinkle free shirt case', 'formal shirt travel organizer', 'hard shell shirt holder', 'shirt storage case india'],
+    name: 'ShirtVault',
+    slug: 'shirtvault',
+    category: 'organizer',
     isFeatured: true,
-    mrp: 9099,
+    saleExclusive: true,
+    hideSizeSelector: true,
+    hideSizeGuide: true,
+    mrp: 1699,
+    recentPurchases: 174,
     description:
-      'Built for the frequent flyer. SkyTrail combines a sleek hard shell ABS body with 360° spinner wheels and combination lock. Smooth, secure, and ready for boarding.',
+      'Pack shirts, not wrinkles. ShirtVault carries 4 to 5 formal shirts in a slim hard shell that keeps collars sharp and folds crisp, in a suitcase or on a wardrobe shelf.',
     story: [
-      'SkyTrail is the suitcase we build for people who fly often enough to stop counting. The brief was simple: quiet looks, hard protection, and wheels that make an airport feel shorter.',
-      'Each of the three sizes is moulded from polycarbonate and ABS with reinforced corners. Inside, compression straps and zipped dividers keep a week of packing exactly where it started, and a three-dial combination lock closes over all of it.',
+      'Every frequent traveler knows the ritual: shirts folded with care at home, pulled out crushed at the hotel. ShirtVault ends it. The structured polycarbonate shell takes the pressure your luggage deals out, so the shirts inside never do. Collars hold their shape, folds stay where you set them, and the iron stays in the cupboard.',
+      'It earns its place between trips too. On a wardrobe shelf, ShirtVault keeps 4 to 5 shirts stacked, dust-free, and ready to lift out for the next early flight or big occasion.',
     ],
     highlights: [
       {
-        heading: 'Quiet on the outside',
-        body: 'Clean lines, a low-sheen finish, and no loud branding. SkyTrail is designed to look as at home in a hotel lobby as it does on a carousel, on day one and on day five hundred.',
+        heading: 'Shirts arrive as they left',
+        body: 'The rigid shell absorbs the crush of packed luggage, so collars, cuffs, and folds come out exactly as you packed them. No hotel ironing board required.',
       },
       {
-        heading: 'Serious underneath',
-        body: 'Reinforced corners absorb the knocks that travel deals out, while the hard shell holds its shape and finish through years of overhead bins and baggage holds.',
+        heading: 'Slim enough for any suitcase',
+        body: 'ShirtVault slips flat into most cabin and check-in luggage, holding 4 to 5 formal shirts in the space careless folding would waste.',
       },
       {
-        heading: 'Four wheels, no drag',
-        body: '360° spinner wheels roll silently in any direction, and the telescopic handle is tuned for one-handed steering through crowded terminals.',
+        heading: 'A wardrobe upgrade at home',
+        body: 'Between trips it works as shirt storage: organized, protected from dust, and stacked neatly instead of slumping on a shelf.',
       },
     ],
     specs: [
-      { label: 'Shell',        value: 'Polycarbonate + ABS' },
-      { label: 'Cabin (20″)',  value: '55.9 × 38.1 × 22.9 cm · approx. 2.5 kg · 48.6 L' },
-      { label: 'Medium (24″)', value: '66 × 44.5 × 26.7 cm · approx. 3.6 kg · 78.2 L' },
-      { label: 'Large (28″)',  value: '76.2 × 50.8 × 30.5 cm · approx. 4.3 kg · 117.9 L' },
-      { label: 'Lock',         value: '3-digit combination lock' },
-      { label: 'Wheels',       value: '360° spinner wheels' },
+      { label: 'Shell',    value: 'Polycarbonate (PC)' },
+      { label: 'Capacity', value: '4 to 5 formal shirts' },
+      { label: 'Finish',   value: 'Metallic silver gloss' },
+      { label: 'Closure',  value: 'Full-perimeter zip' },
+      { label: 'Use',      value: 'Travel packing and wardrobe storage' },
     ],
     warranty:
-      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+      '1-year warranty covering manufacturing defects in the shell and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     faqs: [
       {
-        q: 'Which size do I need?',
-        a: 'The cabin handles two to four days, the 24″ covers a week, and the 28″ is built for a fortnight, or for one person packing for two.',
+        q: 'How many shirts does it hold?',
+        a: 'Four comfortably, five with a slimmer fold. Enough for a working week away, or a wedding weekend with backups.',
       },
       {
-        q: 'Will the cabin size be accepted on board?',
-        a: 'It is sized for standard cabin allowances on most domestic and international carriers. If your airline enforces strict gauge checks, compare the dimensions above with its published limits before you fly.',
+        q: 'Will it fit inside a cabin suitcase?',
+        a: 'Yes. The case is deliberately slim so it lies flat inside most cabin and check-in luggage, with room around it for everything else.',
       },
     ],
     images: [
-      'af0b6d0c-556b-4de2-12ff-dafb614c5600',
-      'f3a7cf1c-9113-4853-4d2d-5a2096b9fd00',
-      'f1babd8d-7612-4504-d53f-8fec0cdb9900',
-      '08e57a49-abcf-4615-4fdd-78b15cd72a00',
+      // '584aba3f-66ed-4084-df03-ba0e5e625100',
+      '71bcef0c-eaf5-4466-fec4-4f5fdc357900',
     ],
     features: [
-      { label: '360° spinner wheels' },
-      { label: 'Combination lock' },
-      { label: 'Telescopic handle' },
-      { label: 'Hard shell ABS' },
-      { label: 'Anti-theft zipper' },
-      { label: 'Cross packing straps' },
-      { label: 'Impact resistant' },
+      { label: 'Holds 4 to 5 formal shirts' },
+      { label: 'Prevents wrinkles and creases' },
+      { label: 'Protects collars and structure' },
+      { label: 'Slim, suitcase-friendly profile' },
+      { label: 'Hard shell construction' },
+      { label: 'Dust-free wardrobe storage' },
       { label: 'Lightweight build' },
     ],
     variants: [
       {
-        color: 'Charcoal',
-        colorHex: '#3D3D3D',
+        color: 'Metallic Silver',
+        colorHex: '#C9CBD1',
         sizes: [
-          { size: 'Cabin', price: 2749, stock: 50, sku: '8906206840292' },
-          { size: 'Medium', price: 3099, stock: 40, sku: '8906206840308' },
-          { size: 'Large', price: 3449, stock: 30, sku: '8906206840315' },
-        ],
-      },
-      {
-        color: 'Grey',
-        colorHex: '#9E9E9E',
-        sizes: [
-          { size: 'Cabin', price: 2749, stock: 50, sku: '8906206840346' },
-          { size: 'Medium', price: 3099, stock: 40, sku: '8906206840339' },
-          { size: 'Large', price: 3449, stock: 30, sku: '8906206840322' },
-        ],
-      },
-      {
-        color: 'Midnight Blue',
-        colorHex: '#586483',
-        sizes: [
-          { size: 'Cabin', price: 2749, stock: 50 },
-          { size: 'Medium', price: 3099, stock: 40 },
-          { size: 'Large', price: 3449, stock: 30 },
+          { size: 'One Size', price: 1499, stock: 50 },
         ],
       },
     ],
@@ -443,7 +445,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['17bd67b2-83af-4cb5-a007-7f298a60ce00'],
+    images: ['c37ae5dd-9ab2-4ae3-6748-056327e9b400'],
     features: [
       { label: '360° silent spinner wheels' },
       { label: 'TSA combination lock' },
@@ -461,7 +463,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          '17bd67b2-83af-4cb5-a007-7f298a60ce00',
+          // 'c37ae5dd-9ab2-4ae3-6748-056327e9b400',
           '8b09e66c-ff43-4536-ca92-aeabf1c48600',
           '67ed6fe5-32cc-4d7d-bd29-b196ed533100',
           '4f727a22-c567-48b0-24be-de395e71df00',
@@ -538,7 +540,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'ca24fd22-9f74-48a8-0746-303b00b57200',
+          // 'ca24fd22-9f74-48a8-0746-303b00b57200',
           '51fd24f1-7e9b-47ad-bb8c-4f7aa6c17000',
           'ffb6ea27-cb53-4a4d-9d1a-df63f83e2800',
           '17cc8ba4-8012-4f87-3fe8-5b2d218cf800',
@@ -553,7 +555,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          '6ea33c4f-b82e-4894-f322-7f5b49d41700',
+          // '6ea33c4f-b82e-4894-f322-7f5b49d41700',
           '9ec1ded8-7a3d-4a31-5189-83a00ad8d900',
           '63d690dc-7fce-4b89-0510-73d6252b0f00',
           '76246c0d-eb87-4c93-85de-e8e725980300',
@@ -570,7 +572,7 @@ export const PRODUCTS: Product[] = [
         // account's credit limit is exhausted. Intentionally the same shots
         // as the Black variant.
         images: [
-          '8b7c927d-4e8d-4bf6-51c4-ed7a7e9f0100',
+          // '8b7c927d-4e8d-4bf6-51c4-ed7a7e9f0100',
           'e1484125-65e4-4dcd-b103-67cfd1c8ed00',
           '293576b6-5990-4a58-6a18-db70626a5e00',
         ],
@@ -585,6 +587,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'apex',
     mrp: 5250,
+    demoVideoId: 'ac2c3cbed74ec63cd72630b8b4c9bf62',
     metaTitle: 'Apex Executive Backpack with USB Charging Port',
     metaDescription: 'Apex pairs a padded laptop compartment with an external USB charging port, a rear luggage trolley sleeve, and premium water-resistant fabric. Built for office, travel, and daily commute.',
     keywords: ['executive backpack', 'usb laptop backpack', 'water resistant backpack', 'business travel backpack', 'college backpack india'],
@@ -680,6 +683,7 @@ export const PRODUCTS: Product[] = [
     id: 'metrogrid',
     mrp: 4390,
     imageFit: 'cover',
+    demoVideoId: '1eb99e106f005a52d9972949e527de8b',
     metaTitle: 'MetroGrid Executive Laptop Backpack',
     metaDescription: 'MetroGrid pairs professional styling with practical organisation: dedicated laptop and tablet compartments, quick-access storage, and a rear trolley sleeve for business travel.',
     keywords: ['executive laptop backpack', 'business travel backpack', 'organizer backpack for laptop', 'professional backpack india', 'commuter backpack with trolley sleeve'],
@@ -732,7 +736,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'cb41fa93-7cc6-46da-ed54-309226c4d200',
+          // 'cb41fa93-7cc6-46da-ed54-309226c4d200',
           '17041633-e200-49d9-1d86-2f1f6f6ba800',
           'd9b76467-0e4e-44a3-6eef-18eb74d2cf00',
           '8321af3d-25d7-4863-d287-f0ae6a74f300',
@@ -747,7 +751,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'd9bce061-5b02-46e9-7270-78a105f69100',
+          // 'd9bce061-5b02-46e9-7270-78a105f69100',
           '9bf9de59-d569-47bf-c5fb-16d1a16df000',
           '47a8c3dd-c89b-4d1c-075b-234ed9f8af00',
           'a6ef3e72-fbef-47ba-80ec-aeca8218e200',
@@ -764,7 +768,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          '1d9902f8-0210-4b00-890b-16833dd5fa00',
+          // '1d9902f8-0210-4b00-890b-16833dd5fa00',
           '5c2adad1-1fc9-4e2b-445f-9f47434bb700',
           '238bc6ee-f531-4a9e-37ac-0355f9fdb100',
         ],
@@ -778,6 +782,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'workgrid',
     mrp: 4590,
+    demoVideoId: '8f322ddea596b20c6d9b5028f768988f',
     metaTitle: 'WorkGrid Executive Laptop Backpack',
     metaDescription: 'WorkGrid is a structured laptop backpack for the commute and business travel: dedicated laptop and tablet compartments, quick-access storage, and a rear trolley sleeve.',
     keywords: ['laptop backpack for men', 'business travel backpack', 'office commute backpack', 'executive laptop bag', 'backpack with trolley sleeve'],
@@ -875,6 +880,193 @@ export const PRODUCTS: Product[] = [
       },
     ],
   },
+  // ── VelocityPro ──────────────────────────────────────────────────────────
+  {
+    id: 'velocitypro',
+    demoVideoId: '5ab8e342df61ced6a63ddf057acd832f',
+    metaTitle: 'VelocityPro USB Laptop Travel Backpack',
+    metaDescription: 'VelocityPro pairs a padded laptop compartment with an external USB charging port, a concealed valuables pocket, and a rear luggage trolley sleeve. Built for commuting, business travel, and college.',
+    keywords: ['usb laptop backpack', 'travel backpack with charging port', 'padded laptop compartment backpack', 'commuter backpack india', 'anti-theft backpack'],
+    name: 'VelocityPro Ergonomic Backpack',
+    slug: 'velocitypro',
+    category: 'backpack',
+    hideSizeSelector: true,
+    description:
+      'Built for a day that never really stops moving. VelocityPro carries a padded laptop and tablet compartment, an external USB charging port, a concealed pocket for valuables, and a rear trolley sleeve, on breathable straps tuned for the whole commute.',
+    story: [
+      'VelocityPro is named for the pace it is built to keep up with: platform to platform, meeting to meeting, gate to gate. Independent compartments for a laptop, a tablet, documents, and accessories mean nothing has to come out just to find one thing, and a concealed back pocket keeps a wallet or passport against your back instead of in a side pocket someone else could reach.',
+      'An external USB port lets a power bank charge a phone without ever opening the main compartment, and a rear luggage trolley sleeve lets VelocityPro ride a suitcase handle on travel days. Padded straps, breathable mesh cushioning, and an adjustable sternum strap carry the rest.',
+    ],
+    highlights: [
+      {
+        heading: 'Everything has its compartment',
+        body: 'Separate storage for a laptop, tablet, documents, and accessories keeps a rushed morning from turning into a search through one deep pocket.',
+      },
+      {
+        heading: 'A pocket only you can reach',
+        body: 'A concealed back-panel pocket keeps a wallet, passport, or phone against your back, out of reach in a crowded platform or queue.',
+      },
+      {
+        heading: 'Charged and travel-ready',
+        body: 'An external USB port keeps a power bank within reach for on-the-go charging, and a rear trolley sleeve lets VelocityPro ride a suitcase handle on travel days.',
+      },
+    ],
+    specs: [
+      { label: 'Size',       value: '19″' },
+      { label: 'Interior',   value: 'Dedicated laptop and tablet compartments, document sleeves' },
+      { label: 'Charging',   value: 'External USB port (power bank not included)' },
+      { label: 'Security',   value: 'Concealed back-panel pocket for valuables' },
+      { label: 'Carry',      value: 'Padded shoulder straps, adjustable sternum strap, rear trolley sleeve' },
+      { label: 'Back panel', value: 'Breathable mesh cushioning' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [/* 'fe13ccaa-0a68-473a-60ed-096585b04800' */],
+    features: [
+      { label: 'Comfortable fabric lining' },
+      { label: 'Lightweight build' },
+      { label: 'Smooth zipper' },
+      { label: 'Luggage mounting sleeve' },
+      { label: 'External USB charging port' },
+      { label: 'Concealed valuables pocket' },
+      { label: 'Spacious compartments' },
+    ],
+    variants: [
+      {
+        color: 'Black',
+        colorHex: '#212121',
+        images: [
+          'ad7729f3-7113-4021-9c36-07633a90a000',
+          '2c808313-bfe2-44f3-2f34-2a9534dd2b00',
+          '721e5319-7f6c-4790-ccf6-e9bc88e3a500',
+          '50f8c1d8-4baf-42fa-e194-124c91c74300',
+          'cdf0c59f-992e-4309-6c86-8e5f0b0c3400',
+          'bda27ae1-34a9-4437-76cf-bf2d4debc000',
+          'ed23e7b5-6e33-4e6d-e2c9-61a91d7d4200',
+          'a72e0ef1-c87d-46dc-7702-50f4d78f0300',
+        ],
+        sizes: [
+          { size: 'One Size', price: 9490, stock: 30 },
+        ],
+      },
+      {
+        color: 'Blue',
+        colorHex: '#1E4B8C',
+        images: [
+          // '7896cdf8-9b36-4af9-088e-c97acd76b600',
+          '03d62f8a-8f3b-4b5f-6a2a-eae6ed99a300',
+          '73a05ac5-cbce-4d2d-d558-58a5c7e1d300',
+        ],
+        sizes: [
+          { size: 'One Size', price: 9490, stock: 30 },
+        ],
+      },
+      {
+        color: 'Grey',
+        colorHex: '#9E9E9E',
+        images: [
+          '09f76b12-b10f-4c05-c7f1-1ce4a44c9f00',
+          '1501db58-f8bd-43c8-dfd3-41b3709dd600',
+          '5f470c22-9f88-4c7a-36c3-5f78dc2bcf00',
+          'dd7691b4-6208-46f8-e160-823ae6697c00',
+        ],
+        sizes: [
+          { size: 'One Size', price: 9490, stock: 30 },
+        ],
+      },
+    ],
+  },
+  // ── TechTrek ─────────────────────────────────────────────────────────────
+  // Ported from louispoloworld.com. Images pending — awaiting Cloudflare
+  // Images upload (source photos currently live on assets.louispoloworld.com,
+  // a different host, so IDs can't be filled in until re-uploaded). Once you
+  // have the IDs, drop them into `images` below and each variant's `images`.
+  // Commented out of the catalog until images are ready.
+  /*
+  {
+    id: 'techtrek',
+    imageFit: 'cover',
+    metaTitle: 'TechTrek Business Laptop & Travel Backpack',
+    metaDescription: 'Professional multi-compartment laptop and travel backpack for work, commuting, study, and short trips — organised tech storage, padded straps, and a rear trolley sleeve.',
+    keywords: ['business laptop backpack', 'travel backpack for work', 'organizer backpack for laptop', 'commuter backpack india', 'backpack with trolley sleeve'],
+    name: 'TechTrek Business Laptop & Travel Backpack',
+    slug: 'techtrek',
+    category: 'backpack',
+    hideSizeSelector: true,
+    description:
+      'A professional multi-compartment laptop and travel backpack designed for work, commuting, study, and short trips. TechTrek carries dedicated rear laptop storage, a spacious clamshell main compartment, and multiple organiser pockets, on padded straps built for the whole day.',
+    story: [
+      'TechTrek opens like a suitcase, not a sack. The clamshell main compartment lays flat and securing straps hold packing in place, whether that is a change of clothes for an overnight or the notebooks and cables a working day collects.',
+      'A dedicated rear compartment keeps a laptop separate from the rest, and organiser pockets throughout hold chargers, pens, and documents exactly where they were left. Padded straps, a breathable mesh back panel, and a cushioned top handle carry it the rest of the way, from a morning commute to a short trip away.',
+    ],
+    highlights: [
+      {
+        heading: 'Opens flat, packs clean',
+        body: 'A clamshell-style main compartment with securing straps lays fully open for packing or a security tray, and holds everything in place once it is zipped shut again.',
+      },
+      {
+        heading: 'A place for every cable',
+        body: 'Organised compartments keep a laptop and its accessories, from chargers to cables to documents, out of the single deep pocket where they usually get lost.',
+      },
+      {
+        heading: 'Built for a full day',
+        body: 'Padded adjustable shoulder straps, a breathable mesh back panel, and a cushioned top handle keep TechTrek comfortable from the commute to the boarding gate.',
+      },
+    ],
+    specs: [
+      { label: 'Size',       value: '19″' },
+      { label: 'Interior',   value: 'Clamshell main compartment with securing straps, dedicated laptop storage' },
+      { label: 'Storage',    value: 'Multiple organiser pockets, side compartments' },
+      { label: 'Carry',      value: 'Padded adjustable shoulder straps, cushioned top handle, rear trolley sleeve' },
+      { label: 'Back panel', value: 'Breathable mesh cushioning' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [],
+    features: [
+      { label: 'Comfortable fabric lining' },
+      { label: 'Wear resistant' },
+      { label: 'Lightweight build' },
+      { label: 'Smooth zipper' },
+      { label: 'Luggage mounting sleeve' },
+      { label: 'Clamshell main compartment' },
+      { label: 'Spacious compartments' },
+    ],
+    variants: [
+      {
+        color: 'Black',
+        colorHex: '#212121',
+        // Source (awaiting Cloudflare upload): techtrek-backpack-black-05,
+        // -06, -07, -08, -09, -10 (assets.louispoloworld.com)
+        images: [],
+        sizes: [
+          { size: 'One Size', price: 9490, stock: 30 },
+        ],
+      },
+      {
+        color: 'Blue',
+        colorHex: '#1E4B8C',
+        // No source photos published on louispoloworld.com yet — placeholder
+        // until real shots exist.
+        images: [],
+        sizes: [
+          { size: 'One Size', price: 9490, stock: 30 },
+        ],
+      },
+      {
+        color: 'Grey',
+        colorHex: '#9E9E9E',
+        // Source (awaiting Cloudflare upload): techtrek-backpack-grey-02, -03
+        // (assets.louispoloworld.com)
+        images: [],
+        sizes: [
+          { size: 'One Size', price: 9490, stock: 30 },
+        ],
+      },
+    ],
+  },
+  */
+
   // ── Urban Pro Backpack ───────────────────────────────────────────────────
   {
     id: 'urban-pro-backpack',
@@ -1032,7 +1224,7 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      'a546bc30-7f2f-4b64-2c60-afe7c18cd500',
+      // 'a546bc30-7f2f-4b64-2c60-afe7c18cd500',
       'acbb1811-cbd1-4496-9e85-cad771ad4d00',
       '45538b81-1170-40a2-cbc5-8f0cee2c3200',
     ],
@@ -1122,7 +1314,7 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      '89b97949-0415-4659-15c9-64ab4156a400',
+      // '89b97949-0415-4659-15c9-64ab4156a400',
       'c9d701b2-8947-4f3b-8877-d745394d0300',
       '56b911b3-1fb1-45f6-196c-27e3cf0dc900',
       '3c7f26af-0a00-4469-105e-d5e590b46500',
@@ -1600,7 +1792,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'c2cb6254-efef-4044-4848-636e2adaeb00',
+          // 'c2cb6254-efef-4044-4848-636e2adaeb00',
           '0cd7a434-6f5e-4109-9e4f-68c6cb868a00',
           '11656b9a-b790-43e6-fa42-ca6d7142bf00',
         ],
@@ -1616,7 +1808,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'c3d07c68-babc-421d-4e51-6e905f91c100',
+          // 'c3d07c68-babc-421d-4e51-6e905f91c100',
           'f3ddc941-cb1b-4073-0cf6-0e1055317900',
         ],
         sizes: [
@@ -1631,7 +1823,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'c0677602-1f28-464c-9227-6984065a1800',
+          // 'c0677602-1f28-464c-9227-6984065a1800',
           'e6d1d605-3c9e-4b90-7be9-6a05bd8ba100',
         ],
         sizes: [

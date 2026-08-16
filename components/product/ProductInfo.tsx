@@ -395,7 +395,7 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
       <div className="lp-hr" />
 
       {/* ── Description ────────────────────────────────────────────────── */}
-      <p className="font-body text-[0.9rem] text-[var(--color-lp-muted)] leading-relaxed">
+      <p className="font-body font-medium text-[0.9rem] text-[var(--color-lp-muted)] leading-relaxed">
         {product.description}
       </p>
 
@@ -406,9 +406,9 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
           return (
             <div key={label} className="flex items-center gap-2.5">
               <span className="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--color-lp-cream)] shrink-0">
-                <Icon size={15} strokeWidth={1.5} className="text-[var(--color-lp-gold)]" />
+                <Icon size={15} strokeWidth={2} className="text-[var(--color-lp-gold)]" />
               </span>
-              <span className="font-body text-[0.78rem] leading-snug text-[var(--color-lp-ink)]">{label}</span>
+              <span className="font-body font-medium text-[0.78rem] leading-snug text-[var(--color-lp-ink)]">{label}</span>
             </div>
           )
         })}

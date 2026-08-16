@@ -151,7 +151,7 @@ export function ProductCard({ product }: ProductCardProps) {
         onClick={saveShopScroll}
         onMouseEnter={prefetchPdpImage}
         onTouchStart={prefetchPdpImage}
-        className={`relative block aspect-[3/4] overflow-hidden rounded-md bg-[var(--color-lp-porcelain)] mb-3 ${product.imageFit === 'cover' ? 'border-[3px] border-lp-border-strong' : ''}`}
+        className="relative block aspect-[3/4] overflow-hidden rounded-md bg-[var(--color-lp-porcelain)] mb-3 border-[3px] border-lp-border-strong"
       >
         <div
           className="absolute inset-0"
@@ -266,11 +266,11 @@ export function ProductCard({ product }: ProductCardProps) {
         </motion.button>
 
         {/* Quick shop overlay */}
-        <div className="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-[var(--color-lp-ink)]/90 backdrop-blur-sm py-3 flex items-center justify-center gap-2">
-          <span className="font-body text-[0.68rem] tracking-[0.12em] uppercase text-[var(--color-lp-porcelain)]">
+        <div className="absolute bottom-1 left-1/2 -translate-x-1/2 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 bg-[var(--color-lp-ink)]/70 backdrop-blur-sm rounded-full px-3.5 py-1.5 flex items-center gap-1.5">
+          <span className="font-body text-[0.62rem] tracking-[0.1em] uppercase text-[var(--color-lp-porcelain)]">
             View Product
           </span>
-          <ArrowRight size={12} strokeWidth={1.5} className="text-[var(--color-lp-gold)]" />
+          <ArrowRight size={10} strokeWidth={1.5} className="text-[var(--color-lp-gold)]" />
         </div>
       </Link>
 

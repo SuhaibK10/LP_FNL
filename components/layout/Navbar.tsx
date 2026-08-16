@@ -266,7 +266,7 @@ export function Navbar() {
                     alt="Louis Polo"
                     width={100}
                     height={97}
-                    className="h-12 lg:h-17 w-auto object-contain"
+                    className="h-12 lg:h-16 w-auto object-contain"
                     priority
                     unoptimized
                   />

@@ -67,8 +67,15 @@ export default async function ProductPage({ params, searchParams }: Props) {
           </span>
         </div>
 
-        {/* PDP grid */}
-        <ProductPageClient product={product} defaultColor={color} />
+        {/* PDP grid — keyed by slug so navigating PDP-to-PDP (no full page
+            reload) remounts the whole client tree instead of reusing the
+            instance. Without this, ImageGallery's `isFirstLoad` ref (which
+            gates the hero image's `priority`/preload fast-path) and
+            ProductPageClient's `colorIndex` state would carry over from
+            whichever product was viewed first, silently losing the fast
+            image load and the correct starting color on every product after
+            the first one in a session. */}
+        <ProductPageClient key={product.slug} product={product} defaultColor={color} />
 
         {/* Long-form editorial detail */}
         <ProductStory product={product} />
