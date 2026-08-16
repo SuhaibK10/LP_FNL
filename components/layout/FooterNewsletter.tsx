@@ -42,7 +42,7 @@ export function FooterNewsletter() {
 
   return (
     <form onSubmit={handleSubmit} className="w-full md:max-w-sm md:justify-self-end" noValidate>
-      <div className="flex items-center gap-3 border-b border-[#C9A96E]/30 focus-within:border-[var(--color-lp-gold)] transition-colors duration-300 pb-2">
+      <div className="flex items-center gap-3 border-b border-[var(--color-lp-gold)]/30 focus-within:border-[var(--color-lp-gold)] transition-colors duration-300 pb-2">
         <input
           type="email"
           value={email}

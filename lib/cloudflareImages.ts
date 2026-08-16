@@ -41,23 +41,35 @@ export const heroUrl = (id: string) =>
 export const heroUrlMobile = (id: string) =>
   cfImg(id, `w=900,fit=scale-down,${Q_GOOD}`)
 
+// Product photo fit — 'pad' is the default: a transparent cutout padded onto
+// a flat background (the whole catalog so far). 'cover' fills the frame
+// edge-to-edge instead, cropping to fit, for full-bleed lifestyle/studio
+// shots that carry their own backdrop rather than a removed background.
+// Pass a product's `imageFit` field through from config/products.ts.
+export type ImageFit = 'pad' | 'cover'
+
+const fitParams = (fit: ImageFit, w: number, h: number) =>
+  fit === 'cover'
+    ? `w=${w},h=${h},fit=cover,gravity=auto`
+    : `w=${w},h=${h},fit=pad,background=%23F2F2F2`
+
 // Product card thumbnail — 3:4 portrait
-export const cardUrl = (id: string) =>
-  cfImg(id, `w=600,h=800,fit=pad,background=%23F2F2F2,${Q_ECO}`)
+export const cardUrl = (id: string, fit: ImageFit = 'pad') =>
+  cfImg(id, `${fitParams(fit, 600, 800)},${Q_ECO}`)
 
 // Product detail hero — large, high quality
-export const pdpUrl = (id: string) =>
-  cfImg(id, `w=900,h=1200,fit=pad,background=%23F2F2F2,${Q_GOOD}`)
+export const pdpUrl = (id: string, fit: ImageFit = 'pad') =>
+  cfImg(id, `${fitParams(fit, 900, 1200)},${Q_GOOD}`)
 
 // Hover-zoom magnified view — double the linear resolution of pdpUrl, so
 // zooming in reveals real detail instead of just stretching the same pixels.
 // Only fetched when zoom is actually engaged (see ImageGallery.tsx).
-export const pdpZoomUrl = (id: string) =>
-  cfImg(id, 'w=1800,h=2400,fit=pad,background=%23F2F2F2,quality=90')
+export const pdpZoomUrl = (id: string, fit: ImageFit = 'pad') =>
+  cfImg(id, `${fitParams(fit, 1800, 2400)},quality=90`)
 
 // Cart / order thumbnail — square
-export const thumbUrl = (id: string) =>
-  cfImg(id, `w=200,h=200,fit=pad,background=%23F2F2F2,${Q_ECO}`)
+export const thumbUrl = (id: string, fit: ImageFit = 'pad') =>
+  cfImg(id, `${fitParams(fit, 200, 200)},${Q_ECO}`)
 
 // Category/mood tile — full lifestyle photo, fills the frame.
 // gravity=auto — saliency-based smart crop, so cropping favours the actual
@@ -69,10 +81,8 @@ export const categoryUrl = (id: string) =>
 export const expoUrl = (id: string) =>
   cfImg(id, `w=1600,h=2133,fit=cover,gravity=auto,${Q_GOOD}`)
 
-// ─── Video helpers ────────────────────────────────────────────────────────────
-// Video stays on Cloudinary for now — Cloudflare Images doesn't handle video
-// (that's Cloudflare Stream, a separate product not part of this migration).
-export { cldVideo, videoPosterUrl } from './cloudinary'
+// Video lives in lib/cloudflareStream.ts (cfVideo / cfVideoPoster) — a
+// separate Cloudflare product from Images, so it isn't re-exported here.
 
 // Placeholder for when no image is uploaded yet
 export const PLACEHOLDER_URL = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800' fill='%23F0EDE6'%3E%3Crect width='600' height='800'/%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='48' fill='%23C9A96E' text-anchor='middle' dominant-baseline='middle'%3ELP%3C/text%3E%3C/svg%3E`

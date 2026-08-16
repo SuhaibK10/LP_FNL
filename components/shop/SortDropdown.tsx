@@ -41,7 +41,7 @@ export function SortDropdown<T extends string>({ options, value, onChange }: Sor
         type="button"
         onClick={() => setOpen(o => !o)}
         aria-expanded={open}
-        className="w-full flex items-center justify-center gap-2 font-body text-[0.7rem] tracking-widest uppercase text-lp-ink border border-lp-muted rounded-md px-4 py-3 hover:border-lp-ink transition-colors duration-200"
+        className="w-full flex items-center justify-center gap-2 font-body text-[0.7rem] max-md:text-[0.62rem] tracking-widest uppercase text-lp-ink border border-lp-muted rounded-md px-4 py-3 max-md:px-3 max-md:py-2 hover:border-lp-ink transition-colors duration-200"
       >
         {active?.label ?? 'Sort'}
         <ChevronDown size={14} strokeWidth={1.5} className={cn('transition-transform duration-200', open && 'rotate-180')} />

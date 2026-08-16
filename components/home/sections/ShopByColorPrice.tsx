@@ -16,7 +16,7 @@ import { ROUTES }                      from '@/lib/constants'
 import { UNDER_2999_PRODUCTS }         from '@/config/products'
 import { COLOR_FAMILIES }              from '@/config/shopByColorPrice'
 import { categoryUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
-import { staggerChildren, scaleUp, VIEWPORT } from '@/lib/animations'
+import { staggerPunch, popIn, VIEWPORT } from '@/lib/animations'
 import { ProductCard }                 from '@/components/shop/ProductCard'
 
 type Tab = 'color' | 'price'
@@ -98,14 +98,14 @@ export function ShopByColorPrice() {
           /* Color family grid — same tile treatment as Shop by Category */
           <motion.div
             key="grid-color"
-            variants={staggerChildren}
+            variants={staggerPunch}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT}
             className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4"
           >
             {COLOR_FAMILIES.map(({ label, image, swatch, matches }) => (
-              <motion.div key={label} variants={scaleUp}>
+              <motion.div key={label} variants={popIn}>
                 <Link
                   href={`${ROUTES.shop}?color=${encodeURIComponent(matches.join(','))}`}
                   className="group relative block aspect-[4/5] md:aspect-square overflow-hidden bg-lp-border rounded-xl transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-lp-ink/15 active:scale-[0.985]"

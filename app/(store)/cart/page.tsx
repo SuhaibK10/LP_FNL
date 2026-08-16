@@ -17,12 +17,16 @@ import { useCartStore }           from '@/store/cartStore'
 import { thumbUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 import { formatPrice }            from '@/lib/utils'
 import { ROUTES }                 from '@/lib/constants'
+import { PRODUCTS }               from '@/config/products'
 import type { CartItem }          from '@/types'
 
 // ─── Cart item row ────────────────────────────────────────────────────────────
 function CartRow({ item }: { item: CartItem }) {
   const updateQty   = useCartStore(s => s.updateQty)
   const removeItem  = useCartStore(s => s.removeItem)
+  // Lifestyle-shot products (imageFit: 'cover') need that same fit here,
+  // or the pad-fit default letterboxes them with a visible frame.
+  const imageFit    = PRODUCTS.find(p => p.id === item.productId)?.imageFit
 
   return (
     <motion.div
@@ -36,7 +40,7 @@ function CartRow({ item }: { item: CartItem }) {
       <Link href={`${ROUTES.shop}/${item.productSlug}`} className="flex-shrink-0">
         <div className="relative w-[72px] h-[96px] bg-[var(--color-lp-porcelain)] overflow-hidden">
           <Image
-            src={thumbUrl(item.image) || PLACEHOLDER_URL}
+            src={thumbUrl(item.image, imageFit) || PLACEHOLDER_URL}
             alt={item.productName}
             fill
             className="object-cover object-center"

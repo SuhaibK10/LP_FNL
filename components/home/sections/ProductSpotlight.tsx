@@ -8,28 +8,30 @@
 // autoplays — every other slide's video is paused, so only one thing is ever
 // moving on screen at once.
 //
-// VIDEO: upload your demo video to Cloudinary (as a VIDEO asset), then paste
-// its public_id into a SPOTLIGHTS entry below. The poster frame is pulled
-// from the video automatically; set posterId to a Cloudinary IMAGE public_id
-// if you want a custom thumbnail instead. Leave videoId blank for a
+// VIDEO: upload your demo video to Cloudflare Stream (via
+// scripts/migrate-video-to-cloudflare-stream.ts <source-url>), then paste
+// the printed video UID into a SPOTLIGHTS entry below. The poster frame is
+// pulled from the video automatically; set posterId to a Cloudflare Images
+// ID if you want a custom thumbnail instead. Leave videoId blank for a
 // "video coming soon" placeholder slide.
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useRef, useEffect, useState } from 'react'
 import { motion }           from 'framer-motion'
 import { Play }             from 'lucide-react'
-import { cldVideo, videoPosterUrl, cld } from '@/lib/cloudflareImages'
-import { staggerChildren, fadeUp, VIEWPORT } from '@/lib/animations'
+import { cld }              from '@/lib/cloudflareImages'
+import { cfVideo, cfVideoPoster } from '@/lib/cloudflareStream'
+import { staggerChildren, fadeUp, VIEWPORT, popIn } from '@/lib/animations'
 
 interface SpotlightItem {
-  videoId:  string   // Cloudinary VIDEO public_id (no extension); blank = placeholder
-  posterId: string   // optional custom thumbnail (IMAGE public_id); blank = video's first frame
+  videoId:  string   // Cloudflare Stream video UID; blank = placeholder
+  posterId: string   // optional custom thumbnail (Cloudflare Images ID); blank = video's first frame
   copy:     string
 }
 
 const SPOTLIGHTS: SpotlightItem[] = [
   {
-    videoId:  'Trimmed_and_Audio_Removed_keanoc',
+    videoId:  '6d2756d1cdc00f37ed594c3d24537c69',
     posterId: '',
     copy:     'Every pocket, zip, and strap. See exactly what arrives at your door.',
   },
@@ -73,7 +75,7 @@ function SpotlightTV({ item }: { item: SpotlightItem }) {
   const poster = hasVideo
     ? item.posterId
       ? cld(item.posterId, 'w=1280')
-      : videoPosterUrl(item.videoId)
+      : cfVideoPoster(item.videoId)
     : undefined
 
   return (
@@ -82,7 +84,7 @@ function SpotlightTV({ item }: { item: SpotlightItem }) {
         {hasVideo ? (
           <video
             ref={videoRef}
-            src={cldVideo(item.videoId)}
+            src={cfVideo(item.videoId)}
             poster={poster}
             muted
             loop
@@ -157,10 +159,10 @@ export function ProductSpotlight() {
 
         {/* Carousel — one full TV per slide, native scroll-snap */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          variants={popIn}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <div
             ref={trackRef}
@@ -183,7 +185,7 @@ export function ProductSpotlight() {
                   aria-label={`Show product ${i + 1}`}
                   aria-current={activeIndex === i}
                   className={`h-1.5 rounded-full transition-all duration-300 ${
-                    activeIndex === i ? 'w-6 bg-lp-ink' : 'w-1.5 bg-lp-border-strong'
+                    activeIndex === i ? 'w-6 bg-lp-gold' : 'w-1.5 bg-lp-border-strong'
                   }`}
                 />
               ))}

@@ -7,7 +7,6 @@
 import type { Metadata }       from 'next'
 import { notFound }            from 'next/navigation'
 import Link                    from 'next/link'
-import { ChevronLeft }         from 'lucide-react'
 import { getProductBySlug, PRODUCTS } from '@/config/products'
 import { ProductPageClient }   from '@/components/product/ProductPageClient'
 import { ProductStory }        from '@/components/product/ProductDetails'
@@ -45,18 +44,25 @@ export default async function ProductPage({ params, searchParams }: Props) {
     <div className="pt-12.5 md:pt-18">
       <div className="container-lp section-pad pt-2! md:pt-2!">
 
-        {/* Breadcrumb */}
-        <div className="flex items-center gap-2 mb-0.5 md:mb-2">
+        {/* Breadcrumb — Home | All Products | [product], Assembly-style */}
+        <div className="flex items-center gap-1.5 mb-0.5 md:mb-2 min-w-0">
+          <Link
+            href={ROUTES.home}
+            scroll={false}
+            className="shrink-0 font-body text-[0.7rem] tracking-[0.1em] uppercase text-[var(--color-lp-muted)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
+          >
+            Home
+          </Link>
+          <span className="text-[var(--color-lp-border)] shrink-0">|</span>
           <Link
             href={ROUTES.shop}
             scroll={false}
-            className="flex items-center gap-1 font-body text-[0.7rem] tracking-[0.1em] uppercase text-[var(--color-lp-muted)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
+            className="shrink-0 font-body text-[0.7rem] tracking-[0.1em] uppercase text-[var(--color-lp-muted)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
           >
-            <ChevronLeft size={13} strokeWidth={1.5} />
             All Products
           </Link>
-          <span className="text-[var(--color-lp-border)]">/</span>
-          <span className="font-body text-[0.7rem] tracking-[0.1em] uppercase text-[var(--color-lp-ink)]">
+          <span className="text-[var(--color-lp-border)] shrink-0">|</span>
+          <span className="font-body text-[0.7rem] tracking-[0.1em] uppercase text-[var(--color-lp-ink)] truncate min-w-0">
             {product.name}
           </span>
         </div>

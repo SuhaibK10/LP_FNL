@@ -74,7 +74,12 @@ export interface Product {
   saleExclusive?: boolean
   mrp?: number  // strike-through "original" price, shown alongside the current price when set
   recentPurchases?: number  // e.g. 174 — shows a quiet "X bought in the last 7 days" badge on the PDP
-  demoVideoId?: string  // Cloudinary VIDEO public_id — shows a play button next to Wishlist on the PDP
+  demoVideoId?: string  // Cloudflare Stream video UID — shows a play button next to Wishlist on the PDP
+  // How this product's photos should be fit into their frame. Omit for the
+  // default 'pad' (a transparent cutout padded onto a flat background — the
+  // whole catalog so far). Set to 'cover' for full-bleed lifestyle/studio
+  // shots that carry their own backdrop rather than a removed background.
+  imageFit?: 'pad' | 'cover'
   hideSizeSelector?: boolean  // skip the size-chip row entirely — auto-selects the product's only size
   description: string
   // Cloudinary public_ids — transform on the fly via URL

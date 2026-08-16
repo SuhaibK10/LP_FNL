@@ -106,7 +106,7 @@ export function SearchOverlay({ open, onClose }: Props) {
                       {/* Thumbnail */}
                       <div className="relative w-12 h-12 shrink-0 bg-[var(--color-lp-porcelain)] overflow-hidden">
                         <Image
-                          src={thumbUrl(product.images[0]) || PLACEHOLDER_URL}
+                          src={thumbUrl(product.images[0], product.imageFit) || PLACEHOLDER_URL}
                           alt={product.name}
                           fill
                           className="object-cover object-center"

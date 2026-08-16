@@ -115,7 +115,7 @@ export default function CorporateGiftingPage() {
               <div key={product.id}>
                 <div className="relative aspect-3/4 bg-white rounded-md overflow-hidden mb-3">
                   <Image
-                    src={cardUrl(product.images[0])}
+                    src={cardUrl(product.images[0], product.imageFit)}
                     alt={product.name}
                     fill
                     className="object-cover"

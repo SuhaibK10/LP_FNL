@@ -10,7 +10,7 @@
 import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X } from 'lucide-react'
-import { cldVideo } from '@/lib/cloudflareImages'
+import { cfVideo } from '@/lib/cloudflareStream'
 
 interface Props {
   open:    boolean
@@ -38,31 +38,40 @@ export function DemoVideoModal({ open, onClose, videoId }: Props) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="fixed inset-0 z-70 bg-black/85 flex items-center justify-center p-4"
+          className="fixed inset-0 z-70 bg-black/85 flex items-center justify-center sm:p-4"
           onClick={onClose}
         >
+          {/* Fixed to the viewport (not the shrink-wrapped video box below)
+              so it stays put whether the video is edge-to-edge full-screen
+              (mobile) or floating mid-screen (desktop). */}
+          <button
+            onClick={onClose}
+            className="fixed z-10 text-white/80 hover:text-white transition-colors"
+            style={{ top: 'max(1rem, env(safe-area-inset-top))', right: 'max(1rem, env(safe-area-inset-right))' }}
+            aria-label="Close video"
+          >
+            <X size={24} strokeWidth={1.5} />
+          </button>
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.96 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-lg"
+            className="relative"
             onClick={(e) => e.stopPropagation()}
           >
-            <button
-              onClick={onClose}
-              className="absolute -top-10 right-0 text-white/80 hover:text-white transition-colors"
-              aria-label="Close video"
-            >
-              <X size={24} strokeWidth={1.5} />
-            </button>
+            {/* Mobile: true full-bleed player, no frame — matches the
+                native fullscreen-video feel. Desktop (sm+): shrink-wraps
+                to the video's own aspect ratio (capped by viewport) so
+                portrait clips don't get stretched wide and pillarboxed. */}
             <video
               key={videoId}
-              src={cldVideo(videoId)}
+              src={cfVideo(videoId)}
               controls
               autoPlay
+              muted
               playsInline
-              className="w-full h-auto max-h-[85dvh] bg-black"
+              className="w-screen h-dvh sm:w-auto sm:h-auto sm:max-w-[90vw] sm:max-h-[85dvh] bg-black object-contain rounded-none sm:rounded-2xl"
             />
           </motion.div>
         </motion.div>

@@ -76,7 +76,7 @@ export default function WishlistPage() {
                 <div className="relative aspect-[3/4] overflow-hidden bg-[var(--color-lp-porcelain)] mb-3">
                   <Link href={`${ROUTES.shop}/${product.slug}`}>
                     <Image
-                      src={cardUrl(product.images[0]) || PLACEHOLDER_URL}
+                      src={cardUrl(product.images[0], product.imageFit) || PLACEHOLDER_URL}
                       alt={product.name}
                       fill
                       className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
@@ -94,7 +94,7 @@ export default function WishlistPage() {
                     <Heart
                       size={16}
                       strokeWidth={1.5}
-                      style={{ color: '#C9A96E', fill: '#C9A96E' }}
+                      style={{ color: 'var(--color-lp-gold)', fill: 'var(--color-lp-gold)' }}
                     />
                   </button>
                 </div>

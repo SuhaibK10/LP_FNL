@@ -10,9 +10,11 @@
 
 import { useState, useEffect, useMemo, useRef } from 'react'
 import { useSearchParams }         from 'next/navigation'
+import Image                       from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { SlidersHorizontal, LayoutGrid, Rows3 } from 'lucide-react'
 import { PRODUCTS, CATEGORIES }    from '@/config/products'
+import { categoryUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 import { getMyntraListing, MYNTRA_EXCLUSIVES_ENABLED } from '@/config/myntra'
 import { SIZE_ORDER }              from '@/lib/constants'
 import { useShopFilterStore }      from '@/store/shopFilterStore'
@@ -33,6 +35,17 @@ const SORT_OPTIONS: { label: string; value: SortKey }[] = [
   { label: 'New Arrivals',       value: 'new-arrivals'       },
   ...(MYNTRA_EXCLUSIVES_ENABLED ? [{ label: 'Myntra Exclusives', value: 'myntra-exclusives' as const }] : []),
 ]
+
+// Same photos as the homepage CategoryGrid — only categories with a shot
+// get a thumbnail in the strip below; the rest stay filterable via Filters.
+const CATEGORY_IMAGES: Partial<Record<string, string>> = {
+  trolley:      'dfe7f28d-50e2-4a8a-7faa-467641a17700',
+  set:          'a3258fb4-0ba7-4f7b-e27c-d20ba9f8ae00',
+  backpack:     '04fcc97f-08b5-4279-f2fc-753aed03be00',
+  'office-bag': '0baab19f-10cd-4c53-2c53-2041976f6c00',
+  duffle:       'ae436b7a-1f40-440f-fa9b-233399dfa000',
+  vanity:       '9d7374c7-5e18-4d0c-61a5-3ce33a642000',
+}
 
 const PRICE_RANGES: PriceRange[] = [
   { label: 'Under ₹3,000',        min: 0,     max: 3000  },
@@ -203,7 +216,7 @@ export function ProductGrid() {
           ref={filterButtonRef}
           type="button"
           onClick={() => setDrawerOpen(true)}
-          className="relative flex-1 flex items-center justify-center gap-2 font-body text-[0.7rem] tracking-widest uppercase text-lp-ink border border-lp-muted rounded-md px-4 py-3 hover:border-lp-ink transition-colors duration-200"
+          className="relative flex-1 flex items-center justify-center gap-2 font-body text-[0.7rem] max-md:text-[0.62rem] tracking-widest uppercase text-lp-ink border border-lp-muted rounded-md px-4 py-3 max-md:px-3 max-md:py-2 hover:border-lp-ink transition-colors duration-200"
         >
           <SlidersHorizontal size={14} strokeWidth={1.5} />
           Filters
@@ -215,6 +228,47 @@ export function ProductGrid() {
         </button>
 
         <SortDropdown options={SORT_OPTIONS} value={sortKey} onChange={setSortKey} />
+      </div>
+
+      {/* ── Category strip — tap a thumbnail to filter, tap again for All.
+          Mirrors the mobile category-thumbnail pattern (e.g. TUMI's shop
+          page) rather than only living inside the Filters drawer. ────── */}
+      <div className="flex gap-4 md:gap-8 overflow-x-auto scrollbar-hide mb-6 md:mb-8">
+        {categoryOptions.filter(c => CATEGORY_IMAGES[c.value]).map((c) => {
+          const active = selectedCategories.length === 1 && selectedCategories[0] === c.value
+          return (
+            <button
+              key={c.value}
+              type="button"
+              onClick={() => setSelectedCategories(active ? [] : [c.value])}
+              className="flex flex-col items-center gap-1.5 md:gap-2.5 shrink-0 w-16 md:w-24"
+              aria-pressed={active}
+            >
+              <span
+                className={cn(
+                  'relative block w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden bg-lp-porcelain border-2 md:border-[3px] transition-colors duration-200',
+                  active ? 'border-lp-gold' : 'border-transparent'
+                )}
+              >
+                <Image
+                  src={categoryUrl(CATEGORY_IMAGES[c.value]!) || PLACEHOLDER_URL}
+                  alt={c.label}
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width:768px) 64px, 96px"
+                />
+              </span>
+              <span
+                className={cn(
+                  'font-body text-[0.6rem] md:text-[0.7rem] tracking-[0.04em] uppercase text-center leading-tight',
+                  active ? 'text-lp-ink font-medium' : 'text-lp-faint'
+                )}
+              >
+                {c.label}
+              </span>
+            </button>
+          )
+        })}
       </div>
 
       {/* ── Count + view toggle row ───────────────────────────────────── */}

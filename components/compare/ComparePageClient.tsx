@@ -60,7 +60,7 @@ export function ComparePageClient({ initialSlugs }: { initialSlugs?: string[] })
               <div className="relative w-24 h-32 md:w-32 md:h-42 bg-lp-porcelain">
                 <Image
                   src={
-                    cardUrl(product.images[colorIdx[col]] ?? product.images[0]) ||
+                    cardUrl(product.images[colorIdx[col]] ?? product.images[0], product.imageFit) ||
                     PLACEHOLDER_URL
                   }
                   alt={`${product.name} in ${product.variants[colorIdx[col]]?.color ?? ''}`}

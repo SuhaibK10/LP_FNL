@@ -164,6 +164,7 @@ export const PRODUCTS: Product[] = [
   // ── AeroSmart 3-in-1 ────────────────────────────────────────────────────
   {
     id: 'aerosmart-3in1',
+    imageFit: 'cover',
     metaTitle: 'AeroSmart 3-in-1 Cabin Trolley with Front Laptop Pocket',
     metaDescription: 'Smart cabin trolley with front laptop access, side quick-access pocket, combination lock, and 360° spinner wheels. Hard-shell protection for business travel.',
     keywords: ['cabin trolley with laptop compartment', 'front opening cabin luggage', 'hard shell carry-on suitcase', 'combination lock trolley bag', '360 spinner wheel cabin bag'],
@@ -215,6 +216,7 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
+      '91562a63-93b2-4c22-7aab-51d0d8fae000',
       'cce20161-5cb9-44aa-8c29-3a1251e92d00',
       '5dec047a-a87f-48d3-5ea4-29abd19cab00',
       'f5e08ff5-f9ff-4315-ccf0-0957d5437500',
@@ -235,6 +237,7 @@ export const PRODUCTS: Product[] = [
         bodyHex: '#4A4945',
         lowStock: true,
         images: [
+          '91562a63-93b2-4c22-7aab-51d0d8fae000',
           'cce20161-5cb9-44aa-8c29-3a1251e92d00',
           'b68fe362-f1e5-4d94-8e75-c3fe3c208800',
           'dab5cd11-d80c-498a-f842-0f58fa656d00',
@@ -250,6 +253,7 @@ export const PRODUCTS: Product[] = [
         colorHex: '#C0392B',
         bodyHex: '#3E3E3E',
         images: [
+          '70440d78-95e1-4475-c1a4-cdcbfc291000',
           '5dec047a-a87f-48d3-5ea4-29abd19cab00',
           'b9dc5c11-9997-4ed1-8cbf-156fc8b8cf00',
           'b8b0c4f9-6b7f-457f-3b62-49fd4001c200',
@@ -283,6 +287,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
+          '0f4b7b11-dd2d-4d8f-c502-58ea01177400',
           '9bac92e3-74a8-42ef-d579-d01830e80a00',
           '9eff1fe4-2561-496d-5734-2546f9ceb200',
           '9aac96ca-d8a7-4f2c-6653-9a2d88ce4a00',
@@ -302,6 +307,7 @@ export const PRODUCTS: Product[] = [
   // ── SkyTrail ────────────────────────────────────────────────────────────
   {
     id: 'skytrail',
+    imageFit: 'cover',
     metaTitle: 'SkyTrail Hard Shell Trolley Bag in 20″, 24″ & 28″',
     metaDescription: 'Premium polycarbonate hard-shell luggage with combination lock, 360° spinner wheels, and organised interior. Three sizes, 3-year warranty.',
     keywords: ['premium hard shell luggage', 'combination lock suitcase', '360 spinner wheel trolley', 'lightweight travel luggage', 'check-in luggage india'],
@@ -351,10 +357,10 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
+      'af0b6d0c-556b-4de2-12ff-dafb614c5600',
       'f3a7cf1c-9113-4853-4d2d-5a2096b9fd00',
       'f1babd8d-7612-4504-d53f-8fec0cdb9900',
       '08e57a49-abcf-4615-4fdd-78b15cd72a00',
-      
     ],
     features: [
       { label: '360° spinner wheels' },
@@ -400,6 +406,7 @@ export const PRODUCTS: Product[] = [
   // ── AeroX ────────────────────────────────────────────────────────────────
   {
     id: 'aerox',
+    imageFit: 'cover',
     metaTitle: 'AeroX 20" Cabin Trolley with TSA Lock & Cup Holder',
     metaDescription: 'AeroX pairs a lightweight hard-shell 20" cabin trolley with a TSA-approved combination lock, 360° silent spinner wheels, and a built-in cup holder.',
     keywords: ['cabin trolley bag', 'tsa lock suitcase', 'carry on luggage with cup holder', '20 inch trolley bag', 'hard shell cabin bag india'],
@@ -436,7 +443,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: [''],
+    images: ['17bd67b2-83af-4cb5-a007-7f298a60ce00'],
     features: [
       { label: '360° silent spinner wheels' },
       { label: 'TSA combination lock' },
@@ -454,6 +461,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
+          '17bd67b2-83af-4cb5-a007-7f298a60ce00',
           '8b09e66c-ff43-4536-ca92-aeabf1c48600',
           '67ed6fe5-32cc-4d7d-bd29-b196ed533100',
           '4f727a22-c567-48b0-24be-de395e71df00',
@@ -472,6 +480,9 @@ export const PRODUCTS: Product[] = [
   // ── AeroVault ────────────────────────────────────────────────────────────
   {
     id: 'aerovault',
+    imageFit: 'cover',
+    mrp: 5399,
+    demoVideoId: '48b8f7686d12130e84b9de78f34723ab',
     metaTitle: 'AeroVault USB Laptop Travel Backpack',
     metaDescription: 'AeroVault pairs a padded laptop compartment with an external USB charging port, breathable back panel, and luggage mounting sleeve. Built for work, commuting, and travel.',
     keywords: ['usb laptop backpack', 'travel backpack with charging port', 'padded laptop compartment backpack', 'commuter backpack india', 'business travel backpack'],
@@ -510,12 +521,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    // TODO: no product photos yet — Suhaib will upload to Cloudinary later.
-    // Add the public_id(s) or full URL(s) here once ready. Left as [''] and
-    // not [] — an empty array resolves to `undefined` in ProductCard's image
-    // lookup, which throws at render; '' resolves safely to a broken-image
-    // placeholder instead of crashing the card.
-    images: [''],
+    images: ['ca24fd22-9f74-48a8-0746-303b00b57200'],
     features: [
       { label: 'Lightweight build' },
       { label: 'Smooth zippers' },
@@ -532,12 +538,13 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
+          'ca24fd22-9f74-48a8-0746-303b00b57200',
           '51fd24f1-7e9b-47ad-bb8c-4f7aa6c17000',
           'ffb6ea27-cb53-4a4d-9d1a-df63f83e2800',
           '17cc8ba4-8012-4f87-3fe8-5b2d218cf800',
         ],
         sizes: [
-          { size: 'One Size', price: 3290, stock: 30 },
+          { size: 'One Size', price: 2990, stock: 30 },
         ],
       },
       {
@@ -553,7 +560,7 @@ export const PRODUCTS: Product[] = [
           '4db9fcc9-fcff-47c0-e5e2-2287ca8e6a00',
         ],
         sizes: [
-          { size: 'One Size', price: 3290, stock: 30 },
+          { size: 'One Size', price: 2990, stock: 30 },
         ],
       },
       {
@@ -568,7 +575,7 @@ export const PRODUCTS: Product[] = [
           '293576b6-5990-4a58-6a18-db70626a5e00',
         ],
         sizes: [
-          { size: 'One Size', price: 3290, stock: 30 },
+          { size: 'One Size', price: 2990, stock: 30 },
         ],
       },
     ],
@@ -577,6 +584,7 @@ export const PRODUCTS: Product[] = [
   // ── Apex ─────────────────────────────────────────────────────────────────
   {
     id: 'apex',
+    mrp: 5250,
     metaTitle: 'Apex Executive Backpack with USB Charging Port',
     metaDescription: 'Apex pairs a padded laptop compartment with an external USB charging port, a rear luggage trolley sleeve, and premium water-resistant fabric. Built for office, travel, and daily commute.',
     keywords: ['executive backpack', 'usb laptop backpack', 'water resistant backpack', 'business travel backpack', 'college backpack india'],
@@ -643,7 +651,7 @@ export const PRODUCTS: Product[] = [
           '5b59d0b7-8d25-459c-666d-a3956a3f3000',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 2890, stock: 30 },
         ],
       },
       {
@@ -661,7 +669,7 @@ export const PRODUCTS: Product[] = [
           'f9f91d77-07ed-4398-efa5-25da511c7a00',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 2890, stock: 30 },
         ],
       },
     ],
@@ -670,6 +678,8 @@ export const PRODUCTS: Product[] = [
   // ── MetroGrid ────────────────────────────────────────────────────────────
   {
     id: 'metrogrid',
+    mrp: 4390,
+    imageFit: 'cover',
     metaTitle: 'MetroGrid Executive Laptop Backpack',
     metaDescription: 'MetroGrid pairs professional styling with practical organisation: dedicated laptop and tablet compartments, quick-access storage, and a rear trolley sleeve for business travel.',
     keywords: ['executive laptop backpack', 'business travel backpack', 'organizer backpack for laptop', 'professional backpack india', 'commuter backpack with trolley sleeve'],
@@ -706,12 +716,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    // TODO: no product photos yet — Suhaib will share Cloudinary links later.
-    // Add the public_id(s) or full URL(s) here once ready. Left as [''] and
-    // not [] — an empty array resolves to `undefined` in ProductCard's image
-    // lookup, which throws at render; '' resolves safely to a broken-image
-    // placeholder instead of crashing the card.
-    images: [''],
+    images: ['cb41fa93-7cc6-46da-ed54-309226c4d200'],
     features: [
       { label: 'Concealed pocket' },
       { label: 'Comfortable fabric lining' },
@@ -727,6 +732,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
+          'cb41fa93-7cc6-46da-ed54-309226c4d200',
           '17041633-e200-49d9-1d86-2f1f6f6ba800',
           'd9b76467-0e4e-44a3-6eef-18eb74d2cf00',
           '8321af3d-25d7-4863-d287-f0ae6a74f300',
@@ -771,6 +777,7 @@ export const PRODUCTS: Product[] = [
   // ── WorkGrid ─────────────────────────────────────────────────────────────
   {
     id: 'workgrid',
+    mrp: 4590,
     metaTitle: 'WorkGrid Executive Laptop Backpack',
     metaDescription: 'WorkGrid is a structured laptop backpack for the commute and business travel: dedicated laptop and tablet compartments, quick-access storage, and a rear trolley sleeve.',
     keywords: ['laptop backpack for men', 'business travel backpack', 'office commute backpack', 'executive laptop bag', 'backpack with trolley sleeve'],
@@ -832,7 +839,7 @@ export const PRODUCTS: Product[] = [
           'd8ec8e63-c3e9-423b-4e91-2b00a930ad00',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 2490, stock: 30 },
         ],
       },
       {
@@ -851,7 +858,7 @@ export const PRODUCTS: Product[] = [
           '90cda76f-8f92-43cb-61bb-6195c85dc400',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 2490, stock: 30 },
         ],
       },
       {
@@ -863,7 +870,7 @@ export const PRODUCTS: Product[] = [
           'ab63abc9-1e70-4183-90d4-715e48e75500',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 2490, stock: 30 },
         ],
       },
     ],
@@ -978,6 +985,7 @@ export const PRODUCTS: Product[] = [
   // ── VeeZoom ─────────────────────────────────────────────────────────────
   {
     id: 'veezoom',
+    imageFit: 'cover',
     metaTitle: 'VeeZoom Bold V-Pattern Hard Shell Spinner Luggage',
     metaDescription: 'Lightweight hard-shell spinner luggage with a moulded V-pattern shell, combination lock, and 360° wheels. Cabin, medium, and large sizes.',
     keywords: ['lightweight cabin spinner luggage', 'hard shell suitcase 20 inch', '360 spinner wheel luggage', 'airline cabin size carry-on', 'abs spinner suitcase'],
@@ -1024,9 +1032,9 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
+      'a546bc30-7f2f-4b64-2c60-afe7c18cd500',
       'acbb1811-cbd1-4496-9e85-cad771ad4d00',
       '45538b81-1170-40a2-cbc5-8f0cee2c3200',
-      
     ],
     features: [
       { label: '360° spinner wheels' },
@@ -1063,6 +1071,7 @@ export const PRODUCTS: Product[] = [
   // ── SoftSquare ──────────────────────────────────────────────────────────
   {
     id: 'softsquare',
+    imageFit: 'cover',
     metaTitle: 'SoftSquare Hard Shell Trunk Luggage with Combination Lock',
     metaDescription: 'Trunk-style hard-shell luggage with dual-compartment interior, combination lock, and 360° spinner wheels. Cabin to 28″ check-in sizes.',
     keywords: ['hard shell trunk luggage', 'combination lock suitcase', 'trunk style suitcase india', '360 spinner wheel luggage', 'cabin and check-in luggage'],
@@ -1113,6 +1122,7 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
+      '89b97949-0415-4659-15c9-64ab4156a400',
       'c9d701b2-8947-4f3b-8877-d745394d0300',
       '56b911b3-1fb1-45f6-196c-27e3cf0dc900',
       '3c7f26af-0a00-4469-105e-d5e590b46500',
@@ -1534,6 +1544,7 @@ export const PRODUCTS: Product[] = [
   // ── StrataLux ────────────────────────────────────────────────────────────
   {
     id: 'stratalux',
+    imageFit: 'cover',
     metaTitle: 'StrataLux Hard Shell Spinner Luggage',
     metaDescription: 'StrataLux pairs a vertically ribbed hard shell with leather-look accents and metallic corner details, on 360° silent spinner wheels. Cabin, Medium, and Large, sold individually or as a set.',
     keywords: ['hard shell spinner luggage', 'ribbed shell suitcase', 'premium luggage india', 'luggage set of 3', 'combination lock trolley bag'],
@@ -1571,7 +1582,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: [''],
+    images: ['c2cb6254-efef-4044-4848-636e2adaeb00'],
     features: [
       { label: '360° silent spinner wheels' },
       { label: 'Combination lock' },
@@ -1589,6 +1600,7 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
+          'c2cb6254-efef-4044-4848-636e2adaeb00',
           '0cd7a434-6f5e-4109-9e4f-68c6cb868a00',
           '11656b9a-b790-43e6-fa42-ca6d7142bf00',
         ],

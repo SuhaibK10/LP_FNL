@@ -6,13 +6,14 @@
 // Clicking navigates to PDP. Color/size is passed as query param.
 // ─────────────────────────────────────────────────────────────────────────────
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image                        from 'next/image'
 import Link                         from 'next/link'
 import { motion, AnimatePresence }  from 'framer-motion'
-import { ArrowRight, ShoppingBag, Check, Heart, Ruler, Star, ChevronDown } from 'lucide-react'
+import { ArrowRight, ShoppingBag, Check, Heart, Ruler, Star, ChevronDown, Play, X, Maximize } from 'lucide-react'
 import type { Product, ProductSize } from '@/types'
-import { cardUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
+import { cardUrl, pdpUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
+import { cfVideo }                  from '@/lib/cloudflareStream'
 import { formatPrice, swatchRingColor } from '@/lib/utils'
 import { ROUTES }                   from '@/lib/constants'
 import { saveShopScroll }           from '@/lib/scrollRestore'
@@ -21,6 +22,7 @@ import { useWishlistStore }         from '@/store/wishlistStore'
 import { SizeGuideModal }           from '@/components/ui/SizeGuideModal'
 import { MyntraBuyButton }          from '@/components/ui/MyntraBuyButton'
 import { getMyntraListing, getMyntraForSize } from '@/config/myntra'
+import { tapPunch }                 from '@/lib/animations'
 
 interface ProductCardProps {
   product: Product
@@ -32,6 +34,21 @@ export function ProductCard({ product }: ProductCardProps) {
   const has      = useWishlistStore((s) => s.has)
   const [wished, setWished] = useState(false)
   const [burst,  setBurst]  = useState(false)
+  const [videoOpen, setVideoOpen] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  function handleFullscreen(e: React.MouseEvent) {
+    e.preventDefault()
+    e.stopPropagation()
+    const video = videoRef.current
+    if (!video) return
+    if (video.requestFullscreen) {
+      video.requestFullscreen()
+    } else if ('webkitEnterFullscreen' in video) {
+      // iOS Safari doesn't support the standard Fullscreen API on <video>
+      ;(video as HTMLVideoElement & { webkitEnterFullscreen: () => void }).webkitEnterFullscreen()
+    }
+  }
 
   // Sync after hydration to avoid SSR mismatch
   useEffect(() => { setWished(has(product.id)) }, [has, product.id])
@@ -95,6 +112,31 @@ export function ProductCard({ product }: ProductCardProps) {
     setTimeout(() => setAddedToCart(false), 7000)
   }
 
+  // The shop grid only ever loads the card-sized crop — a different derived
+  // asset from the PDP's main image. Without this, clicking through to the
+  // PDP always triggers a cold fetch for that specific size, even though
+  // the same photo was just visible seconds ago. Warming it on hover/touch
+  // means it's usually already cached by the time the page actually opens.
+  function prefetchPdpImage() {
+    const preload = new window.Image()
+    preload.src = pdpUrl(displayImage, product.imageFit) || PLACEHOLDER_URL
+  }
+
+  // Same idea for the demo video — without this, hitting Play always pays
+  // a cold-start fetch (connection is already warm via the layout-level
+  // preconnect, but the video bytes themselves haven't loaded yet). Warming
+  // it on hover/touch means playback is usually instant by the time the
+  // button is actually tapped. Not appended to the DOM — same trick as
+  // prefetchPdpImage above, setting `src` alone triggers the browser's
+  // fetch regardless of DOM attachment.
+  function prefetchDemoVideo() {
+    if (!product.demoVideoId) return
+    const preload = document.createElement('video')
+    preload.preload = 'auto'
+    preload.muted = true
+    preload.src = cfVideo(product.demoVideoId)
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
@@ -107,20 +149,53 @@ export function ProductCard({ product }: ProductCardProps) {
       <Link
         href={`${ROUTES.shop}/${product.slug}?color=${encodeURIComponent(variant.color)}`}
         onClick={saveShopScroll}
-        className="relative block aspect-[3/4] overflow-hidden bg-[var(--color-lp-porcelain)] mb-3"
+        onMouseEnter={prefetchPdpImage}
+        onTouchStart={prefetchPdpImage}
+        className={`relative block aspect-[3/4] overflow-hidden rounded-md bg-[var(--color-lp-porcelain)] mb-3 ${product.imageFit === 'cover' ? 'border-[3px] border-lp-border-strong' : ''}`}
       >
         <div
           className="absolute inset-0"
-          style={product.cardZoom ? { transform: `scale(${product.cardZoom})` } : undefined}
+          style={!videoOpen && product.cardZoom ? { transform: `scale(${product.cardZoom})` } : undefined}
         >
-          <Image
-            src={cardUrl(displayImage) || PLACEHOLDER_URL}
-            alt={`${product.name} in ${variant.color}`}
-            fill
-            className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
-            sizes="(max-width:640px) 50vw, (max-width:1024px) 33vw, 25vw"
-          />
+          {/* Demo video swaps into this same frame instead of opening a
+              modal — the play button toggles it, and tapping it again (or
+              the rest of the card) works exactly like the image did. */}
+          {videoOpen && product.demoVideoId ? (
+            <video
+              ref={videoRef}
+              key={product.demoVideoId}
+              src={cfVideo(product.demoVideoId)}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+          ) : (
+            <Image
+              src={cardUrl(displayImage, product.imageFit) || PLACEHOLDER_URL}
+              alt={`${product.name} in ${variant.color}`}
+              fill
+              className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+              sizes="(max-width:640px) 50vw, (max-width:1024px) 33vw, 25vw"
+            />
+          )}
         </div>
+
+        {/* Fullscreen — only while the demo video is actually playing */}
+        {videoOpen && product.demoVideoId && (
+          <motion.button
+            type="button"
+            onClick={handleFullscreen}
+            whileTap={tapPunch}
+            className="absolute bottom-3 right-3 z-10 w-7 h-7 flex items-center justify-center"
+            aria-label="View video fullscreen"
+          >
+            <span className="w-full h-full rounded-full flex items-center justify-center bg-lp-porcelain/90 backdrop-blur-sm border border-[var(--color-lp-border)]">
+              <Maximize size={12} strokeWidth={1.5} className="text-[var(--color-lp-ink)]" />
+            </span>
+          </motion.button>
+        )}
 
         {/* Myntra Exclusive badge */}
         {myntra && (
@@ -134,12 +209,35 @@ export function ProductCard({ product }: ProductCardProps) {
           <span className={`lp-tag absolute left-3 z-10 ${myntra ? 'top-10' : 'top-3'}`}>{product.tag}</span>
         )}
 
+        {/* Play — product demo video, only shown when the product has one */}
+        {product.demoVideoId && (
+          <motion.button
+            type="button"
+            onClick={(e) => {
+              e.preventDefault()
+              e.stopPropagation()
+              setVideoOpen((v) => !v)
+            }}
+            onMouseEnter={prefetchDemoVideo}
+            onTouchStart={prefetchDemoVideo}
+            whileTap={tapPunch}
+            className="absolute top-3 left-3 z-10 w-7 h-7 flex items-center justify-center"
+            aria-label={videoOpen ? 'Stop product demo video' : 'Play product demo video'}
+          >
+            <span className="w-full h-full rounded-full flex items-center justify-center bg-lp-porcelain/90 backdrop-blur-sm border border-[var(--color-lp-border)]">
+              {videoOpen
+                ? <X size={13} strokeWidth={1.5} className="text-[var(--color-lp-ink)]" />
+                : <Play size={13} strokeWidth={1.5} className="text-[var(--color-lp-ink)] ml-0.5" />}
+            </span>
+          </motion.button>
+        )}
+
         {/* Wishlist heart */}
         <motion.button
           type="button"
           onClick={handleWishlist}
-          whileTap={{ scale: 0.75 }}
-          className="absolute top-3 right-3 z-10 p-1"
+          whileTap={tapPunch}
+          className="absolute top-3 right-3 z-10 w-7 h-7 flex items-center justify-center"
           aria-label={wished ? 'Remove from wishlist' : 'Save to wishlist'}
         >
           <span className="relative block">
@@ -185,7 +283,7 @@ export function ProductCard({ product }: ProductCardProps) {
         </p>
         {/* Name left · Myntra rating right, on the same line */}
         <div className="flex items-center justify-between gap-2">
-          <Link href={`${ROUTES.shop}/${product.slug}`} onClick={saveShopScroll}>
+          <Link href={`${ROUTES.shop}/${product.slug}`} onClick={saveShopScroll} onMouseEnter={prefetchPdpImage}>
             <p className="font-display text-[1rem] md:text-[1.1rem] text-[var(--color-lp-ink)] leading-tight hover:text-[var(--color-lp-gold)] transition-colors duration-200">
               {product.name}
             </p>
@@ -369,7 +467,7 @@ export function ProductCard({ product }: ProductCardProps) {
                 : 'btn-ghost w-full justify-center opacity-40 cursor-not-allowed'
             }
             style={{ height: '36px' }}
-            whileTap={canAdd ? { scale: 0.97 } : {}}
+            whileTap={canAdd ? tapPunch : {}}
           >
             {activeSize && <ShoppingBag size={22} strokeWidth={1.5} style={{ flexShrink: 0 }} />}
             {!activeSize ? 'Select Color & Size' : 'Add to cart'}

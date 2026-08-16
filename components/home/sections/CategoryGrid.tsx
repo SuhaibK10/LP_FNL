@@ -9,12 +9,13 @@
 import { useState, useRef, useEffect }       from 'react'
 import Image                                 from 'next/image'
 import Link                                  from 'next/link'
+import { useRouter }                         from 'next/navigation'
 import { motion }                            from 'framer-motion'
 import { ArrowUpRight, LayoutGrid }          from 'lucide-react'
 import { ROUTES }                            from '@/lib/constants'
 import { SALE_PRODUCTS }                     from '@/config/products'
 import { categoryUrl, PLACEHOLDER_URL }      from '@/lib/cloudflareImages'
-import { staggerChildren, scaleUp } from '@/lib/animations'
+import { staggerPunch, popIn } from '@/lib/animations'
 import { ProductCard }                       from '@/components/shop/ProductCard'
 import { SaleCountdown }                     from '@/components/ui/SaleCountdown'
 
@@ -81,6 +82,20 @@ type Tab = 'category' | 'sale'
 
 export function CategoryGrid() {
   const [tab, setTab] = useState<Tab>('category')
+  const router = useRouter()
+
+  // Hover isn't a real gesture on touch devices — a tap fires straight
+  // through to navigation before the CSS transition ever gets a frame to
+  // paint. On touch, play the same reveal on tap instead: hold navigation
+  // for one transition length so the morph/text-swap is actually seen,
+  // then follow through to the category page.
+  const [tappedCard, setTappedCard] = useState<string | null>(null)
+  function handleCardClick(e: React.MouseEvent<HTMLAnchorElement>, href: string, value: string) {
+    if (typeof window === 'undefined' || !window.matchMedia('(hover: none)').matches) return
+    e.preventDefault()
+    setTappedCard(value)
+    setTimeout(() => router.push(href), 450)
+  }
 
   const saleTrackRef     = useRef<HTMLDivElement>(null)
   const saleContainerRef = useRef<HTMLDivElement>(null)
@@ -159,61 +174,68 @@ export function CategoryGrid() {
           transition={{ duration: 0.6 }}
           className="mb-8 md:mb-10 text-center"
         >
-          <span className="lp-eyebrow">{tab === 'sale' ? 'Limited time only' : 'Find your bag'}</span>
-          <h2 className="lp-heading-lg whitespace-nowrap text-[1.6rem] md:text-[2.25rem]">{tab === 'sale' ? 'Lowest Price Ever' : 'Something for Everyone'}</h2>
+          <span className="lp-eyebrow">{tab === 'sale' ? 'Limited time only' : 'Every trip, covered'}</span>
+          <h2 className="lp-heading-lg whitespace-nowrap text-[1.6rem] md:text-[2.25rem]">{tab === 'sale' ? 'Lowest Price Ever' : 'Find Your Fit'}</h2>
         </motion.div>
 
         {tab === 'category' && (
           /* Category grid */
           <motion.div
             key="grid-category"
-            variants={staggerChildren}
+            variants={staggerPunch}
             initial="hidden"
             whileInView="visible"
             viewport={EAGER_VIEWPORT}
             className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4"
           >
-            {CATEGORY_CARDS.map(({ label, value, image, span, imgClass }) => (
-              <motion.div
-                key={value}
-                variants={scaleUp}
-                className={span}
-              >
-                <Link
-                  href={`${ROUTES.shop}?category=${value}`}
-                  className="group relative block aspect-[4/5] md:aspect-square overflow-hidden bg-lp-border rounded-xl border-[3px] border-lp-border-strong transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:shadow-lp-ink/15 active:scale-[0.985]"
+            {CATEGORY_CARDS.map(({ label, value, image, span, imgClass }) => {
+              const href = `${ROUTES.shop}?category=${value}`
+              const tapped = tappedCard === value
+              return (
+                <motion.div
+                  key={value}
+                  variants={popIn}
+                  className={span}
                 >
-                  {/* Hover frame — ink border draws in */}
-                  <span
-                    aria-hidden="true"
-                    className="absolute inset-0 z-10 rounded-xl border-[1.5px] border-lp-ink opacity-0 scale-[0.98] group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 ease-out pointer-events-none"
-                  />
-                  {/* Image */}
-                  <Image
-                    src={categoryUrl(image) || PLACEHOLDER_URL}
-                    alt={label}
-                    fill
-                    className={`object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 ${imgClass}`}
-                    sizes="(max-width:768px) 50vw, (max-width:1280px) 25vw, 22rem"
-                  />
-
-                  {/* Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-lp-ink/90 via-lp-ink/30 to-transparent transition-opacity duration-300 group-hover:opacity-100" />
-
-                  {/* Text */}
-                  <div className="absolute bottom-0 left-0 right-0 px-4 md:px-5 pt-4 md:pt-5 pb-2 md:pb-2.5">
-                    <h3 className="w-full text-center font-display text-[1.1rem] md:text-[1.3rem] text-[var(--color-lp-porcelain)]/80 leading-none">
-                      {label}
-                    </h3>
-                    <ArrowUpRight
-                      size={18}
-                      strokeWidth={1.5}
-                      className="absolute right-4 md:right-5 bottom-2 md:bottom-2.5 text-[var(--color-lp-porcelain)]/50 group-hover:text-[var(--color-lp-gold)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 flex-shrink-0"
+                  <Link
+                    href={href}
+                    onClick={(e) => handleCardClick(e, href, value)}
+                    className={`group relative block aspect-[4/5] md:aspect-square overflow-hidden bg-lp-border rounded-xl border-[3px] border-lp-border-strong active:scale-[0.985] transition-[border-radius,transform] duration-500 ease-out hover:rounded-[40%] ${tapped ? 'rounded-[40%]' : ''}`}
+                  >
+                    {/* Image */}
+                    <Image
+                      src={categoryUrl(image) || PLACEHOLDER_URL}
+                      alt={label}
+                      fill
+                      className={`object-cover object-center transition-transform duration-500 ease-out group-hover:scale-110 ${tapped ? 'scale-110' : ''} ${imgClass}`}
+                      sizes="(max-width:768px) 50vw, (max-width:1280px) 25vw, 22rem"
                     />
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
+
+                    {/* Gradient */}
+                    <div className={`absolute inset-0 bg-gradient-to-t from-lp-ink/90 via-lp-ink/30 to-transparent transition-opacity duration-300 group-hover:opacity-100 ${tapped ? 'opacity-100' : ''}`} />
+
+                    {/* Text */}
+                    <div className="absolute bottom-0 left-0 right-0 px-4 md:px-5 pt-4 md:pt-5 pb-2 md:pb-2.5">
+                      <div className="relative h-5 md:h-6 overflow-hidden">
+                        {/* Resting label — slides up and out on hover/tap */}
+                        <h3 className={`absolute inset-0 flex items-center justify-center text-center font-display text-[1.1rem] md:text-[1.3rem] text-[var(--color-lp-porcelain)]/80 leading-none transition-transform duration-500 ease-out group-hover:-translate-y-full ${tapped ? '-translate-y-full' : ''}`}>
+                          {label}
+                        </h3>
+                        {/* Duplicate — waits just below, slides in to replace it */}
+                        <h3 aria-hidden="true" className={`absolute inset-0 flex items-center justify-center text-center font-display text-[1.1rem] md:text-[1.3rem] text-[var(--color-lp-porcelain)] leading-none translate-y-full transition-transform duration-500 ease-out group-hover:translate-y-0 ${tapped ? 'translate-y-0' : ''}`}>
+                          {label}
+                        </h3>
+                      </div>
+                      <ArrowUpRight
+                        size={18}
+                        strokeWidth={1.5}
+                        className={`absolute right-4 md:right-5 bottom-2 md:bottom-2.5 text-[var(--color-lp-porcelain)]/50 group-hover:text-[var(--color-lp-gold)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 flex-shrink-0 ${tapped ? 'text-[var(--color-lp-gold)] translate-x-0.5 -translate-y-0.5' : ''}`}
+                      />
+                    </div>
+                  </Link>
+                </motion.div>
+              )
+            })}
           </motion.div>
         )}
       </div>

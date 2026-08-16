@@ -22,7 +22,7 @@ export default function ShopPage() {
         <div className="container-lp">
           <span className="lp-eyebrow mb-2!">Our collection</span>
           <div className="flex items-end justify-between gap-4">
-            <h1 className="lp-heading-lg text-[1.75rem]! md:text-[2.5rem]! mb-3">All Products</h1>
+            <h1 className="lp-heading-lg text-[1.55rem]! md:text-[2.5rem]! mb-3">All Products</h1>
             <div className="mb-3 shrink-0">
               <ShopSizeGuideButton />
             </div>

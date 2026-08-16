@@ -10,7 +10,7 @@ import { useState, useEffect, useRef } from 'react'
 import Image                        from 'next/image'
 import { Flame }                    from 'lucide-react'
 import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
-import { pdpUrl, pdpZoomUrl, thumbUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
+import { pdpUrl, pdpZoomUrl, thumbUrl, PLACEHOLDER_URL, type ImageFit } from '@/lib/cloudflareImages'
 
 const LONG_PRESS_MS      = 350  // hold duration before zoom kicks in
 const LONG_PRESS_SLOP_PX = 8    // movement past this before the timer fires reads as a swipe, not a hold
@@ -20,9 +20,15 @@ interface Props {
   productName: string
   activeColorIndex?: number
   recentPurchases?: number
+  imageFit?: ImageFit
 }
 
-export function ImageGallery({ images, productName, activeColorIndex, recentPurchases }: Props) {
+export function ImageGallery({ images, productName, activeColorIndex, recentPurchases, imageFit }: Props) {
+  // The lifestyle/cover treatment only ever applies to the first photo in
+  // the array — every other angle is still a background-removed cutout
+  // meant for the pad-on-flat-color default, so forcing cover-fit on those
+  // would crop them wrong (no letterbox margin to protect the product).
+  const fitFor = (index: number) => (index === 0 ? imageFit : undefined)
   const [active, setActive]     = useState(activeColorIndex ?? 0)
   // What's actually on screen. Kept a step behind `active` so the current
   // photo never disappears behind a blank frame while the next one is
@@ -44,11 +50,12 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
   // firing this effect again). By the time someone actually clicks, the
   // full-size image is usually already cached instead of a cold fetch.
   useEffect(() => {
-    for (const img of images) {
+    images.forEach((img, i) => {
       const preload = new window.Image()
-      preload.src = pdpUrl(img) || PLACEHOLDER_URL
-    }
-  }, [images])
+      preload.src = pdpUrl(img, fitFor(i)) || PLACEHOLDER_URL
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [images, imageFit])
 
   useEffect(() => {
     if (active === displayed) return
@@ -57,10 +64,11 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
     const swap = () => { if (!cancelled) setDisplayed(active) }
     preload.onload  = swap
     preload.onerror = swap
-    preload.src = pdpUrl(images[active]) || PLACEHOLDER_URL
+    preload.src = pdpUrl(images[active], fitFor(active)) || PLACEHOLDER_URL
     if (preload.complete) swap()
     return () => { cancelled = true }
-  }, [active, displayed, images])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [active, displayed, images, imageFit])
 
   function handleDragEnd(_: unknown, info: PanInfo) {
     const { offset, velocity } = info
@@ -97,7 +105,7 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
     // mouseenter prefetch for desktop hover, just started earlier here
     // since a touch hold is shorter than typical hover-then-move timing).
     const preload = new window.Image()
-    preload.src = pdpZoomUrl(images[displayed]) || PLACEHOLDER_URL
+    preload.src = pdpZoomUrl(images[displayed], fitFor(displayed)) || PLACEHOLDER_URL
     longPressTimer.current = setTimeout(() => {
       setZoomOrigin({ x: originX, y: originY })
       setZoomed(true)
@@ -136,7 +144,7 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
   // already cached by the time the browser actually needs to paint it.
   function handleMouseEnter() {
     const preload = new window.Image()
-    preload.src = pdpZoomUrl(images[displayed]) || PLACEHOLDER_URL
+    preload.src = pdpZoomUrl(images[displayed], fitFor(displayed)) || PLACEHOLDER_URL
     setZoomed(true)
   }
 
@@ -195,7 +203,7 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
               // the responsive loader via `unoptimized`, which would
               // otherwise downscale it back to a normal-display size) so
               // magnifying reveals real detail instead of stretched pixels.
-              src={(zoomed ? pdpZoomUrl(images[displayed]) : pdpUrl(images[displayed])) || PLACEHOLDER_URL}
+              src={(zoomed ? pdpZoomUrl(images[displayed], fitFor(displayed)) : pdpUrl(images[displayed], fitFor(displayed))) || PLACEHOLDER_URL}
               unoptimized={zoomed}
               alt={`${productName}, view ${displayed + 1}`}
               fill
@@ -229,7 +237,7 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
               aria-pressed={i === active}
             >
               <Image
-                src={thumbUrl(img) || PLACEHOLDER_URL}
+                src={thumbUrl(img, fitFor(i)) || PLACEHOLDER_URL}
                 alt={`${productName} thumbnail ${i + 1}`}
                 fill
                 className="object-cover object-center"

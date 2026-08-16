@@ -132,7 +132,7 @@ export function Footer() {
       <div className="container-lp pt-20 md:pt-28">
 
         {/* ── Newsletter card ─────────────────────────────────────────────── */}
-        <div className="pb-12 md:pb-14 border-b border-[#C9A96E]/15">
+        <div className="pb-12 md:pb-14 border-b border-[var(--color-lp-gold)]/15">
           <div className="rounded-xl border border-white/10 bg-white/[0.03] px-6 py-10 md:py-14 flex flex-col items-center text-center gap-8">
             <div>
               <p className="lp-eyebrow">Newsletter</p>
@@ -150,7 +150,7 @@ export function Footer() {
         </div>
 
         {/* ── Link grid ───────────────────────────────────────────────────── */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 py-12 md:py-14 border-b border-[#C9A96E]/15">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 py-12 md:py-14 border-b border-[var(--color-lp-gold)]/15">
 
           {/* Brand */}
           <div className="order-1 col-span-2 md:col-span-1 md:order-1">
@@ -247,7 +247,7 @@ export function Footer() {
         </div>
 
         {/* ── Payments + legal ────────────────────────────────────────────── */}
-        <div className="py-5 flex flex-col items-center justify-center gap-4 border-b border-[#C9A96E]/15">
+        <div className="py-5 flex flex-col items-center justify-center gap-4 border-b border-[var(--color-lp-gold)]/15">
           <PaymentMarks />
           <div className="flex items-center gap-5">
             {LEGAL_LINKS.map(({ label, href }) => (

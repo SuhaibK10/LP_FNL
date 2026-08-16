@@ -20,6 +20,7 @@ import { thumbUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 import { formatPrice }              from '@/lib/utils'
 import { ROUTES, SALE_CONFIG }      from '@/lib/constants'
 import { getCoupon, type Coupon }   from '@/config/coupons'
+import { PRODUCTS }                 from '@/config/products'
 import { AddressForm, EMPTY_ADDRESS, type ShippingAddress } from '@/components/checkout/AddressForm'
 import type { User as SupabaseUser } from '@supabase/supabase-js'
 
@@ -351,7 +352,7 @@ export default function CheckoutPage() {
                   <div key={item.variantKey} className="flex gap-4 items-center py-3 border-b border-[var(--color-lp-border)] last:border-0">
                     <div className="relative w-14 h-[72px] bg-[var(--color-lp-porcelain)] flex-shrink-0">
                       <Image
-                        src={thumbUrl(item.image) || PLACEHOLDER_URL}
+                        src={thumbUrl(item.image, PRODUCTS.find(p => p.id === item.productId)?.imageFit) || PLACEHOLDER_URL}
                         alt={item.productName}
                         fill
                         className="object-cover object-center"

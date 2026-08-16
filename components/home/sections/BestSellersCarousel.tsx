@@ -19,7 +19,7 @@ import { formatPrice, swatchRingColor }      from '@/lib/utils'
 import { ROUTES }                            from '@/lib/constants'
 import { useCartStore }                      from '@/store/cartStore'
 import { useWishlistStore }                  from '@/store/wishlistStore'
-import { staggerChildren, fadeUp, VIEWPORT } from '@/lib/animations'
+import { staggerChildren, fadeUp, VIEWPORT, tapPunch } from '@/lib/animations'
 import { SizeGuideModal }                    from '@/components/ui/SizeGuideModal'
 import { MyntraBuyButton }                   from '@/components/ui/MyntraBuyButton'
 import { getMyntraListing, getMyntraForSize, MYNTRA_EXCLUSIVES_ENABLED } from '@/config/myntra'
@@ -100,11 +100,11 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
       {/* Image */}
       <Link
         href={`${ROUTES.shop}/${product.slug}`}
-        className="relative block aspect-[3/4] bg-[var(--color-lp-porcelain)] overflow-hidden mb-3"
+        className={`relative block aspect-[3/4] bg-[var(--color-lp-porcelain)] overflow-hidden rounded-md mb-3 ${product.imageFit === 'cover' ? 'border-[3px] border-lp-border-strong' : ''}`}
         draggable="false"
       >
         <Image
-          src={cardUrl(displayImage) || PLACEHOLDER_URL}
+          src={cardUrl(displayImage, product.imageFit) || PLACEHOLDER_URL}
           alt={product.name}
           fill
           className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
@@ -127,7 +127,7 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
         <motion.button
           type="button"
           onClick={handleWishlist}
-          whileTap={{ scale: 0.75 }}
+          whileTap={tapPunch}
           className="absolute top-3 right-3 z-10 p-1"
           aria-label={wished ? 'Remove from wishlist' : 'Save to wishlist'}
         >
@@ -324,11 +324,11 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
             disabled={!canAdd}
             className={
               canAdd
-                ? 'btn-ghost w-3/4 justify-center mt-2'
+                ? 'btn-gold w-3/4 justify-center mt-2'
                 : 'btn-ghost w-3/4 justify-center opacity-40 cursor-not-allowed mt-2'
             }
             style={{ height: '36px' }}
-            whileTap={canAdd ? { scale: 0.97 } : {}}
+            whileTap={canAdd ? tapPunch : {}}
           >
             <ShoppingBag size={16} strokeWidth={1.5} />
             {!activeSize ? 'Select Color & Size' : 'Add to cart'}
@@ -414,7 +414,7 @@ export function BestSellersCarousel() {
           viewport={VIEWPORT}
         >
           <motion.span variants={fadeUp} className="lp-eyebrow">
-            {tab === 'myntra' ? 'Available exclusively on' : 'What India is carrying'}
+            {tab === 'myntra' ? 'Available exclusively on' : "India's most-carried"}
           </motion.span>
           <motion.h2 variants={fadeUp} className="lp-heading-lg">
             {tab === 'myntra' ? 'Myntra Exclusives' : 'Best Sellers'}
@@ -432,7 +432,7 @@ export function BestSellersCarousel() {
             href={ROUTES.shop}
             className="flex items-center gap-2 font-body text-[0.75rem] tracking-widest uppercase text-lp-muted hover:text-lp-gold transition-colors duration-200 group"
           >
-            View all
+            See the full lineup
             <ArrowRight size={14} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform duration-200" />
           </Link>
         </div>

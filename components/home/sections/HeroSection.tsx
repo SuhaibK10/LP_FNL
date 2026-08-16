@@ -30,7 +30,7 @@ function FlapText({ text }: { text: string }) {
               animate={{ rotateX: 0,   opacity: 1 }}
               transition={{
                 duration: 0.55,
-                delay:    (wi * word.length + ci) * 0.045,
+                delay:    (wi * word.length + ci) * 0.035,
                 ease:     [0.16, 1, 0.3, 1],
               }}
               className="inline-block"
@@ -212,13 +212,13 @@ export function HeroSection() {
           {/* CTAs — only shown when slide opts in */}
           {slide.showCta && (
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0  }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0, y: 20, scale: 0.94 }}
+              animate={{ opacity: 1, y: 0,  scale: 1    }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20, delay: 0.4 }}
               className="flex flex-wrap gap-3 justify-center w-full"
             >
               <Link href={ROUTES.shop} className="btn-primary">
-                Shop the Collection
+                Explore the Collection
                 <ArrowRight size={16} strokeWidth={1.5} />
               </Link>
             </motion.div>

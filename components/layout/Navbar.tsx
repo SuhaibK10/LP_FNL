@@ -14,7 +14,7 @@ import Link                  from 'next/link'
 import Image                 from 'next/image'
 import { usePathname }       from 'next/navigation'
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence, useScroll, useSpring, useTransform } from 'framer-motion'
+import { motion, AnimatePresence, useScroll, useSpring, useTransform, useMotionValueEvent } from 'framer-motion'
 import { ShoppingBag, Menu, X, Search, Heart, User, SlidersHorizontal } from 'lucide-react'
 import { NAV_ITEMS, ROUTES, BRAND }    from '@/lib/constants'
 import { cn }                          from '@/lib/utils'
@@ -85,6 +85,17 @@ export function Navbar() {
     damping:   30,
     restDelta: 0.001,
   })
+
+  // Transparent-over-hero navbar — home and shop pages only, and only
+  // before the user has scrolled past the top. Once scrolled (or on any
+  // other page), it's the normal solid porcelain bar.
+  const [scrolled, setScrolled] = useState(false)
+  const { scrollY: rawScrollY } = useScroll()
+  useMotionValueEvent(rawScrollY, 'change', (latest) => setScrolled(latest > 60))
+  const transparent = (isHome || isShopPage) && !scrolled
+  // Ink stays ink whether transparent or solid — hero imagery here runs
+  // light/pale, not the dark photo a white-text treatment would need.
+  const navTextClass = 'text-[var(--color-lp-ink)] hover:text-lp-gold'
 
   // The sale ticker sits in normal document flow (scrolls away), but the
   // navbar below it is fixed at a constant offset — so once the ticker
@@ -185,9 +196,10 @@ export function Navbar() {
       <motion.header
         className={cn(
           pathname.startsWith('/careers') ? 'absolute' : 'fixed',
-          'left-0 right-0 z-50',
-          'bg-lp-porcelain/95 backdrop-blur-md',
-          'border-b border-lp-border shadow-sm',
+          'left-0 right-0 z-50 transition-colors duration-300',
+          transparent
+            ? 'bg-transparent'
+            : 'bg-lp-porcelain/95 backdrop-blur-md border-b border-lp-border shadow-sm',
           'w-full overflow-hidden',
         )}
         style={{
@@ -215,7 +227,7 @@ export function Navbar() {
               {/* Hamburger — mobile only */}
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="lg:hidden -m-2 p-2 text-[var(--color-lp-ink)] hover:text-[var(--color-lp-gold)] transition-colors"
+                className={cn('lg:hidden -m-2 p-2 transition-colors', navTextClass)}
                 aria-label={menuOpen ? 'Close menu' : 'Open menu'}
               >
                 {menuOpen ? <X size={22} strokeWidth={1.5} /> : <Menu size={22} strokeWidth={1.5} />}
@@ -228,12 +240,12 @@ export function Navbar() {
                     key={href}
                     href={href}
                     className={cn(
-                      'relative font-body text-[0.75rem] tracking-[0.12em] uppercase transition-colors duration-200',
+                      'relative font-body text-[0.8rem] font-semibold tracking-[0.12em] uppercase transition-colors duration-200',
                       'after:absolute after:bottom-[-3px] after:left-0 after:h-[1.5px] after:bg-lp-ink/45',
                       'after:transition-all after:duration-300',
                       pathname === href
                         ? 'text-lp-ink after:w-full'
-                        : 'text-[var(--color-lp-ink)] hover:text-lp-ink/45 after:w-0 hover:after:w-full'
+                        : cn(navTextClass, 'after:w-0 hover:after:w-full')
                     )}
                   >
                     {label}
@@ -248,13 +260,13 @@ export function Navbar() {
               className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 group"
               aria-label="Louis Polo home"
             >
-              
+
               <Image
                     src="/logo.svg"
                     alt="Louis Polo"
                     width={100}
                     height={97}
-                    className="h-12 lg:h-13 w-auto object-contain"
+                    className="h-12 lg:h-17 w-auto object-contain"
                     priority
                     unoptimized
                   />
@@ -266,7 +278,7 @@ export function Navbar() {
               {/* Corporate Enquiry — desktop only */}
               <Link
                 href={ROUTES.corporateGifting}
-                className="hidden lg:block relative font-body text-[0.75rem] tracking-[0.12em] uppercase transition-colors duration-200 text-[var(--color-lp-ink)] hover:text-lp-ink/45"
+                className={cn('hidden lg:block relative font-body text-[0.8rem] font-semibold tracking-[0.12em] uppercase transition-colors duration-200', navTextClass)}
               >
                 Corporate Gifting
               </Link>
@@ -283,7 +295,7 @@ export function Navbar() {
                     exit={{ opacity: 0, scale: 0.8 }}
                     transition={{ duration: 0.2 }}
                     onClick={() => setShopDrawerOpen(true)}
-                    className="-m-2 p-2 text-lp-ink hover:text-lp-gold transition-colors duration-200"
+                    className={cn('-m-2 p-2 transition-colors duration-200', navTextClass)}
                     aria-label="Open filters"
                   >
                     <SlidersHorizontal size={19} strokeWidth={1.5} />
@@ -294,7 +306,7 @@ export function Navbar() {
               {/* Search */}
               <button
                 onClick={() => setSearchOpen(true)}
-                className="-m-2 p-2 text-lp-ink hover:text-lp-gold transition-colors duration-200"
+                className={cn('-m-2 p-2 transition-colors duration-200', navTextClass)}
                 aria-label="Search products (⌘K)"
               >
                 <Search size={20} strokeWidth={1.5} />
@@ -303,7 +315,7 @@ export function Navbar() {
               {/* Account — desktop only */}
               <Link
                 href="/account"
-                className="hidden lg:block -m-2 p-2 text-lp-ink hover:text-lp-gold transition-colors duration-200"
+                className={cn('hidden lg:block -m-2 p-2 transition-colors duration-200', navTextClass)}
                 aria-label="My Account"
               >
                 <User size={20} strokeWidth={1.5} />
@@ -312,7 +324,7 @@ export function Navbar() {
               {/* Wishlist */}
               <Link
                 href={ROUTES.wishlist}
-                className="relative -m-2 p-2 text-lp-ink hover:text-lp-gold transition-colors duration-200"
+                className={cn('relative -m-2 p-2 transition-colors duration-200', navTextClass)}
                 aria-label={`Wishlist, ${wishlistCount} items`}
               >
                 <Heart size={20} strokeWidth={1.5} />
@@ -331,7 +343,7 @@ export function Navbar() {
               {/* Cart — desktop only */}
               <Link
                 href={ROUTES.cart}
-                className="relative hidden lg:block -m-2 p-2 text-lp-ink hover:text-lp-gold transition-colors duration-200"
+                className={cn('relative hidden lg:block -m-2 p-2 transition-colors duration-200', navTextClass)}
                 aria-label={`Cart, ${cartCount} items`}
               >
                 <ShoppingBag size={20} strokeWidth={1.5} />

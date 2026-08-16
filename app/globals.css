@@ -187,7 +187,8 @@
     border: 1.5px solid var(--color-lp-ink);
     transition: background-color var(--transition-base),
                 color var(--transition-base),
-                transform 0.2s ease;
+                transform 0.2s ease,
+                box-shadow var(--transition-base);
     white-space: nowrap;
   }
   .btn-primary:hover {
@@ -195,6 +196,7 @@
     border-color: var(--color-lp-gold);
     color: var(--color-lp-ink);
     transform: translateY(-1px);
+    box-shadow: var(--shadow-gold);
   }
   .btn-primary:active { transform: scale(0.97); }
 

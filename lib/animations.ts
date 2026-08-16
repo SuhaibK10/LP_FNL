@@ -88,3 +88,38 @@ export const VIEWPORT = {
   once:   true,
   margin: '-80px',
 } as const
+
+// ─── Confident spring tier ──────────────────────────────────────────────────
+// Supplements (never replaces) the LP_EASE tier above. Use only for things
+// the user *did* (taps, add-to-cart, selections) or discrete arrivals (a
+// card landing, a CTA appearing) — never for ambient/looping content, never
+// more than one overshooting element on screen at once, never on text
+// longer than ~3 words. Scroll-triggered section reveals stay on
+// fadeUp/scaleUp/expo-out — that's what still reads "in control."
+// prefers-reduced-motion is already handled globally via the
+// <MotionConfig reducedMotion="user"> wrapper in
+// components/providers/SmoothScrollProvider.tsx — no extra handling needed
+// here, Framer Motion strips the transform on its own when set.
+
+// Spring arrival — cards/CTAs settling into view with a slight overshoot.
+export const popIn: Variants = {
+  hidden:  { opacity: 0, y: 20, scale: 0.94 },
+  visible: {
+    opacity: 1, y: 0, scale: 1,
+    transition: { type: 'spring', stiffness: 300, damping: 20 },
+  },
+}
+
+// Tap/click feedback — a named, reusable whileTap spring, replacing bare
+// whileTap={{ scale: 0.97 }} calls scattered across cards.
+export const tapPunch = {
+  scale: 0.94,
+  transition: { type: 'spring', stiffness: 400, damping: 17 } as const,
+}
+
+// Faster, more present stagger than staggerChildren — for grids that want
+// more visible sequencing (e.g. CategoryGrid).
+export const staggerPunch: Variants = {
+  hidden:  {},
+  visible: { transition: { staggerChildren: 0.09, delayChildren: 0.05 } },
+}

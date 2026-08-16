@@ -29,7 +29,7 @@ export function ProductPageClient({ product, defaultColor }: Props) {
       const firstImage = v.images?.[0] ?? product.images[i] ?? product.images[0]
       if (!firstImage) return
       const preload = new window.Image()
-      preload.src = pdpUrl(firstImage) || PLACEHOLDER_URL
+      preload.src = pdpUrl(firstImage, product.imageFit) || PLACEHOLDER_URL
     })
     // Only needs to run once per product page load — re-running on every
     // color change would keep re-fetching the color just switched away from.
@@ -52,6 +52,7 @@ export function ProductPageClient({ product, defaultColor }: Props) {
           productName={product.name}
           activeColorIndex={galleryActiveIndex}
           recentPurchases={product.recentPurchases}
+          imageFit={product.imageFit}
         />
       </div>
       <div>

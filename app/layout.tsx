@@ -89,12 +89,19 @@ export default function RootLayout({
       <head>
         {/* Opens the connection to the image CDN before the first photo is
             requested, so DNS + TLS handshake isn't on the critical path.
-            imagedelivery.net serves every image on every page; Cloudinary
-            now only serves the one homepage video, so it's a lower-priority
-            second hint rather than the primary one. */}
+            imagedelivery.net serves every image on every page. */}
         <link rel="preconnect" href="https://imagedelivery.net" crossOrigin="" />
         <link rel="dns-prefetch" href="https://imagedelivery.net" />
-        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+        {/* Same idea for video — without this, clicking a demo-video play
+            button pays the full DNS+TLS handshake cost before the first
+            byte can even start downloading, which reads as lag. */}
+        {process.env.NEXT_PUBLIC_CLOUDFLARE_STREAM_CODE && (
+          <link
+            rel="preconnect"
+            href={`https://customer-${process.env.NEXT_PUBLIC_CLOUDFLARE_STREAM_CODE}.cloudflarestream.com`}
+            crossOrigin=""
+          />
+        )}
       </head>
       <body className="bg-[var(--color-lp-porcelain)] text-[var(--color-lp-ink)] font-body antialiased">
         <DesktopGate>

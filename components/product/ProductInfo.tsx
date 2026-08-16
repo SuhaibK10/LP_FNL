@@ -18,12 +18,14 @@ import { ROUTES, SEO }           from '@/lib/constants'
 import { ShareButton }           from '@/components/ui/ShareButton'
 import { useCartStore }          from '@/store/cartStore'
 import { thumbUrl }              from '@/lib/cloudflareImages'
+import { cfVideo }               from '@/lib/cloudflareStream'
 import { useWishlistStore }      from '@/store/wishlistStore'
 import { SizeGuideModal }        from '@/components/ui/SizeGuideModal'
 import { DemoVideoModal }        from '@/components/product/DemoVideoModal'
 import { ProductAccordions }     from '@/components/product/ProductDetails'
 import { MyntraBuyButton }       from '@/components/ui/MyntraBuyButton'
 import { getMyntraListing, getMyntraForSize } from '@/config/myntra'
+import { tapPunch }              from '@/lib/animations'
 
 interface Props {
   product: Product
@@ -67,6 +69,18 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
   const myntraSizeRating = selectedSize && myntra?.sizes?.[selectedSize]?.rating
     ? myntra.sizes[selectedSize]
     : myntra
+
+  // Warms the video's bytes on hover/touch so Play feels instant instead of
+  // paying a cold-start fetch when tapped — same trick as image prefetching
+  // elsewhere on the site. Not appended to the DOM; setting `src` alone
+  // triggers the browser's fetch regardless of DOM attachment.
+  function prefetchDemoVideo() {
+    if (!product.demoVideoId) return
+    const preload = document.createElement('video')
+    preload.preload = 'auto'
+    preload.muted = true
+    preload.src = cfVideo(product.demoVideoId)
+  }
 
   function handleColorChange(i: number) {
     setColorIndex(i)
@@ -297,10 +311,10 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
           disabled={!canAdd}
           className={
             canAdd
-              ? 'btn-primary flex-1 justify-center'
-              : 'btn-primary flex-1 justify-center opacity-40 cursor-not-allowed'
+              ? 'btn-primary flex-1 justify-center rounded-md'
+              : 'btn-primary flex-1 justify-center opacity-40 cursor-not-allowed rounded-md'
           }
-          whileTap={canAdd ? { scale: 0.97 } : {}}
+          whileTap={canAdd ? tapPunch : {}}
         >
           <ShoppingBag size={16} strokeWidth={1.5} />
           {!selectedSize ? 'Select Color & Size' : 'Add to cart'}
@@ -312,11 +326,13 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
           <motion.button
             type="button"
             onClick={() => setVideoOpen(true)}
-            whileTap={{ scale: 0.9 }}
-            className="w-14 flex items-center justify-center border border-[var(--color-lp-border)] hover:border-[var(--color-lp-gold)] transition-colors duration-200 shrink-0"
+            onMouseEnter={prefetchDemoVideo}
+            onTouchStart={prefetchDemoVideo}
+            whileTap={tapPunch}
+            className="w-14 rounded-md flex items-center justify-center bg-lp-cream border border-[var(--color-lp-border)] hover:border-[var(--color-lp-gold)] hover:bg-[var(--color-lp-gold)]/10 transition-colors duration-200 shrink-0"
             aria-label="Play product demo video"
           >
-            <Play size={18} strokeWidth={1.5} className="text-[var(--color-lp-muted)]" />
+            <Play size={18} strokeWidth={1.5} className="text-[var(--color-lp-ink)]" />
           </motion.button>
         )}
 
@@ -332,8 +348,8 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
               setTimeout(() => setBurst(false), 1050)
             }
           }}
-          whileTap={{ scale: 0.9 }}
-          className="w-14 flex items-center justify-center border border-[var(--color-lp-border)] hover:border-[var(--color-lp-gold)] transition-colors duration-200 shrink-0"
+          whileTap={tapPunch}
+          className="w-14 rounded-md flex items-center justify-center bg-lp-cream border border-[var(--color-lp-border)] hover:border-[var(--color-lp-gold)] hover:bg-[var(--color-lp-gold)]/10 transition-colors duration-200 shrink-0"
           aria-label={wished ? 'Remove from wishlist' : 'Save to wishlist'}
         >
           <span className="relative block">
@@ -346,7 +362,7 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
                 size={18}
                 strokeWidth={1.5}
                 className="transition-colors duration-200"
-                style={{ color: wished ? '#C0392B' : 'var(--color-lp-muted)', fill: wished ? '#C0392B' : 'none' }}
+                style={{ color: wished ? '#C0392B' : 'var(--color-lp-ink)', fill: wished ? '#C0392B' : 'none' }}
               />
             </motion.span>
             {burst && (
