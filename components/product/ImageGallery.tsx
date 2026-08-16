@@ -210,13 +210,18 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
           </div>
         )}
 
-        <AnimatePresence mode="wait">
+        {/* mode="sync" (the default) crossfades the incoming photo over the
+            outgoing one instead of waiting for the old one to fully exit
+            first — "wait" was adding up to ~700ms of pure animation delay
+            (exit duration + enter duration) on every color/thumbnail swap,
+            on top of however long the image itself took to load. */}
+        <AnimatePresence>
           <motion.div
             key={displayed}
             initial={{ opacity: 0, x: 16 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{    opacity: 0, x: -8 }}
-            transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ duration: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
             className="absolute inset-0"
           >
             <Image
