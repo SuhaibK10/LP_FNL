@@ -273,9 +273,20 @@ export function ProductGrid() {
 
       {/* ── Count + view toggle row ───────────────────────────────────── */}
       <div className="flex items-center justify-between mb-8 md:mb-10 border-b border-lp-border pb-3">
-        <span className="font-body font-medium text-[0.7rem] tracking-[0.08em] uppercase text-lp-faint">
-          {sorted.length} {sorted.length === 1 ? 'Product' : 'Products'}
-        </span>
+        <div className="flex items-center gap-3">
+          <span className="font-body font-medium text-[0.7rem] tracking-[0.08em] uppercase text-lp-faint">
+            {sorted.length} {sorted.length === 1 ? 'Product' : 'Products'}
+          </span>
+          {activeFilterCount > 0 && (
+            <button
+              type="button"
+              onClick={clearAll}
+              className="font-body font-medium text-[0.7rem] text-lp-muted hover:text-lp-gold underline underline-offset-2 transition-colors duration-200"
+            >
+              Clear all
+            </button>
+          )}
+        </div>
         <div className="flex items-center gap-1">
           <button
             type="button"

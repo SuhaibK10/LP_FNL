@@ -4,6 +4,7 @@
 
 import { clsx, type ClassValue } from 'clsx'
 import { twMerge }               from 'tailwind-merge'
+import type { ProductSize, SizeOption } from '@/types'
 
 export function cn(...inputs: ClassValue[]): string {
   return twMerge(clsx(inputs))
@@ -35,6 +36,13 @@ export function swatchRingColor(hex: string): string {
   const b = parseInt(h.substring(4, 6), 16)
   const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255
   return luminance > 0.85 ? 'var(--color-lp-ink)' : hex
+}
+
+// Product cards/PDP default to a concrete size (and thus a concrete price)
+// instead of leaving the size unpicked and showing a "From ₹X" range —
+// Cabin when the variant has one, otherwise its first listed size.
+export function defaultSize(sizes: SizeOption[]): ProductSize | null {
+  return sizes.find((s) => s.size === 'Cabin')?.size ?? sizes[0]?.size ?? null
 }
 
 // Convert category slug to display label

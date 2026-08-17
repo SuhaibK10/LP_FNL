@@ -194,7 +194,6 @@ export const PRODUCTS: Product[] = [
     slug: 'aerosmart-3in1',
     category: 'trolley',
     isFeatured: true,
-    hideSizeSelector: true,
     saleExclusive: true,
     mrp: 9990,
     description:
@@ -415,7 +414,6 @@ export const PRODUCTS: Product[] = [
     name: 'AeroX',
     slug: 'aerox',
     category: 'trolley',
-    hideSizeSelector: true,
     description:
       'Built for the walk from check-in to gate. AeroX is a lightweight hard-shell cabin trolley with a TSA-approved combination lock, silent 360° spinner wheels, and a built-in cup holder for the coffee you didn’t have time to finish.',
     story: [
@@ -499,7 +497,6 @@ export const PRODUCTS: Product[] = [
     name: 'Pulse',
     slug: 'pulse',
     category: 'trolley',
-    hideSizeSelector: true,
     description:
       'Pulse is a hard-shell 20" cabin suitcase built to be spotted at baggage claim before it hits the belt. A ribbed, concentric-embossed shell in electric lime carries a TSA-approved combination lock and eight silent spinner wheels that glide instead of drag.',
     story: [

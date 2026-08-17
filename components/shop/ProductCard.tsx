@@ -14,7 +14,7 @@ import { ArrowRight, ShoppingBag, Check, Heart, Ruler, Star, ChevronDown, Play, 
 import type { Product, ProductSize } from '@/types'
 import { cardUrl, pdpUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 import { cfVideo }                  from '@/lib/cloudflareStream'
-import { formatPrice, swatchRingColor } from '@/lib/utils'
+import { formatPrice, swatchRingColor, defaultSize } from '@/lib/utils'
 import { ROUTES }                   from '@/lib/constants'
 import { saveShopScroll }           from '@/lib/scrollRestore'
 import { useCartStore }             from '@/store/cartStore'
@@ -67,7 +67,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
   const [activeVariant,   setActiveVariant]   = useState(0)
   const [activeSize,      setActiveSize]      = useState<ProductSize | null>(
-    product.hideSizeSelector ? product.variants[0].sizes[0].size : null
+    defaultSize(product.variants[0].sizes)
   )
   const [addedToCart,     setAddedToCart]     = useState(false)
   const [sizeGuideOpen,   setSizeGuideOpen]   = useState(false)
@@ -88,7 +88,7 @@ export function ProductCard({ product }: ProductCardProps) {
   function handleColorChange(e: React.MouseEvent, i: number) {
     e.stopPropagation()
     setActiveVariant(i)
-    setActiveSize(product.hideSizeSelector ? product.variants[i].sizes[0].size : null)
+    setActiveSize(defaultSize(product.variants[i].sizes))
   }
 
   function handleAddToCart(e: React.MouseEvent) {
@@ -411,7 +411,7 @@ export function ProductCard({ product }: ProductCardProps) {
         {/* Price — single line in both branches so Myntra and
             non-Myntra cards keep identical height and buttons align */}
         {myntra && myntraTarget ? (
-          <p className="font-body text-[1.125rem] md:text-[1.1875rem] font-semibold leading-[1.2] tracking-[-0.015em] text-[#1C1B19] whitespace-nowrap">
+          <p className="font-body text-[1rem] md:text-[1.125rem] font-medium leading-[1.2] tracking-[-0.015em] text-[#1C1B19] whitespace-nowrap">
             {activeSize ? formatPrice(myntraTarget.price) : `From ${formatPrice(myntraTarget.price)}`}
             <span className="hidden sm:inline ml-2 font-normal text-[0.8125rem] text-[var(--color-lp-faint)] line-through decoration-1 decoration-lp-border-strong">
               {activeSize ? formatPrice(price) : formatPrice(lowestPrice)}
@@ -421,7 +421,7 @@ export function ProductCard({ product }: ProductCardProps) {
             </span>
           </p>
         ) : product.mrp ? (
-          <p className="font-body text-[1.125rem] md:text-[1.1875rem] font-semibold leading-[1.2] tracking-[-0.015em] text-[#1C1B19] whitespace-nowrap">
+          <p className="font-body text-[1rem] md:text-[1.125rem] font-medium leading-[1.2] tracking-[-0.015em] text-[#1C1B19] whitespace-nowrap">
             {activeSize ? formatPrice(price) : `From ${formatPrice(price)}`}
             <span className="hidden sm:inline ml-2 font-normal text-[0.8125rem] text-[var(--color-lp-faint)] line-through decoration-1 decoration-lp-border-strong">
               {formatPrice(product.mrp)}
@@ -431,7 +431,7 @@ export function ProductCard({ product }: ProductCardProps) {
             </span>
           </p>
         ) : (
-        <p className="font-body text-[1.125rem] md:text-[1.1875rem] font-semibold leading-[1.2] tracking-[-0.015em] text-[#1C1B19]">
+        <p className="font-body text-[1rem] md:text-[1.125rem] font-medium leading-[1.2] tracking-[-0.015em] text-[#1C1B19]">
           {activeSize ? formatPrice(price) : `From ${formatPrice(price)}`}
         </p>
         )}

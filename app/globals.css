@@ -5,9 +5,9 @@
 
 /* ─── Design Tokens ──────────────────────────────────────────────────────── */
 @theme {
-  /* Fonts — Instrument Serif (editorial, expressive) for display/headings;
-     Manrope (confident, readable) for everything else. See app/layout.tsx. */
-  --font-display: var(--font-instrument-serif), Georgia, serif;
+  /* Fonts — Lora (calm, contemporary serif) for display/headings; Plus
+     Jakarta Sans (refined, readable) for everything else. See app/layout.tsx. */
+  --font-display: var(--font-lora), Georgia, serif;
   --font-body:    var(--font-body-sans), system-ui, sans-serif;
 
   /* Palette — Louis Polo "Confident Travel Luxury" */
@@ -78,7 +78,7 @@
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    font-weight: 400;             /* Instrument Serif ships one weight */
+    font-weight: 400;             /* Lora sits well at regular weight */
     line-height: 1.05;
     letter-spacing: -0.02em;
   }
@@ -145,7 +145,7 @@
     margin-bottom: 1rem;
   }
 
-  /* ── Section headings — Instrument Serif, negative tracking throughout.
+  /* ── Section headings — Lora, negative tracking throughout.
      Four distinct roles, kept as separate rules on purpose so each can be
      tuned independently:
        xl  = editorial display type — hero slides, campaign statements
@@ -193,13 +193,13 @@
   }
 
   /* Product-card title — deliberately restrained, NOT the expressive
-     editorial tier above. Instrument Serif reads thin at small sizes, so
-     this stays regular weight (never bolded) but sized/spaced so it's still
-     the first thing the eye lands on in the card, ahead of price. */
+     editorial tier above. Stays regular weight (never bolded) but
+     sized/spaced so it's still the first thing the eye lands on in the
+     card, ahead of price. */
   .lp-heading-product {
     font-family: var(--font-display);
     font-weight: 400;
-    font-size: clamp(1.375rem, 1vw + 1.1rem, 1.625rem);   /* 22px → 26px */
+    font-size: clamp(1.25rem, 1vw + 1.05rem, 1.5625rem);   /* 20px → 25px */
     line-height: 1.07;
     letter-spacing: -0.0125em;
     color: #1C1B19;
@@ -347,7 +347,7 @@
   /* ── Cards — product card boxed treatment (shop grid, Best Sellers) ── */
   .lp-card {
     background: var(--color-lp-card);
-    border: 1px solid var(--color-lp-border);
+    border: 3px solid rgba(23,23,23,0.16);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow-card);
