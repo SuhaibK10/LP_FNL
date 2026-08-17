@@ -88,8 +88,8 @@ export function ProductAccordions({ product }: { product: Product }) {
               key={label}
               className="flex justify-between gap-6 py-2 border-b border-[var(--color-lp-border)]/50 last:border-b-0"
             >
-              <dt className="font-body text-[0.78rem] text-[var(--color-lp-muted)] shrink-0">{label}</dt>
-              <dd className="font-body text-[0.78rem] text-[var(--color-lp-ink)] text-right">{value}</dd>
+              <dt className="font-body text-[0.9rem] text-[var(--color-lp-muted)] shrink-0">{label}</dt>
+              <dd className="font-body text-[0.9rem] font-medium text-[var(--color-lp-ink)] text-right">{value}</dd>
             </div>
           ))}
         </dl>
@@ -102,10 +102,10 @@ export function ProductAccordions({ product }: { product: Product }) {
       label: 'Warranty & Care',
       content: (
         <div className="space-y-3">
-          <p className="font-body text-[0.82rem] text-[var(--color-lp-ink)] leading-relaxed">
+          <p className="font-body text-[0.95rem] font-medium text-[var(--color-lp-ink)] leading-[1.65]">
             {product.warranty}
           </p>
-          <p className="font-body text-[0.82rem] text-[var(--color-lp-muted)] leading-relaxed">
+          <p className="font-body text-[0.95rem] font-medium text-[var(--color-lp-body)] leading-[1.65]">
             {CARE_COPY}
           </p>
         </div>
@@ -116,7 +116,7 @@ export function ProductAccordions({ product }: { product: Product }) {
   items.push({
     label: 'Shipping & Returns',
     content: (
-      <p className="font-body text-[0.82rem] text-[var(--color-lp-muted)] leading-relaxed">
+      <p className="font-body text-[0.95rem] font-medium text-[var(--color-lp-body)] leading-[1.65]">
         {SHIPPING_COPY}
       </p>
     ),
@@ -129,8 +129,8 @@ export function ProductAccordions({ product }: { product: Product }) {
         <div className="space-y-4">
           {product.faqs.map(({ q, a }) => (
             <div key={q}>
-              <p className="font-body text-[0.82rem] font-medium text-[var(--color-lp-ink)] mb-1">{q}</p>
-              <p className="font-body text-[0.82rem] text-[var(--color-lp-muted)] leading-relaxed">{a}</p>
+              <p className="font-body text-[0.95rem] font-semibold text-[var(--color-lp-ink)] mb-1.5">{q}</p>
+              <p className="font-body text-[0.95rem] font-medium text-[var(--color-lp-body)] leading-[1.65]">{a}</p>
             </div>
           ))}
         </div>

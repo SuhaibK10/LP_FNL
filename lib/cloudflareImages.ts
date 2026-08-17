@@ -51,10 +51,25 @@ export const heroUrlMobile = (id: string) =>
 // Pass a product's `imageFit` field through from config/products.ts.
 export type ImageFit = 'pad' | 'cover'
 
+// TEMPORARY — background-color A/B test (see components/dev/ImageBgTester.tsx).
+// Reads the chosen hex from localStorage on every call so a hard reload after
+// picking an option is enough to repaint every product image. Remove this
+// override + the hardcoded default fallback once a color is locked in.
+const IMAGE_BG_TEST_KEY = 'lp_imgbg_test_hex'
+const DEFAULT_IMAGE_BG = 'E8E8E6'
+
+function padBackgroundHex(): string {
+  if (typeof window !== 'undefined') {
+    const override = window.localStorage.getItem(IMAGE_BG_TEST_KEY)
+    if (override) return override
+  }
+  return DEFAULT_IMAGE_BG
+}
+
 const fitParams = (fit: ImageFit, w: number, h: number) =>
   fit === 'cover'
     ? `w=${w},h=${h},fit=cover,gravity=auto`
-    : `w=${w},h=${h},fit=pad,background=%23E8E8E6`
+    : `w=${w},h=${h},fit=pad,background=%23${padBackgroundHex()}`
 
 // Product card thumbnail — 3:4 portrait
 export const cardUrl = (id: string, fit: ImageFit = 'pad') =>

@@ -204,7 +204,7 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
 
         {/* Desktop-only hint — touch devices already discover zoom via long-press */}
         {!zoomed && (
-          <div className="absolute bottom-3 right-3 z-10 hidden pointer-fine:flex items-center gap-1.5 rounded-full bg-lp-porcelain/90 backdrop-blur-sm px-2.5 py-1 pointer-events-none">
+          <div className="absolute top-3 right-3 z-10 hidden pointer-fine:flex items-center gap-1.5 rounded-full bg-lp-porcelain/90 backdrop-blur-sm px-2.5 py-1 pointer-events-none">
             <ZoomIn size={12} strokeWidth={1.75} className="text-lp-ink shrink-0" />
             <span className="font-body text-[0.7rem] text-lp-ink">Click to zoom</span>
           </div>

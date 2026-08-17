@@ -3,7 +3,9 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // components/product/ProductInfo.tsx
 // Product detail info panel — color selector → size selector → add to cart.
-// The flow is strict: select color, then select size. CTA unlocks after both.
+// Size defaults to Cabin (or the variant's first listed size) so a concrete
+// price shows immediately instead of a "From ₹X" range — same behavior as
+// the shop grid and Best Sellers cards (see lib/utils.ts `defaultSize`).
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useState, useEffect }   from 'react'
@@ -13,7 +15,7 @@ import Link                      from 'next/link'
 import { ShoppingBag, Heart, Ruler, Minus, Plus, ArrowRight, Star, Play } from 'lucide-react'
 import { featureIconFor }        from '@/lib/featureIcons'
 import type { Product, ProductSize } from '@/types'
-import { formatPrice, swatchRingColor } from '@/lib/utils'
+import { formatPrice, swatchRingColor, defaultSize } from '@/lib/utils'
 import { ROUTES, SEO }           from '@/lib/constants'
 import { ShareButton }           from '@/components/ui/ShareButton'
 import { useCartStore }          from '@/store/cartStore'
@@ -52,7 +54,7 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
 
   const [colorIndex,    setColorIndex]    = useState(Math.max(0, defaultVariantIndex))
   const [selectedSize,  setSelectedSize]  = useState<ProductSize | null>(
-    product.hideSizeSelector ? product.variants[Math.max(0, defaultVariantIndex)].sizes[0].size : null
+    defaultSize(product.variants[Math.max(0, defaultVariantIndex)].sizes)
   )
   const [addedToCart,   setAddedToCart]   = useState(false)
   const [quantity,      setQuantity]      = useState(1)
@@ -84,7 +86,7 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
 
   function handleColorChange(i: number) {
     setColorIndex(i)
-    setSelectedSize(product.hideSizeSelector ? product.variants[i].sizes[0].size : null)
+    setSelectedSize(defaultSize(product.variants[i].sizes))
     setQuantity(1)
     onColorChange?.(i)
   }
@@ -405,10 +407,10 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
           const Icon = featureIconFor(label)
           return (
             <div key={label} className="flex items-center gap-2.5">
-              <span className="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--color-lp-cream)] shrink-0">
-                <Icon size={15} strokeWidth={2} className="text-[var(--color-lp-gold)]" />
+              <span className="w-10 h-10 flex items-center justify-center rounded-full bg-lp-gold/15 border border-lp-gold/30 shrink-0">
+                <Icon size={19} strokeWidth={2} className="text-[var(--color-lp-gold)]" />
               </span>
-              <span className="font-body font-medium text-[0.78rem] leading-snug text-[var(--color-lp-ink)]">{label}</span>
+              <span className="font-body font-semibold text-[0.82rem] leading-snug text-[var(--color-lp-ink)]">{label}</span>
             </div>
           )
         })}
