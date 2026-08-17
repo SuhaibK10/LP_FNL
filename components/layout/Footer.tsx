@@ -72,7 +72,7 @@ function PaymentMarks() {
           <path d="M0 0l6.2 8L0 16z"  fill="#ED752E" />
           <path d="M7 0l7.2 8L7 16z"  fill="#0B9444" />
         </svg>
-        <span className="font-body text-[0.68rem] font-semibold tracking-tight text-[#1A1714]">
+        <span className="font-body text-[0.68rem] font-semibold tracking-tight text-[#171717]">
           UPI
         </span>
       </span>
@@ -127,7 +127,7 @@ export function Footer() {
   return (
     <footer
       className="relative overflow-hidden text-white"
-      style={{ background: 'linear-gradient(180deg, #1A1714 0%, #120F0A 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #171717 0%, #120F0A 100%)' }}
     >
       <div className="container-lp pt-20 md:pt-28">
 
@@ -136,8 +136,8 @@ export function Footer() {
           <div className="rounded-xl border border-white/10 bg-white/[0.03] px-6 py-10 md:py-14 flex flex-col items-center text-center gap-8">
             <div>
               <p className="lp-eyebrow">Newsletter</p>
-              <h2 className="font-display text-[1.6rem] md:text-[2rem] leading-tight text-white">
-                Join The Journey.
+              <h2 className="font-display text-[2.25rem] md:text-[2.75rem] leading-[1.02] tracking-[-0.02em] text-white">
+                Join the <em className="italic font-normal">journey.</em>
               </h2>
               <p className="font-body text-[0.85rem] text-white/55 mt-2">
                 New collections, launches and offers. One email a month, no noise.
@@ -171,7 +171,7 @@ export function Footer() {
                 <span key={city} className="flex items-center gap-4">
                   <span className="flex flex-col items-center gap-1">
                     <span className="text-base leading-none">{flag}</span>
-                    <span className="font-body text-[0.6rem] tracking-[0.14em] uppercase text-white/45">{city}</span>
+                    <span className="font-body font-medium text-[0.6rem] tracking-[0.1em] uppercase text-white/45">{city}</span>
                   </span>
                   {i < FOOTER_CITIES.length - 1 && (
                     <span className="w-px h-6 bg-white/10" />

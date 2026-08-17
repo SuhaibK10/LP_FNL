@@ -96,11 +96,11 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
   }
 
   return (
-    <div className="group flex-shrink-0 w-[68vw] sm:w-[40vw] md:w-[30vw] lg:w-[22rem]">
+    <div className="group flex-shrink-0 w-[68vw] sm:w-[40vw] md:w-[30vw] lg:w-[22rem] lp-card">
       {/* Image */}
       <Link
         href={`${ROUTES.shop}/${product.slug}`}
-        className="relative block aspect-[3/4] bg-[var(--color-lp-porcelain)] overflow-hidden rounded-md mb-3"
+        className="relative block aspect-[3/4] bg-lp-image-bg overflow-hidden"
         draggable="false"
       >
         <Image
@@ -166,11 +166,11 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
 
       {/* Info */}
       <div className="space-y-1.5">
-        <p className="font-body text-[0.65rem] tracking-[0.12em] uppercase text-[var(--color-lp-muted)]">
+        <p className="font-body font-medium text-[0.65rem] tracking-[0.08em] uppercase text-[var(--color-lp-faint)]">
           {product.category === 'trolley' ? 'Trolley Bag' : product.category}
         </p>
         <Link href={`${ROUTES.shop}/${product.slug}`}>
-          <p className="font-display text-[1.1rem] text-[var(--color-lp-ink)] leading-tight hover:text-[var(--color-lp-gold)] transition-colors duration-200">
+          <p className="lp-heading-product hover:text-[var(--color-lp-gold)] transition-colors duration-200">
             {product.name}
           </p>
         </Link>
@@ -207,7 +207,7 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
             <button
               type="button"
               onClick={(e) => { e.stopPropagation(); setSizeGuideOpen(true) }}
-              className="flex items-center gap-1 font-body text-[0.6rem] tracking-[0.08em] uppercase text-[var(--color-lp-muted)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
+              className="flex items-center gap-1 font-body font-medium text-[0.75rem] text-[var(--color-lp-muted)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
             >
               <Ruler size={11} strokeWidth={1.5} />
               Size Guide
@@ -245,7 +245,7 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
               )
             })}
           </div>
-          <span className="font-body text-[0.58rem] tracking-[0.06em] text-lp-muted leading-none shrink-0">
+          <span className="font-body text-[0.75rem] text-lp-muted leading-none shrink-0">
             {variant.color}
             {variant.accentColor && (
               <span className="text-lp-faint"> | {variant.accentColor}</span>
@@ -256,27 +256,27 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
         {/* Price — single line in both branches so Myntra and
             non-Myntra cards keep identical height and buttons align */}
         {myntra && myntraTarget ? (
-          <p className="font-body text-[0.85rem] font-medium text-[var(--color-lp-ink)] pt-0.5">
+          <p className="font-body text-[1.125rem] md:text-[1.1875rem] font-semibold leading-[1.2] tracking-[-0.015em] text-[#1C1B19] pt-0.5">
             {activeSize ? formatPrice(myntraTarget.price) : `From ${formatPrice(myntraTarget.price)}`}
-            <span className="ml-2 font-normal text-[0.72rem] text-[var(--color-lp-faint)] line-through">
+            <span className="ml-2 font-normal text-[0.8125rem] text-[var(--color-lp-faint)] line-through">
               {activeSize ? formatPrice(price) : formatPrice(lowestPrice)}
             </span>
-            <span className="ml-1.5 font-medium text-[0.72rem] text-[#5B6670]">
+            <span className="ml-1.5 font-medium text-[0.78rem] text-[#65615A]">
               ({Math.round((1 - myntraTarget.price / (activeSize ? price : lowestPrice)) * 100)}% off)
             </span>
           </p>
         ) : product.mrp ? (
-          <p className="font-body text-[0.85rem] font-medium text-[var(--color-lp-ink)] pt-0.5">
+          <p className="font-body text-[1.125rem] md:text-[1.1875rem] font-semibold leading-[1.2] tracking-[-0.015em] text-[#1C1B19] pt-0.5">
             {activeSize ? formatPrice(price) : `From ${formatPrice(price)}`}
-            <span className="ml-2 font-normal text-[0.72rem] text-[var(--color-lp-faint)] line-through">
+            <span className="ml-2 font-normal text-[0.8125rem] text-[var(--color-lp-faint)] line-through">
               {formatPrice(product.mrp)}
             </span>
-            <span className="ml-1.5 font-medium text-[0.72rem] text-[#5B6670]">
+            <span className="ml-1.5 font-medium text-[0.78rem] text-[#65615A]">
               ({Math.round((1 - (activeSize ? price : lowestPrice) / product.mrp) * 100)}% off)
             </span>
           </p>
         ) : (
-        <p className="font-body text-[0.85rem] font-medium text-[var(--color-lp-ink)] pt-0.5">
+        <p className="font-body text-[1.125rem] md:text-[1.1875rem] font-semibold leading-[1.2] tracking-[-0.015em] text-[#1C1B19] pt-0.5">
           {activeSize ? formatPrice(price) : `From ${formatPrice(price)}`}
         </p>
         )}

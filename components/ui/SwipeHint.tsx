@@ -32,7 +32,7 @@ export function SwipeHint({ tone = 'faint', marginTop = '0.75rem' }: Props) {
       >
         <ArrowLeft size={13} strokeWidth={1.5} className={toneClass} />
       </motion.div>
-      <span className={`font-body text-[0.6rem] tracking-[0.16em] uppercase ${toneClass}`}>
+      <span className={`font-body text-[0.6rem] tracking-[0.1em] uppercase ${toneClass}`}>
         Swipe to explore
       </span>
     </motion.div>

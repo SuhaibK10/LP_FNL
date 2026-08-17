@@ -143,7 +143,7 @@ export function ProductCard({ product }: ProductCardProps) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 8 }}
       transition={{ duration: 0.4 }}
-      className="group flex flex-col"
+      className="group flex flex-col lp-card"
     >
       {/* Image container */}
       <Link
@@ -151,7 +151,7 @@ export function ProductCard({ product }: ProductCardProps) {
         onClick={saveShopScroll}
         onMouseEnter={prefetchPdpImage}
         onTouchStart={prefetchPdpImage}
-        className="relative block aspect-[3/4] overflow-hidden rounded-md bg-[var(--color-lp-porcelain)] mb-3 border-[3px] border-lp-border-strong"
+        className="relative block aspect-[3/4] overflow-hidden bg-lp-image-bg"
       >
         <div
           className="absolute inset-0"
@@ -276,20 +276,20 @@ export function ProductCard({ product }: ProductCardProps) {
 
       {/* Info — flex column filling the card so the CTA row can pin to the
           bottom and stay aligned across cards whose content wraps differently */}
-      <div className="flex-1 flex flex-col space-y-1.5">
+      <div className="flex-1 flex flex-col space-y-1.5 p-3">
         {/* Category + name */}
-        <p className="font-body text-[0.6rem] tracking-[0.14em] uppercase text-[var(--color-lp-faint)]">
+        <p className="font-body font-medium text-[0.625rem] tracking-[0.08em] uppercase text-[var(--color-lp-faint)]">
           {product.category === 'trolley' ? 'Trolley Bag' : product.category}
         </p>
         {/* Name left · Myntra rating right, on the same line */}
         <div className="flex items-center justify-between gap-2">
           <Link href={`${ROUTES.shop}/${product.slug}`} onClick={saveShopScroll} onMouseEnter={prefetchPdpImage}>
-            <p className="font-display text-[1rem] md:text-[1.1rem] text-[var(--color-lp-ink)] leading-tight hover:text-[var(--color-lp-gold)] transition-colors duration-200">
+            <p className="lp-heading-product hover:text-[var(--color-lp-gold)] transition-colors duration-200">
               {product.name}
             </p>
           </Link>
           {myntra?.rating && (
-            <span className="flex items-center gap-1 font-body text-[0.62rem] text-lp-muted leading-none shrink-0">
+            <span className="flex items-center gap-1 font-body text-[0.75rem] text-lp-muted leading-none shrink-0">
               <Star size={10} strokeWidth={0} className="fill-[#5B6670]" />
               {myntra.rating.toFixed(1)} ({myntra.ratingCount})
             </span>
@@ -326,7 +326,7 @@ export function ProductCard({ product }: ProductCardProps) {
             )
           })}
           </div>
-          <span className="hidden sm:inline font-body text-[0.58rem] tracking-[0.06em] text-lp-muted leading-none shrink-0">
+          <span className="hidden sm:inline font-body text-[0.75rem] text-lp-muted leading-none shrink-0">
             {variant.color}
             {variant.accentColor && (
               <span className="text-lp-faint"> | {variant.accentColor}</span>
@@ -364,7 +364,7 @@ export function ProductCard({ product }: ProductCardProps) {
                 <button
                   type="button"
                   onClick={(e) => { e.stopPropagation(); setSizeGuideOpen(true) }}
-                  className="flex items-center gap-1 font-body text-[0.55rem] tracking-[0.08em] uppercase text-[var(--color-lp-faint)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
+                  className="flex items-center gap-1 font-body font-medium text-[0.75rem] text-[var(--color-lp-faint)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
                 >
                   <Ruler size={10} strokeWidth={1.5} />
                   Size Guide
@@ -380,10 +380,10 @@ export function ProductCard({ product }: ProductCardProps) {
             <button
               type="button"
               onClick={(e) => { e.stopPropagation(); setDetailsOpen((o) => !o) }}
-              className="flex items-center gap-1 font-body text-[0.55rem] tracking-[0.08em] uppercase text-[var(--color-lp-faint)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
+              className="flex items-center gap-1 font-body font-medium text-[0.75rem] text-[var(--color-lp-faint)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
               aria-expanded={detailsOpen}
             >
-              View details
+              View Details
               <ChevronDown
                 size={11}
                 strokeWidth={1.5}
@@ -399,7 +399,7 @@ export function ProductCard({ product }: ProductCardProps) {
                   transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
                   className="overflow-hidden"
                 >
-                  <p className="font-body text-[0.72rem] leading-relaxed text-[var(--color-lp-muted)] pt-1.5">
+                  <p className="font-body text-[0.78rem] leading-relaxed text-[var(--color-lp-body)] pt-1.5">
                     {product.description}
                   </p>
                 </motion.div>
@@ -411,27 +411,27 @@ export function ProductCard({ product }: ProductCardProps) {
         {/* Price — single line in both branches so Myntra and
             non-Myntra cards keep identical height and buttons align */}
         {myntra && myntraTarget ? (
-          <p className="font-body text-[0.85rem] font-medium text-[var(--color-lp-ink)] whitespace-nowrap">
+          <p className="font-body text-[1.125rem] md:text-[1.1875rem] font-semibold leading-[1.2] tracking-[-0.015em] text-[#1C1B19] whitespace-nowrap">
             {activeSize ? formatPrice(myntraTarget.price) : `From ${formatPrice(myntraTarget.price)}`}
-            <span className="hidden sm:inline ml-2 font-normal text-[0.72rem] text-[var(--color-lp-faint)] line-through decoration-1 decoration-lp-border-strong">
+            <span className="hidden sm:inline ml-2 font-normal text-[0.8125rem] text-[var(--color-lp-faint)] line-through decoration-1 decoration-lp-border-strong">
               {activeSize ? formatPrice(price) : formatPrice(lowestPrice)}
             </span>
-            <span className="ml-1.5 font-medium text-[0.72rem] text-[#5B6670]">
+            <span className="ml-1.5 font-medium text-[0.78rem] text-[#65615A]">
               ({Math.round((1 - myntraTarget.price / (activeSize ? price : lowestPrice)) * 100)}% off)
             </span>
           </p>
         ) : product.mrp ? (
-          <p className="font-body text-[0.85rem] font-medium text-[var(--color-lp-ink)] whitespace-nowrap">
+          <p className="font-body text-[1.125rem] md:text-[1.1875rem] font-semibold leading-[1.2] tracking-[-0.015em] text-[#1C1B19] whitespace-nowrap">
             {activeSize ? formatPrice(price) : `From ${formatPrice(price)}`}
-            <span className="hidden sm:inline ml-2 font-normal text-[0.72rem] text-[var(--color-lp-faint)] line-through decoration-1 decoration-lp-border-strong">
+            <span className="hidden sm:inline ml-2 font-normal text-[0.8125rem] text-[var(--color-lp-faint)] line-through decoration-1 decoration-lp-border-strong">
               {formatPrice(product.mrp)}
             </span>
-            <span className="ml-1.5 font-medium text-[0.72rem] text-[#5B6670]">
+            <span className="ml-1.5 font-medium text-[0.78rem] text-[#65615A]">
               ({Math.round((1 - (activeSize ? price : lowestPrice) / product.mrp) * 100)}% off)
             </span>
           </p>
         ) : (
-        <p className="font-body text-[0.85rem] font-medium text-[var(--color-lp-ink)]">
+        <p className="font-body text-[1.125rem] md:text-[1.1875rem] font-semibold leading-[1.2] tracking-[-0.015em] text-[#1C1B19]">
           {activeSize ? formatPrice(price) : `From ${formatPrice(price)}`}
         </p>
         )}

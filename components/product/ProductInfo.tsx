@@ -122,10 +122,10 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
       <div className="mb-2! md:mb-1.5!">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="font-body text-[0.65rem] tracking-[0.14em] uppercase text-[var(--color-lp-muted)] mb-1">
+            <p className="font-body font-semibold text-[0.65rem] tracking-[0.09em] uppercase text-[var(--color-lp-muted)] mb-1">
               {product.category === 'trolley' ? 'Trolley Bag' : product.category}
             </p>
-            <h1 className="lp-heading-md max-md:text-[1.3rem]">{product.name}</h1>
+            <h1 className="lp-heading-pdp-title max-md:text-[2rem]">{product.name}</h1>
           </div>
           <ShareButton
             title={product.name}
@@ -139,37 +139,37 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
       {/* ── Price ──────────────────────────────────────────────────────── */}
       {myntra && myntraTarget ? (
         <div className="space-y-2">
-          <p className="font-display text-[1.2rem] md:text-[1.5rem] leading-none text-[var(--color-lp-ink)]">
+          <p className="font-body text-[1.35rem] font-semibold leading-none text-[var(--color-lp-ink)]">
             {selectedSize ? formatPrice(myntraTarget.price) : `From ${formatPrice(myntraTarget.price)}`}
-            <span className="ml-3 font-body text-[1rem] text-[var(--color-lp-faint)] line-through align-middle">
+            <span className="ml-3 font-body text-[0.95rem] font-normal text-[var(--color-lp-faint)] line-through align-middle">
               {formatPrice(price)}
             </span>
-            <span className="ml-2 font-body text-[0.95rem] font-medium text-[#5B6670] align-middle">
+            <span className="ml-2 font-body text-[0.85rem] font-semibold text-[#5B6670] align-middle">
               ({Math.round((1 - myntraTarget.price / price) * 100)}% off)
             </span>
           </p>
           <div className="flex items-center gap-3">
             {myntraSizeRating?.rating ? (
-              <span className="flex items-center gap-1 font-body text-[0.78rem] text-[var(--color-lp-ink)]">
+              <span className="flex items-center gap-1 font-body font-medium text-[0.78rem] text-[var(--color-lp-ink)]">
                 <Star size={13} strokeWidth={0} className="fill-[#5B6670]" />
                 {myntraSizeRating.rating.toFixed(1)}
                 <span className="text-[var(--color-lp-muted)]">({myntraSizeRating.ratingCount} ratings)</span>
               </span>
             ) : null}
-            <span className="font-body text-[0.7rem] tracking-[0.1em] uppercase text-[var(--color-lp-muted)]">
+            <span className="font-body font-semibold text-[0.7rem] tracking-[0.09em] uppercase text-[var(--color-lp-muted)]">
               Available on Myntra
             </span>
           </div>
         </div>
       ) : (
-      <p className="font-display text-[1.2rem] md:text-[1.5rem] leading-none text-[var(--color-lp-ink)]">
+      <p className="font-body text-[1.35rem] font-semibold leading-none text-[var(--color-lp-ink)]">
         {selectedSize ? formatPrice(price) : `From ${formatPrice(price)}`}
       </p>
       )}
 
       {/* ── Colour selector ────────────────────────────────────────────── */}
       <div>
-        <p className="font-body text-[0.7rem] tracking-[0.1em] uppercase text-[var(--color-lp-muted)] mb-3">
+        <p className="font-body font-semibold text-[0.7rem] tracking-[0.09em] uppercase text-[var(--color-lp-muted)] mb-3">
           Colour ·{' '}
           <span className="text-lp-ink font-medium">
             {variant.color}
@@ -204,7 +204,7 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
       {!product.hideSizeSelector && (
       <div>
         <div className="flex items-center justify-between mb-3">
-          <p className="font-body text-[0.7rem] tracking-[0.1em] uppercase text-[var(--color-lp-muted)]">
+          <p className="font-body font-semibold text-[0.7rem] tracking-[0.09em] uppercase text-[var(--color-lp-muted)]">
             Size
             {!selectedSize && (
               <span className="text-[var(--color-lp-faint)] normal-case tracking-normal ml-2">
@@ -216,7 +216,7 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
             <button
               type="button"
               onClick={() => setSizeGuideOpen(true)}
-              className="flex items-center gap-1 font-body text-[0.65rem] tracking-[0.08em] uppercase text-[var(--color-lp-muted)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
+              className="flex items-center gap-1 font-body font-medium text-[0.72rem] text-[var(--color-lp-muted)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
             >
               <Ruler size={12} strokeWidth={1.5} />
               Size Guide
@@ -253,7 +253,7 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
       {/* ── Quantity stepper (hidden when purchase happens on Myntra) ──── */}
       {!myntra && (
       <div className="flex items-center gap-4">
-        <p className="font-body text-[0.7rem] tracking-widest uppercase text-lp-muted">Quantity</p>
+        <p className="font-body font-semibold text-[0.7rem] tracking-[0.09em] uppercase text-lp-muted">Quantity</p>
         <div className="flex items-center border border-lp-border">
           <button
             type="button"
@@ -395,7 +395,7 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
       <div className="lp-hr" />
 
       {/* ── Description ────────────────────────────────────────────────── */}
-      <p className="font-body font-medium text-[0.9rem] text-[var(--color-lp-muted)] leading-relaxed">
+      <p className="font-body text-[0.95rem] text-[var(--color-lp-body)] leading-relaxed max-w-[34rem]">
         {product.description}
       </p>
 

@@ -246,7 +246,7 @@ export default function CheckoutPage() {
           contact: address.phone,
           email:   user?.email ?? guestEmail,
         },
-        theme: { color: '#C9A96E' }, // matches --color-lp-gold
+        theme: { color: '#B99A62' }, // matches --color-lp-gold
 
         handler: async (response: {
           razorpay_order_id:   string

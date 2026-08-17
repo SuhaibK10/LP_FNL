@@ -46,10 +46,10 @@ export async function POST(request: NextRequest) {
         <table style="width: 100%; font-size: 14px; border-collapse: collapse;">
           <tr><td style="padding: 6px 0; color: #888; width: 140px;">Role</td><td style="padding: 6px 0; font-weight: 600;">${role}</td></tr>
           <tr><td style="padding: 6px 0; color: #888;">Name</td><td style="padding: 6px 0;">${name}</td></tr>
-          <tr><td style="padding: 6px 0; color: #888;">Email</td><td style="padding: 6px 0;"><a href="mailto:${email}" style="color: #C9A96E;">${email}</a></td></tr>
-          ${portfolioUrl ? `<tr><td style="padding: 6px 0; color: #888;">Portfolio</td><td style="padding: 6px 0;"><a href="${portfolioUrl}" style="color: #C9A96E;">${portfolioUrl}</a></td></tr>` : ''}
-          ${resumeUrl ? `<tr><td style="padding: 6px 0; color: #888;">Resume</td><td style="padding: 6px 0;"><a href="${resumeUrl}" style="color: #C9A96E;">${resumeUrl}</a></td></tr>` : ''}
-          ${taskUrl ? `<tr><td style="padding: 6px 0; color: #888;">Task submission</td><td style="padding: 6px 0;"><a href="${taskUrl}" style="color: #C9A96E;">${taskUrl}</a></td></tr>` : ''}
+          <tr><td style="padding: 6px 0; color: #888;">Email</td><td style="padding: 6px 0;"><a href="mailto:${email}" style="color: #B99A62;">${email}</a></td></tr>
+          ${portfolioUrl ? `<tr><td style="padding: 6px 0; color: #888;">Portfolio</td><td style="padding: 6px 0;"><a href="${portfolioUrl}" style="color: #B99A62;">${portfolioUrl}</a></td></tr>` : ''}
+          ${resumeUrl ? `<tr><td style="padding: 6px 0; color: #888;">Resume</td><td style="padding: 6px 0;"><a href="${resumeUrl}" style="color: #B99A62;">${resumeUrl}</a></td></tr>` : ''}
+          ${taskUrl ? `<tr><td style="padding: 6px 0; color: #888;">Task submission</td><td style="padding: 6px 0;"><a href="${taskUrl}" style="color: #B99A62;">${taskUrl}</a></td></tr>` : ''}
           ${tools ? `<tr><td style="padding: 6px 0; color: #888;">Tools</td><td style="padding: 6px 0;">${tools}</td></tr>` : ''}
         </table>
         ${message ? `

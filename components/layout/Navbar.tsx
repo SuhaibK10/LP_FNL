@@ -240,7 +240,7 @@ export function Navbar() {
                     key={href}
                     href={href}
                     className={cn(
-                      'relative font-body text-[0.8rem] font-semibold tracking-[0.12em] uppercase transition-colors duration-200',
+                      'relative font-body text-[0.8rem] font-medium tracking-[0.05em] uppercase transition-colors duration-200',
                       'after:absolute after:bottom-[-3px] after:left-0 after:h-[1.5px] after:bg-lp-ink/45',
                       'after:transition-all after:duration-300',
                       pathname === href
@@ -278,7 +278,7 @@ export function Navbar() {
               {/* Corporate Enquiry — desktop only */}
               <Link
                 href={ROUTES.corporateGifting}
-                className={cn('hidden lg:block relative font-body text-[0.8rem] font-semibold tracking-[0.12em] uppercase transition-colors duration-200', navTextClass)}
+                className={cn('hidden lg:block relative font-body text-[0.8rem] font-medium tracking-[0.05em] uppercase transition-colors duration-200', navTextClass)}
               >
                 Corporate Gifting
               </Link>

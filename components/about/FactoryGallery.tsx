@@ -91,7 +91,7 @@ export function FactoryGallery() {
                 className={photo.fit === 'pad' ? 'object-contain' : 'object-cover object-center'}
                 sizes="(max-width:768px) 92vw, (max-width:1024px) 46vw, 30rem"
               />
-              <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-[#1A1714]/70 via-[#1A1714]/15 to-transparent">
+              <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-[#171717]/70 via-[#171717]/15 to-transparent">
                 <p className="font-body text-[0.7rem] tracking-[0.1em] uppercase text-[var(--color-lp-porcelain)]">
                   {photo.caption}
                 </p>

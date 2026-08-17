@@ -76,7 +76,7 @@ export default function CorporateGiftingPage() {
                 <p className="font-display leading-none text-lp-ink" style={{ fontSize: 'clamp(1.9rem, 3.5vw, 2.75rem)' }}>
                   {value}
                 </p>
-                <p className="font-body text-[0.65rem] tracking-[0.18em] uppercase text-lp-muted">
+                <p className="font-body text-[0.65rem] tracking-[0.1em] uppercase text-lp-muted">
                   {label}
                 </p>
               </div>
@@ -131,7 +131,7 @@ export default function CorporateGiftingPage() {
 
       {/* ── Brands we've manufactured for ── */}
       <div className="container-lp section-pad">
-        <p className="font-body text-[0.65rem] tracking-[0.18em] uppercase text-lp-faint text-center mb-8">
+        <p className="font-body text-[0.65rem] tracking-[0.1em] uppercase text-lp-faint text-center mb-8">
           Brands we&apos;ve manufactured for
         </p>
         <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
@@ -146,7 +146,7 @@ export default function CorporateGiftingPage() {
       {/* ── Where we show up ── */}
       <div className="bg-lp-cream border-y border-lp-border">
         <div className="container-lp py-10 md:py-12 text-center">
-          <p className="font-body text-[0.65rem] tracking-[0.18em] uppercase text-lp-faint mb-3">
+          <p className="font-body text-[0.65rem] tracking-[0.1em] uppercase text-lp-faint mb-3">
             Where we show up
           </p>
           <p className="font-display text-[1.3rem] text-lp-ink">

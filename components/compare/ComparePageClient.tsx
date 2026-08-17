@@ -25,7 +25,7 @@ const colClass = (col: number, base = '') =>
   `${base} ${col === 2 ? 'hidden md:block' : ''}`.trim()
 
 const ROW_LABEL =
-  'font-body text-[0.65rem] tracking-[0.16em] uppercase text-lp-muted mb-3'
+  'font-body text-[0.65rem] tracking-[0.1em] uppercase text-lp-muted mb-3'
 
 export function ComparePageClient({ initialSlugs }: { initialSlugs?: string[] }) {
   const [slugs, setSlugs] = useState<string[]>(() => {

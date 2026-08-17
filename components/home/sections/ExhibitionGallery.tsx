@@ -110,7 +110,7 @@ export function ExhibitionGallery() {
                 className={photo.fit === 'pad' ? 'object-contain' : 'object-cover object-center'}
                 sizes="(max-width:768px) 92vw, (max-width:1024px) 46vw, 34rem"
               />
-              <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-[#1A1714]/80 via-[#1A1714]/20 to-transparent">
+              <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-[#171717]/80 via-[#171717]/20 to-transparent">
                 <div className="flex items-center gap-1.5 mb-0.5">
                   <MapPin size={12} strokeWidth={1.5} className="text-[var(--color-lp-gold)]" />
                   <span className="font-display text-[1rem] text-[var(--color-lp-porcelain)]">

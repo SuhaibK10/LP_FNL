@@ -44,7 +44,7 @@ function Accordion({ items }: { items: AccordionItem[] }) {
               className="w-full flex items-center justify-between py-4 text-left group"
               aria-expanded={open}
             >
-              <span className="font-body text-[0.72rem] tracking-[0.12em] uppercase text-[var(--color-lp-ink)]">
+              <span className="font-body font-semibold text-[0.72rem] tracking-[0.06em] uppercase text-[var(--color-lp-ink)]">
                 {item.label}
               </span>
               <Plus
@@ -155,11 +155,11 @@ export function ProductStory({ product }: { product: Product }) {
 
         {/* Left rail — section label */}
         <div className="md:sticky md:top-28 md:self-start">
-          <p className="font-body text-[0.65rem] tracking-[0.16em] uppercase text-[var(--color-lp-gold)] mb-3">
+          <p className="font-body font-semibold text-[0.65rem] tracking-[0.13em] uppercase text-[var(--color-lp-gold)] mb-3">
             In Detail
           </p>
           <h2 className="lp-heading-md">
-            The {product.name.trim()}, up close
+            The {product.name.trim()}, <em className="italic font-normal">up close.</em>
           </h2>
         </div>
 
@@ -170,7 +170,7 @@ export function ProductStory({ product }: { product: Product }) {
               {product.story!.map((para) => (
                 <p
                   key={para.slice(0, 40)}
-                  className="font-body text-[0.92rem] text-[var(--color-lp-muted)] leading-[1.8]"
+                  className="font-body text-[0.95rem] text-[var(--color-lp-body)] leading-[1.75] max-w-[35rem]"
                 >
                   {para}
                 </p>
@@ -192,7 +192,7 @@ export function ProductStory({ product }: { product: Product }) {
                     <h3 className="font-display text-[1.15rem] text-[var(--color-lp-ink)] mb-2">
                       {heading}
                     </h3>
-                    <p className="font-body text-[0.88rem] text-[var(--color-lp-muted)] leading-[1.75]">
+                    <p className="font-body text-[0.9rem] text-[var(--color-lp-body)] leading-[1.7]">
                       {body}
                     </p>
                   </div>

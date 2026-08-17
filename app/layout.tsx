@@ -4,7 +4,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import type { Metadata, Viewport } from 'next'
-import { Lora, Plus_Jakarta_Sans } from 'next/font/google'
+import { Instrument_Serif, Manrope } from 'next/font/google'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/next'
 import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider'
@@ -14,17 +14,25 @@ import './globals.css'
 
 // ─── Fonts ────────────────────────────────────────────────────────────────────
 
-// Display serif — calm contemporary serif, used for all headings
-const lora = Lora({
+// Display serif — editorial, expressive, used for hero/section headings and
+// the PDP title. Instrument Serif ships a single weight (400, no 500) with a
+// distinct italic cut, used sparingly as an emotional accent (Tailwind's
+// `italic` utility). Product-card titles deliberately stay restrained — see
+// .lp-heading-product in globals.css, which is NOT this expressive tier.
+const instrumentSerif = Instrument_Serif({
   subsets:  ['latin'],
-  variable: '--font-lora',
+  weight:   ['400'],
+  style:    ['normal', 'italic'],
+  variable: '--font-instrument-serif',
   display:  'swap',
 })
 
-// Body sans — refined contemporary sans, even letterforms, elegant at small sizes
-const jakarta = Plus_Jakarta_Sans({
+// Body sans — confident, modern, highly readable at small sizes. Pinned to
+// 400/500/600 only — no 300 (too light for body copy) and no unloaded 700
+// (would render as browser-synthesized fake bold).
+const manrope = Manrope({
   subsets:  ['latin'],
-  weight:   ['300', '400', '500', '600'],
+  weight:   ['400', '500', '600'],
   variable: '--font-body-sans',
   display:  'swap',
 })
@@ -85,7 +93,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${lora.variable} ${jakarta.variable}`}>
+    <html lang="en" className={`${instrumentSerif.variable} ${manrope.variable}`}>
       <head>
         {/* Opens the connection to the image CDN before the first photo is
             requested, so DNS + TLS handshake isn't on the critical path.

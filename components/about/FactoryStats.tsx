@@ -51,7 +51,7 @@ export function FactoryStats() {
                 <p className="font-display leading-none text-lp-ink" style={{ fontSize: 'clamp(1.9rem, 3.5vw, 2.75rem)' }}>
                   {value}
                 </p>
-                <p className="font-body text-[0.65rem] tracking-[0.18em] uppercase text-lp-muted">
+                <p className="font-body text-[0.65rem] tracking-[0.1em] uppercase text-lp-muted">
                   {label}
                 </p>
               </motion.div>
@@ -60,7 +60,7 @@ export function FactoryStats() {
 
           {/* ── Testing checklist ── */}
           <motion.div variants={fadeUp} className="mt-12 pt-8 border-t border-lp-ink/10">
-            <p className="font-body text-[0.6rem] tracking-[0.18em] uppercase text-lp-faint mb-5">
+            <p className="font-body text-[0.6rem] tracking-[0.1em] uppercase text-lp-faint mb-5">
               Every piece is rigorously tested for
             </p>
             <div className="flex flex-wrap gap-x-8 gap-y-3">

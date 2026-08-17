@@ -476,6 +476,78 @@ export const PRODUCTS: Product[] = [
           { size: 'Cabin', price: 2990, stock: 30 },
         ],
       },
+      {
+        color: 'Grey',
+        colorHex: '#6B6B6B',
+        images: [
+          '39b848c4-877d-40a6-e34e-6c583a956c00',
+        ],
+        sizes: [
+          { size: 'Cabin', price: 2990, stock: 30 },
+        ],
+      },
+    ],
+  },
+
+  // ── Pulse ────────────────────────────────────────────────────────────────
+  {
+    id: 'pulse',
+    imageFit: 'cover',
+    metaTitle: 'Pulse 20" Hard-Shell Spinner Suitcase with TSA Lock',
+    metaDescription: 'Pulse pairs a ribbed hard-shell 20" cabin suitcase in electric lime with a TSA-approved combination lock, 360° eight-wheel spinners, and a telescopic handle.',
+    keywords: ['hard shell spinner suitcase', 'tsa lock cabin trolley', '20 inch spinner suitcase', 'lime green suitcase', 'carry on hard shell luggage'],
+    name: 'Pulse',
+    slug: 'pulse',
+    category: 'trolley',
+    hideSizeSelector: true,
+    description:
+      'Pulse is a hard-shell 20" cabin suitcase built to be spotted at baggage claim before it hits the belt. A ribbed, concentric-embossed shell in electric lime carries a TSA-approved combination lock and eight silent spinner wheels that glide instead of drag.',
+    story: [
+      'Pulse takes its name from the shell: a ribbed, concentric pattern radiating outward, moulded into a hard case built for the actual job of a cabin trolley — the overhead bin, the jet bridge, the gate agent’s trolley scale.',
+      'Eight double-spinner wheels roll 360° in every direction, so Pulse tracks straight through a terminal instead of pulling to one side. A TSA-approved combination lock and telescopic handle round out a case sized to clear carry-on limits without giving up room.',
+    ],
+    highlights: [
+      {
+        heading: 'A shell that stands out',
+        body: 'The ribbed, concentric-embossed hard shell in electric lime is built to spot across a terminal, and tough enough for the sprint to the gate.',
+      },
+      {
+        heading: 'Eight wheels, one straight line',
+        body: 'Double spinner wheels at each corner roll 360°, so Pulse tracks wherever you point it instead of dragging to one side.',
+      },
+      {
+        heading: 'Security-ready, always',
+        body: 'A TSA-approved combination lock keeps the case closed through checkpoints without slowing down a security check.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',      value: 'Ribbed hard shell (ABS/PC)' },
+      { label: 'Cabin (20″)', value: 'Carry-on approved' },
+      { label: 'Lock',       value: 'TSA-approved 3-digit combination lock' },
+      { label: 'Wheels',     value: '360° eight-wheel silent spinners' },
+      { label: 'Handle',     value: 'Telescopic pull handle + side carry handle' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: ['6ac4befa-e760-4f64-8a89-525baed33000'],
+    features: [
+      { label: '360° eight-wheel silent spinners' },
+      { label: 'TSA combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Ribbed hard-shell construction' },
+      { label: 'Side carry handle' },
+      { label: 'Carry-on approved' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Lime Green',
+        colorHex: '#A6CE39',
+        images: ['6ac4befa-e760-4f64-8a89-525baed33000'],
+        sizes: [
+          { size: 'Cabin', price: 2990, stock: 30 },
+        ],
+      },
     ],
   },
 
