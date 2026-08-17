@@ -21,6 +21,8 @@ export type ProductTag =
   | 'New Arrival'
   | 'Exclusive'
   | 'Limited Edition'
+  | 'Flagship'
+  | 'Selling Fast'
 
 // ─── Product & Variant ───────────────────────────────────────────────────────
 

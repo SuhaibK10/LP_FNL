@@ -241,7 +241,7 @@ export function ProductGrid() {
               key={c.value}
               type="button"
               onClick={() => setSelectedCategories(active ? [] : [c.value])}
-              className="flex flex-col items-center gap-1.5 md:gap-2.5 shrink-0 w-16 md:w-24"
+              className="group flex flex-col items-center gap-1.5 md:gap-2.5 shrink-0 w-16 md:w-24"
               aria-pressed={active}
             >
               <span
@@ -260,8 +260,8 @@ export function ProductGrid() {
               </span>
               <span
                 className={cn(
-                  'font-body font-medium text-[0.6rem] md:text-[0.7rem] tracking-[0.04em] uppercase text-center leading-tight',
-                  active ? 'text-lp-ink' : 'text-lp-faint'
+                  'font-body font-bold text-[0.65rem] md:text-[0.75rem] tracking-[0.05em] uppercase text-center leading-tight transition-colors duration-200',
+                  active ? 'text-lp-ink' : 'text-lp-muted group-hover:text-lp-ink'
                 )}
               >
                 {c.label}

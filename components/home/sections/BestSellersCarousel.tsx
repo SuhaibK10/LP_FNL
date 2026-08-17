@@ -165,7 +165,7 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
       </Link>
 
       {/* Info */}
-      <div className="space-y-1.5">
+      <div className="space-y-1.5 p-3">
         <p className="font-body font-medium text-[0.65rem] tracking-[0.08em] uppercase text-[var(--color-lp-faint)]">
           {product.category === 'trolley' ? 'Trolley Bag' : product.category}
         </p>

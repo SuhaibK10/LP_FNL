@@ -30,7 +30,7 @@ const lora = Lora({
 // sizes.
 const jakarta = Plus_Jakarta_Sans({
   subsets:  ['latin'],
-  weight:   ['300', '400', '500', '600'],
+  weight:   ['300', '400', '500', '600', '700'],
   variable: '--font-body-sans',
   display:  'swap',
 })

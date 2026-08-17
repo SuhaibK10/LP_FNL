@@ -13,7 +13,7 @@ import { useRouter }                from 'next/navigation'
 import Image                        from 'next/image'
 import Link                         from 'next/link'
 import { motion, AnimatePresence }  from 'framer-motion'
-import { ChevronLeft, ArrowRight, Loader2, ShieldCheck, User, Mail, Phone, Tag, Check, X } from 'lucide-react'
+import { ChevronLeft, ArrowRight, Loader2, ShieldCheck, User, Mail, Phone, Tag, Check, X, Trash2 } from 'lucide-react'
 import { useCartStore }             from '@/store/cartStore'
 import { createClient }             from '@/lib/supabase/client'
 import { thumbUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
@@ -84,6 +84,7 @@ export default function CheckoutPage() {
   const router = useRouter()
   const items  = useCartStore(s => s.items)
   const clearCart = useCartStore(s => s.clearCart)
+  const removeItem = useCartStore(s => s.removeItem)
 
   const [mounted, setMounted] = useState(false)
   const [step, setStep] = useState<Step>('review')
@@ -350,24 +351,37 @@ export default function CheckoutPage() {
               <div className="space-y-3 mb-8">
                 {items.map(item => (
                   <div key={item.variantKey} className="flex gap-4 items-center py-3 border-b border-[var(--color-lp-border)] last:border-0">
-                    <div className="relative w-14 h-[72px] bg-[var(--color-lp-porcelain)] flex-shrink-0">
-                      <Image
-                        src={thumbUrl(item.image, PRODUCTS.find(p => p.id === item.productId)?.imageFit) || PLACEHOLDER_URL}
-                        alt={item.productName}
-                        fill
-                        className="object-cover object-center"
-                        sizes="56px"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-display text-[0.95rem] text-[var(--color-lp-ink)] truncate">{item.productName}</p>
-                      <p className="font-body text-[0.75rem] text-[var(--color-lp-muted)]">
-                        {item.color}{item.size ? ` · ${item.size}` : ''} · Qty {item.quantity}
-                      </p>
-                    </div>
-                    <p className="font-body text-[0.85rem] font-medium text-[var(--color-lp-ink)]">
+                    <Link
+                      href={`${ROUTES.shop}/${item.productSlug}?color=${encodeURIComponent(item.color)}`}
+                      className="group flex flex-1 min-w-0 gap-4 items-center"
+                    >
+                      <div className="relative w-14 h-[72px] bg-[var(--color-lp-porcelain)] flex-shrink-0">
+                        <Image
+                          src={thumbUrl(item.image, PRODUCTS.find(p => p.id === item.productId)?.imageFit) || PLACEHOLDER_URL}
+                          alt={item.productName}
+                          fill
+                          className="object-cover object-center"
+                          sizes="56px"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-display text-[0.95rem] text-[var(--color-lp-ink)] truncate group-hover:text-[var(--color-lp-gold)] transition-colors duration-200">{item.productName}</p>
+                        <p className="font-body text-[0.75rem] text-[var(--color-lp-muted)]">
+                          {item.color}{item.size ? ` · ${item.size}` : ''} · Qty {item.quantity}
+                        </p>
+                      </div>
+                    </Link>
+                    <p className="font-body text-[0.85rem] font-medium text-[var(--color-lp-ink)] shrink-0">
                       {formatPrice(item.price * item.quantity)}
                     </p>
+                    <button
+                      type="button"
+                      onClick={() => removeItem(item.variantKey)}
+                      aria-label={`Remove ${item.productName} from cart`}
+                      className="shrink-0 p-1.5 text-[var(--color-lp-faint)] hover:text-[var(--color-lp-error)] transition-colors duration-200"
+                    >
+                      <Trash2 size={15} strokeWidth={1.5} />
+                    </button>
                   </div>
                 ))}
               </div>
