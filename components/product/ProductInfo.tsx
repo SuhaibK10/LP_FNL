@@ -141,11 +141,11 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
         <div className="space-y-2">
           <p className="font-body text-[1.35rem] font-semibold leading-none text-[var(--color-lp-ink)]">
             {selectedSize ? formatPrice(myntraTarget.price) : `From ${formatPrice(myntraTarget.price)}`}
-            <span className="ml-3 font-body text-[0.95rem] font-normal text-[var(--color-lp-faint)] line-through align-middle">
+            <span className="ml-3 font-body text-[0.95rem] font-normal text-[var(--color-lp-muted)] line-through decoration-1 decoration-[var(--color-lp-muted)] align-middle">
               {formatPrice(price)}
             </span>
-            <span className="ml-2 font-body text-[0.85rem] font-semibold text-[#5B6670] align-middle">
-              ({Math.round((1 - myntraTarget.price / price) * 100)}% off)
+            <span className="ml-2 inline-flex items-center rounded-full px-2 py-0.5 font-body font-semibold text-[0.8rem] bg-lp-success/10 text-lp-success align-middle">
+              {Math.round((1 - myntraTarget.price / price) * 100)}% off
             </span>
           </p>
           <div className="flex items-center gap-3">
@@ -395,7 +395,7 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
       <div className="lp-hr" />
 
       {/* ── Description ────────────────────────────────────────────────── */}
-      <p className="font-body text-[0.95rem] text-[var(--color-lp-body)] leading-relaxed max-w-[34rem]">
+      <p className="font-body text-[1.05rem] font-medium text-[var(--color-lp-ink)] leading-[1.7] max-w-[34rem]">
         {product.description}
       </p>
 

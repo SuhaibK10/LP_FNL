@@ -170,7 +170,7 @@ export function ProductStory({ product }: { product: Product }) {
               {product.story!.map((para) => (
                 <p
                   key={para.slice(0, 40)}
-                  className="font-body text-[0.95rem] text-[var(--color-lp-body)] leading-[1.75] max-w-[35rem]"
+                  className="font-body text-[1.05rem] font-medium text-[var(--color-lp-ink)] leading-[1.7] max-w-[35rem]"
                 >
                   {para}
                 </p>
@@ -192,7 +192,7 @@ export function ProductStory({ product }: { product: Product }) {
                     <h3 className="font-display text-[1.15rem] text-[var(--color-lp-ink)] mb-2">
                       {heading}
                     </h3>
-                    <p className="font-body text-[0.9rem] text-[var(--color-lp-body)] leading-[1.7]">
+                    <p className="font-body text-[1rem] font-medium text-[var(--color-lp-ink)] leading-[1.65]">
                       {body}
                     </p>
                   </div>
