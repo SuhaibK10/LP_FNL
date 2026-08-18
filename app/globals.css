@@ -14,7 +14,7 @@
   --color-lp-porcelain:    #FCFCFA;   /* page background — warm white         */
   --color-lp-cream:        #EDE9E1;   /* surface — cards, inputs              */
   --color-lp-card:         #FFFFFF;   /* product card surface                 */
-  --color-lp-image-bg:     #E8E8E6;   /* product image backdrop — standardized,
+  --color-lp-image-bg:     #D4D4CC;   /* product image backdrop — standardized,
                                           does not vary by product color      */
   --color-lp-gold:         #B99A62;   /* brand accent — restrained, sparing   */
   --color-lp-gold-light:   #C4A972;   /* gold on hover                        */
@@ -199,7 +199,7 @@
   .lp-heading-product {
     font-family: var(--font-display);
     font-weight: 400;
-    font-size: clamp(1.25rem, 1vw + 1.05rem, 1.5625rem);   /* 20px → 25px */
+    font-size: clamp(1.0625rem, 1vw + 0.9rem, 1.5rem);   /* ~18px → 24px */
     line-height: 1.07;
     letter-spacing: -0.0125em;
     color: #1C1B19;

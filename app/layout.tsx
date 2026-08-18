@@ -118,7 +118,7 @@ export default function RootLayout({
         </DesktopGate>
         {/* TEMPORARY — remove once the product-image background color is
             locked in. See components/dev/ImageBgTester.tsx. */}
-        <ImageBgTester />
+        {process.env.NODE_ENV === 'development' && <ImageBgTester />}
         <Script
           id="microsoft-clarity"
           strategy="afterInteractive"

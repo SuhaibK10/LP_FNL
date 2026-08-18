@@ -139,7 +139,8 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       // 'af0b6d0c-556b-4de2-12ff-dafb614c5600',
-      'f3a7cf1c-9113-4853-4d2d-5a2096b9fd00',
+      // 'f3a7cf1c-9113-4853-4d2d-5a2096b9fd00',
+      'b2abf2d8-e1d1-4503-b822-98df82a87c00',
       'f1babd8d-7612-4504-d53f-8fec0cdb9900',
       '08e57a49-abcf-4615-4fdd-78b15cd72a00',
     ],
@@ -239,7 +240,8 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       // '91562a63-93b2-4c22-7aab-51d0d8fae000',
-      'cce20161-5cb9-44aa-8c29-3a1251e92d00',
+      // 'cce20161-5cb9-44aa-8c29-3a1251e92d00',
+      '970f581f-8413-4d14-fc3a-def99eff9e00',
       '5dec047a-a87f-48d3-5ea4-29abd19cab00',
       'f5e08ff5-f9ff-4315-ccf0-0957d5437500',
     ],
@@ -260,7 +262,8 @@ export const PRODUCTS: Product[] = [
         lowStock: true,
         images: [
           // '91562a63-93b2-4c22-7aab-51d0d8fae000',
-          'cce20161-5cb9-44aa-8c29-3a1251e92d00',
+          // 'cce20161-5cb9-44aa-8c29-3a1251e92d00',
+          '970f581f-8413-4d14-fc3a-def99eff9e00',
           'b68fe362-f1e5-4d94-8e75-c3fe3c208800',
           'dab5cd11-d80c-498a-f842-0f58fa656d00',
           'c3350c15-2dab-46ca-047a-1912fd6df800',
@@ -323,6 +326,90 @@ export const PRODUCTS: Product[] = [
         ],
       },
 
+    ],
+  },
+
+  // ── AeroX ────────────────────────────────────────────────────────────────
+  {
+    id: 'aerox',
+    imageFit: 'cover',
+    metaTitle: 'AeroX 20" Cabin Trolley with TSA Lock & Cup Holder',
+    metaDescription: 'AeroX pairs a lightweight hard-shell 20" cabin trolley with a TSA-approved combination lock, 360° silent spinner wheels, and a built-in cup holder.',
+    keywords: ['cabin trolley bag', 'tsa lock suitcase', 'carry on luggage with cup holder', '20 inch trolley bag', 'hard shell cabin bag india'],
+    name: 'AeroX',
+    slug: 'aerox',
+    category: 'trolley',
+    description:
+      'Built for the walk from check-in to gate. AeroX is a lightweight hard-shell cabin trolley with a TSA-approved combination lock, silent 360° spinner wheels, and a built-in cup holder for the coffee you didn’t have time to finish.',
+    story: [
+      'AeroX is sized for the overhead bin and built for the sprint to get there. A lightweight hard shell keeps it light enough to lift without a second thought, while reinforced corners take the knocks a cabin trolley collects between check-in and the jet bridge.',
+      'The small details are the point: a TSA-approved combination lock that clears security without a second look, a telescopic handle tuned for one-handed steering, and a cup holder built into the frame, so there’s one less thing to juggle at the gate.',
+    ],
+    highlights: [
+      {
+        heading: 'One hand, no hassle',
+        body: 'A telescopic handle and 360° silent spinner wheels mean AeroX steers itself through crowded terminals, no wrestling required.',
+      },
+      {
+        heading: 'A cup holder that actually works',
+        body: 'Built into the frame, it keeps a coffee or water bottle upright and within reach, so it doesn’t have to ride in your hand through the airport.',
+      },
+      {
+        heading: 'Security-ready, always',
+        body: 'A TSA-approved combination lock and anti-theft zippers keep the cabin secure without slowing down a security check.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',    value: 'Lightweight hard shell' },
+      { label: 'Cabin (20″)', value: 'Carry-on approved' },
+      { label: 'Lock',     value: 'TSA-approved 3-digit combination lock' },
+      { label: 'Wheels',   value: '360° silent spinner wheels' },
+      { label: 'Extras',   value: 'Integrated cup holder, cross packing straps' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: ['c37ae5dd-9ab2-4ae3-6748-056327e9b400'],
+    features: [
+      { label: '360° silent spinner wheels' },
+      { label: 'TSA combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Integrated cup holder' },
+      { label: 'Anti-theft zipper' },
+      { label: 'Cross packing straps' },
+      { label: 'Carry-on approved' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Silver',
+        colorHex: '#BDBDBD',
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          // 'c37ae5dd-9ab2-4ae3-6748-056327e9b400',
+          // '8b09e66c-ff43-4536-ca92-aeabf1c48600',
+          '94f40aee-bce8-419c-ee78-387e86fd9900',
+          '67ed6fe5-32cc-4d7d-bd29-b196ed533100',
+          '4f727a22-c567-48b0-24be-de395e71df00',
+          '7b1f1555-66b3-49af-1504-6803a549e800',
+          '28ab74e0-06b3-4c43-53e6-757518696f00',
+          'd1fc39cb-cc88-459c-4749-9fc091c7bc00',
+          '54fb6c01-fdd4-442b-6ba3-3d381794c700',
+        ],
+        sizes: [
+          { size: 'Cabin', price: 2990, stock: 30 },
+        ],
+      },
+      {
+        color: 'Grey',
+        colorHex: '#6B6B6B',
+        images: [
+          '39b848c4-877d-40a6-e34e-6c583a956c00',
+        ],
+        sizes: [
+          { size: 'Cabin', price: 2990, stock: 30 },
+        ],
+      },
     ],
   },
 
@@ -401,89 +488,6 @@ export const PRODUCTS: Product[] = [
         colorHex: '#C9CBD1',
         sizes: [
           { size: 'One Size', price: 1499, stock: 50 },
-        ],
-      },
-    ],
-  },
-
-  // ── AeroX ────────────────────────────────────────────────────────────────
-  {
-    id: 'aerox',
-    imageFit: 'cover',
-    metaTitle: 'AeroX 20" Cabin Trolley with TSA Lock & Cup Holder',
-    metaDescription: 'AeroX pairs a lightweight hard-shell 20" cabin trolley with a TSA-approved combination lock, 360° silent spinner wheels, and a built-in cup holder.',
-    keywords: ['cabin trolley bag', 'tsa lock suitcase', 'carry on luggage with cup holder', '20 inch trolley bag', 'hard shell cabin bag india'],
-    name: 'AeroX',
-    slug: 'aerox',
-    category: 'trolley',
-    description:
-      'Built for the walk from check-in to gate. AeroX is a lightweight hard-shell cabin trolley with a TSA-approved combination lock, silent 360° spinner wheels, and a built-in cup holder for the coffee you didn’t have time to finish.',
-    story: [
-      'AeroX is sized for the overhead bin and built for the sprint to get there. A lightweight hard shell keeps it light enough to lift without a second thought, while reinforced corners take the knocks a cabin trolley collects between check-in and the jet bridge.',
-      'The small details are the point: a TSA-approved combination lock that clears security without a second look, a telescopic handle tuned for one-handed steering, and a cup holder built into the frame, so there’s one less thing to juggle at the gate.',
-    ],
-    highlights: [
-      {
-        heading: 'One hand, no hassle',
-        body: 'A telescopic handle and 360° silent spinner wheels mean AeroX steers itself through crowded terminals, no wrestling required.',
-      },
-      {
-        heading: 'A cup holder that actually works',
-        body: 'Built into the frame, it keeps a coffee or water bottle upright and within reach, so it doesn’t have to ride in your hand through the airport.',
-      },
-      {
-        heading: 'Security-ready, always',
-        body: 'A TSA-approved combination lock and anti-theft zippers keep the cabin secure without slowing down a security check.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',    value: 'Lightweight hard shell' },
-      { label: 'Cabin (20″)', value: 'Carry-on approved' },
-      { label: 'Lock',     value: 'TSA-approved 3-digit combination lock' },
-      { label: 'Wheels',   value: '360° silent spinner wheels' },
-      { label: 'Extras',   value: 'Integrated cup holder, cross packing straps' },
-    ],
-    warranty:
-      '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['c37ae5dd-9ab2-4ae3-6748-056327e9b400'],
-    features: [
-      { label: '360° silent spinner wheels' },
-      { label: 'TSA combination lock' },
-      { label: 'Telescopic handle' },
-      { label: 'Integrated cup holder' },
-      { label: 'Anti-theft zipper' },
-      { label: 'Cross packing straps' },
-      { label: 'Carry-on approved' },
-      { label: 'Lightweight build' },
-    ],
-    variants: [
-      {
-        color: 'Silver',
-        colorHex: '#BDBDBD',
-        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
-        // account's credit limit is exhausted.
-        images: [
-          // 'c37ae5dd-9ab2-4ae3-6748-056327e9b400',
-          '8b09e66c-ff43-4536-ca92-aeabf1c48600',
-          '67ed6fe5-32cc-4d7d-bd29-b196ed533100',
-          '4f727a22-c567-48b0-24be-de395e71df00',
-          '7b1f1555-66b3-49af-1504-6803a549e800',
-          '28ab74e0-06b3-4c43-53e6-757518696f00',
-          'd1fc39cb-cc88-459c-4749-9fc091c7bc00',
-          '54fb6c01-fdd4-442b-6ba3-3d381794c700',
-        ],
-        sizes: [
-          { size: 'Cabin', price: 2990, stock: 30 },
-        ],
-      },
-      {
-        color: 'Grey',
-        colorHex: '#6B6B6B',
-        images: [
-          '39b848c4-877d-40a6-e34e-6c583a956c00',
-        ],
-        sizes: [
-          { size: 'Cabin', price: 2990, stock: 30 },
         ],
       },
     ],

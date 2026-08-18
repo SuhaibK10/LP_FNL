@@ -1,46 +1,47 @@
 'use client'
 
 // ─────────────────────────────────────────────────────────────────────────────
-// components/dev/ImageBgTester.tsx
-// TEMPORARY — internal tool for A/B testing candidate product photos for
-// SkyTrail, AeroX, AeroSmart 3-in-1 (see imageBgTestConfig.ts for details).
-// Floating version, mounted site-wide in app/layout.tsx so it's reachable
-// from the PDP too, not just the shop page (see also the inline button in
-// components/shop/ProductGrid.tsx for the shop-page-specific entry point —
-// both read/write the same store/imageTestStore.ts).
-// Picking an option updates state instantly (no reload) and swaps the
-// display image for those three products (see the override in
-// components/shop/ProductCard.tsx).
-// Delete this file + its mount in app/layout.tsx + the shop-page button +
-// imageBgTestConfig.ts + imageTestStore.ts + the override in ProductCard.tsx
-// once a winner's picked.
+// components/dev/ImageBgTestButton.tsx
+// TEMPORARY — shop-page-local entry point for the product-photo A/B test
+// (see imageBgTestConfig.ts + store/imageTestStore.ts). A compact dropdown
+// next to Filters/Sort, only rendered in local dev (see the NODE_ENV check
+// where it's used in ProductGrid.tsx) so it never ships to production.
 // ─────────────────────────────────────────────────────────────────────────────
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { Palette } from 'lucide-react'
 import { IMAGE_TEST_OPTIONS } from './imageBgTestConfig'
 import { useImageTestStore } from '@/store/imageTestStore'
 
-export function ImageBgTester() {
+export function ImageBgTestButton() {
   const active    = useImageTestStore((s) => s.option)
   const setOption = useImageTestStore((s) => s.setOption)
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    function onClickOutside(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('mousedown', onClickOutside)
+    return () => document.removeEventListener('mousedown', onClickOutside)
+  }, [])
 
   return (
-    <div className="fixed bottom-4 left-4 z-[999] font-sans">
-      {open ? (
-        <div className="w-[220px] rounded-lg border border-black/10 bg-white shadow-xl p-3">
-          <div className="flex items-center justify-between mb-2">
-            <p className="text-[0.65rem] font-bold uppercase tracking-wide text-black/60">
-              Image test
-            </p>
-            <button
-              onClick={() => setOpen(false)}
-              className="text-[0.7rem] text-black/40 hover:text-black/70"
-              aria-label="Collapse"
-            >
-              ✕
-            </button>
-          </div>
+    <div ref={ref} className="relative shrink-0">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className="h-full flex items-center justify-center gap-2 font-body text-[0.7rem] max-md:text-[0.62rem] uppercase tracking-widest text-lp-ink border border-lp-muted rounded-md px-3 py-3 max-md:px-2.5 max-md:py-2 hover:border-lp-ink transition-colors duration-200"
+        title="Test SkyTrail/AeroX/AeroSmart product photos (dev only)"
+      >
+        <Palette size={14} strokeWidth={1.5} />
+      </button>
+      {open && (
+        <div className="absolute right-0 top-full mt-2 z-50 w-[220px] rounded-lg border border-black/10 bg-white shadow-xl p-3">
+          <p className="text-[0.65rem] font-bold uppercase tracking-wide text-black/60 mb-2">
+            Image test
+          </p>
           <div className="flex flex-wrap gap-1.5">
             {IMAGE_TEST_OPTIONS.map((o) => (
               <button
@@ -70,13 +71,6 @@ export function ImageBgTester() {
             Reset to default
           </button>
         </div>
-      ) : (
-        <button
-          onClick={() => setOpen(true)}
-          className="rounded-full bg-black/80 text-white text-[0.65rem] font-bold px-3 py-2 shadow-lg"
-        >
-          Image test
-        </button>
       )}
     </div>
   )

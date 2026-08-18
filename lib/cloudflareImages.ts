@@ -51,25 +51,10 @@ export const heroUrlMobile = (id: string) =>
 // Pass a product's `imageFit` field through from config/products.ts.
 export type ImageFit = 'pad' | 'cover'
 
-// TEMPORARY — background-color A/B test (see components/dev/ImageBgTester.tsx).
-// Reads the chosen hex from localStorage on every call so a hard reload after
-// picking an option is enough to repaint every product image. Remove this
-// override + the hardcoded default fallback once a color is locked in.
-const IMAGE_BG_TEST_KEY = 'lp_imgbg_test_hex'
-const DEFAULT_IMAGE_BG = 'E8E8E6'
-
-function padBackgroundHex(): string {
-  if (typeof window !== 'undefined') {
-    const override = window.localStorage.getItem(IMAGE_BG_TEST_KEY)
-    if (override) return override
-  }
-  return DEFAULT_IMAGE_BG
-}
-
 const fitParams = (fit: ImageFit, w: number, h: number) =>
   fit === 'cover'
     ? `w=${w},h=${h},fit=cover,gravity=auto`
-    : `w=${w},h=${h},fit=pad,background=%23${padBackgroundHex()}`
+    : `w=${w},h=${h},fit=pad,background=%23D4D4CC`
 
 // Product card thumbnail — 3:4 portrait
 export const cardUrl = (id: string, fit: ImageFit = 'pad') =>
@@ -103,4 +88,4 @@ export const expoUrl = (id: string) =>
 // separate Cloudflare product from Images, so it isn't re-exported here.
 
 // Placeholder for when no image is uploaded yet
-export const PLACEHOLDER_URL = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800' fill='%23E8E8E6'%3E%3Crect width='600' height='800'/%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='48' fill='%23B99A62' text-anchor='middle' dominant-baseline='middle'%3ELP%3C/text%3E%3C/svg%3E`
+export const PLACEHOLDER_URL = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800' fill='%23D4D4CC'%3E%3Crect width='600' height='800'/%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='48' fill='%23B99A62' text-anchor='middle' dominant-baseline='middle'%3ELP%3C/text%3E%3C/svg%3E`

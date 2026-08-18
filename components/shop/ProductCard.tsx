@@ -151,7 +151,7 @@ export function ProductCard({ product }: ProductCardProps) {
         onClick={saveShopScroll}
         onMouseEnter={prefetchPdpImage}
         onTouchStart={prefetchPdpImage}
-        className="relative block aspect-[3/4] overflow-hidden bg-lp-image-bg"
+        className="relative block aspect-[4/4.8] md:aspect-[3/4] overflow-hidden bg-lp-image-bg"
       >
         <div
           className="absolute inset-0"
@@ -326,10 +326,17 @@ export function ProductCard({ product }: ProductCardProps) {
             )
           })}
           </div>
-          <span className="hidden sm:inline font-body text-[0.75rem] text-lp-muted leading-none shrink-0">
+          <span
+            className="inline-flex items-center rounded-full px-2.5 py-1 font-body font-semibold text-[0.75rem] leading-none shrink-0"
+            style={{
+              backgroundColor: `${variant.colorHex}20`,
+              color: swatchRingColor(variant.colorHex),
+              border: `1px solid ${variant.colorHex}55`,
+            }}
+          >
             {variant.color}
             {variant.accentColor && (
-              <span className="text-lp-faint"> | {variant.accentColor}</span>
+              <span className="opacity-70"> | {variant.accentColor}</span>
             )}
           </span>
         </div>
