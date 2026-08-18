@@ -66,6 +66,7 @@ export function ProductCard({ product }: ProductCardProps) {
   }
 
   const [activeVariant,   setActiveVariant]   = useState(0)
+  const [hoveredVariant,  setHoveredVariant]  = useState<number | null>(null)
   const [activeSize,      setActiveSize]      = useState<ProductSize | null>(
     defaultSize(product.variants[0].sizes)
   )
@@ -76,6 +77,14 @@ export function ProductCard({ product }: ProductCardProps) {
   const variant      = product.variants[activeVariant]
   const lowestPrice  = Math.min(...product.variants.flatMap(v => v.sizes.map(s => s.price)))
   const displayImage = variant.images?.[0] ?? product.images[activeVariant] ?? product.images[0]
+
+  // Hovering a swatch previews that color's photo without actually
+  // selecting it — cart/link/price all stay tied to activeVariant, only the
+  // image shown swaps back and forth.
+  const hoveredImageVariant = hoveredVariant !== null ? product.variants[hoveredVariant] : null
+  const previewImage = hoveredImageVariant
+    ? (hoveredImageVariant.images?.[0] ?? product.images[hoveredVariant!] ?? product.images[0])
+    : displayImage
   const sizeObj       = variant.sizes.find(s => s.size === activeSize)
   const price         = sizeObj?.price ?? lowestPrice
   const inStock       = sizeObj ? sizeObj.stock > 0 : true
@@ -173,8 +182,8 @@ export function ProductCard({ product }: ProductCardProps) {
             />
           ) : (
             <Image
-              src={cardUrl(displayImage, product.imageFit) || PLACEHOLDER_URL}
-              alt={`${product.name} in ${variant.color}`}
+              src={cardUrl(previewImage, product.imageFit) || PLACEHOLDER_URL}
+              alt={`${product.name} in ${(hoveredImageVariant ?? variant).color}`}
               fill
               className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
               sizes="(max-width:640px) 50vw, (max-width:1024px) 33vw, 25vw"
@@ -352,6 +361,8 @@ export function ProductCard({ product }: ProductCardProps) {
                     key={v.color}
                     type="button"
                     onClick={(e) => handleColorChange(e, i)}
+                    onMouseEnter={() => setHoveredVariant(i)}
+                    onMouseLeave={() => setHoveredVariant(null)}
                     title={v.color}
                     className="w-3.5 h-3.5 rounded-full transition-all duration-200 flex-shrink-0"
                     style={{

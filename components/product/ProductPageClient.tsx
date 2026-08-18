@@ -20,6 +20,11 @@ export function ProductPageClient({ product, defaultColor }: Props) {
 
   const [colorIndex, setColorIndex] = useState(defaultIndex)
 
+  // Hovering a swatch in ProductInfo previews that color's gallery without
+  // actually selecting it — cart/price/URL all stay tied to colorIndex.
+  const [hoveredColorIndex, setHoveredColorIndex] = useState<number | null>(null)
+  const previewColorIndex = hoveredColorIndex ?? colorIndex
+
   // Warm the cache for every OTHER color's first photo as soon as the page
   // loads — not just the one currently shown. So by the time someone clicks
   // a color swatch, that swap is a cache hit instead of a cold fetch.
@@ -40,9 +45,9 @@ export function ProductPageClient({ product, defaultColor }: Props) {
   // thumbnail strip (reset to the first shot of that color). Variants
   // without one fall back to the legacy flat `product.images` array,
   // indexed by color — unchanged behavior for every existing product.
-  const variantImages = product.variants[colorIndex]?.images
+  const variantImages = product.variants[previewColorIndex]?.images
   const galleryImages       = variantImages && variantImages.length > 0 ? variantImages : product.images
-  const galleryActiveIndex  = variantImages && variantImages.length > 0 ? 0 : colorIndex
+  const galleryActiveIndex  = variantImages && variantImages.length > 0 ? 0 : previewColorIndex
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 lg:gap-20">
@@ -60,6 +65,7 @@ export function ProductPageClient({ product, defaultColor }: Props) {
           product={product}
           defaultColor={defaultColor}
           onColorChange={setColorIndex}
+          onColorHover={setHoveredColorIndex}
         />
       </div>
     </div>

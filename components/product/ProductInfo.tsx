@@ -33,9 +33,10 @@ interface Props {
   product: Product
   defaultColor?: string
   onColorChange?: (index: number) => void
+  onColorHover?: (index: number | null) => void
 }
 
-export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
+export function ProductInfo({ product, defaultColor, onColorChange, onColorHover }: Props) {
   const router        = useRouter()
   const addItem       = useCartStore((s) => s.addItem)
 
@@ -185,6 +186,8 @@ export function ProductInfo({ product, defaultColor, onColorChange }: Props) {
             <button
               key={v.color}
               onClick={() => handleColorChange(i)}
+              onMouseEnter={() => onColorHover?.(i)}
+              onMouseLeave={() => onColorHover?.(null)}
               title={v.color}
               className="w-7 h-7 rounded-full transition-all duration-200"
               style={{

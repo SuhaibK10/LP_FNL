@@ -471,7 +471,8 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       // '584aba3f-66ed-4084-df03-ba0e5e625100',
-      '71bcef0c-eaf5-4466-fec4-4f5fdc357900',
+      // '71bcef0c-eaf5-4466-fec4-4f5fdc357900',
+      '365d5259-4bd3-4533-57d7-2182ee625e00',
     ],
     features: [
       { label: 'Holds 4 to 5 formal shirts' },
@@ -532,7 +533,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['6ac4befa-e760-4f64-8a89-525baed33000'],
+    images: ['217fe32a-f783-401e-ec32-84f59ebec600'],
     features: [
       { label: '360° eight-wheel silent spinners' },
       { label: 'TSA combination lock' },
@@ -546,7 +547,7 @@ export const PRODUCTS: Product[] = [
       {
         color: 'Lime Green',
         colorHex: '#A6CE39',
-        images: ['6ac4befa-e760-4f64-8a89-525baed33000'],
+        images: ['217fe32a-f783-401e-ec32-84f59ebec600'],
         sizes: [
           { size: 'Cabin', price: 2990, stock: 30 },
         ],
@@ -598,7 +599,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['ca24fd22-9f74-48a8-0746-303b00b57200'],
+    images: ['33ffed12-11c8-4f4e-6e6b-f5d84cb1a900'],
     features: [
       { label: 'Lightweight build' },
       { label: 'Smooth zippers' },
@@ -700,12 +701,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    // TODO: no product photos yet — Suhaib will upload to Cloudinary later.
-    // Add the public_id(s) or full URL(s) here once ready. Left as [''] and
-    // not [] — an empty array resolves to `undefined` in ProductCard's image
-    // lookup, which throws at render; '' resolves safely to a broken-image
-    // placeholder instead of crashing the card.
-    images: [''],
+    images: ['31edeca6-7b07-4f75-eb0d-3a8014ab0b00'],
     features: [
       { label: 'Water-resistant exterior' },
       { label: 'Padded laptop compartment' },
@@ -795,7 +791,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['cb41fa93-7cc6-46da-ed54-309226c4d200'],
+    images: ['15a84116-72ad-4efc-ef8a-7e6c51573e00'],
     features: [
       { label: 'Concealed pocket' },
       { label: 'Comfortable fabric lining' },
@@ -1182,12 +1178,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    // TODO: no product photos yet — Suhaib will share Cloudinary links later.
-    // Add the public_id(s) or full URL(s) here once ready. Left as [''] and
-    // not [] — an empty array resolves to `undefined` in ProductCard's image
-    // lookup, which throws at render; '' resolves safely to a broken-image
-    // placeholder instead of crashing the card.
-    images: [''],
+    images: ['fdda0c0f-00f4-4fc6-b658-febca194d000'],
     features: [
       { label: 'Dedicated laptop compartment' },
       { label: 'Spacious main compartment' },
@@ -1300,7 +1291,8 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       // 'a546bc30-7f2f-4b64-2c60-afe7c18cd500',
-      'acbb1811-cbd1-4496-9e85-cad771ad4d00',
+      // 'acbb1811-cbd1-4496-9e85-cad771ad4d00',
+      '2746633d-7f90-44eb-961f-aecc37f59e00',
       '45538b81-1170-40a2-cbc5-8f0cee2c3200',
     ],
     features: [
@@ -1390,7 +1382,8 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       // '89b97949-0415-4659-15c9-64ab4156a400',
-      'c9d701b2-8947-4f3b-8877-d745394d0300',
+      // 'c9d701b2-8947-4f3b-8877-d745394d0300',
+      '4ed12dc1-e030-4fca-09db-22f80ccac000',
       '56b911b3-1fb1-45f6-196c-27e3cf0dc900',
       '3c7f26af-0a00-4469-105e-d5e590b46500',
     ],
@@ -1481,7 +1474,8 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      '532c64d2-a645-483a-c4c6-4c8355ee3900',
+      // '532c64d2-a645-483a-c4c6-4c8355ee3900',
+      'beab3f89-3f3a-45f0-39c8-28bad5f52500',
       '5503751e-09f3-4712-6ab6-ef7981273600',
     ],
     features: [
@@ -1539,7 +1533,11 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['f14c65cb-42c9-4a16-f53e-72b9d334d000','36351ce5-e009-4f94-0847-b4cd6ed3fd00'],
+    images: [
+      // 'f14c65cb-42c9-4a16-f53e-72b9d334d000',
+      'dc942d7e-3134-4857-cfb8-22e21e8cbc00',
+      '36351ce5-e009-4f94-0847-b4cd6ed3fd00',
+    ],
     features: [
       { label: 'Hard shell construction' },
       { label: '360° spinner wheels' },
@@ -1606,7 +1604,8 @@ export const PRODUCTS: Product[] = [
     // bare public_ids elsewhere; cld() in lib/cloudinary.ts already handles
     // any cloud name via its full-URL transform-injection path.
     images: [
-      'da2d28a6-1033-4ae4-5eb8-2d6d6a702500',
+      // 'da2d28a6-1033-4ae4-5eb8-2d6d6a702500',
+      '70c2289a-fa5f-44f0-f7ab-be0bbf095200',
       'ca2fbe2c-2dee-4a1b-5370-2fad114ff000',
       'dbc3eca9-b03a-4e06-0377-6ee35558cb00',
       'e46d161f-862f-4698-924c-1fcc9bd09200',
@@ -1672,12 +1671,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    // Hosted on a separate Cloudinary account (deh394y0h) — the primary
-    // account's credit limit is exhausted. No photos yet: left as [''] and
-    // not [] — an empty array resolves to `undefined` in ProductCard's image
-    // lookup, which throws at render; '' resolves safely to a broken-image
-    // placeholder instead of crashing the card.
-    images: [''],
+    images: ['31d9e1bb-89ee-4bd6-7236-9035e6b68c00'],
     features: [
       { label: 'Smooth rolling spinner wheels' },
       { label: 'Strong bearing capacity' },
@@ -1770,7 +1764,7 @@ export const PRODUCTS: Product[] = [
         a: 'Yes. Each DiamondLux size is available on its own. The set simply prices the three together and guarantees a matched batch and finish.',
       },
     ],
-    images: [''],
+    images: ['31497826-4729-4374-769c-679b65837d00'],
     features: [
       { label: 'Smooth rolling spinner wheels' },
       { label: 'Combination lock' },
@@ -1955,7 +1949,7 @@ export const PRODUCTS: Product[] = [
         a: 'Yes. Each StrataLux size is available on its own. The set simply prices the three together and guarantees a matched batch and finish.',
       },
     ],
-    images: [''],
+    images: ['efd3389a-9f70-463a-f9a5-6d4be00f7100'],
     features: [
       { label: '20", 24" & 28" included' },
       { label: '360° silent spinner wheels' },
@@ -2038,7 +2032,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['ff1a4f4b-fbe0-4992-ac42-d9aac1218800','3051c79d-1359-4f89-66d2-e446d95a4b00'],
+    images: ['d8b5d081-b516-4dbd-260c-86b0fb659f00','3051c79d-1359-4f89-66d2-e446d95a4b00'],
     features: [
       { label: 'Secure combination lock' },
       { label: 'Hard shell construction' },
@@ -2112,7 +2106,8 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      '543255a6-680c-415c-4362-50cd1864d900',
+      // '543255a6-680c-415c-4362-50cd1864d900',
+      '31369ef4-73df-4f4f-8a14-ae813e989300',
       '5abd5975-806b-41d5-7d24-9e02251e0300',
     ],
     features: [
@@ -2186,7 +2181,8 @@ export const PRODUCTS: Product[] = [
     // Hosted on a separate Cloudinary account (deh394y0h) — the primary
     // account's credit limit is exhausted.
     images: [
-      '97c1e757-4391-4b32-9741-527e449e8300',
+      // '97c1e757-4391-4b32-9741-527e449e8300',
+      '619df2c3-8ae2-4c44-862d-d046ee052b00',
       'bf5245a9-9816-4d9c-434c-87b7307bb300',
       '221575ce-07d4-47d1-20cf-70c5df26d300',
       '65e0463f-3965-484a-1414-0708842ef200',
@@ -2271,7 +2267,8 @@ export const PRODUCTS: Product[] = [
     warranty:
       '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images:      [
-      '0c421c25-1388-4c8a-53b2-31cd936eae00',
+      // '0c421c25-1388-4c8a-53b2-31cd936eae00',
+      '59c6ce9b-9be1-4e7f-65ad-e0b1c17acd00',
       '6b6b0465-9b1a-4817-baa6-a859f69f2800'
     ],
     features: [
@@ -2335,8 +2332,9 @@ export const PRODUCTS: Product[] = [
     warranty:
       '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images: [
-      '0958137c-54cd-499d-d45d-ab87f2b07c00',
-      
+      // '0958137c-54cd-499d-d45d-ab87f2b07c00',
+      '92a462b9-9f70-478a-9665-9ac7dae1d200',
+
       '47e4411d-b608-4680-d934-dbd07a2dce00',
       'ef16d565-78ca-4df9-3bb8-0698584cb400',
       '663e305a-3796-4f98-6d96-9e602d487100',
@@ -2520,7 +2518,8 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      '10980eca-8d23-488a-70d9-0fa3f1797100',
+      // '10980eca-8d23-488a-70d9-0fa3f1797100',
+      'f57afb4d-bba5-481b-2da1-a204b5924600',
       'dac9006e-f906-4e5f-c5a7-1a4658002a00',
     ],
     features: [
@@ -2595,8 +2594,9 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      '6c725469-47bb-469c-a9d3-293921ff6400'
-      
+      // '6c725469-47bb-469c-a9d3-293921ff6400',
+      '3c187840-325d-4076-8168-cf87c926f400'
+
     ],
     features: [
       { label: '20", 24" & 28" included' },
@@ -2661,7 +2661,8 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      '69f2e18a-3e6f-49cc-a4d8-603445faf800',
+      // '69f2e18a-3e6f-49cc-a4d8-603445faf800',
+      '15eeffee-0747-4449-9479-658e51bc8e00',
       'f18adae4-1c3e-46d4-dfb2-66c1c31aad00',
     ],
     features: [
@@ -2738,7 +2739,8 @@ export const PRODUCTS: Product[] = [
       },
     ],
     images: [
-      'e41e9ccf-2de0-4ae9-0f2f-85359636c400',
+      // 'e41e9ccf-2de0-4ae9-0f2f-85359636c400',
+      '578abe9b-91f6-4a83-e684-bdd4cdc54100',
     ],
     features: [
       { label: '20", 24" & 28" included' },
@@ -2799,7 +2801,8 @@ export const PRODUCTS: Product[] = [
     warranty:
       '1-year warranty covering manufacturing defects in the shell panel, fabric, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images:      [
-      '0caedf5f-e860-40a0-815d-948cb8b39200',
+      // '0caedf5f-e860-40a0-815d-948cb8b39200',
+      '84b25074-a05f-4498-c0bd-d4d058ed7500',
       'ff0b7372-c6a8-468f-9529-6619cf26cb00',
       'c51b7c0b-34d5-415c-e0b4-0cc22aac3d00',
       '2ef2f8b2-ed27-4506-c42f-baf0cc755a00',
