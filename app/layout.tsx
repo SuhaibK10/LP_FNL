@@ -9,7 +9,6 @@ import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/next'
 import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider'
 import { DesktopGate }         from '@/components/layout/DesktopGate'
-import { ImageBgTester }       from '@/components/dev/ImageBgTester'
 import { SEO } from '@/lib/constants'
 import './globals.css'
 
@@ -116,9 +115,6 @@ export default function RootLayout({
             {children}
           </SmoothScrollProvider>
         </DesktopGate>
-        {/* TEMPORARY — remove once the product-image background color is
-            locked in. See components/dev/ImageBgTester.tsx. */}
-        {process.env.NODE_ENV === 'development' && <ImageBgTester />}
         <Script
           id="microsoft-clarity"
           strategy="afterInteractive"
