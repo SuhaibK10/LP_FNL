@@ -98,6 +98,15 @@ export function ProductGrid() {
   const [sortKey, setSortKey]     = useState<SortKey>('default')
   const [viewMode, setViewMode]   = useState<ViewMode>('grid')
 
+  // Mobile defaults to list view (desktop stays grid) — checked once on
+  // mount rather than in the initializer to avoid an SSR/client hydration
+  // mismatch, since window isn't available on the server.
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.matchMedia('(max-width: 767px)').matches) {
+      setViewMode('list')
+    }
+  }, [])
+
   // Drawer open state lives in a shared store, not local state — the
   // Navbar's docked filter icon (shown once this button scrolls out of
   // view) needs to open the exact same drawer.

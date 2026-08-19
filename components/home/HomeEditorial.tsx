@@ -5,6 +5,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { HeroSection }         from './sections/HeroSection'
+import { ExpoPromoModal }      from './sections/ExpoPromoModal'
 import { BestSellersCarousel } from './sections/BestSellersCarousel'
 import { PromoBanner }         from './sections/PromoBanner'
 import { IndependenceDayBanner } from './sections/IndependenceDayBanner'
@@ -24,6 +25,7 @@ export function HomeEditorial() {
   return (
     <main>
       <HeroSection />
+      <ExpoPromoModal />
       {VERTEX_SHOWCASE_HOME_ENABLED && (
         <ScrollShowcase
           eyebrow={VERTEX_SHOWCASE_HEADER.eyebrow}
@@ -37,7 +39,8 @@ export function HomeEditorial() {
       {false && <PromoBanner />}
       <BestSellersCarousel />
       {SHOP_BY_COLOR_PRICE_HOME_ENABLED && <ShopByColorPrice />}
-      <ProductSpotlight />
+      {/* Temporarily disabled — "See it the way you will use it" spotlight turned off. */}
+      {false && <ProductSpotlight />}
       {EXHIBITION_GALLERY_HOME_ENABLED && <ExhibitionGallery />}
       <ReviewsSection />
     </main>
