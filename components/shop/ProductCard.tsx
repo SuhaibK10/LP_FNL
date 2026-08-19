@@ -208,7 +208,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
         {/* Myntra Exclusive badge */}
         {myntra && (
-          <span className="absolute top-2.5 left-2.5 md:top-3 md:left-3 z-10 flex items-center justify-center backdrop-blur-sm rounded-full p-1.5 border border-[#5B6670]/60">
+          <span className="absolute top-2.5 left-2.5 md:top-3 md:left-3 z-10 flex items-center justify-center rounded-full p-1.5 bg-white border border-[#5B6670]/25 shadow-sm">
             <Image src="/myntra-m.png" alt="Myntra" width={13} height={11} unoptimized />
           </span>
         )}
@@ -298,9 +298,10 @@ export function ProductCard({ product }: ProductCardProps) {
             </p>
           </Link>
           {myntra?.rating && (
-            <span className="flex items-center gap-1 font-body text-[0.75rem] text-lp-muted leading-none shrink-0">
-              <Star size={10} strokeWidth={0} className="fill-[#5B6670]" />
-              {myntra.rating.toFixed(1)} ({myntra.ratingCount})
+            <span className="inline-flex items-center gap-1 rounded-full px-2 py-1 font-body font-bold text-[0.75rem] text-lp-ink bg-lp-gold/15 border border-lp-gold/40 leading-none shrink-0">
+              <Star size={11} strokeWidth={0} className="fill-lp-gold" />
+              {myntra.rating.toFixed(1)}
+              <span className="font-medium opacity-70">({myntra.ratingCount})</span>
             </span>
           )}
         </div>

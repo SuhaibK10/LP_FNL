@@ -241,7 +241,8 @@ export const PRODUCTS: Product[] = [
     images: [
       // '91562a63-93b2-4c22-7aab-51d0d8fae000',
       // 'cce20161-5cb9-44aa-8c29-3a1251e92d00',
-      '970f581f-8413-4d14-fc3a-def99eff9e00',
+      // '970f581f-8413-4d14-fc3a-def99eff9e00',
+      'd1ce7992-2e80-4459-6dea-c96c82a36800',
       '5dec047a-a87f-48d3-5ea4-29abd19cab00',
       'f5e08ff5-f9ff-4315-ccf0-0957d5437500',
     ],
@@ -255,6 +256,27 @@ export const PRODUCTS: Product[] = [
       { label: 'Cross packing straps' },
     ],
     variants: [
+      {
+        color: 'White',
+        colorHex: '#6F4E37', // brown zippers/accent
+        bodyHex: '#F7F5F0',  // white shell
+        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
+        // account's credit limit is exhausted.
+        images: [
+          // '0f4b7b11-dd2d-4d8f-c502-58ea01177400',
+          // '9bac92e3-74a8-42ef-d579-d01830e80a00',
+          'd1ce7992-2e80-4459-6dea-c96c82a36800',
+          '9eff1fe4-2561-496d-5734-2546f9ceb200',
+          '9aac96ca-d8a7-4f2c-6653-9a2d88ce4a00',
+          '3ad12034-30af-463a-a13f-8a9b0cf02800',
+          '7da251d0-330a-481b-5eda-f0638dc4e400',
+          'abe43a32-a61c-4970-4294-7d344888fe00',
+          'afc1d4d5-338a-42b5-890b-aff8e3c3bd00',
+        ],
+        sizes: [
+          { size: 'Cabin', price: 5999, stock: 30 },
+        ],
+      },
       {
         color: 'Charcoal Grey',
         colorHex: '#A6B21A',
@@ -303,26 +325,6 @@ export const PRODUCTS: Product[] = [
         ],
         sizes: [
           { size: 'Cabin', price: 5999, stock: 35, sku: '8906206840001-T-20' },
-        ],
-      },
-      {
-        color: 'White',
-        colorHex: '#6F4E37', // brown zippers/accent
-        bodyHex: '#F7F5F0',  // white shell
-        // Hosted on a separate Cloudinary account (deh394y0h) — the primary
-        // account's credit limit is exhausted.
-        images: [
-          // '0f4b7b11-dd2d-4d8f-c502-58ea01177400',
-          '9bac92e3-74a8-42ef-d579-d01830e80a00',
-          '9eff1fe4-2561-496d-5734-2546f9ceb200',
-          '9aac96ca-d8a7-4f2c-6653-9a2d88ce4a00',
-          '3ad12034-30af-463a-a13f-8a9b0cf02800',
-          '7da251d0-330a-481b-5eda-f0638dc4e400',
-          'abe43a32-a61c-4970-4294-7d344888fe00',
-          'afc1d4d5-338a-42b5-890b-aff8e3c3bd00',
-        ],
-        sizes: [
-          { size: 'Cabin', price: 5999, stock: 30 },
         ],
       },
 
@@ -413,6 +415,67 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
+  // ── Pulse ────────────────────────────────────────────────────────────────
+  {
+    id: 'pulse',
+    imageFit: 'cover',
+    metaTitle: 'Pulse 20" Hard-Shell Spinner Suitcase with TSA Lock',
+    metaDescription: 'Pulse pairs a ribbed hard-shell 20" cabin suitcase in electric lime with a TSA-approved combination lock, 360° eight-wheel spinners, and a telescopic handle.',
+    keywords: ['hard shell spinner suitcase', 'tsa lock cabin trolley', '20 inch spinner suitcase', 'lime green suitcase', 'carry on hard shell luggage'],
+    name: 'Pulse',
+    slug: 'pulse',
+    category: 'trolley',
+    description:
+      'Pulse is a hard-shell 20" cabin suitcase built to be spotted at baggage claim before it hits the belt. A ribbed, concentric-embossed shell in electric lime carries a TSA-approved combination lock and eight silent spinner wheels that glide instead of drag.',
+    story: [
+      'Pulse takes its name from the shell: a ribbed, concentric pattern radiating outward, moulded into a hard case built for the actual job of a cabin trolley — the overhead bin, the jet bridge, the gate agent’s trolley scale.',
+      'Eight double-spinner wheels roll 360° in every direction, so Pulse tracks straight through a terminal instead of pulling to one side. A TSA-approved combination lock and telescopic handle round out a case sized to clear carry-on limits without giving up room.',
+    ],
+    highlights: [
+      {
+        heading: 'A shell that stands out',
+        body: 'The ribbed, concentric-embossed hard shell in electric lime is built to spot across a terminal, and tough enough for the sprint to the gate.',
+      },
+      {
+        heading: 'Eight wheels, one straight line',
+        body: 'Double spinner wheels at each corner roll 360°, so Pulse tracks wherever you point it instead of dragging to one side.',
+      },
+      {
+        heading: 'Security-ready, always',
+        body: 'A TSA-approved combination lock keeps the case closed through checkpoints without slowing down a security check.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',      value: 'Ribbed hard shell (ABS/PC)' },
+      { label: 'Cabin (20″)', value: 'Carry-on approved' },
+      { label: 'Lock',       value: 'TSA-approved 3-digit combination lock' },
+      { label: 'Wheels',     value: '360° eight-wheel silent spinners' },
+      { label: 'Handle',     value: 'Telescopic pull handle + side carry handle' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: ['20f08b86-4e0f-446b-95bc-c7f9fc98ac00'],
+    features: [
+      { label: '360° eight-wheel silent spinners' },
+      { label: 'TSA combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Ribbed hard-shell construction' },
+      { label: 'Side carry handle' },
+      { label: 'Carry-on approved' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Lime Green',
+        colorHex: '#A6CE39',
+        images: ['20f08b86-4e0f-446b-95bc-c7f9fc98ac00'],
+        sizes: [
+          { size: 'Cabin', price: 2990, stock: 30 },
+        ],
+      },
+    ],
+  },
+
   // ── ShirtVault ──────────────────────────────────────────────────────────
   {
     id: 'shirtvault',
@@ -472,7 +535,8 @@ export const PRODUCTS: Product[] = [
     images: [
       // '584aba3f-66ed-4084-df03-ba0e5e625100',
       // '71bcef0c-eaf5-4466-fec4-4f5fdc357900',
-      '365d5259-4bd3-4533-57d7-2182ee625e00',
+      // '365d5259-4bd3-4533-57d7-2182ee625e00',
+      'e3c8bc97-9a5e-4481-e094-d3ae7d1a2200',
     ],
     features: [
       { label: 'Holds 4 to 5 formal shirts' },
@@ -494,66 +558,6 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
-  // ── Pulse ────────────────────────────────────────────────────────────────
-  {
-    id: 'pulse',
-    imageFit: 'cover',
-    metaTitle: 'Pulse 20" Hard-Shell Spinner Suitcase with TSA Lock',
-    metaDescription: 'Pulse pairs a ribbed hard-shell 20" cabin suitcase in electric lime with a TSA-approved combination lock, 360° eight-wheel spinners, and a telescopic handle.',
-    keywords: ['hard shell spinner suitcase', 'tsa lock cabin trolley', '20 inch spinner suitcase', 'lime green suitcase', 'carry on hard shell luggage'],
-    name: 'Pulse',
-    slug: 'pulse',
-    category: 'trolley',
-    description:
-      'Pulse is a hard-shell 20" cabin suitcase built to be spotted at baggage claim before it hits the belt. A ribbed, concentric-embossed shell in electric lime carries a TSA-approved combination lock and eight silent spinner wheels that glide instead of drag.',
-    story: [
-      'Pulse takes its name from the shell: a ribbed, concentric pattern radiating outward, moulded into a hard case built for the actual job of a cabin trolley — the overhead bin, the jet bridge, the gate agent’s trolley scale.',
-      'Eight double-spinner wheels roll 360° in every direction, so Pulse tracks straight through a terminal instead of pulling to one side. A TSA-approved combination lock and telescopic handle round out a case sized to clear carry-on limits without giving up room.',
-    ],
-    highlights: [
-      {
-        heading: 'A shell that stands out',
-        body: 'The ribbed, concentric-embossed hard shell in electric lime is built to spot across a terminal, and tough enough for the sprint to the gate.',
-      },
-      {
-        heading: 'Eight wheels, one straight line',
-        body: 'Double spinner wheels at each corner roll 360°, so Pulse tracks wherever you point it instead of dragging to one side.',
-      },
-      {
-        heading: 'Security-ready, always',
-        body: 'A TSA-approved combination lock keeps the case closed through checkpoints without slowing down a security check.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',      value: 'Ribbed hard shell (ABS/PC)' },
-      { label: 'Cabin (20″)', value: 'Carry-on approved' },
-      { label: 'Lock',       value: 'TSA-approved 3-digit combination lock' },
-      { label: 'Wheels',     value: '360° eight-wheel silent spinners' },
-      { label: 'Handle',     value: 'Telescopic pull handle + side carry handle' },
-    ],
-    warranty:
-      '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['217fe32a-f783-401e-ec32-84f59ebec600'],
-    features: [
-      { label: '360° eight-wheel silent spinners' },
-      { label: 'TSA combination lock' },
-      { label: 'Telescopic handle' },
-      { label: 'Ribbed hard-shell construction' },
-      { label: 'Side carry handle' },
-      { label: 'Carry-on approved' },
-      { label: 'Lightweight build' },
-    ],
-    variants: [
-      {
-        color: 'Lime Green',
-        colorHex: '#A6CE39',
-        images: ['217fe32a-f783-401e-ec32-84f59ebec600'],
-        sizes: [
-          { size: 'Cabin', price: 2990, stock: 30 },
-        ],
-      },
-    ],
-  },
 
   // ── AeroVault ────────────────────────────────────────────────────────────
   {
@@ -599,7 +603,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['33ffed12-11c8-4f4e-6e6b-f5d84cb1a900'],
+    images: ['91c5f518-d1ee-4757-f4c3-a27c02d7a600'],
     features: [
       { label: 'Lightweight build' },
       { label: 'Smooth zippers' },
@@ -617,7 +621,8 @@ export const PRODUCTS: Product[] = [
         // account's credit limit is exhausted.
         images: [
           // 'ca24fd22-9f74-48a8-0746-303b00b57200',
-          '51fd24f1-7e9b-47ad-bb8c-4f7aa6c17000',
+          // '51fd24f1-7e9b-47ad-bb8c-4f7aa6c17000',
+          '91c5f518-d1ee-4757-f4c3-a27c02d7a600',
           'ffb6ea27-cb53-4a4d-9d1a-df63f83e2800',
           '17cc8ba4-8012-4f87-3fe8-5b2d218cf800',
         ],
@@ -701,7 +706,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['31edeca6-7b07-4f75-eb0d-3a8014ab0b00'],
+    images: ['af6ae9d4-085c-4fc0-ad33-0979311c1900'],
     features: [
       { label: 'Water-resistant exterior' },
       { label: 'Padded laptop compartment' },
@@ -720,7 +725,8 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          '8280bee0-71a1-407a-803a-6d38c780a000',
+          // '8280bee0-71a1-407a-803a-6d38c780a000',
+          'af6ae9d4-085c-4fc0-ad33-0979311c1900',
           'd83fd9d1-372c-43ee-a94c-544215083c00',
           '5b59d0b7-8d25-459c-666d-a3956a3f3000',
         ],
@@ -791,7 +797,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['15a84116-72ad-4efc-ef8a-7e6c51573e00'],
+    images: ['eddcd71d-dec7-4f81-7399-e56885c68b00'],
     features: [
       { label: 'Concealed pocket' },
       { label: 'Comfortable fabric lining' },
@@ -808,7 +814,9 @@ export const PRODUCTS: Product[] = [
         // account's credit limit is exhausted.
         images: [
           // 'cb41fa93-7cc6-46da-ed54-309226c4d200',
-          '17041633-e200-49d9-1d86-2f1f6f6ba800',
+          // '17041633-e200-49d9-1d86-2f1f6f6ba800',
+          // '15a84116-72ad-4efc-ef8a-7e6c51573e00',
+          'eddcd71d-dec7-4f81-7399-e56885c68b00',
           'd9b76467-0e4e-44a3-6eef-18eb74d2cf00',
           '8321af3d-25d7-4863-d287-f0ae6a74f300',
         ],
@@ -890,12 +898,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    // TODO: no product photos yet — Suhaib will share Cloudinary links later.
-    // Add the public_id(s) or full URL(s) here once ready. Left as [''] and
-    // not [] — an empty array resolves to `undefined` in ProductCard's image
-    // lookup, which throws at render; '' resolves safely to a broken-image
-    // placeholder instead of crashing the card.
-    images: [''],
+    images: ['721b796a-c31a-4d0e-9423-d3b18966de00'],
     features: [
       { label: 'Concealed pocket' },
       { label: 'Comfortable fabric lining' },
@@ -910,7 +913,8 @@ export const PRODUCTS: Product[] = [
         color: 'Blue',
         colorHex: '#1565C0',
         images: [
-          'baba58d2-0b7f-4314-4b23-b37c50e5b500',
+          // 'baba58d2-0b7f-4314-4b23-b37c50e5b500',
+          '721b796a-c31a-4d0e-9423-d3b18966de00',
           'fe3c06aa-c31d-42c4-5797-64bafde42500',
           'd8ec8e63-c3e9-423b-4e91-2b00a930ad00',
         ],
@@ -992,7 +996,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: [/* 'fe13ccaa-0a68-473a-60ed-096585b04800' */],
+    images: ['75fb21d6-0bb3-43d8-d8ac-1847058e1000'],
     features: [
       { label: 'Comfortable fabric lining' },
       { label: 'Lightweight build' },
@@ -1007,7 +1011,8 @@ export const PRODUCTS: Product[] = [
         color: 'Black',
         colorHex: '#212121',
         images: [
-          'ad7729f3-7113-4021-9c36-07633a90a000',
+          // 'ad7729f3-7113-4021-9c36-07633a90a000',
+          '75fb21d6-0bb3-43d8-d8ac-1847058e1000',
           '2c808313-bfe2-44f3-2f34-2a9534dd2b00',
           '721e5319-7f6c-4790-ccf6-e9bc88e3a500',
           '50f8c1d8-4baf-42fa-e194-124c91c74300',
@@ -1178,7 +1183,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['fdda0c0f-00f4-4fc6-b658-febca194d000'],
+    images: ['345f35b6-e5e0-4daf-f198-be669a233d00'],
     features: [
       { label: 'Dedicated laptop compartment' },
       { label: 'Spacious main compartment' },
@@ -1196,7 +1201,9 @@ export const PRODUCTS: Product[] = [
         color: 'Sage Mist',
         colorHex: '#B4BCAC',
         images: [
-          '9e6f593b-a719-4c1a-4f1b-cb0c845ac500',
+          // '9e6f593b-a719-4c1a-4f1b-cb0c845ac500',
+          // 'fdda0c0f-00f4-4fc6-b658-febca194d000',
+          '345f35b6-e5e0-4daf-f198-be669a233d00',
           '0c71e008-67e4-446b-6c99-a789ec0e0d00',
           '16a52c46-dfac-4afd-3848-626cc29c0f00',
         ],
@@ -1292,7 +1299,8 @@ export const PRODUCTS: Product[] = [
     images: [
       // 'a546bc30-7f2f-4b64-2c60-afe7c18cd500',
       // 'acbb1811-cbd1-4496-9e85-cad771ad4d00',
-      '2746633d-7f90-44eb-961f-aecc37f59e00',
+      // '2746633d-7f90-44eb-961f-aecc37f59e00',
+      '3d8c2c89-dcfc-44ec-b258-5c05a6801900',
       '45538b81-1170-40a2-cbc5-8f0cee2c3200',
     ],
     features: [
@@ -1383,7 +1391,7 @@ export const PRODUCTS: Product[] = [
     images: [
       // '89b97949-0415-4659-15c9-64ab4156a400',
       // 'c9d701b2-8947-4f3b-8877-d745394d0300',
-      '4ed12dc1-e030-4fca-09db-22f80ccac000',
+      'd0be3c23-3ba1-4408-bc59-cc34bbd65c00',
       '56b911b3-1fb1-45f6-196c-27e3cf0dc900',
       '3c7f26af-0a00-4469-105e-d5e590b46500',
     ],
@@ -1475,7 +1483,8 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       // '532c64d2-a645-483a-c4c6-4c8355ee3900',
-      'beab3f89-3f3a-45f0-39c8-28bad5f52500',
+      // 'beab3f89-3f3a-45f0-39c8-28bad5f52500',
+      'edbf88ca-e887-4b1d-fff9-d4a20653f300',
       '5503751e-09f3-4712-6ab6-ef7981273600',
     ],
     features: [
@@ -1535,7 +1544,7 @@ export const PRODUCTS: Product[] = [
       '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images: [
       // 'f14c65cb-42c9-4a16-f53e-72b9d334d000',
-      'dc942d7e-3134-4857-cfb8-22e21e8cbc00',
+      'daa285c7-588a-4af9-bb72-6a6a39656c00',
       '36351ce5-e009-4f94-0847-b4cd6ed3fd00',
     ],
     features: [
@@ -1605,7 +1614,8 @@ export const PRODUCTS: Product[] = [
     // any cloud name via its full-URL transform-injection path.
     images: [
       // 'da2d28a6-1033-4ae4-5eb8-2d6d6a702500',
-      '70c2289a-fa5f-44f0-f7ab-be0bbf095200',
+      // '70c2289a-fa5f-44f0-f7ab-be0bbf095200',
+      '34e089e1-937e-40a6-34d9-1cead50c0f00',
       'ca2fbe2c-2dee-4a1b-5370-2fad114ff000',
       'dbc3eca9-b03a-4e06-0377-6ee35558cb00',
       'e46d161f-862f-4698-924c-1fcc9bd09200',
@@ -1671,7 +1681,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['31d9e1bb-89ee-4bd6-7236-9035e6b68c00'],
+    images: ['81dfb62c-c97a-4318-5225-9a8348f8a000'],
     features: [
       { label: 'Smooth rolling spinner wheels' },
       { label: 'Strong bearing capacity' },
@@ -1689,7 +1699,9 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          'c319e66f-b873-43f4-182b-e42f28195100',
+          // 'c319e66f-b873-43f4-182b-e42f28195100',
+          // 'd8c8d4ca-72d4-4e8e-5472-69750f93ae00',
+          '81dfb62c-c97a-4318-5225-9a8348f8a000',
           '75d1a61d-78a9-49da-94a3-37eeb31da400',
           '8ab788d9-c71b-41b9-fc57-8e4b95559a00',
           'a2c0f7e8-56ff-4508-d581-7331f5110d00',
@@ -1781,7 +1793,8 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          '0269dd46-6db0-4865-1cd2-d2a28bea9800',
+          // '0269dd46-6db0-4865-1cd2-d2a28bea9800',
+          '31497826-4729-4374-769c-679b65837d00',
         ],
         sizes: [
           { size: 'Set of 3', price: 11499, stock: 15 },
@@ -1843,7 +1856,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['c2cb6254-efef-4044-4848-636e2adaeb00'],
+    images: ['b3231914-8363-41d9-bf8b-a126a7e40800'],
     features: [
       { label: '360° silent spinner wheels' },
       { label: 'Combination lock' },
@@ -1862,7 +1875,8 @@ export const PRODUCTS: Product[] = [
         // account's credit limit is exhausted.
         images: [
           // 'c2cb6254-efef-4044-4848-636e2adaeb00',
-          '0cd7a434-6f5e-4109-9e4f-68c6cb868a00',
+          // '0cd7a434-6f5e-4109-9e4f-68c6cb868a00',
+          'b3231914-8363-41d9-bf8b-a126a7e40800',
           '11656b9a-b790-43e6-fa42-ca6d7142bf00',
         ],
         sizes: [
@@ -1949,7 +1963,7 @@ export const PRODUCTS: Product[] = [
         a: 'Yes. Each StrataLux size is available on its own. The set simply prices the three together and guarantees a matched batch and finish.',
       },
     ],
-    images: ['efd3389a-9f70-463a-f9a5-6d4be00f7100'],
+    images: ['de5e9525-f884-4848-a188-267d47786a00'],
     features: [
       { label: '20", 24" & 28" included' },
       { label: '360° silent spinner wheels' },
@@ -1965,7 +1979,8 @@ export const PRODUCTS: Product[] = [
         // Hosted on a separate Cloudinary account (deh394y0h) — the primary
         // account's credit limit is exhausted.
         images: [
-          '488989e4-42af-412a-df1d-7d8d69d15c00',
+          // '488989e4-42af-412a-df1d-7d8d69d15c00',
+          'de5e9525-f884-4848-a188-267d47786a00',
         ],
         sizes: [
           { size: 'Set of 3', price: 11500, stock: 15 },
@@ -2032,7 +2047,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['d8b5d081-b516-4dbd-260c-86b0fb659f00','3051c79d-1359-4f89-66d2-e446d95a4b00'],
+    images: ['8f00eedc-747a-4f86-37ce-caa373873200','3051c79d-1359-4f89-66d2-e446d95a4b00'],
     features: [
       { label: 'Secure combination lock' },
       { label: 'Hard shell construction' },
@@ -2107,7 +2122,7 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       // '543255a6-680c-415c-4362-50cd1864d900',
-      '31369ef4-73df-4f4f-8a14-ae813e989300',
+      '16e56d78-9af6-4679-951c-6df9bd6f4900',
       '5abd5975-806b-41d5-7d24-9e02251e0300',
     ],
     features: [
@@ -2182,7 +2197,7 @@ export const PRODUCTS: Product[] = [
     // account's credit limit is exhausted.
     images: [
       // '97c1e757-4391-4b32-9741-527e449e8300',
-      '619df2c3-8ae2-4c44-862d-d046ee052b00',
+      'db472c90-8b0f-4066-b4d3-2c80ca653900',
       'bf5245a9-9816-4d9c-434c-87b7307bb300',
       '221575ce-07d4-47d1-20cf-70c5df26d300',
       '65e0463f-3965-484a-1414-0708842ef200',
@@ -2268,7 +2283,8 @@ export const PRODUCTS: Product[] = [
       '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images:      [
       // '0c421c25-1388-4c8a-53b2-31cd936eae00',
-      '59c6ce9b-9be1-4e7f-65ad-e0b1c17acd00',
+      // 'c9c1474d-8c7c-4bfd-84a0-9e2beb99b300',
+      '2f030631-195c-4803-a297-c6f157b07000',
       '6b6b0465-9b1a-4817-baa6-a859f69f2800'
     ],
     features: [
@@ -2333,7 +2349,8 @@ export const PRODUCTS: Product[] = [
       '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images: [
       // '0958137c-54cd-499d-d45d-ab87f2b07c00',
-      '92a462b9-9f70-478a-9665-9ac7dae1d200',
+      // '92a462b9-9f70-478a-9665-9ac7dae1d200',
+      'e22ab8d1-dd65-4960-0c14-ba9d76bc7e00',
 
       '47e4411d-b608-4680-d934-dbd07a2dce00',
       'ef16d565-78ca-4df9-3bb8-0698584cb400',
@@ -2353,7 +2370,9 @@ export const PRODUCTS: Product[] = [
         colorHex: '#FAFAFA',
         // First pic is the current shared image; append real per-color shots after it
         images: [
-          '0958137c-54cd-499d-d45d-ab87f2b07c00',
+          // '0958137c-54cd-499d-d45d-ab87f2b07c00',
+          // '92a462b9-9f70-478a-9665-9ac7dae1d200',
+          'e22ab8d1-dd65-4960-0c14-ba9d76bc7e00',
         ],
         sizes: [
           { size: 'One Size', price: 1999, stock: 30 },
@@ -2436,8 +2455,8 @@ export const PRODUCTS: Product[] = [
     warranty:
       '3-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images: [
-      'e3e83d93-83b2-4825-1403-b58ad741cc00',
-      'e3e83d93-83b2-4825-1403-b58ad741cc00',
+      '6042b663-f22f-483e-61fb-ed9d250b0400',
+      '6042b663-f22f-483e-61fb-ed9d250b0400',
     ],
     features: [
       { label: 'Hard shell protection' },
@@ -2519,7 +2538,8 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       // '10980eca-8d23-488a-70d9-0fa3f1797100',
-      'f57afb4d-bba5-481b-2da1-a204b5924600',
+      // 'f57afb4d-bba5-481b-2da1-a204b5924600',
+      'afc002bb-bb5c-468f-9ea6-8858cbfc2300',
       'dac9006e-f906-4e5f-c5a7-1a4658002a00',
     ],
     features: [
@@ -2595,7 +2615,8 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       // '6c725469-47bb-469c-a9d3-293921ff6400',
-      '3c187840-325d-4076-8168-cf87c926f400'
+      // '3c187840-325d-4076-8168-cf87c926f400',
+      '9bc58c00-4e4f-46c4-d656-e41a00dad400'
 
     ],
     features: [
@@ -2662,7 +2683,8 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       // '69f2e18a-3e6f-49cc-a4d8-603445faf800',
-      '15eeffee-0747-4449-9479-658e51bc8e00',
+      // '15eeffee-0747-4449-9479-658e51bc8e00',
+      'ce748139-00e8-4338-c685-87ba23cd8100',
       'f18adae4-1c3e-46d4-dfb2-66c1c31aad00',
     ],
     features: [
@@ -2740,7 +2762,8 @@ export const PRODUCTS: Product[] = [
     ],
     images: [
       // 'e41e9ccf-2de0-4ae9-0f2f-85359636c400',
-      '578abe9b-91f6-4a83-e684-bdd4cdc54100',
+      // '578abe9b-91f6-4a83-e684-bdd4cdc54100',
+      '3a57ef31-7bff-4e6d-480a-35c45acd8800',
     ],
     features: [
       { label: '20", 24" & 28" included' },
@@ -2802,7 +2825,8 @@ export const PRODUCTS: Product[] = [
       '1-year warranty covering manufacturing defects in the shell panel, fabric, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images:      [
       // '0caedf5f-e860-40a0-815d-948cb8b39200',
-      '84b25074-a05f-4498-c0bd-d4d058ed7500',
+      // '84b25074-a05f-4498-c0bd-d4d058ed7500',
+      'e5b94864-6080-40d7-6503-42955e4e6400',
       'ff0b7372-c6a8-468f-9529-6619cf26cb00',
       'c51b7c0b-34d5-415c-e0b4-0cc22aac3d00',
       '2ef2f8b2-ed27-4506-c42f-baf0cc755a00',
@@ -2881,7 +2905,8 @@ export const PRODUCTS: Product[] = [
     isFeatured:    false,
     hideSizeGuide: true,
     images:      [
-      'a5ccbbef-2417-4573-e888-c182e7d53d00',
+      // 'a5ccbbef-2417-4573-e888-c182e7d53d00',
+      'bca81ad1-f91d-4b18-44ef-792158c64000',
       'd16b5604-3187-4f10-cfb3-bd1c421de100',
       '25ff7296-3e45-40e0-ddd3-42d389b01700',
       'c1a221a5-6704-4f3d-6f56-03edec8fde00'
@@ -2959,7 +2984,8 @@ export const PRODUCTS: Product[] = [
       '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     isFeatured:  false,
     images:      [
-      '55a02349-ecaa-4128-be29-4d6c23fa5300','7cc12e6c-b3a5-4f40-304b-11b86b5b4900',],
+      // '55a02349-ecaa-4128-be29-4d6c23fa5300',
+      '55d2b221-09fb-49e5-2b19-849358b13100','7cc12e6c-b3a5-4f40-304b-11b86b5b4900',],
     features: [
       { label: 'Front-access laptop compartment' },
       { label: '360° silent spinner wheels' },
@@ -3019,11 +3045,13 @@ export const PRODUCTS: Product[] = [
     isFeatured:    false,
     hideSizeGuide: true,
     images:      [
+      // '59c762ab-3279-42b4-06f2-3da24c835000',
+      // '71f6c275-b8dc-4bfa-e029-a02d7526df00',
+      '1b6dbfbf-7c30-4541-d3d0-d1a89096c700',
       '27ef456d-7db1-4739-f5e8-37d041ba2b00',
-      '59c762ab-3279-42b4-06f2-3da24c835000',
       'af2eb3af-bcd8-4c1a-17fd-9a39ccbf9d00',
       '0565729b-6d35-471d-d477-bad92a1a6200'
-      
+
     ],
     features: [
       { label: 'Hard-shell V-pattern finish' },
@@ -3036,13 +3064,13 @@ export const PRODUCTS: Product[] = [
     ],
     variants: [
       {
-        color:    'Silver',
-        colorHex: '#BDBDBD',
+        color:    'Rose Gold',
+        colorHex: '#B76E79',
         sizes: [{ size: '9 Inch', price: 2999, stock: 50 }],
       },
       {
-        color:    'Rose Gold',
-        colorHex: '#B76E79',
+        color:    'Silver',
+        colorHex: '#BDBDBD',
         sizes: [{ size: '9 Inch', price: 2999, stock: 50 }],
       },
       {
@@ -3093,12 +3121,12 @@ export const PRODUCTS: Product[] = [
     isFeatured:    false,
     hideSizeGuide: true,
     images:      [
+      // '29b5c294-a115-4003-aed6-c7e218c1ed00',
+      'e516c9ca-e168-4959-fd02-2a1557f2c800',
       '35fd5fe2-b859-47e7-7fb6-8eb9514fe200',
-      '29b5c294-a115-4003-aed6-c7e218c1ed00',
-      
       '2b00a5a4-6dfc-42ae-d442-38b109f42300',
-      
-      
+
+
     ],
     features: [
       { label: '360° hard-shell protection' },
@@ -3110,15 +3138,15 @@ export const PRODUCTS: Product[] = [
       { label: 'Smooth zipper & wear resistant' },
     ],
     variants: [
-      
-      {
-        color:    'Metallic Grey',
-        colorHex: '#757575',
-        sizes: [{ size: '12 Inch', price: 1999, stock: 50 }],
-      },
+
       {
         color:    'Turquoise Blue',
         colorHex: '#00B0C8',
+        sizes: [{ size: '12 Inch', price: 1999, stock: 50 }],
+      },
+      {
+        color:    'Metallic Grey',
+        colorHex: '#757575',
         sizes: [{ size: '12 Inch', price: 1999, stock: 50 }],
       },
       {
@@ -3162,7 +3190,8 @@ export const PRODUCTS: Product[] = [
     isFeatured:    false,
     hideSizeGuide: true,
     images:      [
-      '7565b2dc-b8da-4ce3-c7ae-ad78f2676200',
+      // '7565b2dc-b8da-4ce3-c7ae-ad78f2676200',
+      '10440239-3b1f-4614-2866-4fa0bd9e5c00',
       '758aabe0-e3d2-4516-eaa7-582ba635f400','73f15220-c48d-4940-ed6c-172c8b0fbf00',
       '7553169b-0eae-4014-9ce3-5cbb8871d700'
     ],
@@ -3194,6 +3223,523 @@ export const PRODUCTS: Product[] = [
         color:    'Black',
         colorHex: '#212121',
         sizes: [{ size: '9 Inch', price: 1999, stock: 50 }],
+      },
+    ],
+  },
+
+  // ── AeroPop ──────────────────────────────────────────────────────────────
+  {
+    id: 'aeropop',
+    metaTitle: 'AeroPop Hard-Shell Spinner Trolley — 20-inch Cabin Luggage',
+    metaDescription: 'A colour-blocked 20-inch hard-shell spinner trolley with 360° wheels and a combination lock, built for cabin travel.',
+    keywords: ['20 inch cabin trolley', 'hard shell spinner suitcase', 'colour block luggage', 'combination lock trolley bag', 'lightweight cabin luggage'],
+    name: 'AeroPop',
+    slug: 'aeropop',
+    category: 'trolley',
+    isFeatured: true,
+    description:
+      'A colour-blocked hard-shell spinner trolley sized for the cabin. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice for short trips.',
+    specs: [
+      { label: 'Shell',      value: 'Hard shell ABS' },
+      { label: 'Size (20″)', value: 'Cabin-friendly dimensions · lightweight build' },
+      { label: 'Lock',       value: '3-digit combination lock' },
+      { label: 'Wheels',     value: '360° spinner wheels' },
+      { label: 'Handle',     value: 'Telescopic handle' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      'c60a22e0-ca0b-434a-05db-42e14b160e00',
+    ],
+    features: [
+      { label: '360° spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Hard shell ABS' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Citrine Blue',
+        colorHex: '#F2C230',
+        bodyHex: '#1B39B4',
+        sizes: [
+          { size: 'Cabin', price: 2999, stock: 30 },
+        ],
+      },
+    ],
+  },
+
+  // ── Ridge20 ──────────────────────────────────────────────────────────────
+  {
+    id: 'ridge20',
+    metaTitle: 'Louis Polo Ridge20 Hard-Shell Spinner Suitcase — 20-inch',
+    metaDescription: 'A 20-inch hard-shell spinner suitcase with a ribbed shell, 360° wheels, and a combination lock, built for cabin travel.',
+    keywords: ['20 inch cabin suitcase', 'hard shell spinner suitcase', 'ribbed shell luggage', 'combination lock trolley bag', 'lightweight cabin luggage'],
+    name: 'Ridge20',
+    slug: 'ridge20',
+    category: 'trolley',
+    isFeatured: true,
+    description:
+      'A ribbed hard-shell spinner suitcase sized for the cabin. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice for short trips.',
+    specs: [
+      { label: 'Shell',      value: 'Hard shell ABS, ribbed finish' },
+      { label: 'Size (20″)', value: 'Cabin-friendly dimensions · lightweight build' },
+      { label: 'Lock',       value: '3-digit combination lock' },
+      { label: 'Wheels',     value: '360° spinner wheels' },
+      { label: 'Handle',     value: 'Telescopic handle' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      '3358f3b8-1304-4617-c99c-23bc85a8e800',
+    ],
+    features: [
+      { label: '360° spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Hard shell ABS' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Amber Orange',
+        colorHex: '#E08423',
+        sizes: [
+          { size: 'Cabin', price: 2999, stock: 30 },
+        ],
+      },
+    ],
+  },
+
+  // ── GripTrunk ────────────────────────────────────────────────────────────
+  {
+    id: 'griptrunk',
+    metaTitle: 'Louis Polo GripTrunk Hard-Shell Spinner Suitcase — 20-inch',
+    metaDescription: 'A 20-inch hard-shell spinner suitcase with a reinforced side grip handle, 360° wheels, and a combination lock, built for cabin travel.',
+    keywords: ['20 inch cabin suitcase', 'hard shell spinner suitcase', 'side grip handle luggage', 'combination lock trolley bag', 'lightweight cabin luggage'],
+    name: 'GripTrunk',
+    slug: 'griptrunk',
+    category: 'trolley',
+    isFeatured: true,
+    description:
+      'A hard-shell spinner suitcase sized for the cabin, with a reinforced side grip handle for lifting into overhead bins. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice for short trips.',
+    specs: [
+      { label: 'Shell',      value: 'Hard shell ABS, ribbed finish' },
+      { label: 'Size (20″)', value: 'Cabin-friendly dimensions · lightweight build' },
+      { label: 'Lock',       value: '3-digit combination lock' },
+      { label: 'Wheels',     value: '360° spinner wheels' },
+      { label: 'Handle',     value: 'Telescopic handle + reinforced side grip' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      '5418ffdf-afa1-456e-690a-aaeb1f147b00',
+    ],
+    features: [
+      { label: '360° spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Reinforced side grip handle' },
+      { label: 'Telescopic handle' },
+      { label: 'Hard shell ABS' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Crimson Red',
+        colorHex: '#C62828',
+        sizes: [
+          { size: 'Cabin', price: 2999, stock: 30 },
+        ],
+      },
+    ],
+  },
+
+  // ── POPShell ─────────────────────────────────────────────────────────────
+  {
+    id: 'popshell',
+    metaTitle: 'Louis Polo POPShell Hard-Shell Spinner Suitcase — 20-inch',
+    metaDescription: 'A 20-inch hard-shell spinner suitcase with a bold printed graphic front panel, 360° wheels, and a combination lock, built for cabin travel.',
+    keywords: ['20 inch cabin suitcase', 'printed hard shell suitcase', 'graphic print luggage', 'combination lock trolley bag', 'lightweight cabin luggage'],
+    name: 'POPShell',
+    slug: 'popshell',
+    category: 'trolley',
+    isFeatured: true,
+    description:
+      'A hard-shell spinner suitcase sized for the cabin, finished with a bold printed graphic front panel that stands out on any carousel. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice for short trips.',
+    specs: [
+      { label: 'Shell',      value: 'Hard shell ABS, printed graphic panel' },
+      { label: 'Size (20″)', value: 'Cabin-friendly dimensions · lightweight build' },
+      { label: 'Lock',       value: '3-digit combination lock' },
+      { label: 'Wheels',     value: '360° spinner wheels' },
+      { label: 'Handle',     value: 'Telescopic handle' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      '3c0ed2b3-53d5-470b-9f6a-2752ad26d800',
+    ],
+    features: [
+      { label: '360° spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Bold printed graphic panel' },
+      { label: 'Telescopic handle' },
+      { label: 'Hard shell ABS' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Pop Red',
+        colorHex: '#D8342A',
+        sizes: [
+          { size: 'Cabin', price: 2999, stock: 30 },
+        ],
+      },
+    ],
+  },
+
+  // ── POPShell Set of 3 ────────────────────────────────────────────────────
+  {
+    id: 'popshell-set',
+    metaTitle: 'Louis Polo POPShell Hard-Shell Spinner Luggage Set of 3',
+    metaDescription: 'The full POPShell line in one matched set: cabin, 24″, and 28″ hard-shell spinners with a bold printed graphic front panel, 360° wheels, and combination locks.',
+    keywords: ['luggage set of 3 india', 'printed hard shell suitcase set', 'graphic print luggage set', 'combination lock luggage set', 'matched luggage set'],
+    name: 'POPShell Set of 3',
+    slug: 'popshell-set',
+    category: 'set',
+    isFeatured: true,
+    description:
+      '20", 24", and 28" POPShell cases in a matched set, the bold printed graphic panel carried across all three sizes. The complete setup for every kind of trip.',
+    specs: [
+      { label: 'Shell',      value: 'Hard shell ABS, printed graphic panel' },
+      { label: 'Sizes',      value: 'Cabin (20″) · Medium (24″) · Large (28″)' },
+      { label: 'Lock',       value: '3-digit combination lock on each case' },
+      { label: 'Wheels',     value: '360° spinner wheels' },
+      { label: 'Handle',     value: 'Telescopic handle' },
+    ],
+    warranty:
+      '3-year warranty on all three cases, covering manufacturing defects in the shell, wheels, telescopic handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      '96da18fe-8ba7-4bb5-15ec-efc5e5275500',
+    ],
+    features: [
+      { label: '20", 24" & 28" included' },
+      { label: '360° spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Bold printed graphic panel' },
+      { label: 'Telescopic handle' },
+      { label: 'Hard shell ABS' },
+    ],
+    variants: [
+      {
+        color: 'Pop Red',
+        colorHex: '#D8342A',
+        sizes: [
+          { size: 'Set of 3', price: 7999, stock: 15 },
+        ],
+      },
+    ],
+  },
+
+  // ── AeroWeave ────────────────────────────────────────────────────────────
+  {
+    id: 'aeroweave',
+    metaTitle: 'Louis Polo AeroWeave Hard-Shell Spinner Suitcase — 20-inch',
+    metaDescription: 'A 20-inch hard-shell spinner suitcase with a ribbed woven-texture shell, 360° wheels, and a combination lock, built for cabin travel.',
+    keywords: ['20 inch cabin suitcase', 'hard shell spinner suitcase', 'ribbed shell luggage', 'combination lock trolley bag', 'lightweight cabin luggage'],
+    name: 'AeroWeave',
+    slug: 'aeroweave',
+    category: 'trolley',
+    isFeatured: true,
+    description:
+      'A ribbed hard-shell spinner suitcase sized for the cabin. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice for short trips.',
+    specs: [
+      { label: 'Shell',      value: 'Hard shell ABS, ribbed finish' },
+      { label: 'Size (20″)', value: 'Cabin-friendly dimensions · lightweight build' },
+      { label: 'Lock',       value: '3-digit combination lock' },
+      { label: 'Wheels',     value: '360° spinner wheels' },
+      { label: 'Handle',     value: 'Telescopic handle' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      'd9be184e-613e-4435-87fb-2f6a534f5a00',
+    ],
+    features: [
+      { label: '360° spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Hard shell ABS' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Blossom Pink',
+        colorHex: '#E0568C',
+        sizes: [
+          { size: 'Cabin', price: 2999, stock: 30 },
+        ],
+      },
+    ],
+  },
+
+  // ── NexusSpinner ─────────────────────────────────────────────────────────
+  {
+    id: 'nexusspinner',
+    metaTitle: 'Louis Polo NexusSpinner Hard-Shell Spinner Suitcase — 20-inch',
+    metaDescription: 'A 20-inch hard-shell spinner suitcase with a fluted vertical panel shell, 360° wheels, and a combination lock, built for cabin travel.',
+    keywords: ['20 inch cabin suitcase', 'hard shell spinner suitcase', 'fluted shell luggage', 'combination lock trolley bag', 'lightweight cabin luggage'],
+    name: 'NexusSpinner',
+    slug: 'nexusspinner',
+    category: 'trolley',
+    isFeatured: true,
+    description:
+      'A fluted hard-shell spinner suitcase sized for the cabin. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice for short trips.',
+    specs: [
+      { label: 'Shell',      value: 'Hard shell ABS, fluted panel finish' },
+      { label: 'Size (20″)', value: 'Cabin-friendly dimensions · lightweight build' },
+      { label: 'Lock',       value: '3-digit combination lock' },
+      { label: 'Wheels',     value: '360° spinner wheels' },
+      { label: 'Handle',     value: 'Telescopic handle' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      'e399155a-496b-4865-81f4-13664c8acd00',
+    ],
+    features: [
+      { label: '360° spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Hard shell ABS' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Wine Burgundy',
+        colorHex: '#8E1C3E',
+        sizes: [
+          { size: 'Cabin', price: 2999, stock: 30 },
+        ],
+      },
+    ],
+  },
+
+  // ── Zephyr ───────────────────────────────────────────────────────────────
+  {
+    id: 'zephyr',
+    metaTitle: 'Louis Polo Zephyr Hard-Shell Spinner Suitcase — 20-inch',
+    metaDescription: 'A 20-inch hard-shell spinner suitcase with a diagonal-line embossed shell, 360° wheels, and a combination lock, built for cabin travel.',
+    keywords: ['20 inch cabin suitcase', 'hard shell spinner suitcase', 'embossed shell luggage', 'combination lock trolley bag', 'lightweight cabin luggage'],
+    name: 'Zephyr',
+    slug: 'zephyr',
+    category: 'trolley',
+    isFeatured: true,
+    description:
+      'A diagonally embossed hard-shell spinner suitcase sized for the cabin. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice for short trips.',
+    specs: [
+      { label: 'Shell',      value: 'Hard shell ABS, diagonal embossed finish' },
+      { label: 'Size (20″)', value: 'Cabin-friendly dimensions · lightweight build' },
+      { label: 'Lock',       value: '3-digit combination lock' },
+      { label: 'Wheels',     value: '360° spinner wheels' },
+      { label: 'Handle',     value: 'Telescopic handle' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      '6497fd67-f44a-487f-30cf-07073e36d400',
+    ],
+    features: [
+      { label: '360° spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Hard shell ABS' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Mint Green',
+        colorHex: '#8FD9C4',
+        sizes: [
+          { size: 'Cabin', price: 2999, stock: 30 },
+        ],
+      },
+    ],
+  },
+
+  // ── Edge16 ───────────────────────────────────────────────────────────────
+  {
+    id: 'edge16',
+    metaTitle: 'Louis Polo Edge16 Hard-Shell Spinner Suitcase — 16-inch',
+    metaDescription: 'A compact 16-inch hard-shell spinner suitcase with a staggered ribbed shell, 360° wheels, and a combination lock, built for quick trips.',
+    keywords: ['16 inch cabin suitcase', 'compact hard shell suitcase', 'small spinner suitcase', 'combination lock trolley bag', 'lightweight travel case'],
+    name: 'Edge16',
+    slug: 'edge16',
+    category: 'trolley',
+    isFeatured: true,
+    hideSizeGuide: true,
+    description:
+      'A compact hard-shell spinner suitcase with a staggered ribbed shell, sized for quick overnight trips. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice whenever you are packing light.',
+    specs: [
+      { label: 'Shell',      value: 'Hard shell ABS, staggered ribbed finish' },
+      { label: 'Size (16″)', value: 'Compact cabin-friendly dimensions · lightweight build' },
+      { label: 'Lock',       value: '3-digit combination lock' },
+      { label: 'Wheels',     value: '360° spinner wheels' },
+      { label: 'Handle',     value: 'Telescopic handle' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      '74345c2c-f998-4a4b-7340-c166a761bb00',
+    ],
+    features: [
+      { label: '360° spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Hard shell ABS' },
+      { label: 'Lightweight, compact build' },
+    ],
+    variants: [
+      {
+        color: 'Silver',
+        colorHex: '#B0B4B8',
+        accentColor: 'Orange zip',
+        sizes: [
+          { size: '16 Inch', price: 2599, stock: 30 },
+        ],
+      },
+    ],
+  },
+
+  // ── AeroSmart Pro ────────────────────────────────────────────────────────
+  {
+    id: 'aerosmart-pro',
+    imageFit: 'cover',
+    metaTitle: 'AeroSmart Pro Cabin Trolley with Attached Companion Case',
+    metaDescription: 'The premium AeroSmart, a ribbed metal-finish shell with leather-trimmed accents and a detachable companion case, combination lock, and 360° spinner wheels.',
+    keywords: ['premium cabin trolley', 'leather trim hard shell suitcase', 'trolley with detachable case', 'combination lock trolley bag', '360 spinner wheel cabin bag'],
+    name: 'AeroSmart Pro',
+    slug: 'aerosmart-pro',
+    category: 'trolley',
+    tag: 'Flagship',
+    isFeatured: true,
+    mrp: 12990,
+    description:
+      'The most premium case in the AeroSmart line. A ribbed metal-finish shell with leather-trimmed edges, paired with a detachable companion case for the things you want closest at hand.',
+    story: [
+      'AeroSmart Pro takes the line\'s three-way access idea and finishes it in materials built for the front of the queue: a brushed metallic shell with genuine leather trim at every edge, and a detachable companion case that clips on for the walk through the terminal and off again at the hotel.',
+      'Underneath the finish it runs on the same fundamentals as every AeroSmart: a polycarbonate and ABS shell, cross-compression straps, an integrated combination lock, and 360° spinner wheels.',
+    ],
+    highlights: [
+      {
+        heading: 'A companion case, not an afterthought',
+        body: 'The detachable case clips to the main shell for transit and comes free for the plane, the meeting, or the hotel gym.',
+      },
+      {
+        heading: 'Leather where it is felt',
+        body: 'Leather-trimmed edges and a leather top handle bring a tactile finish to a hard-shell case, without giving up any of the protection.',
+      },
+      {
+        heading: 'Built to be handled badly',
+        body: 'A polycarbonate and ABS shell with reinforced corners takes the impacts so your things don\'t have to. A combination lock keeps the main cabin sealed between check-ins.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',        value: 'Polycarbonate + ABS, ribbed metallic finish' },
+      { label: 'Cabin (20″)',  value: '57.5 × 38 × 26 cm · approx. 3.6 kg' },
+      { label: 'Trim',         value: 'Leather-trimmed edges and top handle' },
+      { label: 'Companion',    value: 'Detachable companion case' },
+      { label: 'Lock',         value: '3-digit combination lock' },
+      { label: 'Wheels',       value: '360° spinner wheels' },
+      { label: 'Handle',       value: 'Multi-stage telescopic' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      'd886cfeb-32a7-4449-9c6c-f3c6072b4e00',
+    ],
+    features: [
+      { label: 'Detachable companion case' },
+      { label: 'Leather-trimmed edges' },
+      { label: '360° spinner wheels' },
+      { label: 'Hard shell ABS' },
+      { label: 'Multi-stage telescopic handle' },
+      { label: 'Combination lock' },
+      { label: 'Cross packing straps' },
+    ],
+    variants: [
+      {
+        color: 'Silver',
+        colorHex: '#B0B4B8',
+        accentColor: 'Tan leather trim',
+        sizes: [
+          { size: 'Cabin', price: 8990, stock: 25 },
+        ],
+      },
+    ],
+  },
+
+  // ── AeroSmart Gloss ──────────────────────────────────────────────────────
+  {
+    id: 'aerosmart-gloss',
+    imageFit: 'cover',
+    metaTitle: 'AeroSmart Gloss Cabin Trolley with Attached Companion Case',
+    metaDescription: 'A glossy polycarbonate ribbed shell trolley with a detachable companion case, combination lock, and 360° spinner wheels.',
+    keywords: ['glossy hard shell suitcase', 'polycarbonate cabin trolley', 'trolley with detachable case', 'combination lock trolley bag', '360 spinner wheel cabin bag'],
+    name: 'AeroSmart Gloss',
+    slug: 'aerosmart-gloss',
+    category: 'trolley',
+    isFeatured: true,
+    mrp: 10990,
+    description:
+      'A high-shine polycarbonate finish on the AeroSmart\'s ribbed shell, paired with a detachable companion case for the things you want closest at hand.',
+    story: [
+      'AeroSmart Gloss keeps the line\'s three-way access idea and finishes the shell in a mirror-polished polycarbonate that catches the light across any terminal. A detachable companion case clips on for transit and comes free wherever it is needed next.',
+      'Underneath the finish it runs on the same fundamentals as every AeroSmart: a polycarbonate and ABS shell, cross-compression straps, an integrated combination lock, and 360° spinner wheels.',
+    ],
+    highlights: [
+      {
+        heading: 'A companion case, not an afterthought',
+        body: 'The detachable case clips to the main shell for transit and comes free for the plane, the meeting, or the hotel gym.',
+      },
+      {
+        heading: 'A finish that catches the light',
+        body: 'The high-gloss polycarbonate shell reads sharp and modern, a clean alternative to the brand\'s matte-finish cases.',
+      },
+      {
+        heading: 'Built to be handled badly',
+        body: 'A polycarbonate and ABS shell with reinforced corners takes the impacts so your things don\'t have to. A combination lock keeps the main cabin sealed between check-ins.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',        value: 'Polycarbonate + ABS, high-gloss ribbed finish' },
+      { label: 'Cabin (20″)',  value: '57.5 × 38 × 26 cm · approx. 3.5 kg' },
+      { label: 'Companion',    value: 'Detachable companion case' },
+      { label: 'Lock',         value: '3-digit combination lock' },
+      { label: 'Wheels',       value: '360° spinner wheels' },
+      { label: 'Handle',       value: 'Multi-stage telescopic' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      'ff8154e9-293a-4064-23a6-63e82aad3700',
+    ],
+    features: [
+      { label: 'Detachable companion case' },
+      { label: 'High-gloss polycarbonate shell' },
+      { label: '360° spinner wheels' },
+      { label: 'Hard shell ABS' },
+      { label: 'Multi-stage telescopic handle' },
+      { label: 'Combination lock' },
+      { label: 'Cross packing straps' },
+    ],
+    variants: [
+      {
+        color: 'Silver',
+        colorHex: '#B0B4B8',
+        sizes: [
+          { size: 'Cabin', price: 6990, stock: 25 },
+        ],
       },
     ],
   },

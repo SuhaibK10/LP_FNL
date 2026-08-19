@@ -122,7 +122,7 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
         />
         {/* Myntra Exclusive badge */}
         {myntra && (
-          <span className="absolute top-3 left-3 z-10 flex items-center justify-center backdrop-blur-sm rounded-full p-1.5 border border-[#5B6670]/60">
+          <span className="absolute top-3 left-3 z-10 flex items-center justify-center rounded-full p-1.5 bg-white border border-[#5B6670]/25 shadow-sm">
             <Image src="/myntra-m.png" alt="Myntra" width={13} height={11} unoptimized />
           </span>
         )}
@@ -458,6 +458,7 @@ export function BestSellersCarousel() {
           dragConstraints={{ left: -dragWidth, right: 0 }}
           dragElastic={0.05}
           dragMomentum={true}
+          dragTransition={{ power: 1.2, timeConstant: 250 }}
           className="flex gap-4 md:gap-6 pl-[max(1.25rem,calc((100vw-88rem)/2+4rem))] pr-6 cursor-grab active:cursor-grabbing select-none"
           style={{ WebkitUserSelect: 'none' }}
           whileTap={{ cursor: 'grabbing' }}

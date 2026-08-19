@@ -153,10 +153,10 @@ export function ProductInfo({ product, defaultColor, onColorChange, onColorHover
           </p>
           <div className="flex items-center gap-3">
             {myntraSizeRating?.rating ? (
-              <span className="flex items-center gap-1 font-body font-medium text-[0.78rem] text-[var(--color-lp-ink)]">
-                <Star size={13} strokeWidth={0} className="fill-[#5B6670]" />
+              <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 font-body font-bold text-[0.8rem] text-lp-ink bg-lp-gold/15 border border-lp-gold/40">
+                <Star size={13} strokeWidth={0} className="fill-lp-gold" />
                 {myntraSizeRating.rating.toFixed(1)}
-                <span className="text-[var(--color-lp-muted)]">({myntraSizeRating.ratingCount} ratings)</span>
+                <span className="font-medium opacity-70">({myntraSizeRating.ratingCount} ratings)</span>
               </span>
             ) : null}
             <span className="font-body font-semibold text-[0.7rem] tracking-[0.09em] uppercase text-[var(--color-lp-muted)]">

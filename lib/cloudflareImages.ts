@@ -54,7 +54,7 @@ export type ImageFit = 'pad' | 'cover'
 const fitParams = (fit: ImageFit, w: number, h: number) =>
   fit === 'cover'
     ? `w=${w},h=${h},fit=cover,gravity=auto`
-    : `w=${w},h=${h},fit=pad,background=%23D4D4CC`
+    : `w=${w},h=${h},fit=pad`
 
 // Product card thumbnail — 3:4 portrait
 export const cardUrl = (id: string, fit: ImageFit = 'pad') =>

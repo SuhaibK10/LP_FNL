@@ -199,7 +199,7 @@
   .lp-heading-product {
     font-family: var(--font-display);
     font-weight: 400;
-    font-size: clamp(1.0625rem, 1vw + 0.9rem, 1.5rem);   /* ~18px → 24px */
+    font-size: clamp(1.0625rem, 1vw + 0.9rem, 1.4rem);   /* ~18px → 22.4px */
     line-height: 1.07;
     letter-spacing: -0.0125em;
     color: #1C1B19;
