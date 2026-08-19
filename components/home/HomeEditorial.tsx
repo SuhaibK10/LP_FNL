@@ -19,7 +19,7 @@ import { VERTEX_SHOWCASE_HOME_ENABLED, VERTEX_SHOWCASE_HEADER, VERTEX_SHOWCASE_S
 import { ShopByColorPrice }    from './sections/ShopByColorPrice'
 import { SHOP_BY_COLOR_PRICE_HOME_ENABLED } from '@/config/shopByColorPrice'
 
-const INDEPENDENCE_DAY_BANNER_ENABLED = true
+const INDEPENDENCE_DAY_BANNER_ENABLED = false
 
 export function HomeEditorial() {
   return (
