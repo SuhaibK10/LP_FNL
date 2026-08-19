@@ -458,7 +458,7 @@ export function BestSellersCarousel() {
           dragConstraints={{ left: -dragWidth, right: 0 }}
           dragElastic={0.05}
           dragMomentum={true}
-          dragTransition={{ power: 1.2, timeConstant: 250 }}
+          dragTransition={{ power: 0.9, timeConstant: 400 }}
           className="flex gap-4 md:gap-6 pl-[max(1.25rem,calc((100vw-88rem)/2+4rem))] pr-6 cursor-grab active:cursor-grabbing select-none"
           style={{ WebkitUserSelect: 'none' }}
           whileTap={{ cursor: 'grabbing' }}
