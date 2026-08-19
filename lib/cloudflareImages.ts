@@ -88,4 +88,4 @@ export const expoUrl = (id: string) =>
 // separate Cloudflare product from Images, so it isn't re-exported here.
 
 // Placeholder for when no image is uploaded yet
-export const PLACEHOLDER_URL = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800' fill='%23D4D4CC'%3E%3Crect width='600' height='800'/%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='48' fill='%23B99A62' text-anchor='middle' dominant-baseline='middle'%3ELP%3C/text%3E%3C/svg%3E`
+export const PLACEHOLDER_URL = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800' fill='%23BEB7AC'%3E%3Crect width='600' height='800'/%3E%3Ctext x='50%25' y='50%25' font-family='serif' font-size='48' fill='%23B99A62' text-anchor='middle' dominant-baseline='middle'%3ELP%3C/text%3E%3C/svg%3E`

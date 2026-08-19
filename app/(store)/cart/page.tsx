@@ -38,7 +38,7 @@ function CartRow({ item }: { item: CartItem }) {
     >
       {/* Image */}
       <Link href={`${ROUTES.shop}/${item.productSlug}`} className="flex-shrink-0">
-        <div className="relative w-[72px] h-[96px] bg-[var(--color-lp-porcelain)] overflow-hidden">
+        <div className="relative w-[72px] h-[96px] bg-lp-image-bg overflow-hidden">
           <Image
             src={thumbUrl(item.image, imageFit) || PLACEHOLDER_URL}
             alt={item.productName}

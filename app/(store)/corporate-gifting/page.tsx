@@ -113,7 +113,7 @@ export default function CorporateGiftingPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {SHOWCASE_PRODUCTS.map((product) => (
               <div key={product.id}>
-                <div className="relative aspect-3/4 bg-white rounded-md overflow-hidden mb-3">
+                <div className="relative aspect-3/4 bg-lp-image-bg rounded-md overflow-hidden mb-3">
                   <Image
                     src={cardUrl(product.images[0], product.imageFit)}
                     alt={product.name}

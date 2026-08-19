@@ -323,10 +323,10 @@ export function ProductCard({ product }: ProductCardProps) {
                 disabled={outOfStock}
                 className={
                   outOfStock
-                    ? 'relative font-body text-[0.6rem] px-2 py-0.5 border border-[var(--color-lp-border)] text-[var(--color-lp-faint)] opacity-50 cursor-not-allowed line-through'
+                    ? 'relative font-body text-[0.6rem] md:text-[0.65rem] px-2 py-0.5 md:px-2.5 md:py-1 rounded-md border border-[var(--color-lp-border)] text-[var(--color-lp-faint)] opacity-50 cursor-not-allowed line-through'
                     : isSelected
-                    ? 'font-body text-[0.6rem] px-2 py-0.5 border bg-[var(--color-lp-ink)] text-[var(--color-lp-porcelain)] border-[var(--color-lp-ink)]'
-                    : 'font-body text-[0.6rem] px-2 py-0.5 border border-[var(--color-lp-border)] text-[var(--color-lp-muted)] hover:border-[var(--color-lp-ink)] transition-colors duration-200'
+                    ? 'font-body text-[0.6rem] md:text-[0.65rem] px-2 py-0.5 md:px-2.5 md:py-1 rounded-md border bg-[var(--color-lp-ink)] text-[var(--color-lp-porcelain)] border-[var(--color-lp-ink)]'
+                    : 'font-body text-[0.6rem] md:text-[0.65rem] px-2 py-0.5 md:px-2.5 md:py-1 rounded-md border border-[var(--color-lp-border)] text-[var(--color-lp-muted)] hover:border-[var(--color-lp-ink)] transition-colors duration-200'
                 }
                 aria-pressed={isSelected}
                 aria-label={outOfStock ? `${size}, out of stock` : size}

@@ -57,7 +57,7 @@ export function ComparePageClient({ initialSlugs }: { initialSlugs?: string[] })
         {products.map((product, col) => (
           <div key={col} className={colClass(col, 'pt-2')}>
             <div className="flex flex-col items-center text-center gap-3">
-              <div className="relative w-24 h-32 md:w-32 md:h-42 bg-lp-porcelain">
+              <div className="relative w-24 h-32 md:w-32 md:h-42 bg-lp-image-bg">
                 <Image
                   src={
                     cardUrl(product.images[colorIdx[col]] ?? product.images[0], product.imageFit) ||

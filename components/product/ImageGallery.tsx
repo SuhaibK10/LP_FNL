@@ -176,7 +176,7 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
     <div className="flex flex-col gap-3">
       {/* Main image — drag left/right to slide between images, click (or press and hold on touch) to zoom */}
       <motion.div
-        className="relative aspect-3/4 bg-lp-porcelain overflow-hidden touch-pan-y select-none"
+        className="relative aspect-3/4 bg-lp-image-bg overflow-hidden touch-pan-y select-none"
         style={{ WebkitTouchCallout: 'none', cursor: zoomed ? 'crosshair' : 'zoom-in' }}
         drag={images.length > 1 && !zoomed ? 'x' : false}
         dragConstraints={{ left: 0, right: 0 }}
@@ -254,7 +254,7 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
             <button
               key={i}
               onClick={() => setActive(i)}
-              className={`relative shrink-0 w-16 h-21.25 overflow-hidden bg-lp-porcelain border transition-colors duration-200 ${
+              className={`relative shrink-0 w-16 h-21.25 overflow-hidden bg-lp-image-bg border transition-colors duration-200 ${
                 i === active
                   ? 'border-lp-gold shadow-[inset_0_0_0_1px_var(--color-lp-gold)]'
                   : 'border-lp-border hover:border-lp-border-strong'

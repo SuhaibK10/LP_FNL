@@ -104,7 +104,7 @@ export function SearchOverlay({ open, onClose }: Props) {
                       className="flex items-center gap-4 px-5 py-3.5 hover:bg-[var(--color-lp-cream)] transition-colors group"
                     >
                       {/* Thumbnail */}
-                      <div className="relative w-12 h-12 shrink-0 bg-[var(--color-lp-porcelain)] overflow-hidden">
+                      <div className="relative w-12 h-12 shrink-0 bg-lp-image-bg overflow-hidden">
                         <Image
                           src={thumbUrl(product.images[0], product.imageFit) || PLACEHOLDER_URL}
                           alt={product.name}

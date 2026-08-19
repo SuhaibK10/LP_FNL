@@ -355,7 +355,7 @@ export default function CheckoutPage() {
                       href={`${ROUTES.shop}/${item.productSlug}?color=${encodeURIComponent(item.color)}`}
                       className="group flex flex-1 min-w-0 gap-4 items-center"
                     >
-                      <div className="relative w-14 h-[72px] bg-[var(--color-lp-porcelain)] flex-shrink-0">
+                      <div className="relative w-14 h-[72px] bg-lp-image-bg flex-shrink-0">
                         <Image
                           src={thumbUrl(item.image, PRODUCTS.find(p => p.id === item.productId)?.imageFit) || PLACEHOLDER_URL}
                           alt={item.productName}

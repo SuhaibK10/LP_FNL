@@ -240,8 +240,8 @@ export function Navbar() {
                     key={href}
                     href={href}
                     className={cn(
-                      'relative font-body text-[0.8rem] font-medium tracking-[0.05em] uppercase transition-colors duration-200',
-                      'after:absolute after:bottom-[-3px] after:left-0 after:h-[1.5px] after:bg-lp-ink/45',
+                      'relative font-body text-[0.83rem] font-semibold tracking-[0.06em] uppercase transition-all duration-200 hover:-translate-y-0.5',
+                      'after:absolute after:bottom-[-3px] after:left-0 after:h-[1.5px] after:bg-lp-gold',
                       'after:transition-all after:duration-300',
                       pathname === href
                         ? 'text-lp-ink after:w-full'
@@ -278,7 +278,7 @@ export function Navbar() {
               {/* Corporate Enquiry — desktop only */}
               <Link
                 href={ROUTES.corporateGifting}
-                className={cn('hidden lg:block relative font-body text-[0.8rem] font-medium tracking-[0.05em] uppercase transition-colors duration-200', navTextClass)}
+                className={cn('hidden lg:block relative font-body text-[0.83rem] font-semibold tracking-[0.06em] uppercase transition-all duration-200 hover:-translate-y-0.5', navTextClass)}
               >
                 Corporate Gifting
               </Link>
@@ -295,10 +295,10 @@ export function Navbar() {
                     exit={{ opacity: 0, scale: 0.8 }}
                     transition={{ duration: 0.2 }}
                     onClick={() => setShopDrawerOpen(true)}
-                    className={cn('-m-2 p-2 transition-colors duration-200', navTextClass)}
+                    className={cn('-m-2 p-2 rounded-full transition-all duration-200 hover:scale-110 hover:bg-lp-cream', navTextClass)}
                     aria-label="Open filters"
                   >
-                    <SlidersHorizontal size={19} strokeWidth={1.5} />
+                    <SlidersHorizontal size={20} strokeWidth={1.75} />
                   </motion.button>
                 )}
               </AnimatePresence>
@@ -306,28 +306,28 @@ export function Navbar() {
               {/* Search */}
               <button
                 onClick={() => setSearchOpen(true)}
-                className={cn('-m-2 p-2 transition-colors duration-200', navTextClass)}
+                className={cn('-m-2 p-2 rounded-full transition-all duration-200 hover:scale-110 hover:bg-lp-cream', navTextClass)}
                 aria-label="Search products (⌘K)"
               >
-                <Search size={20} strokeWidth={1.5} />
+                <Search size={21} strokeWidth={1.75} />
               </button>
 
               {/* Account — desktop only */}
               <Link
                 href="/account"
-                className={cn('hidden lg:block -m-2 p-2 transition-colors duration-200', navTextClass)}
+                className={cn('hidden lg:block -m-2 p-2 rounded-full transition-all duration-200 hover:scale-110 hover:bg-lp-cream', navTextClass)}
                 aria-label="My Account"
               >
-                <User size={20} strokeWidth={1.5} />
+                <User size={21} strokeWidth={1.75} />
               </Link>
 
               {/* Wishlist */}
               <Link
                 href={ROUTES.wishlist}
-                className={cn('relative -m-2 p-2 transition-colors duration-200', navTextClass)}
+                className={cn('relative -m-2 p-2 rounded-full transition-all duration-200 hover:scale-110 hover:bg-lp-cream', navTextClass)}
                 aria-label={`Wishlist, ${wishlistCount} items`}
               >
-                <Heart size={20} strokeWidth={1.5} />
+                <Heart size={21} strokeWidth={1.75} />
                 {wishlistCount > 0 && (
                   <motion.span
                     initial={{ scale: 0 }}
@@ -343,10 +343,10 @@ export function Navbar() {
               {/* Cart — desktop only */}
               <Link
                 href={ROUTES.cart}
-                className={cn('relative hidden lg:block -m-2 p-2 transition-colors duration-200', navTextClass)}
+                className={cn('relative hidden lg:block -m-2 p-2 rounded-full transition-all duration-200 hover:scale-110 hover:bg-lp-cream', navTextClass)}
                 aria-label={`Cart, ${cartCount} items`}
               >
-                <ShoppingBag size={20} strokeWidth={1.5} />
+                <ShoppingBag size={21} strokeWidth={1.75} />
                 {cartCount > 0 && (
                   <motion.span
                     initial={{ scale: 0 }}
