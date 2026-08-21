@@ -275,7 +275,7 @@ export const PRODUCTS: Product[] = [
           'afc1d4d5-338a-42b5-890b-aff8e3c3bd00',
         ],
         sizes: [
-          { size: 'Cabin', price: 5999, stock: 30 },
+          { size: 'Cabin', price: 4450, stock: 30 },
         ],
       },
       {
@@ -293,7 +293,7 @@ export const PRODUCTS: Product[] = [
           'ca620cb0-e1ef-48b0-1ddd-f37d55dccb00',
         ],
         sizes: [
-          { size: 'Cabin', price: 5999, stock: 25, sku: '8906206840001-Y-20' },
+          { size: 'Cabin', price: 4450, stock: 25, sku: '8906206840001-Y-20' },
         ],
       },
       {
@@ -309,7 +309,7 @@ export const PRODUCTS: Product[] = [
           '0283bd8e-a5b2-411d-d370-a43838629500',
         ],
         sizes: [
-          { size: 'Cabin', price: 5999, stock: 40, sku: '8906206840001-R-20' },
+          { size: 'Cabin', price: 4450, stock: 40, sku: '8906206840001-R-20' },
         ],
       },
       {
@@ -325,7 +325,7 @@ export const PRODUCTS: Product[] = [
           'a5f3728c-0a8d-472e-3141-02b571377c00',
         ],
         sizes: [
-          { size: 'Cabin', price: 5999, stock: 35, sku: '8906206840001-T-20' },
+          { size: 'Cabin', price: 4450, stock: 35, sku: '8906206840001-T-20' },
         ],
       },
 

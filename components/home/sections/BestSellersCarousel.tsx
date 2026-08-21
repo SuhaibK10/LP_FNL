@@ -10,7 +10,7 @@ import { useRef, useState, useEffect }       from 'react'
 import { createPortal }                      from 'react-dom'
 import Image                                 from 'next/image'
 import Link                                  from 'next/link'
-import { motion, AnimatePresence }           from 'framer-motion'
+import { motion, AnimatePresence, useMotionValue } from 'framer-motion'
 import { ArrowRight, ShoppingBag, Ruler, Heart, Star, ChevronDown, Play, X, Maximize } from 'lucide-react'
 import type { ProductSize }                  from '@/types'
 import { FEATURED_PRODUCTS }                 from '@/config/products'
@@ -495,6 +495,7 @@ export function BestSellersCarousel() {
   const containerRef = useRef<HTMLDivElement>(null)
   const [dragWidth, setDragWidth] = useState(0)
   const [tab, setTab] = useState<Tab>('bestsellers')
+  const x = useMotionValue(0)
 
   const products = tab === 'myntra' ? MYNTRA_FEATURED : NON_MYNTRA_FEATURED
 
@@ -509,6 +510,25 @@ export function BestSellersCarousel() {
     ro.observe(trackRef.current)
     return () => ro.disconnect()
   }, [tab])
+
+  useEffect(() => { x.set(0) }, [tab, x])
+
+  // Trackpad two-finger horizontal swipe fires wheel events with deltaX —
+  // Framer's drag="x" only listens for pointer drag, so we translate wheel
+  // panning into the same motion value by hand. Native listener (not React's
+  // onWheel) so preventDefault actually stops the page from scrolling.
+  useEffect(() => {
+    const el = trackRef.current
+    if (!el) return
+    function onWheel(e: WheelEvent) {
+      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return
+      e.preventDefault()
+      const next = x.get() - e.deltaX
+      x.set(Math.min(0, Math.max(-dragWidth, next)))
+    }
+    el.addEventListener('wheel', onWheel, { passive: false })
+    return () => el.removeEventListener('wheel', onWheel)
+  }, [dragWidth, x])
 
   return (
     <section className="pt-10 md:pt-14 pb-20 md:pb-28 xl:pb-36 overflow-hidden">
@@ -583,12 +603,12 @@ export function BestSellersCarousel() {
           key={tab}
           ref={trackRef}
           drag="x"
+          style={{ x, WebkitUserSelect: 'none' }}
           dragConstraints={{ left: -dragWidth, right: 0 }}
           dragElastic={0.05}
           dragMomentum={true}
           dragTransition={{ power: 0.9, timeConstant: 400 }}
           className="flex gap-4 md:gap-6 pl-[max(1.25rem,calc((100vw-88rem)/2+4rem))] pr-6 cursor-grab active:cursor-grabbing select-none"
-          style={{ WebkitUserSelect: 'none' }}
           whileTap={{ cursor: 'grabbing' }}
         >
           {products.map((product) => (
