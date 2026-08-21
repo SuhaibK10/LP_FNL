@@ -1152,14 +1152,15 @@ export const PRODUCTS: Product[] = [
     // bare public_ids elsewhere; cld() in lib/cloudinary.ts already handles
     // any cloud name via its full-URL transform-injection path.
     images: [
-      // 'da2d28a6-1033-4ae4-5eb8-2d6d6a702500',
-      // '70c2289a-fa5f-44f0-f7ab-be0bbf095200',
-      // '34e089e1-937e-40a6-34d9-1cead50c0f00',
+      // Kept as the lead shot — the shop grid card crops to 3:4, and this is
+      // the only one of the set actually cropped tight to fill that frame;
+      // the rest below are square and would show letterboxed as a thumbnail.
       '1ec02d48-3239-402d-33d1-1a401476b100',
-      'ca2fbe2c-2dee-4a1b-5370-2fad114ff000',
-      'dbc3eca9-b03a-4e06-0377-6ee35558cb00',
-      'e46d161f-862f-4698-924c-1fcc9bd09200',
-      '17bf0573-ca70-43e6-5392-1986cb23d000',
+      '94dd4f3e-e3af-47fe-e4e6-402af94dc600',
+      '04c2d274-849f-4203-324d-5cb2a02d5200',
+      '19e53c9b-80be-4776-f434-e873d3ad2a00',
+      '1c47ad60-2c1a-4c09-80be-6aa0b0670f00',
+      '5aa06941-5299-4a48-09c2-1d8f42b08c00',
     ],
     features: [
       { label: '360° spinner wheels' },
@@ -2984,6 +2985,104 @@ export const PRODUCTS: Product[] = [
         color:    'Black',
         colorHex: '#212121',
         sizes: [{ size: '9 Inch', price: 1230, stock: 50 }],
+      },
+    ],
+  },
+
+  // ── Élan Luxe Cosmetic Travel Case ───────────────────────────────────────
+  {
+    id:            'elan-luxe',
+    imageFit:      'cover',
+    metaTitle: 'Élan Luxe Hard-Shell Cosmetic Travel Case',
+    metaDescription: 'A 14″ hard-shell cosmetic case with luxury woven carry handles, gold-tone hardware, and an integrated rear trolley sleeve.',
+    keywords: ['hard shell cosmetic case', 'luxury travel makeup bag', 'premium vanity case', 'beauty organizer travel case', 'lightweight cosmetic bag', 'trolley sleeve cosmetic case'],
+    name:          'Élan Luxe',
+    slug:          'elan-luxe',
+    category:      'vanity',
+    isFeatured:    true,
+    description:   'The Élan Luxe Cosmetic Case blends elegant craftsmanship with modern travel convenience. A premium hard-shell body, luxury woven handles, spacious interior, and a rear trolley sleeve keep beauty essentials stylishly organised wherever the journey goes.',
+    story: [
+      'Élan Luxe starts with the shell: a lightweight, impact-resistant hard case finished with a premium textured surface, woven dual carry handles, and gold-tone hardware, a silhouette built to look as considered on a vanity table as it does on a luggage cart.',
+      'Inside, a wide-opening zip lays out cosmetics, skincare, toiletries, jewellery, and chargers for quick packing and quicker access, while the rear trolley sleeve slides over a suitcase handle for the walk through the terminal.',
+    ],
+    highlights: [
+      {
+        heading: 'Luxury meets protection',
+        body: 'A premium hard-shell exterior paired with elegant woven handles and refined gold-tone hardware delivers sophisticated style while protecting your beauty essentials throughout every journey.',
+      },
+      {
+        heading: 'Beautifully organised',
+        body: 'Generous storage keeps cosmetics, skincare, toiletries, jewellery, and travel accessories neatly arranged with quick, convenient access whenever you need them.',
+      },
+      {
+        heading: 'Travel smarter',
+        body: 'An integrated rear trolley sleeve, protective base feet, and comfortable luxury carry handles make Élan Luxe effortless from airport to hotel.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',      value: 'Polycarbonate + ABS' },
+      { label: 'Size',       value: '31 × 19.5 × 29 cm · approx. 2 kg' },
+      { label: 'Interior',   value: 'Wide-opening zip · easy-clean fabric lining' },
+      { label: 'Handles',    value: 'Luxury woven dual carry handles · gold-tone hardware' },
+      { label: 'Attachment', value: 'Integrated rear trolley sleeve' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    hideSizeGuide: true,
+    images: [
+      '4b528852-1350-4734-37b3-78530cbbe500',
+      '8fd39775-ad44-4608-b63f-8e779c4c2800',
+      'ddbe89ba-edb3-4ada-0f1d-675cb5ac3200',
+      '7e5d269e-4914-45bd-8dd6-881d004b3200',
+      '79306c0c-58f9-44c1-abe7-5b2514c51300',
+      '7dc21c37-adfa-458a-25b2-f5e377820400',
+    ],
+    features: [
+      { label: 'Impact & scratch resistant hard shell' },
+      { label: 'Luxury woven dual carry handles' },
+      { label: 'Premium gold-tone hardware' },
+      { label: 'Smooth dual-zip closure' },
+      { label: 'Integrated rear trolley sleeve' },
+      { label: 'Protective bottom feet' },
+      { label: 'Easy-clean interior lining' },
+    ],
+    variants: [
+      {
+        color: 'Black',
+        colorHex: '#1C1B19',
+        images: [
+          '4b528852-1350-4734-37b3-78530cbbe500',
+          '8fd39775-ad44-4608-b63f-8e779c4c2800',
+          'ddbe89ba-edb3-4ada-0f1d-675cb5ac3200',
+          '7e5d269e-4914-45bd-8dd6-881d004b3200',
+          '79306c0c-58f9-44c1-abe7-5b2514c51300',
+          '7dc21c37-adfa-458a-25b2-f5e377820400',
+        ],
+        sizes: [{ size: '14 Inch', price: 5799, stock: 10 }],
+      },
+      {
+        color: 'White',
+        colorHex: '#6F4E37',
+        bodyHex: '#F7F5F0',
+        images: [
+          'e385e52f-bc72-4c99-862d-104d8e9b3800',
+          'e75d4417-be35-4565-4117-a155a1f27c00',
+          'e932dd2e-a1b9-4d01-2ab0-ad2e697a5800',
+          'dfbad9cf-d1bf-4cd7-4f63-1e7a98743b00',
+          '929b2103-b36a-451e-f2f2-7ba8df475300',
+        ],
+        sizes: [{ size: '14 Inch', price: 5799, stock: 10 }],
+      },
+      {
+        color: 'Emerald Green',
+        colorHex: '#424A33',
+        images: [
+          '4ae03fb9-9595-4ff6-fd89-98790588a600',
+          '2446941a-5334-4a26-575b-d87bd44c5b00',
+          '36d33015-c08e-476f-3245-6581737f7500',
+          'a510cb5b-1369-46f7-5653-ed55fa5b9800',
+        ],
+        sizes: [{ size: '14 Inch', price: 5799, stock: 10 }],
       },
     ],
   },
