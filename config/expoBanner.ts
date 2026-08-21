@@ -44,10 +44,9 @@ export const EXPO_BANNER = {
   ctaLabel:     'Explore Catalogue',
   image:        '61638f2e-84f7-4d33-1c08-96961cf8e800',
   catalogueUrl: '/catalogue.pdf',
-  // TODO: paste the Apps Script Web App /exec URL (see setup steps above).
-  sheetWebhookUrl: '',
+  sheetWebhookUrl: 'https://script.google.com/macros/s/AKfycbxNmFkYEZgTfdU62z2bCbTOuza9mHoiZYOKc8Gy_IpGNjTJ_GRQ1zVuU34MUjNO0A3VAw/exec',
   // Temporary override — while set, "Explore Catalogue" links straight out
   // to this external form instead of opening the in-app one below. Clear it
   // (set to '') to switch back to the built-in name/phone/note form.
-  externalFormUrl: 'https://expo.louispoloworld.com/form?event=gift-world-expo-bengaluru-2026',
+  externalFormUrl: '',
 }
