@@ -74,6 +74,13 @@ export const pdpZoomUrl = (id: string, fit: ImageFit = 'pad') =>
 export const thumbUrl = (id: string, fit: ImageFit = 'pad') =>
   cfImg(id, `${fitParams(fit, 200, 200)},${Q_ECO}`)
 
+// Social share preview (WhatsApp/Twitter/Facebook link unfurl) — standard
+// 1200×630 OG card. Always cover+gravity=auto regardless of the product's own
+// on-site imageFit: a padded product shot would sit small in empty space at
+// this landscape ratio, so the crop is forced here rather than passed through.
+export const ogUrl = (id: string) =>
+  cfImg(id, `w=1200,h=630,fit=cover,gravity=auto,${Q_GOOD}`)
+
 // Category/mood tile — full lifestyle photo, fills the frame.
 // gravity=auto — saliency-based smart crop, so cropping favours the actual
 // subject instead of a plain center-crop (equivalent to Cloudinary's g_auto).

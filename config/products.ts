@@ -701,6 +701,88 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
+  // ── ShirtVault ──────────────────────────────────────────────────────────
+  {
+    id: 'shirtvault',
+    imageFit: 'cover',
+    metaTitle: 'Louis Polo ShirtVault Hard Shell Shirt Organizer',
+    metaDescription: 'Hard-shell shirt organizer that carries 4 to 5 formal shirts wrinkle-free. Slim polycarbonate case for business trips, weddings, and wardrobe storage.',
+    keywords: ['shirt organizer for travel', 'wrinkle free shirt case', 'formal shirt travel organizer', 'hard shell shirt holder', 'shirt storage case india'],
+    name: 'ShirtVault',
+    slug: 'shirtvault',
+    category: 'organizer',
+    tag: 'Selling Fast',
+    isFeatured: true,
+    saleExclusive: true,
+    hideSizeSelector: true,
+    hideSizeGuide: true,
+    mrp: 1699,
+    recentPurchases: 174,
+    description:
+      'Pack shirts, not wrinkles. ShirtVault carries 4 to 5 formal shirts in a slim hard shell that keeps collars sharp and folds crisp, in a suitcase or on a wardrobe shelf.',
+    story: [
+      'Every frequent traveler knows the ritual: shirts folded with care at home, pulled out crushed at the hotel. ShirtVault ends it. The structured polycarbonate shell takes the pressure your luggage deals out, so the shirts inside never do. Collars hold their shape, folds stay where you set them, and the iron stays in the cupboard.',
+      'It earns its place between trips too. On a wardrobe shelf, ShirtVault keeps 4 to 5 shirts stacked, dust-free, and ready to lift out for the next early flight or big occasion.',
+    ],
+    highlights: [
+      {
+        heading: 'Shirts arrive as they left',
+        body: 'The rigid shell absorbs the crush of packed luggage, so collars, cuffs, and folds come out exactly as you packed them. No hotel ironing board required.',
+      },
+      {
+        heading: 'Slim enough for any suitcase',
+        body: 'ShirtVault slips flat into most cabin and check-in luggage, holding 4 to 5 formal shirts in the space careless folding would waste.',
+      },
+      {
+        heading: 'A wardrobe upgrade at home',
+        body: 'Between trips it works as shirt storage: organized, protected from dust, and stacked neatly instead of slumping on a shelf.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',    value: 'Polycarbonate (PC)' },
+      { label: 'Capacity', value: '4 to 5 formal shirts' },
+      { label: 'Finish',   value: 'Metallic silver gloss' },
+      { label: 'Closure',  value: 'Full-perimeter zip' },
+      { label: 'Use',      value: 'Travel packing and wardrobe storage' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    faqs: [
+      {
+        q: 'How many shirts does it hold?',
+        a: 'Four comfortably, five with a slimmer fold. Enough for a working week away, or a wedding weekend with backups.',
+      },
+      {
+        q: 'Will it fit inside a cabin suitcase?',
+        a: 'Yes. The case is deliberately slim so it lies flat inside most cabin and check-in luggage, with room around it for everything else.',
+      },
+    ],
+    images: [
+      // '584aba3f-66ed-4084-df03-ba0e5e625100',
+      // '71bcef0c-eaf5-4466-fec4-4f5fdc357900',
+      // '365d5259-4bd3-4533-57d7-2182ee625e00',
+      'e3c8bc97-9a5e-4481-e094-d3ae7d1a2200',
+    ],
+    features: [
+      { label: 'Holds 4 to 5 formal shirts' },
+      { label: 'Prevents wrinkles and creases' },
+      { label: 'Protects collars and structure' },
+      { label: 'Slim, suitcase-friendly profile' },
+      { label: 'Hard shell construction' },
+      { label: 'Dust-free wardrobe storage' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Metallic Silver',
+        colorHex: '#C9CBD1',
+        sizes: [
+          { size: 'One Size', price: 1499, stock: 50 },
+        ],
+      },
+    ],
+  },
+
   // ── AeroX ────────────────────────────────────────────────────────────────
   {
     id: 'aerox',
@@ -1529,69 +1611,6 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
-  // ── Matrix ───────────────────────────────────────────────────────────────
-  {
-    id: 'matrix',
-    metaTitle: 'Louis Polo Matrix Hard-Shell Spinner Suitcase',
-    metaDescription: 'Matrix pairs a moulded quilted-grid hard shell with silent double-spinner wheels and a combination lock. Cabin, Medium, and Large sizes.',
-    keywords: ['quilted hard shell suitcase', 'geometric pattern luggage', 'hard shell spinner suitcase', 'luggage set of 3', 'combination lock trolley bag'],
-    name: 'Matrix',
-    slug: 'matrix',
-    category: 'trolley',
-    isFeatured: true,
-    description:
-      'A moulded quilted-grid hard shell built for durability and easy identification on any carousel. Cabin, Medium, and Large are each sold on their own, or together as a matched set.',
-    story: [
-      'Matrix is built around a moulded geometric grid that does two jobs: it gives the case a recognisable identity, and it stiffens every panel against the pressure of a full baggage hold.',
-      'Underneath the finish it runs the full hardware set: silent double-spinner wheels, a combination lock, and an anti-theft zipper whose interlocking teeth resist being forced with a pen.',
-    ],
-    highlights: [
-      {
-        heading: 'A grid with a purpose',
-        body: 'The geometric surface is moulded, not printed. Every ridge adds rigidity, so the pattern that makes the case recognisable is also what keeps it from flexing under load.',
-      },
-      {
-        heading: 'Security, twice over',
-        body: 'A combination lock closes the case; the anti-theft zipper construction resists the puncture trick used on ordinary coils.',
-      },
-      {
-        heading: 'Silent through the terminal',
-        body: 'Double-spinner wheels roll quietly and turn in place, so even the largest size steers with two fingers.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',    value: 'Polycarbonate + ABS, moulded quilted-grid finish' },
-      { label: 'Sizes',    value: 'Cabin (20″) · Medium (24″) · Large (28″), sold individually or as a set' },
-      { label: 'Lock',     value: 'Combination lock + anti-theft zipper' },
-      { label: 'Wheels',   value: '360° silent double-spinner wheels' },
-      { label: 'Handle',   value: 'Telescopic handle' },
-    ],
-    warranty:
-      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: [
-      'ed6653a8-7095-4543-7800-cc59cc135200',
-    ],
-    features: [
-      { label: '360° silent spinner wheels' },
-      { label: 'Combination lock' },
-      { label: 'Impact-resistant hard shell' },
-      { label: 'Anti-theft zipper' },
-      { label: 'Telescopic handle' },
-      { label: 'Moulded quilted-grid finish' },
-    ],
-    variants: [
-      {
-        color: 'Amber Orange',
-        colorHex: '#E08423',
-        sizes: [
-          { size: 'Cabin',  price: 2990, stock: 25 },
-          { size: 'Medium', price: 3499, stock: 20 },
-          { size: 'Large',  price: 4299, stock: 20 },
-        ],
-      },
-    ],
-  },
-
   // ── POPShell ─────────────────────────────────────────────────────────────
   {
     id: 'popshell',
@@ -1670,48 +1689,6 @@ export const PRODUCTS: Product[] = [
       {
         color: 'Blossom Pink',
         colorHex: '#E0568C',
-        sizes: [
-          { size: 'Cabin', price: 2999, stock: 30 },
-        ],
-      },
-    ],
-  },
-
-  // ── NexusSpinner ─────────────────────────────────────────────────────────
-  {
-    id: 'nexusspinner',
-    metaTitle: 'Louis Polo NexusSpinner Hard-Shell Spinner Suitcase — 20-inch',
-    metaDescription: 'A 20-inch hard-shell spinner suitcase with a fluted vertical panel shell, 360° wheels, and a combination lock, built for cabin travel.',
-    keywords: ['20 inch cabin suitcase', 'hard shell spinner suitcase', 'fluted shell luggage', 'combination lock trolley bag', 'lightweight cabin luggage'],
-    name: 'NexusSpinner',
-    slug: 'nexusspinner',
-    category: 'trolley',
-    isFeatured: true,
-    description:
-      'A fluted hard-shell spinner suitcase sized for the cabin. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice for short trips.',
-    specs: [
-      { label: 'Shell',      value: 'Hard shell ABS, fluted panel finish' },
-      { label: 'Size (20″)', value: 'Cabin-friendly dimensions · lightweight build' },
-      { label: 'Lock',       value: '3-digit combination lock' },
-      { label: 'Wheels',     value: '360° spinner wheels' },
-      { label: 'Handle',     value: 'Telescopic handle' },
-    ],
-    warranty:
-      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: [
-      'e399155a-496b-4865-81f4-13664c8acd00',
-    ],
-    features: [
-      { label: '360° spinner wheels' },
-      { label: 'Combination lock' },
-      { label: 'Telescopic handle' },
-      { label: 'Hard shell ABS' },
-      { label: 'Lightweight build' },
-    ],
-    variants: [
-      {
-        color: 'Wine Burgundy',
-        colorHex: '#8E1C3E',
         sizes: [
           { size: 'Cabin', price: 2999, stock: 30 },
         ],
@@ -2422,84 +2399,6 @@ export const PRODUCTS: Product[] = [
         ],
         sizes: [
           { size: 'One Size', price: 9490, stock: 30 },
-        ],
-      },
-    ],
-  },
-
-  // ── TechTrek ─────────────────────────────────────────────────────────────
-  {
-    id: 'techtrek',
-    imageFit: 'cover',
-    metaTitle: 'TechTrek Business Laptop & Travel Backpack',
-    metaDescription: 'A professional multi-compartment laptop and travel backpack for work, commuting, study, and short trips, with organised tech storage, padded straps, and a rear trolley sleeve.',
-    keywords: ['business laptop backpack', 'travel backpack for work', 'organizer backpack for laptop', 'commuter backpack india', 'backpack with trolley sleeve'],
-    name: 'TechTrek',
-    slug: 'techtrek',
-    category: 'backpack',
-    hideSizeSelector: true,
-    description:
-      'A professional multi-compartment laptop and travel backpack designed for work, commuting, study, and short trips. TechTrek carries dedicated rear laptop storage, a spacious clamshell main compartment, and multiple organiser pockets, on padded straps built for the whole day.',
-    story: [
-      'TechTrek opens like a suitcase, not a sack. The clamshell main compartment lays flat and securing straps hold packing in place, whether that is a change of clothes for an overnight or the notebooks and cables a working day collects.',
-      'A dedicated rear compartment keeps a laptop separate from the rest, and organiser pockets throughout hold chargers, pens, and documents exactly where they were left. Padded straps, a breathable mesh back panel, and a cushioned top handle carry it the rest of the way, from a morning commute to a short trip away.',
-    ],
-    highlights: [
-      {
-        heading: 'Opens flat, packs clean',
-        body: 'A clamshell-style main compartment with securing straps lays fully open for packing or a security tray, and holds everything in place once it is zipped shut again.',
-      },
-      {
-        heading: 'A place for every cable',
-        body: 'Organised compartments keep a laptop and its accessories, from chargers to cables to documents, out of the single deep pocket where they usually get lost.',
-      },
-      {
-        heading: 'Built for a full day',
-        body: 'Padded adjustable shoulder straps, a breathable mesh back panel, and a cushioned top handle keep TechTrek comfortable from the commute to the boarding gate.',
-      },
-    ],
-    specs: [
-      { label: 'Size',       value: '19″ · 40 × 20 × 25 cm · approx. 1.2 kg' },
-      { label: 'Interior',   value: 'Clamshell main compartment with securing straps, dedicated laptop storage' },
-      { label: 'Storage',    value: 'Multiple organiser pockets, side compartments' },
-      { label: 'Carry',      value: 'Padded adjustable shoulder straps, cushioned top handle, rear trolley sleeve' },
-      { label: 'Back panel', value: 'Breathable mesh cushioning' },
-    ],
-    warranty:
-      '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['458f7bad-80e0-4ded-a15b-5ea506985900', '500e1951-3e77-47aa-e5d8-c30cb539fe00'],
-    features: [
-      { label: 'Comfortable fabric lining' },
-      { label: 'Wear resistant' },
-      { label: 'Lightweight build' },
-      { label: 'Smooth zipper' },
-      { label: 'Luggage mounting sleeve' },
-      { label: 'Clamshell main compartment' },
-      { label: 'Spacious compartments' },
-    ],
-    variants: [
-      {
-        color: 'Black',
-        colorHex: '#212121',
-        images: ['458f7bad-80e0-4ded-a15b-5ea506985900', '500e1951-3e77-47aa-e5d8-c30cb539fe00', 'f0ce9e38-1ed9-46cc-15fb-2c183c347f00', '66beb05d-4f24-4d5e-05f5-ba7628fe5000'],
-        sizes: [
-          { size: 'One Size', price: 9490, stock: 25 },
-        ],
-      },
-      {
-        color: 'Blue',
-        colorHex: '#1E4B8C',
-        images: ['46ccb82f-750a-4469-44a1-f3d4dcce8200', '371eedb9-c131-4216-e3d7-5fb97b0e6300', 'd7d5a39e-c989-4640-618c-9d436c697a00'],
-        sizes: [
-          { size: 'One Size', price: 9490, stock: 25 },
-        ],
-      },
-      {
-        color: 'Grey',
-        colorHex: '#9E9E9E',
-        images: ['04a9b8de-4e92-400a-e90e-10fff4587500', '010bd106-46d9-463c-d538-3f904abc0a00', 'a8b67ad2-df49-4c39-e604-68fec869b900'],
-        sizes: [
-          { size: 'One Size', price: 9490, stock: 25 },
         ],
       },
     ],
@@ -3968,88 +3867,6 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
-  // ── ShirtVault ──────────────────────────────────────────────────────────
-  {
-    id: 'shirtvault',
-    imageFit: 'cover',
-    metaTitle: 'Louis Polo ShirtVault Hard Shell Shirt Organizer',
-    metaDescription: 'Hard-shell shirt organizer that carries 4 to 5 formal shirts wrinkle-free. Slim polycarbonate case for business trips, weddings, and wardrobe storage.',
-    keywords: ['shirt organizer for travel', 'wrinkle free shirt case', 'formal shirt travel organizer', 'hard shell shirt holder', 'shirt storage case india'],
-    name: 'ShirtVault',
-    slug: 'shirtvault',
-    category: 'organizer',
-    tag: 'Selling Fast',
-    isFeatured: true,
-    saleExclusive: true,
-    hideSizeSelector: true,
-    hideSizeGuide: true,
-    mrp: 1699,
-    recentPurchases: 174,
-    description:
-      'Pack shirts, not wrinkles. ShirtVault carries 4 to 5 formal shirts in a slim hard shell that keeps collars sharp and folds crisp, in a suitcase or on a wardrobe shelf.',
-    story: [
-      'Every frequent traveler knows the ritual: shirts folded with care at home, pulled out crushed at the hotel. ShirtVault ends it. The structured polycarbonate shell takes the pressure your luggage deals out, so the shirts inside never do. Collars hold their shape, folds stay where you set them, and the iron stays in the cupboard.',
-      'It earns its place between trips too. On a wardrobe shelf, ShirtVault keeps 4 to 5 shirts stacked, dust-free, and ready to lift out for the next early flight or big occasion.',
-    ],
-    highlights: [
-      {
-        heading: 'Shirts arrive as they left',
-        body: 'The rigid shell absorbs the crush of packed luggage, so collars, cuffs, and folds come out exactly as you packed them. No hotel ironing board required.',
-      },
-      {
-        heading: 'Slim enough for any suitcase',
-        body: 'ShirtVault slips flat into most cabin and check-in luggage, holding 4 to 5 formal shirts in the space careless folding would waste.',
-      },
-      {
-        heading: 'A wardrobe upgrade at home',
-        body: 'Between trips it works as shirt storage: organized, protected from dust, and stacked neatly instead of slumping on a shelf.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',    value: 'Polycarbonate (PC)' },
-      { label: 'Capacity', value: '4 to 5 formal shirts' },
-      { label: 'Finish',   value: 'Metallic silver gloss' },
-      { label: 'Closure',  value: 'Full-perimeter zip' },
-      { label: 'Use',      value: 'Travel packing and wardrobe storage' },
-    ],
-    warranty:
-      '1-year warranty covering manufacturing defects in the shell and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    faqs: [
-      {
-        q: 'How many shirts does it hold?',
-        a: 'Four comfortably, five with a slimmer fold. Enough for a working week away, or a wedding weekend with backups.',
-      },
-      {
-        q: 'Will it fit inside a cabin suitcase?',
-        a: 'Yes. The case is deliberately slim so it lies flat inside most cabin and check-in luggage, with room around it for everything else.',
-      },
-    ],
-    images: [
-      // '584aba3f-66ed-4084-df03-ba0e5e625100',
-      // '71bcef0c-eaf5-4466-fec4-4f5fdc357900',
-      // '365d5259-4bd3-4533-57d7-2182ee625e00',
-      'e3c8bc97-9a5e-4481-e094-d3ae7d1a2200',
-    ],
-    features: [
-      { label: 'Holds 4 to 5 formal shirts' },
-      { label: 'Prevents wrinkles and creases' },
-      { label: 'Protects collars and structure' },
-      { label: 'Slim, suitcase-friendly profile' },
-      { label: 'Hard shell construction' },
-      { label: 'Dust-free wardrobe storage' },
-      { label: 'Lightweight build' },
-    ],
-    variants: [
-      {
-        color: 'Metallic Silver',
-        colorHex: '#C9CBD1',
-        sizes: [
-          { size: 'One Size', price: 1499, stock: 50 },
-        ],
-      },
-    ],
-  },
-
   // ── AeroDual ─────────────────────────────────────────────────────────────
   {
     id: 'aerodual',
@@ -4314,7 +4131,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['c65b2584-9f0e-41d3-438e-48ff791fba00'],
+    images: ['eac1e53c-b7e7-42ad-ff4c-4dc3d4257900'],
     features: [
       { label: 'Industrial-inspired hard shell' },
       { label: 'Reinforced corner guards' },
@@ -4324,213 +4141,13 @@ export const PRODUCTS: Product[] = [
       { label: 'Compression straps inside' },
     ],
     variants: [
-      { color: 'Patriot Red',   colorHex: '#C62828', images: ['c65b2584-9f0e-41d3-438e-48ff791fba00', 'eac1e53c-b7e7-42ad-ff4c-4dc3d4257900', '85011261-da46-45f7-9d74-49862749fa00'],   sizes: [{ size: 'Set of 2', price: 12999, stock: 10 }] },
-      { color: 'Moon Yellow',   colorHex: '#F2C14E', images: ['57c3c625-476f-46a0-7ab9-e4a9e78f3400', 'e505ac12-5129-4cc8-b6e3-6cbe2e981700', '52d6f4e5-9263-4545-be3e-f15031421600'],   sizes: [{ size: 'Set of 2', price: 12999, stock: 10 }] },
-      { color: 'Emerald Green', colorHex: '#2E7D32', images: ['269df6e5-2f49-4976-d1bf-bc4d11a89f00', '73eb8f08-ee25-4f24-eb39-8a1ab10e1200', '0d5d3305-9cc0-49dd-dfdc-127a3d728700', '4e525147-8d50-4dc6-b813-01ffd8ebe900'], sizes: [{ size: 'Set of 2', price: 12999, stock: 10 }] },
+      { color: 'Patriot Red',   colorHex: '#C62828', images: ['eac1e53c-b7e7-42ad-ff4c-4dc3d4257900', '85011261-da46-45f7-9d74-49862749fa00'],   sizes: [{ size: 'Cabin', price: 3500, stock: 10 }, { size: 'Medium', price: 4500, stock: 10 }] },
+      { color: 'Moon Yellow',   colorHex: '#F2C14E', images: ['e505ac12-5129-4cc8-b6e3-6cbe2e981700', '52d6f4e5-9263-4545-be3e-f15031421600'],   sizes: [{ size: 'Cabin', price: 3500, stock: 10 }, { size: 'Medium', price: 4500, stock: 10 }] },
+      { color: 'Emerald Green', colorHex: '#2E7D32', images: ['0d5d3305-9cc0-49dd-dfdc-127a3d728700', '4e525147-8d50-4dc6-b813-01ffd8ebe900'], sizes: [{ size: 'Cabin', price: 3500, stock: 10 }, { size: 'Medium', price: 4500, stock: 10 }] },
     ],
   },
 
-  // ── Alpha ────────────────────────────────────────────────────────────────
-  {
-    id: 'alpha',
-    metaTitle: 'Alpha 20″ Lightweight Cabin Trolley',
-    metaDescription: 'A minimalist 20-inch hard-shell cabin trolley with a matte finish, combination lock, and 360° spinner wheels.',
-    keywords: ['lightweight cabin trolley', 'minimalist hard shell suitcase', 'matte finish luggage', '20 inch carry-on suitcase', 'combination lock trolley bag'],
-    name: 'Alpha',
-    slug: 'alpha',
-    category: 'trolley',
-    description:
-      'A cabin trolley stripped back to a plain geometric shell and a matte finish, for anyone whose idea of a good travel case is one that does not ask to be noticed.',
-    story: [
-      'Alpha is the case for a traveller who has already decided what they think about decorated luggage. A flat matte finish and a simple geometric shell keep the design out of the way, while a combination lock and 360° spinner wheels handle everything a case is actually for.',
-    ],
-    highlights: [
-      {
-        heading: 'Deliberately plain',
-        body: 'A flat matte shell with no applied texture or pattern, built for travellers who want their case quiet rather than decorated.',
-      },
-      {
-        heading: 'Light enough to forget',
-        body: 'A polypropylene shell keeps Alpha under 2.6 kg empty, so the case barely counts against your own carry-on allowance.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',  value: 'Polypropylene, matte finish' },
-      { label: 'Size (20″)', value: '37 × 22 × 57.5 cm · approx. 2.6 kg' },
-      { label: 'Lock',   value: '3-digit combination lock' },
-      { label: 'Wheels', value: '360° spinner wheels' },
-      { label: 'Handle', value: 'Telescopic handle' },
-    ],
-    warranty:
-      '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['c4f2881f-6061-45ec-001c-acc4cc29e800', 'cc710a2e-a586-41a9-95e0-2f9845c3eb00'],
-    features: [
-      { label: 'Lightweight polypropylene shell' },
-      { label: 'Matte finish' },
-      { label: 'Combination lock' },
-      { label: '360° spinner wheels' },
-      { label: 'Telescopic handle' },
-    ],
-    variants: [
-      {
-        color: 'Grey', colorHex: '#757575',
-        images: ['c4f2881f-6061-45ec-001c-acc4cc29e800', 'cc710a2e-a586-41a9-95e0-2f9845c3eb00', '7eefb6c1-aaa1-4717-9336-6d88b803cd00', 'd3f7781f-4d8a-49a4-e42f-f5cc5c69fe00', 'e0f322cc-c6e1-49e1-f294-0b10c47c0d00', 'd9ec84fc-7c46-43e7-5be2-3c2aeddc0b00'],
-        sizes: [{ size: 'Cabin', price: 7999, stock: 50 }],
-      },
-    ],
-  },
 
-  // ── RidgeLine ────────────────────────────────────────────────────────────
-  {
-    id: 'ridgeline',
-    metaTitle: 'RidgeLine Ridged Hard Shell Spinner Suitcase',
-    metaDescription: 'A hard-shell spinner suitcase with a ridged shell, combination lock, and 360° wheels, in Cabin, Medium, and Large sizes.',
-    keywords: ['ridged hard shell suitcase', 'combination lock luggage', '360 spinner suitcase', 'lightweight trolley bag', 'coordinated luggage collection'],
-    name: 'RidgeLine',
-    slug: 'ridgeline',
-    category: 'trolley',
-    description:
-      'Horizontal ridges run the width of the shell, reinforcing the surface as much as decorating it, over a combination lock and 360° spinner wheels built into every size.',
-    story: [
-      'RidgeLine keeps its ridges functional first: the flowing horizontal lines add grip to the surface and stiffness to the panel, with the styling arriving as a side effect rather than the point. Cabin, Medium, and Large are sold individually, so the case can grow with however far the trip goes.',
-    ],
-    highlights: [
-      {
-        heading: 'Ridges that do double duty',
-        body: 'The horizontal ridge pattern reinforces the shell against flex as much as it defines the look, function and finish from the same mould.',
-      },
-      {
-        heading: 'Sized to the trip',
-        body: 'Cabin, Medium, and Large are each sold on their own, so a single weekend case can grow into a full set exactly when it is needed.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',  value: 'ABS + Polycarbonate, ridged finish' },
-      { label: 'Sizes',  value: 'Cabin (20″) · Medium (24″) · Large (28″), sold individually' },
-      { label: 'Lock',   value: 'Built-in combination lock' },
-      { label: 'Wheels', value: '360° dual-spinner wheels' },
-      { label: 'Handle', value: 'Telescopic handle' },
-    ],
-    warranty:
-      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['c6c976ed-5861-4fd9-c404-a898c1152b00', '4d56df27-f2c9-4eca-5348-808cf5b47600'],
-    features: [
-      { label: 'Ridged hard shell' },
-      { label: 'Built-in combination lock' },
-      { label: '360° dual-spinner wheels' },
-      { label: 'Telescopic trolley handle' },
-      { label: 'Reinforced corner protection' },
-    ],
-    variants: [
-      {
-        color: 'Blue', colorHex: '#1565C0',
-        images: ['c6c976ed-5861-4fd9-c404-a898c1152b00', '4d56df27-f2c9-4eca-5348-808cf5b47600', '001c2c97-f3cc-4be6-a6c7-20205d9df900', 'd1b169d9-6aa0-4ad1-fbf1-f96f1cc34900', '9bcf3777-f8e5-4e3a-9bc4-bd3729e51700', '713936be-551d-4ccf-cd97-a23a5b1ffd00'],
-        sizes: [
-          { size: 'Cabin',  price: 8016,  stock: 25 },
-          { size: 'Medium', price: 10298, stock: 25 },
-          { size: 'Large',  price: 12242, stock: 25 },
-        ],
-      },
-    ],
-  },
-
-  // ── RidgeLine Set of 3 ───────────────────────────────────────────────────
-  {
-    id: 'ridgeline-set',
-    metaTitle: 'RidgeLine Set of 3 Hard Shell Spinner Luggage',
-    metaDescription: 'The RidgeLine Cabin, Medium, and Large suitcases bundled as a matched set, with a ridged shell and combination lock.',
-    keywords: ['luggage set of 3', 'ridged hard shell suitcase', 'matched luggage set', 'combination lock luggage set', 'family travel luggage'],
-    name: 'RidgeLine Set of 3',
-    slug: 'ridgeline-set',
-    category: 'set',
-    description:
-      'Cabin, Medium, and Large RidgeLine cases, bundled together so a short trip and a long one both travel under the same ridged shell.',
-    story: [
-      'The RidgeLine set is the same case bought once in three sizes rather than three separate decisions, each carrying an identical combination lock and 360° spinner wheels underneath its ridged shell.',
-    ],
-    highlights: [
-      {
-        heading: 'One shell, three sizes',
-        body: 'Cabin, Medium, and Large share the same ridged finish and hardware, so the set reads as one line rather than three mismatched purchases.',
-      },
-      {
-        heading: 'Locked and steady',
-        body: 'Every case in the set carries its own combination lock and 360° dual-spinner wheels, so nothing in the family travels differently from the rest.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',  value: 'ABS + Polycarbonate, ridged finish' },
-      { label: 'Set',    value: 'Cabin (20″) · Medium (24″) · Large (28″)' },
-      { label: 'Lock',   value: 'Built-in combination lock per case' },
-      { label: 'Wheels', value: '360° dual-spinner wheels per case' },
-    ],
-    warranty:
-      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['c6c976ed-5861-4fd9-c404-a898c1152b00', '4d56df27-f2c9-4eca-5348-808cf5b47600'],
-    features: [
-      { label: 'Complete 3-piece luggage set' },
-      { label: 'Ridged hard shell' },
-      { label: 'Built-in combination lock' },
-      { label: '360° dual-spinner wheels' },
-      { label: 'Telescopic trolley handle' },
-    ],
-    variants: [
-      {
-        color: 'Blue', colorHex: '#1565C0',
-        images: ['c6c976ed-5861-4fd9-c404-a898c1152b00', '4d56df27-f2c9-4eca-5348-808cf5b47600', '001c2c97-f3cc-4be6-a6c7-20205d9df900', 'd1b169d9-6aa0-4ad1-fbf1-f96f1cc34900', '9bcf3777-f8e5-4e3a-9bc4-bd3729e51700', '713936be-551d-4ccf-cd97-a23a5b1ffd00'],
-        sizes: [{ size: 'Set of 3', price: 29655, stock: 25 }],
-      },
-    ],
-  },
-
-  // ── TraveX ───────────────────────────────────────────────────────────────
-  {
-    id: 'travex',
-    metaTitle: 'TraveX Multi-Compartment Travel Backpack',
-    metaDescription: 'A ripstop travel backpack with multiple compartments, adjustable compression straps, and a breathable back panel.',
-    keywords: ['multi compartment travel backpack', 'compression strap backpack', 'lightweight outdoor backpack', 'breathable back panel backpack', 'everyday travel backpack'],
-    name: 'TraveX',
-    slug: 'travex',
-    category: 'backpack',
-    hideSizeSelector: true,
-    description:
-      'A ripstop backpack built around the days that do not fit a laptop bag: side compression straps pull it in for a short trip, and a diagonal quick-access pocket keeps a phone or a boarding pass out of the main compartment.',
-    story: [
-      'TraveX is sized for the trip between a commute and a proper holiday, the overnight, the weekend, the day hike that turns into a night away. Side compression straps with quick-release buckles pull the pack in when it is half empty, so it never rides loose just because it is not fully packed.',
-    ],
-    highlights: [
-      {
-        heading: 'Shrinks with the trip',
-        body: 'Quick-release compression straps pull the pack in when it is not fully loaded, keeping a half-packed bag from swinging loose on your back.',
-      },
-      {
-        heading: 'The diagonal pocket does the work',
-        body: 'A quick-access diagonal zip keeps keys, cards, and earphones reachable without opening the main compartment at a platform or a gate.',
-      },
-    ],
-    specs: [
-      { label: 'Material', value: 'Ripstop-style woven fabric' },
-      { label: 'Size (19″)', value: '32 × 20 × 47 cm · approx. 0.5 kg' },
-      { label: 'Interior',   value: 'Multiple zippered compartments · diagonal quick-access pocket' },
-      { label: 'Carry',      value: 'Adjustable padded straps · compression straps' },
-    ],
-    warranty:
-      '1-year warranty covering manufacturing defects in the straps and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['58780ab8-b788-433c-b14a-5b627376c100', '638a5401-8349-4c6f-d29e-5cf68a6b9500'],
-    features: [
-      { label: 'Ripstop-style woven exterior' },
-      { label: 'Multiple zippered compartments' },
-      { label: 'Diagonal quick-access pocket' },
-      { label: 'Adjustable compression straps' },
-      { label: 'Breathable padded back panel' },
-      { label: 'Reflective strap detailing' },
-    ],
-    variants: [
-      { color: 'Black',  colorHex: '#212121', images: ['58780ab8-b788-433c-b14a-5b627376c100', '638a5401-8349-4c6f-d29e-5cf68a6b9500', 'b1f162f8-448f-4cca-339c-210b11eec600', '95f28829-5654-4ffa-42d3-aeb4c29ef100'], sizes: [{ size: 'One Size', price: 4999, stock: 25 }] },
-      { color: 'Blue',   colorHex: '#1565C0', images: ['2d059c40-0098-4cf7-ec4b-2f8fdf3d3200', '7b0672f4-f6b0-483e-7d82-ec52a1731500', 'cba779a4-e70a-466a-06f0-1412ef18eb00'],  sizes: [{ size: 'One Size', price: 4999, stock: 25 }] },
-      { color: 'Maroon', colorHex: '#800000', images: ['285f7fc2-2ed6-4270-2586-ab61ee394c00', '779e4952-b2c2-46e4-a026-66031fe25900', 'c2accb39-ba42-4c03-c692-224783e92600'], sizes: [{ size: 'One Size', price: 4999, stock: 25 }] },
-    ],
-  },
 
   // ── TitaniumEdge Briefcase ───────────────────────────────────────────────
   {
@@ -4679,60 +4296,6 @@ export const PRODUCTS: Product[] = [
         images: ['45dac148-397f-4e0b-583b-029371ac9f00', 'c13c42ca-6431-427f-a092-43171750fb00', '47687b74-6a30-4524-59d0-03a7f1f66600', '7debe021-dd88-48f1-5e93-3b84d4a3f600', 'd3ef9cf7-f1d7-40c8-3522-cba88014dc00', '64351003-1376-410c-a59e-5f6156151d00'],
         sizes: [{ size: 'One Size', price: 9999, stock: 15 }],
       },
-    ],
-  },
-
-  // ── MotoStripe ───────────────────────────────────────────────────────────
-  {
-    id: 'motostripe',
-    metaTitle: 'MotoStripe 20″ Sporty Cabin Trolley',
-    metaDescription: 'A sporty 20-inch hard-shell cabin trolley with diagonal racing-inspired striping, 360° wheels, and a lightweight build.',
-    keywords: ['sporty hard shell suitcase', 'diagonal stripe luggage', '20 inch cabin trolley', '360 spinner suitcase', 'lightweight carry-on'],
-    name: 'MotoStripe',
-    slug: 'motostripe',
-    category: 'trolley',
-    isFeatured: true,
-    description:
-      'A diagonal stripe across the shell, borrowed from racing liveries rather than other luggage, on a cabin case built to move as fast as it looks.',
-    story: [
-      'MotoStripe commits to its diagonal the way a racing livery does, one confident line across the shell instead of a symmetrical pattern trying to please everyone. Underneath, it is still built like every cabin case in the range: 360° spinner wheels, a lightweight shell, and an interior organised for a quick pack.',
-    ],
-    highlights: [
-      {
-        heading: 'A stripe with a direction',
-        body: 'The diagonal accent runs the same way across every colourway, giving MotoStripe a consistent visual identity instead of a pattern that changes meaning by colour.',
-      },
-      {
-        heading: 'Light enough to match the look',
-        body: 'A lightweight hard shell keeps the case as quick to lift into an overhead bin as its styling suggests it should be.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',   value: 'Polycarbonate + ABS' },
-      { label: 'Size (20″)', value: '37.5 × 23.5 × 55.9 cm · approx. 3.5 kg' },
-      { label: 'Interior', value: 'Compression straps · zipped mesh pockets' },
-      { label: 'Wheels',  value: '360° spinner wheels' },
-      { label: 'Handle',  value: 'Telescopic handle' },
-    ],
-    warranty:
-      '1-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['768fef10-1a64-4df7-a500-6be63e2b4a00', 'b327cf2d-b09b-4cfe-9d8b-77c2e1eab600'],
-    features: [
-      { label: 'Diagonal racing-inspired stripe' },
-      { label: '360° spinner wheels' },
-      { label: 'Telescopic handle' },
-      { label: 'Compression straps inside' },
-      { label: 'Zipped mesh pockets' },
-      { label: 'Lightweight cabin-friendly build' },
-    ],
-    variants: [
-      { color: 'Blue',          colorHex: '#1565C0', images: ['717758d8-2ad4-4103-d569-071915e04e00', '8647e007-4bfb-424a-6f04-fa5425aac500'],          sizes: [{ size: 'Cabin', price: 8899, stock: 50 }] },
-      { color: 'Navy Blue',     colorHex: '#1A2744', images: ['18a8e8e0-91d1-4a8c-c581-0fd562560500', '5c1eb182-4766-4bcb-b192-9e4d466e7b00'],      sizes: [{ size: 'Cabin', price: 8899, stock: 50 }] },
-      { color: 'Grey',          colorHex: '#757575', images: ['f4931a8c-aef4-4624-3339-1eac118ddf00', '1c4bb8dd-4c23-435f-663d-4cb3453d5900'],          sizes: [{ size: 'Cabin', price: 8899, stock: 50 }] },
-      { color: 'Silver',        colorHex: '#BDBDBD', images: ['e3135db9-dc52-4459-d071-1c2ec506b800', '50d9e5e5-fe2d-42b8-b2a3-7d3bfc55a500'],        sizes: [{ size: 'Cabin', price: 8899, stock: 50 }] },
-      { color: 'Green',         colorHex: '#2E7D32', images: ['4c86a538-4499-4c16-4e16-bf963b162000', '77ef410c-2753-49f8-0366-dc487ac3c500'],         sizes: [{ size: 'Cabin', price: 8899, stock: 50 }] },
-      { color: 'Military Green',colorHex: '#4B5320', images: ['524e7146-f093-40a7-e74a-45006c4bb400', '880e6d3d-6b0a-4603-5b5f-98ee6f517b00'], sizes: [{ size: 'Cabin', price: 8899, stock: 50 }] },
-      { color: 'Black',         colorHex: '#212121', images: ['768fef10-1a64-4df7-a500-6be63e2b4a00', 'b327cf2d-b09b-4cfe-9d8b-77c2e1eab600', '5f3f8b75-3682-4ac8-ace4-6edeb7641a00'], sizes: [{ size: 'Cabin', price: 8899, stock: 50 }] },
     ],
   },
 
@@ -4893,54 +4456,6 @@ export const PRODUCTS: Product[] = [
       { color: 'Green',  colorHex: '#2E7D32', images: ['5403ef43-6529-4bcd-af2f-f75980974800', 'b42d8191-c2b3-4983-3730-eacce3978300', '5d652d47-9303-4bfa-5bd0-50344edcd300'],  sizes: [{ size: '11 Inch', price: 3999, stock: 50 }] },
       { color: 'Red',    colorHex: '#C62828', images: ['fab7459c-1186-4b48-4985-d1d28e7d2d00', '1525db33-8ade-459a-b18e-e96f3e07b000', '39398f33-4ea4-4357-064e-3acce95fe000'],    sizes: [{ size: '11 Inch', price: 3999, stock: 50 }] },
       { color: 'Yellow', colorHex: '#F2C14E', images: ['3c954f7e-6dc9-4c28-515e-3904c96daa00', '0c7fcd0a-e04e-45ff-4572-3aa9a3b1fc00', 'e24084cc-3540-428d-49a1-9f16f7a57400'], sizes: [{ size: '11 Inch', price: 3999, stock: 50 }] },
-    ],
-  },
-
-  // ── AeroEdge ─────────────────────────────────────────────────────────────
-  {
-    id: 'aeroedge',
-    metaTitle: 'AeroEdge USB Laptop Business Backpack',
-    metaDescription: 'A textured business backpack with a padded laptop compartment, external USB charging access, and a rear trolley sleeve.',
-    keywords: ['USB charging laptop backpack', 'business travel backpack', 'trolley sleeve backpack', 'water resistant office backpack', 'multi compartment work backpack'],
-    name: 'AeroEdge',
-    slug: 'aeroedge',
-    category: 'backpack',
-    hideSizeSelector: true,
-    description:
-      'A rectangular business backpack with contrasting textured edge panels, a padded laptop compartment, and an external USB port that keeps a power bank cable within reach without opening the bag.',
-    story: [
-      'AeroEdge treats a charging cable as a design problem worth solving: the external USB port routes to a power bank stored inside, so a phone can charge on a platform without the backpack ever coming off your back. Around that one detail sits the usual business-backpack arrangement, a padded laptop section, a front organiser, and a trolley sleeve for the flights that need it.',
-    ],
-    highlights: [
-      {
-        heading: 'Charges without opening',
-        body: 'The external USB port connects to a power bank stored inside the main compartment, so a phone charges on the move without the backpack ever being unzipped.',
-      },
-      {
-        heading: 'A commute and a carry-on, both covered',
-        body: 'The rear trolley sleeve slides over a cabin case handle, turning a daily backpack into hands-free carry the moment a trip needs it.',
-      },
-    ],
-    specs: [
-      { label: 'Material', value: 'Polyester fabric' },
-      { label: 'Size (19″)', value: '30 × 13 × 43 cm · approx. 1.2 kg' },
-      { label: 'Interior',   value: 'Padded laptop compartment · front organiser pockets' },
-      { label: 'Attachment', value: 'External USB port · rear trolley sleeve' },
-    ],
-    warranty:
-      '1-year warranty covering manufacturing defects in the straps and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['208d91d5-9611-47d2-7b28-845793361c00', '57f64508-df34-485c-145b-f5bfd7ad5000'],
-    features: [
-      { label: 'Padded laptop compartment' },
-      { label: 'External USB charging access' },
-      { label: 'Breathable padded back panel' },
-      { label: 'Rear trolley sleeve' },
-      { label: 'Water-resistant exterior' },
-      { label: 'Dual side utility pockets' },
-    ],
-    variants: [
-      { color: 'Black', colorHex: '#212121', images: ['208d91d5-9611-47d2-7b28-845793361c00', '57f64508-df34-485c-145b-f5bfd7ad5000', '385cd20d-4e34-43b3-3b2f-e1351a1e5900', '1db43705-b3b4-4074-1b45-392e2ff1fa00'], sizes: [{ size: 'One Size', price: 9490, stock: 25 }] },
-      { color: 'Grey',  colorHex: '#757575', images: ['b9622be5-69da-429e-7d21-40840275ef00', '3cc8c72f-a776-4e10-495c-8e82bbbf3600', 'cb1db420-0981-4121-e019-349862f1db00'], sizes: [{ size: 'One Size', price: 9490, stock: 25 }] },
     ],
   },
 

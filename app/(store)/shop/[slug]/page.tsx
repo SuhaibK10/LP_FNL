@@ -11,6 +11,7 @@ import { getProductBySlug, PRODUCTS } from '@/config/products'
 import { ProductPageClient }   from '@/components/product/ProductPageClient'
 import { ProductStory }        from '@/components/product/ProductDetails'
 import { ROUTES }              from '@/lib/constants'
+import { ogUrl }               from '@/lib/cloudflareImages'
 
 interface Props {
   params:      Promise<{ slug: string }>
@@ -21,15 +22,38 @@ export async function generateStaticParams() {
   return PRODUCTS.map(p => ({ slug: p.slug }))
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
   const { slug }  = await params
+  const { color } = await searchParams
   const product   = getProductBySlug(slug)
   if (!product) return { title: 'Product not found' }
+
+  // Match the ?color= the link was shared with, so a link shared from a
+  // specific colorway unfurls with that colorway's photo, not always the
+  // first variant's.
+  const variant = (color ? product.variants.find(v => v.color.toLowerCase() === color.toLowerCase()) : undefined)
+    ?? product.variants[0]
+  const imageId = variant.images?.[0] ?? product.images[0]
+
+  const title       = product.metaTitle ?? product.name
+  const description = product.metaDescription ?? product.description
+
   return {
-    title:       product.metaTitle ?? product.name,
-    description: product.metaDescription ?? product.description,
+    title,
+    description,
     keywords:    product.keywords,
     alternates:  { canonical: `/shop/${slug}` },
+    openGraph: {
+      title,
+      description,
+      images: [{ url: ogUrl(imageId), width: 1200, height: 630 }],
+    },
+    twitter: {
+      card:        'summary_large_image',
+      title,
+      description,
+      images:      [ogUrl(imageId)],
+    },
   }
 }
 
