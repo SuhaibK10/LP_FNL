@@ -47,6 +47,38 @@ export function ProductPageClient({ product, defaultColor }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [product])
 
+  // Warm every OTHER angle of every color too — not just each color's first
+  // shot above. Without this, switching to a new color feels fast (its first
+  // photo is already warm) but clicking through *that* color's remaining
+  // thumbnails right after is a cold fetch each time, since ImageGallery only
+  // starts preloading a gallery once it actually becomes the active one.
+  // Deferred one frame past mount (idle callback, falling back to a short
+  // timeout on browsers without it) so this doesn't compete with the initial
+  // photo/thumbnail requests for connection slots.
+  useEffect(() => {
+    const run = () => {
+      product.variants.forEach((v) => {
+        const gallery = v.images?.length ? v.images : product.images
+        // Skip index 0 — it's either already loading as the current hero
+        // photo, or already covered by the first-photo preload above. Every
+        // index past 0 never gets the cover-fit treatment (see ImageGallery's
+        // `fitFor`), so no fit param is needed here.
+        gallery.slice(1).forEach((img) => {
+          const preload = new window.Image()
+          preload.src = pdpUrl(img) || PLACEHOLDER_URL
+        })
+      })
+    }
+    const w = window as Window & { requestIdleCallback?: (cb: () => void) => number }
+    if (w.requestIdleCallback) {
+      const id = w.requestIdleCallback(run)
+      return () => (window as Window & { cancelIdleCallback?: (id: number) => void }).cancelIdleCallback?.(id)
+    }
+    const id = setTimeout(run, 300)
+    return () => clearTimeout(id)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [product])
+
   // A variant with its own `images` gallery gets a fresh, color-scoped
   // thumbnail strip (reset to the first shot of that color). Variants
   // without one fall back to the legacy flat `product.images` array,
