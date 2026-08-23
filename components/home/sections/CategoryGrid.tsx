@@ -11,7 +11,7 @@ import Image                                 from 'next/image'
 import Link                                  from 'next/link'
 import { useRouter }                         from 'next/navigation'
 import { motion }                            from 'framer-motion'
-import { ArrowUpRight, LayoutGrid }          from 'lucide-react'
+import { LayoutGrid }                        from 'lucide-react'
 import { ROUTES }                            from '@/lib/constants'
 import { SALE_PRODUCTS }                     from '@/config/products'
 import { categoryUrl, PLACEHOLDER_URL }      from '@/lib/cloudflareImages'
@@ -211,26 +211,23 @@ export function CategoryGrid() {
                       sizes="(max-width:768px) 50vw, (max-width:1280px) 25vw, 22rem"
                     />
 
-                    {/* Gradient */}
-                    <div className={`absolute inset-0 bg-gradient-to-t from-lp-ink/90 via-lp-ink/30 to-transparent transition-opacity duration-300 group-hover:opacity-100 ${tapped ? 'opacity-100' : ''}`} />
+                    {/* Gradient — flat, uniform tint rather than bottom-weighted, since
+                        the label now sits centered and needs contrast everywhere it
+                        might land, not just along the bottom edge. */}
+                    <div className={`absolute inset-0 bg-lp-ink/35 transition-opacity duration-300 group-hover:opacity-100 ${tapped ? 'opacity-100' : ''}`} />
 
-                    {/* Text */}
-                    <div className="absolute bottom-0 left-0 right-0 px-4 md:px-5 pt-4 md:pt-5 pb-2 md:pb-2.5">
-                      <div className="relative h-5 md:h-6 overflow-hidden">
+                    {/* Text — centered on the image */}
+                    <div className="absolute inset-0 flex items-center justify-center px-4">
+                      <div className="relative w-full h-6 md:h-8 overflow-hidden">
                         {/* Resting label — slides up and out on hover/tap */}
-                        <h3 className={`absolute inset-0 flex items-center justify-center text-center font-display text-[1.1rem] md:text-[1.3rem] text-[var(--color-lp-porcelain)]/80 leading-none transition-transform duration-500 ease-out group-hover:-translate-y-full ${tapped ? '-translate-y-full' : ''}`}>
+                        <h3 className={`absolute inset-0 flex items-center justify-center text-center font-display text-[1.3rem] md:text-[1.7rem] font-medium tracking-wide text-[var(--color-lp-porcelain)]/85 leading-none transition-transform duration-500 ease-out group-hover:-translate-y-full ${tapped ? '-translate-y-full' : ''}`}>
                           {label}
                         </h3>
                         {/* Duplicate — waits just below, slides in to replace it */}
-                        <h3 aria-hidden="true" className={`absolute inset-0 flex items-center justify-center text-center font-display text-[1.1rem] md:text-[1.3rem] text-[var(--color-lp-porcelain)] leading-none translate-y-full transition-transform duration-500 ease-out group-hover:translate-y-0 ${tapped ? 'translate-y-0' : ''}`}>
+                        <h3 aria-hidden="true" className={`absolute inset-0 flex items-center justify-center text-center font-display text-[1.3rem] md:text-[1.7rem] font-medium tracking-wide text-[var(--color-lp-porcelain)] leading-none translate-y-full transition-transform duration-500 ease-out group-hover:translate-y-0 ${tapped ? 'translate-y-0' : ''}`}>
                           {label}
                         </h3>
                       </div>
-                      <ArrowUpRight
-                        size={18}
-                        strokeWidth={1.5}
-                        className={`absolute right-4 md:right-5 bottom-2 md:bottom-2.5 text-[var(--color-lp-porcelain)]/50 group-hover:text-[var(--color-lp-gold)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200 flex-shrink-0 ${tapped ? 'text-[var(--color-lp-gold)] translate-x-0.5 -translate-y-0.5' : ''}`}
-                      />
                     </div>
                   </Link>
                 </motion.div>

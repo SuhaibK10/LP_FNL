@@ -298,6 +298,50 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
+  // ── GripTrunk ────────────────────────────────────────────────────────────
+  {
+    id: 'griptrunk',
+    metaTitle: 'Louis Polo GripTrunk Hard-Shell Spinner Suitcase — 20-inch',
+    metaDescription: 'A 20-inch hard-shell spinner suitcase with a reinforced side grip handle, 360° wheels, and a combination lock, built for cabin travel.',
+    keywords: ['20 inch cabin suitcase', 'hard shell spinner suitcase', 'side grip handle luggage', 'combination lock trolley bag', 'lightweight cabin luggage'],
+    name: 'GripTrunk',
+    slug: 'griptrunk',
+    category: 'trolley',
+    isFeatured: true,
+    mrp: 7549,
+    description:
+      'A hard-shell spinner suitcase sized for the cabin, with a reinforced side grip handle for lifting into overhead bins. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice for short trips.',
+    specs: [
+      { label: 'Shell',      value: 'Hard shell ABS, ribbed finish' },
+      { label: 'Size (20″)', value: 'Cabin-friendly dimensions · lightweight build' },
+      { label: 'Lock',       value: '3-digit combination lock' },
+      { label: 'Wheels',     value: '360° spinner wheels' },
+      { label: 'Handle',     value: 'Telescopic handle + reinforced side grip' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      '5418ffdf-afa1-456e-690a-aaeb1f147b00',
+    ],
+    features: [
+      { label: '360° spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Reinforced side grip handle' },
+      { label: 'Telescopic handle' },
+      { label: 'Hard shell ABS' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Crimson Red',
+        colorHex: '#C62828',
+        sizes: [
+          { size: 'Cabin', price: 3460, stock: 30 },
+        ],
+      },
+    ],
+  },
+
   // ── AeroSmart Gloss ──────────────────────────────────────────────────────
   {
     id: 'aerosmart-gloss',
@@ -468,50 +512,6 @@ export const PRODUCTS: Product[] = [
       { color: 'Navy Blue',  colorHex: '#1A2744', images: ['9f9308a9-d29c-4803-3abd-9604d029f700', '183e39e2-f17f-4df6-c695-a5b52d3a9a00'],  sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
       { color: 'Grey',       colorHex: '#757575', images: ['baad860a-7951-491c-74cf-9619f7c72100', 'f06c500d-899f-404a-4cd4-fc554fc51500'],       sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
       { color: 'Black',      colorHex: '#212121', images: ['54a3cf1a-c9c0-439f-6d63-78bdbf725400', 'ec43d86a-e1eb-4370-1d8a-d0715186fa00', '9fbc6381-c01d-4ec8-47c7-4634751b0600'],      sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
-    ],
-  },
-
-  // ── GripTrunk ────────────────────────────────────────────────────────────
-  {
-    id: 'griptrunk',
-    metaTitle: 'Louis Polo GripTrunk Hard-Shell Spinner Suitcase — 20-inch',
-    metaDescription: 'A 20-inch hard-shell spinner suitcase with a reinforced side grip handle, 360° wheels, and a combination lock, built for cabin travel.',
-    keywords: ['20 inch cabin suitcase', 'hard shell spinner suitcase', 'side grip handle luggage', 'combination lock trolley bag', 'lightweight cabin luggage'],
-    name: 'GripTrunk',
-    slug: 'griptrunk',
-    category: 'trolley',
-    isFeatured: true,
-    mrp: 7549,
-    description:
-      'A hard-shell spinner suitcase sized for the cabin, with a reinforced side grip handle for lifting into overhead bins. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice for short trips.',
-    specs: [
-      { label: 'Shell',      value: 'Hard shell ABS, ribbed finish' },
-      { label: 'Size (20″)', value: 'Cabin-friendly dimensions · lightweight build' },
-      { label: 'Lock',       value: '3-digit combination lock' },
-      { label: 'Wheels',     value: '360° spinner wheels' },
-      { label: 'Handle',     value: 'Telescopic handle + reinforced side grip' },
-    ],
-    warranty:
-      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: [
-      '5418ffdf-afa1-456e-690a-aaeb1f147b00',
-    ],
-    features: [
-      { label: '360° spinner wheels' },
-      { label: 'Combination lock' },
-      { label: 'Reinforced side grip handle' },
-      { label: 'Telescopic handle' },
-      { label: 'Hard shell ABS' },
-      { label: 'Lightweight build' },
-    ],
-    variants: [
-      {
-        color: 'Crimson Red',
-        colorHex: '#C62828',
-        sizes: [
-          { size: 'Cabin', price: 3460, stock: 30 },
-        ],
-      },
     ],
   },
 
