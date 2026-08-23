@@ -31,7 +31,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Trolley Bags',
     value:    'trolley',
-    image:    'dfe7f28d-50e2-4a8a-7faa-467641a17700',
+    image:    'f7cdcf60-1b9b-45d4-f29c-e021f7f74a00',
     span:     '',
     textPos:  'bottom',
     imgClass: 'scale-125',
@@ -47,7 +47,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Backpacks',
     value:    'backpack',
-    image:    '04fcc97f-08b5-4279-f2fc-753aed03be00',
+    image:    '3bdc5f70-39e8-4ca3-5b7c-bee115479100',
     span:     '',
     textPos:  'bottom',
     imgClass: '',
@@ -55,7 +55,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Office Bags',
     value:    'office-bag',
-    image:    '0baab19f-10cd-4c53-2c53-2041976f6c00',
+    image:    'e9c14f02-cca6-4c65-067b-9fdad928ed00',
     span:     '',
     textPos:  'bottom',
     imgClass: '',

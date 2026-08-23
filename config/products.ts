@@ -294,7 +294,7 @@ export const PRODUCTS: Product[] = [
         colorHex: '#B0B4B8',
         accentColor: 'Tan leather trim',
         sizes: [
-          { size: 'Cabin', price: 8990, stock: 25 },
+          { size: 'Cabin', price: 4990, stock: 25 },
         ],
       },
     ],
@@ -360,7 +360,7 @@ export const PRODUCTS: Product[] = [
         color: 'Silver',
         colorHex: '#B0B4B8',
         sizes: [
-          { size: 'Cabin', price: 6990, stock: 25 },
+          { size: 'Cabin', price: 4850, stock: 25 },
         ],
       },
     ],
@@ -408,6 +408,66 @@ export const PRODUCTS: Product[] = [
           { size: '16 Inch', price: 2599, stock: 30 },
         ],
       },
+    ],
+  },
+
+  // ── AuraShell ────────────────────────────────────────────────────────────
+  {
+    id: 'aurashell',
+    metaTitle: 'AuraShell Hard Shell Vanity Case',
+    metaDescription: 'A handbag-inspired hard-shell vanity case with dual padded handles, a rear trolley sleeve, and a zip-around closure.',
+    keywords: ['hard shell vanity case', 'handbag inspired cosmetic case', 'trolley sleeve vanity case', 'travel cosmetic organiser', 'structured toiletry bag'],
+    name: 'AuraShell',
+    slug: 'aurashell',
+    category: 'vanity',
+    isFeatured: true,
+    hideSizeGuide: true,
+    description:
+      'A vanity case shaped like a handbag rather than a box: gently recessed contours, rounded corners, and dual padded handles over the same hard-shell protection as the rest of the range.',
+    story: [
+      'AuraShell starts from a handbag silhouette rather than a utility case, sculpted contours and rounded corners where most vanity cases just shrink a suitcase down. It still does the same job underneath: a rigid shell over makeup, skincare, and toiletries, with a rear trolley sleeve for the walk through the airport.',
+      'Two padded top handles with visible contrast stitching carry it by hand when it is not riding the trolley, and protective feet at the base keep it stable set down on a counter or a train floor.',
+    ],
+    highlights: [
+      {
+        heading: 'Built like a handbag, not a box',
+        body: 'Recessed contours and rounded corners give AuraShell a fashion silhouette that happens to also be a hard-shell case.',
+      },
+      {
+        heading: 'Stitched, not just moulded',
+        body: 'Visible contrast stitching around the handle attachments adds a tailored detail a plain moulded case would skip.',
+      },
+      {
+        heading: 'Stands on its own',
+        body: 'Protective feet at the base keep AuraShell upright and stable wherever it is set down, counter, floor, or overhead bin.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',      value: 'Polycarbonate + ABS' },
+      { label: 'Size (14″)', value: '31 × 19.5 × 29 cm · approx. 2 kg' },
+      { label: 'Closure',    value: 'Zip-around closure' },
+      { label: 'Carry',      value: 'Dual padded top handles' },
+      { label: 'Attachment', value: 'Rear trolley sleeve' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: ['1298d867-50cf-46fe-3999-d26a5db25c00', '50274325-8a3c-40d0-10d8-c743561cba00'],
+    features: [
+      { label: 'Handbag-inspired hard shell' },
+      { label: 'Zip-around closure' },
+      { label: 'Dual padded top handles' },
+      { label: 'Rear trolley sleeve' },
+      { label: 'Protective base feet' },
+      { label: 'Contrast stitching detail' },
+    ],
+    variants: [
+      { color: 'Purple',     colorHex: '#7B5EA7', images: ['1298d867-50cf-46fe-3999-d26a5db25c00', '50274325-8a3c-40d0-10d8-c743561cba00'], sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
+      { color: 'Rose Gold',  colorHex: '#B76E79', images: ['6a9386c8-b371-469a-461c-1d01d2475900', '530d5e4a-2b54-46a4-9ca2-146253d86300'],  sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
+      { color: 'Tender Blue',colorHex: '#89CFF0', images: ['8486cde8-f996-4176-2334-b6d89e51df00', '007e284e-9e98-449f-214d-4140d5b51100'], sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
+      { color: 'Red',        colorHex: '#C62828', images: ['50501b7d-a529-4d2f-8905-270b671d7a00', 'e44b6ed3-fceb-4428-eaeb-280b063d0100'],        sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
+      { color: 'Navy Blue',  colorHex: '#1A2744', images: ['9f9308a9-d29c-4803-3abd-9604d029f700', '183e39e2-f17f-4df6-c695-a5b52d3a9a00'],  sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
+      { color: 'Grey',       colorHex: '#757575', images: ['baad860a-7951-491c-74cf-9619f7c72100', 'f06c500d-899f-404a-4cd4-fc554fc51500'],       sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
+      { color: 'Black',      colorHex: '#212121', images: ['54a3cf1a-c9c0-439f-6d63-78bdbf725400', 'ec43d86a-e1eb-4370-1d8a-d0715186fa00', '9fbc6381-c01d-4ec8-47c7-4634751b0600'],      sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
     ],
   },
 
@@ -4194,7 +4254,7 @@ export const PRODUCTS: Product[] = [
       {
         color: 'Silver', colorHex: '#BDBDBD',
         images: ['6cf3ba78-e6d8-4183-dc8c-f8a0d255f000', '2325ea79-53e1-4df1-b066-a9c9b08a3a00', 'b306ec65-0681-4e40-5666-87a14a71ca00', '3a4caf97-0829-4c66-ffdd-41ad25c3a700', '8bf6d2fe-9619-4513-8938-68afd661e200', 'cbb79ef0-9c6c-422a-c1d7-e4b21a3e3500'],
-        sizes: [{ size: 'One Size', price: 9999, stock: 10 }],
+        sizes: [{ size: 'One Size', price: 1999, stock: 10 }],
       },
     ],
   },
@@ -4244,7 +4304,7 @@ export const PRODUCTS: Product[] = [
       {
         color: 'Silver', colorHex: '#BDBDBD',
         images: ['d47f241e-70b1-4c65-b29b-ae93be1c2500', '3d0c2378-d111-45d9-7fe9-47fda2df0b00', '7abfefa2-818e-4a8c-72b6-2c8ffb572f00', 'f1c7f7e1-f931-4054-de4f-c30e92a6c100', 'f0303fb0-bda6-4c9c-2895-926a24fd1a00', '0b0f78f4-3fa8-4bad-7909-e93acb10cc00', 'a83518f8-1147-483c-bc69-fae193493f00'],
-        sizes: [{ size: 'One Size', price: 9999, stock: 10 }],
+        sizes: [{ size: 'One Size', price: 1999, stock: 10 }],
       },
     ],
   },
@@ -4294,68 +4354,8 @@ export const PRODUCTS: Product[] = [
       {
         color: 'Silver', colorHex: '#BDBDBD',
         images: ['45dac148-397f-4e0b-583b-029371ac9f00', 'c13c42ca-6431-427f-a092-43171750fb00', '47687b74-6a30-4524-59d0-03a7f1f66600', '7debe021-dd88-48f1-5e93-3b84d4a3f600', 'd3ef9cf7-f1d7-40c8-3522-cba88014dc00', '64351003-1376-410c-a59e-5f6156151d00'],
-        sizes: [{ size: 'One Size', price: 9999, stock: 15 }],
+        sizes: [{ size: 'One Size', price: 1999, stock: 15 }],
       },
-    ],
-  },
-
-  // ── AuraShell ────────────────────────────────────────────────────────────
-  {
-    id: 'aurashell',
-    metaTitle: 'AuraShell Hard Shell Vanity Case',
-    metaDescription: 'A handbag-inspired hard-shell vanity case with dual padded handles, a rear trolley sleeve, and a zip-around closure.',
-    keywords: ['hard shell vanity case', 'handbag inspired cosmetic case', 'trolley sleeve vanity case', 'travel cosmetic organiser', 'structured toiletry bag'],
-    name: 'AuraShell',
-    slug: 'aurashell',
-    category: 'vanity',
-    isFeatured: true,
-    hideSizeGuide: true,
-    description:
-      'A vanity case shaped like a handbag rather than a box: gently recessed contours, rounded corners, and dual padded handles over the same hard-shell protection as the rest of the range.',
-    story: [
-      'AuraShell starts from a handbag silhouette rather than a utility case, sculpted contours and rounded corners where most vanity cases just shrink a suitcase down. It still does the same job underneath: a rigid shell over makeup, skincare, and toiletries, with a rear trolley sleeve for the walk through the airport.',
-      'Two padded top handles with visible contrast stitching carry it by hand when it is not riding the trolley, and protective feet at the base keep it stable set down on a counter or a train floor.',
-    ],
-    highlights: [
-      {
-        heading: 'Built like a handbag, not a box',
-        body: 'Recessed contours and rounded corners give AuraShell a fashion silhouette that happens to also be a hard-shell case.',
-      },
-      {
-        heading: 'Stitched, not just moulded',
-        body: 'Visible contrast stitching around the handle attachments adds a tailored detail a plain moulded case would skip.',
-      },
-      {
-        heading: 'Stands on its own',
-        body: 'Protective feet at the base keep AuraShell upright and stable wherever it is set down, counter, floor, or overhead bin.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',      value: 'Polycarbonate + ABS' },
-      { label: 'Size (14″)', value: '31 × 19.5 × 29 cm · approx. 2 kg' },
-      { label: 'Closure',    value: 'Zip-around closure' },
-      { label: 'Carry',      value: 'Dual padded top handles' },
-      { label: 'Attachment', value: 'Rear trolley sleeve' },
-    ],
-    warranty:
-      '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['1298d867-50cf-46fe-3999-d26a5db25c00', '50274325-8a3c-40d0-10d8-c743561cba00'],
-    features: [
-      { label: 'Handbag-inspired hard shell' },
-      { label: 'Zip-around closure' },
-      { label: 'Dual padded top handles' },
-      { label: 'Rear trolley sleeve' },
-      { label: 'Protective base feet' },
-      { label: 'Contrast stitching detail' },
-    ],
-    variants: [
-      { color: 'Purple',     colorHex: '#7B5EA7', images: ['1298d867-50cf-46fe-3999-d26a5db25c00', '50274325-8a3c-40d0-10d8-c743561cba00'], sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
-      { color: 'Rose Gold',  colorHex: '#B76E79', images: ['6a9386c8-b371-469a-461c-1d01d2475900', '530d5e4a-2b54-46a4-9ca2-146253d86300'],  sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
-      { color: 'Tender Blue',colorHex: '#89CFF0', images: ['8486cde8-f996-4176-2334-b6d89e51df00', '007e284e-9e98-449f-214d-4140d5b51100'], sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
-      { color: 'Red',        colorHex: '#C62828', images: ['50501b7d-a529-4d2f-8905-270b671d7a00', 'e44b6ed3-fceb-4428-eaeb-280b063d0100'],        sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
-      { color: 'Navy Blue',  colorHex: '#1A2744', images: ['9f9308a9-d29c-4803-3abd-9604d029f700', '183e39e2-f17f-4df6-c695-a5b52d3a9a00'],  sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
-      { color: 'Grey',       colorHex: '#757575', images: ['baad860a-7951-491c-74cf-9619f7c72100', 'f06c500d-899f-404a-4cd4-fc554fc51500'],       sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
-      { color: 'Black',      colorHex: '#212121', images: ['54a3cf1a-c9c0-439f-6d63-78bdbf725400', 'ec43d86a-e1eb-4370-1d8a-d0715186fa00', '9fbc6381-c01d-4ec8-47c7-4634751b0600'],      sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
     ],
   },
 
