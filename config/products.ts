@@ -2373,7 +2373,7 @@ export const PRODUCTS: Product[] = [
           'a72e0ef1-c87d-46dc-7702-50f4d78f0300',
         ],
         sizes: [
-          { size: 'One Size', price: 9490, stock: 30 },
+          { size: 'One Size', price: 3290, stock: 30 },
         ],
       },
       {
@@ -2385,7 +2385,7 @@ export const PRODUCTS: Product[] = [
           '73a05ac5-cbce-4d2d-d558-58a5c7e1d300',
         ],
         sizes: [
-          { size: 'One Size', price: 9490, stock: 30 },
+          { size: 'One Size', price: 3290, stock: 30 },
         ],
       },
       {
@@ -2398,7 +2398,7 @@ export const PRODUCTS: Product[] = [
           'dd7691b4-6208-46f8-e160-823ae6697c00',
         ],
         sizes: [
-          { size: 'One Size', price: 9490, stock: 30 },
+          { size: 'One Size', price: 3290, stock: 30 },
         ],
       },
     ],
