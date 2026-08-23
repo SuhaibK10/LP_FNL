@@ -34,7 +34,7 @@
 // the form never blocks the download on network/webhook failure).
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const EXPO_BANNER_ENABLED = true
+export const EXPO_BANNER_ENABLED = false
 
 export const EXPO_BANNER = {
   eyebrow:      'Gifts World Expo · Bengaluru 2026',

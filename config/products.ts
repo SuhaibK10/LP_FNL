@@ -85,106 +85,6 @@ export const HERO_SLIDES: HeroSlide[] = [
 // ─── Products ─────────────────────────────────────────────────────────────────
 export const PRODUCTS: Product[] = [
 
-  // ── SkyTrail ────────────────────────────────────────────────────────────
-  {
-    id: 'skytrail',
-    imageFit: 'cover',
-    metaTitle: 'SkyTrail Hard Shell Trolley Bag in 20″, 24″ & 28″',
-    metaDescription: 'Premium polycarbonate hard-shell luggage with combination lock, 360° spinner wheels, and organised interior. Three sizes, 3-year warranty.',
-    keywords: ['premium hard shell luggage', 'combination lock suitcase', '360 spinner wheel trolley', 'lightweight travel luggage', 'check-in luggage india'],
-    name: 'SkyTrail',
-    slug: 'skytrail',
-    category: 'trolley',
-    isFeatured: true,
-    mrp: 9099,
-    description:
-      'Built for the frequent flyer. SkyTrail combines a sleek hard shell ABS body with 360° spinner wheels and combination lock. Smooth, secure, and ready for boarding.',
-    story: [
-      'SkyTrail is the suitcase we build for people who fly often enough to stop counting. The brief was simple: quiet looks, hard protection, and wheels that make an airport feel shorter.',
-      'Each of the three sizes is moulded from polycarbonate and ABS with reinforced corners. Inside, compression straps and zipped dividers keep a week of packing exactly where it started, and a three-dial combination lock closes over all of it.',
-    ],
-    highlights: [
-      {
-        heading: 'Quiet on the outside',
-        body: 'Clean lines, a low-sheen finish, and no loud branding. SkyTrail is designed to look as at home in a hotel lobby as it does on a carousel, on day one and on day five hundred.',
-      },
-      {
-        heading: 'Serious underneath',
-        body: 'Reinforced corners absorb the knocks that travel deals out, while the hard shell holds its shape and finish through years of overhead bins and baggage holds.',
-      },
-      {
-        heading: 'Four wheels, no drag',
-        body: '360° spinner wheels roll silently in any direction, and the telescopic handle is tuned for one-handed steering through crowded terminals.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',        value: 'Polycarbonate + ABS' },
-      { label: 'Cabin (20″)',  value: '55.9 × 38.1 × 22.9 cm · approx. 2.5 kg · 48.6 L' },
-      { label: 'Medium (24″)', value: '66 × 44.5 × 26.7 cm · approx. 3.6 kg · 78.2 L' },
-      { label: 'Large (28″)',  value: '76.2 × 50.8 × 30.5 cm · approx. 4.3 kg · 117.9 L' },
-      { label: 'Lock',         value: '3-digit combination lock' },
-      { label: 'Wheels',       value: '360° spinner wheels' },
-    ],
-    warranty:
-      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    faqs: [
-      {
-        q: 'Which size do I need?',
-        a: 'The cabin handles two to four days, the 24″ covers a week, and the 28″ is built for a fortnight, or for one person packing for two.',
-      },
-      {
-        q: 'Will the cabin size be accepted on board?',
-        a: 'It is sized for standard cabin allowances on most domestic and international carriers. If your airline enforces strict gauge checks, compare the dimensions above with its published limits before you fly.',
-      },
-    ],
-    images: [
-      // 'af0b6d0c-556b-4de2-12ff-dafb614c5600',
-      // 'f3a7cf1c-9113-4853-4d2d-5a2096b9fd00',
-      'b2abf2d8-e1d1-4503-b822-98df82a87c00',
-      'f1babd8d-7612-4504-d53f-8fec0cdb9900',
-      '08e57a49-abcf-4615-4fdd-78b15cd72a00',
-    ],
-    features: [
-      { label: '360° spinner wheels' },
-      { label: 'Combination lock' },
-      { label: 'Telescopic handle' },
-      { label: 'Hard shell ABS' },
-      { label: 'Anti-theft zipper' },
-      { label: 'Cross packing straps' },
-      { label: 'Impact resistant' },
-      { label: 'Lightweight build' },
-    ],
-    variants: [
-      {
-        color: 'Charcoal',
-        colorHex: '#3D3D3D',
-        sizes: [
-          { size: 'Cabin', price: 2749, stock: 50, sku: '8906206840292' },
-          { size: 'Medium', price: 3099, stock: 40, sku: '8906206840308' },
-          { size: 'Large', price: 3449, stock: 30, sku: '8906206840315' },
-        ],
-      },
-      {
-        color: 'Grey',
-        colorHex: '#9E9E9E',
-        sizes: [
-          { size: 'Cabin', price: 2749, stock: 50, sku: '8906206840346' },
-          { size: 'Medium', price: 3099, stock: 40, sku: '8906206840339' },
-          { size: 'Large', price: 3449, stock: 30, sku: '8906206840322' },
-        ],
-      },
-      {
-        color: 'Midnight Blue',
-        colorHex: '#586483',
-        sizes: [
-          { size: 'Cabin', price: 2749, stock: 50 },
-          { size: 'Medium', price: 3099, stock: 40 },
-          { size: 'Large', price: 3449, stock: 30 },
-        ],
-      },
-    ],
-  },
-
   // ── AeroSmart 3-in-1 ────────────────────────────────────────────────────
   {
     id: 'aerosmart-3in1',
@@ -329,6 +229,140 @@ export const PRODUCTS: Product[] = [
         ],
       },
 
+    ],
+  },
+
+  // ── AeroSmart Pro ────────────────────────────────────────────────────────
+  {
+    id: 'aerosmart-pro',
+    imageFit: 'cover',
+    metaTitle: 'AeroSmart Pro Cabin Trolley with Attached Companion Case',
+    metaDescription: 'The premium AeroSmart, a ribbed metal-finish shell with leather-trimmed accents and a detachable companion case, combination lock, and 360° spinner wheels.',
+    keywords: ['premium cabin trolley', 'leather trim hard shell suitcase', 'trolley with detachable case', 'combination lock trolley bag', '360 spinner wheel cabin bag'],
+    name: 'AeroSmart Pro',
+    slug: 'aerosmart-pro',
+    category: 'trolley',
+    tag: 'Flagship',
+    isFeatured: true,
+    mrp: 12990,
+    description:
+      'The most premium case in the AeroSmart line. A ribbed metal-finish shell with leather-trimmed edges, paired with a detachable companion case for the things you want closest at hand.',
+    story: [
+      'AeroSmart Pro takes the line\'s three-way access idea and finishes it in materials built for the front of the queue: a brushed metallic shell with genuine leather trim at every edge, and a detachable companion case that clips on for the walk through the terminal and off again at the hotel.',
+      'Underneath the finish it runs on the same fundamentals as every AeroSmart: a polycarbonate and ABS shell, cross-compression straps, an integrated combination lock, and 360° spinner wheels.',
+    ],
+    highlights: [
+      {
+        heading: 'A companion case, not an afterthought',
+        body: 'The detachable case clips to the main shell for transit and comes free for the plane, the meeting, or the hotel gym.',
+      },
+      {
+        heading: 'Leather where it is felt',
+        body: 'Leather-trimmed edges and a leather top handle bring a tactile finish to a hard-shell case, without giving up any of the protection.',
+      },
+      {
+        heading: 'Built to be handled badly',
+        body: 'A polycarbonate and ABS shell with reinforced corners takes the impacts so your things don\'t have to. A combination lock keeps the main cabin sealed between check-ins.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',        value: 'Polycarbonate + ABS, ribbed metallic finish' },
+      { label: 'Cabin (20″)',  value: '57.5 × 38 × 26 cm · approx. 3.6 kg' },
+      { label: 'Trim',         value: 'Leather-trimmed edges and top handle' },
+      { label: 'Companion',    value: 'Detachable companion case' },
+      { label: 'Lock',         value: '3-digit combination lock' },
+      { label: 'Wheels',       value: '360° spinner wheels' },
+      { label: 'Handle',       value: 'Multi-stage telescopic' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      'd886cfeb-32a7-4449-9c6c-f3c6072b4e00',
+    ],
+    features: [
+      { label: 'Detachable companion case' },
+      { label: 'Leather-trimmed edges' },
+      { label: '360° spinner wheels' },
+      { label: 'Hard shell ABS' },
+      { label: 'Multi-stage telescopic handle' },
+      { label: 'Combination lock' },
+      { label: 'Cross packing straps' },
+    ],
+    variants: [
+      {
+        color: 'Silver',
+        colorHex: '#B0B4B8',
+        accentColor: 'Tan leather trim',
+        sizes: [
+          { size: 'Cabin', price: 8990, stock: 25 },
+        ],
+      },
+    ],
+  },
+
+  // ── AeroSmart Gloss ──────────────────────────────────────────────────────
+  {
+    id: 'aerosmart-gloss',
+    imageFit: 'cover',
+    metaTitle: 'AeroSmart Gloss Cabin Trolley with Attached Companion Case',
+    metaDescription: 'A glossy polycarbonate ribbed shell trolley with a detachable companion case, combination lock, and 360° spinner wheels.',
+    keywords: ['glossy hard shell suitcase', 'polycarbonate cabin trolley', 'trolley with detachable case', 'combination lock trolley bag', '360 spinner wheel cabin bag'],
+    name: 'AeroSmart Gloss',
+    slug: 'aerosmart-gloss',
+    category: 'trolley',
+    isFeatured: true,
+    mrp: 10990,
+    description:
+      'A high-shine polycarbonate finish on the AeroSmart\'s ribbed shell, paired with a detachable companion case for the things you want closest at hand.',
+    story: [
+      'AeroSmart Gloss keeps the line\'s three-way access idea and finishes the shell in a mirror-polished polycarbonate that catches the light across any terminal. A detachable companion case clips on for transit and comes free wherever it is needed next.',
+      'Underneath the finish it runs on the same fundamentals as every AeroSmart: a polycarbonate and ABS shell, cross-compression straps, an integrated combination lock, and 360° spinner wheels.',
+    ],
+    highlights: [
+      {
+        heading: 'A companion case, not an afterthought',
+        body: 'The detachable case clips to the main shell for transit and comes free for the plane, the meeting, or the hotel gym.',
+      },
+      {
+        heading: 'A finish that catches the light',
+        body: 'The high-gloss polycarbonate shell reads sharp and modern, a clean alternative to the brand\'s matte-finish cases.',
+      },
+      {
+        heading: 'Built to be handled badly',
+        body: 'A polycarbonate and ABS shell with reinforced corners takes the impacts so your things don\'t have to. A combination lock keeps the main cabin sealed between check-ins.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',        value: 'Polycarbonate + ABS, high-gloss ribbed finish' },
+      { label: 'Cabin (20″)',  value: '57.5 × 38 × 26 cm · approx. 3.5 kg' },
+      { label: 'Companion',    value: 'Detachable companion case' },
+      { label: 'Lock',         value: '3-digit combination lock' },
+      { label: 'Wheels',       value: '360° spinner wheels' },
+      { label: 'Handle',       value: 'Multi-stage telescopic' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      // 'ff8154e9-293a-4064-23a6-63e82aad3700',
+      'efa83da4-fd4f-457f-1322-6f316dbcd900',
+    ],
+    features: [
+      { label: 'Detachable companion case' },
+      { label: 'High-gloss polycarbonate shell' },
+      { label: '360° spinner wheels' },
+      { label: 'Hard shell ABS' },
+      { label: 'Multi-stage telescopic handle' },
+      { label: 'Combination lock' },
+      { label: 'Cross packing straps' },
+    ],
+    variants: [
+      {
+        color: 'Silver',
+        colorHex: '#B0B4B8',
+        sizes: [
+          { size: 'Cabin', price: 6990, stock: 25 },
+        ],
+      },
     ],
   },
 
@@ -567,140 +601,6 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
-  // ── AeroSmart Pro ────────────────────────────────────────────────────────
-  {
-    id: 'aerosmart-pro',
-    imageFit: 'cover',
-    metaTitle: 'AeroSmart Pro Cabin Trolley with Attached Companion Case',
-    metaDescription: 'The premium AeroSmart, a ribbed metal-finish shell with leather-trimmed accents and a detachable companion case, combination lock, and 360° spinner wheels.',
-    keywords: ['premium cabin trolley', 'leather trim hard shell suitcase', 'trolley with detachable case', 'combination lock trolley bag', '360 spinner wheel cabin bag'],
-    name: 'AeroSmart Pro',
-    slug: 'aerosmart-pro',
-    category: 'trolley',
-    tag: 'Flagship',
-    isFeatured: true,
-    mrp: 12990,
-    description:
-      'The most premium case in the AeroSmart line. A ribbed metal-finish shell with leather-trimmed edges, paired with a detachable companion case for the things you want closest at hand.',
-    story: [
-      'AeroSmart Pro takes the line\'s three-way access idea and finishes it in materials built for the front of the queue: a brushed metallic shell with genuine leather trim at every edge, and a detachable companion case that clips on for the walk through the terminal and off again at the hotel.',
-      'Underneath the finish it runs on the same fundamentals as every AeroSmart: a polycarbonate and ABS shell, cross-compression straps, an integrated combination lock, and 360° spinner wheels.',
-    ],
-    highlights: [
-      {
-        heading: 'A companion case, not an afterthought',
-        body: 'The detachable case clips to the main shell for transit and comes free for the plane, the meeting, or the hotel gym.',
-      },
-      {
-        heading: 'Leather where it is felt',
-        body: 'Leather-trimmed edges and a leather top handle bring a tactile finish to a hard-shell case, without giving up any of the protection.',
-      },
-      {
-        heading: 'Built to be handled badly',
-        body: 'A polycarbonate and ABS shell with reinforced corners takes the impacts so your things don\'t have to. A combination lock keeps the main cabin sealed between check-ins.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',        value: 'Polycarbonate + ABS, ribbed metallic finish' },
-      { label: 'Cabin (20″)',  value: '57.5 × 38 × 26 cm · approx. 3.6 kg' },
-      { label: 'Trim',         value: 'Leather-trimmed edges and top handle' },
-      { label: 'Companion',    value: 'Detachable companion case' },
-      { label: 'Lock',         value: '3-digit combination lock' },
-      { label: 'Wheels',       value: '360° spinner wheels' },
-      { label: 'Handle',       value: 'Multi-stage telescopic' },
-    ],
-    warranty:
-      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: [
-      'd886cfeb-32a7-4449-9c6c-f3c6072b4e00',
-    ],
-    features: [
-      { label: 'Detachable companion case' },
-      { label: 'Leather-trimmed edges' },
-      { label: '360° spinner wheels' },
-      { label: 'Hard shell ABS' },
-      { label: 'Multi-stage telescopic handle' },
-      { label: 'Combination lock' },
-      { label: 'Cross packing straps' },
-    ],
-    variants: [
-      {
-        color: 'Silver',
-        colorHex: '#B0B4B8',
-        accentColor: 'Tan leather trim',
-        sizes: [
-          { size: 'Cabin', price: 8990, stock: 25 },
-        ],
-      },
-    ],
-  },
-
-  // ── AeroSmart Gloss ──────────────────────────────────────────────────────
-  {
-    id: 'aerosmart-gloss',
-    imageFit: 'cover',
-    metaTitle: 'AeroSmart Gloss Cabin Trolley with Attached Companion Case',
-    metaDescription: 'A glossy polycarbonate ribbed shell trolley with a detachable companion case, combination lock, and 360° spinner wheels.',
-    keywords: ['glossy hard shell suitcase', 'polycarbonate cabin trolley', 'trolley with detachable case', 'combination lock trolley bag', '360 spinner wheel cabin bag'],
-    name: 'AeroSmart Gloss',
-    slug: 'aerosmart-gloss',
-    category: 'trolley',
-    isFeatured: true,
-    mrp: 10990,
-    description:
-      'A high-shine polycarbonate finish on the AeroSmart\'s ribbed shell, paired with a detachable companion case for the things you want closest at hand.',
-    story: [
-      'AeroSmart Gloss keeps the line\'s three-way access idea and finishes the shell in a mirror-polished polycarbonate that catches the light across any terminal. A detachable companion case clips on for transit and comes free wherever it is needed next.',
-      'Underneath the finish it runs on the same fundamentals as every AeroSmart: a polycarbonate and ABS shell, cross-compression straps, an integrated combination lock, and 360° spinner wheels.',
-    ],
-    highlights: [
-      {
-        heading: 'A companion case, not an afterthought',
-        body: 'The detachable case clips to the main shell for transit and comes free for the plane, the meeting, or the hotel gym.',
-      },
-      {
-        heading: 'A finish that catches the light',
-        body: 'The high-gloss polycarbonate shell reads sharp and modern, a clean alternative to the brand\'s matte-finish cases.',
-      },
-      {
-        heading: 'Built to be handled badly',
-        body: 'A polycarbonate and ABS shell with reinforced corners takes the impacts so your things don\'t have to. A combination lock keeps the main cabin sealed between check-ins.',
-      },
-    ],
-    specs: [
-      { label: 'Shell',        value: 'Polycarbonate + ABS, high-gloss ribbed finish' },
-      { label: 'Cabin (20″)',  value: '57.5 × 38 × 26 cm · approx. 3.5 kg' },
-      { label: 'Companion',    value: 'Detachable companion case' },
-      { label: 'Lock',         value: '3-digit combination lock' },
-      { label: 'Wheels',       value: '360° spinner wheels' },
-      { label: 'Handle',       value: 'Multi-stage telescopic' },
-    ],
-    warranty:
-      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: [
-      // 'ff8154e9-293a-4064-23a6-63e82aad3700',
-      'efa83da4-fd4f-457f-1322-6f316dbcd900',
-    ],
-    features: [
-      { label: 'Detachable companion case' },
-      { label: 'High-gloss polycarbonate shell' },
-      { label: '360° spinner wheels' },
-      { label: 'Hard shell ABS' },
-      { label: 'Multi-stage telescopic handle' },
-      { label: 'Combination lock' },
-      { label: 'Cross packing straps' },
-    ],
-    variants: [
-      {
-        color: 'Silver',
-        colorHex: '#B0B4B8',
-        sizes: [
-          { size: 'Cabin', price: 6990, stock: 25 },
-        ],
-      },
-    ],
-  },
-
   // ── ShirtVault ──────────────────────────────────────────────────────────
   {
     id: 'shirtvault',
@@ -778,6 +678,106 @@ export const PRODUCTS: Product[] = [
         colorHex: '#C9CBD1',
         sizes: [
           { size: 'One Size', price: 1499, stock: 50 },
+        ],
+      },
+    ],
+  },
+
+  // ── SkyTrail ────────────────────────────────────────────────────────────
+  {
+    id: 'skytrail',
+    imageFit: 'cover',
+    metaTitle: 'SkyTrail Hard Shell Trolley Bag in 20″, 24″ & 28″',
+    metaDescription: 'Premium polycarbonate hard-shell luggage with combination lock, 360° spinner wheels, and organised interior. Three sizes, 3-year warranty.',
+    keywords: ['premium hard shell luggage', 'combination lock suitcase', '360 spinner wheel trolley', 'lightweight travel luggage', 'check-in luggage india'],
+    name: 'SkyTrail',
+    slug: 'skytrail',
+    category: 'trolley',
+    isFeatured: true,
+    mrp: 9099,
+    description:
+      'Built for the frequent flyer. SkyTrail combines a sleek hard shell ABS body with 360° spinner wheels and combination lock. Smooth, secure, and ready for boarding.',
+    story: [
+      'SkyTrail is the suitcase we build for people who fly often enough to stop counting. The brief was simple: quiet looks, hard protection, and wheels that make an airport feel shorter.',
+      'Each of the three sizes is moulded from polycarbonate and ABS with reinforced corners. Inside, compression straps and zipped dividers keep a week of packing exactly where it started, and a three-dial combination lock closes over all of it.',
+    ],
+    highlights: [
+      {
+        heading: 'Quiet on the outside',
+        body: 'Clean lines, a low-sheen finish, and no loud branding. SkyTrail is designed to look as at home in a hotel lobby as it does on a carousel, on day one and on day five hundred.',
+      },
+      {
+        heading: 'Serious underneath',
+        body: 'Reinforced corners absorb the knocks that travel deals out, while the hard shell holds its shape and finish through years of overhead bins and baggage holds.',
+      },
+      {
+        heading: 'Four wheels, no drag',
+        body: '360° spinner wheels roll silently in any direction, and the telescopic handle is tuned for one-handed steering through crowded terminals.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',        value: 'Polycarbonate + ABS' },
+      { label: 'Cabin (20″)',  value: '55.9 × 38.1 × 22.9 cm · approx. 2.5 kg · 48.6 L' },
+      { label: 'Medium (24″)', value: '66 × 44.5 × 26.7 cm · approx. 3.6 kg · 78.2 L' },
+      { label: 'Large (28″)',  value: '76.2 × 50.8 × 30.5 cm · approx. 4.3 kg · 117.9 L' },
+      { label: 'Lock',         value: '3-digit combination lock' },
+      { label: 'Wheels',       value: '360° spinner wheels' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    faqs: [
+      {
+        q: 'Which size do I need?',
+        a: 'The cabin handles two to four days, the 24″ covers a week, and the 28″ is built for a fortnight, or for one person packing for two.',
+      },
+      {
+        q: 'Will the cabin size be accepted on board?',
+        a: 'It is sized for standard cabin allowances on most domestic and international carriers. If your airline enforces strict gauge checks, compare the dimensions above with its published limits before you fly.',
+      },
+    ],
+    images: [
+      // 'af0b6d0c-556b-4de2-12ff-dafb614c5600',
+      // 'f3a7cf1c-9113-4853-4d2d-5a2096b9fd00',
+      'b2abf2d8-e1d1-4503-b822-98df82a87c00',
+      'f1babd8d-7612-4504-d53f-8fec0cdb9900',
+      '08e57a49-abcf-4615-4fdd-78b15cd72a00',
+    ],
+    features: [
+      { label: '360° spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Hard shell ABS' },
+      { label: 'Anti-theft zipper' },
+      { label: 'Cross packing straps' },
+      { label: 'Impact resistant' },
+      { label: 'Lightweight build' },
+    ],
+    variants: [
+      {
+        color: 'Charcoal',
+        colorHex: '#3D3D3D',
+        sizes: [
+          { size: 'Cabin', price: 2749, stock: 50, sku: '8906206840292' },
+          { size: 'Medium', price: 3099, stock: 40, sku: '8906206840308' },
+          { size: 'Large', price: 3449, stock: 30, sku: '8906206840315' },
+        ],
+      },
+      {
+        color: 'Grey',
+        colorHex: '#9E9E9E',
+        sizes: [
+          { size: 'Cabin', price: 2749, stock: 50, sku: '8906206840346' },
+          { size: 'Medium', price: 3099, stock: 40, sku: '8906206840339' },
+          { size: 'Large', price: 3449, stock: 30, sku: '8906206840322' },
+        ],
+      },
+      {
+        color: 'Midnight Blue',
+        colorHex: '#586483',
+        sizes: [
+          { size: 'Cabin', price: 2749, stock: 50 },
+          { size: 'Medium', price: 3099, stock: 40 },
+          { size: 'Large', price: 3449, stock: 30 },
         ],
       },
     ],
