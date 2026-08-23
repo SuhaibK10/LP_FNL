@@ -18,18 +18,18 @@ const LONG_PRESS_SLOP_PX = 8    // movement past this before the timer fires rea
 interface Props {
   images: string[]
   productName: string
-  activeColorIndex?: number
+  active: number
+  onActiveChange: (index: number) => void
   recentPurchases?: number
   imageFit?: ImageFit
 }
 
-export function ImageGallery({ images, productName, activeColorIndex, recentPurchases, imageFit }: Props) {
+export function ImageGallery({ images, productName, active, onActiveChange, recentPurchases, imageFit }: Props) {
   // The lifestyle/cover treatment only ever applies to the first photo in
   // the array — every other angle is still a background-removed cutout
   // meant for the pad-on-flat-color default, so forcing cover-fit on those
   // would crop them wrong (no letterbox margin to protect the product).
   const fitFor = (index: number) => (index === 0 ? imageFit : undefined)
-  const [active, setActive]     = useState(activeColorIndex ?? 0)
   // What's actually on screen. Kept a step behind `active` so the current
   // photo never disappears behind a blank frame while the next one is
   // still downloading — see the preload effect below.
@@ -39,10 +39,6 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
   // would otherwise mark each swapped-in image as high-priority too.
   const isFirstLoad = useRef(true)
   useEffect(() => { isFirstLoad.current = false }, [])
-
-  useEffect(() => {
-    if (activeColorIndex !== undefined) setActive(activeColorIndex)
-  }, [activeColorIndex])
 
   // Warm the browser cache for every photo in this gallery as soon as the
   // set is known — covers both a thumbnail click (same color, different
@@ -73,9 +69,9 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
   function handleDragEnd(_: unknown, info: PanInfo) {
     const { offset, velocity } = info
     if (offset.x < -50 || velocity.x < -400) {
-      setActive((a) => Math.min(a + 1, images.length - 1))
+      onActiveChange(Math.min(active + 1, images.length - 1))
     } else if (offset.x > 50 || velocity.x > 400) {
-      setActive((a) => Math.max(a - 1, 0))
+      onActiveChange(Math.max(active - 1, 0))
     }
   }
 
@@ -247,13 +243,15 @@ export function ImageGallery({ images, productName, activeColorIndex, recentPurc
         </AnimatePresence>
       </motion.div>
 
-      {/* Thumbnails */}
+      {/* Thumbnails — mobile only. On desktop this same strip renders inside
+          ProductInfo instead, below the colour swatches, driven by the same
+          `active`/`onActiveChange` pair passed in from ProductPageClient. */}
       {images.length > 1 && (
-        <div className="flex gap-2 overflow-x-auto scrollbar-hide">
+        <div className="flex gap-2 overflow-x-auto scrollbar-hide md:hidden">
           {images.map((img, i) => (
             <button
               key={i}
-              onClick={() => setActive(i)}
+              onClick={() => onActiveChange(i)}
               className={`relative shrink-0 w-16 h-21.25 overflow-hidden bg-lp-image-bg border transition-colors duration-200 ${
                 i === active
                   ? 'border-lp-gold shadow-[inset_0_0_0_1px_var(--color-lp-gold)]'

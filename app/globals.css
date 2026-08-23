@@ -357,6 +357,29 @@
     box-shadow: var(--shadow-card-hover);
   }
 
+  /* ── Shop page palette override ──────────────────────────────────────────
+     Scoped to .shop-theme (wraps app/(store)/shop/page.tsx only) so it never
+     bleeds into the Best Sellers carousel on the homepage, which reuses the
+     same .lp-card / token classes. Redefining the custom properties here
+     lets every Tailwind utility built on them (bg-lp-porcelain, bg-lp-image-bg,
+     text-lp-muted, border-lp-border, etc.) pick up the new values through
+     the normal CSS cascade — no component changes needed. .lp-card's border
+     and shadow are hardcoded rather than token-driven, so those are
+     overridden directly here instead. */
+  .shop-theme {
+    --color-lp-porcelain: #F6F5F2;
+    --color-lp-image-bg:  #FFFFFF;
+    --color-lp-border:    #D9D8D5;
+    --color-lp-muted:     #77736D;
+  }
+  .shop-theme .lp-card {
+    border-color: #D9D8D5;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .shop-theme .lp-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
   /* ── Gold divider line ── */
   .lp-divider-gold {
     display: block;

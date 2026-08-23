@@ -12,6 +12,7 @@ import { useState, useEffect }   from 'react'
 import { useRouter }             from 'next/navigation'
 import { motion }                from 'framer-motion'
 import Link                      from 'next/link'
+import Image                     from 'next/image'
 import { ShoppingBag, Heart, Ruler, Minus, Plus, ArrowRight, Star, Play } from 'lucide-react'
 import { featureIconFor }        from '@/lib/featureIcons'
 import type { Product, ProductSize } from '@/types'
@@ -34,9 +35,14 @@ interface Props {
   defaultColor?: string
   onColorChange?: (index: number) => void
   onColorHover?: (index: number | null) => void
+  // Drives the same main-gallery photo state as ImageGallery's own (mobile)
+  // thumbnail strip — see ProductPageClient, which owns this state since
+  // both components need to read/write it.
+  galleryActiveAngle: number
+  onGalleryAngleChange: (index: number) => void
 }
 
-export function ProductInfo({ product, defaultColor, onColorChange, onColorHover }: Props) {
+export function ProductInfo({ product, defaultColor, onColorChange, onColorHover, galleryActiveAngle, onGalleryAngleChange }: Props) {
   const router        = useRouter()
   const addItem       = useCartStore((s) => s.addItem)
 
@@ -204,6 +210,43 @@ export function ProductInfo({ product, defaultColor, onColorChange, onColorHover
           ))}
         </div>
       </div>
+
+      {/* ── Gallery thumbnails — desktop only. On mobile this same strip
+          renders inside ImageGallery instead, directly under the main
+          photo; here it sits with the rest of the buy-box instead of
+          getting pushed below the fold under a full-height image. Reflects
+          the actually-selected colour rather than a hover-preview, to avoid
+          plumbing that transient state across two sibling components for a
+          cosmetic sync that self-corrects the moment the hover ends. ──── */}
+      {(() => {
+        const galleryImages = variant.images?.length ? variant.images : product.images
+        if (galleryImages.length <= 1) return null
+        return (
+          <div className="hidden md:flex gap-2 overflow-x-auto scrollbar-hide">
+            {galleryImages.map((img, i) => (
+              <button
+                key={i}
+                onClick={() => onGalleryAngleChange(i)}
+                className={`relative shrink-0 w-16 h-21.25 overflow-hidden bg-lp-image-bg border transition-colors duration-200 ${
+                  i === galleryActiveAngle
+                    ? 'border-lp-gold shadow-[inset_0_0_0_1px_var(--color-lp-gold)]'
+                    : 'border-lp-border hover:border-lp-border-strong'
+                }`}
+                aria-label={`View image ${i + 1}`}
+                aria-pressed={i === galleryActiveAngle}
+              >
+                <Image
+                  src={thumbUrl(img, i === 0 ? product.imageFit : undefined)}
+                  alt={`${product.name} thumbnail ${i + 1}`}
+                  fill
+                  className="object-cover object-center"
+                  sizes="64px"
+                />
+              </button>
+            ))}
+          </div>
+        )
+      })()}
 
       {/* ── Size selector ──────────────────────────────────────────────── */}
       {!product.hideSizeSelector && (

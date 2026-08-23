@@ -43,7 +43,7 @@ function CartRow({ item }: { item: CartItem }) {
             src={thumbUrl(item.image, imageFit) || PLACEHOLDER_URL}
             alt={item.productName}
             fill
-            className="object-cover object-center"
+            className={imageFit === 'cover' ? 'object-cover object-center' : 'object-contain object-center'}
             sizes="72px"
           />
         </div>
@@ -168,37 +168,37 @@ export default function CartPage() {
           </div>
 
           {/* Order summary */}
-          <div className="bg-[var(--color-lp-cream)] p-6 md:p-8 h-fit">
-            <h2 className="font-display text-[1.25rem] mb-6">Order Summary</h2>
+          <div className="p-6 md:p-8 h-fit" style={{ backgroundColor: '#4B5563' }}>
+            <h2 className="font-display text-[1.25rem] mb-6 text-lp-porcelain">Order Summary</h2>
 
             <div className="space-y-3 mb-6">
               <div className="flex justify-between">
-                <span className="font-body text-[0.85rem] text-[var(--color-lp-muted)]">Subtotal</span>
-                <span className="font-body text-[0.85rem] text-[var(--color-lp-ink)] font-medium">{formatPrice(subtotal)}</span>
+                <span className="font-body text-[0.85rem] text-lp-porcelain/70">Subtotal</span>
+                <span className="font-body text-[0.85rem] text-lp-porcelain font-medium">{formatPrice(subtotal)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="font-body text-[0.85rem] text-[var(--color-lp-muted)]">Shipping</span>
+                <span className="font-body text-[0.85rem] text-lp-porcelain/70">Shipping</span>
                 <span className="font-body text-[0.85rem] text-[var(--color-lp-success)]">Free</span>
               </div>
             </div>
 
-            <div className="lp-hr mb-4" />
+            <div className="mb-4" style={{ borderTop: '1px solid rgba(255,255,255,0.15)' }} />
 
             <div className="flex justify-between mb-6">
-              <span className="font-display text-[1rem]">Total</span>
-              <span className="font-display text-[1.25rem]">{formatPrice(total)}</span>
+              <span className="font-display text-[1rem] text-lp-porcelain">Total</span>
+              <span className="font-display text-[1.25rem] text-lp-porcelain">{formatPrice(total)}</span>
             </div>
 
             {/* Checkout — navigates to the multi-step checkout flow */}
             <button
               onClick={() => router.push('/checkout')}
-              className="btn-gold w-full justify-center"
+              className="btn-dove w-full justify-center"
             >
               Proceed to Checkout
               <ArrowRight size={15} strokeWidth={1.5} />
             </button>
 
-            <p className="text-center font-body text-[0.68rem] text-[var(--color-lp-faint)] mt-3">
+            <p className="text-center font-body text-[0.68rem] text-lp-porcelain/50 mt-3">
               Secure checkout via Razorpay
             </p>
           </div>

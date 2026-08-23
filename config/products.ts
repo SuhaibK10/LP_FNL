@@ -184,7 +184,7 @@ export const PRODUCTS: Product[] = [
         images: [
           // '91562a63-93b2-4c22-7aab-51d0d8fae000',
           // 'cce20161-5cb9-44aa-8c29-3a1251e92d00',
-          '970f581f-8413-4d14-fc3a-def99eff9e00',
+          '4d72a90c-2712-4c80-3221-906a4afd7000',
           'b68fe362-f1e5-4d94-8e75-c3fe3c208800',
           'dab5cd11-d80c-498a-f842-0f58fa656d00',
           'c3350c15-2dab-46ca-047a-1912fd6df800',
@@ -373,6 +373,7 @@ export const PRODUCTS: Product[] = [
     name: 'Edge16',
     slug: 'edge16',
     category: 'trolley',
+    mrp: 4590,
     isFeatured: true,
     hideSizeGuide: true,
     description:
@@ -418,6 +419,7 @@ export const PRODUCTS: Product[] = [
     name: 'AuraShell',
     slug: 'aurashell',
     category: 'vanity',
+    mrp: 4980,
     isFeatured: true,
     hideSizeGuide: true,
     description:
@@ -459,13 +461,13 @@ export const PRODUCTS: Product[] = [
       { label: 'Contrast stitching detail' },
     ],
     variants: [
-      { color: 'Purple',     colorHex: '#7B5EA7', images: ['1298d867-50cf-46fe-3999-d26a5db25c00', '50274325-8a3c-40d0-10d8-c743561cba00'], sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
-      { color: 'Rose Gold',  colorHex: '#B76E79', images: ['6a9386c8-b371-469a-461c-1d01d2475900', '530d5e4a-2b54-46a4-9ca2-146253d86300'],  sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
-      { color: 'Tender Blue',colorHex: '#89CFF0', images: ['8486cde8-f996-4176-2334-b6d89e51df00', '007e284e-9e98-449f-214d-4140d5b51100'], sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
-      { color: 'Red',        colorHex: '#C62828', images: ['50501b7d-a529-4d2f-8905-270b671d7a00', 'e44b6ed3-fceb-4428-eaeb-280b063d0100'],        sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
-      { color: 'Navy Blue',  colorHex: '#1A2744', images: ['9f9308a9-d29c-4803-3abd-9604d029f700', '183e39e2-f17f-4df6-c695-a5b52d3a9a00'],  sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
-      { color: 'Grey',       colorHex: '#757575', images: ['baad860a-7951-491c-74cf-9619f7c72100', 'f06c500d-899f-404a-4cd4-fc554fc51500'],       sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
-      { color: 'Black',      colorHex: '#212121', images: ['54a3cf1a-c9c0-439f-6d63-78bdbf725400', 'ec43d86a-e1eb-4370-1d8a-d0715186fa00', '9fbc6381-c01d-4ec8-47c7-4634751b0600'],      sizes: [{ size: '14 Inch', price: 3799, stock: 15 }] },
+      { color: 'Rose Gold',  colorHex: '#B76E79', images: ['6a9386c8-b371-469a-461c-1d01d2475900', '530d5e4a-2b54-46a4-9ca2-146253d86300'],  sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Purple',     colorHex: '#7B5EA7', images: ['1298d867-50cf-46fe-3999-d26a5db25c00', '50274325-8a3c-40d0-10d8-c743561cba00'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Tender Blue',colorHex: '#89CFF0', images: ['8486cde8-f996-4176-2334-b6d89e51df00', '007e284e-9e98-449f-214d-4140d5b51100'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Red',        colorHex: '#C62828', images: ['50501b7d-a529-4d2f-8905-270b671d7a00', 'e44b6ed3-fceb-4428-eaeb-280b063d0100'],        sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Navy Blue',  colorHex: '#1A2744', images: ['9f9308a9-d29c-4803-3abd-9604d029f700', '183e39e2-f17f-4df6-c695-a5b52d3a9a00'],  sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Grey',       colorHex: '#757575', images: ['baad860a-7951-491c-74cf-9619f7c72100', 'f06c500d-899f-404a-4cd4-fc554fc51500'],       sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Black',      colorHex: '#212121', images: ['54a3cf1a-c9c0-439f-6d63-78bdbf725400', 'ec43d86a-e1eb-4370-1d8a-d0715186fa00', '9fbc6381-c01d-4ec8-47c7-4634751b0600'],      sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
     ],
   },
 
@@ -522,6 +524,7 @@ export const PRODUCTS: Product[] = [
     name: 'Ridge20',
     slug: 'ridge20',
     category: 'trolley',
+    mrp: 4590,
     isFeatured: true,
     description:
       'A ribbed hard-shell spinner suitcase sized for the cabin. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice for short trips.',
@@ -564,6 +567,7 @@ export const PRODUCTS: Product[] = [
     name: 'AeroPop',
     slug: 'aeropop',
     category: 'trolley',
+    mrp: 4590,
     isFeatured: true,
     description:
       'A colour-blocked hard-shell spinner trolley sized for the cabin. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice for short trips.',
@@ -608,6 +612,7 @@ export const PRODUCTS: Product[] = [
     name: 'Pulse',
     slug: 'pulse',
     category: 'trolley',
+    mrp: 4590,
     description:
       'Pulse is a hard-shell 20" cabin suitcase built to be spotted at baggage claim before it hits the belt. A ribbed, concentric-embossed shell in electric lime carries a TSA-approved combination lock and eight silent spinner wheels that glide instead of drag.',
     story: [
@@ -851,6 +856,7 @@ export const PRODUCTS: Product[] = [
     name: 'AeroX',
     slug: 'aerox',
     category: 'trolley',
+    mrp: 4590,
     description:
       'Built for the walk from check-in to gate. AeroX is a lightweight hard-shell cabin trolley with a TSA-approved combination lock, silent 360° spinner wheels, and a built-in cup holder for the coffee you didn’t have time to finish.',
     story: [
@@ -1123,6 +1129,7 @@ export const PRODUCTS: Product[] = [
     name: 'ProStripe',
     slug: 'prostripe',
     category: 'trolley',
+    mrp: 7498,
     isFeatured: true,
     description:
       'Front-open design for the business traveller who moves fast. Instant access to your laptop, documents, and essentials without opening the main compartment.',
@@ -1194,6 +1201,7 @@ export const PRODUCTS: Product[] = [
     name: 'Champ',
     slug: 'champ',
     category: 'trolley',
+    mrp: 4590,
     isFeatured: true,
     description:
       'A no-nonsense cabin trolley: hard polypropylene shell, smooth spinner wheels, honest weight. Champ covers the short trips that make up most of real travel, reliably and without fuss.',
@@ -1316,7 +1324,7 @@ export const PRODUCTS: Product[] = [
         color: 'Silver',
         colorHex: '#B0B4B8',
         sizes: [
-          { size: 'Cabin', price: 5190, stock: 25 },
+          { size: 'Cabin', price: 3990, stock: 25 },
         ],
       },
     ],
@@ -1331,6 +1339,7 @@ export const PRODUCTS: Product[] = [
     name: 'DiamondLux',
     slug: 'diamondlux',
     category: 'trolley',
+    mrp: 5980,
     isFeatured: true,
     description:
       'Luxury-inspired styling with dependable travel performance. DiamondLux pairs a quilted diamond shell and metallic accents with 360° spinner wheels and a combination lock, for business travellers and modern explorers who want sophistication and durability in one case.',
@@ -1422,6 +1431,7 @@ export const PRODUCTS: Product[] = [
     name: 'StrataLux',
     slug: 'stratalux',
     category: 'trolley',
+    mrp: 7000,
     isFeatured: true,
     description:
       'Refined structure, built for the whole trip. StrataLux pairs a vertically ribbed hard shell with leather-look accent bands and metallic corner details, on 360° silent spinner wheels and a combination lock, for travellers who want their luggage to look as considered as the trip itself.',
@@ -1524,6 +1534,7 @@ export const PRODUCTS: Product[] = [
     name: 'Magma',
     slug: 'magma',
     category: 'trolley',
+    mrp: 4590,
     isFeatured: true,
     description:
       'A ripple-textured hard shell cabin trolley with a combination lock as standard. Light to lift, easy to steer, and secure enough to leave your eyes off it for a minute.',
@@ -1585,6 +1596,7 @@ export const PRODUCTS: Product[] = [
     name: 'ArmorRite',
     slug: 'armorrite',
     category: 'trolley',
+    mrp: 5998,
     isFeatured: true,
     description:
       'Built like armor, designed for every journey. ArmorRite is a rugged hard-shell trolley engineered for travellers who want durability without giving up style, in a bold geometric shell with 360° spinner wheels, TSA-approved security, and an ergonomic telescopic handle.',
@@ -1678,6 +1690,7 @@ export const PRODUCTS: Product[] = [
     name: 'POPShell',
     slug: 'popshell',
     category: 'trolley',
+    mrp: 5998,
     isFeatured: true,
     description:
       'A hard-shell spinner suitcase sized for the cabin, finished with a bold printed graphic front panel that stands out on any carousel. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice for short trips.',
@@ -1721,6 +1734,7 @@ export const PRODUCTS: Product[] = [
     name: 'AeroWeave',
     slug: 'aeroweave',
     category: 'trolley',
+    mrp: 5998,
     isFeatured: true,
     description:
       'A ribbed hard-shell spinner suitcase sized for the cabin. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice for short trips.',
@@ -1763,6 +1777,7 @@ export const PRODUCTS: Product[] = [
     name: 'Zephyr',
     slug: 'zephyr',
     category: 'trolley',
+    mrp: 5998,
     isFeatured: true,
     description:
       'A diagonally embossed hard-shell spinner suitcase sized for the cabin. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice for short trips.',
@@ -1805,6 +1820,7 @@ export const PRODUCTS: Product[] = [
     name: 'Aero-V',
     slug: 'aero-v',
     category: 'trolley',
+    mrp: 5998,
     isFeatured: true,
     description:
       'A hard-shell spinner suitcase sized for the cabin, with a moulded V-pattern shell that catches the light and stiffens every panel. Lightweight ABS construction, 360° spinner wheels, and a combination lock make it an easy, dependable choice for short trips.',
@@ -1847,6 +1863,7 @@ export const PRODUCTS: Product[] = [
     name:        'Attache',
     slug:        'attache-overnighter',
     category:    'overnighter',
+    mrp: 4800,
     cardZoom:    1.3,
     isFeatured:  true,
     description: 'Built for professionals on the move. Cabin-friendly dimensions with smart organisation: dedicated laptop storage, hard-shell protection, and 360° spinner wheels for effortless overnight business travel.',
@@ -1891,12 +1908,12 @@ export const PRODUCTS: Product[] = [
        {
         color:    'Red',
         colorHex: '#C62828',
-        sizes: [{ size: '17 Inch', price: 6999, stock: 30 }],
+        sizes: [{ size: '17 Inch', price: 2400, stock: 30 }],
       },
       {
         color:    'Black',
         colorHex: '#212121',
-        sizes: [{ size: '17 Inch', price: 6999, stock: 30 }],
+        sizes: [{ size: '17 Inch', price: 2400, stock: 30 }],
       },
      
     ],
@@ -1911,6 +1928,7 @@ export const PRODUCTS: Product[] = [
     name:        'SwiftGate',
     slug:        'swiftgate',
     category:    'overnighter',
+    mrp: 6980,
     description: 'Professional styling meets practical organisation. The SwiftGate features a front-opening compartment for instant access to your laptop, tablet, documents, and chargers, without touching the main compartment. Built for overnight trips and short business travel.',
     story: [
       'SwiftGate is named for the way it opens: a front gate for the working half of your trip (laptop, tablet, documents, chargers) that swings open without touching the packed main compartment behind it. Security lines, gate delays, and hotel lobbies all become places you can work from.',
@@ -2327,7 +2345,7 @@ export const PRODUCTS: Product[] = [
           'd8ec8e63-c3e9-423b-4e91-2b00a930ad00',
         ],
         sizes: [
-          { size: 'One Size', price: 2490, stock: 30 },
+          { size: 'One Size', price: 2990, stock: 30 },
         ],
       },
       {
@@ -2346,7 +2364,7 @@ export const PRODUCTS: Product[] = [
           '90cda76f-8f92-43cb-61bb-6195c85dc400',
         ],
         sizes: [
-          { size: 'One Size', price: 2490, stock: 30 },
+          { size: 'One Size', price: 2990, stock: 30 },
         ],
       },
       {
@@ -2358,7 +2376,7 @@ export const PRODUCTS: Product[] = [
           'ab63abc9-1e70-4183-90d4-715e48e75500',
         ],
         sizes: [
-          { size: 'One Size', price: 2490, stock: 30 },
+          { size: 'One Size', price: 2990, stock: 30 },
         ],
       },
     ],
@@ -2374,6 +2392,7 @@ export const PRODUCTS: Product[] = [
     name: 'VelocityPro Ergonomic Backpack',
     slug: 'velocitypro',
     category: 'backpack',
+    mrp: 6580,
     hideSizeSelector: true,
     description:
       'Built for a day that never really stops moving. VelocityPro carries a padded laptop and tablet compartment, an external USB charging port, a concealed pocket for valuables, and a rear trolley sleeve, on breathable straps tuned for the whole commute.',
@@ -2462,6 +2481,88 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
+  // ── TechTrek ─────────────────────────────────────────────────────────────
+  {
+    id: 'techtrek',
+    imageFit: 'cover',
+    metaTitle: 'TechTrek Business Laptop & Travel Backpack',
+    metaDescription: 'A professional multi-compartment laptop and travel backpack for work, commuting, study, and short trips, with organised tech storage, padded straps, and a rear trolley sleeve.',
+    keywords: ['business laptop backpack', 'travel backpack for work', 'organizer backpack for laptop', 'commuter backpack india', 'backpack with trolley sleeve'],
+    name: 'TechTrek',
+    slug: 'techtrek',
+    category: 'backpack',
+    mrp: 7990,
+    hideSizeSelector: true,
+    description:
+      'A professional multi-compartment laptop and travel backpack designed for work, commuting, study, and short trips. TechTrek carries dedicated rear laptop storage, a spacious clamshell main compartment, and multiple organiser pockets, on padded straps built for the whole day.',
+    story: [
+      'TechTrek opens like a suitcase, not a sack. The clamshell main compartment lays flat and securing straps hold packing in place, whether that is a change of clothes for an overnight or the notebooks and cables a working day collects.',
+      'A dedicated rear compartment keeps a laptop separate from the rest, and organiser pockets throughout hold chargers, pens, and documents exactly where they were left. Padded straps, a breathable mesh back panel, and a cushioned top handle carry it the rest of the way, from a morning commute to a short trip away.',
+    ],
+    highlights: [
+      {
+        heading: 'Opens flat, packs clean',
+        body: 'A clamshell-style main compartment with securing straps lays fully open for packing or a security tray, and holds everything in place once it is zipped shut again.',
+      },
+      {
+        heading: 'A place for every cable',
+        body: 'Organised compartments keep a laptop and its accessories, from chargers to cables to documents, out of the single deep pocket where they usually get lost.',
+      },
+      {
+        heading: 'Built for a full day',
+        body: 'Padded adjustable shoulder straps, a breathable mesh back panel, and a cushioned top handle keep TechTrek comfortable from the commute to the boarding gate.',
+      },
+    ],
+    specs: [
+      { label: 'Size',       value: '19″ · 40 × 20 × 25 cm · approx. 1.2 kg' },
+      { label: 'Interior',   value: 'Clamshell main compartment with securing straps, dedicated laptop storage' },
+      { label: 'Storage',    value: 'Multiple organiser pockets, side compartments' },
+      { label: 'Carry',      value: 'Padded adjustable shoulder straps, cushioned top handle, rear trolley sleeve' },
+      { label: 'Back panel', value: 'Breathable mesh cushioning' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      '31571659-0be7-4495-4fdc-eba3ecb0cd00',
+      'c15e0918-32f5-41a8-bbca-12ba8a07af00',
+    ],
+    features: [
+      { label: 'Comfortable fabric lining' },
+      { label: 'Wear resistant' },
+      { label: 'Lightweight build' },
+      { label: 'Smooth zipper' },
+      { label: 'Luggage mounting sleeve' },
+      { label: 'Clamshell main compartment' },
+      { label: 'Spacious compartments' },
+    ],
+    variants: [
+      {
+        color: 'Black',
+        colorHex: '#212121',
+        images: ['31571659-0be7-4495-4fdc-eba3ecb0cd00', '99513a58-3680-449e-d6f4-f573e4627e00', 'a8dca4ec-1a71-47fe-092b-652e795fd800', '0c281a43-e8e1-4d8f-e91f-1906125aae00', '62b6a633-ebd8-4af1-084f-e98577e11900', 'af3636e5-27f1-494b-0ad1-42e23f8f6c00', 'b9fded73-1ab4-4e60-842e-747254178d00', '2297ea5b-a41c-4ae9-355f-e0c2df05e800', '06acda03-6d9b-49ed-9e81-5547d8cb1000'],
+        sizes: [
+          { size: 'One Size', price: 3490, stock: 25 },
+        ],
+      },
+      {
+        color: 'Blue',
+        colorHex: '#1E4B8C',
+        images: ['21a5a147-0cae-4112-6b40-098ecf2cbe00', '4ac9cf69-a827-4cd8-cf9d-f03f394e5600', '9b28fc38-8d6b-4ccb-a499-2b05d7654600', 'b12b2464-3cfe-4080-1e4b-11edf4d4c900', '46bf8e90-85ab-4b6e-7228-b41ba4b36700', 'b41b079f-0863-442e-36af-a4f9cc47fb00', 'b2f4ecec-bf10-4da1-99a5-177cfc3cb200', '03b2ca0e-bc0e-41f6-3463-cf6f70557400'],
+        sizes: [
+          { size: 'One Size', price: 3490, stock: 25 },
+        ],
+      },
+      {
+        color: 'Grey',
+        colorHex: '#9E9E9E',
+        images: ['630149a2-234c-4ce7-5076-0db0a1b98d00', 'f37a384d-3b7f-48e4-8d22-6c259abd3600', '8df5d8e1-0baa-4092-c549-5cd8a78c8800', '9ca66656-f9ce-4346-a970-7fd626ccde00', 'e4c4f6c7-9f80-4dcd-2180-d9f071d87a00', 'ed9833f3-d610-4eeb-1baf-8e39d7227f00', '346f0f9c-f1e2-4590-72f7-dfd6a72e7a00', '7770b51e-d2a9-46e6-0032-8cdbf1188200'],
+        sizes: [
+          { size: 'One Size', price: 3490, stock: 25 },
+        ],
+      },
+    ],
+  },
+
   // ── Urban Pro Backpack ───────────────────────────────────────────────────
   {
     id: 'urban-pro-backpack',
@@ -2471,6 +2572,7 @@ export const PRODUCTS: Product[] = [
     name: 'Urban Pro Ergonomic BackPack',
     slug: 'urban-pro-backpack',
     category: 'backpack',
+    mrp: 5980,
     hideSizeSelector: true,
     description:
       'A sleek, structured backpack designed for modern workdays, travel, and everyday carry. The Urban Pro Backpack combines a clean minimalist profile with practical organization, featuring a spacious main compartment, dedicated laptop storage, front quick-access pocket, side pockets, and padded ergonomic shoulder straps.',
@@ -2576,6 +2678,7 @@ export const PRODUCTS: Product[] = [
     name: 'ArmorPack',
     slug: 'armorpack',
     category: 'backpack',
+    mrp: 5980,
     isFeatured: true,
     hideSizeSelector: true,
     description:
@@ -3110,6 +3213,87 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
+  // ── AeroTech ─────────────────────────────────────────────────────────────
+  {
+    id: 'aerotech',
+    metaTitle: 'AeroTech Backpack — Structured Everyday Carry',
+    metaDescription: 'A clean, structured backpack with organised interior storage, a quick-access front zip pocket, padded straps, and a breathable back panel.',
+    keywords: ['structured backpack', 'office commute backpack', 'business travel backpack', 'everyday carry backpack', 'padded laptop backpack'],
+    name: 'AeroTech',
+    slug: 'aerotech',
+    category: 'backpack',
+    hideSizeSelector: true,
+    mrp: 7990,
+    description:
+      'Built for modern movement, the AeroTech Backpack combines a clean, structured silhouette with smart everyday functionality, equally suited to office commutes, business travel, and everyday carry.',
+    story: [
+      'The spacious interior provides organised storage for work and travel essentials, while the quick-access front zip pocket keeps smaller belongings within easy reach. Padded, adjustable shoulder straps and a breathable back panel add comfort through long commutes and busy days.',
+      'Designed with a compact 42 × 30 × 12 cm profile, AeroTech delivers practical storage without unnecessary bulk. Finished with subtle Louis Polo detailing and available in versatile colourways, it is a sophisticated companion engineered for life on the move.',
+    ],
+    highlights: [
+      {
+        heading: 'Structured, professional design',
+        body: 'A sleek, structured silhouette gives AeroTech a refined profile suited equally to office commutes, business travel, and everyday carry.',
+      },
+      {
+        heading: 'Organised for work and tech',
+        body: 'The spacious main compartment and dedicated interior sections keep everyday work and tech essentials sorted, with a quick-access front zip pocket for smaller belongings.',
+      },
+      {
+        heading: 'Comfortable through the day',
+        body: 'Padded, adjustable shoulder straps and a breathable back panel carry the load comfortably through long commutes and busy days.',
+      },
+    ],
+    specs: [
+      { label: 'Size',       value: '42 × 30 × 12 cm' },
+      { label: 'Interior',   value: 'Spacious main compartment · dedicated tech sections' },
+      { label: 'Storage',    value: 'Quick-access front zip pocket' },
+      { label: 'Carry',      value: 'Padded adjustable shoulder straps · top carry handle' },
+      { label: 'Back panel', value: 'Breathable padded panel' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      '3ad467fd-b412-4b87-276b-cb132823aa00',
+      '8cea762b-2a75-40b0-65e5-c469504fd800',
+    ],
+    features: [
+      { label: 'Sleek, structured design' },
+      { label: 'Organised interior storage' },
+      { label: 'Quick-access front zip pocket' },
+      { label: 'Padded adjustable shoulder straps' },
+      { label: 'Breathable padded back panel' },
+      { label: 'Durable top carry handle' },
+      { label: 'Compact travel-ready profile' },
+    ],
+    variants: [
+      {
+        color: 'Blue',
+        colorHex: '#28384A',
+        images: ['3ad467fd-b412-4b87-276b-cb132823aa00', 'cb7ad1dd-9b74-42aa-4bc5-d8e245af7300', '65177a6c-0917-4214-d399-e9a9578c9a00'],
+        sizes: [
+          { size: 'One Size', price: 3290, stock: 25 },
+        ],
+      },
+      {
+        color: 'Black',
+        colorHex: '#212121',
+        images: ['8cea762b-2a75-40b0-65e5-c469504fd800', '4f591c22-e747-4098-46d6-1b0f611caf00', '3ded24cd-708f-4bf9-c922-54db2082dc00', 'b48bab33-8de8-4915-913a-7c44edc2c100', '7deeb938-a625-419b-2a27-9ba56995a000', '48a8b8b8-0816-4015-2ce9-45bdec3d8600', '0899cd7c-da93-4966-4333-c1459bdbf700', 'ca6b3065-bda2-4f3e-f8a9-c4fad39c5500', 'b659eb2a-0185-43c2-7730-b7e9922f7300', '9575f0bc-28de-41cf-5c09-5c85d16db300'],
+        sizes: [
+          { size: 'One Size', price: 3290, stock: 25 },
+        ],
+      },
+      {
+        color: 'Grey',
+        colorHex: '#5A5A5C',
+        images: ['a956e617-cd2d-4f88-7600-9376fe61f900', '593c763c-7103-4c24-3fc4-db2c7b9d2d00', 'a6af0a3c-1000-4ade-acb9-be579aa7d200', 'fc3f4071-963a-4096-1049-094f6f848800', '35a1234a-3bbb-4a41-e73e-31dedb17af00'],
+        sizes: [
+          { size: 'One Size', price: 3290, stock: 25 },
+        ],
+      },
+    ],
+  },
+
   // ── Regent Luxury ────────────────────────────────────────────────────────
   {
     id: 'regent-luxury',
@@ -3277,7 +3461,7 @@ export const PRODUCTS: Product[] = [
           'e22ab8d1-dd65-4960-0c14-ba9d76bc7e00',
         ],
         sizes: [
-          { size: 'One Size', price: 1800, stock: 30 },
+          { size: 'One Size', price: 1990, stock: 30 },
         ],
       },
       {
@@ -3288,7 +3472,7 @@ export const PRODUCTS: Product[] = [
           '47e4411d-b608-4680-d934-dbd07a2dce00',
         ],
         sizes: [
-          { size: 'One Size', price: 1800, stock: 30 },
+          { size: 'One Size', price: 1990, stock: 30 },
         ],
       },
       {
@@ -3299,7 +3483,7 @@ export const PRODUCTS: Product[] = [
           'ef16d565-78ca-4df9-3bb8-0698584cb400',
         ],
         sizes: [
-          { size: 'One Size', price: 1800, stock: 30 },
+          { size: 'One Size', price: 1990, stock: 30 },
         ],
       },
       {
@@ -3310,7 +3494,7 @@ export const PRODUCTS: Product[] = [
           '663e305a-3796-4f98-6d96-9e602d487100',
         ],
         sizes: [
-          { size: 'One Size', price: 1800, stock: 30 },
+          { size: 'One Size', price: 1990, stock: 30 },
         ],
       },
 
@@ -3326,6 +3510,7 @@ export const PRODUCTS: Product[] = [
     name:          'FlexBag Hybrid Duffel',
     slug:          'flexbag-hybrid-duffel',
     category:      'duffle',
+    mrp: 5998,
     cardZoom:      1.3,
     isFeatured:    true,
     hideSizeGuide: true,
@@ -3413,6 +3598,7 @@ export const PRODUCTS: Product[] = [
     name: 'DiamondLux Set of 3',
     slug: 'diamondlux-set',
     category: 'set',
+    mrp: 22998,
     isFeatured: true,
     description:
       '20", 24", and 28" DiamondLux bags in a matched set, the quilted diamond shell and metallic accents carried across all three sizes. The complete setup for every kind of trip.',
@@ -3497,6 +3683,7 @@ export const PRODUCTS: Product[] = [
     name: 'StrataLux Set of 3',
     slug: 'stratalux-set',
     category: 'set',
+    mrp: 23000,
     isFeatured: true,
     description:
       '20", 24", and 28" StrataLux bags in a matched set, the ribbed shell and leather-look accents carried across all three sizes. The complete setup for every kind of trip.',
@@ -3675,6 +3862,7 @@ export const PRODUCTS: Product[] = [
     name: 'Matrix- Set of 3',
     slug: 'matrix-set',
     category: 'set',
+    mrp: 63398,
     isFeatured: true,
     description:
       'Premium hard-shell spinner luggage in three nesting sizes: 20", 24", and 28". Engineered for business travellers, vacationers, and frequent flyers who demand lightweight durability, secure locking, and smooth mobility in one complete collection.',
@@ -3731,7 +3919,7 @@ export const PRODUCTS: Product[] = [
         color: 'Black',
         colorHex: '#212121',
         sizes: [
-          { size: 'Set of 3', price: 31699, stock: 15, sku: 'LP-TM-SET-BLK' },
+          { size: 'Set of 3', price: 11500, stock: 15, sku: 'LP-TM-SET-BLK' },
         ],
       },
     ],
@@ -3746,6 +3934,7 @@ export const PRODUCTS: Product[] = [
     name: 'VeeZoom Set of 3',
     slug: 'veezoom-set',
     category: 'set',
+    mrp: 15498,
     isFeatured: true,
     description:
       'The full VeeZoom family: 20", 24", and 28" in matching bold design. Nesting format for home storage. Everything you need for a week, a month, or forever.',
@@ -3891,6 +4080,7 @@ export const PRODUCTS: Product[] = [
     name: 'POPShell Set of 3',
     slug: 'popshell-set',
     category: 'set',
+    mrp: 15998,
     isFeatured: true,
     description:
       '20", 24", and 28" POPShell cases in a matched set, the bold printed graphic panel carried across all three sizes. The complete setup for every kind of trip.',
@@ -3934,6 +4124,7 @@ export const PRODUCTS: Product[] = [
     name: 'AeroDual',
     slug: 'aerodual',
     category: 'trolley',
+    mrp: 8899,
     isFeatured: true,
     description:
       'A cabin trolley split down the middle: one half a fine ribbed texture, the other a smooth painted panel, meeting at a single seam that runs the height of the case. 360° spinner wheels and a telescopic handle carry it the rest of the way.',
@@ -3973,10 +4164,10 @@ export const PRODUCTS: Product[] = [
       { label: 'Cabin-friendly 20″ size' },
     ],
     variants: [
-      { color: 'Grey',   colorHex: '#757575', images: ['239063f4-670d-4aeb-fe83-12706dc4d900', '087746cc-d46c-44b2-5295-703b1b38d700', 'eeec2f57-a7cd-4bf5-0d49-ff46cc15aa00'],   sizes: [{ size: 'Cabin', price: 8899, stock: 50 }] },
-      { color: 'Silver', colorHex: '#BDBDBD', images: ['d0188be4-5f18-4d24-82cd-2f3f39b1b100', 'e62b4d59-68cb-4775-e350-0b21500dfc00', 'a368d05a-b2bf-4209-1533-d4f7b65f3900'], sizes: [{ size: 'Cabin', price: 8899, stock: 50 }] },
-      { color: 'Black',  colorHex: '#212121', images: ['3152b806-d87f-4c67-7ce3-6bfa38f21f00', '6ec05fdd-6c43-4c8f-7ddd-d590ba80cd00', 'eab26875-f791-47d9-0b47-4767d886b800', 'fde31ce8-1492-4e70-6b8e-1c0a7e728100'],  sizes: [{ size: 'Cabin', price: 8899, stock: 50 }] },
-      { color: 'Blue',   colorHex: '#1565C0', images: ['ef953353-42e2-4b24-e628-7996b543b200', 'c034b6ed-291c-49ec-10e3-2c7f3c24d900', '7f49dd09-6fae-4dff-42d9-b9c4dd252100'],   sizes: [{ size: 'Cabin', price: 8899, stock: 50 }] },
+      { color: 'Grey',   colorHex: '#757575', images: ['239063f4-670d-4aeb-fe83-12706dc4d900', '087746cc-d46c-44b2-5295-703b1b38d700', 'eeec2f57-a7cd-4bf5-0d49-ff46cc15aa00'],   sizes: [{ size: 'Cabin', price: 3500, stock: 50 }] },
+      { color: 'Silver', colorHex: '#BDBDBD', images: ['d0188be4-5f18-4d24-82cd-2f3f39b1b100', 'e62b4d59-68cb-4775-e350-0b21500dfc00', 'a368d05a-b2bf-4209-1533-d4f7b65f3900'], sizes: [{ size: 'Cabin', price: 3500, stock: 50 }] },
+      { color: 'Black',  colorHex: '#212121', images: ['3152b806-d87f-4c67-7ce3-6bfa38f21f00', '6ec05fdd-6c43-4c8f-7ddd-d590ba80cd00', 'eab26875-f791-47d9-0b47-4767d886b800', 'fde31ce8-1492-4e70-6b8e-1c0a7e728100'],  sizes: [{ size: 'Cabin', price: 3500, stock: 50 }] },
+      { color: 'Blue',   colorHex: '#1565C0', images: ['ef953353-42e2-4b24-e628-7996b543b200', 'c034b6ed-291c-49ec-10e3-2c7f3c24d900', '7f49dd09-6fae-4dff-42d9-b9c4dd252100'],   sizes: [{ size: 'Cabin', price: 3500, stock: 50 }] },
     ],
   },
 
@@ -4030,27 +4221,27 @@ export const PRODUCTS: Product[] = [
         color: 'Warm Sand', colorHex: '#C9A66B',
         images: ['51282f17-d034-4161-cf63-f45024a4f800', '6ba827d5-4575-453f-7bcf-ee51d62f7d00', 'a9d6753d-7cad-44e4-b910-589c81d7c100'],
         sizes: [
-          { size: 'Cabin',  price: 10099, stock: 1 },
-          { size: 'Medium', price: 11649, stock: 1 },
-          { size: 'Large',  price: 13550, stock: 3 },
+          { size: 'Cabin',  price: 3500, stock: 1 },
+          { size: 'Medium', price: 4990, stock: 1 },
+          { size: 'Large',  price: 7450, stock: 3 },
         ],
       },
       {
         color: 'Midnight Blue', colorHex: '#1A2744',
         images: ['cdb97124-d55b-4111-134f-8e0a70d29e00', '9e368257-bda2-4fae-4a28-a59647a88e00', 'b4a547e5-fecd-45c0-fac0-eed98e552d00', '532bb80c-ca68-49e6-9e68-3b884b47f900'],
         sizes: [
-          { size: 'Cabin',  price: 10099, stock: 1 },
-          { size: 'Medium', price: 11649, stock: 1 },
-          { size: 'Large',  price: 13550, stock: 3 },
+          { size: 'Cabin',  price: 3500, stock: 1 },
+          { size: 'Medium', price: 4990, stock: 1 },
+          { size: 'Large',  price: 7450, stock: 3 },
         ],
       },
       {
         color: 'Tangy Black', colorHex: '#1C1B19',
         images: ['999a4b8a-1761-43ba-82f1-80839d784200', '1b0f392d-1c65-4852-83f1-242d3d7a4900', 'a8be38f9-aaf4-4eef-f250-9bca74c42100'],
         sizes: [
-          { size: 'Cabin',  price: 10099, stock: 1 },
-          { size: 'Medium', price: 11649, stock: 1 },
-          { size: 'Large',  price: 13550, stock: 3 },
+          { size: 'Cabin',  price: 3500, stock: 1 },
+          { size: 'Medium', price: 4990, stock: 1 },
+          { size: 'Large',  price: 7450, stock: 3 },
         ],
       },
     ],
@@ -4065,6 +4256,7 @@ export const PRODUCTS: Product[] = [
     name: 'WeaveLux Set of 3',
     slug: 'weavelux-set',
     category: 'set',
+    mrp: 67398,
     description:
       'Cabin, Medium, and Large WeaveLux cases, bundled as one matched set so a solo trip, a two-person holiday, and a family departure all draw from the same woven-effect shell and tan trim.',
     story: [
@@ -4097,9 +4289,9 @@ export const PRODUCTS: Product[] = [
       { label: 'Telescopic trolley handle' },
     ],
     variants: [
-      { color: 'Warm Sand',     colorHex: '#C9A66B', images: ['51282f17-d034-4161-cf63-f45024a4f800', '6ba827d5-4575-453f-7bcf-ee51d62f7d00', 'a9d6753d-7cad-44e4-b910-589c81d7c100'],     sizes: [{ size: 'Set of 3', price: 33699, stock: 1 }] },
-      { color: 'Midnight Blue', colorHex: '#1A2744', images: ['cdb97124-d55b-4111-134f-8e0a70d29e00', '9e368257-bda2-4fae-4a28-a59647a88e00', 'b4a547e5-fecd-45c0-fac0-eed98e552d00', '532bb80c-ca68-49e6-9e68-3b884b47f900'], sizes: [{ size: 'Set of 3', price: 33699, stock: 1 }] },
-      { color: 'Tangy Black',   colorHex: '#1C1B19', images: ['999a4b8a-1761-43ba-82f1-80839d784200', '1b0f392d-1c65-4852-83f1-242d3d7a4900', 'a8be38f9-aaf4-4eef-f250-9bca74c42100'],   sizes: [{ size: 'Set of 3', price: 33699, stock: 1 }] },
+      { color: 'Warm Sand',     colorHex: '#C9A66B', images: ['51282f17-d034-4161-cf63-f45024a4f800', '6ba827d5-4575-453f-7bcf-ee51d62f7d00', 'a9d6753d-7cad-44e4-b910-589c81d7c100'],     sizes: [{ size: 'Set of 3', price: 11490, stock: 1 }] },
+      { color: 'Midnight Blue', colorHex: '#1A2744', images: ['cdb97124-d55b-4111-134f-8e0a70d29e00', '9e368257-bda2-4fae-4a28-a59647a88e00', 'b4a547e5-fecd-45c0-fac0-eed98e552d00', '532bb80c-ca68-49e6-9e68-3b884b47f900'], sizes: [{ size: 'Set of 3', price: 11490, stock: 1 }] },
+      { color: 'Tangy Black',   colorHex: '#1C1B19', images: ['999a4b8a-1761-43ba-82f1-80839d784200', '1b0f392d-1c65-4852-83f1-242d3d7a4900', 'a8be38f9-aaf4-4eef-f250-9bca74c42100'],   sizes: [{ size: 'Set of 3', price: 11490, stock: 1 }] },
     ],
   },
 
@@ -4112,6 +4304,7 @@ export const PRODUCTS: Product[] = [
     name: 'AeroShield',
     slug: 'aeroshield-backpack',
     category: 'backpack',
+    mrp: 19998,
     hideSizeSelector: true,
     description:
       'A firm, moulded front shell over a padded laptop compartment, so the backpack holds its shape on a hook or a train floor the way a soft one never does.',
@@ -4148,7 +4341,7 @@ export const PRODUCTS: Product[] = [
       {
         color: 'Tech White', colorHex: '#F5F3EC',
         images: ['c2101a36-983b-44bf-9e97-9e3270d5bf00', '5438f6fc-1ce9-462b-91bd-02cb545b8900', '7ce4fd31-4c1c-4921-7ad8-1a1c60328d00', 'f1afc58b-670d-4f3e-f0bf-9fe2983b9600'],
-        sizes: [{ size: 'One Size', price: 9999, stock: 10 }],
+        sizes: [{ size: 'One Size', price: 1790, stock: 10 }],
       },
     ],
   },
@@ -4216,6 +4409,7 @@ export const PRODUCTS: Product[] = [
     name: 'TitaniumEdge Briefcase',
     slug: 'titaniumedge-briefcase',
     category: 'office-bag',
+    mrp: 3998,
     hideSizeSelector: true,
     description:
       'A diagonal ribbed shell in metallic silver, built to carry a laptop and a day of documents with a detachable strap for the walk between meetings.',
@@ -4266,6 +4460,7 @@ export const PRODUCTS: Product[] = [
     name: 'TitaniumEdge Backpack',
     slug: 'titaniumedge-backpack',
     category: 'backpack',
+    mrp: 3998,
     hideSizeSelector: true,
     description:
       'The TitaniumEdge finish on a backpack frame: diagonal ribbed metallic silver, a dedicated laptop compartment, and straps built for a full workday rather than a short walk.',
@@ -4316,6 +4511,7 @@ export const PRODUCTS: Product[] = [
     name: 'AeroFrame',
     slug: 'aeroframe',
     category: 'backpack',
+    mrp: 3998,
     hideSizeSelector: true,
     description:
       'A clean rectangular shell in metallic silver, with a vertically ribbed lower panel that reinforces the front against the everyday press of a full bag.',
@@ -4366,6 +4562,7 @@ export const PRODUCTS: Product[] = [
     name: 'CoreBrief',
     slug: 'corebrief',
     category: 'office-bag',
+    mrp: 12198,
     hideSizeSelector: true,
     description:
       'A brushed-silver hard-shell briefcase with an aluminium carry handle, built around a laptop compartment and enough organiser pockets to keep a workday out of a tangle.',
@@ -4402,7 +4599,7 @@ export const PRODUCTS: Product[] = [
       {
         color: 'Brushed Silver', colorHex: '#B0B4B8',
         images: ['1b338747-dcc1-4636-a742-9ead924b2900', '7e79abab-bc03-4929-bad2-689bf1406e00', '49c5cda7-78bb-4898-7118-24b1487e3400', '9d108f30-85da-4ccf-37f4-7916be1b0100', '57b20b07-ce45-49b4-2314-fcf135d5d100', '8514aa95-461a-4d71-8ef7-6551c6c55200'],
-        sizes: [{ size: 'One Size', price: 6099, stock: 50 }],
+        sizes: [{ size: 'One Size', price: 2190, stock: 50 }],
       },
     ],
   },
@@ -4416,6 +4613,7 @@ export const PRODUCTS: Product[] = [
     name: 'GlidePod',
     slug: 'glidepod',
     category: 'vanity',
+    mrp: 7998,
     description:
       'A compact vanity case with a diagonal-texture shell, sized to hold cosmetics and skincare without adding real bulk to a suitcase already doing the heavy lifting.',
     story: [
@@ -4450,10 +4648,10 @@ export const PRODUCTS: Product[] = [
       { label: 'Scratch-resistant finish' },
     ],
     variants: [
-      { color: 'Blue',   colorHex: '#1565C0', images: ['1aeb9ffc-25ee-4c1b-ece6-3f5e12b6a000', '28791354-7663-4ec2-a5c5-bbd833536000', '30c35d6e-fb57-4cff-7d34-7ce05ac8d300', '8a25c57e-4ebd-46a2-211e-b4eef9784600'],   sizes: [{ size: '11 Inch', price: 3999, stock: 50 }] },
-      { color: 'Green',  colorHex: '#2E7D32', images: ['5403ef43-6529-4bcd-af2f-f75980974800', 'b42d8191-c2b3-4983-3730-eacce3978300', '5d652d47-9303-4bfa-5bd0-50344edcd300'],  sizes: [{ size: '11 Inch', price: 3999, stock: 50 }] },
-      { color: 'Red',    colorHex: '#C62828', images: ['fab7459c-1186-4b48-4985-d1d28e7d2d00', '1525db33-8ade-459a-b18e-e96f3e07b000', '39398f33-4ea4-4357-064e-3acce95fe000'],    sizes: [{ size: '11 Inch', price: 3999, stock: 50 }] },
-      { color: 'Yellow', colorHex: '#F2C14E', images: ['3c954f7e-6dc9-4c28-515e-3904c96daa00', '0c7fcd0a-e04e-45ff-4572-3aa9a3b1fc00', 'e24084cc-3540-428d-49a1-9f16f7a57400'], sizes: [{ size: '11 Inch', price: 3999, stock: 50 }] },
+      { color: 'Blue',   colorHex: '#1565C0', images: ['1aeb9ffc-25ee-4c1b-ece6-3f5e12b6a000', '28791354-7663-4ec2-a5c5-bbd833536000', '30c35d6e-fb57-4cff-7d34-7ce05ac8d300', '8a25c57e-4ebd-46a2-211e-b4eef9784600'],   sizes: [{ size: '11 Inch', price: 1890, stock: 50 }] },
+      { color: 'Green',  colorHex: '#2E7D32', images: ['5403ef43-6529-4bcd-af2f-f75980974800', 'b42d8191-c2b3-4983-3730-eacce3978300', '5d652d47-9303-4bfa-5bd0-50344edcd300'],  sizes: [{ size: '11 Inch', price: 1890, stock: 50 }] },
+      { color: 'Red',    colorHex: '#C62828', images: ['fab7459c-1186-4b48-4985-d1d28e7d2d00', '1525db33-8ade-459a-b18e-e96f3e07b000', '39398f33-4ea4-4357-064e-3acce95fe000'],    sizes: [{ size: '11 Inch', price: 1890, stock: 50 }] },
+      { color: 'Yellow', colorHex: '#F2C14E', images: ['3c954f7e-6dc9-4c28-515e-3904c96daa00', '0c7fcd0a-e04e-45ff-4572-3aa9a3b1fc00', 'e24084cc-3540-428d-49a1-9f16f7a57400'], sizes: [{ size: '11 Inch', price: 1890, stock: 50 }] },
     ],
   },
 

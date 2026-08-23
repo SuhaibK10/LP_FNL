@@ -20,7 +20,19 @@ alter table guest_checkout_leads enable row level security;
 -- (this business operates in India; UTC timestamptz is what's actually
 -- stored and stays authoritative) so they're legible directly in the
 -- Supabase Table Editor without needing the admin dashboard built first.
-create view guest_checkout_leads_readable as
+--
+-- `security_invoker = true` is load-bearing, not stylistic: a plain view
+-- runs as its DEFINER (the postgres role used by the SQL editor), which
+-- bypasses RLS on the underlying table entirely. Since Supabase exposes
+-- every public-schema relation over PostgREST using the public anon key,
+-- an invoker-less view here would let anyone holding that key (it's in the
+-- site's own client bundle) read every guest's email/phone and every
+-- customer's order. security_invoker makes the view enforce the CALLING
+-- role's RLS instead — which for anon/authenticated means nothing, since
+-- the underlying tables have RLS on with no policies for those roles.
+-- The revoke below is a second, independent backstop for the same gap.
+create view guest_checkout_leads_readable
+with (security_invoker = true) as
 select
   id,
   email,
@@ -30,7 +42,8 @@ select
 from guest_checkout_leads
 order by created_at desc;
 
-create view orders_readable as
+create view orders_readable
+with (security_invoker = true) as
 select
   id,
   full_name,
@@ -46,3 +59,6 @@ select
   updated_at
 from orders
 order by created_at desc;
+
+revoke all on guest_checkout_leads_readable from anon, authenticated;
+revoke all on orders_readable from anon, authenticated;

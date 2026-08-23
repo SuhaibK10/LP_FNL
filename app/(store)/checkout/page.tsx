@@ -362,7 +362,9 @@ export default function CheckoutPage() {
               transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
             >
               <div className="space-y-3 mb-8">
-                {items.map(item => (
+                {items.map(item => {
+                  const imageFit = PRODUCTS.find(p => p.id === item.productId)?.imageFit
+                  return (
                   <div key={item.variantKey} className="flex gap-4 items-center py-3 border-b border-[var(--color-lp-border)] last:border-0">
                     <Link
                       href={`${ROUTES.shop}/${item.productSlug}?color=${encodeURIComponent(item.color)}`}
@@ -370,10 +372,10 @@ export default function CheckoutPage() {
                     >
                       <div className="relative w-14 h-[72px] bg-lp-image-bg flex-shrink-0">
                         <Image
-                          src={thumbUrl(item.image, PRODUCTS.find(p => p.id === item.productId)?.imageFit) || PLACEHOLDER_URL}
+                          src={thumbUrl(item.image, imageFit) || PLACEHOLDER_URL}
                           alt={item.productName}
                           fill
-                          className="object-cover object-center"
+                          className={imageFit === 'cover' ? 'object-cover object-center' : 'object-contain object-center'}
                           sizes="56px"
                         />
                       </div>
@@ -396,7 +398,8 @@ export default function CheckoutPage() {
                       <Trash2 size={15} strokeWidth={1.5} />
                     </button>
                   </div>
-                ))}
+                  )
+                })}
               </div>
 
               {/* ── Auth choice ────────────────────────────────────────── */}
@@ -437,9 +440,10 @@ export default function CheckoutPage() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="space-y-3 p-4 bg-[var(--color-lp-cream)]"
+                        className="space-y-3 p-4"
+                        style={{ backgroundColor: '#4B5563' }}
                       >
-                        <p className="font-body text-[0.75rem] tracking-[0.08em] uppercase text-[var(--color-lp-muted)]">
+                        <p className="font-body text-[0.75rem] tracking-[0.08em] uppercase text-lp-porcelain/70">
                           Guest checkout
                         </p>
                         <div className="relative">
@@ -464,7 +468,7 @@ export default function CheckoutPage() {
                         </div>
                         <button
                           onClick={() => setGuestMode(false)}
-                          className="font-body text-[0.7rem] text-[var(--color-lp-faint)] hover:text-[var(--color-lp-ink)] transition-colors duration-200"
+                          className="font-body text-[0.7rem] text-lp-porcelain/60 hover:text-lp-porcelain transition-colors duration-200"
                         >
                           ← Sign in instead
                         </button>

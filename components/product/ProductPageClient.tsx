@@ -25,6 +25,12 @@ export function ProductPageClient({ product, defaultColor }: Props) {
   const [hoveredColorIndex, setHoveredColorIndex] = useState<number | null>(null)
   const previewColorIndex = hoveredColorIndex ?? colorIndex
 
+  // Which photo (within the current color) the main gallery shows — lifted
+  // up from ImageGallery so the desktop thumbnail strip, which now renders
+  // inside ProductInfo instead (a sibling component), can drive the exact
+  // same gallery state a click in either location.
+  const [activeAngle, setActiveAngle] = useState(0)
+
   // Warm the cache for every OTHER color's first photo as soon as the page
   // loads — not just the one currently shown. So by the time someone clicks
   // a color swatch, that swap is a cache hit instead of a cold fetch.
@@ -49,13 +55,24 @@ export function ProductPageClient({ product, defaultColor }: Props) {
   const galleryImages       = variantImages && variantImages.length > 0 ? variantImages : product.images
   const galleryActiveIndex  = variantImages && variantImages.length > 0 ? 0 : previewColorIndex
 
+  // Keep `activeAngle` in sync with `galleryActiveIndex` exactly the way
+  // ImageGallery used to do internally: for a product with its own
+  // per-variant images, this is a constant 0, so it only fires on mount —
+  // switching color does NOT reset which angle is showing. For a legacy
+  // product sharing one flat `product.images` array indexed by color, this
+  // fires on every hover/click, since colour and photo are the same index
+  // there. Reproducing this exactly (rather than always resetting to 0)
+  // avoids changing gallery behavior as a side effect of this split.
+  useEffect(() => { setActiveAngle(galleryActiveIndex) }, [galleryActiveIndex])
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 lg:gap-20">
       <div className="md:sticky md:top-24 md:self-start">
         <ImageGallery
           images={galleryImages}
           productName={product.name}
-          activeColorIndex={galleryActiveIndex}
+          active={activeAngle}
+          onActiveChange={setActiveAngle}
           recentPurchases={product.recentPurchases}
           imageFit={product.imageFit}
         />
@@ -66,6 +83,8 @@ export function ProductPageClient({ product, defaultColor }: Props) {
           defaultColor={defaultColor}
           onColorChange={setColorIndex}
           onColorHover={setHoveredColorIndex}
+          galleryActiveAngle={activeAngle}
+          onGalleryAngleChange={setActiveAngle}
         />
       </div>
     </div>
