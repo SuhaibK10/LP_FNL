@@ -248,13 +248,19 @@ const supabase = await createClient()
   }
 
   // ── Insert line items ────────────────────────────────────────────────────
-  const { error: itemsError } = await supabase
+  const { error: itemsError } = await insertClient
     .from('order_items')
     .insert(orderItems.map(item => ({ ...item, order_id: orderRow.id })))
 
   if (itemsError) {
     console.error('Failed to insert order items:', itemsError)
-    await supabase.from('orders').update({ status: 'failed' }).eq('id', orderRow.id)
+    const { error: failedUpdateError } = await insertClient
+      .from('orders')
+      .update({ status: 'failed' })
+      .eq('id', orderRow.id)
+    if (failedUpdateError) {
+      console.error('Failed to mark order as failed:', failedUpdateError)
+    }
     return NextResponse.json(
       { error: 'Could not create order. Please try again.' },
       { status: 500 }
@@ -273,10 +279,14 @@ const supabase = await createClient()
       },
     })
 
-    await supabase
+    const { error: razorpayIdUpdateError } = await insertClient
       .from('orders')
       .update({ razorpay_order_id: razorpayOrder.id })
       .eq('id', orderRow.id)
+
+    if (razorpayIdUpdateError) {
+      console.error('Failed to save razorpay_order_id on order:', razorpayIdUpdateError)
+    }
 
     return NextResponse.json({
       orderId:         orderRow.id,
@@ -286,7 +296,13 @@ const supabase = await createClient()
     })
   } catch (razorpayError) {
     console.error('Razorpay order creation failed:', razorpayError)
-    await supabase.from('orders').update({ status: 'failed' }).eq('id', orderRow.id)
+    const { error: failedUpdateError } = await insertClient
+      .from('orders')
+      .update({ status: 'failed' })
+      .eq('id', orderRow.id)
+    if (failedUpdateError) {
+      console.error('Failed to mark order as failed:', failedUpdateError)
+    }
     return NextResponse.json(
       { error: 'Payment gateway error. Please try again.' },
       { status: 500 }

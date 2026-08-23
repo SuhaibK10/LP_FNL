@@ -185,6 +185,19 @@ export default function CheckoutPage() {
     setStep(next)
   }, [step])
 
+  // Fire-and-forget: capture guest contact info the moment they show real
+  // intent (valid email/phone + clicked to proceed), independent of whether
+  // they ever finish checkout. Never awaited — must not delay the step
+  // transition, and a failure here is never the guest's problem.
+  function captureGuestLead() {
+    if (!guestMode) return
+    fetch('/api/checkout/guest-lead', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ email: guestEmail, phone: guestPhone }),
+    }).catch(() => {})
+  }
+
   // ── Can we proceed from "review" into "shipping"? ───────────────────────
   // Requires EITHER a logged-in user OR (guestMode + valid email + phone).
   const canProceedFromReview =
@@ -530,7 +543,7 @@ export default function CheckoutPage() {
               </div>
 
               <button
-                onClick={() => goToStep('shipping')}
+                onClick={() => { captureGuestLead(); goToStep('shipping') }}
                 disabled={!canProceedFromReview}
                 className="btn-primary w-full justify-center disabled:opacity-40 disabled:cursor-not-allowed"
               >

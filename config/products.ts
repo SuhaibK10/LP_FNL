@@ -20,8 +20,6 @@ import type { Product, HeroSlide } from '@/types'
 // Replace public_ids with your Cloudinary uploads.
 export const HERO_SLIDES: HeroSlide[] = [
   {
-    // Hosted on a separate Cloudinary account (deh394y0h) — the primary
-    // account's credit limit is exhausted.
     image:        '92de1fa2-6ccf-413c-5391-3e14caee1a00',
     desktopImage: '6eec31b5-83e8-4397-4f60-71c6d181a100',
     headline:  '',
