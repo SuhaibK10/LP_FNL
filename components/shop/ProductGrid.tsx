@@ -255,8 +255,8 @@ export function ProductGrid() {
             >
               <span
                 className={cn(
-                  'relative block w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden bg-lp-porcelain border-2 md:border-[3px] transition-colors duration-200',
-                  active ? 'border-lp-gold' : 'border-transparent'
+                  'relative block w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden bg-lp-porcelain border-[1.5px] md:border-2 transition-colors duration-200',
+                  active ? 'border-lp-gold' : 'border-[#4B5563]'
                 )}
               >
                 <Image

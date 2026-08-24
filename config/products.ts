@@ -3103,19 +3103,6 @@ export const PRODUCTS: Product[] = [
     ],
     variants: [
       {
-        color: 'Black',
-        colorHex: '#1C1B19',
-        images: [
-          '4b528852-1350-4734-37b3-78530cbbe500',
-          '8fd39775-ad44-4608-b63f-8e779c4c2800',
-          'ddbe89ba-edb3-4ada-0f1d-675cb5ac3200',
-          '7e5d269e-4914-45bd-8dd6-881d004b3200',
-          '79306c0c-58f9-44c1-abe7-5b2514c51300',
-          '7dc21c37-adfa-458a-25b2-f5e377820400',
-        ],
-        sizes: [{ size: '14 Inch', price: 2500, stock: 10 }],
-      },
-      {
         color: 'White',
         colorHex: '#6F4E37',
         bodyHex: '#F7F5F0',
@@ -3125,6 +3112,19 @@ export const PRODUCTS: Product[] = [
           'e932dd2e-a1b9-4d01-2ab0-ad2e697a5800',
           'dfbad9cf-d1bf-4cd7-4f63-1e7a98743b00',
           '929b2103-b36a-451e-f2f2-7ba8df475300',
+        ],
+        sizes: [{ size: '14 Inch', price: 2500, stock: 10 }],
+      },
+      {
+        color: 'Black',
+        colorHex: '#1C1B19',
+        images: [
+          '4b528852-1350-4734-37b3-78530cbbe500',
+          '8fd39775-ad44-4608-b63f-8e779c4c2800',
+          'ddbe89ba-edb3-4ada-0f1d-675cb5ac3200',
+          '7e5d269e-4914-45bd-8dd6-881d004b3200',
+          '79306c0c-58f9-44c1-abe7-5b2514c51300',
+          '7dc21c37-adfa-458a-25b2-f5e377820400',
         ],
         sizes: [{ size: '14 Inch', price: 2500, stock: 10 }],
       },
