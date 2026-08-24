@@ -12,7 +12,7 @@ import Link                                  from 'next/link'
 import { useRouter }                         from 'next/navigation'
 import { motion }                            from 'framer-motion'
 import { LayoutGrid }                        from 'lucide-react'
-import { ROUTES, SALE_CONFIG }               from '@/lib/constants'
+import { ROUTES }                            from '@/lib/constants'
 import { SALE_PRODUCTS }                     from '@/config/products'
 import { categoryUrl, PLACEHOLDER_URL }      from '@/lib/cloudflareImages'
 import { staggerPunch, popIn } from '@/lib/animations'
@@ -141,32 +141,28 @@ export function CategoryGrid() {
             <LayoutGrid size={13} strokeWidth={1.5} />
             Shop by Category
           </button>
-          {SALE_CONFIG.enabled && (
-            <>
-              <span className="text-lp-border">|</span>
-              <button
-                type="button"
-                onClick={() => setTab('sale')}
-                className={
-                  tab === 'sale'
-                    ? 'flex items-center gap-1.5 font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-lp-ink pb-1.5 transition-colors duration-200'
-                    : 'flex items-center gap-1.5 font-body text-[0.75rem] tracking-widest uppercase text-lp-muted border-b-2 border-transparent pb-1.5 transition-colors duration-200 hover:text-lp-ink'
-                }
-              >
-                Sale
-                <motion.span
-                  animate={{ scale: [1, 1.04, 1], opacity: [1, 0.92, 1] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                  className="inline-flex rounded-md p-[3px] shadow-sm"
-                  style={{ background: 'linear-gradient(90deg, #6B1F2A 0%, #8B2E3F 100%)' }}
-                >
-                  <span className="inline-flex items-center rounded-[5px] bg-lp-ink px-1.25 py-[3px]">
-                    <SaleCountdown className="text-[0.62rem] text-[var(--color-lp-porcelain)] normal-case tracking-normal" />
-                  </span>
-                </motion.span>
-              </button>
-            </>
-          )}
+          <span className="text-lp-border">|</span>
+          <button
+            type="button"
+            onClick={() => setTab('sale')}
+            className={
+              tab === 'sale'
+                ? 'flex items-center gap-1.5 font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-lp-ink pb-1.5 transition-colors duration-200'
+                : 'flex items-center gap-1.5 font-body text-[0.75rem] tracking-widest uppercase text-lp-muted border-b-2 border-transparent pb-1.5 transition-colors duration-200 hover:text-lp-ink'
+            }
+          >
+            Sale
+            <motion.span
+              animate={{ scale: [1, 1.04, 1], opacity: [1, 0.92, 1] }}
+              transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+              className="inline-flex rounded-md p-[3px] shadow-sm"
+              style={{ background: 'linear-gradient(90deg, #6B1F2A 0%, #8B2E3F 100%)' }}
+            >
+              <span className="inline-flex items-center rounded-[5px] bg-lp-ink px-1.25 py-[3px]">
+                <SaleCountdown className="text-[0.62rem] text-[var(--color-lp-porcelain)] normal-case tracking-normal" />
+              </span>
+            </motion.span>
+          </button>
         </motion.div>
 
         {/* Header */}
@@ -211,24 +207,29 @@ export function CategoryGrid() {
                       src={categoryUrl(image) || PLACEHOLDER_URL}
                       alt={label}
                       fill
-                      className={`object-cover object-center transition-transform duration-500 ease-out group-hover:scale-110 ${tapped ? 'scale-110' : ''} ${imgClass}`}
+                      className={`object-cover object-center transition-transform duration-500 ease-out md:group-hover:scale-110 ${imgClass}`}
                       sizes="(max-width:768px) 50vw, (max-width:1280px) 25vw, 22rem"
                     />
 
                     {/* Gradient — flat, uniform tint rather than bottom-weighted, since
                         the label now sits centered and needs contrast everywhere it
-                        might land, not just along the bottom edge. */}
-                    <div className={`absolute inset-0 bg-lp-ink/35 transition-opacity duration-300 group-hover:opacity-100 ${tapped ? 'opacity-100' : ''}`} />
+                        might land, not just along the bottom edge. Desktop-hover only —
+                        see the text block below for why. */}
+                    <div className="absolute inset-0 bg-lp-ink/35 transition-opacity duration-300 md:group-hover:opacity-100" />
 
-                    {/* Text — centered on the image */}
+                    {/* Text — centered on the image. The slide-swap only runs on
+                        real mouse hover (md:group-hover) — on touch, tapping can
+                        leave :hover "stuck" applied (a well-known mobile browser
+                        quirk), which made the two overlapping labels render
+                        mid-transition at once, reading as garbled double text. */}
                     <div className="absolute inset-0 flex items-center justify-center px-4">
                       <div className="relative w-full h-6 md:h-8 overflow-hidden">
-                        {/* Resting label — slides up and out on hover/tap */}
-                        <h3 className={`absolute inset-0 flex items-center justify-center text-center font-display text-[1.3rem] md:text-[1.7rem] font-medium tracking-wide text-[var(--color-lp-porcelain)]/85 leading-none transition-transform duration-500 ease-out group-hover:-translate-y-full ${tapped ? '-translate-y-full' : ''}`}>
+                        {/* Resting label — slides up and out on desktop hover only */}
+                        <h3 className="absolute inset-0 flex items-center justify-center text-center font-display text-[1.3rem] md:text-[1.7rem] font-medium tracking-wide text-[var(--color-lp-porcelain)]/85 leading-none transition-transform duration-500 ease-out md:group-hover:-translate-y-full">
                           {label}
                         </h3>
-                        {/* Duplicate — waits just below, slides in to replace it */}
-                        <h3 aria-hidden="true" className={`absolute inset-0 flex items-center justify-center text-center font-display text-[1.3rem] md:text-[1.7rem] font-medium tracking-wide text-[var(--color-lp-porcelain)] leading-none translate-y-full transition-transform duration-500 ease-out group-hover:translate-y-0 ${tapped ? 'translate-y-0' : ''}`}>
+                        {/* Duplicate — waits just below, slides in to replace it, desktop only */}
+                        <h3 aria-hidden="true" className="absolute inset-0 flex items-center justify-center text-center font-display text-[1.3rem] md:text-[1.7rem] font-medium tracking-wide text-[var(--color-lp-porcelain)] leading-none translate-y-full transition-transform duration-500 ease-out md:group-hover:translate-y-0">
                           {label}
                         </h3>
                       </div>
@@ -241,7 +242,7 @@ export function CategoryGrid() {
         )}
       </div>
 
-      {SALE_CONFIG.enabled && tab === 'sale' && (
+      {tab === 'sale' && (
         /* Sale-exclusive products — full-bleed drag-to-scroll carousel, same as Best Sellers */
         <div ref={saleContainerRef} className="overflow-hidden w-full">
           <motion.div

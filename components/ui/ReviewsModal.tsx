@@ -50,7 +50,7 @@ export function ReviewsModal({ open, onClose, productName, reviews }: Props) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="fixed inset-0 z-[70] bg-black/60 backdrop-blur-sm flex items-end md:items-center justify-center p-0 md:p-6"
+          className="fixed inset-0 z-[70] bg-black/60 backdrop-blur-sm flex items-end md:items-center justify-center p-0 md:p-6 overscroll-none"
           onClick={onClose}
         >
           <motion.div
@@ -58,7 +58,7 @@ export function ReviewsModal({ open, onClose, productName, reviews }: Props) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 40 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full md:max-w-xl bg-[var(--color-lp-porcelain)] max-h-[92dvh] overflow-y-auto"
+            className="relative w-full md:max-w-xl bg-[var(--color-lp-porcelain)] max-h-[92dvh] overflow-y-auto overscroll-contain"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
