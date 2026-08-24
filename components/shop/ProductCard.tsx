@@ -458,20 +458,20 @@ export function ProductCard({ product }: ProductCardProps) {
         {myntra && myntraTarget ? (
           <p className="font-body text-[1rem] md:text-[1.125rem] font-medium leading-[1.2] tracking-[-0.015em] text-[#1C1B19] whitespace-nowrap">
             {activeSize ? formatPrice(myntraTarget.price) : `From ${formatPrice(myntraTarget.price)}`}
-            <span className="hidden sm:inline ml-2 font-normal text-[0.875rem] text-[var(--color-lp-muted)] line-through decoration-1 decoration-[var(--color-lp-muted)]">
+            <span className="ml-1.5 sm:ml-2 font-normal text-[0.72rem] sm:text-[0.875rem] text-[var(--color-lp-muted)] line-through decoration-1 decoration-[var(--color-lp-muted)]">
               {activeSize ? formatPrice(price) : formatPrice(lowestPrice)}
             </span>
-            <span className="ml-2 inline-flex items-center rounded-full px-2 py-0.5 font-semibold text-[0.78rem] bg-lp-success/10 text-lp-success">
+            <span className="ml-1.5 sm:ml-2 inline-flex items-center rounded-full px-1.5 sm:px-2 py-0.5 font-semibold text-[0.65rem] sm:text-[0.78rem] bg-lp-success/10 text-lp-success">
               ({Math.round((1 - myntraTarget.price / (activeSize ? price : lowestPrice)) * 100)}% off)
             </span>
           </p>
         ) : product.mrp ? (
           <p className="font-body text-[1rem] md:text-[1.125rem] font-medium leading-[1.2] tracking-[-0.015em] text-[#1C1B19] whitespace-nowrap">
             {activeSize ? formatPrice(price) : `From ${formatPrice(price)}`}
-            <span className="hidden sm:inline ml-2 font-normal text-[0.875rem] text-[var(--color-lp-muted)] line-through decoration-1 decoration-[var(--color-lp-muted)]">
+            <span className="ml-1.5 sm:ml-2 font-normal text-[0.72rem] sm:text-[0.875rem] text-[var(--color-lp-muted)] line-through decoration-1 decoration-[var(--color-lp-muted)]">
               {formatPrice(product.mrp)}
             </span>
-            <span className="ml-2 inline-flex items-center rounded-full px-2 py-0.5 font-semibold text-[0.78rem] bg-lp-success/10 text-lp-success">
+            <span className="ml-1.5 sm:ml-2 inline-flex items-center rounded-full px-1.5 sm:px-2 py-0.5 font-semibold text-[0.65rem] sm:text-[0.78rem] bg-lp-success/10 text-lp-success">
               ({Math.round((1 - (activeSize ? price : lowestPrice) / product.mrp) * 100)}% off)
             </span>
           </p>
