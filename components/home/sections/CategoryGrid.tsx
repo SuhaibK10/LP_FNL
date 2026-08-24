@@ -86,9 +86,9 @@ export function CategoryGrid() {
 
   // Hover isn't a real gesture on touch devices — a tap fires straight
   // through to navigation before the CSS transition ever gets a frame to
-  // paint. On touch, play the same reveal on tap instead: hold navigation
-  // for one transition length so the morph/text-swap is actually seen,
-  // then follow through to the category page.
+  // paint. On touch, play the same corner-morph on tap instead: hold
+  // navigation for one transition length so it's actually seen, then
+  // follow through to the category page.
   const [tappedCard, setTappedCard] = useState<string | null>(null)
   function handleCardClick(e: React.MouseEvent<HTMLAnchorElement>, href: string, value: string) {
     if (typeof window === 'undefined' || !window.matchMedia('(hover: none)').matches) return
@@ -225,11 +225,11 @@ export function CategoryGrid() {
                     <div className="absolute inset-0 flex items-center justify-center px-4">
                       <div className="relative w-full h-6 md:h-8 overflow-hidden">
                         {/* Resting label — slides up and out on desktop hover only */}
-                        <h3 className="absolute inset-0 flex items-center justify-center text-center font-display text-[1.3rem] md:text-[1.7rem] font-medium tracking-wide text-[var(--color-lp-porcelain)]/85 leading-none transition-transform duration-500 ease-out md:group-hover:-translate-y-full">
+                        <h3 className="absolute inset-0 flex items-center justify-center text-center font-display text-[1.05rem] md:text-[1.7rem] font-medium tracking-wide whitespace-nowrap text-[var(--color-lp-porcelain)]/85 leading-none transition-transform duration-500 ease-out md:group-hover:-translate-y-full">
                           {label}
                         </h3>
                         {/* Duplicate — waits just below, slides in to replace it, desktop only */}
-                        <h3 aria-hidden="true" className="absolute inset-0 flex items-center justify-center text-center font-display text-[1.3rem] md:text-[1.7rem] font-medium tracking-wide text-[var(--color-lp-porcelain)] leading-none translate-y-full transition-transform duration-500 ease-out md:group-hover:translate-y-0">
+                        <h3 aria-hidden="true" className="absolute inset-0 flex items-center justify-center text-center font-display text-[1.05rem] md:text-[1.7rem] font-medium tracking-wide whitespace-nowrap text-[var(--color-lp-porcelain)] leading-none translate-y-full transition-transform duration-500 ease-out md:group-hover:translate-y-0">
                           {label}
                         </h3>
                       </div>
