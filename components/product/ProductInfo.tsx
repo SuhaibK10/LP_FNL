@@ -24,10 +24,12 @@ import { thumbUrl }              from '@/lib/cloudflareImages'
 import { cfVideo }               from '@/lib/cloudflareStream'
 import { useWishlistStore }      from '@/store/wishlistStore'
 import { SizeGuideModal }        from '@/components/ui/SizeGuideModal'
+import { ReviewsModal }          from '@/components/ui/ReviewsModal'
 import { DemoVideoModal }        from '@/components/product/DemoVideoModal'
 import { ProductAccordions }     from '@/components/product/ProductDetails'
 import { MyntraBuyButton }       from '@/components/ui/MyntraBuyButton'
 import { getMyntraListing, getMyntraForSize } from '@/config/myntra'
+import { getReviewsForProduct, getManualRating } from '@/config/reviews'
 import { tapPunch }              from '@/lib/animations'
 
 interface Props {
@@ -56,6 +58,10 @@ export function ProductInfo({ product, defaultColor, onColorChange, onColorHover
   const [burst,         setBurst]         = useState(false)
   const [sizeGuideOpen, setSizeGuideOpen] = useState(false)
   const [videoOpen,     setVideoOpen]     = useState(false)
+  const [reviewsOpen,   setReviewsOpen]   = useState(false)
+
+  const reviews      = getReviewsForProduct(product.slug)
+  const manualRating = getManualRating(product.slug)
 
   useEffect(() => { setWished(has(product.id)) }, [has, product.id])
 
@@ -171,9 +177,29 @@ export function ProductInfo({ product, defaultColor, onColorChange, onColorHover
           </div>
         </div>
       ) : (
-      <p className="font-body text-[1.35rem] font-semibold leading-none text-[var(--color-lp-ink)]">
-        {selectedSize ? formatPrice(price) : `From ${formatPrice(price)}`}
-      </p>
+      <div className="space-y-2">
+        <p className="font-body text-[1.35rem] font-semibold leading-none text-[var(--color-lp-ink)]">
+          {selectedSize ? formatPrice(price) : `From ${formatPrice(price)}`}
+        </p>
+        {(manualRating || reviews.length > 0) && (
+          <div className="flex items-center gap-3">
+            {manualRating && (
+              <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 font-body font-bold text-[0.8rem] text-lp-ink bg-lp-gold/15 border border-lp-gold/40">
+                <Star size={13} strokeWidth={0} className="fill-lp-gold" />
+                {manualRating.rating.toFixed(1)}
+                <span className="font-medium opacity-70">({manualRating.count})</span>
+              </span>
+            )}
+            <button
+              type="button"
+              onClick={() => setReviewsOpen(true)}
+              className="font-body font-medium text-[0.8rem] text-[var(--color-lp-muted)] hover:text-[var(--color-lp-gold)] underline underline-offset-2 transition-colors duration-200"
+            >
+              {reviews.length > 0 ? `${reviews.length} Reviews` : 'Reviews'}
+            </button>
+          </div>
+        )}
+      </div>
       )}
 
       {/* ── Colour selector ────────────────────────────────────────────── */}
@@ -482,6 +508,7 @@ export function ProductInfo({ product, defaultColor, onColorChange, onColorHover
       </div>
 
       <SizeGuideModal open={sizeGuideOpen} onClose={() => setSizeGuideOpen(false)} />
+      <ReviewsModal open={reviewsOpen} onClose={() => setReviewsOpen(false)} productName={product.name} reviews={reviews} />
       {product.demoVideoId && (
         <DemoVideoModal open={videoOpen} onClose={() => setVideoOpen(false)} videoId={product.demoVideoId} />
       )}
