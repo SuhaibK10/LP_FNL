@@ -59,6 +59,7 @@ export function ReviewsModal({ open, onClose, productName, reviews }: Props) {
             exit={{ opacity: 0, y: 40 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="relative w-full md:max-w-xl bg-[var(--color-lp-porcelain)] max-h-[92dvh] overflow-y-auto overscroll-contain"
+            data-lenis-prevent
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}

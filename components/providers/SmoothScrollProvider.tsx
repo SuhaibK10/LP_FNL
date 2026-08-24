@@ -28,6 +28,13 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
       duration:    1.2,
       easing:      (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
+      // Modals (see ReviewsModal etc.) mark their own scrollable area with
+      // data-lenis-prevent so Lenis leaves wheel events over it alone —
+      // otherwise it globally intercepts and smooths every wheel event
+      // regardless of what's under the cursor, which either scrolls the
+      // page behind an open modal or, if Lenis is fully stopped instead,
+      // blocks the modal's own native scroll too.
+      prevent: (node) => node.closest('[data-lenis-prevent]') !== null,
     })
 
     window.__lenis = lenis
