@@ -12,7 +12,7 @@ import Link                                  from 'next/link'
 import { useRouter }                         from 'next/navigation'
 import { motion }                            from 'framer-motion'
 import { LayoutGrid }                        from 'lucide-react'
-import { ROUTES }                            from '@/lib/constants'
+import { ROUTES, SALE_CONFIG }               from '@/lib/constants'
 import { SALE_PRODUCTS }                     from '@/config/products'
 import { categoryUrl, PLACEHOLDER_URL }      from '@/lib/cloudflareImages'
 import { staggerPunch, popIn } from '@/lib/animations'
@@ -141,28 +141,32 @@ export function CategoryGrid() {
             <LayoutGrid size={13} strokeWidth={1.5} />
             Shop by Category
           </button>
-          <span className="text-lp-border">|</span>
-          <button
-            type="button"
-            onClick={() => setTab('sale')}
-            className={
-              tab === 'sale'
-                ? 'flex items-center gap-1.5 font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-lp-ink pb-1.5 transition-colors duration-200'
-                : 'flex items-center gap-1.5 font-body text-[0.75rem] tracking-widest uppercase text-lp-muted border-b-2 border-transparent pb-1.5 transition-colors duration-200 hover:text-lp-ink'
-            }
-          >
-            Sale
-            <motion.span
-              animate={{ scale: [1, 1.04, 1], opacity: [1, 0.92, 1] }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-              className="inline-flex rounded-md p-[3px] shadow-sm"
-              style={{ background: 'linear-gradient(90deg, #FF9933 0 33%, #FFFFFF 33% 66%, #138808 66% 100%)' }}
-            >
-              <span className="inline-flex items-center rounded-[5px] bg-lp-ink px-1.25 py-[3px]">
-                <SaleCountdown className="text-[0.62rem] text-[var(--color-lp-porcelain)] normal-case tracking-normal" />
-              </span>
-            </motion.span>
-          </button>
+          {SALE_CONFIG.enabled && (
+            <>
+              <span className="text-lp-border">|</span>
+              <button
+                type="button"
+                onClick={() => setTab('sale')}
+                className={
+                  tab === 'sale'
+                    ? 'flex items-center gap-1.5 font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-lp-ink pb-1.5 transition-colors duration-200'
+                    : 'flex items-center gap-1.5 font-body text-[0.75rem] tracking-widest uppercase text-lp-muted border-b-2 border-transparent pb-1.5 transition-colors duration-200 hover:text-lp-ink'
+                }
+              >
+                Sale
+                <motion.span
+                  animate={{ scale: [1, 1.04, 1], opacity: [1, 0.92, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                  className="inline-flex rounded-md p-[3px] shadow-sm"
+                  style={{ background: 'linear-gradient(90deg, #FF9933 0 33%, #FFFFFF 33% 66%, #138808 66% 100%)' }}
+                >
+                  <span className="inline-flex items-center rounded-[5px] bg-lp-ink px-1.25 py-[3px]">
+                    <SaleCountdown className="text-[0.62rem] text-[var(--color-lp-porcelain)] normal-case tracking-normal" />
+                  </span>
+                </motion.span>
+              </button>
+            </>
+          )}
         </motion.div>
 
         {/* Header */}
@@ -237,7 +241,7 @@ export function CategoryGrid() {
         )}
       </div>
 
-      {tab === 'sale' && (
+      {SALE_CONFIG.enabled && tab === 'sale' && (
         /* Sale-exclusive products — full-bleed drag-to-scroll carousel, same as Best Sellers */
         <div ref={saleContainerRef} className="overflow-hidden w-full">
           <motion.div
