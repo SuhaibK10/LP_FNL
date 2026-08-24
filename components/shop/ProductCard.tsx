@@ -20,8 +20,10 @@ import { saveShopScroll }           from '@/lib/scrollRestore'
 import { useCartStore }             from '@/store/cartStore'
 import { useWishlistStore }         from '@/store/wishlistStore'
 import { SizeGuideModal }           from '@/components/ui/SizeGuideModal'
+import { ReviewsModal }             from '@/components/ui/ReviewsModal'
 import { MyntraBuyButton }          from '@/components/ui/MyntraBuyButton'
 import { getMyntraListing, getMyntraForSize } from '@/config/myntra'
+import { getReviewsForProduct, getManualRating } from '@/config/reviews'
 import { tapPunch }                 from '@/lib/animations'
 
 interface ProductCardProps {
@@ -73,6 +75,10 @@ export function ProductCard({ product }: ProductCardProps) {
   const [addedToCart,     setAddedToCart]     = useState(false)
   const [sizeGuideOpen,   setSizeGuideOpen]   = useState(false)
   const [detailsOpen,     setDetailsOpen]     = useState(false)
+  const [reviewsOpen,     setReviewsOpen]     = useState(false)
+
+  const reviews = getReviewsForProduct(product.slug)
+  const manualRating = getManualRating(product.slug)
 
   const variant      = product.variants[activeVariant]
   const lowestPrice  = Math.min(...product.variants.flatMap(v => v.sizes.map(s => s.price)))
@@ -297,13 +303,19 @@ export function ProductCard({ product }: ProductCardProps) {
               {product.name}
             </p>
           </Link>
-          {myntra?.rating && (
+          {myntra?.rating ? (
             <span className="inline-flex items-center gap-1 rounded-full px-2 py-1 font-body font-bold text-[0.75rem] text-lp-ink bg-lp-gold/15 border border-lp-gold/40 leading-none shrink-0">
               <Star size={11} strokeWidth={0} className="fill-lp-gold" />
               {myntra.rating.toFixed(1)}
               <span className="font-medium opacity-70">({myntra.ratingCount})</span>
             </span>
-          )}
+          ) : manualRating ? (
+            <span className="inline-flex items-center gap-1 rounded-full px-2 py-1 font-body font-bold text-[0.75rem] text-lp-ink bg-lp-gold/15 border border-lp-gold/40 leading-none shrink-0">
+              <Star size={11} strokeWidth={0} className="fill-lp-gold" />
+              {manualRating.rating.toFixed(1)}
+              <span className="font-medium opacity-70">({manualRating.count})</span>
+            </span>
+          ) : null}
         </div>
 
         {/* Size chips */}
@@ -393,22 +405,36 @@ export function ProductCard({ product }: ProductCardProps) {
           )
         })()}
 
-        {/* View details — reveals the short product description inline */}
-        {product.description && (
-          <div className="pt-0.5">
-            <button
-              type="button"
-              onClick={(e) => { e.stopPropagation(); setDetailsOpen((o) => !o) }}
-              className="flex items-center gap-1 font-body font-medium text-[0.75rem] text-[var(--color-lp-faint)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
-              aria-expanded={detailsOpen}
-            >
-              View Details
-              <ChevronDown
-                size={11}
-                strokeWidth={1.5}
-                className={`transition-transform duration-200 ${detailsOpen ? 'rotate-180' : ''}`}
-              />
-            </button>
+        {/* View details (reveals the short product description inline) +
+            Reviews — parallel row, sits below the color-swatch/Size-Guide row */}
+        <div className="pt-0.5">
+          <div className="flex items-center justify-between gap-2">
+            {product.description ? (
+              <button
+                type="button"
+                onClick={(e) => { e.stopPropagation(); setDetailsOpen((o) => !o) }}
+                className="flex items-center gap-1 font-body font-medium text-[0.75rem] text-[var(--color-lp-faint)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
+                aria-expanded={detailsOpen}
+              >
+                View Details
+                <ChevronDown
+                  size={11}
+                  strokeWidth={1.5}
+                  className={`transition-transform duration-200 ${detailsOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+            ) : <span />}
+            {!myntra && (
+              <button
+                type="button"
+                onClick={(e) => { e.stopPropagation(); setReviewsOpen(true) }}
+                className="flex items-center gap-1 font-body font-medium text-[0.75rem] text-[var(--color-lp-faint)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
+              >
+                {reviews.length > 0 ? `Reviews (${reviews.length})` : 'Reviews'}
+              </button>
+            )}
+          </div>
+          {product.description && (
             <AnimatePresence initial={false}>
               {detailsOpen && (
                 <motion.div
@@ -424,8 +450,8 @@ export function ProductCard({ product }: ProductCardProps) {
                 </motion.div>
               )}
             </AnimatePresence>
-          </div>
-        )}
+          )}
+        </div>
 
         {/* Price — single line in both branches so Myntra and
             non-Myntra cards keep identical height and buttons align */}
@@ -496,6 +522,7 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
 
       <SizeGuideModal open={sizeGuideOpen} onClose={() => setSizeGuideOpen(false)} />
+      <ReviewsModal open={reviewsOpen} onClose={() => setReviewsOpen(false)} productName={product.name} reviews={reviews} />
     </motion.div>
   )
 }

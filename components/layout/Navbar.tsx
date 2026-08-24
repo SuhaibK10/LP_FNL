@@ -14,7 +14,7 @@ import Link                  from 'next/link'
 import Image                 from 'next/image'
 import { usePathname }       from 'next/navigation'
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence, useScroll, useSpring, useTransform, useMotionValueEvent } from 'framer-motion'
+import { motion, AnimatePresence, useScroll, useSpring, useTransform } from 'framer-motion'
 import { ShoppingBag, Menu, X, Search, Heart, User, SlidersHorizontal } from 'lucide-react'
 import { NAV_ITEMS, ROUTES, BRAND }    from '@/lib/constants'
 import { cn }                          from '@/lib/utils'
@@ -86,15 +86,6 @@ export function Navbar() {
     restDelta: 0.001,
   })
 
-  // Transparent-over-hero navbar — home and shop pages only, and only
-  // before the user has scrolled past the top. Once scrolled (or on any
-  // other page), it's the normal solid porcelain bar.
-  const [scrolled, setScrolled] = useState(false)
-  const { scrollY: rawScrollY } = useScroll()
-  useMotionValueEvent(rawScrollY, 'change', (latest) => setScrolled(latest > 60))
-  const transparent = (isHome || isShopPage) && !scrolled
-  // Ink stays ink whether transparent or solid — hero imagery here runs
-  // light/pale, not the dark photo a white-text treatment would need.
   const navTextClass = 'text-[var(--color-lp-ink)] hover:text-lp-gold'
 
   // The sale ticker sits in normal document flow (scrolls away), but the
@@ -197,9 +188,7 @@ export function Navbar() {
         className={cn(
           pathname.startsWith('/careers') ? 'absolute' : 'fixed',
           'left-0 right-0 z-50 transition-colors duration-300',
-          transparent
-            ? 'bg-transparent'
-            : 'bg-lp-porcelain/95 backdrop-blur-md border-b border-lp-border shadow-sm',
+          'bg-lp-porcelain border-b border-lp-border shadow-sm',
           'w-full overflow-hidden',
         )}
         style={{

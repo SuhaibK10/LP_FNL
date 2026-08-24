@@ -158,7 +158,7 @@ export function CategoryGrid() {
                   animate={{ scale: [1, 1.04, 1], opacity: [1, 0.92, 1] }}
                   transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
                   className="inline-flex rounded-md p-[3px] shadow-sm"
-                  style={{ background: 'linear-gradient(90deg, #FF9933 0 33%, #FFFFFF 33% 66%, #138808 66% 100%)' }}
+                  style={{ background: 'linear-gradient(90deg, #6B1F2A 0%, #8B2E3F 100%)' }}
                 >
                   <span className="inline-flex items-center rounded-[5px] bg-lp-ink px-1.25 py-[3px]">
                     <SaleCountdown className="text-[0.62rem] text-[var(--color-lp-porcelain)] normal-case tracking-normal" />

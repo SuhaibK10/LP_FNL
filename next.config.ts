@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  allowedDevOrigins: ['192.168.0.115','192.168.1.15','192.168.1.6','192.168.1.19','192.168.1.18'],
+  allowedDevOrigins: ['192.168.0.5','192.168.1.15','192.168.1.6','192.168.1.19','192.168.1.18'],
   images: {
     // Custom loader rewrites each Cloudflare Images URL's own w= flexible-
     // variant param to the width Next requests (see lib/cloudflareLoader.ts),
