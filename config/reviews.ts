@@ -12,6 +12,8 @@ export interface Review {
   text:    string
   /** Cloudflare Images IDs — same pipeline as product photos */
   images?: string[]
+  /** Cloudflare Stream UID — same pipeline as product demo videos */
+  video?:  string
 }
 
 export const PRODUCT_REVIEWS: Record<string, Review[]> = {
@@ -24,11 +26,18 @@ export const PRODUCT_REVIEWS: Record<string, Review[]> = {
       images: ['ae0a150f-dba0-4c81-2b99-03306e475300'],
     },
     {
-      name:   'Meera S.',
+      name:   'Meera ',
       rating: 5,
       date:   '22 Aug 2026',
       text:   "It's basically two bags in one,the small case pops off for toiletries,Packed for a 3-day trip in half the time I usually take. Higly Organizable ",
       images: ['a40494d5-2b7a-40c9-2d4b-e46821d74500'],
+    },
+    {
+      name:   'Arjun R.',
+      rating: 5,
+      date:   '23 Aug 2026',
+      text:   "The finish is stunning in person looks elegant, highly premium.",
+      video:  '0efce2ec96bce0c80eca870babf6a851',
     },
   ],
 }

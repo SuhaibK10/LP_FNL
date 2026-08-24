@@ -2,10 +2,11 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import Image                       from 'next/image'
-import { X, Star }                 from 'lucide-react'
+import { X, Star, Play }           from 'lucide-react'
 import { useEffect, useState }     from 'react'
 import type { Review }             from '@/config/reviews'
 import { thumbUrl, pdpUrl }        from '@/lib/cloudflareImages'
+import { cfVideo, cfVideoPoster }  from '@/lib/cloudflareStream'
 
 interface Props {
   open:        boolean
@@ -16,16 +17,18 @@ interface Props {
 
 export function ReviewsModal({ open, onClose, productName, reviews }: Props) {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null)
+  const [lightboxVideo, setLightboxVideo] = useState<string | null>(null)
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key !== 'Escape') return
       if (lightboxImage) setLightboxImage(null)
+      else if (lightboxVideo) setLightboxVideo(null)
       else onClose()
     }
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
-  }, [onClose, lightboxImage])
+  }, [onClose, lightboxImage, lightboxVideo])
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
@@ -35,6 +38,9 @@ export function ReviewsModal({ open, onClose, productName, reviews }: Props) {
   const average = reviews.length
     ? reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length
     : 0
+
+  const allVideos = reviews.filter((r): r is Review & { video: string } => !!r.video)
+  const allImages = reviews.flatMap((r) => r.images ?? [])
 
   return (
     <AnimatePresence>
@@ -81,41 +87,101 @@ export function ReviewsModal({ open, onClose, productName, reviews }: Props) {
                   No reviews yet for this product.
                 </p>
               ) : (
-                <div className="space-y-6 divide-y divide-[var(--color-lp-border)]">
-                  {reviews.map((r, i) => (
-                    <div key={i} className={i > 0 ? 'pt-6' : ''}>
-                      {r.images && r.images.length > 0 && (
-                        <div className="flex gap-2 mb-2">
-                          {r.images.map((img, k) => (
-                            <button
-                              key={k}
-                              type="button"
-                              onClick={() => setLightboxImage(img)}
-                              className="relative w-16 h-16 rounded-md overflow-hidden bg-[var(--color-lp-image-bg)] border border-[var(--color-lp-border)]"
-                            >
-                              <Image src={thumbUrl(img)} alt={`${r.name}'s photo`} fill className="object-cover" />
-                            </button>
-                          ))}
-                        </div>
-                      )}
-                      <p className="font-body font-medium text-[0.85rem] text-[var(--color-lp-ink)]">{r.name}</p>
-                      <div className="flex items-center gap-0.5 mt-1">
-                        {Array.from({ length: 5 }).map((_, j) => (
-                          <Star
-                            key={j}
-                            size={13}
-                            strokeWidth={0}
-                            className={j < r.rating ? 'fill-lp-gold' : 'fill-[var(--color-lp-border)]'}
-                          />
+                <>
+                  {allVideos.length > 0 && (
+                    <div className="mb-6 pb-6 border-b border-[var(--color-lp-border)]">
+                      <p className="font-body font-medium text-[0.8rem] text-[var(--color-lp-ink)] mb-3">
+                        Customer Videos ({allVideos.length})
+                      </p>
+                      <div className="flex gap-2 overflow-x-auto">
+                        {allVideos.map((r, k) => (
+                          <button
+                            key={k}
+                            type="button"
+                            onClick={() => setLightboxVideo(r.video)}
+                            className="relative w-20 h-20 shrink-0 rounded-md overflow-hidden bg-[var(--color-lp-image-bg)] border border-[var(--color-lp-border)]"
+                          >
+                            <Image src={cfVideoPoster(r.video)} alt={`${r.name}'s video`} fill className="object-cover" />
+                            <span className="absolute inset-0 flex items-center justify-center bg-black/25">
+                              <Play size={18} strokeWidth={1.5} className="text-white ml-0.5" fill="white" />
+                            </span>
+                          </button>
                         ))}
                       </div>
-                      <p className="font-body text-[0.85rem] text-[var(--color-lp-body)] leading-relaxed mt-2">
-                        {r.text}
-                      </p>
-                      <p className="font-body text-[0.7rem] text-[var(--color-lp-faint)] mt-3">{r.date}</p>
                     </div>
-                  ))}
-                </div>
+                  )}
+
+                  {allImages.length > 0 && (
+                    <div className="mb-6 pb-6 border-b border-[var(--color-lp-border)]">
+                      <p className="font-body font-medium text-[0.8rem] text-[var(--color-lp-ink)] mb-3">
+                        Customer Photos ({allImages.length})
+                      </p>
+                      <div className="flex gap-2 overflow-x-auto">
+                        {allImages.map((img, k) => (
+                          <button
+                            key={k}
+                            type="button"
+                            onClick={() => setLightboxImage(img)}
+                            className="relative w-20 h-20 shrink-0 rounded-md overflow-hidden bg-[var(--color-lp-image-bg)] border border-[var(--color-lp-border)]"
+                          >
+                            <Image src={thumbUrl(img)} alt="Customer photo" fill className="object-cover" />
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  <p className="font-body font-medium text-[0.8rem] text-[var(--color-lp-ink)] mb-4">
+                    Customer Reviews ({reviews.length})
+                  </p>
+                  <div className="space-y-6 divide-y divide-[var(--color-lp-border)]">
+                    {reviews.map((r, i) => (
+                      <div key={i} className={i > 0 ? 'pt-6' : ''}>
+                        {((r.images && r.images.length > 0) || r.video) && (
+                          <div className="flex gap-2 mb-2">
+                            {r.video && (
+                              <button
+                                type="button"
+                                onClick={() => setLightboxVideo(r.video!)}
+                                className="relative w-16 h-16 rounded-md overflow-hidden bg-[var(--color-lp-image-bg)] border border-[var(--color-lp-border)]"
+                              >
+                                <Image src={cfVideoPoster(r.video)} alt={`${r.name}'s video`} fill className="object-cover" />
+                                <span className="absolute inset-0 flex items-center justify-center bg-black/25">
+                                  <Play size={16} strokeWidth={1.5} className="text-white ml-0.5" fill="white" />
+                                </span>
+                              </button>
+                            )}
+                            {r.images?.map((img, k) => (
+                              <button
+                                key={k}
+                                type="button"
+                                onClick={() => setLightboxImage(img)}
+                                className="relative w-16 h-16 rounded-md overflow-hidden bg-[var(--color-lp-image-bg)] border border-[var(--color-lp-border)]"
+                              >
+                                <Image src={thumbUrl(img)} alt={`${r.name}'s photo`} fill className="object-cover" />
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                        <p className="font-body font-medium text-[0.85rem] text-[var(--color-lp-ink)]">{r.name}</p>
+                        <div className="flex items-center gap-0.5 mt-1">
+                          {Array.from({ length: 5 }).map((_, j) => (
+                            <Star
+                              key={j}
+                              size={13}
+                              strokeWidth={0}
+                              className={j < r.rating ? 'fill-lp-gold' : 'fill-[var(--color-lp-border)]'}
+                            />
+                          ))}
+                        </div>
+                        <p className="font-body text-[0.85rem] text-[var(--color-lp-body)] leading-relaxed mt-2">
+                          {r.text}
+                        </p>
+                        <p className="font-body text-[0.7rem] text-[var(--color-lp-faint)] mt-3">{r.date}</p>
+                      </div>
+                    ))}
+                  </div>
+                </>
               )}
             </div>
           </motion.div>
@@ -147,6 +213,33 @@ export function ReviewsModal({ open, onClose, productName, reviews }: Props) {
               onClick={(e) => e.stopPropagation()}
             />
           </div>
+        </motion.div>
+      )}
+
+      {lightboxVideo && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="fixed inset-0 z-[80] bg-black/85 flex items-center justify-center p-4 md:p-10"
+          onClick={() => setLightboxVideo(null)}
+        >
+          <button
+            onClick={() => setLightboxVideo(null)}
+            className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
+            aria-label="Close"
+          >
+            <X size={24} strokeWidth={1.5} />
+          </button>
+          <video
+            src={cfVideo(lightboxVideo)}
+            controls
+            autoPlay
+            playsInline
+            className="max-w-full max-h-full"
+            onClick={(e) => e.stopPropagation()}
+          />
         </motion.div>
       )}
     </AnimatePresence>
