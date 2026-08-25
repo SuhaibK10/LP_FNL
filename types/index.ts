@@ -14,7 +14,7 @@ export type ProductCategory =
   | 'overnighter'
   | 'organizer'
 
-export type ProductSize = 'Cabin' | 'Medium' | 'Large' | 'Set of 2' | 'Set of 3' | 'One Size' | '9 Inch' | '11 Inch' | '12 Inch' | '14 Inch' | '16 Inch' | '17 Inch' | '18 Inch' | '19 Inch' | '20 Inch'
+export type ProductSize = 'Cabin' | 'Medium' | 'Large' | 'Set of 2' | 'Set of 3' | 'One Size' | '8 Inch' | '9 Inch' | '11 Inch' | '12 Inch' | '14 Inch' | '16 Inch' | '17 Inch' | '18 Inch' | '19 Inch' | '20 Inch'
 
 export type ProductTag =
   | 'Best Seller'
