@@ -1988,7 +1988,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'aerovault',
     imageFit: 'cover',
-    mrp: 5399,
+    mrp: 5490,
     demoVideoId: '48b8f7686d12130e84b9de78f34723ab',
     metaTitle: 'AeroVault USB Laptop Travel Backpack',
     metaDescription: 'AeroVault pairs a padded laptop compartment with an external USB charging port, breathable back panel, and luggage mounting sleeve. Built for work, commuting, and travel.',
@@ -2052,7 +2052,7 @@ export const PRODUCTS: Product[] = [
           '17cc8ba4-8012-4f87-3fe8-5b2d218cf800',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 3800, stock: 30 },
         ],
       },
       {
@@ -2068,7 +2068,7 @@ export const PRODUCTS: Product[] = [
           '4db9fcc9-fcff-47c0-e5e2-2287ca8e6a00',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 3800, stock: 30 },
         ],
       },
       {
@@ -2083,7 +2083,7 @@ export const PRODUCTS: Product[] = [
           '293576b6-5990-4a58-6a18-db70626a5e00',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 3800, stock: 30 },
         ],
       },
     ],
@@ -2092,7 +2092,7 @@ export const PRODUCTS: Product[] = [
   // ── Apex ─────────────────────────────────────────────────────────────────
   {
     id: 'apex',
-    mrp: 5250,
+    mrp: 5490,
     demoVideoId: 'ac2c3cbed74ec63cd72630b8b4c9bf62',
     metaTitle: 'Apex Executive Backpack with USB Charging Port',
     metaDescription: 'Apex pairs a padded laptop compartment with an external USB charging port, a rear luggage trolley sleeve, and premium water-resistant fabric. Built for office, travel, and daily commute.',
@@ -2156,7 +2156,7 @@ export const PRODUCTS: Product[] = [
           '5b59d0b7-8d25-459c-666d-a3956a3f3000',
         ],
         sizes: [
-          { size: 'One Size', price: 2890, stock: 30 },
+          { size: 'One Size', price: 3800, stock: 30 },
         ],
       },
       {
@@ -2174,7 +2174,7 @@ export const PRODUCTS: Product[] = [
           'f9f91d77-07ed-4398-efa5-25da511c7a00',
         ],
         sizes: [
-          { size: 'One Size', price: 2890, stock: 30 },
+          { size: 'One Size', price: 3800, stock: 30 },
         ],
       },
     ],
@@ -2183,7 +2183,7 @@ export const PRODUCTS: Product[] = [
   // ── MetroGrid ────────────────────────────────────────────────────────────
   {
     id: 'metrogrid',
-    mrp: 4390,
+    mrp: 4490,
     imageFit: 'cover',
     demoVideoId: '1eb99e106f005a52d9972949e527de8b',
     metaTitle: 'MetroGrid Executive Laptop Backpack',
@@ -2246,7 +2246,7 @@ export const PRODUCTS: Product[] = [
           '8321af3d-25d7-4863-d287-f0ae6a74f300',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 3100, stock: 30 },
         ],
       },
       {
@@ -2263,7 +2263,7 @@ export const PRODUCTS: Product[] = [
           'fb84a8df-4295-4018-f286-a97a3ae64f00',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 3100, stock: 30 },
         ],
       },
       {
@@ -2277,7 +2277,7 @@ export const PRODUCTS: Product[] = [
           '238bc6ee-f531-4a9e-37ac-0355f9fdb100',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 3100, stock: 30 },
         ],
       },
     ],
@@ -2286,7 +2286,7 @@ export const PRODUCTS: Product[] = [
   // ── WorkGrid ─────────────────────────────────────────────────────────────
   {
     id: 'workgrid',
-    mrp: 4590,
+    mrp: 4490,
     demoVideoId: '8f322ddea596b20c6d9b5028f768988f',
     metaTitle: 'WorkGrid Executive Laptop Backpack',
     metaDescription: 'WorkGrid is a structured laptop backpack for the commute and business travel: dedicated laptop and tablet compartments, quick-access storage, and a rear trolley sleeve.',
@@ -2345,7 +2345,7 @@ export const PRODUCTS: Product[] = [
           'd8ec8e63-c3e9-423b-4e91-2b00a930ad00',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 3100, stock: 30 },
         ],
       },
       {
@@ -2364,7 +2364,7 @@ export const PRODUCTS: Product[] = [
           '90cda76f-8f92-43cb-61bb-6195c85dc400',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 3100, stock: 30 },
         ],
       },
       {
@@ -2376,7 +2376,7 @@ export const PRODUCTS: Product[] = [
           'ab63abc9-1e70-4183-90d4-715e48e75500',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 3100, stock: 30 },
         ],
       },
     ],
@@ -2392,7 +2392,7 @@ export const PRODUCTS: Product[] = [
     name: 'VelocityPro Ergonomic Backpack',
     slug: 'velocitypro',
     category: 'backpack',
-    mrp: 6580,
+    mrp: 5490,
     hideSizeSelector: true,
     description:
       'Built for a day that never really stops moving. VelocityPro carries a padded laptop and tablet compartment, an external USB charging port, a concealed pocket for valuables, and a rear trolley sleeve, on breathable straps tuned for the whole commute.',
@@ -2450,7 +2450,7 @@ export const PRODUCTS: Product[] = [
           'a72e0ef1-c87d-46dc-7702-50f4d78f0300',
         ],
         sizes: [
-          { size: 'One Size', price: 3290, stock: 30 },
+          { size: 'One Size', price: 3800, stock: 30 },
         ],
       },
       {
@@ -2462,7 +2462,7 @@ export const PRODUCTS: Product[] = [
           '73a05ac5-cbce-4d2d-d558-58a5c7e1d300',
         ],
         sizes: [
-          { size: 'One Size', price: 3290, stock: 30 },
+          { size: 'One Size', price: 3800, stock: 30 },
         ],
       },
       {
@@ -2475,7 +2475,7 @@ export const PRODUCTS: Product[] = [
           'dd7691b4-6208-46f8-e160-823ae6697c00',
         ],
         sizes: [
-          { size: 'One Size', price: 3290, stock: 30 },
+          { size: 'One Size', price: 3800, stock: 30 },
         ],
       },
     ],
@@ -2491,7 +2491,7 @@ export const PRODUCTS: Product[] = [
     name: 'TechTrek',
     slug: 'techtrek',
     category: 'backpack',
-    mrp: 7990,
+    mrp: 5490,
     hideSizeSelector: true,
     description:
       'A professional multi-compartment laptop and travel backpack designed for work, commuting, study, and short trips. TechTrek carries dedicated rear laptop storage, a spacious clamshell main compartment, and multiple organiser pockets, on padded straps built for the whole day.',
@@ -2541,7 +2541,7 @@ export const PRODUCTS: Product[] = [
         colorHex: '#212121',
         images: ['31571659-0be7-4495-4fdc-eba3ecb0cd00', '99513a58-3680-449e-d6f4-f573e4627e00', 'a8dca4ec-1a71-47fe-092b-652e795fd800', '0c281a43-e8e1-4d8f-e91f-1906125aae00', '62b6a633-ebd8-4af1-084f-e98577e11900', 'af3636e5-27f1-494b-0ad1-42e23f8f6c00', 'b9fded73-1ab4-4e60-842e-747254178d00', '2297ea5b-a41c-4ae9-355f-e0c2df05e800', '06acda03-6d9b-49ed-9e81-5547d8cb1000'],
         sizes: [
-          { size: 'One Size', price: 3490, stock: 25 },
+          { size: 'One Size', price: 3800, stock: 25 },
         ],
       },
       {
@@ -2549,7 +2549,7 @@ export const PRODUCTS: Product[] = [
         colorHex: '#1E4B8C',
         images: ['21a5a147-0cae-4112-6b40-098ecf2cbe00', '4ac9cf69-a827-4cd8-cf9d-f03f394e5600', '9b28fc38-8d6b-4ccb-a499-2b05d7654600', 'b12b2464-3cfe-4080-1e4b-11edf4d4c900', '46bf8e90-85ab-4b6e-7228-b41ba4b36700', 'b41b079f-0863-442e-36af-a4f9cc47fb00', 'b2f4ecec-bf10-4da1-99a5-177cfc3cb200', '03b2ca0e-bc0e-41f6-3463-cf6f70557400'],
         sizes: [
-          { size: 'One Size', price: 3490, stock: 25 },
+          { size: 'One Size', price: 3800, stock: 25 },
         ],
       },
       {
@@ -2557,7 +2557,7 @@ export const PRODUCTS: Product[] = [
         colorHex: '#9E9E9E',
         images: ['630149a2-234c-4ce7-5076-0db0a1b98d00', 'f37a384d-3b7f-48e4-8d22-6c259abd3600', '8df5d8e1-0baa-4092-c549-5cd8a78c8800', '9ca66656-f9ce-4346-a970-7fd626ccde00', 'e4c4f6c7-9f80-4dcd-2180-d9f071d87a00', 'ed9833f3-d610-4eeb-1baf-8e39d7227f00', '346f0f9c-f1e2-4590-72f7-dfd6a72e7a00', '7770b51e-d2a9-46e6-0032-8cdbf1188200'],
         sizes: [
-          { size: 'One Size', price: 3490, stock: 25 },
+          { size: 'One Size', price: 3800, stock: 25 },
         ],
       },
     ],
@@ -2572,7 +2572,7 @@ export const PRODUCTS: Product[] = [
     name: 'Urban Pro Ergonomic BackPack',
     slug: 'urban-pro-backpack',
     category: 'backpack',
-    mrp: 5980,
+    mrp: 5490,
     hideSizeSelector: true,
     description:
       'A sleek, structured backpack designed for modern workdays, travel, and everyday carry. The Urban Pro Backpack combines a clean minimalist profile with practical organization, featuring a spacious main compartment, dedicated laptop storage, front quick-access pocket, side pockets, and padded ergonomic shoulder straps.',
@@ -2629,7 +2629,7 @@ export const PRODUCTS: Product[] = [
           '16a52c46-dfac-4afd-3848-626cc29c0f00',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 3800, stock: 30 },
         ],
       },
       {
@@ -2639,7 +2639,7 @@ export const PRODUCTS: Product[] = [
           '930faf10-9ed3-4967-0f36-e959d5fe0900',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 3800, stock: 30 },
         ],
       },
       {
@@ -2651,7 +2651,7 @@ export const PRODUCTS: Product[] = [
           'd147656b-61bf-4af2-56ca-c8b28adc4a00',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 3800, stock: 30 },
         ],
       },
       {
@@ -2663,7 +2663,7 @@ export const PRODUCTS: Product[] = [
           '15687b51-37a0-418e-af35-42af06c73d00',
         ],
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30 },
+          { size: 'One Size', price: 3800, stock: 30 },
         ],
       },
     ],
@@ -2678,7 +2678,7 @@ export const PRODUCTS: Product[] = [
     name: 'ArmorPack',
     slug: 'armorpack',
     category: 'backpack',
-    mrp: 5980,
+    mrp: 5490,
     isFeatured: true,
     hideSizeSelector: true,
     description:
@@ -2735,14 +2735,14 @@ export const PRODUCTS: Product[] = [
         color: 'Silver Brush',
         colorHex: '#C0C0C0',
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30, sku: '8906206840193' },
+          { size: 'One Size', price: 3800, stock: 30, sku: '8906206840193' },
         ],
       },
       {
         color: 'Carbon Fiber',
         colorHex: '#2C2C2C',
         sizes: [
-          { size: 'One Size', price: 2990, stock: 30, sku: '8906206840209' },
+          { size: 'One Size', price: 3800, stock: 30, sku: '8906206840209' },
         ],
       },
       
@@ -3223,7 +3223,7 @@ export const PRODUCTS: Product[] = [
     slug: 'aerotech',
     category: 'backpack',
     hideSizeSelector: true,
-    mrp: 7990,
+    mrp: 5490,
     description:
       'Built for modern movement, the AeroTech Backpack combines a clean, structured silhouette with smart everyday functionality, equally suited to office commutes, business travel, and everyday carry.',
     story: [
@@ -3272,7 +3272,7 @@ export const PRODUCTS: Product[] = [
         colorHex: '#28384A',
         images: ['3ad467fd-b412-4b87-276b-cb132823aa00', 'cb7ad1dd-9b74-42aa-4bc5-d8e245af7300', '65177a6c-0917-4214-d399-e9a9578c9a00'],
         sizes: [
-          { size: 'One Size', price: 3290, stock: 25 },
+          { size: 'One Size', price: 3800, stock: 25 },
         ],
       },
       {
@@ -3280,7 +3280,7 @@ export const PRODUCTS: Product[] = [
         colorHex: '#212121',
         images: ['8cea762b-2a75-40b0-65e5-c469504fd800', '4f591c22-e747-4098-46d6-1b0f611caf00', '3ded24cd-708f-4bf9-c922-54db2082dc00', 'b48bab33-8de8-4915-913a-7c44edc2c100', '7deeb938-a625-419b-2a27-9ba56995a000', '48a8b8b8-0816-4015-2ce9-45bdec3d8600', '0899cd7c-da93-4966-4333-c1459bdbf700', 'ca6b3065-bda2-4f3e-f8a9-c4fad39c5500', 'b659eb2a-0185-43c2-7730-b7e9922f7300', '9575f0bc-28de-41cf-5c09-5c85d16db300'],
         sizes: [
-          { size: 'One Size', price: 3290, stock: 25 },
+          { size: 'One Size', price: 3800, stock: 25 },
         ],
       },
       {
@@ -3288,7 +3288,7 @@ export const PRODUCTS: Product[] = [
         colorHex: '#5A5A5C',
         images: ['a956e617-cd2d-4f88-7600-9376fe61f900', '593c763c-7103-4c24-3fc4-db2c7b9d2d00', 'a6af0a3c-1000-4ade-acb9-be579aa7d200', 'fc3f4071-963a-4096-1049-094f6f848800', '35a1234a-3bbb-4a41-e73e-31dedb17af00'],
         sizes: [
-          { size: 'One Size', price: 3290, stock: 25 },
+          { size: 'One Size', price: 3800, stock: 25 },
         ],
       },
     ],
@@ -4304,7 +4304,7 @@ export const PRODUCTS: Product[] = [
     name: 'AeroShield',
     slug: 'aeroshield-backpack',
     category: 'backpack',
-    mrp: 19998,
+    mrp: 5490,
     hideSizeSelector: true,
     description:
       'A firm, moulded front shell over a padded laptop compartment, so the backpack holds its shape on a hook or a train floor the way a soft one never does.',
@@ -4341,7 +4341,7 @@ export const PRODUCTS: Product[] = [
       {
         color: 'Tech White', colorHex: '#F5F3EC',
         images: ['c2101a36-983b-44bf-9e97-9e3270d5bf00', '5438f6fc-1ce9-462b-91bd-02cb545b8900', '7ce4fd31-4c1c-4921-7ad8-1a1c60328d00', 'f1afc58b-670d-4f3e-f0bf-9fe2983b9600'],
-        sizes: [{ size: 'One Size', price: 1790, stock: 10 }],
+        sizes: [{ size: 'One Size', price: 3800, stock: 10 }],
       },
     ],
   },
@@ -4460,7 +4460,7 @@ export const PRODUCTS: Product[] = [
     name: 'TitaniumEdge Backpack',
     slug: 'titaniumedge-backpack',
     category: 'backpack',
-    mrp: 3998,
+    mrp: 5490,
     hideSizeSelector: true,
     description:
       'The TitaniumEdge finish on a backpack frame: diagonal ribbed metallic silver, a dedicated laptop compartment, and straps built for a full workday rather than a short walk.',
@@ -4497,7 +4497,7 @@ export const PRODUCTS: Product[] = [
       {
         color: 'Silver', colorHex: '#BDBDBD',
         images: ['d47f241e-70b1-4c65-b29b-ae93be1c2500', '3d0c2378-d111-45d9-7fe9-47fda2df0b00', '7abfefa2-818e-4a8c-72b6-2c8ffb572f00', 'f1c7f7e1-f931-4054-de4f-c30e92a6c100', 'f0303fb0-bda6-4c9c-2895-926a24fd1a00', '0b0f78f4-3fa8-4bad-7909-e93acb10cc00', 'a83518f8-1147-483c-bc69-fae193493f00'],
-        sizes: [{ size: 'One Size', price: 1999, stock: 10 }],
+        sizes: [{ size: 'One Size', price: 3800, stock: 10 }],
       },
     ],
   },
@@ -4511,7 +4511,7 @@ export const PRODUCTS: Product[] = [
     name: 'AeroFrame',
     slug: 'aeroframe',
     category: 'backpack',
-    mrp: 3998,
+    mrp: 5490,
     hideSizeSelector: true,
     description:
       'A clean rectangular shell in metallic silver, with a vertically ribbed lower panel that reinforces the front against the everyday press of a full bag.',
@@ -4548,7 +4548,7 @@ export const PRODUCTS: Product[] = [
       {
         color: 'Silver', colorHex: '#BDBDBD',
         images: ['45dac148-397f-4e0b-583b-029371ac9f00', 'c13c42ca-6431-427f-a092-43171750fb00', '47687b74-6a30-4524-59d0-03a7f1f66600', '7debe021-dd88-48f1-5e93-3b84d4a3f600', 'd3ef9cf7-f1d7-40c8-3522-cba88014dc00', '64351003-1376-410c-a59e-5f6156151d00'],
-        sizes: [{ size: 'One Size', price: 1999, stock: 15 }],
+        sizes: [{ size: 'One Size', price: 3800, stock: 15 }],
       },
     ],
   },
