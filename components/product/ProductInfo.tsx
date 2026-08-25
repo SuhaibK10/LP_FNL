@@ -160,7 +160,7 @@ export function ProductInfo({ product, defaultColor, onColorChange, onColorHover
               {formatPrice(price)}
             </span>
             <span className="ml-2 inline-flex items-center rounded-full px-2 py-0.5 font-body font-semibold text-[0.8rem] bg-lp-success/10 text-lp-success align-middle">
-              {Math.round((1 - myntraTarget.price / price) * 100)}% off
+              ({Math.round((1 - myntraTarget.price / price) * 100)}% off)
             </span>
           </p>
           <div className="flex items-center gap-3">
@@ -180,6 +180,16 @@ export function ProductInfo({ product, defaultColor, onColorChange, onColorHover
       <div className="space-y-2">
         <p className="font-body text-[1.35rem] font-semibold leading-none text-[var(--color-lp-ink)]">
           {selectedSize ? formatPrice(price) : `From ${formatPrice(price)}`}
+          {product.mrp && (
+            <>
+              <span className="ml-3 font-body text-[0.95rem] font-normal text-[var(--color-lp-muted)] line-through decoration-1 decoration-[var(--color-lp-muted)] align-middle">
+                {formatPrice(product.mrp)}
+              </span>
+              <span className="ml-2 inline-flex items-center rounded-full px-2 py-0.5 font-body font-semibold text-[0.8rem] bg-lp-success/10 text-lp-success align-middle">
+                ({Math.round((1 - price / product.mrp) * 100)}% off)
+              </span>
+            </>
+          )}
         </p>
         {(manualRating || reviews.length > 0) && (
           <div className="flex items-center gap-3">

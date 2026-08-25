@@ -545,6 +545,7 @@ export const PRODUCTS: Product[] = [
     name: 'AuraShell',
     slug: 'aurashell',
     category: 'vanity',
+    additionalCategories: ['duffle'],
     mrp: 4980,
     isFeatured: true,
     hideSizeGuide: true,
@@ -4676,7 +4677,7 @@ export const getProductBySlug = (slug: string): Product | undefined =>
 export const getProductsByCategory = (category: string): Product[] =>
   category === 'all'
     ? PRODUCTS
-    : PRODUCTS.filter((p) => p.category === category)
+    : PRODUCTS.filter((p) => p.category === category || p.additionalCategories?.includes(category as Product['category']))
 
 // ─── Stats for TrustBar ───────────────────────────────────────────────────────
 export const BRAND_STATS = [
@@ -4693,8 +4694,8 @@ export const CATEGORIES = [
   { label: 'Sets',        value: 'set',        count: PRODUCTS.filter(p => p.category === 'set').length },
   { label: 'Backpacks',   value: 'backpack',   count: PRODUCTS.filter(p => p.category === 'backpack').length },
   { label: 'Office Bags', value: 'office-bag', count: PRODUCTS.filter(p => p.category === 'office-bag').length },
-  { label: 'Duffle Bags', value: 'duffle',       count: PRODUCTS.filter(p => p.category === 'duffle').length },
-  { label: 'Vanity Cases',value: 'vanity',       count: PRODUCTS.filter(p => p.category === 'vanity').length },
+  { label: 'Duffle Bags', value: 'duffle',       count: PRODUCTS.filter(p => p.category === 'duffle' || p.additionalCategories?.includes('duffle')).length },
+  { label: 'Vanity Cases',value: 'vanity',       count: PRODUCTS.filter(p => p.category === 'vanity' || p.additionalCategories?.includes('vanity')).length },
   { label: 'OverNighters', value: 'overnighter', count: PRODUCTS.filter(p => p.category === 'overnighter').length },
   { label: 'Organizers',  value: 'organizer',    count: PRODUCTS.filter(p => p.category === 'organizer').length },
 ] as const

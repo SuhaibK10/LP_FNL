@@ -27,7 +27,7 @@ export default function ShopPage() {
               <ShopSizeGuideButton />
             </div>
           </div>
-          <p className="font-body text-[var(--color-lp-body)] text-base mb-4">
+          <p className="font-body font-medium text-lp-ink text-base mb-4">
             Built for every kind of traveller.
           </p>
         </div>

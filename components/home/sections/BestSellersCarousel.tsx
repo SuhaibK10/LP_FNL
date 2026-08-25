@@ -541,8 +541,8 @@ export function BestSellersCarousel() {
             onClick={() => setTab('bestsellers')}
             className={
               tab === 'bestsellers'
-                ? 'font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-lp-ink pb-1.5 transition-colors duration-200'
-                : 'font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-transparent pb-1.5 transition-colors duration-200'
+                ? 'font-body font-bold text-[0.8rem] tracking-widest uppercase text-lp-ink border-b-2 border-lp-ink pb-1.5 transition-colors duration-200'
+                : 'font-body font-semibold text-[0.8rem] tracking-widest uppercase text-lp-ink/70 border-b-2 border-transparent pb-1.5 transition-colors duration-200'
             }
           >
             Best Sellers
@@ -553,8 +553,8 @@ export function BestSellersCarousel() {
             onClick={() => setTab('myntra')}
             className={
               tab === 'myntra'
-                ? 'flex items-center gap-1.5 font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-lp-ink pb-1.5 transition-colors duration-200'
-                : 'flex items-center gap-1.5 font-body text-[0.75rem] tracking-widest uppercase text-lp-ink border-b-2 border-transparent pb-1.5 transition-colors duration-200'
+                ? 'flex items-center gap-1.5 font-body font-bold text-[0.8rem] tracking-widest uppercase text-lp-ink border-b-2 border-lp-ink pb-1.5 transition-colors duration-200'
+                : 'flex items-center gap-1.5 font-body font-semibold text-[0.8rem] tracking-widest uppercase text-lp-ink/70 border-b-2 border-transparent pb-1.5 transition-colors duration-200'
             }
           >
             <Image src="/myntra-m.png" alt="" width={13} height={11} unoptimized />

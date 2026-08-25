@@ -239,10 +239,20 @@ export function ProductCard({ product }: ProductCardProps) {
             className="absolute top-3 left-3 z-10 w-7 h-7 flex items-center justify-center"
             aria-label={videoOpen ? 'Stop product demo video' : 'Play product demo video'}
           >
-            <span className="w-full h-full rounded-full flex items-center justify-center bg-lp-porcelain/90 backdrop-blur-sm border border-[var(--color-lp-border)]">
+            {!videoOpen && (
+              <motion.span
+                className="absolute inset-0 rounded-full border border-white/40"
+                animate={{ scale: [1, 1.35], opacity: [0.6, 0] }}
+                transition={{ duration: 1.8, repeat: Infinity, ease: 'easeOut' }}
+              />
+            )}
+            <span
+              className="relative w-full h-full rounded-full flex items-center justify-center backdrop-blur-sm shadow-[0_2px_10px_rgba(0,0,0,0.35)] transition-transform duration-200 hover:scale-105"
+              style={{ background: 'linear-gradient(135deg, #2A2926 0%, #1C1B19 100%)' }}
+            >
               {videoOpen
-                ? <X size={13} strokeWidth={1.5} className="text-[var(--color-lp-ink)]" />
-                : <Play size={13} strokeWidth={1.5} className="text-[var(--color-lp-ink)] ml-0.5" />}
+                ? <X size={14} strokeWidth={1.75} className="text-lp-porcelain" />
+                : <Play size={14} strokeWidth={0} fill="currentColor" className="text-lp-porcelain ml-0.5" />}
             </span>
           </motion.button>
         )}

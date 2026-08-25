@@ -71,6 +71,8 @@ export interface Product {
   name: string
   slug: string
   category: ProductCategory
+  /** Extra categories this product should also show up under, beyond its primary `category` (which still governs the displayed category label). */
+  additionalCategories?: ProductCategory[]
   tag?: ProductTag
   isFeatured?: boolean
   saleExclusive?: boolean
