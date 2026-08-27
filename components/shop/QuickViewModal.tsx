@@ -6,11 +6,13 @@ import Link                        from 'next/link'
 import { X, ShoppingBag, Star } from 'lucide-react'
 import { useEffect, useState }     from 'react'
 import type { Product, ProductSize } from '@/types'
-import { pdpUrl, PLACEHOLDER_URL }  from '@/lib/cloudflareImages'
+import type { Review }              from '@/config/reviews'
+import { pdpUrl, thumbUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 import { formatPrice, swatchRingColor } from '@/lib/utils'
 import { ROUTES }                   from '@/lib/constants'
 import { saveShopScroll }           from '@/lib/scrollRestore'
 import { tapPunch }                 from '@/lib/animations'
+import { ReviewsModal }             from '@/components/ui/ReviewsModal'
 
 interface Props {
   open:           boolean
@@ -26,12 +28,14 @@ interface Props {
   addedToCart:    boolean
   onAddToCart:    (e: React.MouseEvent) => void
   manualRating?:  { rating: number; count: number }
+  reviews?:       Review[]
 }
 
 export function QuickViewModal({
   open, onClose, product, activeVariant, activeSize, onColorChange, onSizeChange,
-  displayImage, price, canAdd, addedToCart, onAddToCart, manualRating,
+  displayImage, price, canAdd, addedToCart, onAddToCart, manualRating, reviews = [],
 }: Props) {
+  const [reviewsOpen, setReviewsOpen] = useState(false)
   useEffect(() => {
     const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
     window.addEventListener('keydown', handler)
@@ -54,6 +58,7 @@ export function QuickViewModal({
   const activeImage = galleryImages[activePhoto] ?? galleryImages[0] ?? displayImage
 
   return (
+    <>
     <AnimatePresence>
       {open && (
         <motion.div
@@ -84,7 +89,7 @@ export function QuickViewModal({
             <div className="grid grid-cols-1 md:grid-cols-2">
               {/* Image + thumbnail strip */}
               <div>
-                <div className="relative aspect-square bg-lp-image-bg">
+                <div className="relative aspect-3/4 bg-lp-image-bg">
                   <Image
                     src={pdpUrl(activeImage, product.imageFit) || PLACEHOLDER_URL}
                     alt={`${product.name} in ${variant.color}`}
@@ -103,7 +108,7 @@ export function QuickViewModal({
                         className={`relative w-14 h-14 shrink-0 rounded-md overflow-hidden bg-lp-image-bg border transition-colors duration-200 ${i === activePhoto ? 'border-lp-ink' : 'border-[var(--color-lp-border)]'}`}
                       >
                         <Image
-                          src={pdpUrl(img, product.imageFit) || PLACEHOLDER_URL}
+                          src={thumbUrl(img, product.imageFit) || PLACEHOLDER_URL}
                           alt={`${product.name} angle ${i + 1}`}
                           fill
                           className="object-cover object-center"
@@ -123,12 +128,25 @@ export function QuickViewModal({
                   {product.name}
                 </h2>
 
-                {manualRating && (
-                  <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 font-body font-bold text-[0.8rem] text-lp-ink bg-lp-gold/15 border border-lp-gold/40 leading-none w-fit">
-                    <Star size={13} strokeWidth={0} className="fill-lp-gold" />
-                    {manualRating.rating.toFixed(1)}
-                    <span className="font-medium opacity-70">({manualRating.count})</span>
-                  </span>
+                {(manualRating || reviews.length > 0) && (
+                  <div className="flex items-center gap-3">
+                    {manualRating && (
+                      <span className="inline-flex items-center gap-1 rounded-full px-2.5 py-1 font-body font-bold text-[0.8rem] text-lp-ink bg-lp-gold/15 border border-lp-gold/40 leading-none w-fit">
+                        <Star size={13} strokeWidth={0} className="fill-lp-gold" />
+                        {manualRating.rating.toFixed(1)}
+                        <span className="font-medium opacity-70">({manualRating.count})</span>
+                      </span>
+                    )}
+                    {reviews.length > 0 && (
+                      <button
+                        type="button"
+                        onClick={() => setReviewsOpen(true)}
+                        className="font-body font-medium text-[0.8rem] text-lp-faint hover:text-lp-gold underline underline-offset-2 transition-colors duration-200"
+                      >
+                        Reviews ({reviews.length})
+                      </button>
+                    )}
+                  </div>
                 )}
 
                 <p className="font-body text-[1.35rem] font-semibold leading-none text-[var(--color-lp-ink)] mt-1">
@@ -238,5 +256,7 @@ export function QuickViewModal({
         </motion.div>
       )}
     </AnimatePresence>
+    <ReviewsModal open={reviewsOpen} onClose={() => setReviewsOpen(false)} productName={product.name} reviews={reviews} />
+    </>
   )
 }

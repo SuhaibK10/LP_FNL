@@ -46,6 +46,7 @@ export default function AdminMediaPage() {
   const [category, setCategory] = useState<string>('all')
   const [selected, setSelected] = useState<Set<string>>(new Set())
   const [copied, setCopied]     = useState(false)
+  const [copiedText, setCopiedText] = useState<string | null>(null)
   const [uploading, setUploading] = useState(false)
   const [uploadNote, setUploadNote] = useState<string | null>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -111,9 +112,16 @@ export default function AdminMediaPage() {
   }
 
   async function copyToClipboard(text: string) {
-    await navigator.clipboard.writeText(text)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 1500)
+    try {
+      await navigator.clipboard.writeText(text)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 1500)
+    } catch {
+      // Clipboard API can silently fail depending on browser permissions —
+      // the textarea below still shows the text either way, so it's never
+      // a dead end, just a manual select-all/copy instead of automatic.
+    }
+    setCopiedText(text)
   }
 
   function copySingleLink(id: string) {
@@ -232,6 +240,26 @@ export default function AdminMediaPage() {
           )}
           {copied && <span className="text-xs text-green-600">Copied</span>}
         </div>
+
+        {copiedText && (
+          <div className="mt-3">
+            <p className="text-xs text-gray-500 mb-1 flex items-center gap-2">
+              <span>
+                Last copied ({copiedText.split('\n').length} link{copiedText.split('\n').length === 1 ? '' : 's'}) — select all and copy manually if the automatic copy didn't work:
+              </span>
+              <button type="button" onClick={() => setCopiedText(null)} className="text-gray-500 hover:text-[#1C1B19] underline shrink-0">
+                Clear
+              </button>
+            </p>
+            <textarea
+              readOnly
+              value={copiedText}
+              onFocus={(e) => e.target.select()}
+              rows={Math.min(6, copiedText.split('\n').length)}
+              className="w-full max-w-lg border border-gray-300 rounded-md px-3 py-2 text-xs font-mono outline-none focus:border-[#B99A62]"
+            />
+          </div>
+        )}
       </div>
 
       <div className="p-6">
@@ -239,7 +267,7 @@ export default function AdminMediaPage() {
         {!images && !error && <p className="text-sm text-gray-500">Loading images…</p>}
         {images && filtered.length === 0 && <p className="text-sm text-gray-500">No images match.</p>}
 
-        <div className="grid gap-4" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))' }}>
+        <div className="grid gap-4" style={{ gridTemplateColumns: 'repeat(6, 1fr)' }}>
           {filtered.map((img) => {
             const isSelected = selected.has(img.id)
             return (

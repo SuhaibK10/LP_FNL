@@ -4844,6 +4844,355 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
+  // ── Sterling Backpack ────────────────────────────────────────────────────
+  {
+    id: 'sterling-backpack',
+    metaTitle: 'Sterling Backpack Premium Laptop Backpack with Padded Compartment',
+    metaDescription: 'The Louis Polo Sterling Backpack pairs a structured black shell with a dedicated padded laptop compartment, multiple organiser pockets, and comfortable padded straps. Built for office, college, commuting, and travel.',
+    keywords: ['premium laptop backpack', 'black office backpack', 'padded laptop compartment backpack', 'college backpack india', 'travel commuter backpack'],
+    name: 'Sterling Backpack',
+    slug: 'sterling-backpack',
+    category: 'backpack',
+    isFeatured: true,
+    hideSizeSelector: true,
+    mrp: 5490,
+    description:
+      'Smartly organized. Effortlessly sophisticated. The Sterling Backpack combines a sleek, contemporary design with practical everyday functionality, a spacious main compartment, multiple organised pockets, and a dedicated padded space for your laptop and essentials.',
+    story: [
+      'Sterling is built for the version of a workday that moves: desk in the morning, campus or client meeting by afternoon, a flight or a train platform by evening. Its structured silhouette and refined finish carry a premium, professional look, while a durable textured exterior and padded shoulder straps keep it comfortable across a full day of daily commuting, work, business travel, or a short trip.',
+      'Inside, a dedicated padded laptop compartment sits apart from the main storage, so a device travels protected while the rest of the bag stays free for everything else, files, a change of clothes, the small things a day accumulates. Multiple front and internal pockets keep it all organised rather than loose, and a premium branded interior lining finishes it the way the exterior promises.',
+    ],
+    highlights: [
+      {
+        heading: 'Protection built in, not bolted on',
+        body: 'A dedicated padded compartment keeps a laptop separate from the rest of the pack, cushioned against the everyday knocks of a commute.',
+      },
+      {
+        heading: 'Organised, not just spacious',
+        body: 'Multiple front and internal pockets give every essential its own place, so the spacious main compartment stays for what actually needs the room.',
+      },
+      {
+        heading: 'A compact profile that still does the work',
+        body: 'At 46 × 30 × 16 cm, Sterling is compact enough for daily carry and campus corridors, yet spacious enough for the office, business travel, and short trips.',
+      },
+    ],
+    specs: [
+      { label: 'Design',    value: 'Structured silhouette, refined finish' },
+      { label: 'Dimensions', value: '46 × 30 × 16 cm' },
+      { label: 'Laptop bay', value: 'Dedicated, padded compartment' },
+      { label: 'Storage',   value: 'Spacious main compartment · multiple front and internal pockets' },
+      { label: 'Exterior',  value: 'Durable, textured construction' },
+      { label: 'Carry',     value: 'Padded shoulder straps · top carry handle' },
+      { label: 'Interior',  value: 'Premium branded lining' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      '793f04cf-16bb-4120-50af-9fc8e7833f00',
+      'f5a40043-f9c6-4664-b242-9aaf5cc57400',
+      'd3ccb4f5-b313-4287-304e-b6b4744bca00',
+      '12b87a1a-84f5-4918-9493-180be8224300',
+      '5a494b93-a680-4eaa-3954-13324c799500',
+    ],
+    features: [
+      { label: 'Sleek, sophisticated modern design' },
+      { label: 'Spacious main compartment' },
+      { label: 'Dedicated padded laptop compartment' },
+      { label: 'Multiple front and internal pockets' },
+      { label: 'Durable, textured exterior' },
+      { label: 'Comfortable padded shoulder straps' },
+      { label: 'Convenient top carry handle' },
+      { label: 'Premium branded interior lining' },
+    ],
+    variants: [
+      {
+        color: 'Navy Blue',
+        colorHex: '#2C3A47',
+        images: [
+          '793f04cf-16bb-4120-50af-9fc8e7833f00',
+          'f5a40043-f9c6-4664-b242-9aaf5cc57400',
+          'd3ccb4f5-b313-4287-304e-b6b4744bca00',
+          '12b87a1a-84f5-4918-9493-180be8224300',
+          '5a494b93-a680-4eaa-3954-13324c799500',
+        ],
+        sizes: [
+          { size: 'One Size', price: 3800, stock: 30 },
+        ],
+      },
+      {
+        color: 'Black',
+        colorHex: '#212121',
+        images: [
+          '20a57fb1-c782-4b99-696f-e3e905de3e00',
+          '211cf24c-d89e-4476-ecc7-4e426851e300',
+          '291c4b47-78fb-4fd8-78e5-06fb0ec7d400',
+          '1820ded1-452d-479a-9b17-e16aca34c500',
+          'fec00bfa-af5c-426d-97ab-0a9b14c75500',
+          '16161edd-d92e-4bed-f984-6b794f519300',
+          '11c7ee8d-8acb-434d-de10-de774ebed900',
+          '4fc0a342-dfb3-4911-e7ea-33c9e751af00',
+          '7add5680-939b-4156-224a-2b6d9000cb00',
+          'f4a0d1c4-6785-4554-18d7-0f849f90f600',
+          '1db19539-6d25-45a3-2336-e94455ce6200',
+          '457261b4-f77e-4759-7d2f-7dc61e2c9100',
+        ],
+        sizes: [
+          { size: 'One Size', price: 3800, stock: 30 },
+        ],
+      },
+      {
+        color: 'Grey',
+        colorHex: '#4A4A4A',
+        images: [
+          '76c0a0b1-b8f3-4c6d-3bfb-9bf95fc15200',
+          '1a652a0c-8169-4944-f56c-640f08ee0a00',
+          '5a494b93-a680-4eaa-3954-13324c799500',
+          '16161edd-d92e-4bed-f984-6b794f519300',
+          '6a86adae-66e8-4c17-c871-379a74a4e300',
+        ],
+        sizes: [
+          { size: 'One Size', price: 3800, stock: 30 },
+        ],
+      },
+    ],
+  },
+
+  // ── Twinford Backpack ────────────────────────────────────────────────────
+  {
+    id: 'twinford-backpack',
+    metaTitle: 'Twinford Dual-Pocket Backpack with Laptop Compartment',
+    metaDescription: 'The Louis Polo Twinford Backpack pairs a distinctive dual front-pocket design with a dedicated laptop compartment, multiple organiser pockets, and a durable textured exterior. Built for office, college, commuting, and travel.',
+    keywords: ['dual pocket backpack', 'laptop backpack for men', 'office backpack india', 'college backpack with laptop compartment', 'travel commuter backpack'],
+    name: 'Twinford Backpack',
+    slug: 'twinford-backpack',
+    category: 'backpack',
+    isFeatured: true,
+    hideSizeSelector: true,
+    mrp: 5490,
+    description:
+      'Designed for those who carry more, without carrying the bulk. The Twinford Backpack pairs a distinctive dual front-pocket design with a spacious main compartment, dedicated laptop storage, and a sleek, structured silhouette.',
+    story: [
+      'Twinford starts from a detail most backpacks skip: two separate front zippered pockets instead of one, so the small things a day collects, a phone charger, a transit card, a set of keys, each get their own place instead of sinking into a single front pocket. The structured silhouette stays sleek regardless, refined rather than bulky despite the extra storage.',
+      'Inside, a dedicated compartment keeps a laptop and accessories apart from the main storage, while multiple internal pockets carry the rest of a workday or a lecture day in order. A durable textured exterior with a reinforced base and padded, adjustable shoulder straps make it comfortable for the office, college, commuting, or travel, and a Louis Polo branded interior lining finishes it the way the exterior promises.',
+    ],
+    highlights: [
+      {
+        heading: 'Two pockets, not one',
+        body: 'Distinctive dual front zippered pockets split everyday essentials into their own compartments, so a fumble for keys never means emptying the whole front pocket.',
+      },
+      {
+        heading: 'Laptop and accessories, kept apart',
+        body: 'A dedicated compartment protects a laptop and its accessories separately from the main storage, cushioned against the everyday knocks of a commute.',
+      },
+      {
+        heading: 'Built to take the load',
+        body: 'A reinforced base and durable textured exterior carry real weight, while padded, adjustable shoulder straps and a sturdy top handle keep it comfortable across a full day.',
+      },
+    ],
+    specs: [
+      { label: 'Design',     value: 'Dual front zippered pockets, structured silhouette' },
+      { label: 'Dimensions', value: '40 × 29 × 18 cm' },
+      { label: 'Laptop bay', value: 'Dedicated compartment for laptop and accessories' },
+      { label: 'Storage',    value: 'Spacious main compartment · multiple internal pockets' },
+      { label: 'Exterior',   value: 'Durable, textured construction with reinforced base' },
+      { label: 'Carry',      value: 'Padded adjustable shoulder straps · top carry handle' },
+      { label: 'Interior',   value: 'Premium Louis Polo branded lining' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      '50bf610d-e069-4cb1-eb99-50bdcc876100',
+      '6896c07e-8316-4dbf-ac13-0a498a860b00',
+      '604a5087-c5ff-4266-41ac-b8aa36dede00',
+      '48d04768-dfec-4e93-5d43-229458ebe100',
+      '70a67189-09bf-4685-adf3-bed895117100',
+    ],
+    features: [
+      { label: 'Dual front zippered pockets' },
+      { label: 'Spacious main compartment' },
+      { label: 'Dedicated laptop and accessory compartment' },
+      { label: 'Multiple internal pockets' },
+      { label: 'Durable textured exterior' },
+      { label: 'Reinforced base' },
+      { label: 'Padded adjustable shoulder straps' },
+      { label: 'Convenient top carry handle' },
+      { label: 'Premium branded interior lining' },
+    ],
+    variants: [
+      {
+        color: 'Green',
+        colorHex: '#465045',
+        images: [
+          '50bf610d-e069-4cb1-eb99-50bdcc876100',
+          '6896c07e-8316-4dbf-ac13-0a498a860b00',
+          '604a5087-c5ff-4266-41ac-b8aa36dede00',
+          '48d04768-dfec-4e93-5d43-229458ebe100',
+          '70a67189-09bf-4685-adf3-bed895117100',
+        ],
+        sizes: [
+          { size: 'One Size', price: 3800, stock: 30 },
+        ],
+      },
+      {
+        color: 'Black',
+        colorHex: '#2B2B2B',
+        images: [
+          'c9602d31-e4c2-442d-c7a6-6bf04e463000',
+          '07ece734-2683-42b1-277b-d9c3da232200',
+          '6f6ee7a0-1d34-497f-eb2b-a8796ba3d200',
+          'bb3ecce7-aebd-484f-0b02-4ba9ae013d00',
+          '108a5831-d07c-464a-d19c-0d1b1cf50300',
+          '3c688317-3b77-4051-b5b9-2bba71a61200',
+          '70a67189-09bf-4685-adf3-bed895117100',
+        ],
+        sizes: [
+          { size: 'One Size', price: 3800, stock: 30 },
+        ],
+      },
+      {
+        color: 'Grey',
+        colorHex: '#494948',
+        images: [
+          '2bdd3a85-7cf7-4905-7a68-3ec0c2455200',
+          'cc7ff76b-3022-4b75-f00b-8373becb0800',
+          '80491ad8-1793-43da-cb8b-3bab276a0c00',
+          'a435d33a-cf22-410a-ab74-ccab67d40a00',
+          '70a67189-09bf-4685-adf3-bed895117100',
+        ],
+        sizes: [
+          { size: 'One Size', price: 3800, stock: 30 },
+        ],
+      },
+    ],
+  },
+
+  // ── Westbury Backpack ────────────────────────────────────────────────────
+  {
+    id: 'westbury-backpack',
+    metaTitle: 'Westbury Structured Flap-Top Backpack with Laptop Compartment',
+    metaDescription: 'The Louis Polo Westbury Backpack pairs an elegant structured flap-top design with a dedicated laptop compartment, front and side pockets, and a durable textured exterior. Built for office, business travel, college, and commuting.',
+    keywords: ['flap top backpack', 'structured laptop backpack', 'office backpack india', 'business travel backpack', 'college backpack with laptop compartment'],
+    name: 'Westbury Backpack',
+    slug: 'westbury-backpack',
+    category: 'backpack',
+    isFeatured: true,
+    hideSizeSelector: true,
+    mrp: 5490,
+    description:
+      'Refined design. Effortless organization. The Westbury Backpack brings together a sophisticated, structured flap-top silhouette with a spacious interior, a dedicated laptop compartment, and multiple pockets that keep documents, accessories, and smaller items neatly arranged.',
+    story: [
+      'Westbury leads with its flap: a structured top that closes clean over the main compartment, the kind of detail that reads as considered rather than merely functional. Underneath it, the backpack does the practical work, a spacious main compartment for everyday essentials, a dedicated laptop compartment for added protection, and multiple internal pockets so nothing has to compete for space.',
+      'A front zippered pocket keeps quick-access essentials within reach, and side pockets take the things you would rather not dig for, a bottle, an umbrella, a phone. Padded, adjustable shoulder straps and a comfortable back panel carry the load through long commutes, and a durable textured exterior with a reinforced base keeps Westbury looking polished well past day one.',
+    ],
+    highlights: [
+      {
+        heading: 'A flap that means business',
+        body: 'The structured flap-top closure gives Westbury a tailored silhouette that stands apart from the usual zip-round backpack, without giving up easy access underneath.',
+      },
+      {
+        heading: 'Everything within reach',
+        body: 'A front zippered pocket, side pockets, and multiple internal compartments mean documents, accessories, and smaller items each have a place, not a pile.',
+      },
+      {
+        heading: 'Comfortable over the long commute',
+        body: 'Padded, adjustable shoulder straps and a comfortable back panel keep Westbury steady across a full day, from the office to a business trip and back.',
+      },
+    ],
+    specs: [
+      { label: 'Design',     value: 'Structured flap-top closure' },
+      { label: 'Dimensions', value: '44 × 30 × 16 cm' },
+      { label: 'Laptop bay', value: 'Dedicated, padded compartment' },
+      { label: 'Storage',    value: 'Spacious main compartment · multiple internal pockets' },
+      { label: 'Exterior',   value: 'Durable, textured construction with reinforced base' },
+      { label: 'Pockets',    value: 'Front zippered pocket · side pockets' },
+      { label: 'Carry',      value: 'Padded adjustable shoulder straps · top carry handle' },
+      { label: 'Interior',   value: 'Premium Louis Polo branded lining' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      '1a6ed470-0c7c-4cd6-3aeb-125dc4ad1c00',
+      '25230698-0b5d-4832-7b6d-90bd5b2da600',
+      'e8115feb-426b-4008-6e5e-45e8d67d0e00',
+      '129197d0-69e8-4c18-18ae-9098ddc2c000',
+      '9ea84435-427f-47b5-7b9c-b0a0c7480f00',
+    ],
+    features: [
+      { label: 'Elegant structured flap-top design' },
+      { label: 'Spacious main compartment' },
+      { label: 'Dedicated laptop compartment' },
+      { label: 'Multiple internal pockets' },
+      { label: 'Front zippered pocket' },
+      { label: 'Side pockets' },
+      { label: 'Durable textured exterior' },
+      { label: 'Reinforced base' },
+      { label: 'Padded adjustable shoulder straps' },
+      { label: 'Comfortable back panel' },
+      { label: 'Convenient top carry handle' },
+      { label: 'Premium branded interior lining' },
+    ],
+    variants: [
+      {
+        color: 'Green',
+        colorHex: '#485045',
+        images: [
+          '1a6ed470-0c7c-4cd6-3aeb-125dc4ad1c00',
+          '25230698-0b5d-4832-7b6d-90bd5b2da600',
+          'e8115feb-426b-4008-6e5e-45e8d67d0e00',
+          '129197d0-69e8-4c18-18ae-9098ddc2c000',
+          '9ea84435-427f-47b5-7b9c-b0a0c7480f00',
+        ],
+        sizes: [
+          { size: 'One Size', price: 3800, stock: 30 },
+        ],
+      },
+      {
+        color: 'Black',
+        colorHex: '#292929',
+        images: [
+          '9e98a0eb-c54c-4028-be96-6faaed0b9500',
+          '8653bace-021d-4003-9aaa-1f0c76818800',
+          'f048c9c3-bb10-4bc7-e069-96a190679100',
+          '7c16d9b8-8007-47c4-65f1-407570d0a200',
+          'e59f789e-d2c0-4947-35b7-e56ca18cbf00',
+          '163c1d75-b10b-4acb-3cd5-f73c970f2000',
+          '282dfc7f-6f4b-49a8-3a25-fca2252f4000',
+          '6539fedd-8a9f-44d7-8ae2-da910a378b00',
+          '121a35d7-a09e-4340-8894-8b600671b400',
+          'd78bb23f-9393-421f-9129-fdad0881ce00',
+          '3d828df3-a9ab-4395-00fe-e6daf9235000',
+          '8a5e0d1e-a7df-4fd4-7e44-468da0608d00',
+          '5f2d97c1-9c12-43f2-c7fe-d719d905c100',
+          '602b8bda-b53a-489c-f517-ab6b741a7500',
+          'bc8d4086-5896-4f2f-1e6a-802d02add600',
+          'e61d30d9-af34-470a-167a-7cc28441a400',
+          'c3a76317-b407-4280-f0c8-b66de6f1e700',
+          '1137bd96-4e6f-4094-d0e5-df04c504e200',
+          '7766dca9-4122-4031-8aac-2ef41b557a00',
+          'da14c6f6-9950-4a8d-04c4-7a25db82f600',
+          '09efaaf5-d96f-4093-5387-0044a4de4200',
+        ],
+        sizes: [
+          { size: 'One Size', price: 3800, stock: 30 },
+        ],
+      },
+      {
+        color: 'Grey',
+        colorHex: '#4D4C4D',
+        images: [
+          'befb0f4b-d58a-45c0-f108-af1fb51ccd00',
+          '17a89fa9-c30f-4155-9f50-9c0893ab4e00',
+          'fad40a58-a4ae-471c-fcb6-663a05cdfc00',
+          '98f137ec-31a2-4c30-ce6a-89346dcb9c00',
+          'c3a76317-b407-4280-f0c8-b66de6f1e700',
+        ],
+        sizes: [
+          { size: 'One Size', price: 3800, stock: 30 },
+        ],
+      },
+    ],
+  },
+
 ]
 
 // ─── Helper: get all featured products ───────────────────────────────────────

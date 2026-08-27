@@ -570,6 +570,7 @@ export function ProductCard({ product }: ProductCardProps) {
         addedToCart={addedToCart}
         onAddToCart={handleAddToCart}
         manualRating={manualRating}
+        reviews={reviews}
       />
     </motion.div>
   )
