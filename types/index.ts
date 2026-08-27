@@ -32,9 +32,13 @@ export interface ProductFeature {
 
 // Editorial detail block — short heading + body, shown in the "In Detail"
 // section of the PDP. Two or three per product, written in brand voice.
+// When `image` is set, the block renders as an alternating image+text
+// panel instead of the plain numbered-list row.
 export interface ProductHighlight {
   heading: string
   body: string
+  image?: string
+  imageFit?: 'pad' | 'cover'
 }
 
 // One row of the Specifications accordion,

@@ -11,9 +11,11 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useState }               from 'react'
+import Image                      from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Plus }                   from 'lucide-react'
 import type { Product }           from '@/types'
+import { pdpUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 
 // Care guidance is the same for every hard-shell product — written once here.
 const CARE_COPY =
@@ -145,63 +147,109 @@ export function ProductAccordions({ product }: { product: Product }) {
 // ─── Story ("In Detail" editorial section) ───────────────────────────────────
 
 export function ProductStory({ product }: { product: Product }) {
-  const hasStory      = !!product.story?.length
-  const hasHighlights = !!product.highlights?.length
-  if (!hasStory && !hasHighlights) return null
+  const hasStory = !!product.story?.length
+  const allHighlights   = product.highlights ?? []
+  const textHighlights  = allHighlights.filter((h) => !h.image)
+  const imageHighlights = allHighlights.filter((h) => h.image)
+  const hasTextHighlights = textHighlights.length > 0
+  if (!hasStory && !allHighlights.length) return null
 
   return (
-    <section className="mt-16 md:mt-24 border-t border-[var(--color-lp-border)] pt-12 md:pt-16">
-      <div className="grid grid-cols-1 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-10 md:gap-20">
+    <>
+      {(hasStory || hasTextHighlights) && (
+        <section className="mt-16 md:mt-24 border-t border-[var(--color-lp-border)] pt-12 md:pt-16">
+          <div className="grid grid-cols-1 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-10 md:gap-20">
 
-        {/* Left rail — section label */}
-        <div className="md:sticky md:top-28 md:self-start">
-          <p className="font-body font-semibold text-[0.65rem] tracking-[0.13em] uppercase text-[var(--color-lp-gold)] mb-3">
-            In Detail
-          </p>
-          <h2 className="lp-heading-md">
-            The {product.name.trim()}, <em className="italic font-normal">up close.</em>
-          </h2>
-        </div>
-
-        {/* Right column — story + highlights */}
-        <div>
-          {hasStory && (
-            <div className="space-y-5 mb-4">
-              {product.story!.map((para) => (
-                <p
-                  key={para.slice(0, 40)}
-                  className="font-body text-[1.05rem] font-medium text-[var(--color-lp-ink)] leading-[1.7] max-w-[35rem]"
-                >
-                  {para}
-                </p>
-              ))}
+            {/* Left rail — section label */}
+            <div className="md:sticky md:top-28 md:self-start">
+              <p className="font-body font-semibold text-[0.65rem] tracking-[0.13em] uppercase text-[var(--color-lp-gold)] mb-3">
+                In Detail
+              </p>
+              <h2 className="lp-heading-md">
+                The {product.name.trim()}, <em className="italic font-normal">up close.</em>
+              </h2>
             </div>
-          )}
 
-          {hasHighlights && (
+            {/* Right column — story + highlights */}
             <div>
-              {product.highlights!.map(({ heading, body }, i) => (
-                <div
-                  key={heading}
-                  className="border-t border-[var(--color-lp-border)] pt-6 mt-6 grid grid-cols-[auto_1fr] gap-5"
-                >
-                  <span className="font-display text-[0.85rem] text-[var(--color-lp-faint)] leading-[1.6] pt-0.5">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <div>
-                    <h3 className="font-display text-[1.15rem] text-[var(--color-lp-ink)] mb-2">
-                      {heading}
-                    </h3>
-                    <p className="font-body text-[1rem] font-medium text-[var(--color-lp-ink)] leading-[1.65]">
-                      {body}
+              {hasStory && (
+                <div className="space-y-5 mb-4">
+                  {product.story!.map((para) => (
+                    <p
+                      key={para.slice(0, 40)}
+                      className="font-body text-[1.05rem] font-medium text-[var(--color-lp-ink)] leading-[1.7] max-w-[35rem]"
+                    >
+                      {para}
                     </p>
-                  </div>
+                  ))}
                 </div>
-              ))}
+              )}
+
+              {hasTextHighlights && (
+                <div>
+                  {textHighlights.map(({ heading, body }, i) => (
+                    <div
+                      key={heading}
+                      className="border-t border-[var(--color-lp-border)] pt-6 mt-6 grid grid-cols-[auto_1fr] gap-5"
+                    >
+                      <span className="font-display text-[0.85rem] text-[var(--color-lp-faint)] leading-[1.6] pt-0.5">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <div>
+                        <h3 className="font-display text-[1.15rem] text-[var(--color-lp-ink)] mb-2">
+                          {heading}
+                        </h3>
+                        <p className="font-body text-[1rem] font-medium text-[var(--color-lp-ink)] leading-[1.65]">
+                          {body}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
-          )}
-        </div>
-      </div>
-    </section>
+          </div>
+        </section>
+      )}
+
+      {imageHighlights.length > 0 && (
+        <section className="mt-16 md:mt-24">
+          <p className="font-body font-semibold text-[0.65rem] tracking-[0.13em] uppercase text-[var(--color-lp-gold)] mb-2 text-center">
+            Craftsmanship in Detail
+          </p>
+          <h2 className="lp-heading-md text-center mb-12 md:mb-16">Details You&rsquo;ll Love</h2>
+
+          <div className="flex flex-col gap-16 md:gap-24">
+            {imageHighlights.map(({ heading, body, image, imageFit }, i) => (
+              <div
+                key={heading}
+                className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center ${i % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''}`}
+              >
+                <div className="relative aspect-4/3 rounded-xl overflow-hidden bg-lp-image-bg">
+                  <Image
+                    src={pdpUrl(image!, imageFit ?? 'pad') || PLACEHOLDER_URL}
+                    alt={heading}
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width:768px) 100vw, 50vw"
+                  />
+                </div>
+                <div>
+                  <p className="font-body font-semibold text-[0.65rem] tracking-[0.13em] uppercase text-[var(--color-lp-gold)] mb-3">
+                    Feature {String(i + 1).padStart(2, '0')}
+                  </p>
+                  <h3 className="font-display text-[1.5rem] md:text-[1.75rem] text-[var(--color-lp-ink)] mb-4 leading-tight">
+                    {heading}
+                  </h3>
+                  <p className="font-body text-[1.05rem] font-medium text-[var(--color-lp-body)] leading-[1.7] max-w-[30rem]">
+                    {body}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+    </>
   )
 }

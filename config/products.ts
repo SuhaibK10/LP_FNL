@@ -3555,6 +3555,21 @@ export const PRODUCTS: Product[] = [
         heading: 'Opens like a countertop',
         body: 'The wide mouth and dual compartments lay everything out in view. No rummaging past three days of clothes for a charger.',
       },
+      {
+        heading: 'Premium construction, carried with confidence',
+        body: 'A hard shell that resists impact, soft carry handles built for a comfortable grip, and a finish that reads more travel accessory than travel bag, GemTote looks the part it plays.',
+        image: '07676b15-5dc3-41fd-6835-0884cf1bd300',
+      },
+      {
+        heading: 'Every compartment earns its place',
+        body: 'Two zipped sections and a mesh organiser keep cosmetics, cables, and toiletries visible and separated, so packing for tomorrow morning never means unpacking tonight.',
+        image: '6a7d0220-eb3f-40ea-bc6a-7015b4333300',
+      },
+      {
+        heading: 'One bag, every reason to grab it',
+        body: 'Gym kit one day, grooming essentials the next, a passport and charger the day after, GemTote adapts to whatever the trip actually needs, not just what it was designed for.',
+        image: '411b53c1-7f08-43d3-ee7b-1f79d07b7500',
+      },
     ],
     specs: [
       { label: 'Shell',       value: 'Polycarbonate + ABS rigid shell' },
@@ -3569,9 +3584,11 @@ export const PRODUCTS: Product[] = [
       // '92a462b9-9f70-478a-9665-9ac7dae1d200',
       'e22ab8d1-dd65-4960-0c14-ba9d76bc7e00',
 
-      '47e4411d-b608-4680-d934-dbd07a2dce00',
-      'ef16d565-78ca-4df9-3bb8-0698584cb400',
-      '663e305a-3796-4f98-6d96-9e602d487100',
+      '8c372b35-7aee-4187-695e-fd75b4ad6400',
+      '2c9be321-b43c-44b2-4426-9083481f8500',
+      '60336999-7579-4108-2a90-0192b95fa100',
+      'c9739b19-8151-4a79-e06a-cd5b16407e00',
+      'fc53d417-4b36-42b5-6512-c44c9868a200',
     ],
     features: [
       { label: 'Hard shell protection' },
@@ -3597,10 +3614,16 @@ export const PRODUCTS: Product[] = [
       },
       {
         color: 'Grey',
-        colorHex: '#9E9E9E',
-        // First pic is the current shared image; append real per-color shots after it
+        colorHex: '#676763',
         images: [
-          '47e4411d-b608-4680-d934-dbd07a2dce00',
+          '8c372b35-7aee-4187-695e-fd75b4ad6400',
+          '4160b304-b7ed-4f09-a64f-7ab431b3fb00',
+          '83424843-4d21-4a0a-c63e-c4b98d075c00',
+          '79f51047-639a-4716-4ec1-04d1afe05b00',
+          'cba819fa-3920-4f4b-6ee2-372ea8f4c200',
+          '8bc0afc8-8505-4742-fd42-124b5bc95f00',
+          'f12534b3-fd42-46be-b0cd-13cabda64b00',
+          'b22e3e11-1d88-432d-daa3-5981bdc68300',
         ],
         sizes: [
           { size: 'One Size', price: 1990, stock: 30 },
@@ -3608,10 +3631,16 @@ export const PRODUCTS: Product[] = [
       },
       {
         color: 'Pink',
-        colorHex: '#EC407A',
-        // First pic is the current shared image; append real per-color shots after it
+        colorHex: '#D8556F',
         images: [
-          'ef16d565-78ca-4df9-3bb8-0698584cb400',
+          '2c9be321-b43c-44b2-4426-9083481f8500',
+          'ae66ca43-d1c9-4fe6-adea-ae8f5d247400',
+          'cce8cb26-3b5b-49be-de9c-d123c86a4200',
+          'f4826864-394a-4cb2-e8fd-098829bf4200',
+          '089fa18d-0781-4590-9d7f-9b84a8331b00',
+          '35d0eb18-3cc1-475a-4f94-69ee7a277d00',
+          'f12534b3-fd42-46be-b0cd-13cabda64b00',
+          'b22e3e11-1d88-432d-daa3-5981bdc68300',
         ],
         sizes: [
           { size: 'One Size', price: 1990, stock: 30 },
@@ -3619,10 +3648,50 @@ export const PRODUCTS: Product[] = [
       },
       {
         color: 'Green',
-        colorHex: '#43A047',
-        // First pic is the current shared image; append real per-color shots after it
+        colorHex: '#434C38',
         images: [
-          '663e305a-3796-4f98-6d96-9e602d487100',
+          '60336999-7579-4108-2a90-0192b95fa100',
+          '95189c57-bc17-4d38-db43-e95f54a49800',
+          'd0170a9c-f84f-43d0-437d-e94331153500',
+          'e9013844-b0aa-41e3-c449-12d6390d8d00',
+          '02c6408e-e0fc-4dd6-dfd9-6f7d1ae59d00',
+          '18325dc0-a6f5-4433-4593-a1d35b740700',
+          'f12534b3-fd42-46be-b0cd-13cabda64b00',
+          'b22e3e11-1d88-432d-daa3-5981bdc68300',
+        ],
+        sizes: [
+          { size: 'One Size', price: 1990, stock: 30 },
+        ],
+      },
+      {
+        color: 'Black',
+        colorHex: '#262728',
+        images: [
+          'fd7299e9-d5cc-4918-d661-71280c9ed700',
+          'c9f654fa-4dfa-48c0-346d-3c82e830fa00',
+          'f3ca0cc7-1097-4fce-617e-27905a024700',
+          '33d88d59-11ca-46fd-6308-bcc3fe9da600',
+          'c9739b19-8151-4a79-e06a-cd5b16407e00',
+          '6329c2df-19f3-4ad9-bd17-fb9c2df93400',
+          'f12534b3-fd42-46be-b0cd-13cabda64b00',
+          'b22e3e11-1d88-432d-daa3-5981bdc68300',
+        ],
+        sizes: [
+          { size: 'One Size', price: 1990, stock: 30 },
+        ],
+      },
+      {
+        color: 'Yellow',
+        colorHex: '#E9CA4C',
+        images: [
+          'fc53d417-4b36-42b5-6512-c44c9868a200',
+          '2834dd79-b02e-4af0-84ba-1b04cc27a800',
+          'bd50598f-dafc-4466-1496-b5c9eff38e00',
+          '8c988c16-24bb-42fe-e0fb-70c1ff607100',
+          'd6d394f4-212b-440b-9920-ac40626ee300',
+          'c10013d0-e9cb-4049-91ce-f720c17f4800',
+          'f12534b3-fd42-46be-b0cd-13cabda64b00',
+          'b22e3e11-1d88-432d-daa3-5981bdc68300',
         ],
         sizes: [
           { size: 'One Size', price: 1990, stock: 30 },
