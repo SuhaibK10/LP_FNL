@@ -44,7 +44,7 @@ const CATEGORY_IMAGES: Partial<Record<string, string>> = {
   backpack:     '04fcc97f-08b5-4279-f2fc-753aed03be00',
   'office-bag': '0baab19f-10cd-4c53-2c53-2041976f6c00',
   duffle:       'ae436b7a-1f40-440f-fa9b-233399dfa000',
-  vanity:       '9d7374c7-5e18-4d0c-61a5-3ce33a642000',
+  vanity:       '513ee961-4ffb-4e55-803b-0df8de8e0700',
 }
 
 const PRICE_RANGES: PriceRange[] = [

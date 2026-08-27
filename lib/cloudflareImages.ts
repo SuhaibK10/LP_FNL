@@ -74,6 +74,18 @@ export const pdpZoomUrl = (id: string, fit: ImageFit = 'pad') =>
 export const thumbUrl = (id: string, fit: ImageFit = 'pad') =>
   cfImg(id, `${fitParams(fit, 200, 200)},${Q_ECO}`)
 
+// Internal media-library grid (app/admin/media) — always `contain`,
+// regardless of the product's on-site imageFit: an admin browsing assets
+// needs to see the whole frame to tell photos apart, not a cropped preview.
+export const adminThumbUrl = (id: string) =>
+  cfImg(id, `w=300,h=300,fit=contain,${Q_ECO}`)
+
+// Full-resolution delivery URL, Cloudflare's default "public" variant — the
+// link the media library's copy button hands back, since that's what's
+// actually reusable elsewhere (Slack, a CMS, another tool), not a resized
+// admin thumbnail.
+export const publicUrl = (id: string) => `${BASE}/${id}/public`
+
 // Social share preview (WhatsApp/Twitter/Facebook link unfurl) — standard
 // 1200×630 OG card. Always cover+gravity=auto regardless of the product's own
 // on-site imageFit: a padded product shot would sit small in empty space at

@@ -71,7 +71,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Vanity Cases',
     value:    'vanity',
-    image:    '9d7374c7-5e18-4d0c-61a5-3ce33a642000',
+    image:    '513ee961-4ffb-4e55-803b-0df8de8e0700',
     span:     '',
     textPos:  'bottom',
     imgClass: '',

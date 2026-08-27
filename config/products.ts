@@ -578,7 +578,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['1298d867-50cf-46fe-3999-d26a5db25c00', '50274325-8a3c-40d0-10d8-c743561cba00'],
+    images: ['70a8afff-976e-47cd-430d-56abde517a00'],
     features: [
       { label: 'Handbag-inspired hard shell' },
       { label: 'Zip-around closure' },
@@ -588,13 +588,13 @@ export const PRODUCTS: Product[] = [
       { label: 'Contrast stitching detail' },
     ],
     variants: [
-      { color: 'Rose Gold',  colorHex: '#B76E79', images: ['6a9386c8-b371-469a-461c-1d01d2475900', '530d5e4a-2b54-46a4-9ca2-146253d86300'],  sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
-      { color: 'Purple',     colorHex: '#7B5EA7', images: ['1298d867-50cf-46fe-3999-d26a5db25c00', '50274325-8a3c-40d0-10d8-c743561cba00'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
-      { color: 'Tender Blue',colorHex: '#89CFF0', images: ['8486cde8-f996-4176-2334-b6d89e51df00', '007e284e-9e98-449f-214d-4140d5b51100'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
-      { color: 'Red',        colorHex: '#C62828', images: ['50501b7d-a529-4d2f-8905-270b671d7a00', 'e44b6ed3-fceb-4428-eaeb-280b063d0100'],        sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
-      { color: 'Navy Blue',  colorHex: '#1A2744', images: ['9f9308a9-d29c-4803-3abd-9604d029f700', '183e39e2-f17f-4df6-c695-a5b52d3a9a00'],  sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
-      { color: 'Grey',       colorHex: '#757575', images: ['baad860a-7951-491c-74cf-9619f7c72100', 'f06c500d-899f-404a-4cd4-fc554fc51500'],       sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
-      { color: 'Black',      colorHex: '#212121', images: ['54a3cf1a-c9c0-439f-6d63-78bdbf725400', 'ec43d86a-e1eb-4370-1d8a-d0715186fa00', '9fbc6381-c01d-4ec8-47c7-4634751b0600'],      sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Rose Gold',   colorHex: '#B76E79', images: ['c9da7ca3-614b-48c8-3db3-cff645f0ad00', 'eae799de-7857-4fab-df03-8b5a9abac300', 'ebefd887-40c6-4821-5514-32ea3e14e000', '6d1d7a64-9833-40d3-880d-dacbfee5ed00', '74bf496c-5e5c-4458-0e61-378b8c18e400'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Purple',      colorHex: '#7B5EA7', images: ['2497f48c-b534-439b-142d-db4e27edb800', 'a86d7557-250e-4cb9-9a55-a1169a22e000', 'd2431fda-13b7-4466-fd77-a03cbcaee300', 'e42e0492-c8f8-4e12-71c7-dd587a656300', 'e27bf445-53d5-485e-c89c-497203cf3800'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Tender Blue', colorHex: '#89CFF0', images: ['cc2087d7-872e-4b98-431f-3be090fe9d00', 'c5af51cc-79ae-4c08-6828-ba6704127100', '9a06e4cf-fd46-45e0-3654-058530a8ed00', '8bbacbd3-c24b-41ac-0d1d-20940ce6cb00', '2e8c7ca4-d431-4293-c29a-66c364889c00'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Red',         colorHex: '#C62828', images: ['00572a58-9995-4955-68da-becd8f85d500', 'cd11ea85-606b-4b6f-cd5b-0f17a3fd5900', '7d144977-5a2d-4a88-b12e-71c7e1446500', 'd181cddb-be62-482b-38ae-80497e94c200', '5d5b7376-329f-4831-b188-f3e96689f000'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Navy Blue',   colorHex: '#1A2744', images: ['5065ec72-9eb4-4872-4760-b69cb706ec00', '1927b506-14b9-4c54-2c0b-c1c5a875ba00', '657fc58f-854e-4aaf-a908-236491504f00', 'b5169f2b-7724-4653-055a-288ec056a800', 'bf274f9a-4638-4339-8ca2-99b79b9b4d00'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Grey',        colorHex: '#757575', images: ['02c3547e-faa7-482c-86e4-b9858b86d300', '12a6959e-29a1-4c3d-6ffd-4c135733fb00', '21dbff25-8a53-4b7e-71a7-46169e76a700', '0705b8f8-d402-4540-dc43-e41faf43f200', 'a37f0bc7-5d23-4b78-b099-2f896a146b00'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Black',       colorHex: '#212121', images: ['3ac83cfa-dcd3-4ea5-09b6-adec9eef6300', 'bb3b1213-f87c-43b9-4b22-1eea7554b500', '6156321c-85f1-40d4-f210-87774a23df00', '05f3fe08-47f4-4a39-e2de-9bb7bb5d2700', '1796f6e4-e1fd-4250-a4a1-ec7f60462800'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
     ],
   },
 
@@ -923,7 +923,45 @@ export const PRODUCTS: Product[] = [
         color: 'Grey',
         colorHex: '#6B6B6B',
         images: [
-          '39b848c4-877d-40a6-e34e-6c583a956c00',
+          '75730a76-7350-481f-ec82-4dfd25d94800',
+          '1a8c878e-3463-4f11-359a-4bb48d1c4b00',
+          '10167923-a9c9-402d-d9fe-2f9cfbaccb00',
+          'eba916ee-e082-4a9c-e5f1-13699626a100',
+          '8e5e6924-ae35-4d25-5c55-91a95370c000',
+          '03ea06f0-9546-465a-d167-61fd9f244e00',
+          '956deb54-ee1c-47e3-f6df-c5de5600c400',
+        ],
+        sizes: [
+          { size: 'Cabin', price: 2990, stock: 30 },
+        ],
+      },
+      {
+        color: 'Black',
+        colorHex: '#212121',
+        images: [
+          'ff817bbb-7ea6-4504-14f0-a58a79523a00',
+          '11779f0a-3c28-43dc-a59e-8ee161034000',
+          '5f25d1fd-109e-4c3e-8a2a-cc2c5a792100',
+          '0236549f-1cf3-4326-96e2-39cd79838f00',
+          'c569eaba-a2ea-495a-5912-8de6ce19ca00',
+          '3c71423f-a8c3-45f3-0254-c24daa762a00',
+          '07a528d7-ea94-41f4-bec1-e6eff1fda800',
+        ],
+        sizes: [
+          { size: 'Cabin', price: 2990, stock: 30 },
+        ],
+      },
+      {
+        color: 'White',
+        colorHex: '#FAFAFA',
+        images: [
+          '9c1f8605-fa64-4a26-a919-045e37afbb00',
+          'cfe2a544-fc18-47bf-9947-692d96e10900',
+          'cebb4f8f-c94c-459f-fc2d-296a12c1e400',
+          '616d498b-3c37-473e-515c-b9e52e499200',
+          'df8b8737-ae50-4404-261f-9c34c28d5700',
+          '938947d1-42b4-4f46-2069-95f6e2d8da00',
+          '38d710a7-cea3-4349-6471-507e4b1a5a00',
         ],
         sizes: [
           { size: 'Cabin', price: 2990, stock: 30 },
@@ -2964,12 +3002,7 @@ export const PRODUCTS: Product[] = [
     hideSizeGuide: true,
     mrp: 2449,
     images:      [
-      // '29b5c294-a115-4003-aed6-c7e218c1ed00',
-      'e516c9ca-e168-4959-fd02-2a1557f2c800',
-      '35fd5fe2-b859-47e7-7fb6-8eb9514fe200',
-      '2b00a5a4-6dfc-42ae-d442-38b109f42300',
-
-
+      '812ddb10-11cf-4413-204a-15cf5a7cf500',
     ],
     features: [
       { label: '360° hard-shell protection' },
@@ -2981,20 +3014,56 @@ export const PRODUCTS: Product[] = [
       { label: 'Smooth zipper & wear resistant' },
     ],
     variants: [
-
       {
-        color:    'Turquoise Blue',
-        colorHex: '#00B0C8',
+        color:    'Metallic Silver',
+        colorHex: '#BDBDBD',
+        images: [
+          '64d2e811-a1ff-49df-b471-495cc9853800',
+          '76e4adb1-1b5b-4822-73fd-5b038ffec400',
+          '9d58710e-f14b-4b87-45c2-74603caf0400',
+          'b4ff5143-6ac8-48a6-8bfe-5eff7df17f00',
+          '20792a0e-b307-4bd9-57e2-5f934ce95600',
+          'e557a611-0f80-4b70-92a8-328eb460af00',
+        ],
         sizes: [{ size: '12 Inch', price: 1350, stock: 50 }],
       },
       {
         color:    'Metallic Grey',
         colorHex: '#757575',
+        images: [
+          '434ab448-3ce1-4045-e904-8215687c7f00',
+          'bbf2b856-533b-43ff-6db9-3f76f99f0400',
+          '795a30d5-160a-428e-d8b7-96d4b744f800',
+          '35778aa4-10b8-487f-7617-f18096864b00',
+          'ededcdcb-d90e-4672-d79a-5d10e29b9b00',
+          '685672fd-988f-439e-f126-2544e76f0100',
+        ],
         sizes: [{ size: '12 Inch', price: 1350, stock: 50 }],
       },
       {
-        color:    'Metallic Silver',
-        colorHex: '#BDBDBD',
+        color:    'Turquoise Blue',
+        colorHex: '#00B0C8',
+        images: [
+          'b1f8364c-326b-4a14-fe81-9f86c4fb4f00',
+          'a327a962-e788-4027-f121-034e51934b00',
+          'd94c3433-f4c6-49b1-5ae5-20dd8fbbcd00',
+          '4e33d968-2d65-4415-d75f-71f30173a900',
+          'b9edb4c6-2663-4425-6e9c-446e8bc24700',
+          '64f0b645-84d3-4f19-8a88-b244f0603200',
+        ],
+        sizes: [{ size: '12 Inch', price: 1350, stock: 50 }],
+      },
+      {
+        color:    'Metallic Black',
+        colorHex: '#212121',
+        images: [
+          '9f4197d5-d70a-491a-a1ea-141ade3f3000',
+          '5d287c04-8bc5-422c-0f02-bfeed4400a00',
+          'fc12b5c6-f8e3-49c7-e59f-9b5f6e598a00',
+          'c65d305f-106b-427e-ea16-67e01de78800',
+          '4fa07aaa-c1b1-4b24-6491-c54dc732ce00',
+          'a88d7710-86b0-48c1-2d68-7f2edef8ce00',
+        ],
         sizes: [{ size: '12 Inch', price: 1350, stock: 50 }],
       },
     ],
@@ -3035,10 +3104,7 @@ export const PRODUCTS: Product[] = [
     hideSizeGuide: true,
     mrp: 2249,
     images:      [
-      // '7565b2dc-b8da-4ce3-c7ae-ad78f2676200',
-      '10440239-3b1f-4614-2866-4fa0bd9e5c00',
-      '758aabe0-e3d2-4516-eaa7-582ba635f400','73f15220-c48d-4940-ed6c-172c8b0fbf00',
-      '7553169b-0eae-4014-9ce3-5cbb8871d700'
+      'ae7a4b0d-dd1a-4dcb-03ff-4c8ab74b4000',
     ],
     features: [
       { label: 'Impact & compression resistant hard shell' },
@@ -3052,21 +3118,57 @@ export const PRODUCTS: Product[] = [
       {
         color:    'Silver',
         colorHex: '#BDBDBD',
+        images: [
+          'a3b05153-9d53-4729-9b00-ac218fe16a00',
+          '57d89698-b98a-44cd-4431-79af3ee41800',
+          '314e3c2a-70a3-4934-087b-b033d32ad500',
+          'b9d70004-6ca3-4a48-7be6-b9b7589f5100',
+          '2044d1d0-2d12-4390-6231-198ec6e1ae00',
+          '27c37a9e-ac53-4b6e-98ac-5968e8e83c00',
+          '16338e26-21e8-4322-755c-2b051c292600',
+        ],
         sizes: [{ size: '9 Inch', price: 1230, stock: 50 }],
       },
       {
         color:    'Grey',
         colorHex: '#757575',
+        images: [
+          '3590fb95-ff9d-4a17-8c34-ef55b42e2e00',
+          '209c045a-9239-403d-9cfd-384704b04300',
+          '41af9e6b-93dc-4c8c-4a54-eaa169240d00',
+          'a8a754ad-8b93-49b5-c820-f7215e7db800',
+          'e7d5c89a-60a0-41c2-29dd-3106c0bc9700',
+          '6ec58d30-d8fb-44d9-5ec9-230b47e33300',
+          'b2d663c4-e7d5-4ce5-21eb-ddab0cc12200',
+        ],
         sizes: [{ size: '9 Inch', price: 1230, stock: 50 }],
       },
       {
         color:    'Blue',
         colorHex: '#1565C0',
+        images: [
+          '8a718183-7e96-4e74-ee86-01b7d232de00',
+          '00f5824e-1a17-4dc2-9b44-829dcd2eaa00',
+          '0af5ff53-fc35-473a-d514-d3745a3c2600',
+          'a8ea35d1-63d4-4176-dcfd-b50ac5d76b00',
+          'b9f36d53-b3dc-4050-49a1-a37729a79600',
+          '07f8fd35-af41-4707-b158-3286b82c1c00',
+          'eb751913-9c20-4a76-b599-76c400d8fc00',
+        ],
         sizes: [{ size: '9 Inch', price: 1230, stock: 50 }],
       },
       {
         color:    'Black',
         colorHex: '#212121',
+        images: [
+          'df91b726-79a6-47a7-cc13-03ec958f2c00',
+          'a211394a-27ca-484f-8580-42eaf70ff100',
+          'abfa2ae5-0bca-4024-1cf5-ba37a5ef9900',
+          'd7bc661a-5175-4558-74ff-0e25f22d4900',
+          '930564bb-5b2a-4420-570c-3fa497d59500',
+          '65828386-1c51-4db7-fe06-d77b3ced0000',
+          '98f13dfb-acc8-4bbf-3bdf-b2eb08554c00',
+        ],
         sizes: [{ size: '9 Inch', price: 1230, stock: 50 }],
       },
     ],
@@ -4629,6 +4731,64 @@ export const PRODUCTS: Product[] = [
         color: 'Brushed Silver', colorHex: '#B0B4B8',
         images: ['1b338747-dcc1-4636-a742-9ead924b2900', '7e79abab-bc03-4929-bad2-689bf1406e00', '49c5cda7-78bb-4898-7118-24b1487e3400', '9d108f30-85da-4ccf-37f4-7916be1b0100', '57b20b07-ce45-49b4-2314-fcf135d5d100', '8514aa95-461a-4d71-8ef7-6551c6c55200'],
         sizes: [{ size: 'One Size', price: 2190, stock: 50 }],
+      },
+    ],
+  },
+
+  // ── Heritage ─────────────────────────────────────────────────────────────
+  {
+    id: 'heritage-briefcase',
+    metaTitle: 'Heritage Hard-Shell Briefcase',
+    metaDescription: 'A ribbed metallic hard-shell briefcase with brown leather handles and straps, reinforced hardware, and a secure zip-around closure.',
+    keywords: ['hard shell briefcase', 'executive briefcase for men', 'laptop briefcase business', 'corporate gifting briefcase', 'leather handle hard shell case'],
+    name: 'Heritage',
+    slug: 'heritage-briefcase',
+    category: 'office-bag',
+    mrp: 2990,
+    hideSizeSelector: true,
+    description:
+      'A ribbed metallic hard shell paired with rich brown leather handles and vertical straps, built for a briefcase that reads as considered in a boardroom as it is practical on the road.',
+    story: [
+      'Heritage sets a ribbed metallic shell against warm brown leather, handles and vertical straps anchored with reinforced hardware and rivets rather than stitching alone, the kind of detail that holds up to daily carry instead of just looking the part in a photo.',
+      'Underneath, the structured shape holds a laptop, documents, and the accessories a workday collects, closed off behind a secure zip-around closure that keeps the case as tidy shut as it looks carried.',
+    ],
+    highlights: [
+      {
+        heading: 'Metal where it counts',
+        body: 'Reinforced hardware and rivets anchor the leather handles and straps to the shell, built to carry real weight, not just look the part.',
+      },
+      {
+        heading: 'Leather against metal',
+        body: 'Brown leather handles and straps warm up the ribbed metallic shell, a briefcase that reads considered rather than corporate-issue.',
+      },
+      {
+        heading: 'Built for the desk and the gate',
+        body: 'Structured storage for a laptop, documents, and daily accessories makes Heritage equally at home in a boardroom, a departure lounge, or a corporate gift box.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',    value: 'Ribbed metallic hard shell' },
+      { label: 'Handles',  value: 'Brown leather handles and vertical straps' },
+      { label: 'Hardware', value: 'Reinforced metal hardware and rivets' },
+      { label: 'Closure',  value: 'Secure zip-around closure' },
+      { label: 'Interior', value: 'Laptop, document, and accessory storage' },
+    ],
+    warranty:
+      '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: ['5f68456a-1c0f-4d93-1fc8-b576d92d9900', '8164e6e0-536d-4917-6dce-d16fd243ac00'],
+    features: [
+      { label: 'Ribbed metallic hard shell' },
+      { label: 'Leather handles and straps' },
+      { label: 'Reinforced hardware and rivets' },
+      { label: 'Secure zip-around closure' },
+      { label: 'Dedicated laptop storage' },
+      { label: 'Ideal for corporate gifting' },
+    ],
+    variants: [
+      {
+        color: 'Metallic Grey', colorHex: '#757575',
+        images: ['5f68456a-1c0f-4d93-1fc8-b576d92d9900', '8164e6e0-536d-4917-6dce-d16fd243ac00'],
+        sizes: [{ size: 'One Size', price: 2490, stock: 50 }],
       },
     ],
   },

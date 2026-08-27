@@ -7,6 +7,7 @@
 
 import { createServerClient, type CookieOptions } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
+import crypto from 'crypto'
 
 export async function proxy(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request })
@@ -51,6 +52,29 @@ export async function proxy(request: NextRequest) {
     const url = request.nextUrl.clone()
     url.pathname = '/account/login'
     return NextResponse.redirect(url)
+  }
+
+  // Protect /admin/* pages AND /api/admin/* routes — shared-password gate,
+  // separate from the customer Supabase auth above. Derived-token cookie so
+  // the cookie value itself can't be reversed into the password if it ever
+  // leaks. The API route needs covering too, not just the page — otherwise
+  // the underlying data (image list, product cross-reference) is reachable
+  // directly even with the page itself gated.
+  const isAdminPage = request.nextUrl.pathname.startsWith('/admin') && !request.nextUrl.pathname.startsWith('/admin/login')
+  const isAdminApi  = request.nextUrl.pathname.startsWith('/api/admin')
+  if (isAdminPage || isAdminApi) {
+    const expected = crypto
+      .createHmac('sha256', process.env.ADMIN_PASSWORD!)
+      .update('louispolo-admin')
+      .digest('hex')
+    if (request.cookies.get('admin_session')?.value !== expected) {
+      if (isAdminApi) {
+        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      }
+      const url = request.nextUrl.clone()
+      url.pathname = '/admin/login'
+      return NextResponse.redirect(url)
+    }
   }
 
   return supabaseResponse

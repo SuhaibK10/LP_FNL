@@ -10,7 +10,7 @@ import { useState, useEffect, useRef } from 'react'
 import Image                        from 'next/image'
 import Link                         from 'next/link'
 import { motion, AnimatePresence }  from 'framer-motion'
-import { ArrowRight, ShoppingBag, Check, Heart, Ruler, Star, ChevronDown, Play, X, Maximize } from 'lucide-react'
+import { ArrowRight, ShoppingBag, Check, Heart, Ruler, Star, ChevronDown, Play, X, Maximize, Eye } from 'lucide-react'
 import type { Product, ProductSize } from '@/types'
 import { cardUrl, pdpUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 import { cfVideo }                  from '@/lib/cloudflareStream'
@@ -21,6 +21,7 @@ import { useCartStore }             from '@/store/cartStore'
 import { useWishlistStore }         from '@/store/wishlistStore'
 import { SizeGuideModal }           from '@/components/ui/SizeGuideModal'
 import { ReviewsModal }             from '@/components/ui/ReviewsModal'
+import { QuickViewModal }           from '@/components/shop/QuickViewModal'
 import { MyntraBuyButton }          from '@/components/ui/MyntraBuyButton'
 import { getMyntraListing, getMyntraForSize } from '@/config/myntra'
 import { getReviewsForProduct, getManualRating } from '@/config/reviews'
@@ -76,6 +77,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const [sizeGuideOpen,   setSizeGuideOpen]   = useState(false)
   const [detailsOpen,     setDetailsOpen]     = useState(false)
   const [reviewsOpen,     setReviewsOpen]     = useState(false)
+  const [quickViewOpen,   setQuickViewOpen]   = useState(false)
 
   const reviews = getReviewsForProduct(product.slug)
   const manualRating = getManualRating(product.slug)
@@ -265,14 +267,14 @@ export function ProductCard({ product }: ProductCardProps) {
           className="absolute top-3 right-3 z-10 w-7 h-7 flex items-center justify-center"
           aria-label={wished ? 'Remove from wishlist' : 'Save to wishlist'}
         >
-          <span className="relative block">
+          <span className="relative w-full h-full block">
             <motion.span
-              className="block"
+              className="w-full h-full rounded-full flex items-center justify-center bg-lp-porcelain/90 backdrop-blur-sm border border-[var(--color-lp-border)]"
               animate={burst ? { scale: [1, 1.28, 1, 1.32, 1] } : { scale: 1 }}
               transition={{ duration: 1, ease: 'easeInOut', times: [0, 0.25, 0.5, 0.75, 1] }}
             >
               <Heart
-                size={19}
+                size={16}
                 strokeWidth={1.5}
                 className="transition-colors duration-200"
                 style={{ color: wished ? '#C0392B' : 'var(--color-lp-muted)', fill: wished ? '#C0392B' : 'none' }}
@@ -289,6 +291,27 @@ export function ProductCard({ product }: ProductCardProps) {
             )}
           </span>
         </motion.button>
+
+        {/* Quick View — opens a mini-PDP without leaving the grid. Right
+            side, stacked below the wishlist heart, so it never collides
+            with the tag/Myntra badge or the Play button on the left. */}
+        {!videoOpen && (
+          <motion.button
+            type="button"
+            onClick={(e) => {
+              e.preventDefault()
+              e.stopPropagation()
+              setQuickViewOpen(true)
+            }}
+            whileTap={tapPunch}
+            className="absolute bottom-3 left-3 z-10 w-7 h-7 flex items-center justify-center"
+            aria-label="Quick view"
+          >
+            <span className="w-full h-full rounded-full flex items-center justify-center bg-lp-porcelain/90 backdrop-blur-sm border border-[var(--color-lp-border)]">
+              <Eye size={15} strokeWidth={1.5} className="text-[var(--color-lp-ink)]" />
+            </span>
+          </motion.button>
+        )}
 
         {/* Quick shop overlay */}
         <div className="absolute bottom-1 left-1/2 -translate-x-1/2 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 bg-[var(--color-lp-ink)]/70 backdrop-blur-sm rounded-full px-3.5 py-1.5 flex items-center gap-1.5">
@@ -533,6 +556,21 @@ export function ProductCard({ product }: ProductCardProps) {
 
       <SizeGuideModal open={sizeGuideOpen} onClose={() => setSizeGuideOpen(false)} />
       <ReviewsModal open={reviewsOpen} onClose={() => setReviewsOpen(false)} productName={product.name} reviews={reviews} />
+      <QuickViewModal
+        open={quickViewOpen}
+        onClose={() => setQuickViewOpen(false)}
+        product={product}
+        activeVariant={activeVariant}
+        activeSize={activeSize}
+        onColorChange={(i) => { setActiveVariant(i); setActiveSize(defaultSize(product.variants[i].sizes)) }}
+        onSizeChange={setActiveSize}
+        displayImage={displayImage}
+        price={price}
+        canAdd={canAdd}
+        addedToCart={addedToCart}
+        onAddToCart={handleAddToCart}
+        manualRating={manualRating}
+      />
     </motion.div>
   )
 }

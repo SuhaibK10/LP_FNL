@@ -11,7 +11,7 @@ import { createPortal }                      from 'react-dom'
 import Image                                 from 'next/image'
 import Link                                  from 'next/link'
 import { motion, AnimatePresence, useMotionValue } from 'framer-motion'
-import { ArrowRight, ShoppingBag, Ruler, Heart, Star, ChevronDown, Play, X, Maximize } from 'lucide-react'
+import { ArrowRight, ShoppingBag, Ruler, Heart, Star, ChevronDown, Play, X, Maximize, Eye } from 'lucide-react'
 import type { ProductSize }                  from '@/types'
 import { FEATURED_PRODUCTS }                 from '@/config/products'
 import { cardUrl, pdpUrl, PLACEHOLDER_URL }  from '@/lib/cloudflareImages'
@@ -23,6 +23,7 @@ import { useCartStore }                      from '@/store/cartStore'
 import { useWishlistStore }                  from '@/store/wishlistStore'
 import { staggerChildren, fadeUp, VIEWPORT, tapPunch } from '@/lib/animations'
 import { SizeGuideModal }                    from '@/components/ui/SizeGuideModal'
+import { QuickViewModal }                    from '@/components/shop/QuickViewModal'
 import { MyntraBuyButton }                   from '@/components/ui/MyntraBuyButton'
 import { getMyntraListing, getMyntraForSize, MYNTRA_EXCLUSIVES_ENABLED } from '@/config/myntra'
 
@@ -72,6 +73,7 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
   )
   const [addedToCart,     setAddedToCart]     = useState(false)
   const [sizeGuideOpen,   setSizeGuideOpen]   = useState(false)
+  const [quickViewOpen,   setQuickViewOpen]   = useState(false)
   const [detailsOpen,     setDetailsOpen]     = useState(false)
 
   const variant      = product.variants[activeVariant]
@@ -256,6 +258,25 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
             )}
           </span>
         </motion.button>
+
+        {/* Quick View — opens a mini-PDP without leaving the carousel */}
+        {!videoOpen && (
+          <motion.button
+            type="button"
+            onClick={(e) => {
+              e.preventDefault()
+              e.stopPropagation()
+              setQuickViewOpen(true)
+            }}
+            whileTap={tapPunch}
+            className="absolute bottom-3 left-3 z-10 w-7 h-7 flex items-center justify-center"
+            aria-label="Quick view"
+          >
+            <span className="w-full h-full rounded-full flex items-center justify-center bg-lp-porcelain/90 backdrop-blur-sm border border-[var(--color-lp-border)]">
+              <Eye size={15} strokeWidth={1.5} className="text-[var(--color-lp-ink)]" />
+            </span>
+          </motion.button>
+        )}
 
         {/* Quick shop overlay */}
         <div className="absolute bottom-1 left-1/2 -translate-x-1/2 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 bg-[var(--color-lp-ink)]/70 backdrop-blur-sm rounded-full px-3.5 py-1.5 flex items-center gap-1.5">
@@ -477,6 +498,23 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
 
       {sizeGuideOpen && createPortal(
         <SizeGuideModal open={sizeGuideOpen} onClose={() => setSizeGuideOpen(false)} />,
+        document.body
+      )}
+      {quickViewOpen && createPortal(
+        <QuickViewModal
+          open={quickViewOpen}
+          onClose={() => setQuickViewOpen(false)}
+          product={product}
+          activeVariant={activeVariant}
+          activeSize={activeSize}
+          onColorChange={(i) => { setActiveVariant(i); setActiveSize(defaultSize(product.variants[i].sizes)) }}
+          onSizeChange={setActiveSize}
+          displayImage={displayImage}
+          price={price}
+          canAdd={canAdd}
+          addedToCart={addedToCart}
+          onAddToCart={handleAddToCart}
+        />,
         document.body
       )}
     </div>
