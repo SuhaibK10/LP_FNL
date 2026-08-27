@@ -44,6 +44,22 @@ export const COUPONS: Coupon[] = [
     discountPercent: 0.15,
     enabled:         true,
   },
+  {
+    code:            'HERITAGE2099',
+    label:           'Heritage for ₹2,099',
+    discountPercent: 0.157028,
+    productSlug:     'heritage-briefcase',
+    size:            'One Size',
+    enabled:         true,
+  },
+  {
+    code:            'HERITAGE1499',
+    label:           'Heritage for ₹1,499',
+    discountPercent: 0.397992,
+    productSlug:     'heritage-briefcase',
+    size:            'One Size',
+    enabled:         true,
+  },
 ]
 
 export function getCoupon(code: string): Coupon | undefined {

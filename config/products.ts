@@ -4718,7 +4718,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['1b338747-dcc1-4636-a742-9ead924b2900', '7e79abab-bc03-4929-bad2-689bf1406e00'],
+    images: ['49c5cda7-78bb-4898-7118-24b1487e3400', '9d108f30-85da-4ccf-37f4-7916be1b0100'],
     features: [
       { label: 'Hard-shell protection' },
       { label: 'Aluminium carry handle' },
@@ -4729,7 +4729,7 @@ export const PRODUCTS: Product[] = [
     variants: [
       {
         color: 'Brushed Silver', colorHex: '#B0B4B8',
-        images: ['1b338747-dcc1-4636-a742-9ead924b2900', '7e79abab-bc03-4929-bad2-689bf1406e00', '49c5cda7-78bb-4898-7118-24b1487e3400', '9d108f30-85da-4ccf-37f4-7916be1b0100', '57b20b07-ce45-49b4-2314-fcf135d5d100', '8514aa95-461a-4d71-8ef7-6551c6c55200'],
+        images: ['49c5cda7-78bb-4898-7118-24b1487e3400', '9d108f30-85da-4ccf-37f4-7916be1b0100', '57b20b07-ce45-49b4-2314-fcf135d5d100', '8514aa95-461a-4d71-8ef7-6551c6c55200'],
         sizes: [{ size: 'One Size', price: 2190, stock: 50 }],
       },
     ],
