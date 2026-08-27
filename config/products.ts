@@ -3347,6 +3347,7 @@ export const PRODUCTS: Product[] = [
   // ── AeroTech ─────────────────────────────────────────────────────────────
   {
     id: 'aerotech',
+    demoVideoId: '015ef4bb8ffecd7d34b63c17e3b7e683',
     metaTitle: 'AeroTech Backpack — Structured Everyday Carry',
     metaDescription: 'A clean, structured backpack with organised interior storage, a quick-access front zip pocket, padded straps, and a breathable back panel.',
     keywords: ['structured backpack', 'office commute backpack', 'business travel backpack', 'everyday carry backpack', 'padded laptop backpack'],
@@ -4916,6 +4917,7 @@ export const PRODUCTS: Product[] = [
   // ── Sterling Backpack ────────────────────────────────────────────────────
   {
     id: 'sterling-backpack',
+    demoVideoId: '8c952516375c3682c48cebac0fbcec40',
     metaTitle: 'Sterling Backpack Premium Laptop Backpack with Padded Compartment',
     metaDescription: 'The Louis Polo Sterling Backpack pairs a structured black shell with a dedicated padded laptop compartment, multiple organiser pockets, and comfortable padded straps. Built for office, college, commuting, and travel.',
     keywords: ['premium laptop backpack', 'black office backpack', 'padded laptop compartment backpack', 'college backpack india', 'travel commuter backpack'],
@@ -5029,6 +5031,7 @@ export const PRODUCTS: Product[] = [
   // ── Twinford Backpack ────────────────────────────────────────────────────
   {
     id: 'twinford-backpack',
+    demoVideoId: '1e1909521f983e6eced93c3b4afd0bcb',
     metaTitle: 'Twinford Dual-Pocket Backpack with Laptop Compartment',
     metaDescription: 'The Louis Polo Twinford Backpack pairs a distinctive dual front-pocket design with a dedicated laptop compartment, multiple organiser pockets, and a durable textured exterior. Built for office, college, commuting, and travel.',
     keywords: ['dual pocket backpack', 'laptop backpack for men', 'office backpack india', 'college backpack with laptop compartment', 'travel commuter backpack'],
@@ -5138,6 +5141,7 @@ export const PRODUCTS: Product[] = [
   // ── Westbury Backpack ────────────────────────────────────────────────────
   {
     id: 'westbury-backpack',
+    demoVideoId: 'c785c53ddd159281f8ce52f51ca6d465',
     metaTitle: 'Westbury Structured Flap-Top Backpack with Laptop Compartment',
     metaDescription: 'The Louis Polo Westbury Backpack pairs an elegant structured flap-top design with a dedicated laptop compartment, front and side pockets, and a durable textured exterior. Built for office, business travel, college, and commuting.',
     keywords: ['flap top backpack', 'structured laptop backpack', 'office backpack india', 'business travel backpack', 'college backpack with laptop compartment'],
