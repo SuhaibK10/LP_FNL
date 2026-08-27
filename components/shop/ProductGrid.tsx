@@ -40,7 +40,7 @@ const SORT_OPTIONS: { label: string; value: SortKey }[] = [
 // get a thumbnail in the strip below; the rest stay filterable via Filters.
 const CATEGORY_IMAGES: Partial<Record<string, string>> = {
   trolley:      'dfe7f28d-50e2-4a8a-7faa-467641a17700',
-  set:          'a3258fb4-0ba7-4f7b-e27c-d20ba9f8ae00',
+  set:          '27bec58c-232a-4c66-7b6e-95925a7e2800',
   backpack:     '04fcc97f-08b5-4279-f2fc-753aed03be00',
   'office-bag': '0baab19f-10cd-4c53-2c53-2041976f6c00',
   duffle:       'ae436b7a-1f40-440f-fa9b-233399dfa000',

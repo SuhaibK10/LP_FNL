@@ -39,7 +39,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Sets',
     value:    'set',
-    image:    'a3258fb4-0ba7-4f7b-e27c-d20ba9f8ae00',
+    image:    '27bec58c-232a-4c66-7b6e-95925a7e2800',
     span:     '',
     textPos:  'bottom',
     imgClass: 'scale-125',
