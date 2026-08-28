@@ -21,13 +21,20 @@ export async function PATCH(
     return NextResponse.json({ error: 'Invalid status' }, { status: 400 })
   }
 
+  const now = new Date().toISOString()
+  const update: Record<string, unknown> = {
+    fulfillment_status: fulfillmentStatus as FulfillmentStatus,
+    updated_at: now,
+  }
+  // Set once, the first time an order reaches that stage — never
+  // overwritten on a later update (e.g. an accidental re-tap).
+  if (fulfillmentStatus === 'shipped')   update.shipped_at   = now
+  if (fulfillmentStatus === 'delivered') update.delivered_at = now
+
   const supabase = createServiceRoleClient()
   const { data, error } = await supabase
     .from('orders')
-    .update({
-      fulfillment_status: fulfillmentStatus as FulfillmentStatus,
-      updated_at: new Date().toISOString(),
-    })
+    .update(update)
     .eq('id', id)
     .select()
     .single()

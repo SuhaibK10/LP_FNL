@@ -35,7 +35,13 @@ interface Order {
   total: number
   fulfillment_status: 'unfulfilled' | 'packed' | 'shipped' | 'delivered'
   created_at: string
+  shipped_at: string | null
+  delivered_at: string | null
   order_items: OrderItem[]
+}
+
+function formatDate(iso: string) {
+  return new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })
 }
 
 const STAGES = [
@@ -81,9 +87,14 @@ export default function AdminOrdersPage() {
         body: JSON.stringify({ fulfillmentStatus: next }),
       })
       if (!res.ok) throw new Error()
+      const { order: updated } = await res.json()
       setOrders((prev) =>
         prev
-          ? prev.map((o) => (o.id === order.id ? { ...o, fulfillment_status: next as Order['fulfillment_status'] } : o))
+          ? prev.map((o) =>
+              o.id === order.id
+                ? { ...o, fulfillment_status: updated.fulfillment_status, shipped_at: updated.shipped_at, delivered_at: updated.delivered_at }
+                : o
+            )
           : prev
       )
     } catch {
@@ -187,6 +198,14 @@ export default function AdminOrdersPage() {
                     </div>
                   ))}
                 </div>
+
+                {/* Shipped / delivered dates */}
+                {(order.shipped_at || order.delivered_at) && (
+                  <div className="flex gap-4 mb-3 text-xs text-gray-500">
+                    {order.shipped_at && <span>Shipped {formatDate(order.shipped_at)}</span>}
+                    {order.delivered_at && <span>Delivered {formatDate(order.delivered_at)}</span>}
+                  </div>
+                )}
 
                 {/* Action */}
                 {stage.next ? (
