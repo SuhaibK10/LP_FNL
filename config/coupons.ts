@@ -68,6 +68,14 @@ export const COUPONS: Coupon[] = [
     size:            'One Size',
     enabled:         true,
   },
+  {
+    code:            'AEROSMART3990',
+    label:           'AeroSmart 3-in-1 for ₹3,990',
+    discountPercent: 0.10337078651685393,
+    productSlug:     'aerosmart-3in1',
+    size:            'Cabin',
+    enabled:         true,
+  },
 ]
 
 export function getCoupon(code: string): Coupon | undefined {
