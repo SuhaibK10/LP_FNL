@@ -105,7 +105,7 @@ export async function POST(request: NextRequest) {
   if (recipientEmail) {
     const { data: orderItems } = await serviceClient
       .from('order_items')
-      .select('product_name, color, size, price, quantity')
+      .select('product_name, color, size, price, quantity, image')
       .eq('order_id', orderId)
 
     await Promise.all([

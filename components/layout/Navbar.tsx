@@ -98,9 +98,7 @@ export function Navbar() {
   }, [isHome])
   const isTransparent = isHome && !scrolledPastHero
 
-  const navTextClass = isTransparent
-    ? 'text-[var(--color-lp-porcelain)] hover:text-lp-gold [text-shadow:0_2px_10px_rgba(0,0,0,0.55)]'
-    : 'text-[var(--color-lp-ink)] hover:text-lp-gold'
+  const navTextClass = 'text-[var(--color-lp-ink)] hover:text-lp-gold'
 
   // The sale ticker sits in normal document flow (scrolls away), but the
   // navbar below it is fixed at a constant offset — so once the ticker
@@ -249,7 +247,7 @@ export function Navbar() {
                       'after:absolute after:bottom-[-3px] after:left-0 after:h-[1.5px] after:bg-lp-gold',
                       'after:transition-all after:duration-300',
                       pathname === href
-                        ? cn(isTransparent ? navTextClass : 'text-lp-ink', 'after:w-full')
+                        ? 'text-lp-ink after:w-full'
                         : cn(navTextClass, 'after:w-0 hover:after:w-full')
                     )}
                   >
@@ -271,10 +269,7 @@ export function Navbar() {
                     alt="Louis Polo"
                     width={100}
                     height={97}
-                    className={cn(
-                      'h-12 lg:h-16 w-auto object-contain transition-[filter] duration-300',
-                      isTransparent && 'brightness-0 invert drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]',
-                    )}
+                    className="h-12 lg:h-16 w-auto object-contain"
                     priority
                     unoptimized
                   />

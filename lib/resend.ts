@@ -11,6 +11,7 @@
 
 import { Resend } from 'resend'
 import { BRAND } from '@/lib/constants'
+import { thumbUrl } from '@/lib/cloudflareImages'
 
 export const resend = new Resend(process.env.RESEND_API_KEY!)
 
@@ -23,6 +24,21 @@ interface OrderConfirmationItem {
   size: string | null
   price: number
   quantity: number
+  image?: string  // Cloudflare Images ID
+}
+
+// 56×56 thumbnail + name/variant/qty, used in the line-item table of both
+// emails below.
+function itemRow(item: OrderConfirmationItem): string {
+  const thumb = item.image
+    ? `<img src="${thumbUrl(item.image)}" width="56" height="56" alt="" style="display:block; width:56px; height:56px; object-fit:cover; border-radius:6px; background:#f2f0ec;" />`
+    : ''
+  return `
+        <tr>
+          <td style="padding:8px 0; width:56px;">${thumb}</td>
+          <td style="padding:8px 0 8px 12px;">${item.product_name} (${item.color}${item.size ? `, ${item.size}` : ''}) × ${item.quantity}</td>
+          <td style="padding:8px 0; text-align:right; white-space:nowrap;">₹${(item.price * item.quantity).toLocaleString('en-IN')}</td>
+        </tr>`
 }
 
 interface OrderConfirmationParams {
@@ -39,15 +55,7 @@ export async function sendOrderConfirmationEmail({
   total,
   items,
 }: OrderConfirmationParams) {
-  const itemRows = items
-    .map(
-      (item) => `
-        <tr>
-          <td style="padding:8px 0;">${item.product_name} (${item.color}${item.size ? `, ${item.size}` : ''}) × ${item.quantity}</td>
-          <td style="padding:8px 0; text-align:right;">₹${(item.price * item.quantity).toLocaleString('en-IN')}</td>
-        </tr>`
-    )
-    .join('')
+  const itemRows = items.map(itemRow).join('')
 
   const { error } = await resend.emails.send({
     from: EMAIL_FROM,
@@ -93,15 +101,7 @@ export async function sendOrderNotificationEmail({
   customerEmail,
   shipping,
 }: OrderNotificationParams) {
-  const itemRows = items
-    .map(
-      (item) => `
-        <tr>
-          <td style="padding:8px 0;">${item.product_name} (${item.color}${item.size ? `, ${item.size}` : ''}) × ${item.quantity}</td>
-          <td style="padding:8px 0; text-align:right;">₹${(item.price * item.quantity).toLocaleString('en-IN')}</td>
-        </tr>`
-    )
-    .join('')
+  const itemRows = items.map(itemRow).join('')
 
   const { error } = await resend.emails.send({
     from: EMAIL_FROM,
