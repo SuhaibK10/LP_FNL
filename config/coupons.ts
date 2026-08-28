@@ -76,6 +76,14 @@ export const COUPONS: Coupon[] = [
     size:            'Cabin',
     enabled:         true,
   },
+  {
+    code:            'AEROSMARTPRO4290',
+    label:           'AeroSmart Pro for ₹4,290',
+    discountPercent: 0.1402805611222445,
+    productSlug:     'aerosmart-pro',
+    size:            'Cabin',
+    enabled:         true,
+  },
 ]
 
 export function getCoupon(code: string): Coupon | undefined {

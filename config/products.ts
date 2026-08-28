@@ -811,9 +811,13 @@ export const PRODUCTS: Product[] = [
     images: [
       // 'af0b6d0c-556b-4de2-12ff-dafb614c5600',
       // 'f3a7cf1c-9113-4853-4d2d-5a2096b9fd00',
-      'b2abf2d8-e1d1-4503-b822-98df82a87c00',
-      'f1babd8d-7612-4504-d53f-8fec0cdb9900',
-      '08e57a49-abcf-4615-4fdd-78b15cd72a00',
+      '35d06004-c76d-472c-78cd-25e5e22b8300',
+      '9dc95180-9424-449d-8309-866660574f00',
+      'c492c57d-5aab-48a9-ef9f-4c0f313cf300',
+      'afaf8888-2be5-4c1b-8f6a-b42bd7c57300',
+      '3bb9310d-8a8a-4d75-5e2c-335c34479f00',
+      'e7fced72-5dbf-44b1-b9cd-06d4c0254b00',
+      'f0177d63-1ec9-442b-f290-35bb4ab2aa00',
     ],
     features: [
       { label: '360° spinner wheels' },
@@ -828,7 +832,16 @@ export const PRODUCTS: Product[] = [
     variants: [
       {
         color: 'Charcoal',
-        colorHex: '#3D3D3D',
+        colorHex: '#222222',
+        images: [
+          '35d06004-c76d-472c-78cd-25e5e22b8300',
+          '9dc95180-9424-449d-8309-866660574f00',
+          'c492c57d-5aab-48a9-ef9f-4c0f313cf300',
+          'afaf8888-2be5-4c1b-8f6a-b42bd7c57300',
+          '3bb9310d-8a8a-4d75-5e2c-335c34479f00',
+          'e7fced72-5dbf-44b1-b9cd-06d4c0254b00',
+          'f0177d63-1ec9-442b-f290-35bb4ab2aa00',
+        ],
         sizes: [
           { size: 'Cabin', price: 2749, stock: 50, sku: '8906206840292' },
           { size: 'Medium', price: 3099, stock: 40, sku: '8906206840308' },
@@ -837,7 +850,16 @@ export const PRODUCTS: Product[] = [
       },
       {
         color: 'Grey',
-        colorHex: '#9E9E9E',
+        colorHex: '#555553',
+        images: [
+          '7e01c216-81d8-4a06-9657-e07f669cda00',
+          '6421c36f-3653-4744-3a3b-4ee9c5803000',
+          'a58cb6de-0857-4cd1-69eb-4b660a717900',
+          '26c24f8d-c363-4dd1-66b6-7ab3ecc7d700',
+          '7adbdb13-ac36-4bb1-f462-92e9aea46100',
+          'c776d978-eda5-4bed-2cfb-22a63059b200',
+          'ede089a4-8778-41ab-1803-866f47a74a00',
+        ],
         sizes: [
           { size: 'Cabin', price: 2749, stock: 50, sku: '8906206840346' },
           { size: 'Medium', price: 3099, stock: 40, sku: '8906206840339' },
@@ -845,8 +867,34 @@ export const PRODUCTS: Product[] = [
         ],
       },
       {
+        color: 'Silver',
+        colorHex: '#ACADAD',
+        images: [
+          'b22e08cf-0202-4289-aa06-2d2fa11aff00',
+          'c90b8204-d7ca-4eaf-9cfe-9ebe9eaf2000',
+          '2f3f7c19-305a-4d04-08e3-459a06c73100',
+          '951844ee-fedb-4322-b56e-acec01971800',
+          '873210eb-b6d3-4ec4-d08e-893d18f4ef00',
+          '830a980a-9a44-4347-6757-817036a36500',
+        ],
+        sizes: [
+          { size: 'Cabin', price: 2749, stock: 50 },
+          { size: 'Medium', price: 3099, stock: 40 },
+          { size: 'Large', price: 3449, stock: 30 },
+        ],
+      },
+      {
         color: 'Midnight Blue',
-        colorHex: '#586483',
+        colorHex: '#304062',
+        images: [
+          '3c3e695d-6264-4904-e680-04906f2c9400',
+          '085f003f-cbb7-4def-33fb-83eaa8835400',
+          '1f317165-34a8-4aa9-47d3-14502b269e00',
+          'adff5925-358d-4a13-e21a-3cb4b33e4500',
+          '56cca777-ec74-46a7-7e34-5780cf9c2f00',
+          '3f77d6ba-508a-4e08-bd7a-19d00f535d00',
+          '2f7feae1-0fba-46b8-6ed9-d902874bad00',
+        ],
         sizes: [
           { size: 'Cabin', price: 2749, stock: 50 },
           { size: 'Medium', price: 3099, stock: 40 },
