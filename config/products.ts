@@ -21,7 +21,7 @@ import type { Product, HeroSlide } from '@/types'
 export const HERO_SLIDES: HeroSlide[] = [
   {
     image:        'f919eb1d-b3e8-4547-d7ec-76b296419700',
-    desktopImage: 'ea5c3f0c-9844-4981-bb25-65e357edb000',
+    desktopImage: '3e2f1692-a938-48df-a15a-bd930671d200',
     headline:  '',
     textStyle: 'shadow',
     textSize:  'lg',
@@ -77,6 +77,13 @@ export const HERO_SLIDES: HeroSlide[] = [
     textStyle:    'light',
     textSize:     'lg',
     textPosition: 'top',
+  },
+  {
+    image:        'c949f8ec-5c9d-4ea8-fe4c-9027fb0fcf00',
+    desktopImage: '3e2f1692-a938-48df-a15a-bd930671d200',
+    headline:  '',
+    textStyle: 'shadow',
+    textSize:  'lg',
   },
 ]
 
@@ -3581,15 +3588,15 @@ export const PRODUCTS: Product[] = [
     warranty:
       '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images: [
-      // '0958137c-54cd-499d-d45d-ab87f2b07c00',
-      // '92a462b9-9f70-478a-9665-9ac7dae1d200',
-      'e22ab8d1-dd65-4960-0c14-ba9d76bc7e00',
-
-      '8c372b35-7aee-4187-695e-fd75b4ad6400',
       '2c9be321-b43c-44b2-4426-9083481f8500',
+      '8c372b35-7aee-4187-695e-fd75b4ad6400',
       '60336999-7579-4108-2a90-0192b95fa100',
       'c9739b19-8151-4a79-e06a-cd5b16407e00',
       'fc53d417-4b36-42b5-6512-c44c9868a200',
+
+      // '0958137c-54cd-499d-d45d-ab87f2b07c00',
+      // '92a462b9-9f70-478a-9665-9ac7dae1d200',
+      'e22ab8d1-dd65-4960-0c14-ba9d76bc7e00',
     ],
     features: [
       { label: 'Hard shell protection' },
@@ -3601,13 +3608,17 @@ export const PRODUCTS: Product[] = [
     ],
     variants: [
       {
-        color: 'White',
-        colorHex: '#FAFAFA',
-        // First pic is the current shared image; append real per-color shots after it
+        color: 'Pink',
+        colorHex: '#D8556F',
         images: [
-          // '0958137c-54cd-499d-d45d-ab87f2b07c00',
-          // '92a462b9-9f70-478a-9665-9ac7dae1d200',
-          'e22ab8d1-dd65-4960-0c14-ba9d76bc7e00',
+          '2c9be321-b43c-44b2-4426-9083481f8500',
+          'ae66ca43-d1c9-4fe6-adea-ae8f5d247400',
+          'cce8cb26-3b5b-49be-de9c-d123c86a4200',
+          'f4826864-394a-4cb2-e8fd-098829bf4200',
+          '089fa18d-0781-4590-9d7f-9b84a8331b00',
+          '35d0eb18-3cc1-475a-4f94-69ee7a277d00',
+          'f12534b3-fd42-46be-b0cd-13cabda64b00',
+          'b22e3e11-1d88-432d-daa3-5981bdc68300',
         ],
         sizes: [
           { size: 'One Size', price: 1990, stock: 30 },
@@ -3623,23 +3634,6 @@ export const PRODUCTS: Product[] = [
           '79f51047-639a-4716-4ec1-04d1afe05b00',
           'cba819fa-3920-4f4b-6ee2-372ea8f4c200',
           '8bc0afc8-8505-4742-fd42-124b5bc95f00',
-          'f12534b3-fd42-46be-b0cd-13cabda64b00',
-          'b22e3e11-1d88-432d-daa3-5981bdc68300',
-        ],
-        sizes: [
-          { size: 'One Size', price: 1990, stock: 30 },
-        ],
-      },
-      {
-        color: 'Pink',
-        colorHex: '#D8556F',
-        images: [
-          '2c9be321-b43c-44b2-4426-9083481f8500',
-          'ae66ca43-d1c9-4fe6-adea-ae8f5d247400',
-          'cce8cb26-3b5b-49be-de9c-d123c86a4200',
-          'f4826864-394a-4cb2-e8fd-098829bf4200',
-          '089fa18d-0781-4590-9d7f-9b84a8331b00',
-          '35d0eb18-3cc1-475a-4f94-69ee7a277d00',
           'f12534b3-fd42-46be-b0cd-13cabda64b00',
           'b22e3e11-1d88-432d-daa3-5981bdc68300',
         ],
@@ -3693,6 +3687,19 @@ export const PRODUCTS: Product[] = [
           'c10013d0-e9cb-4049-91ce-f720c17f4800',
           'f12534b3-fd42-46be-b0cd-13cabda64b00',
           'b22e3e11-1d88-432d-daa3-5981bdc68300',
+        ],
+        sizes: [
+          { size: 'One Size', price: 1990, stock: 30 },
+        ],
+      },
+      {
+        color: 'White',
+        colorHex: '#FAFAFA',
+        // First pic is the current shared image; append real per-color shots after it
+        images: [
+          // '0958137c-54cd-499d-d45d-ab87f2b07c00',
+          // '92a462b9-9f70-478a-9665-9ac7dae1d200',
+          'e22ab8d1-dd65-4960-0c14-ba9d76bc7e00',
         ],
         sizes: [
           { size: 'One Size', price: 1990, stock: 30 },
