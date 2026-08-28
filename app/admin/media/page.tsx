@@ -169,11 +169,16 @@ export default function AdminMediaPage() {
       <div className="sticky top-0 z-10 bg-white border-b border-gray-200 px-6 py-4">
         <div className="flex items-center justify-between gap-4 mb-3">
           <h1 className="font-semibold text-lg text-[#1C1B19]">Louis Polo Media Library</h1>
-          <form action={adminLogout}>
-            <button type="submit" className="text-xs text-gray-500 hover:text-[#1C1B19] underline">
-              Log out
-            </button>
-          </form>
+          <div className="flex items-center gap-3">
+            <a href="/admin/orders" className="text-xs text-gray-500 hover:text-[#1C1B19] underline">
+              Orders
+            </a>
+            <form action={adminLogout}>
+              <button type="submit" className="text-xs text-gray-500 hover:text-[#1C1B19] underline">
+                Log out
+              </button>
+            </form>
+          </div>
         </div>
 
         <div className="flex flex-wrap items-center gap-2 mb-3">
