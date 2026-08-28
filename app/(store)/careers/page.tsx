@@ -52,9 +52,35 @@ interface OpenPosition {
   whatYoullDo:         string[]
   whatWereLookingFor:  string[]
   showTask:            boolean  // the AI-creative task only makes sense for creative roles
+  applyByEmail?:       boolean  // skip the in-page form — direct straight to emailing a resume
 }
 
 const POSITIONS: OpenPosition[] = [
+  {
+    role: 'UI/UX Design Intern',
+    tags: 'Internship · Remote · 2 Months · ₹20,000/month',
+    description:
+      "Own the look and feel of everything Louis Polo customers touch, the website, the app, every PDP and campaign page. We are obsessive about not looking like every other AI-templated D2C brand out there, and we need someone with the taste to keep it that way. High design quotient is non-negotiable here, you notice the details most people scroll past.",
+    jdHref: '/documents/louis-polo-uiux-designer-jd.pdf',
+    applyByEmail: true,
+    whatYoullDo: [
+      'Design and evolve the visual language across the website, app, and every customer touchpoint',
+      'Own new product pages, landing pages, and campaign creatives end to end, from concept to dev handoff',
+      'Build and maintain a cohesive design system, typography, color, components, spacing, all of it',
+      'Work closely with engineering to make sure every design ships pixel-accurate, not approximated',
+      'Push back on generic, templated design, every screen should look considered, not AI-generated',
+      'Bring outside references, benchmark against category leaders, and keep raising the bar',
+    ],
+    whatWereLookingFor: [
+      'A portfolio with real range: layout, typography, color, motion, not just polished mockups',
+      'Obsessive attention to detail, the kind that notices a 2px misalignment',
+      'End-to-end fluency in Figma, from wireframes to high-fidelity, dev-ready files',
+      'A strong point of view on what looks premium versus what looks generic, and the ability to defend it',
+      'Experience designing for e-commerce or D2C brands is a strong plus',
+      'Can take a rough brief and turn it into three strong directions, not one safe one',
+    ],
+    showTask: false,
+  },
   {
     role: 'Growth Creative Intern (Gen AI)',
     tags: 'Internship · Remote · 2 Months · ₹15,000-20,000/month · API cost on us',
@@ -199,16 +225,42 @@ export default function CareersPage() {
               {/* RIGHT — application form, top-aligned with the left column
                   so it starts level with "Open position" itself */}
               <div className="md:w-1/2">
-                <CareerApplicationForm role={position.role} showTask={position.showTask} />
-                <p className="font-body text-[0.8rem] text-lp-muted leading-relaxed mt-4 text-center">
-                  Have a question? Write to us at{' '}
-                  <a
-                    href="mailto:careers@louispolo.in"
-                    className="text-lp-ink underline underline-offset-2 hover:text-lp-gold transition-colors"
-                  >
-                    careers@louispolo.in
-                  </a>
-                </p>
+                {position.applyByEmail ? (
+                  <div className="bg-lp-cream rounded-2xl p-6 md:p-8 text-center">
+                    <p className="font-display text-[1.1rem] text-lp-ink mb-2">
+                      Apply by email
+                    </p>
+                    <p className="font-body text-[0.9rem] text-lp-ink leading-relaxed mb-5">
+                      Email your resume to{' '}
+                      <a
+                        href={`mailto:careers@louispolo.in?subject=${encodeURIComponent(`Application: ${position.role}`)}`}
+                        className="underline underline-offset-2 hover:text-lp-gold transition-colors"
+                      >
+                        careers@louispolo.in
+                      </a>
+                      {' '}with the role name in the subject line, and a portfolio or LinkedIn link if you have one.
+                    </p>
+                    <a
+                      href={`mailto:careers@louispolo.in?subject=${encodeURIComponent(`Application: ${position.role}`)}`}
+                      className="btn-primary w-fit mx-auto"
+                    >
+                      Email your resume
+                    </a>
+                  </div>
+                ) : (
+                  <>
+                    <CareerApplicationForm role={position.role} showTask={position.showTask} />
+                    <p className="font-body text-[0.8rem] text-lp-muted leading-relaxed mt-4 text-center">
+                      Have a question? Write to us at{' '}
+                      <a
+                        href="mailto:careers@louispolo.in"
+                        className="text-lp-ink underline underline-offset-2 hover:text-lp-gold transition-colors"
+                      >
+                        careers@louispolo.in
+                      </a>
+                    </p>
+                  </>
+                )}
               </div>
             </div>
           </div>
