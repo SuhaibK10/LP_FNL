@@ -109,7 +109,7 @@ export function HeroSection() {
       id="hero-section"
       ref={sectionRef}
       className="relative h-[calc(82svh-1.75rem)] md:h-[calc(90vh-1.75rem)] md:min-h-150 md:max-h-240 overflow-hidden cursor-pointer"
-      onClick={() => router.push(ROUTES.shop)}
+      onClick={() => router.push(`${ROUTES.shop}?category=vanity`)}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
@@ -225,7 +225,7 @@ export function HeroSection() {
               transition={{ type: 'spring', stiffness: 300, damping: 20, delay: 0.4 }}
               className="flex flex-wrap gap-3 justify-center w-full"
             >
-              <Link href={ROUTES.shop} className="btn-primary">
+              <Link href={`${ROUTES.shop}?category=vanity`} className="btn-primary">
                 Explore the Collection
                 <ArrowRight size={16} strokeWidth={1.5} />
               </Link>
