@@ -20,7 +20,7 @@ import type { Product, HeroSlide } from '@/types'
 // Replace public_ids with your Cloudinary uploads.
 export const HERO_SLIDES: HeroSlide[] = [
   {
-    image:        'f919eb1d-b3e8-4547-d7ec-76b296419700',
+    image:        '5bb40a75-0369-4b5a-9c6b-b2c19f2f8100',
     desktopImage: '3e2f1692-a938-48df-a15a-bd930671d200',
     headline:  '',
     textStyle: 'shadow',
@@ -77,13 +77,6 @@ export const HERO_SLIDES: HeroSlide[] = [
     textStyle:    'light',
     textSize:     'lg',
     textPosition: 'top',
-  },
-  {
-    image:        'c949f8ec-5c9d-4ea8-fe4c-9027fb0fcf00',
-    desktopImage: '3e2f1692-a938-48df-a15a-bd930671d200',
-    headline:  '',
-    textStyle: 'shadow',
-    textSize:  'lg',
   },
 ]
 
@@ -365,7 +358,7 @@ export const PRODUCTS: Product[] = [
     hideSizeSelector: true,
     hideSizeGuide: true,
     mrp: 1699,
-    recentPurchases: 174,
+    recentPurchases: 217,
     description:
       'Pack shirts, not wrinkles. ShirtVault carries 4 to 5 formal shirts in a slim hard shell that keeps collars sharp and folds crisp, in a suitcase or on a wardrobe shelf.',
     story: [
@@ -409,7 +402,11 @@ export const PRODUCTS: Product[] = [
       // '584aba3f-66ed-4084-df03-ba0e5e625100',
       // '71bcef0c-eaf5-4466-fec4-4f5fdc357900',
       // '365d5259-4bd3-4533-57d7-2182ee625e00',
+      'bf8923bc-583d-4f61-5ade-71bb8d8cb900',
       'e3c8bc97-9a5e-4481-e094-d3ae7d1a2200',
+      'bdcd2c0f-dc07-4662-dd09-50cde0e25200',
+      '0f05e803-356b-423e-d049-95ac6a9d4900',
+      '21dedd79-f428-4bc5-e77b-bb3d9b43d000',
     ],
     features: [
       { label: 'Holds 4 to 5 formal shirts' },
@@ -476,6 +473,11 @@ export const PRODUCTS: Product[] = [
     images: [
       // 'ff8154e9-293a-4064-23a6-63e82aad3700',
       'efa83da4-fd4f-457f-1322-6f316dbcd900',
+      '0914bdfc-0f70-4d3c-a48a-368a1edc5500',
+      '8a59c239-87b0-4d3d-4c8c-3e049e213900',
+      '5e39fb51-9775-4ef2-9ace-f7631da86e00',
+      '89d43003-400e-4512-8a2c-78ebdc7f7100',
+      'b18c3fe5-2d8b-4e8c-97b9-3d61067ac200',
     ],
     features: [
       { label: 'Detachable companion case' },
