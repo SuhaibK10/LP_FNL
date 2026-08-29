@@ -811,13 +811,9 @@ export const PRODUCTS: Product[] = [
     images: [
       // 'af0b6d0c-556b-4de2-12ff-dafb614c5600',
       // 'f3a7cf1c-9113-4853-4d2d-5a2096b9fd00',
-      '35d06004-c76d-472c-78cd-25e5e22b8300',
-      '9dc95180-9424-449d-8309-866660574f00',
-      'c492c57d-5aab-48a9-ef9f-4c0f313cf300',
-      'afaf8888-2be5-4c1b-8f6a-b42bd7c57300',
-      '3bb9310d-8a8a-4d75-5e2c-335c34479f00',
-      'e7fced72-5dbf-44b1-b9cd-06d4c0254b00',
-      'f0177d63-1ec9-442b-f290-35bb4ab2aa00',
+      'b2abf2d8-e1d1-4503-b822-98df82a87c00',
+      'f1babd8d-7612-4504-d53f-8fec0cdb9900',
+      '08e57a49-abcf-4615-4fdd-78b15cd72a00',
     ],
     features: [
       { label: '360° spinner wheels' },
@@ -832,16 +828,7 @@ export const PRODUCTS: Product[] = [
     variants: [
       {
         color: 'Charcoal',
-        colorHex: '#222222',
-        images: [
-          '35d06004-c76d-472c-78cd-25e5e22b8300',
-          '9dc95180-9424-449d-8309-866660574f00',
-          'c492c57d-5aab-48a9-ef9f-4c0f313cf300',
-          'afaf8888-2be5-4c1b-8f6a-b42bd7c57300',
-          '3bb9310d-8a8a-4d75-5e2c-335c34479f00',
-          'e7fced72-5dbf-44b1-b9cd-06d4c0254b00',
-          'f0177d63-1ec9-442b-f290-35bb4ab2aa00',
-        ],
+        colorHex: '#3D3D3D',
         sizes: [
           { size: 'Cabin', price: 2749, stock: 50, sku: '8906206840292' },
           { size: 'Medium', price: 3099, stock: 40, sku: '8906206840308' },
@@ -850,16 +837,7 @@ export const PRODUCTS: Product[] = [
       },
       {
         color: 'Grey',
-        colorHex: '#555553',
-        images: [
-          '7e01c216-81d8-4a06-9657-e07f669cda00',
-          '6421c36f-3653-4744-3a3b-4ee9c5803000',
-          'a58cb6de-0857-4cd1-69eb-4b660a717900',
-          '26c24f8d-c363-4dd1-66b6-7ab3ecc7d700',
-          '7adbdb13-ac36-4bb1-f462-92e9aea46100',
-          'c776d978-eda5-4bed-2cfb-22a63059b200',
-          'ede089a4-8778-41ab-1803-866f47a74a00',
-        ],
+        colorHex: '#9E9E9E',
         sizes: [
           { size: 'Cabin', price: 2749, stock: 50, sku: '8906206840346' },
           { size: 'Medium', price: 3099, stock: 40, sku: '8906206840339' },
@@ -867,34 +845,8 @@ export const PRODUCTS: Product[] = [
         ],
       },
       {
-        color: 'Silver',
-        colorHex: '#ACADAD',
-        images: [
-          'b22e08cf-0202-4289-aa06-2d2fa11aff00',
-          'c90b8204-d7ca-4eaf-9cfe-9ebe9eaf2000',
-          '2f3f7c19-305a-4d04-08e3-459a06c73100',
-          '951844ee-fedb-4322-b56e-acec01971800',
-          '873210eb-b6d3-4ec4-d08e-893d18f4ef00',
-          '830a980a-9a44-4347-6757-817036a36500',
-        ],
-        sizes: [
-          { size: 'Cabin', price: 2749, stock: 50 },
-          { size: 'Medium', price: 3099, stock: 40 },
-          { size: 'Large', price: 3449, stock: 30 },
-        ],
-      },
-      {
         color: 'Midnight Blue',
-        colorHex: '#304062',
-        images: [
-          '3c3e695d-6264-4904-e680-04906f2c9400',
-          '085f003f-cbb7-4def-33fb-83eaa8835400',
-          '1f317165-34a8-4aa9-47d3-14502b269e00',
-          'adff5925-358d-4a13-e21a-3cb4b33e4500',
-          '56cca777-ec74-46a7-7e34-5780cf9c2f00',
-          '3f77d6ba-508a-4e08-bd7a-19d00f535d00',
-          '2f7feae1-0fba-46b8-6ed9-d902874bad00',
-        ],
+        colorHex: '#586483',
         sizes: [
           { size: 'Cabin', price: 2749, stock: 50 },
           { size: 'Medium', price: 3099, stock: 40 },
@@ -3802,13 +3754,12 @@ export const PRODUCTS: Product[] = [
     images:      [
       // '0caedf5f-e860-40a0-815d-948cb8b39200',
       // '84b25074-a05f-4498-c0bd-d4d058ed7500',
-      'e5b94864-6080-40d7-6503-42955e4e6400',
-      'ff0b7372-c6a8-468f-9529-6619cf26cb00',
-      'c51b7c0b-34d5-415c-e0b4-0cc22aac3d00',
-      '2ef2f8b2-ed27-4506-c42f-baf0cc755a00',
-      'ff00399d-672a-4d47-1218-415935f7ad00'
-
-
+      'f62f9a94-6062-40a0-3e94-8bddd84b7c00',
+      '958743a7-4632-403a-6049-7e32ad208900',
+      '2dd3b666-1262-4a75-9c70-95563114ee00',
+      '7618886c-ef64-4409-1de0-0b3ba8b27f00',
+      '06fc86de-a757-4479-406f-057329114800',
+      '75018638-8871-4de2-0aa6-53eff7951a00',
     ],
     features: [
       { label: 'Hard shell protection panel' },
@@ -3821,27 +3772,68 @@ export const PRODUCTS: Product[] = [
     variants: [
       {
         color:    'Black',
-        colorHex: '#212121',
+        colorHex: '#222221',
+        images: [
+          'f62f9a94-6062-40a0-3e94-8bddd84b7c00',
+          '958743a7-4632-403a-6049-7e32ad208900',
+          '2dd3b666-1262-4a75-9c70-95563114ee00',
+          '7618886c-ef64-4409-1de0-0b3ba8b27f00',
+          '06fc86de-a757-4479-406f-057329114800',
+          '75018638-8871-4de2-0aa6-53eff7951a00',
+        ],
         sizes: [{ size: '20 Inch', price: 2999, stock: 30 }],
       },
       {
         color:    'Navy',
-        colorHex: '#1A237E',
+        colorHex: '#36486A',
+        images: [
+          '2eb4d113-a4c9-42da-1aae-3b4ca3082900',
+          '8eebe9e8-29c3-4650-8ac7-d713a522e100',
+          '9655a695-d7f7-4db1-cdfd-a286d9dba900',
+          'a0092acb-ceac-4e7f-4277-e4268630f600',
+          'd2fced7a-dde4-4200-1a9a-a8c58e446100',
+          'f08e2032-67f5-462b-2eee-07d8980eac00',
+        ],
         sizes: [{ size: '20 Inch', price: 2999, stock: 30 }],
       },
       {
         color:    'Green',
-        colorHex: '#2E7D32',
+        colorHex: '#8C9819',
+        images: [
+          'ee800120-5239-4c48-6da5-2ed917975500',
+          'd411ab10-5529-4423-ee95-3776b9c12c00',
+          '7c3db588-8ae0-4170-f5fe-5732c548a700',
+          '61fe0c27-c0a2-4c1e-6945-b43861de3300',
+          'f625d6cf-73e2-4dd0-8552-d121b7ee7400',
+          '7d935445-d047-4781-73e3-14f95ce67900',
+          '6c8af083-fb64-4d5c-af30-6a270a9ef700',
+        ],
         sizes: [{ size: '20 Inch', price: 2999, stock: 30 }],
       },
       {
         color:    'Grey',
-        colorHex: '#757575',
+        colorHex: '#545552',
+        images: [
+          '4612e4bf-404d-4c4a-0f74-ab6f4b241b00',
+          '10a5b6a3-4f97-4db5-5ab3-70abcbc6fa00',
+          'c8344383-f21d-40b5-b262-61115128a500',
+          '58c3cb4d-587a-4ae8-8109-a1013901c100',
+          '6e841362-88eb-44cc-5b01-57b6c44d2500',
+          '46ed021e-269b-4125-3c49-66ed12d0cd00',
+        ],
         sizes: [{ size: '20 Inch', price: 2999, stock: 30 }],
       },
       {
         color:    'Silver',
-        colorHex: '#BDBDBD',
+        colorHex: '#B9BABB',
+        images: [
+          'eaec7b6f-9e08-4290-9c23-1dfcdaf35f00',
+          '6c5980bf-8459-46dc-1a91-6be652eb8f00',
+          '0f872fb1-e029-4740-5bf2-75481f6df100',
+          'e0a35b43-bcc3-4265-b711-c66729cb2b00',
+          'bf6fdf7b-e847-46e8-b8bf-59436f18de00',
+          '6426ae60-830b-43fd-cc36-14d6e44de500',
+        ],
         sizes: [{ size: '20 Inch', price: 2999, stock: 30 }],
       },
     ],

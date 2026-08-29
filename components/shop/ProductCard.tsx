@@ -29,9 +29,20 @@ import { tapPunch }                 from '@/lib/animations'
 
 interface ProductCardProps {
   product: Product
+  // Opens the card on this literal variant.color instead of variants[0] —
+  // used by sections that already filtered products down to a specific
+  // color (e.g. the homepage "Take What You Need" color carousel), so the
+  // card shows the color the shopper actually picked rather than whatever
+  // happens to be first.
+  initialColor?: string
 }
 
-export function ProductCard({ product }: ProductCardProps) {
+export function ProductCard({ product, initialColor }: ProductCardProps) {
+  const initialVariantIndex = (() => {
+    if (!initialColor) return 0
+    const i = product.variants.findIndex((v) => v.color === initialColor)
+    return i === -1 ? 0 : i
+  })()
   const addItem  = useCartStore((s) => s.addItem)
   const toggle   = useWishlistStore((s) => s.toggle)
   const has      = useWishlistStore((s) => s.has)
@@ -68,10 +79,10 @@ export function ProductCard({ product }: ProductCardProps) {
     }
   }
 
-  const [activeVariant,   setActiveVariant]   = useState(0)
+  const [activeVariant,   setActiveVariant]   = useState(initialVariantIndex)
   const [hoveredVariant,  setHoveredVariant]  = useState<number | null>(null)
   const [activeSize,      setActiveSize]      = useState<ProductSize | null>(
-    defaultSize(product.variants[0].sizes)
+    defaultSize(product.variants[initialVariantIndex].sizes)
   )
   const [addedToCart,     setAddedToCart]     = useState(false)
   const [sizeGuideOpen,   setSizeGuideOpen]   = useState(false)

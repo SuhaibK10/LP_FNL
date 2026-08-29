@@ -106,6 +106,20 @@
   ::-webkit-scrollbar-thumb  { background: #4B5563; border-radius: 3px; }
 }
 
+/* Thin horizontal scrollbar for small drag-scroll strips (e.g. the color
+   swatch row) — the default ::-webkit-scrollbar rule above only sets
+   `width`, which controls a VERTICAL scrollbar's thickness, not a
+   horizontal one's, so a horizontally-scrolling element falls back to the
+   browser's full-size default bar. This sets `height` instead, scoped to
+   opt-in elements only. */
+.scrollbar-thin-x {
+  scrollbar-width: thin;
+  scrollbar-color: #4B5563 transparent;
+}
+.scrollbar-thin-x::-webkit-scrollbar        { height: 4px; }
+.scrollbar-thin-x::-webkit-scrollbar-track  { background: transparent; }
+.scrollbar-thin-x::-webkit-scrollbar-thumb  { background: #4B5563; border-radius: 999px; }
+
 /* ─── Layout utilities ────────────────────────────────────────────────────── */
 
 /* Consistent page container.
