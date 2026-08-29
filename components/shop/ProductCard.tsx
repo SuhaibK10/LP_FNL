@@ -140,16 +140,18 @@ export function ProductCard({ product, initialColor }: ProductCardProps) {
     setTimeout(() => setAddedToCart(false), 7000)
   }
 
-  // Warm every color swatch's card-sized image as soon as the card mounts —
-  // without this, switching colors (hover or click) pays a cold network
-  // fetch each time, which is what made swatch switching feel slow. Small
-  // asset, few variants, so preloading all of them up front is cheap and
-  // means every swap is already-cached by the time it happens.
+  // Warm every color swatch's images as soon as the card mounts — without
+  // this, switching colors (hover or click) pays a cold network fetch each
+  // time, which is what made swatch switching feel slow. Both sizes: the
+  // card-sized crop shown here, and the PDP-sized crop Quick View uses
+  // (same product/variants, opened straight from this card). Small assets,
+  // few variants, so preloading all of them up front is cheap and means
+  // every swap — on the card or inside Quick View — is already cached.
   useEffect(() => {
     product.variants.forEach((v, i) => {
       const img = v.images?.[0] ?? product.images[i] ?? product.images[0]
-      const preload = new window.Image()
-      preload.src = cardUrl(img, product.imageFit) || PLACEHOLDER_URL
+      new window.Image().src = cardUrl(img, product.imageFit) || PLACEHOLDER_URL
+      new window.Image().src = pdpUrl(img, product.imageFit) || PLACEHOLDER_URL
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [product.id])
