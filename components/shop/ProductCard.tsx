@@ -140,6 +140,20 @@ export function ProductCard({ product, initialColor }: ProductCardProps) {
     setTimeout(() => setAddedToCart(false), 7000)
   }
 
+  // Warm every color swatch's card-sized image as soon as the card mounts —
+  // without this, switching colors (hover or click) pays a cold network
+  // fetch each time, which is what made swatch switching feel slow. Small
+  // asset, few variants, so preloading all of them up front is cheap and
+  // means every swap is already-cached by the time it happens.
+  useEffect(() => {
+    product.variants.forEach((v, i) => {
+      const img = v.images?.[0] ?? product.images[i] ?? product.images[0]
+      const preload = new window.Image()
+      preload.src = cardUrl(img, product.imageFit) || PLACEHOLDER_URL
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [product.id])
+
   // The shop grid only ever loads the card-sized crop — a different derived
   // asset from the PDP's main image. Without this, clicking through to the
   // PDP always triggers a cold fetch for that specific size, even though

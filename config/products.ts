@@ -4416,7 +4416,7 @@ export const PRODUCTS: Product[] = [
     variants: [
       { color: 'Grey',   colorHex: '#757575', images: ['239063f4-670d-4aeb-fe83-12706dc4d900', '087746cc-d46c-44b2-5295-703b1b38d700', 'eeec2f57-a7cd-4bf5-0d49-ff46cc15aa00'],   sizes: [{ size: 'Cabin', price: 3500, stock: 50 }] },
       { color: 'Silver', colorHex: '#BDBDBD', images: ['d0188be4-5f18-4d24-82cd-2f3f39b1b100', 'e62b4d59-68cb-4775-e350-0b21500dfc00', 'a368d05a-b2bf-4209-1533-d4f7b65f3900'], sizes: [{ size: 'Cabin', price: 3500, stock: 50 }] },
-      { color: 'Black',  colorHex: '#212121', images: ['3152b806-d87f-4c67-7ce3-6bfa38f21f00', '6ec05fdd-6c43-4c8f-7ddd-d590ba80cd00', 'eab26875-f791-47d9-0b47-4767d886b800', 'fde31ce8-1492-4e70-6b8e-1c0a7e728100'],  sizes: [{ size: 'Cabin', price: 3500, stock: 50 }] },
+      { color: 'Black',  colorHex: '#212121', images: ['6ec05fdd-6c43-4c8f-7ddd-d590ba80cd00', 'eab26875-f791-47d9-0b47-4767d886b800', 'fde31ce8-1492-4e70-6b8e-1c0a7e728100'],  sizes: [{ size: 'Cabin', price: 3500, stock: 50 }] },
       { color: 'Blue',   colorHex: '#1565C0', images: ['ef953353-42e2-4b24-e628-7996b543b200', 'c034b6ed-291c-49ec-10e3-2c7f3c24d900', '7f49dd09-6fae-4dff-42d9-b9c4dd252100'],   sizes: [{ size: 'Cabin', price: 3500, stock: 50 }] },
     ],
   },

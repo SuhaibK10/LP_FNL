@@ -20,7 +20,7 @@ import { formatPrice, swatchRingColor, defaultSize } from '@/lib/utils'
 import { ROUTES, SEO }           from '@/lib/constants'
 import { ShareButton }           from '@/components/ui/ShareButton'
 import { useCartStore }          from '@/store/cartStore'
-import { thumbUrl }              from '@/lib/cloudflareImages'
+import { thumbUrl, pdpUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 import { cfVideo }               from '@/lib/cloudflareStream'
 import { useWishlistStore }      from '@/store/wishlistStore'
 import { SizeGuideModal }        from '@/components/ui/SizeGuideModal'
@@ -96,6 +96,19 @@ export function ProductInfo({ product, defaultColor, onColorChange, onColorHover
     preload.muted = true
     preload.src = cfVideo(product.demoVideoId)
   }
+
+  // ImageGallery already preloads every photo within the CURRENT color as
+  // soon as it's selected — this covers every OTHER color too, so the very
+  // first click on a swatch is already warm instead of paying a cold fetch
+  // before ImageGallery's own preload effect even kicks in.
+  useEffect(() => {
+    product.variants.forEach((v, i) => {
+      const img = v.images?.[0] ?? product.images[i] ?? product.images[0]
+      const preload = new window.Image()
+      preload.src = pdpUrl(img, product.imageFit) || PLACEHOLDER_URL
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [product.id])
 
   function handleColorChange(i: number) {
     setColorIndex(i)

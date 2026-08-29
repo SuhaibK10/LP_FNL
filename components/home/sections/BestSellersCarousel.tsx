@@ -123,6 +123,18 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
     setTimeout(() => setAddedToCart(false), 7000)
   }
 
+  // Warm every color swatch's card-sized image as soon as the card mounts —
+  // same fix as components/shop/ProductCard.tsx, needed here too since this
+  // is a separate duplicated implementation, not a shared import.
+  useEffect(() => {
+    product.variants.forEach((v, i) => {
+      const img = v.images?.[0] ?? product.images[i] ?? product.images[0]
+      const preload = new window.Image()
+      preload.src = cardUrl(img, product.imageFit) || PLACEHOLDER_URL
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [product.id])
+
   // Same cold-fetch-avoidance trick as the shop grid card — warm the PDP's
   // own image crop on hover/touch so the click-through feels instant.
   function prefetchPdpImage() {
