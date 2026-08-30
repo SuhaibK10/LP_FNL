@@ -3461,7 +3461,7 @@ export const PRODUCTS: Product[] = [
     warranty:
       '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images: [
-      'd19d39a3-bd62-47a8-e86e-1be07d869400',
+      '4cc1114c-3c2e-4841-93dd-af7bdfbb4600',
       'ef7214d8-a553-4175-5b60-fe51f8ee6100',
     ],
     features: [
@@ -3513,7 +3513,7 @@ export const PRODUCTS: Product[] = [
     warranty:
       '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images: [
-      'b728cfda-0845-4ff4-2a7e-723413c3c600',
+      '2ea5105f-0256-497e-f1b8-e6d5119ffc00',
     ],
     features: [
       { label: 'Premium luxury-inspired design' },
@@ -4895,7 +4895,7 @@ export const PRODUCTS: Product[] = [
     ],
     warranty:
       '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
-    images: ['5f68456a-1c0f-4d93-1fc8-b576d92d9900', '8164e6e0-536d-4917-6dce-d16fd243ac00'],
+    images: ['e1f1ccaf-299a-4541-a372-2a32c732d700', '8164e6e0-536d-4917-6dce-d16fd243ac00'],
     features: [
       { label: 'Ribbed metallic hard shell' },
       { label: 'Leather handles and straps' },
@@ -4907,7 +4907,7 @@ export const PRODUCTS: Product[] = [
     variants: [
       {
         color: 'Metallic Grey', colorHex: '#757575',
-        images: ['5f68456a-1c0f-4d93-1fc8-b576d92d9900', '8164e6e0-536d-4917-6dce-d16fd243ac00'],
+        images: ['e1f1ccaf-299a-4541-a372-2a32c732d700', '8164e6e0-536d-4917-6dce-d16fd243ac00'],
         sizes: [{ size: 'One Size', price: 2490, stock: 50 }],
       },
     ],
