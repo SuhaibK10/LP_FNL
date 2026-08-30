@@ -41,8 +41,8 @@ const SORT_OPTIONS: { label: string; value: SortKey }[] = [
 const CATEGORY_IMAGES: Partial<Record<string, string>> = {
   trolley:      'dfe7f28d-50e2-4a8a-7faa-467641a17700',
   set:          '27bec58c-232a-4c66-7b6e-95925a7e2800',
-  backpack:     '04fcc97f-08b5-4279-f2fc-753aed03be00',
-  'office-bag': '0baab19f-10cd-4c53-2c53-2041976f6c00',
+  backpack:     '42099695-2a71-4e47-2add-c5af4526bd00',
+  'office-bag': 'adaa5f99-b408-4588-cfb8-b3e2dfbf6e00',
   duffle:       'ae436b7a-1f40-440f-fa9b-233399dfa000',
   vanity:       '513ee961-4ffb-4e55-803b-0df8de8e0700',
 }

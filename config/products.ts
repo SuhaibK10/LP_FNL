@@ -597,13 +597,13 @@ export const PRODUCTS: Product[] = [
       { label: 'Contrast stitching detail' },
     ],
     variants: [
-      { color: 'Rose Gold',   colorHex: '#B76E79', images: ['c9da7ca3-614b-48c8-3db3-cff645f0ad00', 'eae799de-7857-4fab-df03-8b5a9abac300', 'ebefd887-40c6-4821-5514-32ea3e14e000', '6d1d7a64-9833-40d3-880d-dacbfee5ed00', '74bf496c-5e5c-4458-0e61-378b8c18e400'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
-      { color: 'Purple',      colorHex: '#7B5EA7', images: ['2497f48c-b534-439b-142d-db4e27edb800', 'a86d7557-250e-4cb9-9a55-a1169a22e000', 'd2431fda-13b7-4466-fd77-a03cbcaee300', 'e42e0492-c8f8-4e12-71c7-dd587a656300', 'e27bf445-53d5-485e-c89c-497203cf3800'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
-      { color: 'Tender Blue', colorHex: '#89CFF0', images: ['cc2087d7-872e-4b98-431f-3be090fe9d00', 'c5af51cc-79ae-4c08-6828-ba6704127100', '9a06e4cf-fd46-45e0-3654-058530a8ed00', '8bbacbd3-c24b-41ac-0d1d-20940ce6cb00', '2e8c7ca4-d431-4293-c29a-66c364889c00'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
-      { color: 'Red',         colorHex: '#C62828', images: ['00572a58-9995-4955-68da-becd8f85d500', 'cd11ea85-606b-4b6f-cd5b-0f17a3fd5900', '7d144977-5a2d-4a88-b12e-71c7e1446500', 'd181cddb-be62-482b-38ae-80497e94c200', '5d5b7376-329f-4831-b188-f3e96689f000'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
-      { color: 'Navy Blue',   colorHex: '#1A2744', images: ['5065ec72-9eb4-4872-4760-b69cb706ec00', '1927b506-14b9-4c54-2c0b-c1c5a875ba00', '657fc58f-854e-4aaf-a908-236491504f00', 'b5169f2b-7724-4653-055a-288ec056a800', 'bf274f9a-4638-4339-8ca2-99b79b9b4d00'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
-      { color: 'Grey',        colorHex: '#757575', images: ['02c3547e-faa7-482c-86e4-b9858b86d300', '12a6959e-29a1-4c3d-6ffd-4c135733fb00', '21dbff25-8a53-4b7e-71a7-46169e76a700', '0705b8f8-d402-4540-dc43-e41faf43f200', 'a37f0bc7-5d23-4b78-b099-2f896a146b00'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
-      { color: 'Black',       colorHex: '#212121', images: ['3ac83cfa-dcd3-4ea5-09b6-adec9eef6300', 'bb3b1213-f87c-43b9-4b22-1eea7554b500', '6156321c-85f1-40d4-f210-87774a23df00', '05f3fe08-47f4-4a39-e2de-9bb7bb5d2700', '1796f6e4-e1fd-4250-a4a1-ec7f60462800'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Rose Gold',   colorHex: '#B76E79', images: ['9858493b-63a4-431b-d9b2-09bf73fa3900', 'eae799de-7857-4fab-df03-8b5a9abac300', 'ebefd887-40c6-4821-5514-32ea3e14e000', '6d1d7a64-9833-40d3-880d-dacbfee5ed00', '74bf496c-5e5c-4458-0e61-378b8c18e400'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Purple',      colorHex: '#7B5EA7', images: ['3c5db92e-4a55-44f5-c508-4fef696abc00', 'a86d7557-250e-4cb9-9a55-a1169a22e000', 'd2431fda-13b7-4466-fd77-a03cbcaee300', 'e42e0492-c8f8-4e12-71c7-dd587a656300', 'e27bf445-53d5-485e-c89c-497203cf3800'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Tender Blue', colorHex: '#89CFF0', images: ['a0e8072a-ee7f-4ac0-6120-6b0930c2be00', 'c5af51cc-79ae-4c08-6828-ba6704127100', '9a06e4cf-fd46-45e0-3654-058530a8ed00', '8bbacbd3-c24b-41ac-0d1d-20940ce6cb00', '2e8c7ca4-d431-4293-c29a-66c364889c00'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Red',         colorHex: '#C62828', images: ['d61a37cf-d07d-431e-54bc-fe642efe7b00', 'cd11ea85-606b-4b6f-cd5b-0f17a3fd5900', '7d144977-5a2d-4a88-b12e-71c7e1446500', 'd181cddb-be62-482b-38ae-80497e94c200', '5d5b7376-329f-4831-b188-f3e96689f000'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Navy Blue',   colorHex: '#1A2744', images: ['85f10ce4-7645-432d-3395-c3d96e11a400', '1927b506-14b9-4c54-2c0b-c1c5a875ba00', '657fc58f-854e-4aaf-a908-236491504f00', 'b5169f2b-7724-4653-055a-288ec056a800', 'bf274f9a-4638-4339-8ca2-99b79b9b4d00'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Grey',        colorHex: '#757575', images: ['0281b604-81e4-418e-d590-87c867d28d00', '12a6959e-29a1-4c3d-6ffd-4c135733fb00', '21dbff25-8a53-4b7e-71a7-46169e76a700', '0705b8f8-d402-4540-dc43-e41faf43f200', 'a37f0bc7-5d23-4b78-b099-2f896a146b00'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
+      { color: 'Black',       colorHex: '#212121', images: ['53516be8-31e3-40c5-1c99-43cc91515f00', 'bb3b1213-f87c-43b9-4b22-1eea7554b500', '6156321c-85f1-40d4-f210-87774a23df00', '05f3fe08-47f4-4a39-e2de-9bb7bb5d2700', '1796f6e4-e1fd-4250-a4a1-ec7f60462800'], sizes: [{ size: '14 Inch', price: 2490, stock: 15 }] },
     ],
   },
 
@@ -3461,7 +3461,8 @@ export const PRODUCTS: Product[] = [
     warranty:
       '1-year warranty covering manufacturing defects in the shell, handles, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images: [
-      'c22c80b5-1add-44c6-0ea8-c94b0d32e600',
+      'd19d39a3-bd62-47a8-e86e-1be07d869400',
+      'ef7214d8-a553-4175-5b60-fe51f8ee6100',
     ],
     features: [
       { label: 'Premium, sophisticated design' },

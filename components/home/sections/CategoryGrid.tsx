@@ -47,7 +47,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Backpacks',
     value:    'backpack',
-    image:    '3bdc5f70-39e8-4ca3-5b7c-bee115479100',
+    image:    '42099695-2a71-4e47-2add-c5af4526bd00',
     span:     '',
     textPos:  'bottom',
     imgClass: '',
@@ -55,7 +55,7 @@ const CATEGORY_CARDS = [
   {
     label:    'Office Bags',
     value:    'office-bag',
-    image:    'e9c14f02-cca6-4c65-067b-9fdad928ed00',
+    image:    'adaa5f99-b408-4588-cfb8-b3e2dfbf6e00',
     span:     '',
     textPos:  'bottom',
     imgClass: '',

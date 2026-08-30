@@ -11,7 +11,7 @@ import { getProductBySlug, PRODUCTS } from '@/config/products'
 import { ProductPageClient }   from '@/components/product/ProductPageClient'
 import { ProductStory }        from '@/components/product/ProductDetails'
 import { ROUTES }              from '@/lib/constants'
-import { ogUrl }               from '@/lib/cloudflareImages'
+import { ogUrl, pdpUrl }       from '@/lib/cloudflareImages'
 
 interface Props {
   params:      Promise<{ slug: string }>
@@ -64,8 +64,22 @@ export default async function ProductPage({ params, searchParams }: Props) {
 
   if (!product) notFound()
 
+  // Preload every color's first photo as a real <link rel="preload"> —
+  // rendered server-side so the browser starts fetching while the HTML is
+  // still parsing, well before hydration. ProductInfo's own client-side
+  // preload effect covers the same ground as a fallback (e.g. for a client
+  // navigation that doesn't re-run this server render), but this is what
+  // actually closes the ~1.5s cold-load gap on a fresh page load, since it
+  // doesn't wait for JS to download and run first.
+  const preloadHrefs = product.variants.map((v, i) =>
+    pdpUrl(v.images?.[0] ?? product.images[i] ?? product.images[0], product.imageFit)
+  )
+
   return (
     <div className="pt-12.5 md:pt-18" style={{ backgroundColor: '#FFFFFF' }}>
+      {preloadHrefs.map((href) => (
+        <link key={href} rel="preload" as="image" href={href} />
+      ))}
       <div className="container-lp section-pad pt-2! md:pt-2!">
 
         {/* Breadcrumb — Home | All Products | [product], Assembly-style */}
