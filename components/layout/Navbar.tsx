@@ -222,7 +222,7 @@ export function Navbar() {
         )}
 
         <div className="px-5 md:px-8">
-          <div className="flex items-center justify-between h-12.5 md:h-18">
+          <div className="flex items-center justify-between h-12.5 md:h-[4.25rem]">
 
             {/* ── Left: Hamburger (mobile) / Nav links (desktop) ─────────── */}
             <div className="flex items-center gap-8 flex-1">

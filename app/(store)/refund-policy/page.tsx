@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { BRAND } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title:       'Refund Policy',
-  description: 'Louis Polo\'s return and refund policy for luggage and travel accessories.',
+  title:       'Replacement Policy',
+  description: 'Louis Polo\'s replacement policy for luggage and travel accessories — replacement only for items damaged on delivery or with an in-warranty manufacturing defect.',
   alternates:  { canonical: '/refund-policy' },
 }
 
@@ -13,90 +13,81 @@ export default function RefundPolicyPage() {
       <div className="container-lp section-pad max-w-[52rem]">
 
         <span className="lp-eyebrow">Legal</span>
-        <h1 className="lp-heading-lg mb-2">Refund Policy</h1>
+        <h1 className="lp-heading-lg mb-2">Replacement Policy</h1>
         <p className="font-body text-[var(--color-lp-muted)] text-sm mb-10">
-          Last updated: July 2026
+          Last updated: August 2026
         </p>
 
         <div className="prose-lp">
 
           <section>
-            <h2>1. Return Window</h2>
+            <h2>1. Our Approach to Returns</h2>
             <p>
-              We accept returns within <strong>7 days</strong> of delivery. To be eligible, the
-              product must be unused, in its original packaging, and in the same condition in
-              which it was received.
+              We recommend reviewing the size guide and product details carefully before placing
+              your order, since we're unable to offer a return, refund, or exchange outside of the
+              two cases below.
             </p>
           </section>
 
           <section>
-            <h2>2. Non-Returnable Items</h2>
-            <p>The following items are not eligible for return:</p>
+            <h2>2. When a Replacement Is Offered</h2>
+            <p>We replace a product, free of charge, only in these two cases:</p>
             <ul>
-              <li>Products that have been used or show signs of wear</li>
-              <li>Items returned without original packaging or tags</li>
-              <li>Products damaged due to misuse, mishandling, or negligence</li>
-              <li>Sale or clearance items (marked as final sale)</li>
+              <li>
+                <strong>Damaged on delivery</strong> — the product arrives visibly damaged, or
+                damaged in transit, when you open it.
+              </li>
+              <li>
+                <strong>Manufacturing defect within warranty</strong> — the product develops a
+                genuine manufacturing fault (not damage from misuse, an accident, or normal wear)
+                while still within the warranty period stated on its product page.
+              </li>
             </ul>
-          </section>
-
-          <section>
-            <h2>3. How to Initiate a Return</h2>
             <p>
-              To request a return, email us at{' '}
-              <a href="mailto:support@louispolo.in">support@louispolo.in</a> within 7 days of
-              receiving your order. Include your order number and a brief description (with photos)
-              of the issue. Our team will respond within 2 business days with return instructions.
-            </p>
-            <p>
-              Do not ship items back without receiving a return authorisation from our team. Such
-              parcels may be refused or lost.
+              Outside of these two cases, we are unable to offer a return, refund, or exchange.
             </p>
           </section>
 
           <section>
-            <h2>4. Damaged or Defective Products</h2>
+            <h2>3. Damaged on Delivery</h2>
             <p>
-              If your product arrives damaged or defective, please contact us within{' '}
-              <strong>48 hours</strong> of delivery with photos of the damage. We will arrange a
-              replacement or full refund at no additional cost, including return shipping.
+              Contact us within <strong>48 hours</strong> of delivery at{' '}
+              <a href="mailto:support@louispolo.in">support@louispolo.in</a> with your order
+              number and clear photos of the damage. Once verified, we will arrange a replacement
+              at no additional cost, including pickup and reshipping.
             </p>
           </section>
 
           <section>
-            <h2>5. Refund Processing</h2>
+            <h2>4. Manufacturing Defect Within Warranty</h2>
             <p>
-              Once we receive and inspect your return, we will notify you by email. If approved,
-              your refund will be processed to your original payment method within{' '}
-              <strong>5–7 business days</strong>. Bank processing times may vary.
+              Email <a href="mailto:support@louispolo.in">support@louispolo.in</a> with your order
+              number or invoice, and photos of the defect. Our team will confirm whether it
+              qualifies as a manufacturing defect under warranty (see the Warranty section on the
+              product's page for coverage and duration) and, if approved, arrange a replacement at
+              no additional cost. Keep your invoice — it's required to process any warranty claim.
             </p>
             <p>
-              Shipping charges paid at the time of order are non-refundable unless the return is
-              due to our error or a defective product.
-            </p>
-          </section>
-
-          <section>
-            <h2>6. Return Shipping</h2>
-            <p>
-              Customers are responsible for return shipping costs unless the return is due to a
-              defective or incorrect item. We recommend using a trackable shipping method. We are
-              not responsible for items lost in transit.
+              Warranty does not cover damage from misuse, accidents, unauthorised repairs, or
+              normal wear and tear (scuffs, fading, worn wheels or zippers over time).
             </p>
           </section>
 
           <section>
-            <h2>7. Exchanges</h2>
+            <h2>5. How Replacement Works</h2>
             <p>
-              We do not process direct exchanges. If you need a different size or colour, please
-              return the original item for a refund and place a new order.
+              Once a claim is approved, we arrange pickup of the original product (where
+              applicable) and ship the replacement to the same address. There is no charge to you
+              for either. If the exact product/colour/size is no longer available, we will offer
+              the closest equivalent or, only in that case, a refund to your original payment
+              method.
             </p>
           </section>
 
           <section>
-            <h2>8. Contact</h2>
+            <h2>6. Contact</h2>
             <p>
-              For any questions about returns or refunds, email{' '}
+              For any questions about a replacement claim, email{' '}
               <a href="mailto:support@louispolo.in">support@louispolo.in</a> or call{' '}
               <a href={`tel:${BRAND.phone.replace(/[\s-]/g, '')}`}>{BRAND.phone}</a>. We aim to
               respond within 2 business days.

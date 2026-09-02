@@ -3,7 +3,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // components/product/ProductDetails.tsx
 // PDP detail content, two exports:
-//   ProductAccordions — Specifications / Warranty & Care / Shipping & Returns /
+//   ProductAccordions — Specifications / Warranty & Care / Shipping & Replacement /
 //                       FAQs, rendered inside the buy panel under the CTA.
 //   ProductStory      — long-form "In Detail" editorial section rendered
 //                       full-width below the PDP grid.
@@ -22,7 +22,7 @@ const CARE_COPY =
   'Wipe the shell with a soft, damp cloth, without solvents or abrasives. Clean wheels and the telescopic handle track occasionally to keep them running smoothly, and store your luggage dry, away from direct sunlight.'
 
 const SHIPPING_COPY =
-  'Shipping is free on every order, anywhere in India. Items are non-returnable. If anything arrives damaged, write to us within 48 hours with photos and we will replace it at no cost.'
+  'Shipping is free on every order, anywhere in India. Items are non-returnable. We offer a free replacement only if the product arrives damaged (write to us within 48 hours with photos) or develops a manufacturing defect while still within its warranty period.'
 
 // ─── Accordion primitives ─────────────────────────────────────────────────────
 
@@ -116,7 +116,7 @@ export function ProductAccordions({ product }: { product: Product }) {
   }
 
   items.push({
-    label: 'Shipping & Returns',
+    label: 'Shipping & Replacement',
     content: (
       <p className="font-body text-[0.95rem] font-medium text-[var(--color-lp-body)] leading-[1.65]">
         {SHIPPING_COPY}

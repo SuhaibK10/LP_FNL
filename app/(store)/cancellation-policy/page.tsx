@@ -34,9 +34,11 @@ export default function CancellationPolicyPage() {
           <section>
             <h2>2. Cancelling After Dispatch</h2>
             <p>
-              Once an order has shipped, it can no longer be cancelled. You&apos;re welcome to
-              refuse delivery or return the product after it arrives, under our{' '}
-              <a href="/refund-policy">Refund Policy</a>.
+              Once an order has shipped, it can no longer be cancelled. We only offer a
+              replacement after delivery if the product arrives damaged or develops a
+              manufacturing defect within its warranty period — see our{' '}
+              <a href="/refund-policy">Replacement Policy</a> for details. Outside of those two
+              cases, the order cannot be returned or refunded.
             </p>
           </section>
 
