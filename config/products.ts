@@ -478,6 +478,8 @@ export const PRODUCTS: Product[] = [
       '5e39fb51-9775-4ef2-9ace-f7631da86e00',
       '89d43003-400e-4512-8a2c-78ebdc7f7100',
       'b18c3fe5-2d8b-4e8c-97b9-3d61067ac200',
+      '5c20a966-6d69-4c8f-3cb5-a16007c7e900',
+      '58a3ceae-7bc0-498a-f14f-d53dd7f0f300',
     ],
     features: [
       { label: 'Detachable companion case' },
