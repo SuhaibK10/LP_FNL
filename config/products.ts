@@ -2009,6 +2009,7 @@ export const PRODUCTS: Product[] = [
     name:        'Attache',
     slug:        'attache-overnighter',
     category:    'overnighter',
+    additionalCategories: ['trolley'],
     mrp: 4800,
     cardZoom:    1.3,
     isFeatured:  true,
@@ -2074,6 +2075,7 @@ export const PRODUCTS: Product[] = [
     name:        'SwiftGate',
     slug:        'swiftgate',
     category:    'overnighter',
+    additionalCategories: ['trolley'],
     mrp: 6980,
     description: 'Professional styling meets practical organisation. The SwiftGate features a front-opening compartment for instant access to your laptop, tablet, documents, and chargers, without touching the main compartment. Built for overnight trips and short business travel.',
     story: [
