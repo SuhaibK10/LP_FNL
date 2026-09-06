@@ -90,7 +90,7 @@ export function ProductInfo({ product, defaultColor, onColorChange, onColorHover
   // elsewhere on the site. Not appended to the DOM; setting `src` alone
   // triggers the browser's fetch regardless of DOM attachment.
   function prefetchDemoVideo() {
-    if (!product.demoVideoId) return
+    if (!product.demoVideoId || product.demoVideoYoutubeId) return
     const preload = document.createElement('video')
     preload.preload = 'auto'
     preload.muted = true
@@ -419,7 +419,7 @@ export function ProductInfo({ product, defaultColor, onColorChange, onColorHover
         )}
 
         {/* Play — product demo video, only shown when the product has one */}
-        {product.demoVideoId && (
+        {(product.demoVideoId || product.demoVideoYoutubeId) && (
           <motion.button
             type="button"
             onClick={() => setVideoOpen(true)}
@@ -532,8 +532,13 @@ export function ProductInfo({ product, defaultColor, onColorChange, onColorHover
 
       <SizeGuideModal open={sizeGuideOpen} onClose={() => setSizeGuideOpen(false)} />
       <ReviewsModal open={reviewsOpen} onClose={() => setReviewsOpen(false)} productName={product.name} reviews={reviews} />
-      {product.demoVideoId && (
-        <DemoVideoModal open={videoOpen} onClose={() => setVideoOpen(false)} videoId={product.demoVideoId} />
+      {(product.demoVideoId || product.demoVideoYoutubeId) && (
+        <DemoVideoModal
+          open={videoOpen}
+          onClose={() => setVideoOpen(false)}
+          videoId={product.demoVideoId}
+          youtubeId={product.demoVideoYoutubeId}
+        />
       )}
     </div>
   )

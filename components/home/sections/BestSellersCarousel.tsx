@@ -23,7 +23,10 @@ import { useCartStore }                      from '@/store/cartStore'
 import { useWishlistStore }                  from '@/store/wishlistStore'
 import { staggerChildren, fadeUp, VIEWPORT, tapPunch } from '@/lib/animations'
 import { SizeGuideModal }                    from '@/components/ui/SizeGuideModal'
+import { ReviewsModal }                      from '@/components/ui/ReviewsModal'
 import { QuickViewModal }                    from '@/components/shop/QuickViewModal'
+import { DemoVideoModal }                    from '@/components/product/DemoVideoModal'
+import { getReviewsForProduct, getManualRating } from '@/config/reviews'
 import { MyntraBuyButton }                   from '@/components/ui/MyntraBuyButton'
 import { getMyntraListing, getMyntraForSize, MYNTRA_EXCLUSIVES_ENABLED } from '@/config/myntra'
 
@@ -36,6 +39,7 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
   const [wished, setWished] = useState(false)
   const [burst,  setBurst]  = useState(false)
   const [videoOpen, setVideoOpen] = useState(false)
+  const [youtubeOpen, setYoutubeOpen] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   function handleFullscreen(e: React.MouseEvent) {
@@ -75,7 +79,10 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
   const [sizeGuideOpen,   setSizeGuideOpen]   = useState(false)
   const [quickViewOpen,   setQuickViewOpen]   = useState(false)
   const [detailsOpen,     setDetailsOpen]     = useState(false)
+  const [reviewsOpen,     setReviewsOpen]     = useState(false)
 
+  const reviews      = getReviewsForProduct(product.slug)
+  const manualRating = getManualRating(product.slug)
   const variant      = product.variants[activeVariant]
   const lowestPrice  = Math.min(...product.variants.flatMap(v => v.sizes.map(s => s.price)))
   const displayImage = variant.images?.[0] ?? product.images[activeVariant] ?? product.images[0]
@@ -215,14 +222,21 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
           <span className={`lp-tag absolute left-3 z-10 ${myntra ? 'top-10' : 'top-3'}`}>{product.tag}</span>
         )}
 
-        {/* Play — product demo video, only shown when the product has one */}
-        {product.demoVideoId && (
+        {/* Play — product demo video, only shown when the product has one.
+            A Cloudflare-hosted video swaps inline into the card frame; a
+            YouTube trial video (no demoVideoId) opens the fullscreen modal
+            instead, since an iframe can't do the same inline loop/crop. */}
+        {(product.demoVideoId || product.demoVideoYoutubeId) && (
           <motion.button
             type="button"
             onClick={(e) => {
               e.preventDefault()
               e.stopPropagation()
-              setVideoOpen((v) => !v)
+              if (product.demoVideoId) {
+                setVideoOpen((v) => !v)
+              } else {
+                setYoutubeOpen(true)
+              }
             }}
             onMouseEnter={prefetchDemoVideo}
             onTouchStart={prefetchDemoVideo}
@@ -312,13 +326,19 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
               {product.name}
             </p>
           </Link>
-          {myntra?.rating && (
+          {myntra?.rating ? (
             <span className="inline-flex items-center gap-1 rounded-full px-2 py-1 font-body font-bold text-[0.75rem] text-lp-ink bg-lp-gold/15 border border-lp-gold/40 leading-none shrink-0">
               <Star size={11} strokeWidth={0} className="fill-lp-gold" />
               {myntra.rating.toFixed(1)}
               <span className="font-medium opacity-70">({myntra.ratingCount})</span>
             </span>
-          )}
+          ) : manualRating ? (
+            <span className="inline-flex items-center gap-1 rounded-full px-2 py-1 font-body font-bold text-[0.75rem] text-lp-ink bg-lp-gold/15 border border-lp-gold/40 leading-none shrink-0">
+              <Star size={11} strokeWidth={0} className="fill-lp-gold" />
+              {manualRating.rating.toFixed(1)}
+              <span className="font-medium opacity-70">({manualRating.count})</span>
+            </span>
+          ) : null}
         </div>
 
         {/* Size chips */}
@@ -408,22 +428,36 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
           )
         })()}
 
-        {/* View details — reveals the short product description inline */}
-        {product.description && (
-          <div className="pt-0.5">
-            <button
-              type="button"
-              onClick={(e) => { e.stopPropagation(); setDetailsOpen((o) => !o) }}
-              className="flex items-center gap-1 font-body font-medium text-[0.75rem] text-[var(--color-lp-faint)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
-              aria-expanded={detailsOpen}
-            >
-              View Details
-              <ChevronDown
-                size={11}
-                strokeWidth={1.5}
-                className={`transition-transform duration-200 ${detailsOpen ? 'rotate-180' : ''}`}
-              />
-            </button>
+        {/* View details (reveals the short product description inline) +
+            Reviews — parallel row, mirrors components/shop/ProductCard.tsx */}
+        <div className="pt-0.5">
+          <div className="flex items-center justify-between gap-2">
+            {product.description ? (
+              <button
+                type="button"
+                onClick={(e) => { e.stopPropagation(); setDetailsOpen((o) => !o) }}
+                className="flex items-center gap-1 font-body font-medium text-[0.75rem] text-[var(--color-lp-faint)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
+                aria-expanded={detailsOpen}
+              >
+                View Details
+                <ChevronDown
+                  size={11}
+                  strokeWidth={1.5}
+                  className={`transition-transform duration-200 ${detailsOpen ? 'rotate-180' : ''}`}
+                />
+              </button>
+            ) : <span />}
+            {!myntra && (
+              <button
+                type="button"
+                onClick={(e) => { e.stopPropagation(); setReviewsOpen(true) }}
+                className="flex items-center gap-1 font-body font-medium text-[0.75rem] text-[var(--color-lp-faint)] hover:text-[var(--color-lp-gold)] transition-colors duration-200"
+              >
+                {reviews.length > 0 ? `Reviews (${reviews.length})` : 'Reviews'}
+              </button>
+            )}
+          </div>
+          {product.description && (
             <AnimatePresence initial={false}>
               {detailsOpen && (
                 <motion.div
@@ -439,8 +473,8 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
                 </motion.div>
               )}
             </AnimatePresence>
-          </div>
-        )}
+          )}
+        </div>
 
         {/* Price — single line in both branches so Myntra and
             non-Myntra cards keep identical height and buttons align */}
@@ -512,6 +546,14 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
         <SizeGuideModal open={sizeGuideOpen} onClose={() => setSizeGuideOpen(false)} />,
         document.body
       )}
+      {youtubeOpen && product.demoVideoYoutubeId && createPortal(
+        <DemoVideoModal
+          open={youtubeOpen}
+          onClose={() => setYoutubeOpen(false)}
+          youtubeId={product.demoVideoYoutubeId}
+        />,
+        document.body
+      )}
       {quickViewOpen && createPortal(
         <QuickViewModal
           open={quickViewOpen}
@@ -526,6 +568,17 @@ function ProductCard({ product }: { product: typeof FEATURED_PRODUCTS[0] }) {
           canAdd={canAdd}
           addedToCart={addedToCart}
           onAddToCart={handleAddToCart}
+          manualRating={manualRating}
+          reviews={reviews}
+        />,
+        document.body
+      )}
+      {reviewsOpen && createPortal(
+        <ReviewsModal
+          open={reviewsOpen}
+          onClose={() => setReviewsOpen(false)}
+          productName={product.name}
+          reviews={reviews}
         />,
         document.body
       )}

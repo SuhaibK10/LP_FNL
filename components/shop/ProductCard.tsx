@@ -22,6 +22,7 @@ import { useWishlistStore }         from '@/store/wishlistStore'
 import { SizeGuideModal }           from '@/components/ui/SizeGuideModal'
 import { ReviewsModal }             from '@/components/ui/ReviewsModal'
 import { QuickViewModal }           from '@/components/shop/QuickViewModal'
+import { DemoVideoModal }           from '@/components/product/DemoVideoModal'
 import { MyntraBuyButton }          from '@/components/ui/MyntraBuyButton'
 import { getMyntraListing, getMyntraForSize } from '@/config/myntra'
 import { getReviewsForProduct, getManualRating } from '@/config/reviews'
@@ -49,6 +50,7 @@ export function ProductCard({ product, initialColor }: ProductCardProps) {
   const [wished, setWished] = useState(false)
   const [burst,  setBurst]  = useState(false)
   const [videoOpen, setVideoOpen] = useState(false)
+  const [youtubeOpen, setYoutubeOpen] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   function handleFullscreen(e: React.MouseEvent) {
@@ -253,14 +255,21 @@ export function ProductCard({ product, initialColor }: ProductCardProps) {
           <span className={`lp-tag absolute left-3 z-10 ${myntra ? 'top-10' : 'top-3'}`}>{product.tag}</span>
         )}
 
-        {/* Play — product demo video, only shown when the product has one */}
-        {product.demoVideoId && (
+        {/* Play — product demo video, only shown when the product has one.
+            A Cloudflare-hosted video swaps inline into the card frame; a
+            YouTube trial video (no demoVideoId) opens the fullscreen modal
+            instead, since an iframe can't do the same inline loop/crop. */}
+        {(product.demoVideoId || product.demoVideoYoutubeId) && (
           <motion.button
             type="button"
             onClick={(e) => {
               e.preventDefault()
               e.stopPropagation()
-              setVideoOpen((v) => !v)
+              if (product.demoVideoId) {
+                setVideoOpen((v) => !v)
+              } else {
+                setYoutubeOpen(true)
+              }
             }}
             onMouseEnter={prefetchDemoVideo}
             onTouchStart={prefetchDemoVideo}
@@ -581,6 +590,13 @@ export function ProductCard({ product, initialColor }: ProductCardProps) {
         </div>
       </div>
 
+      {product.demoVideoYoutubeId && (
+        <DemoVideoModal
+          open={youtubeOpen}
+          onClose={() => setYoutubeOpen(false)}
+          youtubeId={product.demoVideoYoutubeId}
+        />
+      )}
       <SizeGuideModal open={sizeGuideOpen} onClose={() => setSizeGuideOpen(false)} />
       <ReviewsModal open={reviewsOpen} onClose={() => setReviewsOpen(false)} productName={product.name} reviews={reviews} />
       <QuickViewModal

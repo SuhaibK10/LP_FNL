@@ -6,6 +6,7 @@
 
 import { HeroSection }         from './sections/HeroSection'
 import { ExpoPromoModal }      from './sections/ExpoPromoModal'
+import { ScrollHint }          from './sections/ScrollHint'
 import { BestSellersCarousel } from './sections/BestSellersCarousel'
 import { PromoBanner }         from './sections/PromoBanner'
 import { IndependenceDayBanner } from './sections/IndependenceDayBanner'
@@ -26,6 +27,7 @@ export function HomeEditorial() {
     <main>
       <HeroSection />
       <ExpoPromoModal />
+      <ScrollHint />
       {VERTEX_SHOWCASE_HOME_ENABLED && (
         <ScrollShowcase
           eyebrow={VERTEX_SHOWCASE_HEADER.eyebrow}

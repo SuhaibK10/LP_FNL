@@ -10,6 +10,8 @@ import Link                    from 'next/link'
 import { getProductBySlug, PRODUCTS } from '@/config/products'
 import { ProductPageClient }   from '@/components/product/ProductPageClient'
 import { ProductStory }        from '@/components/product/ProductDetails'
+import { ProductReviewsCarousel } from '@/components/product/ProductReviewsCarousel'
+import { getReviewsForProduct } from '@/config/reviews'
 import { ROUTES }              from '@/lib/constants'
 import { ogUrl, pdpUrl }       from '@/lib/cloudflareImages'
 
@@ -114,6 +116,9 @@ export default async function ProductPage({ params, searchParams }: Props) {
             image load and the correct starting color on every product after
             the first one in a session. */}
         <ProductPageClient key={product.slug} product={product} defaultColor={color} />
+
+        {/* Reviews carousel — only renders when the product has reviews */}
+        <ProductReviewsCarousel productName={product.name} reviews={getReviewsForProduct(product.slug)} />
 
         {/* Long-form editorial detail */}
         <ProductStory product={product} />

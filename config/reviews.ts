@@ -19,6 +19,13 @@ export interface Review {
 export const PRODUCT_REVIEWS: Record<string, Review[]> = {
   'aerosmart-3in1': [
     {
+      name:   'Nikhil',
+      rating: 5,
+      date:   '4 Sep 2026',
+      text:   "The side pouch is the real hero here, I keep my water bottle and umbrella in it and never have to open the main case for small stuff. Didn't expect to use the hook as much as I do, hung a small tote on it while my hands were full at the airport and it held up fine.",
+      images: ['b4fdabce-620c-4c0c-e314-886eb0debc00', '8887f692-93fd-412e-0dd8-d8e8ad51aa00', 'afd95dad-92c1-469e-ee8a-35f97904a400'],
+    },
+    {
       name:   'Naveen',
       rating: 5,
       date:   '20 Aug 2026',

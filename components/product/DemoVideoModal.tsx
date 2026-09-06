@@ -13,12 +13,13 @@ import { X } from 'lucide-react'
 import { cfVideo } from '@/lib/cloudflareStream'
 
 interface Props {
-  open:    boolean
-  onClose: () => void
-  videoId: string
+  open:        boolean
+  onClose:     () => void
+  videoId?:    string  // Cloudflare Stream UID
+  youtubeId?:  string  // trial alternative — renders an iframe embed instead
 }
 
-export function DemoVideoModal({ open, onClose, videoId }: Props) {
+export function DemoVideoModal({ open, onClose, videoId, youtubeId }: Props) {
   useEffect(() => {
     const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
     window.addEventListener('keydown', handler)
@@ -64,15 +65,30 @@ export function DemoVideoModal({ open, onClose, videoId }: Props) {
                 native fullscreen-video feel. Desktop (sm+): shrink-wraps
                 to the video's own aspect ratio (capped by viewport) so
                 portrait clips don't get stretched wide and pillarboxed. */}
-            <video
-              key={videoId}
-              src={cfVideo(videoId)}
-              controls
-              autoPlay
-              muted
-              playsInline
-              className="w-screen h-dvh sm:w-auto sm:h-auto sm:max-w-[90vw] sm:max-h-[85dvh] bg-black object-contain rounded-none sm:rounded-2xl"
-            />
+            {youtubeId ? (
+              // Trial YouTube embed — sized for portrait (Shorts) clips,
+              // same shrink-wrap-on-desktop behavior as the Stream player.
+              <div className="w-screen h-dvh sm:w-auto sm:h-[85dvh] sm:aspect-9/16 bg-black rounded-none sm:rounded-2xl overflow-hidden">
+                <iframe
+                  key={youtubeId}
+                  src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1&playsinline=1`}
+                  title="Product demo video"
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+            ) : (
+              <video
+                key={videoId}
+                src={cfVideo(videoId!)}
+                controls
+                autoPlay
+                muted
+                playsInline
+                className="w-screen h-dvh sm:w-auto sm:h-auto sm:max-w-[90vw] sm:max-h-[85dvh] bg-black object-contain rounded-none sm:rounded-2xl"
+              />
+            )}
           </motion.div>
         </motion.div>
       )}

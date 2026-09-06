@@ -108,8 +108,8 @@ export function HeroSection() {
     <section
       id="hero-section"
       ref={sectionRef}
-      className="relative h-[calc(82svh-1.75rem)] md:h-[calc(90vh-1.75rem)] md:min-h-150 md:max-h-240 overflow-hidden cursor-pointer"
-      onClick={() => router.push(`${ROUTES.shop}?category=vanity`)}
+      className="relative h-[calc(88svh-1.75rem)] md:h-[calc(96vh-1.75rem)] md:min-h-150 md:max-h-240 overflow-hidden cursor-pointer"
+      onClick={() => router.push(ROUTES.shop)}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >

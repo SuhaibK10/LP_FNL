@@ -83,6 +83,7 @@ export interface Product {
   mrp?: number  // strike-through "original" price, shown alongside the current price when set
   recentPurchases?: number  // e.g. 174 — shows a quiet "X bought in the last 7 days" badge on the PDP
   demoVideoId?: string  // Cloudflare Stream video UID — shows a play button next to Wishlist on the PDP
+  demoVideoYoutubeId?: string  // YouTube video ID — trial alternative to demoVideoId, embeds via iframe instead
   // How this product's photos should be fit into their frame. Omit for the
   // default 'pad' (a transparent cutout padded onto a flat background — the
   // whole catalog so far). Set to 'cover' for full-bleed lifestyle/studio

@@ -20,8 +20,8 @@ import type { Product, HeroSlide } from '@/types'
 // Replace public_ids with your Cloudinary uploads.
 export const HERO_SLIDES: HeroSlide[] = [
   {
-    image:        '5bb40a75-0369-4b5a-9c6b-b2c19f2f8100',
-    desktopImage: '3e2f1692-a938-48df-a15a-bd930671d200',
+    image:        '59e0d16f-6f52-460b-6dff-21c782e86700',
+    desktopImage: '512b3797-3968-4d3e-8c6d-4a8143289f00',
     headline:  '',
     textStyle: 'shadow',
     textSize:  'lg',
@@ -141,7 +141,7 @@ export const PRODUCTS: Product[] = [
       // '91562a63-93b2-4c22-7aab-51d0d8fae000',
       // 'cce20161-5cb9-44aa-8c29-3a1251e92d00',
       // '970f581f-8413-4d14-fc3a-def99eff9e00',
-      'd1ce7992-2e80-4459-6dea-c96c82a36800',
+      '7ec8de05-3e02-4c72-c690-8dd49906de00',
       '5dec047a-a87f-48d3-5ea4-29abd19cab00',
       'f5e08ff5-f9ff-4315-ccf0-0957d5437500',
     ],
@@ -164,7 +164,7 @@ export const PRODUCTS: Product[] = [
         images: [
           // '0f4b7b11-dd2d-4d8f-c502-58ea01177400',
           // '9bac92e3-74a8-42ef-d579-d01830e80a00',
-          'd1ce7992-2e80-4459-6dea-c96c82a36800',
+          '7ec8de05-3e02-4c72-c690-8dd49906de00',
           '9eff1fe4-2561-496d-5734-2546f9ceb200',
           '9aac96ca-d8a7-4f2c-6653-9a2d88ce4a00',
           '3ad12034-30af-463a-a13f-8a9b0cf02800',
@@ -275,7 +275,14 @@ export const PRODUCTS: Product[] = [
     warranty:
       '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images: [
-      'd886cfeb-32a7-4449-9c6c-f3c6072b4e00',
+      '7ff54e8d-e4d5-43ca-3a1c-b136e2828100',
+      '608168a1-620e-4f92-b8cb-6b01357b6c00',
+      '44cb4d9c-eee7-4f6b-482c-37b32e390400',
+      'f08c9cf3-ea67-443c-1b6f-e36855a31500',
+      'b6105b45-5981-455a-e2f2-e1c8447c5100',
+      '9e8f8886-070b-4675-6836-fdba956c4700',
+      'c11f4cb6-7b5e-400b-d621-6230d2710800',
+      '5b2db5b7-5679-448c-9005-0c938cc77300',
     ],
     features: [
       { label: 'Detachable companion case' },
@@ -402,7 +409,7 @@ export const PRODUCTS: Product[] = [
       // '584aba3f-66ed-4084-df03-ba0e5e625100',
       // '71bcef0c-eaf5-4466-fec4-4f5fdc357900',
       // '365d5259-4bd3-4533-57d7-2182ee625e00',
-      'bf8923bc-583d-4f61-5ade-71bb8d8cb900',
+      '8620485c-6f08-4836-b1b9-f65cf6627600',
       'e3c8bc97-9a5e-4481-e094-d3ae7d1a2200',
       'bdcd2c0f-dc07-4662-dd09-50cde0e25200',
       '0f05e803-356b-423e-d049-95ac6a9d4900',
@@ -472,7 +479,7 @@ export const PRODUCTS: Product[] = [
       '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images: [
       // 'ff8154e9-293a-4064-23a6-63e82aad3700',
-      'efa83da4-fd4f-457f-1322-6f316dbcd900',
+      'a7addc16-3331-4a9c-25b3-a38fe8e56300',
       '0914bdfc-0f70-4d3c-a48a-368a1edc5500',
       '8a59c239-87b0-4d3d-4c8c-3e049e213900',
       '5e39fb51-9775-4ef2-9ace-f7631da86e00',
@@ -1446,10 +1453,7 @@ export const PRODUCTS: Product[] = [
     // bare public_ids elsewhere; cld() in lib/cloudinary.ts already handles
     // any cloud name via its full-URL transform-injection path.
     images: [
-      // Kept as the lead shot — the shop grid card crops to 3:4, and this is
-      // the only one of the set actually cropped tight to fill that frame;
-      // the rest below are square and would show letterboxed as a thumbnail.
-      '1ec02d48-3239-402d-33d1-1a401476b100',
+      '06544161-0b68-4abb-87dc-4177b7c5bc00',
       '94dd4f3e-e3af-47fe-e4e6-402af94dc600',
       '04c2d274-849f-4203-324d-5cb2a02d5200',
       '19e53c9b-80be-4776-f434-e873d3ad2a00',
@@ -3511,7 +3515,7 @@ export const PRODUCTS: Product[] = [
     warranty:
       '1-year warranty covering manufacturing defects in the shell, straps, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
     images: [
-      '3ad467fd-b412-4b87-276b-cb132823aa00',
+      'fd94f510-9d8c-478e-a43b-ffacd9ae5700',
       '8cea762b-2a75-40b0-65e5-c469504fd800',
     ],
     features: [
@@ -3527,7 +3531,7 @@ export const PRODUCTS: Product[] = [
       {
         color: 'Blue',
         colorHex: '#28384A',
-        images: ['3ad467fd-b412-4b87-276b-cb132823aa00', 'cb7ad1dd-9b74-42aa-4bc5-d8e245af7300', '65177a6c-0917-4214-d399-e9a9578c9a00'],
+        images: ['fd94f510-9d8c-478e-a43b-ffacd9ae5700', 'cb7ad1dd-9b74-42aa-4bc5-d8e245af7300', '65177a6c-0917-4214-d399-e9a9578c9a00'],
         sizes: [
           { size: 'One Size', price: 3800, stock: 25 },
         ],
@@ -4362,6 +4366,7 @@ export const PRODUCTS: Product[] = [
   // ── VeeZoom Set of 3 ─────────────────────────────────────────────────────
   {
     id: 'veezoom-set',
+    demoVideoYoutubeId: 'agil5QFrEy4',
     metaTitle: 'VeeZoom Matching Spinner Luggage Set of 3',
     metaDescription: 'Three VeeZoom spinners in 20″, 24″, and 28″, one matched V-pattern set with nesting storage and 360° wheels.',
     keywords: ['3 piece luggage set', 'hard shell spinner suitcase set', 'nesting luggage set', 'abs suitcase set', 'matching luggage set india'],
