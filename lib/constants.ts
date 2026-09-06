@@ -28,6 +28,7 @@ export const ROUTES = {
   contact:  '/contact',
   careers:  '/careers',
   corporateGifting: '/corporate-gifting',
+  blog:     '/blog',
 } as const
 
 export const NAV_ITEMS = [

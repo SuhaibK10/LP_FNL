@@ -19,7 +19,7 @@ import Razorpay from 'razorpay'
 import { createClient, createServiceRoleClient } from '@/lib/supabase/server'
 import { getProductBySlug } from '@/config/products'
 import { SALE_CONFIG }      from '@/lib/constants'
-import { getCoupon }        from '@/config/coupons'
+import { getCoupon, couponQualifies, couponEligibleSubtotal } from '@/config/coupons'
 import type { ProductSize } from '@/types'
 
 const razorpay = new Razorpay({
@@ -176,11 +176,20 @@ const supabase = await createClient()
   const shippingCost = 0
 
   // Coupon discount — like SALE_CONFIG, never trusted from the client: the
-  // code is re-looked-up here. A coupon with no productSlug applies to the
-  // whole subtotal; otherwise only the order's matching line items (product
-  // + size) are discounted, not the whole cart. An unknown or disabled code
-  // is silently worth nothing rather than failing checkout.
-  const coupon = couponCode ? getCoupon(couponCode) : undefined
+  // code is re-looked-up here. A `bundle` coupon requires every listed
+  // product+size in the order (and discounts only those matching lines); a
+  // plain productSlug coupon requires just that one; a coupon with neither
+  // applies to the whole subtotal. An unknown/disabled code, or one whose
+  // required items aren't in this order, is silently worth nothing rather
+  // than failing checkout.
+  const couponLineItems = orderItems.map(item => ({
+    productSlug: item.product_slug,
+    size:        item.size as ProductSize,
+    price:       item.price,
+    quantity:    item.quantity,
+  }))
+  const rawCoupon = couponCode ? getCoupon(couponCode) : undefined
+  const coupon = rawCoupon && couponQualifies(rawCoupon, couponLineItems) ? rawCoupon : undefined
 
   // Site-wide checkout discount (see SALE_CONFIG) — applied here, and only
   // here, since this route is the sole source of truth for what Razorpay
@@ -193,14 +202,7 @@ const supabase = await createClient()
     : 0
 
   const couponDiscount = coupon
-    ? Math.round(
-        (coupon.productSlug
-          ? orderItems
-              .filter(item => item.product_slug === coupon.productSlug && item.size === coupon.size)
-              .reduce((sum, item) => sum + item.price * item.quantity, 0)
-          : subtotal
-        ) * coupon.discountPercent
-      )
+    ? Math.round(couponEligibleSubtotal(coupon, couponLineItems) * coupon.discountPercent)
     : 0
 
   const total = subtotal - discount - couponDiscount + shippingCost

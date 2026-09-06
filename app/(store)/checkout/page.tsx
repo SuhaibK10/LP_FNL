@@ -19,7 +19,7 @@ import { createClient }             from '@/lib/supabase/client'
 import { thumbUrl, PLACEHOLDER_URL } from '@/lib/cloudflareImages'
 import { formatPrice }              from '@/lib/utils'
 import { ROUTES, SALE_CONFIG }      from '@/lib/constants'
-import { getCoupon, type Coupon }   from '@/config/coupons'
+import { getCoupon, couponQualifies, couponEligibleSubtotal, type Coupon } from '@/config/coupons'
 import { PRODUCTS }                 from '@/config/products'
 import { AddressForm, EMPTY_ADDRESS, type ShippingAddress } from '@/components/checkout/AddressForm'
 import type { User as SupabaseUser } from '@supabase/supabase-js'
@@ -140,18 +140,12 @@ export default function CheckoutPage() {
   // Only one discount applies at a time — a coupon always overrides the
   // automatic site-wide sale rather than stacking with it.
   const discount = SALE_CONFIG.enabled && !appliedCoupon ? Math.round(subtotal * SALE_CONFIG.discountPercent) : 0
-  // A coupon with no productSlug applies to the whole subtotal; otherwise
-  // only cart lines matching its product + size qualify — same scoping the
+  // A `bundle` coupon needs every listed product+size in the cart and only
+  // discounts those lines; a plain productSlug coupon needs just that one;
+  // a coupon with neither applies to the whole subtotal — same scoping the
   // server applies, so this preview matches what gets charged.
   const couponDiscount = appliedCoupon
-    ? Math.round(
-        (appliedCoupon.productSlug
-          ? items
-              .filter(i => i.productSlug === appliedCoupon.productSlug && i.size === appliedCoupon.size)
-              .reduce((s, i) => s + i.price * i.quantity, 0)
-          : subtotal
-        ) * appliedCoupon.discountPercent
-      )
+    ? Math.round(couponEligibleSubtotal(appliedCoupon, items) * appliedCoupon.discountPercent)
     : 0
   const total = subtotal - discount - couponDiscount // shipping is free — see CART_CONFIG
 
@@ -162,8 +156,7 @@ export default function CheckoutPage() {
       setAppliedCoupon(null)
       return
     }
-    const qualifies = !match.productSlug || items.some(i => i.productSlug === match.productSlug && i.size === match.size)
-    if (!qualifies) {
+    if (!couponQualifies(match, items)) {
       setCouponError(`This code only applies to ${match.label.replace(/^\d+% off /i, '')}.`)
       setAppliedCoupon(null)
       return

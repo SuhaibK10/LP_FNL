@@ -501,6 +501,71 @@ export const PRODUCTS: Product[] = [
     ],
   },
 
+  // ── Noir Cabin Trolley ───────────────────────────────────────────────────
+  {
+    id: 'noir-cabin-trolley',
+    metaTitle: 'Modulo Cabin Trolley — All-Black Hard Shell with Mustard Lining',
+    metaDescription: 'A sleek all-black hard-shell cabin trolley with a distinctive mustard-yellow interior, compression straps, organizer pockets, and 360° spinner wheels.',
+    keywords: ['black cabin trolley', 'hard shell cabin suitcase', 'business cabin luggage', 'compact spinner suitcase', 'premium cabin trolley'],
+    name: 'Modulo Cabin Trolley',
+    slug: 'noir-cabin-trolley',
+    category: 'trolley',
+    mrp: 10990,
+    isFeatured: true,
+    description:
+      'A sophisticated cabin trolley defined by its sleek black silhouette and refined contemporary design. The Modulo Cabin Trolley combines premium aesthetics with practical organization, featuring a spacious interior, secure compression straps, multiple dedicated compartments, and a distinctive mustard-yellow lining.',
+    story: [
+      'Modulo keeps its exterior deliberately quiet, an all-black hard shell built for boardrooms and boarding gates alike. Open it up and the case reveals its one indulgence: a mustard-yellow interior that turns packing into the best part of the case, not an afterthought.',
+      'Underneath the finish, it runs on the fundamentals: a spacious main compartment with compression straps, multiple internal organizer pockets, smooth 360° spinner wheels, and a sturdy telescopic handle for effortless movement through any terminal.',
+    ],
+    highlights: [
+      {
+        heading: 'Quiet outside, bold inside',
+        body: 'An all-black exterior reads sharp and understated, while the mustard-yellow lining makes the case unmistakably yours the moment you unzip it.',
+      },
+      {
+        heading: 'Held in place, not shifting',
+        body: 'Interior compression straps and multiple organizer pockets keep everything exactly where you packed it, even after a rough ride through the cargo hold.',
+      },
+      {
+        heading: 'Built for the short trip',
+        body: 'Sized for cabin travel, a sturdy telescopic handle and smooth 360° spinner wheels make it just as comfortable for a business trip as a weekend getaway.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',      value: 'Premium hard shell, all-black exterior' },
+      { label: 'Interior',   value: 'Mustard-yellow lining · compression straps · organizer pockets' },
+      { label: 'Wheels',     value: '360° spinner wheels' },
+      { label: 'Handle',     value: 'Telescopic aluminum handle' },
+    ],
+    warranty:
+      '3-year warranty covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    images: [
+      '6506951c-b668-48ac-8a2d-7fd0cbc71700',
+      'c52abee1-a2cc-415f-a2e3-65e030e20e00',
+      '1c1f1a9c-650f-4e77-ed95-187c0c3ed900',
+    ],
+    features: [
+      { label: 'Sleek, premium hard-shell construction' },
+      { label: 'Sophisticated all-black exterior' },
+      { label: 'Distinctive mustard-yellow interior' },
+      { label: 'Spacious main compartment with compression straps' },
+      { label: 'Multiple internal organizer pockets' },
+      { label: 'Smooth 360° spinner wheels' },
+      { label: 'Telescopic aluminum handle' },
+    ],
+    variants: [
+      {
+        color: 'Black',
+        colorHex: '#171717',
+        accentColor: 'Mustard-Yellow Lining',
+        sizes: [
+          { size: 'Cabin', price: 4190, stock: 25 },
+        ],
+      },
+    ],
+  },
+
   // ── Edge16 ───────────────────────────────────────────────────────────────
   {
     id: 'edge16',
@@ -2055,11 +2120,27 @@ export const PRODUCTS: Product[] = [
       {
         color:    'Blue',
         colorHex: '#1565C0',
+        images: [
+          '0fb758df-1176-4847-ceae-5037becfdb00',
+          '98c74282-1863-44e9-62e2-0ebda1b61900',
+          '7d48123c-be51-495b-5b90-c933887b8c00',
+          '3622b955-e1e9-4690-2aed-3c8ac9109200',
+          '1e28d7d7-c4e4-43a1-b356-9c96b8220a00',
+          '04c29fa5-5c6c-4c7b-50ca-d8629466a300',
+        ],
         sizes: [{ size: '17 Inch', price: 3490, stock: 30 }],
       },
       {
         color:    'Red',
         colorHex: '#C62828',
+        images: [
+          'aaa16968-da90-4753-54c8-e31529244e00',
+          '4ab9c046-fe6d-45fb-4c8b-280fc8e82000',
+          '4afe7e47-793a-4f06-f213-1da9d6effd00',
+          '45ee8cdb-6279-4f5a-68b6-10d0a4904f00',
+          '0b1c579c-1b69-4904-c1b7-03567c581400',
+          '8410c476-2a8a-4d3c-bb8a-fd11b32f7a00',
+        ],
         sizes: [{ size: '17 Inch', price: 3490, stock: 30 }],
       },
     ],
@@ -4049,6 +4130,73 @@ export const PRODUCTS: Product[] = [
         ],
         sizes: [
           { size: 'Set of 3', price: 11500, stock: 15 },
+        ],
+      },
+    ],
+  },
+
+  // ── StrataLux Set of 2 ───────────────────────────────────────────────────
+  {
+    id: 'stratalux-set-2',
+    metaTitle: 'StrataLux Luggage Set of 2 (Cabin & Medium)',
+    metaDescription: 'The StrataLux cabin and medium spinners in one matched set, ribbed hard shell, leather-look accents, and combination locks on both cases.',
+    keywords: ['luggage set of 2 india', 'ribbed hard shell suitcase set', 'combination lock luggage set', 'matched luggage set', 'cabin medium luggage set'],
+    name: 'StrataLux Set of 2',
+    slug: 'stratalux-set-2',
+    category: 'set',
+    description:
+      'Cabin and Medium StrataLux bags in a matched set, the ribbed shell and leather-look accents carried across both sizes. The two-bag setup for a short trip and everything just past it.',
+    story: [
+      'One decision instead of two. The StrataLux duo puts the cabin and the 24″ in the same considered finish, so the weekend bag and the week-long bag draw from the same wardrobe of luggage.',
+      'Each case in the set carries the same ribbed hard shell, leather-look accent bands, and combination lock as the individual StrataLux, so the only decision left is which one to grab on the way out.',
+    ],
+    highlights: [
+      {
+        heading: 'Two trips, pre-decided',
+        body: 'A couple of nights takes the cabin, a week takes the 24″. No more forcing a week-long trip into a bag sized for two days.',
+      },
+      {
+        heading: 'Matched to the millimetre',
+        body: 'Same shell, same finish, same hardware across both sizes. On a trolley at arrivals, the set reads as one deliberate choice.',
+      },
+      {
+        heading: 'Structured, considered design',
+        body: 'Vertical ribbing, leather-look accent bands, and metallic corner details give the pair a finish that reads deliberate rather than loud.',
+      },
+    ],
+    specs: [
+      { label: 'Shell',    value: 'Hard shell, vertical ribbing with leather-look accents' },
+      { label: 'Sizes',    value: 'Cabin (20″) · Medium (24″)' },
+      { label: 'Lock',     value: 'Combination lock on each case' },
+      { label: 'Wheels',   value: '4 dual-spinner 360° silent wheels' },
+      { label: 'Handle',   value: 'Telescopic handle' },
+    ],
+    warranty:
+      '3-year warranty on both cases, covering manufacturing defects in the shell, wheels, telescopic handle, and zippers. Keep your invoice. A mail to support@louispolo.in is all a claim takes.',
+    faqs: [
+      {
+        q: 'Can I buy the sizes separately?',
+        a: 'Yes. Each StrataLux size is available on its own. The set simply prices the two together and guarantees a matched batch and finish.',
+      },
+    ],
+    images: ['bb3c80bd-3cac-48b1-81b1-4ffae8724900'],
+    features: [
+      { label: '20" & 24" included' },
+      { label: '360° silent spinner wheels' },
+      { label: 'Combination lock' },
+      { label: 'Telescopic handle' },
+      { label: 'Impact resistant' },
+      { label: 'Metallic corner accents' },
+    ],
+    variants: [
+      {
+        color: 'Ivory',
+        colorHex: '#F0EAD6',
+        images: [
+          'bb3c80bd-3cac-48b1-81b1-4ffae8724900',
+        ],
+        sizes: [
+          { size: 'Cabin + Medium', price: 8499, stock: 15 },
         ],
       },
     ],
